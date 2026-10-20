@@ -1,0 +1,18 @@
+node_modules/
+reports/
+test-results/
+.auth/
+.tmp/
+*.log
+
+# 凭据文件：绝不提交
+.env
+.env.local
+local.env
+*.env.local
+
+# Figma 登录态与本地 profile（只留本机）
+.figma-profile/
+.figma-profile2/
+.figma-auth.json
+.chrome-link/
