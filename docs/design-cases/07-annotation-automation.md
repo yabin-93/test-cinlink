@@ -10,6 +10,8 @@
 > 最近执行：2026-10-20
 > 本地 `18 passed · 6 skipped`；预发持久 profile 下整套 `11 passed · 1 failed · 1 skipped · 3 did not run`（失败为 016 刷新恢复断言，另 020/021/022 未执行）。
 
+> 本地 preview 说明：产品默认只在 `staging` 渲染批注 UI。`tools/annotation/setup.ps1` 会给 worktree 里的 `src/app.js` 打一个幂等补丁，让 `?workspace-preview=editor` 在 localhost 也启用批注 UI。
+> 端口用 4210：Windows 保留段 4102–4201 占用了 4173，绑定会 `EACCES`。
 ## 预发前置：批注入口只在口水词项目里出现
 
 1. 新建非项目会话，上传并 `@` 引用视频；
@@ -56,7 +58,7 @@ npm run test:annotation:staging
 
 ```powershell
 powershell -File tools/annotation/setup.ps1              # 准备 worktree（origin/dev）
-powershell -File tools/annotation/setup.ps1 -StartServer # 同时启动 4173
+powershell -File tools/annotation/setup.ps1 -StartServer # 同时启动 4210
 ```
 
 缺少 worktree 或 dev server 时，本地 UI 用例会跳过并说明原因。
@@ -198,7 +200,7 @@ await page.waitForFunction(() => {
 | 变量 | 默认 | 作用 |
 |---|---|---|
 | `CINLINK_ANNOTATION_MODULE` | worktree 里的 `editor-video-annotations.js` | 规则模块路径 |
-| `CINLINK_ANNOTATION_URL` | `http://127.0.0.1:4173/?workspace-preview=editor` | 本地 UI 用例目标页 |
+| `CINLINK_ANNOTATION_URL` | `http://127.0.0.1:4210/?workspace-preview=editor` | 本地 UI 用例目标页 |
 | `CINLINK_ANNOTATION_ASSET` | 中文 1 分钟视频 | 预发默认素材 |
 | `CINLINK_ANNOTATION_SKIP=1` | 未设置 | 跳过本地 UI 用例 |
 | `CINLINK_HEADLESS=0` | 未设置 | 有头运行 |

@@ -34,7 +34,7 @@ npm run verify        # 类型检查 + 116 条离线用例，不联网、不产�
 | `npm run test:g3` | 预发：subtitle 真实任务 → G3–G7（状态/收敛/产物/SRT/视频/账本） | **会**真实上传并计费（实测约 24 分） |
 | `npm run test:watermark` | 预发：image-watermark 真实任务（视频 + 水印图）→ G3–G7 | **会**真实上传；本次实测余额未变 |
 | `npm run test:flows` | 预发：translation / enhance / text-watermark / long-to-short / mix（mix 默认 fixme） | **会**真实上传并计费（实测 translation -20、long-to-short -55） |
-| `npm run test:annotation` | 视频批注 P0：18 条规则层 + 6 条编辑器 UI | 本地：需 feature 分支 worktree 与 4173 dev server |
+| `npm run test:annotation` | 视频批注 P0：18 条规则层 + 6 条编辑器 UI | 本地：需 feature 分支 worktree 与 4210 dev server |
 | `npm run test:staging` | 全部预发用例（G1/G2 + 六条工作流；mix 默认 fixme） | 同上（含计费） |
 | `npm run auth` | 打开有头浏览器人工登录 | 需要人工介入 |
 

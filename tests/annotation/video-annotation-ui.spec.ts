@@ -1,6 +1,5 @@
 import { expect, test, type Page } from "@playwright/test";
 
-import { targets } from "../../src/config.js";
 
 /**
  * 视频批注 · 编辑器 UI 用例（DC-07 P0 中的静态/交互骨架）
@@ -9,13 +8,13 @@ import { targets } from "../../src/config.js";
  * 产品分支 `feature/web-editor-video-annotation`，未部署时整组用例会跳过。
  *
  * 运行：
- *   1. 在产品仓库切出该分支的 worktree，`npm run dev -- --port 4173 --host 127.0.0.1`
+ *   1. 在产品仓库切出该分支的 worktree，`npm run dev -- --port 4210 --host 127.0.0.1`
  *   2. `npm run test:annotation`
  * 也可用 `CINLINK_ANNOTATION_URL` 指向已部署的功能环境。
  */
 
 const EDITOR_URL =
-  process.env.CINLINK_ANNOTATION_URL || `${targets.localBase}/?workspace-preview=editor`;
+  process.env.CINLINK_ANNOTATION_URL || "http://127.0.0.1:4210/?workspace-preview=editor";
 
 async function openEditor(page: Page) {
   await page.goto(EDITOR_URL, { waitUntil: "domcontentloaded", timeout: 60_000 });
@@ -33,7 +32,7 @@ test.describe("批注入口与模式（DC-07-001 / 051）", () => {
     try {
       await openEditor(page);
     } catch {
-      test.skip(true, `编辑器预览不可用：${EDITOR_URL}（先在批注分支 worktree 启动 4173 dev server）`);
+      test.skip(true, `编辑器预览不可用：${EDITOR_URL}（先在批注 worktree 启动 4210 dev server）`);
     }
     const entry = page.locator("#video-editor-mode-annotate");
     if ((await entry.count()) === 0) {

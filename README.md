@@ -77,7 +77,7 @@ python tools/design-cases/build-xlsx.py
 npm run test:annotation
 ```
 
-依赖产品分支 `feature/web-editor-video-annotation` 的 worktree 与本地 `127.0.0.1:4173` dev server，准备步骤见 [docs/design-cases/07-annotation-automation.md](docs/design-cases/07-annotation-automation.md)。
+依赖产品分支 `feature/web-editor-video-annotation` 的 worktree 与本地 `127.0.0.1:4210` dev server，准备步骤见 [docs/design-cases/07-annotation-automation.md](docs/design-cases/07-annotation-automation.md)。
 
 ## 本机配置与会话
 
