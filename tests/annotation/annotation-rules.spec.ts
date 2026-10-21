@@ -213,3 +213,59 @@ test.describe("草稿、重叠与轨道（DC-07-005 / 006 / 007 / 018 / 059）",
     });
   });
 });
+
+test.describe("区间拖拽与引用更新（DC-07-006 / 007 / 011 / 039）", () => {
+  test("拖拽方向决定入点与出点", () => {
+    expect(annotations.annotationTimelineDragRange(10, 14, 60)).toEqual({ start: 10, end: 14 });
+    expect(annotations.annotationTimelineDragRange(10, 6, 60)).toEqual({ start: 6, end: 10 });
+  });
+
+  test("拖拽距离小于最小时长会被补齐", () => {
+    const range = annotations.annotationTimelineDragRange(10, 10.01, 60);
+    expect(range.end - range.start).toBeGreaterThanOrEqual(0.25);
+  });
+
+  test("整体移动区间保持时长", () => {
+    const moved = annotations.moveAnnotationTimelineRange(
+      { id: "a", timelineTimeSec: 10, durationSec: 5, isTimelineExpanded: true },
+      3,
+      "range",
+      60,
+    );
+    expect(moved.timelineTimeSec).toBe(13);
+    expect(moved.durationSec).toBe(5);
+  });
+
+  test("调整入点保持出点不变", () => {
+    const moved = annotations.moveAnnotationTimelineRange(
+      { id: "a", timelineTimeSec: 10, durationSec: 5, isTimelineExpanded: true },
+      -2,
+      "start",
+      60,
+    );
+    expect(moved.timelineTimeSec).toBe(8);
+    expect(moved.durationSec).toBe(7);
+  });
+
+  test("超出源时长的区间被裁剪到边界", () => {
+    expect(
+      annotations.constrainAnnotationCreationRange({ start: 55, end: 70 }, [], 60),
+    ).toEqual({ start: 55, end: 60 });
+    expect(
+      annotations.constrainAnnotationCreationRange({ start: -5, end: 10 }, [], 60),
+    ).toEqual({ start: 0, end: 10 });
+  });
+
+  test("替换引用行不会改动正文", () => {
+    const oldReference = "◉ 批注 1   视频A 00:10.00–00:15.00";
+    const composer = `${oldReference}\n这里增加一朵小花`;
+    const next = annotations.replaceAnnotationReferenceLine(
+      oldReference,
+      composer,
+      "◉ 批注 1   视频A 00:12.00–00:18.00",
+    );
+    expect(next).toContain("00:12.00–00:18.00");
+    expect(next).toContain("这里增加一朵小花");
+    expect(next).not.toContain("00:10.00–00:15.00");
+  });
+});

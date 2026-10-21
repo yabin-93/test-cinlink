@@ -2,7 +2,7 @@
 
 CinLink Web 的自动化测试工程：离线断言器 + 本地批注 + 预发真实链路（G1–G7），用于在 DeepSeek Harness 或任意可执行命令的 Agent 中运行。
 
-- 离线 116 条、本地批注 24 条、预发 29 条、批注真实链路 16 条
+- 离线 116 条、本地批注 30 条、预发 29 条、批注真实链路 16 条
 - 工作流覆盖 34 个：8 个主工作流 + 6 个生成类 + 3 个快捷卡片 + 5 个多工作流场景 + 12 条链路
 - 用例矩阵、自动化状态、脚本清单统一在 [workflow-material-matrix.xlsx](docs/design-cases/workflow-material-matrix.xlsx)
 
@@ -44,7 +44,7 @@ npm run test:smoke      # 预发冒烟 3 条：字幕 / clean-cut / AI 生图
 | `npm run verify` | 类型检查 + 116 条离线 |
 | `npm test` | unit + gates（116） |
 | `npm run test:gates` | G1–G7 关卡演练（24） |
-| `npm run test:annotation` | 批注规则 18 + 本地 UI 6 |
+| `npm run test:annotation` | 批注规则 24 + 本地 UI 6 |
 | `npm run test:annotation:staging` | 批注真实链路 16 |
 
 ### 预发
