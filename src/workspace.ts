@@ -140,7 +140,18 @@ export async function openWorkspaceSession(
     // 「新建会话」。**必须过滤可见性**，否则 `.first()` 会命中隐藏元素，点了毫无反应。
     // 必须显式进入非项目区，不把测试素材写进列表中的任意历史项目。
     const newSession = page.locator('[data-workspace-new-session="non-project"]:visible');
-    await newSession.click({ timeout: 10_000 });
+    if ((await newSession.count()) === 0) {
+      // 新版工作台把「新建会话」压成悬停才显示的图标，:visible 会判定不可见。
+      // 回退到 DOM click（只用于这个普通按钮，不涉及批注卡片的重渲染）。
+      console.warn("[workspace] 新建会话按钮不可见，回退 DOM click（新版侧栏悬停样式）");
+      await page.evaluate(() => {
+        const button = document.querySelector('[data-workspace-new-session="non-project"]');
+        if (button instanceof HTMLElement) button.click();
+      });
+      await page.waitForTimeout(800);
+    } else {
+      await newSession.first().click({ timeout: 10_000 });
+    }
   } else {
     const existing = page.locator("[data-workspace-project-id]:visible").first();
     if (await existing.isVisible().catch(() => false)) {
