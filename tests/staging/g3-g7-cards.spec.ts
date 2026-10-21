@@ -165,4 +165,37 @@ test.describe("@regression G3–G7 卡片入口", () => {
     });
     expect(check.ok, `解说视频结构不合法：\n${check.failures.join("\n")}`).toBe(true);
   });
+
+  test("@regression @slow 长视频变短 · 精华时长 3 分钟", async ({ page }) => {
+    test.setTimeout(20 * 60_000);
+    const dir = path.resolve("reports", "artifacts", "g3-g7-cards", "long-video-shorten");
+    await mkdir(dir, { recursive: true });
+    await openWorkspaceSession(page);
+
+    await openCard(page, "repurpose", "shorten");
+    const submit = await submitCurrentPrompt(page);
+    expect(submit.httpStatus, "提交被拒绝").toBeLessThan(300);
+    expect(submit.runId, "提交未返回 run_id").not.toBe("");
+
+    const polled = await pollRunUntilSettled(page, submit.runId, {
+      timeoutMs: POLL_TIMEOUT_MS,
+      intervalMs: 5_000,
+    });
+    expect(polled.status, "任务未收敛到 done").toBe("done");
+
+    const media = await downloadVideo(page, submit.runId, dir);
+    const check = checkMedia(media, {
+      minDurationSec: 30,
+      maxDurationSec: 200,
+      requireAudio: true,
+    });
+    expect(check.ok, `精华视频结构不合法：\n${check.failures.join("\n")}`).toBe(true);
+  });
+
+  // 本地素材查找返回的是片段/素材结果列表，不是视频产物；
+  // 需要先确认结果面板的选择器，再补真实断言。
+  test.fixme("@regression 本地素材查找 · 返回素材结果", async () => {
+    // TODO: 点击 local-material 卡片后断言结果列表出现，并支持把结果加入时间线
+  });
+
 });

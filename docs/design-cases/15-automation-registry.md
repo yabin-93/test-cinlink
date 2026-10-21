@@ -23,7 +23,9 @@
 | 字幕 | `tests/staging/g3-g7-subtitle.spec.ts` | 1 | `[AUTO]` | `npm run test:g3` |
 | 图片水印 | `tests/staging/g3-g7-image-watermark.spec.ts` | 1 | `[AUTO]` | `npm run test:watermark` |
 | 主工作流（表驱动） | `tests/staging/g3-g7-workflows.spec.ts` | 6 | 5 `[AUTO]` + 1 `[FIXME]` | `npm run test:flows` |
-| 卡片入口 | `tests/staging/g3-g7-cards.spec.ts` | 4 | `[AUTO]`（待跑） | `npm run test:cards` |
+| 卡片入口 | `tests/staging/g3-g7-cards.spec.ts` | 6 | 5 `[AUTO]` + 1 `[FIXME]` | `npm run test:cards` |
+| 快捷卡片 | `tests/staging/g3-g7-quick-cards.spec.ts` | 3 | 2 `[AUTO]` + 1 `[FIXME]` | `npm run test:quick` |
+| 多工作流 | `tests/staging/g3-g7-multi.spec.ts` | 5 | 4 `[AUTO]` + 1 `[FIXME]` | `npm run test:multi` |
 | 批注规则 | `tests/annotation/annotation-rules.spec.ts` | 18 | `[AUTO]` | `npm run test:annotation` |
 | 批注本地 UI | `tests/annotation/video-annotation-ui.spec.ts` | 6 | `[AUTO]` | `npm run test:annotation` |
 | 批注预发 | `tests/annotation/video-annotation-staging.spec.ts` | 16 | 15 `[AUTO]` + 1 `[FIXME]` | `npm run test:annotation:staging` |
@@ -44,6 +46,11 @@
 | AI 生视频 | CS-02（IV） | `g3-g7-cards` | `[AUTO]`（待跑） |
 | 总结视频 | CS-06 | `g3-g7-cards` | `[AUTO]`（待跑） |
 | 生成解说 | CS-04 | `g3-g7-cards` | `[AUTO]`（待跑） |
+| 长视频变短 | CS-03 | `g3-g7-cards` | `[AUTO]`（待跑） |
+| 本地素材查找 | CS-06 | `g3-g7-cards` | `[FIXME]`（结果 UI 待确认） |
+| 转写字幕 | CS-07 | `g3-g7-quick-cards` | `[AUTO]`（待跑） |
+| 导出字幕 | CS-08 | `g3-g7-quick-cards` | `[AUTO]`（待跑） |
+| 查找片段 | CS-09 | `g3-g7-quick-cards` | `[FIXME]`（结果 UI 待确认） |
 
 ## 三、还没进脚本的设计用例
 
@@ -69,8 +76,8 @@
 |---|---|---|---|---|
 | L0 离线 | 无 | `npm run verify` | tsc + unit + gates | 116 |
 | L1 冒烟 | `@smoke` | `npm run test:smoke` | 字幕、clean-cut、AI 生图 | 3 |
-| L2 回归 | `@regression` | `npm run test:regression` | G1/G2 + 工作流 + 卡片 | 19 |
-| L3 全量 | 无过滤 | `npm run test:full` | 预发全部脚本 | 19 |
+| L2 回归 | `@regression` | `npm run test:regression` | G1/G2 + 工作流 + 卡片 + 快捷卡片 + 多工作流 | 29 |
+| L3 全量 | 无过滤 | `npm run test:full` | 预发全部脚本 | 29 |
 
 批注预发用例统一带 `@regression`，单独用 `npm run test:annotation:staging` 执行。
 
