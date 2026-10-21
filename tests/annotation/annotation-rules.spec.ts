@@ -269,3 +269,68 @@ test.describe("区间拖拽与引用更新（DC-07-006 / 007 / 011 / 039）", ()
     expect(next).not.toContain("00:10.00–00:15.00");
   });
 });
+
+test.describe("选区几何与保存载荷（DC-07-055 / 011）", () => {
+  test("框选 SVG 的矩形与拖拽区域一致", () => {
+    const svg = annotations.annotationSelectionSVG({
+      kind: "area",
+      points: [{ x: 0.2, y: 0.3 }, { x: 0.6, y: 0.5 }],
+    });
+    expect(svg).toContain("<rect");
+    expect(svg).toContain('x="20"');
+    expect(svg).toContain('y="30"');
+    expect(svg).toContain('width="40"');
+    expect(svg).toContain('height="20"');
+  });
+
+  test("保存载荷包含区间、坐标与描述", () => {
+    const payload = annotations.buildAnnotationSavePayload(
+      {
+        id: "a1",
+        displayNumber: 2,
+        timelineTimeSec: 10,
+        durationSec: 5,
+        isTimelineExpanded: true,
+        sourceTimeSec: 10,
+        selection: { kind: "area", points: [{ x: 0.2, y: 0.3 }, { x: 0.6, y: 0.5 }] },
+        objectLabel: "物体",
+        description: "改成蓝色",
+      },
+      { mimeType: "image/png", markedFrameBase64: "AAA" },
+      { conversationId: "c1", projectId: "p1", videoName: "v.mp4" },
+    );
+
+    expect(payload.annotation_id).toBe("a1");
+    expect(payload.timeline_start_sec).toBe(10);
+    expect(payload.timeline_end_sec).toBe(15);
+    expect(payload.selection_kind).toBe("area");
+    expect(payload.description).toBe("改成蓝色");
+    expect(payload.selection_geometry.rect).toEqual({
+      min_x: 0.2,
+      min_y: 0.3,
+      max_x: 0.6,
+      max_y: 0.5,
+    });
+  });
+
+  test("识别载荷使用归一化坐标与整帧", () => {
+    const payload = annotations.buildAnnotationRecognitionPayload(
+      {
+        id: "a1",
+        timelineTimeSec: 10,
+        sourceTimeSec: 10,
+        selection: { kind: "area", points: [{ x: 0.2, y: 0.3 }, { x: 0.6, y: 0.5 }] },
+      },
+      { mimeType: "image/png", markedFrameBase64: "AAA" },
+      { projectId: "p1" },
+    );
+
+    expect(payload.selection_kind).toBe("area");
+    expect(payload.normalized_x).toBeGreaterThanOrEqual(0);
+    expect(payload.normalized_x).toBeLessThanOrEqual(1);
+    expect(payload.normalized_y).toBeGreaterThanOrEqual(0);
+    expect(payload.normalized_y).toBeLessThanOrEqual(1);
+    expect(payload.frame_image_base64).toBe("AAA");
+    expect(payload.timeline_time_sec).toBe(10);
+  });
+});
