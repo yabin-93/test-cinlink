@@ -4,7 +4,7 @@
 
 | 套件 | 命令 | 目标 |
 |---|---|---|
-| 规则层 + 本地 UI | `npm run test:annotation` | 不依赖预发，30 条（24 规则 + 6 UI） |
+| 规则层 + 本地 UI | `npm run test:annotation` | 不依赖预发，36 条（24 规则 + 12 UI） |
 | 预发真实链路 | `npm run test:annotation:staging` | 真实建口水词项目 → 打开编辑器 → 批注 |
 
 > 最近执行：2026-10-20
@@ -65,7 +65,7 @@ powershell -File tools/annotation/setup.ps1 -StartServer # 同时启动 4210
 
 ## 覆盖情况
 
-### 本地 30 条
+### 本地 36 条
 
 | 类型 | 条数 | 覆盖 |
 |---|---|---|

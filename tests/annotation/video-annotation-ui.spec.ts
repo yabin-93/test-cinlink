@@ -76,3 +76,106 @@ test.describe("批注入口与模式（DC-07-001 / 051）", () => {
     expect(trackText).toMatch(/批注\s*·\s*\d+/);
   });
 });
+
+test.describe("批注交互补充（DC-07-006 / 011 / 017 / 055）", () => {
+  test.skip(
+    process.env.CINLINK_ANNOTATION_SKIP === "1",
+    "按环境变量跳过批注 UI 用例",
+  );
+
+  test.beforeEach(async ({ page }) => {
+    try {
+      await openEditor(page);
+    } catch {
+      test.skip(true, `编辑器预览不可用：${EDITOR_URL}`);
+    }
+    const entry = page.locator("#video-editor-mode-annotate");
+    if ((await entry.count()) === 0) {
+      test.skip(true, "当前页面未部署视频批注功能");
+    }
+    await entry.click();
+    await expect(page.locator("[data-active-module]")).toHaveAttribute("data-annotation-mode", "annotate");
+  });
+
+  async function overlayBox(page: Page) {
+    const box = await page.locator("[data-video-annotation-overlay]").boundingBox();
+    if (!box) throw new Error("没有批注画布");
+    return box;
+  }
+
+  test("点选画面生成描述入口（DC-07-006）", async ({ page }) => {
+    const box = await overlayBox(page);
+    await page.mouse.click(box.x + box.width * 0.3, box.y + box.height * 0.4);
+    const describe = page.locator("[data-video-annotation-describe]");
+    await expect(describe).toHaveCount(1);
+    const style = (await describe.getAttribute("style")) || "";
+    expect(style).toContain("--annotation-x");
+    expect(style).toContain("--annotation-y");
+  });
+
+  test("两次点选位置不同，描述入口随之移动（DC-07-006）", async ({ page }) => {
+    const box = await overlayBox(page);
+    const describe = page.locator("[data-video-annotation-describe]");
+
+    await page.mouse.click(box.x + box.width * 0.25, box.y + box.height * 0.3);
+    await expect(describe).toHaveCount(1);
+    const first = (await describe.getAttribute("style")) || "";
+
+    await page.mouse.click(box.x + box.width * 0.65, box.y + box.height * 0.6);
+    await expect(describe).toHaveCount(1);
+    const second = (await describe.getAttribute("style")) || "";
+    expect(second).not.toBe(first);
+  });
+
+  test("画笔拖拽生成选择轮廓（DC-07-055）", async ({ page }) => {
+    const box = await overlayBox(page);
+    await page.locator('[data-video-annotation-tool="drawing"]').click();
+    await page.mouse.move(box.x + box.width * 0.2, box.y + box.height * 0.25);
+    await page.mouse.down();
+    await page.mouse.move(box.x + box.width * 0.35, box.y + box.height * 0.4, { steps: 8 });
+    await page.mouse.up();
+
+    const selection = page.locator("[data-video-annotation-overlay] [data-video-annotation-selection]");
+    await expect(selection).toHaveCount(1);
+    await expect(selection.locator("polyline.annotation-selection-outline")).toHaveCount(1);
+  });
+
+  test("框选拖拽生成矩形选区（DC-07-055）", async ({ page }) => {
+    const box = await overlayBox(page);
+    await page.locator('[data-video-annotation-tool="area"]').click();
+    await page.mouse.move(box.x + box.width * 0.45, box.y + box.height * 0.3);
+    await page.mouse.down();
+    await page.mouse.move(box.x + box.width * 0.62, box.y + box.height * 0.55, { steps: 8 });
+    await page.mouse.up();
+
+    const selection = page.locator("[data-video-annotation-overlay] [data-video-annotation-selection]");
+    await expect(selection).toHaveCount(1);
+    expect(await selection.locator("rect").count()).toBeGreaterThan(0);
+  });
+
+  test("时间轴缩放控件生效（DC-07-017）", async ({ page }) => {
+    const slider = page.locator("[data-video-timeline-zoom-value]");
+    await expect(slider).toHaveValue("1");
+
+    await page.locator('[data-video-timeline-zoom="-0.125"]').click();
+    await expect(slider).toHaveValue("0.875");
+
+    await page.locator('[data-video-timeline-zoom="0.125"]').click();
+    await expect(slider).toHaveValue("1");
+  });
+
+  test("点选坐标被归一化到画布内（DC-07-006）", async ({ page }) => {
+    const box = await overlayBox(page);
+    await page.mouse.click(box.x + box.width * 0.48, box.y + box.height * 0.52);
+
+    const style = (await page.locator("[data-video-annotation-describe]").getAttribute("style")) || "";
+    const x = Number((style.match(/--annotation-x:\s*([\d.]+)%/) || [])[1]);
+    const y = Number((style.match(/--annotation-y:\s*([\d.]+)%/) || [])[1]);
+    expect(Number.isFinite(x)).toBe(true);
+    expect(Number.isFinite(y)).toBe(true);
+    expect(x).toBeGreaterThanOrEqual(0);
+    expect(x).toBeLessThanOrEqual(100);
+    expect(y).toBeGreaterThanOrEqual(0);
+    expect(y).toBeLessThanOrEqual(100);
+  });
+});

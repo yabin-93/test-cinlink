@@ -37,7 +37,7 @@ npm run verify        # 类型检查 + 116 条离线用例，不联网、不产�
 | `npm run test:cards` | 预发：卡片入口 6 条（AI 生图 / AI 生视频 / 总结视频 / 生成解说 / 长视频变短 / 本地素材查找） | **会**真实生成并计费 |
 | `npm run test:quick` | 预发：快捷卡片（转写字幕 / 导出字幕 / 查找片段） | **会**真实上传并计费 |
 | `npm run test:multi` | 预发：多工作流 5 个场景（MW-01~05） | **会**真实执行多次任务 |
-| `npm run test:annotation` | 视频批注 P0：24 条规则层 + 6 条编辑器 UI | 本地：需 feature 分支 worktree 与 4210 dev server |
+| `npm run test:annotation` | 视频批注 P0：24 条规则层 + 12 条编辑器 UI | 本地：需 feature 分支 worktree 与 4210 dev server |
 | `npm run test:staging` | 全部预发用例（29 条；mix 与部分待确认项默认 fixme） | 同上（含计费） |
 | `npm run test:smoke` | 预发冒烟 3 条：字幕、clean-cut、AI 生图（标签 @smoke） | **会**真实上传/生成并计费 |
 | `npm run test:regression` | 预发回归 29 条：G1/G2 + 工作流 + 卡片 + 快捷卡片 + 多工作流（标签 @regression） | 同上 |

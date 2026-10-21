@@ -27,7 +27,7 @@
 | 快捷卡片 | `tests/staging/g3-g7-quick-cards.spec.ts` | 3 | 2 `[AUTO]` + 1 `[FIXME]` | `npm run test:quick` |
 | 多工作流 | `tests/staging/g3-g7-multi.spec.ts` | 5 | 4 `[AUTO]` + 1 `[FIXME]` | `npm run test:multi` |
 | 批注规则 | `tests/annotation/annotation-rules.spec.ts` | 24 | `[AUTO]` | `npm run test:annotation` |
-| 批注本地 UI | `tests/annotation/video-annotation-ui.spec.ts` | 6 | `[AUTO]` | `npm run test:annotation` |
+| 批注本地 UI | `tests/annotation/video-annotation-ui.spec.ts` | 12 | `[AUTO]` | `npm run test:annotation` |
 | 批注预发 | `tests/annotation/video-annotation-staging.spec.ts` | 16 | 15 `[AUTO]` + 1 `[FIXME]` | `npm run test:annotation:staging` |
 
 ## 二、工作流链路：哪些已进脚本
