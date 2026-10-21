@@ -32,7 +32,8 @@
     "doctor": "playwright test --project=doctor",
     "typecheck": "tsc --noEmit",
     "verify": "npm run typecheck && npm test",
-    "report": "playwright show-report reports/html"
+    "report": "playwright show-report reports/html",
+    "region:diff": "python tools/annotation/region_diff.py"
   },
   "devDependencies": {
     "@playwright/test": "^1.56.0",

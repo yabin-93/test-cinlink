@@ -215,3 +215,31 @@ await page.waitForFunction(() => {
 | 点击挂起数分钟 | locator 点在重渲染节点上 | 改坐标点击 |
 | 拖拽后没有空白块 | 合成 pointer 未绕过 setPointerCapture | 按 003 的 PointerEvent 写法 |
 | 040 找不到「重试」 | 失败态 UI 与预期不一致 | 先确认文案再改断言 |
+
+## 区域帧差校验（CHAIN 内容层）
+
+批注产物是否“只改了框选区域”，用帧差 + 区域掩码判断：
+
+```powershell
+npm run region:diff -- --source 原片.mp4 --result 产物.mp4 --time 3.5 --rect 0.4 0.35 0.2 0.25
+```
+
+参数：
+
+| 参数 | 含义 |
+|---|---|
+| `--time` | 抽帧时间点（秒） |
+| `--rect X Y W H` | 批注区域，归一化 0–1 |
+| `--min-inside` | 区域内变化像素占比下限（默认 0.02） |
+| `--max-outside` | 区域外变化像素占比上限（默认 0.02） |
+
+输出 JSON：`inside_ratio`、`outside_ratio`、`pass`，并生成差异热力图。
+退出码 `0` 通过、`2` 失败。
+
+自测：
+
+```powershell
+python tools/annotation/region_diff.py --selftest
+```
+
+> 当前是本地工具，不依赖预发；等预发恢复后接到 CHAIN-05/06/07 的产物断言里。
