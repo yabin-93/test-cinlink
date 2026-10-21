@@ -4,33 +4,26 @@ import path from "node:path";
 import type { Page } from "@playwright/test";
 
 import { expect, test } from "../../src/fixtures/staging-session.js";
-import { TEST_ASSETS } from "../../src/assets.js";
 import {
   checkArtifactsDeliverable,
   extractArtifacts,
 } from "../../src/assertions/artifact.js";
 import { checkMedia, probeMedia } from "../../src/assertions/media.js";
 import {
-  cancelRun,
-  deleteAgentFile,
   getRunDetail,
   openWorkspaceSession,
   pollRunUntilSettled,
-  referenceAssetInPrompt,
   submitCurrentPrompt,
-  uploadAsset,
-  type UploadOutcome,
 } from "../../src/workspace.js";
 
 /**
  * G3–G7 · AI 生成类与剪辑类工作流（第一批 P0）
  *
- * 覆盖：clean-cut、AI 生图、AI 生视频、总结视频、生成解说。
+ * 覆盖：AI 生图、AI 生视频、总结视频、生成解说（卡片入口）。
  * 卡片入口用 `data-workspace-action-id`，卡片不会写输入框，点发送后由前端提交默认提示词。
  */
 
 const POLL_TIMEOUT_MS = 15 * 60_000;
-const SHORT = TEST_ASSETS.videoShort;
 
 async function clickPoint(page: Page, selector: string) {
   const point = await page.evaluate((sel) => {
@@ -69,50 +62,6 @@ async function downloadVideo(page: Page, runId: string, dir: string) {
 }
 
 test.describe("G3–G7 第一批 P0", () => {
-  test("clean-cut · 去口水词", async ({ page }) => {
-    test.setTimeout(POLL_TIMEOUT_MS + 5 * 60_000);
-    const dir = path.resolve("reports", "artifacts", "g3-g7-ai", "clean-cut");
-    await mkdir(dir, { recursive: true });
-    await openWorkspaceSession(page);
-
-    let uploaded: UploadOutcome | null = null;
-    let runId = "";
-    try {
-      uploaded = await uploadAsset(page, SHORT);
-      expect(uploaded.cloudFileId, "素材上传失败").not.toBe("");
-
-      const reference = await referenceAssetInPrompt(page, uploaded.uploadedAs, uploaded.cloudFileId);
-      expect(reference.ok, `@ 引用失败：${reference.candidates.join(", ")}`).toBe(true);
-
-      await page.locator("#workspace-prompt").click();
-      await page.keyboard.insertText(" 去掉这个视频里的口水词");
-
-      const submit = await submitCurrentPrompt(page);
-      runId = submit.runId;
-      expect(submit.httpStatus, "提交被拒绝").toBeLessThan(300);
-      expect(runId, "提交未返回 run_id").not.toBe("");
-
-      const polled = await pollRunUntilSettled(page, runId, {
-        timeoutMs: POLL_TIMEOUT_MS,
-        intervalMs: 5_000,
-      });
-      expect(polled.status, "任务未收敛到 done").toBe("done");
-
-      const media = await downloadVideo(page, runId, dir);
-      const check = checkMedia(media, {
-        minDurationSec: 1,
-        maxDurationSec: SHORT.durationSec + 5,
-        requireAudio: true,
-      });
-      expect(check.ok, `视频结构不合法：\n${check.failures.join("\n")}`).toBe(true);
-    } finally {
-      if (runId) await cancelRun(page, runId).catch(() => undefined);
-      if (uploaded?.cloudFileId) {
-        await deleteAgentFile(page, uploaded.cloudFileId).catch(() => undefined);
-      }
-    }
-  });
-
   test("AI 生图 · 默认 1K / 1:1", async ({ page }) => {
     test.setTimeout(POLL_TIMEOUT_MS + 5 * 60_000);
     await openWorkspaceSession(page);

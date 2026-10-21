@@ -349,7 +349,7 @@ for (const flow of [...single, ...multi])
 
 > 以上 9 条与 AI 生图/视频、长变短、字幕/翻译/旁白用例一起，统一在 Excel 的 `卡片用例` 页。
 >
-> 自动化状态：`CUT-01`（去口水词）已进入 `tests/staging/g3-g7-ai-workflows.spec.ts`，其余 `[PLAN]`。
+> 自动化状态：`CUT-01`（去口水词）已并入 `tests/staging/g3-g7-workflows.spec.ts` 的表驱动用例，其余 `[PLAN]`。
 ## 十七、上下文用例（横向维度）
 
 单/多工作流之外，上下文是独立的横向维度。以下 11 条不按 8 个 workflow 全排列，按场景抽样。

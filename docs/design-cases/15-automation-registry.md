@@ -22,8 +22,8 @@
 | G2 提交 | `tests/staging/g2-submit.spec.ts` | 3 | 1 `[AUTO]` + 2 `[FIXME]` | `npm run test:g2` |
 | 字幕 | `tests/staging/g3-g7-subtitle.spec.ts` | 1 | `[AUTO]` | `npm run test:g3` |
 | 图片水印 | `tests/staging/g3-g7-image-watermark.spec.ts` | 1 | `[AUTO]` | `npm run test:watermark` |
-| 四条主工作流 | `tests/staging/g3-g7-workflows.spec.ts` | 5 | 4 `[AUTO]` + 1 `[FIXME]` | `npm run test:flows` |
-| AI/剪辑第一批 | `tests/staging/g3-g7-ai-workflows.spec.ts` | 5 | `[AUTO]`（待跑） | `npm run test:ai` |
+| 主工作流（表驱动） | `tests/staging/g3-g7-workflows.spec.ts` | 6 | 5 `[AUTO]` + 1 `[FIXME]` | `npm run test:flows` |
+| 卡片入口 | `tests/staging/g3-g7-cards.spec.ts` | 4 | `[AUTO]`（待跑） | `npm run test:cards` |
 | 批注规则 | `tests/annotation/annotation-rules.spec.ts` | 18 | `[AUTO]` | `npm run test:annotation` |
 | 批注本地 UI | `tests/annotation/video-annotation-ui.spec.ts` | 6 | `[AUTO]` | `npm run test:annotation` |
 | 批注预发 | `tests/annotation/video-annotation-staging.spec.ts` | 16 | 15 `[AUTO]` + 1 `[FIXME]` | `npm run test:annotation:staging` |
@@ -39,11 +39,11 @@
 | 图片水印 | WF-05 | `g3-g7-image-watermark` | `[AUTO]` |
 | 长变短 | WF-06 | `g3-g7-workflows` | `[AUTO]` |
 | 混剪 | WF-07 | `g3-g7-workflows` | `[FIXME]`（CINLINK-MIX-001） |
-| 去口水词 | WF-08 | `g3-g7-ai-workflows` | `[AUTO]`（新增，待跑） |
-| AI 生图 | CS-01（IG） | `g3-g7-ai-workflows` | `[AUTO]`（新增，待跑） |
-| AI 生视频 | CS-02（IV） | `g3-g7-ai-workflows` | `[AUTO]`（新增，待跑） |
-| 总结视频 | CS-06 | `g3-g7-ai-workflows` | `[AUTO]`（新增，待跑） |
-| 生成解说 | CS-04 | `g3-g7-ai-workflows` | `[AUTO]`（新增，待跑） |
+| 去口水词 | WF-08 | `g3-g7-workflows` | `[AUTO]`（已并入表驱动） |
+| AI 生图 | CS-01（IG） | `g3-g7-cards` | `[AUTO]`（待跑） |
+| AI 生视频 | CS-02（IV） | `g3-g7-cards` | `[AUTO]`（待跑） |
+| 总结视频 | CS-06 | `g3-g7-cards` | `[AUTO]`（待跑） |
+| 生成解说 | CS-04 | `g3-g7-cards` | `[AUTO]`（待跑） |
 
 ## 三、还没进脚本的设计用例
 
@@ -51,7 +51,7 @@
 |---|---|---|---|
 | 工作流用例（单/多） | 78 | `[PLAN]` | 矩阵已设计，未写参数化脚本 |
 | 精简执行集 | 36 | `[PLAN]` | 已合并为工作流用例的「回归」列 |
-| 卡片用例 | 36 | 部分 `[PLAN]` | 其中 AI/剪辑 5 条已进 `test:ai`，其余待补 |
+| 卡片用例 | 36 | 部分 `[PLAN]` | 其中卡片 4 条已进 `test:cards`、clean-cut 已并入 `test:flows`，其余待补 |
 | 上下文用例 | 11 | `[PLAN]` | CTX-01~11（已并入专项用例页） |
 | 视频专项 | 8（建议） | `[PLAN]` | 时长/编码/比例/无音轨等 |
 | 链路用例 | 12 | `[PLAN]` | CHAIN-01~12（已并入专项用例页） |

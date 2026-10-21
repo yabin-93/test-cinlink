@@ -46,7 +46,7 @@ import {
  * G3–G7 · 其余五条主干工作流
  *
  * 与 `g3-g7-subtitle` / `g3-g7-image-watermark` 同一套关卡，用表驱动覆盖：
- *   translation、enhance、text-watermark、long-to-short、mix。
+ *   translation、enhance、text-watermark、long-to-short、clean-cut、mix。
  *
  * ## 断言边界
  *
@@ -94,6 +94,12 @@ const FLOWS: FlowCase[] = [
     prompt: "把这个视频翻译成英文（English）字幕，只输出翻译后的字幕文件",
     assets: [SHORT],
     expectSubtitle: true,
+  },
+  {
+    name: "clean-cut · 去口水词",
+    prompt: "去掉这个视频里的口水词",
+    assets: [SHORT],
+    video: { minDurationSec: 1, maxDurationSec: SHORT.durationSec + 5, requireAudio: true },
   },
   {
     name: "enhance · 增强画质",

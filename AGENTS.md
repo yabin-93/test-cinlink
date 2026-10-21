@@ -33,7 +33,8 @@ npm run verify        # 类型检查 + 116 条离线用例，不联网、不产�
 | `npm run test:g2` | 预发：提交受理、Run 回读、取消 | **会**真实提交并可能消耗积分 |
 | `npm run test:g3` | 预发：subtitle 真实任务 → G3–G7（状态/收敛/产物/SRT/视频/账本） | **会**真实上传并计费（实测约 24 分） |
 | `npm run test:watermark` | 预发：image-watermark 真实任务（视频 + 水印图）→ G3–G7 | **会**真实上传；本次实测余额未变 |
-| `npm run test:flows` | 预发：translation / enhance / text-watermark / long-to-short / mix（mix 默认 fixme） | **会**真实上传并计费（实测 translation -20、long-to-short -55） |
+| `npm run test:flows` | 预发：translation / clean-cut / enhance / text-watermark / long-to-short / mix（mix 默认 fixme） | **会**真实上传并计费（实测 translation -20、long-to-short -55） |
+| `npm run test:cards` | 预发：卡片入口 4 条（AI 生图 / AI 生视频 / 总结视频 / 生成解说） | **会**真实生成并计费 |
 | `npm run test:annotation` | 视频批注 P0：18 条规则层 + 6 条编辑器 UI | 本地：需 feature 分支 worktree 与 4210 dev server |
 | `npm run test:staging` | 全部预发用例（G1/G2 + 六条工作流；mix 默认 fixme） | 同上（含计费） |
 | `npm run auth` | 打开有头浏览器人工登录 | 需要人工介入 |
@@ -84,7 +85,7 @@ src/
 tests/
   unit/                断言器单测
   gates/               关卡演练（mock 观测快照）
-  staging/             G1/G2 + 六条工作流（subtitle、image-watermark、translation、enhance、text-watermark、long-to-short）
+  staging/             G1/G2 + 工作流（subtitle、image-watermark、workflows 表驱动、cards 卡片入口）
 tools/                 auth 登录、doctor 配置诊断
 ```
 
