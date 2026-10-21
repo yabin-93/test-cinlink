@@ -189,7 +189,7 @@ def main() -> None:
     ensure_cases_valid()
     modules = []
     for path in sorted(CASE_DIR.glob("[0-9][0-9]-*.md")):
-        if path.name.startswith("00-") or path.name.startswith("16-"):
+        if path.name.startswith("00-") or path.name.startswith("06-") or path.name.startswith("16-"):
             continue
         modules.append((*parse_module(path), "设计稿"))
 
