@@ -241,6 +241,33 @@ def main() -> None:
         summary.column_dimensions[get_column_letter(index)].width = width
     summary.freeze_panes = "A2"
 
+    pending = workbook.create_sheet("待确认")
+    pending_headers = ["需求", "编号", "待确认问题", "影响用例", "状态", "确认结论", "确认人", "确认日期"]
+    pending.append(pending_headers)
+    for column in range(1, len(pending_headers) + 1):
+        cell = pending.cell(row=1, column=column)
+        cell.fill = header_fill
+        cell.font = header_font
+    q_index = 0
+    for path in sorted(req_root.glob("*/cases.md")):
+        req = path.parent.name
+        in_section = False
+        for line in path.read_text(encoding="utf-8").splitlines():
+            if line.startswith("## ") and "待确认" in line:
+                in_section = True
+                continue
+            if in_section and line.startswith("## "):
+                in_section = False
+            if not in_section:
+                continue
+            match = re.match(r"\s*\d+\.\s*(.+)", line)
+            if match:
+                q_index += 1
+                pending.append([req, f"Q-{q_index:03d}", match.group(1).strip(), "", "待确认", "", "", ""])
+    for index, width in enumerate([14, 8, 80, 20, 10, 40, 12, 14], start=1):
+        pending.column_dimensions[get_column_letter(index)].width = width
+    pending.freeze_panes = "A2"
+
     OUT.parent.mkdir(parents=True, exist_ok=True)
     workbook.save(OUT)
     print(f"written {OUT} · {total['count']} cases · P0={total['P0']} P1={total['P1']} P2={total['P2']}")
