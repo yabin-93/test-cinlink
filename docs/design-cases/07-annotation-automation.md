@@ -243,3 +243,26 @@ python tools/annotation/region_diff.py --selftest
 ```
 
 > 当前是本地工具，不依赖预发；等预发恢复后接到 CHAIN-05/06/07 的产物断言里。
+
+### Playwright 断言封装
+
+```ts
+import { expect } from "@playwright/test";
+import { checkRegionChanged, checkRegionDiff } from "../../src/assertions/region.js";
+
+const report = await checkRegionDiff({
+  source: "reports/artifacts/chain-05/source.mp4",
+  result: "reports/artifacts/chain-05/result.mp4",
+  timeSec: 3.5,
+  rect: { x: 0.4, y: 0.35, w: 0.2, h: 0.25 }, // 归一化 0-1
+  minInside: 0.02,
+  maxOutside: 0.02,
+});
+
+const check = checkRegionChanged(report);
+expect(check.ok, check.failures.join("\n")).toBe(true);
+```
+
+- `checkRegionDiff` 负责抽帧、比对、生成热力图；
+- `checkRegionChanged` 返回 `{ ok, failures }`，与其它断言器一致；
+- 退出码 2 会被当作“校验不通过”，不会抛异常。
