@@ -7,6 +7,8 @@
 from __future__ import annotations
 
 import re
+import subprocess
+import sys
 from pathlib import Path
 
 from openpyxl import Workbook
@@ -141,6 +143,21 @@ def parse_module(path: Path) -> tuple[str, str, list[list[str]]]:
 
 
 
+def ensure_cases_valid() -> None:
+    """生成 Excel 前强制跑 cases:check，不通过直接阻断。"""
+    checker = Path(__file__).with_name("check-cases.py")
+    result = subprocess.run(
+        [sys.executable, str(checker)],
+        capture_output=True,
+        text=True,
+        encoding="utf-8",
+    )
+    if result.returncode != 0:
+        print(result.stdout)
+        print(result.stderr)
+        raise SystemExit("cases:check 未通过，已阻止生成 Excel")
+
+
 def parse_req_cases(path: Path) -> tuple[str, str, list[list[str]], str]:
     """解析 docs/cases/requirements/<REQ>/cases.md（九列，含自动化/脚本/锚点）。"""
     text = path.read_text(encoding="utf-8")
@@ -169,6 +186,7 @@ def parse_req_cases(path: Path) -> tuple[str, str, list[list[str]], str]:
 
 
 def main() -> None:
+    ensure_cases_valid()
     modules = []
     for path in sorted(CASE_DIR.glob("[0-9][0-9]-*.md")):
         if path.name.startswith("00-") or path.name.startswith("16-"):
