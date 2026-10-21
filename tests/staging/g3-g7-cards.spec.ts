@@ -61,8 +61,8 @@ async function downloadVideo(page: Page, runId: string, dir: string) {
   return probeMedia(filePath);
 }
 
-test.describe("G3–G7 第一批 P0", () => {
-  test("AI 生图 · 默认 1K / 1:1", async ({ page }) => {
+test.describe("@regression G3–G7 卡片入口", () => {
+  test("@smoke AI 生图 · 默认 1K / 1:1", async ({ page }) => {
     test.setTimeout(POLL_TIMEOUT_MS + 5 * 60_000);
     await openWorkspaceSession(page);
 
@@ -87,7 +87,7 @@ test.describe("G3–G7 第一批 P0", () => {
     ).toBe(true);
   });
 
-  test("AI 生视频 · 默认 720P / 16:9 / 5 秒", async ({ page }) => {
+  test("@slow AI 生视频 · 默认 720P / 16:9 / 5 秒", async ({ page }) => {
     test.setTimeout(POLL_TIMEOUT_MS + 8 * 60_000);
     const dir = path.resolve("reports", "artifacts", "g3-g7-ai", "ai-video");
     await mkdir(dir, { recursive: true });
@@ -140,7 +140,7 @@ test.describe("G3–G7 第一批 P0", () => {
     expect(artifacts.length > 0 || hasSummaryText, "既没有产物也没有总结文本").toBe(true);
   });
 
-  test("生成解说 · 默认 3 分钟", async ({ page }) => {
+  test("@slow 生成解说 · 默认 3 分钟", async ({ page }) => {
     test.setTimeout(25 * 60_000);
     const dir = path.resolve("reports", "artifacts", "g3-g7-ai", "narrated-recap");
     await mkdir(dir, { recursive: true });

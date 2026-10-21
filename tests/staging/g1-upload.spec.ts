@@ -50,7 +50,7 @@ const SHORT = TEST_ASSETS.videoShort;
 /** 唯一名策略下，服务端回显的文件名形如 `7MB-1760000000000.mp4` */
 const UNIQUE_NAME_PATTERN = /^7MB-\d{10,}\.mp4$/;
 
-test.describe("G1 素材就绪", () => {
+test.describe("@regression G1 素材就绪", () => {
   test("前置：素材文件存在", () => {
     // 单独一条，避免素材缺失时表现为"上传失败"这种误导性症状
     expect(existsSync(SHORT.path), `素材不存在：${SHORT.path}`).toBe(true);

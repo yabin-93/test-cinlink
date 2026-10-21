@@ -62,3 +62,16 @@
 2. 修完缺陷、启用 fixme 时，把 `[FIXME]` 改成 `[AUTO]`；
 3. 设计用例变更时，同步 `14-workflow-material-paths.md` 与本表；
 4. Excel `自动化状态` 页与本文件保持一致。
+
+## 五、执行层级与标签
+
+| 层级 | 标签 | 命令 | 内容 | 当前条数 |
+|---|---|---|---|---|
+| L0 离线 | 无 | `npm run verify` | tsc + unit + gates | 116 |
+| L1 冒烟 | `@smoke` | `npm run test:smoke` | 字幕、clean-cut、AI 生图 | 3 |
+| L2 回归 | `@regression` | `npm run test:regression` | G1/G2 + 工作流 + 卡片 | 19 |
+| L3 全量 | 无过滤 | `npm run test:full` | 预发全部脚本 | 19 |
+
+批注预发用例统一带 `@regression`，单独用 `npm run test:annotation:staging` 执行。
+
+> 标签写在测试标题里；`--grep @smoke` 只跑冒烟。全量与回归共用同一份脚本，避免两套用例漂移。

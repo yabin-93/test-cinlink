@@ -228,7 +228,7 @@ test.afterAll(async () => {
   await context?.close().catch(() => undefined);
 });
 
-test("DC-07-005 单点批注：点选画面后生成批注条目", async () => {
+test("@regression DC-07-005 单点批注：点选画面后生成批注条目", async () => {
   const page = await openCleanCutPage();
   try {
     const before = await page.locator("[data-video-annotation-timeline]").count();
@@ -240,7 +240,7 @@ test("DC-07-005 单点批注：点选画面后生成批注条目", async () => {
   }
 });
 
-test("DC-07-008 批注描述：上限 2000 字符并加入对话", async () => {
+test("@regression DC-07-008 批注描述：上限 2000 字符并加入对话", async () => {
   const page = await openCleanCutPage();
   page.on("console", (message) => console.log(`CONSOLE[${message.type()}]`, message.text().slice(0, 200)));
   page.on("pageerror", (error) => console.log("PAGEERROR", String(error).slice(0, 300)));
@@ -285,7 +285,7 @@ test("DC-07-008 批注描述：上限 2000 字符并加入对话", async () => {
   }
 });
 
-test("DC-07-013 引用标签可从输入框单独移除", async () => {
+test("@regression DC-07-013 引用标签可从输入框单独移除", async () => {
   const page = await openCleanCutPage();
   try {
     await createPointAnnotation(page);
@@ -299,7 +299,7 @@ test("DC-07-013 引用标签可从输入框单独移除", async () => {
   }
 });
 
-test("DC-07-024 发送批注只创建一次 Agent run", async () => {
+test("@regression DC-07-024 发送批注只创建一次 Agent run", async () => {
   const page = await openCleanCutPage();
   let runs = 0;
   page.on("request", (request) => {
@@ -316,7 +316,7 @@ test("DC-07-024 发送批注只创建一次 Agent run", async () => {
   }
 });
 
-test.fixme("DC-07-040 run 创建失败时给出失败态并可基于原锚点重试（失败态无“重试”按钮，待确认 UI）", async () => {
+test.fixme("@regression DC-07-040 run 创建失败时给出失败态并可基于原锚点重试（失败态无“重试”按钮，待确认 UI）", async () => {
   const page = await openCleanCutPage();
   let runs = 0;
   let failOnce = true;
@@ -348,7 +348,7 @@ test.fixme("DC-07-040 run 创建失败时给出失败态并可基于原锚点重
   }
 });
 
-test("DC-07-002 无视频时批注入口不可用", async () => {
+test("@regression DC-07-002 无视频时批注入口不可用", async () => {
   const page = await context.newPage();
   try {
     await page.goto("https://staging-app.cinlink.ai/", { waitUntil: "domcontentloaded", timeout: 90_000 });
@@ -369,7 +369,7 @@ test("DC-07-002 无视频时批注入口不可用", async () => {
   }
 });
 
-test("DC-07-003 播放头位于空白区时不创建批注", async () => {
+test("@regression DC-07-003 播放头位于空白区时不创建批注", async () => {
   const page = await openCleanCutPage(
     "E:/图片视频素材/cinlink测试数据/---视频批注用例/批注/测试视频_003_12秒.mp4",
   );
@@ -465,7 +465,7 @@ test("DC-07-003 播放头位于空白区时不创建批注", async () => {
   }
 });
 
-test("DC-07-009 保存失败时不创建 run", async () => {
+test("@regression DC-07-009 保存失败时不创建 run", async () => {
   const page = await openCleanCutPage();
   let runs = 0;
   page.on("request", (request) => {
@@ -504,7 +504,7 @@ test("DC-07-009 保存失败时不创建 run", async () => {
   }
 });
 
-test("DC-07-015 已有锚点时再次添加批注", async () => {
+test("@regression DC-07-015 已有锚点时再次添加批注", async () => {
   const page = await openCleanCutPage();
   try {
     await createPointAnnotation(page);
@@ -537,7 +537,7 @@ test("DC-07-015 已有锚点时再次添加批注", async () => {
   }
 });
 
-test("DC-07-029 裁剪后批注引用不可用", async () => {
+test("@regression DC-07-029 裁剪后批注引用不可用", async () => {
   const page = await openCleanCutPage();
   try {
     await createPointAnnotation(page);
@@ -563,7 +563,7 @@ test("DC-07-029 裁剪后批注引用不可用", async () => {
   }
 });
 
-test("DC-07-037 跨源批注被阻止", async () => {
+test("@regression DC-07-037 跨源批注被阻止", async () => {
   const page = await openCleanCutPage(
     "E:/图片视频素材/cinlink测试数据/---视频批注用例/批注/测试视频_003_12秒.mp4",
   );
@@ -644,7 +644,7 @@ test("DC-07-037 跨源批注被阻止", async () => {
   }
 });
 
-test("DC-07-001 批注入口可用并进入批注模式", async () => {
+test("@regression DC-07-001 批注入口可用并进入批注模式", async () => {
   const page = await openCleanCutPage(
     "E:/图片视频素材/cinlink测试数据/---视频批注用例/批注/测试视频_003_12秒.mp4",
   );
@@ -684,7 +684,7 @@ test("DC-07-001 批注入口可用并进入批注模式", async () => {
   }
 });
 
-test("DC-07-016 已发送批注刷新后引用、正文与任务状态完整恢复", async () => {
+test("@regression DC-07-016 已发送批注刷新后引用、正文与任务状态完整恢复", async () => {
   const page = await openCleanCutPage();
   try {
     await createPointAnnotation(page);
@@ -724,7 +724,7 @@ test("DC-07-016 已发送批注刷新后引用、正文与任务状态完整恢�
   }
 });
 
-test("DC-07-020 点击批注轨色块选中草稿并可继续拖动调整", async () => {
+test("@regression DC-07-020 点击批注轨色块选中草稿并可继续拖动调整", async () => {
   const page = await openCleanCutPage();
   try {
     await createPointAnnotation(page);
@@ -768,7 +768,7 @@ test("DC-07-020 点击批注轨色块选中草稿并可继续拖动调整", asyn
   }
 });
 
-test("DC-07-021 消息保存成功后草稿立即消失，不等 Agent 执行完", async () => {
+test("@regression DC-07-021 消息保存成功后草稿立即消失，不等 Agent 执行完", async () => {
   const page = await openCleanCutPage();
   try {
     await createPointAnnotation(page);
@@ -797,7 +797,7 @@ test("DC-07-021 消息保存成功后草稿立即消失，不等 Agent 执行完
   }
 });
 
-test("DC-07-022 时间轴不回显历史批注，历史只留在会话里", async () => {
+test("@regression DC-07-022 时间轴不回显历史批注，历史只留在会话里", async () => {
   const page = await openCleanCutPage();
   try {
     await createPointAnnotation(page);

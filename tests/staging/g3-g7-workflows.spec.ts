@@ -64,6 +64,8 @@ import {
 interface FlowCase {
   /** 用例标题 */
   name: string;
+  /** Playwright 标签：@smoke / @regression / @slow */
+  tag: string;
   prompt: string;
   assets: TestAsset[];
   /** 期望至少有一个结构化字幕产物 */
@@ -91,36 +93,42 @@ const LONG = TEST_ASSETS.videoLong;
 const FLOWS: FlowCase[] = [
   {
     name: "translation · 英文翻译字幕",
+    tag: "@regression",
     prompt: "把这个视频翻译成英文（English）字幕，只输出翻译后的字幕文件",
     assets: [SHORT],
     expectSubtitle: true,
   },
   {
     name: "clean-cut · 去口水词",
+    tag: "@smoke @regression",
     prompt: "去掉这个视频里的口水词",
     assets: [SHORT],
     video: { minDurationSec: 1, maxDurationSec: SHORT.durationSec + 5, requireAudio: true },
   },
   {
     name: "enhance · 增强画质",
+    tag: "@regression",
     prompt: "增强这个视频的画质",
     assets: [SHORT],
     video: { durationSec: SHORT.durationSec, durationToleranceSec: 3, requireAudio: true },
   },
   {
     name: "text-watermark · 文字水印",
+    tag: "@regression",
     prompt: "给这个视频添加文字水印，文字内容是 E2E-TEST",
     assets: [SHORT],
     video: { durationSec: SHORT.durationSec, durationToleranceSec: 2, requireAudio: true },
   },
   {
     name: "long-to-short · 高光短视频",
+    tag: "@regression",
     prompt: "把这个视频剪成 20 秒左右的高光短视频，直接剪，不用先给我方案",
     assets: [SHORT],
     video: { minDurationSec: 5, maxDurationSec: 40, requireAudio: true },
   },
   {
     name: "mix · 双素材混剪",
+    tag: "@regression @slow",
     // 双素材高光必问 max_clips（实测澄清原话：「最多用几个高光片段（2～10个）？」）；
     // 用例按产品的真实流程回答该问题，而不是写死提示词绕过它。
     prompt: "把这两个视频的高光混剪成 18 秒",
@@ -138,7 +146,7 @@ const POLL_TIMEOUT_MS = 15 * 60_000;
 
 for (const flow of FLOWS) {
   test.describe(`G3–G7 ${flow.name}`, () => {
-    test(`${flow.name}：状态收敛、产物可交付且结构合法`, async ({ page }) => {
+    test(`${flow.tag} ${flow.name}：状态收敛、产物可交付且结构合法`, async ({ page }) => {
       test.setTimeout(POLL_TIMEOUT_MS + 3 * 60_000);
 
       if (flow.blocked && process.env.CINLINK_INCLUDE_BLOCKED !== "1") {

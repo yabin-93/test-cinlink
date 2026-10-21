@@ -38,7 +38,7 @@ import {
 /** 极简 prompt：目标是验证「受理机制」，不是验证某个工作流的效果 */
 const PROBE_PROMPT = "你好，请用一句话说明你能做什么";
 
-test.describe("G2 提交受理", () => {
+test.describe("@regression G2 提交受理", () => {
   test("提交任务被受理，且客户端只提交了一次", async ({ page }) => {
     await openWorkspaceSession(page);
 

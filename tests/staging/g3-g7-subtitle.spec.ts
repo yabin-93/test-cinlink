@@ -68,7 +68,7 @@ const POLL_TIMEOUT_MS = 15 * 60_000;
 // 产物需要跨运行保留供人工复核。
 const ARTIFACT_DIR = path.resolve("reports", "artifacts", "g3-g7-subtitle");
 
-test.describe("G3–G7 字幕链路", () => {
+test.describe("@smoke @regression G3–G7 字幕链路", () => {
   test("提交字幕任务后，状态收敛、产物可交付且结构合法", async ({ page }) => {
     // 该用例包含真实排队与执行时间，必须放宽 Playwright 默认 5 分钟
     test.setTimeout(POLL_TIMEOUT_MS + 3 * 60_000);
