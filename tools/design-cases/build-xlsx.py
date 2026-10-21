@@ -36,7 +36,7 @@ def parse_module(path: Path) -> tuple[str, str, list[list[str]]]:
     lines = text.splitlines()
     in_table = False
     for line in lines:
-        if line.startswith("| ID |"):
+        if line.startswith("| ID |") or line.startswith("| 编号 |"):
             in_table = True
             continue
         if not in_table:
@@ -50,6 +50,12 @@ def parse_module(path: Path) -> tuple[str, str, list[list[str]]]:
         cells = split_row(line)
         if len(cells) >= 8 and cells[0].startswith("DC-"):
             rows.append(cells)
+        elif len(cells) >= 5 and cells[0].startswith("IE-"):
+            # ERYE-237 文档使用「编号/优先级/步骤/预期/来源」五列，这里补齐标准列
+            case_id, priority, steps, expected, source = cells[:5]
+            rows.append([
+                case_id, priority, "功能", steps[:60], "", steps, expected, source, "待评估",
+            ])
     return title, page, rows
 
 
