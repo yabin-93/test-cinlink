@@ -1,0 +1,8 @@
+﻿requirement: ERYE-160
+title: 计费逻辑更新（CinLink 国际版各功能积分计费 PRD v1.0）
+source: https://devops.aliyun.com/projex/req/ERYE-160
+owner: 时文轩
+status: designing
+automation_tag: "@ERYE-160"
+case_prefix: ERYE160
+updated: 2026-10-21
