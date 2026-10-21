@@ -1,0 +1,9 @@
+requirement: ERYE-237
+title: 【全】图像编辑能力新增
+source: https://devops.aliyun.com/projex/req/ERYE-237
+owner: yabinc18
+status: designing
+automation_tag: "@ERYE-237"
+case_prefix: ERYE237
+updated: 2026-10-21
+legacy_file: docs/design-cases/16-image-editing-erye237.md

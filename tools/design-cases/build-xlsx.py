@@ -17,7 +17,7 @@ ROOT = Path(__file__).resolve().parents[2]
 CASE_DIR = ROOT / "docs" / "design-cases"
 OUT = ROOT / "reports" / "design-cases.xlsx"
 
-HEADERS = ["模块", "用例ID", "优先级", "类型", "用例标题", "前置条件", "操作步骤", "预期结果", "设计来源", "可自动化", "设计页面"]
+HEADERS = ["模块", "用例ID", "优先级", "类型", "用例标题", "前置条件", "操作步骤", "预期结果", "设计来源", "可自动化", "设计页面", "来源类型"]
 
 
 def split_row(line: str) -> list[str]:
@@ -140,12 +140,44 @@ def parse_module(path: Path) -> tuple[str, str, list[list[str]]]:
     return title, page, rows
 
 
+
+def parse_req_cases(path: Path) -> tuple[str, str, list[list[str]], str]:
+    """解析 docs/cases/requirements/<REQ>/cases.md（九列，含自动化/脚本/锚点）。"""
+    text = path.read_text(encoding="utf-8")
+    title_match = re.search(r"^#\s+(.+)$", text, re.M)
+    title = title_match.group(1).strip() if title_match else path.parent.name
+    rows: list[list[str]] = []
+    in_table = False
+    for line in text.splitlines():
+        if line.startswith("| ID |"):
+            in_table = True
+            continue
+        if not in_table:
+            continue
+        if not line.startswith("|"):
+            in_table = False
+            continue
+        if set(line.replace("|", "").strip()) <= {"-"}:
+            continue
+        cells = split_row(line)
+        if len(cells) >= 9 and cells[0].startswith("ERYE"):
+            case_id, priority, pre, steps, expected, source, automation = cells[:7]
+            rows.append([
+                case_id, priority, "功能", steps[:60], pre, steps, expected, source, automation,
+            ])
+    return title, path.parent.name, rows, "需求"
+
+
 def main() -> None:
     modules = []
     for path in sorted(CASE_DIR.glob("[0-9][0-9]-*.md")):
-        if path.name.startswith("00-"):
+        if path.name.startswith("00-") or path.name.startswith("16-"):
             continue
-        modules.append(parse_module(path))
+        modules.append((*parse_module(path), "设计稿"))
+
+    req_root = ROOT / "docs" / "cases" / "requirements"
+    for path in sorted(req_root.glob("*/cases.md")):
+        modules.append(parse_req_cases(path))
 
     workbook = Workbook()
     sheet = workbook.active
@@ -172,9 +204,9 @@ def main() -> None:
     }
 
     row_index = 2
-    for title, page, rows in modules:
+    for title, page, rows, source_type in modules:
         for cells in rows:
-            values = [title] + cells[:9] + [page]
+            values = [title] + cells[:9] + [page, source_type]
             sheet.append(values)
             for column in range(1, len(HEADERS) + 1):
                 cell = sheet.cell(row=row_index, column=column)
@@ -185,7 +217,7 @@ def main() -> None:
                 sheet.cell(row=row_index, column=3).fill = priority_fill[priority]
             row_index += 1
 
-    widths = [26, 12, 8, 8, 34, 30, 40, 44, 38, 16, 28]
+    widths = [26, 14, 8, 8, 34, 30, 40, 44, 38, 12, 28, 10]
     for index, width in enumerate(widths, start=1):
         sheet.column_dimensions[get_column_letter(index)].width = width
     sheet.freeze_panes = "A2"
@@ -198,7 +230,7 @@ def main() -> None:
         cell.fill = header_fill
         cell.font = header_font
     total = {"count": 0, "P0": 0, "P1": 0, "P2": 0}
-    for title, page, rows in modules:
+    for title, page, rows, source_type in modules:
         counts = {key: sum(1 for row in rows if len(row) > 1 and row[1] == key) for key in ("P0", "P1", "P2")}
         summary.append([title, page, len(rows), counts["P0"], counts["P1"], counts["P2"]])
         total["count"] += len(rows)
