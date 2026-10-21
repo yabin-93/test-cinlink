@@ -130,13 +130,12 @@ def parse_module(path: Path) -> tuple[str, str, list[list[str]]]:
         cells = split_row(line)
         if len(cells) >= 8 and cells[0].startswith("DC-"):
             rows.append(cells)
-        elif len(cells) >= 5 and cells[0].startswith("IE-"):
-            # ERYE-237 文档使用「编号/优先级/步骤/预期/来源」五列，这里补齐标准列
-            case_id, priority, steps, expected, source = cells[:5]
+        elif len(cells) >= 6 and cells[0].startswith("IE-"):
+            # ERYE-237 文档使用「编号/优先级/前置/步骤/预期/来源」六列
+            case_id, priority, precondition, steps, expected, source = cells[:6]
             rows.append([
                 case_id, priority, "功能", steps[:60],
-                IE_PRECONDITIONS.get(case_id, "已登录并打开图像编辑器"),
-                steps, expected, source, "待评估",
+                precondition, steps, expected, source, "待评估",
             ])
     return title, page, rows
 
