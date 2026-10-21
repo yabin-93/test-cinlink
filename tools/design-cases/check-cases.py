@@ -29,7 +29,7 @@ def main() -> int:
 
     for path in sorted(REQ_ROOT.glob("*/cases.md")):
         rel = path.relative_to(ROOT)
-        for line in path.read_text(encoding="utf-8").splitlines():
+        for line in path.read_text(encoding="utf-8", errors="replace").splitlines():
             if not line.startswith("| ERYE"):
                 continue
             cells = [cell.strip() for cell in line.strip().strip("|").split("|")]
