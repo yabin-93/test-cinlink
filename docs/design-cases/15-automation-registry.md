@@ -26,6 +26,7 @@
 | 卡片入口 | `tests/staging/g3-g7-cards.spec.ts` | 6 | 5 `[AUTO]` + 1 `[FIXME]` | `npm run test:cards` |
 | 快捷卡片 | `tests/staging/g3-g7-quick-cards.spec.ts` | 3 | 2 `[AUTO]` + 1 `[FIXME]` | `npm run test:quick` |
 | 多工作流 | `tests/staging/g3-g7-multi.spec.ts` | 5 | 4 `[AUTO]` + 1 `[FIXME]` | `npm run test:multi` |
+| 链路 | `tests/staging/g3-g7-chains.spec.ts` | 4 | 1 `[AUTO]` + 3 `[FIXME]` | `npm run test:chains` |
 | 批注规则 | `tests/annotation/annotation-rules.spec.ts` | 27 | `[AUTO]` | `npm run test:annotation` |
 | 批注本地 UI | `tests/annotation/video-annotation-ui.spec.ts` | 12 | `[AUTO]` | `npm run test:annotation` |
 | 批注预发 | `tests/annotation/video-annotation-staging.spec.ts` | 16 | 15 `[AUTO]` + 1 `[FIXME]` | `npm run test:annotation:staging` |
@@ -61,7 +62,7 @@
 | 卡片用例 | 36 | 部分 `[PLAN]` | 其中卡片 4 条已进 `test:cards`、clean-cut 已并入 `test:flows`，其余待补 |
 | 上下文用例 | 11 | `[PLAN]` | CTX-01~11（已并入专项用例页） |
 | 视频专项 | 8（建议） | `[PLAN]` | 时长/编码/比例/无音轨等 |
-| 链路用例 | 12 | `[PLAN]` | CHAIN-01~12（已并入专项用例页） |
+| 链路用例 | 13 | 1 `[AUTO]` + 3 `[FIXME]` + 9 `[PLAN]` | CHAIN-01~13 |
 
 ## 四、维护约定
 
@@ -76,8 +77,8 @@
 |---|---|---|---|---|
 | L0 离线 | 无 | `npm run verify` | tsc + unit + gates | 116 |
 | L1 冒烟 | `@smoke` | `npm run test:smoke` | 字幕、clean-cut、AI 生图 | 3 |
-| L2 回归 | `@regression` | `npm run test:regression` | G1/G2 + 工作流 + 卡片 + 快捷卡片 + 多工作流 | 29 |
-| L3 全量 | 无过滤 | `npm run test:full` | 预发全部脚本 | 29 |
+| L2 回归 | `@regression` | `npm run test:regression` | G1/G2 + 工作流 + 卡片 + 快捷卡片 + 多工作流 + 链路 | 33 |
+| L3 全量 | 无过滤 | `npm run test:full` | 预发全部脚本 | 33 |
 
 批注预发用例统一带 `@regression`，单独用 `npm run test:annotation:staging` 执行。
 

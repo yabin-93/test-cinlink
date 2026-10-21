@@ -24,6 +24,7 @@
     "test:full": "playwright test --project=staging",
     "test:quick": "playwright test --project=staging g3-g7-quick-cards",
     "test:multi": "playwright test --project=staging g3-g7-multi",
+    "test:chains": "playwright test --project=staging g3-g7-chains",
     "test:ai": "playwright test --project=staging g3-g7-cards",
     "test:annotation": "playwright test --project=annotation",
     "test:annotation:staging": "playwright test --project=annotation-staging",
