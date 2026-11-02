@@ -277,20 +277,23 @@ for (const flow of [...single, ...multi])
 
 ## 十三、卡片行为分类（S2）
 
-| 分组 | 卡片（action-id） | 提示词 | 参数（默认） |
-|---|---|---|---|
-| 素材与生成 | 本地素材查找 `local-material` | 隐藏 | 无 |
-| 素材与生成 | AI 生图 `image` | 隐藏 | 分辨率（1K/2K/4K，默认 1K）、图片比例（1:1 等，默认 1:1） |
-| 素材与生成 | AI 生视频 `video` | 隐藏 | 分辨率（720P/1080P/2K/4K，默认 720P）、视频比例（16:9/9:16/1:1/3:4/4:3，默认 16:9）、生成时长（3/5/8/10/12/15 秒，默认 5 秒） |
-| 剪辑与优化 | 去口水词（清理） `clean-cut` | 隐藏 | 无 |
-| 剪辑与优化 | 画面增强 `enhance` | 隐藏 | 无 |
-| 剪辑与优化 | 长变短 `shorten` | **预填**「把这条长视频剪成适合发布的短视频」 | 精华时长（30s/60s/90s/2min/3min，默认 3 分钟） |
-| 剪辑与优化 | 添加水印 `watermark` | 隐藏 | 无（当前点击后不出现参数，水印配置在编辑器内） |
-| 字幕与翻译 | 添加字幕 `transcribe` | 隐藏 | 视频语音（默认 自动识别）、目标语言（默认 不翻译） |
-| 字幕与翻译 | 翻译配音 `translate` | 隐藏 | 翻译模式（默认 翻译语音及字幕）、视频语音（自动识别）、目标语言（默认 英文 eng） |
-| 提炼与再创作 | 总结视频 `summarize` | 隐藏 | 无 |
-| 提炼与再创作 | 长视频变短 `shorten` | 隐藏 | 精华时长（30 秒/60 秒/90 秒/2 分钟/3 分钟，默认 3 分钟） |
-| 提炼与再创作 | 生成解说 `narrated-recap` | 隐藏 | 解说时长（3/10/20 分钟，默认 3 分钟） |
+| 分组 | 卡片 | 标识 | 锚点 | 提示词 | 参数（默认） |
+|---|---|---|---|---|---|
+| 素材与生成 | 本地素材查找 | local-material | `[data-workspace-action-id="local-material"]` | 隐藏 | 无 |
+| 素材与生成 | AI 生图 | image | `[data-workspace-action-id="image"]` | 隐藏 | 分辨率 1K/2K/4K（默认 1K）；比例 1:1/3:2/2:3/3:4/4:3/16:9/9:16/21:9/9:21（默认 1:1） |
+| 素材与生成 | AI 生视频 | video | `[data-workspace-action-id="video"]` | 隐藏 | 分辨率 720P/1080P/2K/4K（默认 720P）；比例 16:9/9:16/1:1/3:4/4:3（默认 16:9）；时长 3/5/8/10/12/15 秒（默认 5 秒） |
+| 剪辑与优化 | 去口水词（清理） | clean-cut | `[data-workspace-action-id="clean-cut"]` | 隐藏 | 无 |
+| 剪辑与优化 | 画面增强 | enhance | `[data-workspace-action-id="enhance"]` | 隐藏 | 无 |
+| 剪辑与优化 | 长变短 | shorten | `[data-workspace-action-id="shorten"]` | **预填**「把这条长视频剪成适合发布的短视频」 | 精华时长 30s/60s/90s/2min/3min（默认 3 分钟） |
+| 剪辑与优化 | 添加水印 | watermark | `[data-workspace-action-id="watermark"]` | 隐藏 | 无（当前不出现参数，水印配置在编辑器内） |
+| 字幕与翻译 | 添加字幕 | transcribe | `[data-workspace-action-id="transcribe"]` | 隐藏 | 视频语音 自动识别；目标语言 不翻译 |
+| 字幕与翻译 | 翻译配音 | translate | `[data-workspace-action-id="translate"]` | 隐藏 | 翻译模式 翻译语音及字幕；视频语音 自动识别；目标语言 英文 (eng) |
+| 提炼与再创作 | 总结视频 | summarize | `[data-workspace-action-id="summarize"]` | 隐藏 | 无 |
+| 提炼与再创作 | 长视频变短 | shorten | `[data-workspace-action-id="shorten"]` | 隐藏 | 精华时长 30 秒/60 秒/90 秒/2 分钟/3 分钟（默认 3 分钟） |
+| 提炼与再创作 | 生成解说 | narrated-recap | `[data-workspace-action-id="narrated-recap"]` | 隐藏 | 解说时长 3/10/20 分钟（默认 3 分钟） |
+| 字幕与翻译 | 转写字幕（快捷卡片） | quick-prompt | `[data-workspace-quick-prompt="为这条视频转写并添加字幕"]` | 快捷卡片 | 无；需视频上下文，无视频时 no-op |
+| 字幕与翻译 | 导出字幕（快捷卡片） | quick-prompt | `[data-workspace-quick-prompt="导出当前视频的字幕文件"]` | 快捷卡片 | 无；需视频上下文 |
+| 素材与生成 | 查找片段（快捷卡片） | quick-prompt | `[data-workspace-quick-prompt="在这条视频里查找相关片段"]` | 快捷卡片 | 无；需视频上下文 |
 
 > 已用 staging 实际 DOM 验证：卡片的稳定锚点是 `[data-workspace-action-id="<id>"]`，分类标签是 `[data-workspace-category="material|editing|subtitles|repurpose"]`。
 > 只有「剪辑与优化」里的「长变短」会预填提示词；「提炼与再创作」里的「长视频变短」虽然同为 `shorten`，但**不预填**，只展示精华时长。\n> 其余卡片提示词隐藏，只展示参数。
