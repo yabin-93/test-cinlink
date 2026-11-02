@@ -1,0 +1,8 @@
+﻿requirement: MW-MULTI
+title: 多工作流复合指令（一句话 3-8 个工作流）
+source: docs/design-cases/14-workflow-material-paths.md#MW-06
+owner: yabinc18
+status: designing
+automation_tag: "@MW-MULTI"
+case_prefix: MWMULTI
+updated: 2026-11-02

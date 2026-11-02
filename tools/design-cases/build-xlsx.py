@@ -177,7 +177,7 @@ def parse_req_cases(path: Path) -> tuple[str, str, list[list[str]], str]:
         if set(line.replace("|", "").strip()) <= {"-"}:
             continue
         cells = split_row(line)
-        if len(cells) >= 9 and cells[0].startswith("ERYE"):
+        if len(cells) >= 9 and cells[0].startswith(("ERYE", "MWMULTI")):
             case_id, priority, pre, steps, expected, source, automation = cells[:7]
             rows.append([
                 case_id, priority, "功能", steps[:60], pre, steps, expected, source, automation,
