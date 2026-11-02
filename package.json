@@ -35,7 +35,8 @@
     "verify": "npm run typecheck && npm test",
     "report": "playwright show-report reports/html",
     "region:diff": "python tools/annotation/region_diff.py",
-    "cases:check": "python tools/design-cases/check-cases.py"
+    "cases:check": "python tools/design-cases/check-cases.py",
+    "test:multi:compound": "playwright test --project=staging g3-g7-multi-compound"
   },
   "devDependencies": {
     "@playwright/test": "^1.56.0",

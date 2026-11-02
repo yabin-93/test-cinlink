@@ -2,7 +2,7 @@
 
 CinLink Web 的自动化测试工程：离线断言器 + 本地批注 + 预发真实链路（G1–G7），用于在 DeepSeek Harness 或任意可执行命令的 Agent 中运行。
 
-- 离线 116 条、本地批注 39 条、预发 29 条、批注真实链路 16 条
+- 离线 118 条、本地批注 39 条、预发 50 条、批注真实链路 16 条
 - 工作流覆盖 34 个：8 个主工作流 + 6 个生成类 + 3 个快捷卡片 + 5 个多工作流场景 + 12 条链路
 - 用例矩阵、自动化状态、脚本清单统一在 [workflow-material-matrix.xlsx](docs/design-cases/workflow-material-matrix.xlsx)
 
@@ -11,7 +11,7 @@ CinLink Web 的自动化测试工程：离线断言器 + 本地批注 + 预发�
 ```powershell
 cd E:\proj\deepseek-cinlink
 npm ci
-npm run verify          # tsc + 116 条离线，约 9 秒
+npm run verify          # tsc + 118 条离线，约 9 秒
 npm run auth            # 预发会话失效时先登录
 npm run test:smoke      # 预发冒烟 3 条：字幕 / clean-cut / AI 生图
 ```
@@ -41,7 +41,7 @@ npm run test:smoke      # 预发冒烟 3 条：字幕 / clean-cut / AI 生图
 
 | 命令 | 内容 |
 |---|---|
-| `npm run verify` | 类型检查 + 116 条离线 |
+| `npm run verify` | 类型检查 + 118 条离线 |
 | `npm test` | unit + gates（116） |
 | `npm run test:gates` | G1–G7 关卡演练（24） |
 | `npm run test:annotation` | 批注规则 27 + 本地 UI 12 |
@@ -173,6 +173,6 @@ docs/design-cases/                 设计用例与矩阵
 ## 历史
 
 - 来源链：`E:\proj\cinlink-web-tests` → `E:\proj\test-cinlink-web` → 本工程。
-- 2026-10-19 迁移验证：`npm run verify` 116 条通过。
+- 2026-10-19 迁移验证：`npm run verify` 118 条通过。
 - 2026-10-21：新增 cards / quick / multi 套件，预发 19 → 29 条；补 `@smoke` / `@regression` 分层。
 - 完整记录见 [docs/verification.md](docs/verification.md)。

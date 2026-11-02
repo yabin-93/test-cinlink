@@ -26,6 +26,7 @@
 | 卡片入口 | `tests/staging/g3-g7-cards.spec.ts` | 6 | 5 `[AUTO]` + 1 `[FIXME]` | `npm run test:cards` |
 | 快捷卡片 | `tests/staging/g3-g7-quick-cards.spec.ts` | 3 | 2 `[AUTO]` + 1 `[FIXME]` | `npm run test:quick` |
 | 多工作流 | `tests/staging/g3-g7-multi.spec.ts` | 5 | 4 `[AUTO]` + 1 `[FIXME]` | `npm run test:multi` |
+| 多工作流复合 | `tests/staging/g3-g7-multi-compound.spec.ts` | 17 | 6 `[AUTO]` + 11 `[FIXME]` | `npm run test:multi:compound` |
 | 链路 | `tests/staging/g3-g7-chains.spec.ts` | 4 | 1 `[AUTO]` + 3 `[FIXME]` | `npm run test:chains` |
 | 批注规则 | `tests/annotation/annotation-rules.spec.ts` | 27 | `[AUTO]` | `npm run test:annotation` |
 | 批注本地 UI | `tests/annotation/video-annotation-ui.spec.ts` | 12 | `[AUTO]` | `npm run test:annotation` |
@@ -75,10 +76,10 @@
 
 | 层级 | 标签 | 命令 | 内容 | 当前条数 |
 |---|---|---|---|---|
-| L0 离线 | 无 | `npm run verify` | tsc + unit + gates | 116 |
+| L0 离线 | 无 | `npm run verify` | tsc + unit + gates | 118 |
 | L1 冒烟 | `@smoke` | `npm run test:smoke` | 字幕、clean-cut、AI 生图 | 3 |
 | L2 回归 | `@regression` | `npm run test:regression` | G1/G2 + 工作流 + 卡片 + 快捷卡片 + 多工作流 + 链路 | 33 |
-| L3 全量 | 无过滤 | `npm run test:full` | 预发全部脚本 | 33 |
+| L3 全量 | 无过滤 | `npm run test:full` | 预发全部脚本 | 50 |
 
 批注预发用例统一带 `@regression`，单独用 `npm run test:annotation:staging` 执行。
 
