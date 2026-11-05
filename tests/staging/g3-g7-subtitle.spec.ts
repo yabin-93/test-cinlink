@@ -21,8 +21,10 @@ import {
   type Observation,
 } from "../../src/levels/gates.js";
 import {
+  appendPromptText,
+  attachAsset,
   cancelRun,
-  deleteAgentFile,
+  disposeAttached,
   getRunDetail,
   openWorkspaceSession,
   readBalanceCents,
@@ -30,14 +32,13 @@ import {
   readRuntimeHealth,
   referenceAssetInPrompt,
   submitCurrentPrompt,
-  uploadAsset,
   waitForActiveDrain,
 } from "../../src/workspace.js";
 
 /**
  * G3–G7 · subtitle 真实任务
  *
- * 设计依据：`CinLink-Web-AI工作流链路测试设计.md`（G3 执行可观测、G4 终态收敛、
+ * 设计依据：`AI工作流链路测试设计-2026-11.md`（G3 执行可观测、G4 终态收敛、
  * G5 产物可交付、G6 结构层、G7 资源账本）。
  *
  * ## 与其他用例的边界
@@ -58,7 +59,10 @@ import {
 const SHORT = TEST_ASSETS.videoShort;
 
 /** 固定提示词：字幕工作流，参数尽量少，避免澄清分支 */
-const PROMPT = "给这个视频生成中文字幕";
+// 新版会对“怎么交付字幕”追问（bilingual / burn-in / SRT），固定为仅输出 SRT 避免澄清
+// 本用例固定为“仅字幕文件”变体，便于做 SRT 结构断言；
+// “烧录到画面”的变体见 flows 的翻译/水印与复合用例。
+const PROMPT = "给这个视频生成中文字幕，只输出 SRT 字幕文件，不要烧录到视频里";
 
 /** 轮询上限：设计文档给的 20 分钟以内，这里留 15 分钟 */
 const POLL_TIMEOUT_MS = 15 * 60_000;
@@ -78,8 +82,8 @@ test.describe("@smoke @regression G3–G7 字幕链路", () => {
     const poolBefore = extractPools(await readRuntimeHealth(page));
     const balanceBefore = await readBalanceCents(page);
 
-    const upload = await uploadAsset(page, SHORT);
-    expect(upload.cloudFileId, "前置：素材必须上传成功并返回 cloud_file_id").not.toBe("");
+    const attached = await attachAsset(page, SHORT);
+    expect(attached.uploadedAs, "前置：附件必须挂到 composer").not.toBe("");
 
     let runId = "";
     let poolAfter = poolBefore;
@@ -87,20 +91,13 @@ test.describe("@smoke @regression G3–G7 字幕链路", () => {
     try {
       // ── 引用素材 + 追加指令 ──────────────────────────────────────────
       // 不能用 submitPrompt()：它会 fill() 清空 composer，把 @ 引用一起抹掉。
-      const reference = await referenceAssetInPrompt(
-        page,
-        upload.uploadedAs,
-        upload.cloudFileId,
-      );
+      const reference = await referenceAssetInPrompt(page, attached.uploadedAs);
       expect(
         reference.ok,
         `素材未能通过 @ 引用：${reference.candidates.join(", ")}`,
       ).toBe(true);
 
-      const editor = page.locator("#workspace-prompt");
-      await editor.click({ timeout: 20_000 });
-      await page.keyboard.press("End");
-      await page.keyboard.insertText(` ${PROMPT}`);
+      await appendPromptText(page, PROMPT);
 
       const startedAt = Date.now();
       const submit = await submitCurrentPrompt(page);
@@ -132,7 +129,7 @@ test.describe("@smoke @regression G3–G7 字幕链路", () => {
 
       const observationBase: Observation = {
         uploaded: [
-          { cloudFileId: upload.cloudFileId, sizeBytes: upload.sizeBytes, listable: true },
+          { cloudFileId: attached.uploadedAs, sizeBytes: attached.sizeBytes, listable: true },
         ],
         jobIds: [runId],
         poolBefore,
@@ -288,16 +285,8 @@ test.describe("@smoke @regression G3–G7 字幕链路", () => {
         const cancelled = await cancelRun(page, runId).catch(() => false);
         console.log(`清理任务 ${runId}: ${cancelled ? "已取消" : "无需取消或取消失败"}`);
       }
-      const removed = await deleteAgentFile(page, upload.cloudFileId).catch(() => false);
-      console.log(
-        `清理素材 ${upload.cloudFileId}: ${removed ? "成功" : "失败（需人工确认）"}`,
-      );
-      if (!removed) {
-        test.info().annotations.push({
-          type: "cleanup",
-          description: `素材未清理：${upload.cloudFileId}`,
-        });
-      }
+      // 附件是 UI 本地文件；上传由产品在发送时处理，这里只清理临时文件
+      disposeAttached(attached);
     }
   });
 });

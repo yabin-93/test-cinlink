@@ -58,8 +58,23 @@ test.describe("checkUploadedAsset 正向", () => {
     expect(r.failures).toEqual([]);
   });
 
-  test("云端未返回 name / mime_type 时不判失败（只有 cloud_file_id 是必须的）", () => {
+  test("旧版 file_<hex16> ID 符合契约", () => {
     const r = checkUploadedAsset(
+      { cloud_file_id: "file_72c83ab55d4542f3", size_bytes: SEVEN_MB_SAMPLE },
+      { sizeBytes: SEVEN_MB_SAMPLE, expectFormat: true },
+    );
+    expect(r.failures).toEqual([]);
+  });
+
+  test("新版 file_cloud_<base32> ID 符合契约", () => {
+    const r = checkUploadedAsset(
+      { cloud_file_id: "file_cloud_zquu6agl4hjy5eyplmfrfxv4ji", size_bytes: SEVEN_MB_SAMPLE },
+      { sizeBytes: SEVEN_MB_SAMPLE, expectFormat: true },
+    );
+    expect(r.failures).toEqual([]);
+  });
+
+  test("云端未返回 name / mime_type 时不判失败（只有 cloud_file_id 是必须的）", () => {    const r = checkUploadedAsset(
       { cloud_file_id: "cf_abc123", size_bytes: SEVEN_MB_SAMPLE },
       { name: "7MB.mp4", sizeBytes: SEVEN_MB_SAMPLE, mimeType: "video/mp4" },
     );

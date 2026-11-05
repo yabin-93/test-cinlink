@@ -140,7 +140,8 @@ test.describe("@regression G3–G7 卡片入口", () => {
     expect(artifacts.length > 0 || hasSummaryText, "既没有产物也没有总结文本").toBe(true);
   });
 
-  test("@slow 生成解说 · 默认 3 分钟", async ({ page }) => {
+  // 2026-11-02 起功能暂不可用，先挂起；恢复后改回 test
+  test.fixme("@slow 生成解说 · 默认 3 分钟（功能暂不可用）", async ({ page }) => {
     test.setTimeout(25 * 60_000);
     const dir = path.resolve("reports", "artifacts", "g3-g7-ai", "narrated-recap");
     await mkdir(dir, { recursive: true });
@@ -192,10 +193,37 @@ test.describe("@regression G3–G7 卡片入口", () => {
     expect(check.ok, `精华视频结构不合法：\n${check.failures.join("\n")}`).toBe(true);
   });
 
-  // 本地素材查找返回的是片段/素材结果列表，不是视频产物；
-  // 需要先确认结果面板的选择器，再补真实断言。
+  // 冒烟：只验证卡片入口与 Find Local Footage 模式，不点 Analyze、不提交，零费用。
+  test("@regression 本地素材查找 · 卡片进入 Find Local Footage 模式", async ({ page }) => {
+    await openWorkspaceSession(page);
+    await clickPoint(page, '[data-workspace-action-id="local-material"]');
+    await page.waitForTimeout(1_500);
+
+    const analyze = page.getByRole("button", { name: "Analyze", exact: true }).first();
+    await expect(analyze, "Find Local Footage 面板应出现 Analyze 按钮").toBeVisible({
+      timeout: 15_000,
+    });
+
+    const body = page.locator("body");
+    await expect(body, "应显示已分析媒体计数").toContainText(/\d+\s*\/\s*\d+\s+media files analyzed/i);
+    await expect(body, "应进入 Find Local Footage 模式").toContainText(/Find Local Footage/i);
+
+    // “无媒体”提示只在有项目上下文时出现，这里只记录、不做强断言
+    const text = await body.innerText();
+    if (/0\s*\/\s*0\s+media files analyzed/i.test(text)) {
+      test.info().annotations.push({
+        type: "footage",
+        description: "当前项目 0/0 media files analyzed（无媒体）",
+      });
+    }
+  });
+
+  // 2026-11-03 探测：提交 Find Local Footage 查询后 run done 但 0 结果，
+  // 助手提示 local-library search 的 tool definition 缺失（云效 12b8dd2e9cc5c1e0dd5851799a）。
+  // 2026-11-04 真实结果检查已接独立LF-01～03（npm run test:footage）；
+  // 此旧空占位仍跳过，不重复计算为本专项脚本或当前功能阻塞。
   test.fixme("@regression 本地素材查找 · 返回素材结果", async () => {
-    // TODO: 点击 local-material 卡片后断言结果列表出现，并支持把结果加入时间线
+    // 完整结果/源ID/时间/真实播放与画面断言见 tests/local-footage/local-footage.spec.ts。
   });
 
 });

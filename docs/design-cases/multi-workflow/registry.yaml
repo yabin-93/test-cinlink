@@ -1,0 +1,64 @@
+# MW-MULTI 多工作流复合（与 cases.md 同步）
+MWMULTI-001:
+  status: AUTO
+  script: "tests/staging/g3-g7-multi-compound.spec.ts"
+MWMULTI-002:
+  status: AUTO
+  script: "tests/staging/g3-g7-multi-compound.spec.ts"
+MWMULTI-003:
+  status: AUTO
+  script: "tests/staging/g3-g7-multi-compound.spec.ts"
+MWMULTI-004:
+  status: AUTO
+  script: "tests/staging/g3-g7-multi-compound.spec.ts"
+MWMULTI-005:
+  status: AUTO
+  script: "tests/staging/g3-g7-multi-compound.spec.ts"
+MWMULTI-006:
+  status: FIXME
+  script: "tests/staging/g3-g7-multi-compound.spec.ts"
+MWMULTI-007:
+  status: FIXME
+  script: "tests/staging/g3-g7-multi-compound.spec.ts"
+MWMULTI-008:
+  status: AUTO
+  script: "tests/staging/g3-g7-multi-compound.spec.ts"
+MWMULTI-009:
+  status: FIXME
+  script: "tests/staging/g3-g7-multi-compound.spec.ts"
+MWMULTI-010:
+  status: FIXME
+  script: "tests/multi-material/multi-material.spec.ts"
+MWMULTI-011:
+  status: FIXME
+  script: "tests/multi-material/multi-material.spec.ts"
+MWMULTI-012:
+  status: FIXME
+  script: "tests/multi-material/multi-material.spec.ts"
+MWMULTI-013:
+  status: AUTO
+  script: "tests/staging/g3-g7-multi-compound.spec.ts"
+MWMULTI-014:
+  status: AUTO
+  script: "tests/multi-material/multi-material.spec.ts"
+MWMULTI-015:
+  status: AUTO
+  script: "tests/multi-material/multi-material.spec.ts"
+MWMULTI-016:
+  status: FIXME
+  script: "tests/staging/g3-g7-multi-compound.spec.ts"
+MWMULTI-017:
+  status: FIXME
+  script: "tests/multi-material/multi-material.spec.ts"
+MWMULTI-018:
+  status: AUTO
+  script: "tests/staging/g3-g7-multi-compound.spec.ts"
+MWMULTI-019:
+  status: AUTO
+  script: "tests/staging/g3-g7-multi-compound.spec.ts"
+MWMULTI-020:
+  status: AUTO
+  script: "tests/staging/g3-g7-multi-compound.spec.ts"
+MWMULTI-021:
+  status: AUTO
+  script: "tests/staging/g3-g7-multi-compound.spec.ts"

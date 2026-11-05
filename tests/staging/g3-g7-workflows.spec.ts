@@ -26,8 +26,11 @@ import {
   type Observation,
 } from "../../src/levels/gates.js";
 import {
+  appendPromptText,
+  attachAssets,
   cancelRun,
-  deleteAgentFile,
+  confirmRenderPlan,
+  disposeAttached,
   findStringField,
   getRunDetail,
   isRunSubmission,
@@ -37,9 +40,7 @@ import {
   readRuntimeHealth,
   referenceAssetInPrompt,
   submitCurrentPrompt,
-  uploadAsset,
   waitForActiveDrain,
-  type UploadOutcome,
 } from "../../src/workspace.js";
 
 /**
@@ -83,6 +84,8 @@ interface FlowCase {
    * 实测：双素材混剪必问「最多用几个高光片段（2～10个）？」。
    */
   clarify?: { value: string };
+  /** 该工作流会停在「确认计划」，点确认后继续 */
+  confirm?: boolean;
   /** 已确认的产品缺陷：默认跳过并在报告里写明原因；设 CINLINK_INCLUDE_BLOCKED=1 可强制跑 */
   blocked?: string;
 }
@@ -94,51 +97,53 @@ const FLOWS: FlowCase[] = [
   {
     name: "translation · 英文翻译字幕",
     tag: "@regression",
-    prompt: "把这个视频翻译成英文（English）字幕，只输出翻译后的字幕文件",
+    prompt: "把这个视频的语音翻译成英文，只输出英文字幕（SRT）文件，不要烧录到视频里",
     assets: [SHORT],
     expectSubtitle: true,
   },
   {
     name: "clean-cut · 去口水词",
     tag: "@smoke @regression",
-    prompt: "去掉这个视频里的口水词",
+    // 新版会追问清理方式/交付，这里写死避免澄清；产品缺陷修复后复测
+    prompt: "去掉这个视频里的口水词和重复语气词，直接输出清理后的视频，保留原音轨",
     assets: [SHORT],
     video: { minDurationSec: 1, maxDurationSec: SHORT.durationSec + 5, requireAudio: true },
+    // 2026-11-03 通过：先停计划确认，随后自动渲染完成（4 步：提取音频→转写→分析→渲染）
+    confirm: true,
   },
   {
     name: "enhance · 增强画质",
     tag: "@regression",
-    prompt: "增强这个视频的画质",
+    // 新版会追问增强方式/倍率，这里把参数写死避免澄清
+    prompt: "把视频分辨率提升到 2 倍（2560x1440），输出增强后的视频，保留原音轨",
     assets: [SHORT],
     video: { durationSec: SHORT.durationSec, durationToleranceSec: 3, requireAudio: true },
   },
   {
     name: "text-watermark · 文字水印",
     tag: "@regression",
-    prompt: "给这个视频添加文字水印，文字内容是 E2E-TEST",
+    prompt: "给这个视频添加文字水印，文字内容是 E2E-TEST，输出带水印的视频，水印全程可见",
     assets: [SHORT],
     video: { durationSec: SHORT.durationSec, durationToleranceSec: 2, requireAudio: true },
   },
   {
     name: "long-to-short · 高光短视频",
     tag: "@regression",
-    prompt: "把这个视频剪成 20 秒左右的高光短视频，直接剪，不用先给我方案",
+    prompt: "把这个视频剪成 20 秒左右的高光短视频，直接输出剪辑后的视频",
     assets: [SHORT],
     video: { minDurationSec: 5, maxDurationSec: 40, requireAudio: true },
+    // 2026-11-03 通过：计划确认后自动渲染（requires_user_input → done）
+    confirm: true,
   },
   {
     name: "mix · 双素材混剪",
     tag: "@regression @slow",
-    // 双素材高光必问 max_clips（实测澄清原话：「最多用几个高光片段（2～10个）？」）；
-    // 用例按产品的真实流程回答该问题，而不是写死提示词绕过它。
-    prompt: "把这两个视频的高光混剪成 18 秒",
+    // 2026-11-03 通过：提示词直接给出片段数，产品未再追问；若追问，clarify 会回答
+    prompt: "把这两个视频的高光混剪成 18 秒，输出混剪后的视频，最多用 4 个高光片段",
     assets: [SHORT, LONG],
     video: { minDurationSec: 5, maxDurationSec: 40, requireAudio: true },
     clarify: { value: "最多用 4 个高光片段" },
-    blocked:
-      "产品缺陷（2026-10-19 复现 7 次）：双素材混剪回答 max_clips 澄清后，续跑 Run 的 prompt 只剩回答文本，" +
-      "丢失原任务上下文，助手回复「该请求目前没有可执行的 CinLink 工作流程」，状态 done 但 0 产物；" +
-      "另有 2 次 intent_recognition_invalid_output。设 CINLINK_INCLUDE_BLOCKED=1 可强制运行。",
+    confirm: true,
   },
 ];
 
@@ -163,34 +168,28 @@ for (const flow of FLOWS) {
       const poolBefore = extractPools(await readRuntimeHealth(page));
       const balanceBefore = await readBalanceCents(page);
 
-      const uploaded: UploadOutcome[] = [];
+      const attached: Awaited<ReturnType<typeof attachAssets>> = [];
       const runIds: string[] = [];
       let runId = "";
       let poolAfter = poolBefore;
 
       try {
-        for (const asset of flow.assets) {
-          const outcome = await uploadAsset(page, asset);
-          expect(outcome.cloudFileId, `前置：素材 ${asset.name} 上传失败`).not.toBe("");
-          uploaded.push(outcome);
-        }
+        // 新版：一次挂载全部附件，上传由产品在发送时处理
+        attached.push(...(await attachAssets(page, flow.assets)));
 
         // 依次引用；第一次清空 composer，后续追加
-        for (let i = 0; i < uploaded.length; i += 1) {
-          const outcome = uploaded[i];
-          const reference = await referenceAssetInPrompt(
-            page,
-            outcome.uploadedAs,
-            outcome.cloudFileId,
-            { clear: i === 0 },
-          );
+        for (let i = 0; i < attached.length; i += 1) {
+          const item = attached[i];
+          const reference = await referenceAssetInPrompt(page, item.uploadedAs, undefined, {
+            clear: i === 0,
+          });
           expect(
             reference.ok,
-            `素材 ${outcome.uploadedAs} 未能通过 @ 引用：${reference.candidates.join(", ")}`,
+            `素材 ${item.uploadedAs} 未能通过 @ 引用：${reference.candidates.join(", ")}`,
           ).toBe(true);
         }
 
-        await typePrompt(page, flow.prompt);
+        await appendPromptText(page, flow.prompt);
 
         const startedAt = Date.now();
         const submit = await submitCurrentPrompt(page);
@@ -229,6 +228,37 @@ for (const flow of FLOWS) {
           timeline.push(...polled.samples);
         }
 
+        // 部分工作流会停在「计划确认」；点确认后通常是新的续跑 Run。
+        // 但产品也可能在展示计划后自动继续（实测 clean-cut 会自行渲染完成），
+        // 所以确认入口不存在/点了没响应时，先再轮询一次原 Run，而不是直接判失败。
+        let confirmRounds = 0;
+        while (polled.status === "requires_user_input" && flow.confirm && confirmRounds < 1) {
+          confirmRounds += 1;
+          const confirmedRunId = await confirmRenderPlan(page);
+
+          if (confirmedRunId) {
+            runId = confirmedRunId;
+            runIds.push(runId);
+            console.log(`已确认计划，续跑 Run: ${runId}`);
+            polled = await pollRunUntilSettled(page, runId, {
+              timeoutMs: POLL_TIMEOUT_MS,
+              intervalMs: 5_000,
+            });
+            timeline.push(...polled.samples);
+          } else {
+            // 没有新 Run：可能已自动继续，给原 Run 一次收敛机会
+            polled = await pollRunUntilSettled(page, runId, {
+              timeoutMs: 3 * 60_000,
+              intervalMs: 3_000,
+            });
+            timeline.push(...polled.samples);
+            expect(
+              polled.status,
+              `确认计划后既没有创建续跑 Run，原 Run 也没有继续（仍为 ${polled.status}）`,
+            ).not.toBe("requires_user_input");
+          }
+        }
+
         await test.info().attach("G3-G4-timeline", {
           body: JSON.stringify(
             { flow: flow.name, runIds, elapsedMs: polled.elapsedMs, timeline },
@@ -239,8 +269,8 @@ for (const flow of FLOWS) {
         });
 
         const observationBase: Observation = {
-          uploaded: uploaded.map((u) => ({
-            cloudFileId: u.cloudFileId,
+          uploaded: attached.map((u) => ({
+            cloudFileId: u.uploadedAs,
             sizeBytes: u.sizeBytes,
             listable: true,
           })),
@@ -383,37 +413,10 @@ for (const flow of FLOWS) {
           const cancelled = await cancelRun(page, runId).catch(() => false);
           console.log(`清理任务 ${runId}: ${cancelled ? "已取消" : "无需取消或取消失败"}`);
         }
-        for (const [index, outcome] of uploaded.entries()) {
-          const removed = await deleteAgentFile(page, outcome.cloudFileId).catch(() => false);
-          console.log(`清理素材 ${outcome.cloudFileId}: ${removed ? "成功" : "失败"}`);
-          if (!removed) {
-            test.info().annotations.push({
-              type: "cleanup",
-              description: `第 ${index + 1} 个素材未清理：${outcome.cloudFileId}`,
-            });
-          }
-        }
+        for (const item of attached) disposeAttached(item);
       }
     });
   });
-}
-
-/** 把指令追加到 composer 末尾（两个引用 chip 时 click+End 不可靠，实测会丢文本） */
-async function typePrompt(page: Page, prompt: string): Promise<void> {
-  const editor = page.locator("#workspace-prompt");
-  await editor.evaluate((el) => {
-    el.focus();
-    const range = document.createRange();
-    range.selectNodeContents(el);
-    range.collapse(false);
-    const selection = window.getSelection();
-    selection?.removeAllRanges();
-    selection?.addRange(range);
-  });
-  await page.keyboard.insertText(` ${prompt}`);
-
-  const composed = (await editor.innerText()).replace(/\s+/g, " ").trim();
-  expect(composed, `composer 中缺少指令文本，实际内容：${composed}`).toContain(prompt);
 }
 
 /** 回答文本型澄清；回答会触发一次新的创建请求，返回续跑 Run 的 id */

@@ -158,8 +158,8 @@ def ensure_cases_valid() -> None:
         raise SystemExit("cases:check 未通过，已阻止生成 Excel")
 
 
-def parse_req_cases(path: Path) -> tuple[str, str, list[list[str]], str]:
-    """解析 docs/cases/requirements/<REQ>/cases.md（九列，含自动化/脚本/锚点）。"""
+def parse_req_cases(path: Path, source_type: str = "需求") -> tuple[str, str, list[list[str]], str]:
+    """解析九列用例表，保持正式需求与独立工作流的来源分类。"""
     text = path.read_text(encoding="utf-8")
     title_match = re.search(r"^#\s+(.+)$", text, re.M)
     title = title_match.group(1).strip() if title_match else path.parent.name
@@ -182,7 +182,7 @@ def parse_req_cases(path: Path) -> tuple[str, str, list[list[str]], str]:
             rows.append([
                 case_id, priority, "功能", steps[:60], pre, steps, expected, source, automation,
             ])
-    return title, path.parent.name, rows, "需求"
+    return title, path.parent.name, rows, source_type
 
 
 def main() -> None:
@@ -192,6 +192,10 @@ def main() -> None:
         if path.name.startswith("00-") or path.name.startswith("03-") or path.name.startswith("06-") or path.name.startswith("16-"):
             continue
         modules.append((*parse_module(path), "设计稿"))
+
+    workflow_cases = CASE_DIR / "multi-workflow" / "cases.md"
+    if workflow_cases.exists():
+        modules.append(parse_req_cases(workflow_cases, "工作流"))
 
     req_root = ROOT / "docs" / "cases" / "requirements"
     for path in sorted(req_root.glob("*/cases.md")):

@@ -5,7 +5,7 @@
 | 缺陷 ID | CINLINK-MIX-001 |
 | 标题 | 双素材混剪回答 max_clips 澄清后，续跑 Run 被判定为 unsupported，done 但 0 产物 |
 | 严重级别 | **高（P1）**：用户按产品提示回答后任务无法完成，且无任何产物或明确错误 |
-| 状态 | Open（2026-10-19 复现中） |
+| 状态 | **Fixed / Verified**（2026-11-02 产品已修复；MW-04 有头复测通过，2.5 分钟出产物） |
 | 发现日期 | 2026-10-19 |
 | 环境 | 预发 `https://staging-app.cinlink.ai`，Chrome（系统安装版），headless |
 | 账号 | `acct_4e73d97f04f5` |

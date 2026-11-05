@@ -20,7 +20,10 @@ import { WORKSPACE_READY_ANCHOR } from "../src/staging.js";
  * 期间会把页面结构快照写到 docs/login-page-report.md，便于定位卡点。
  */
 
-const TIMEOUT_MS = 300_000;
+// Interactive recovery can wait until the user finishes, without closing the
+// only visible login window. Ordinary runs retain the five-minute default.
+const TIMEOUT_MS = Number(process.env.CINLINK_AUTH_WAIT_MS ?? 300_000);
+if (!Number.isFinite(TIMEOUT_MS) || TIMEOUT_MS < 0) throw new Error("CINLINK_AUTH_WAIT_MS 必须为非负毫秒数，0表示持续等待");
 const HEARTBEAT_MS = 15_000;
 const REPORT_PATH = "docs/login-page-report.md";
 
@@ -32,6 +35,7 @@ interface AuthSignal {
   elementCount: number;
   /** 页面是否仍显示"正在检查登录状态" */
   checkingLogin: boolean;
+  workspaceReady: boolean;
 }
 
 interface PageSnapshot {
@@ -66,8 +70,9 @@ async function inspect(page: Page, context: BrowserContext): Promise<AuthSignal>
     .evaluate(() => ({
       elementCount: document.querySelectorAll("*").length,
       checkingLogin: (document.body.innerText || "").includes("检查登录状态"),
+      workspaceReady: Boolean(document.querySelector("#workspace-prompt")) && !location.pathname.includes("/login"),
     }))
-    .catch(() => ({ elementCount: 0, checkingLogin: false }));
+    .catch(() => ({ elementCount: 0, checkingLogin: false, workspaceReady: false }));
 
   return {
     url: page.url(),
@@ -75,16 +80,14 @@ async function inspect(page: Page, context: BrowserContext): Promise<AuthSignal>
     allCookies: cookies.length,
     elementCount: dom.elementCount,
     checkingLogin: dom.checkingLogin,
+    workspaceReady: dom.workspaceReady,
   };
 }
 
-/** 判据一：出现认证 cookie（最可靠）；判据二：工作台渲染出来且不再检查登录态 */
+/** 残留/失效 Cookie 不代表登录成功；必须真正进入工作台。 */
 function isLoggedIn(signal: AuthSignal): { ok: boolean; reason: string } {
-  if (signal.authCookies > 0) {
-    return { ok: true, reason: `认证 Cookie 已建立（${signal.authCookies} 个）` };
-  }
-  if (!signal.checkingLogin && signal.elementCount > 150) {
-    return { ok: true, reason: `工作台已渲染（${signal.elementCount} 个元素）` };
+  if (signal.workspaceReady && !signal.checkingLogin) {
+    return { ok: true, reason: "工作台输入框已就绪，页面已离开登录页" };
   }
   return { ok: false, reason: "" };
 }
@@ -211,7 +214,7 @@ async function prepareEmailLogin(page: Page, email: string): Promise<string[]> {
 
   if (!emailVisible) {
     const otherWay = page
-      .getByRole("button", { name: /使用其他方式登录|其他方式|Other ways|More options/i })
+      .getByRole("button", { name: /使用其他方式登录|其他方式|Other ways|More options|Try another way/i })
       .first();
 
     if (await otherWay.isVisible().catch(() => false)) {
@@ -248,7 +251,8 @@ async function prepareEmailLogin(page: Page, email: string): Promise<string[]> {
   return steps;
 }
 
-test("确保存在有效会话（必要时人工登录）", async ({ page, context, browser }) => {
+test("确保存在有效会话（必要时人工登录）", async ({ page, context }) => {
+  test.setTimeout(TIMEOUT_MS === 0 ? 0 : Math.max(360_000, TIMEOUT_MS + 60_000));
   const status = credentialStatus();
   const email = credentials.email ?? "";
 
@@ -256,17 +260,13 @@ test("确保存在有效会话（必要时人工登录）", async ({ page, conte
   // 预发 access token 有时效（实测约 30 分钟后失效），所以"重新登录"是常态操作，
   // 但不应牺牲"还有效时的不打扰"。
   if (existsSync(credentials.storageStatePath)) {
-    const probeContext = await browser.newContext({
-      storageState: credentials.storageStatePath,
-    });
-    const probePage = await probeContext.newPage();
-
-    const stillValid = await probePage
+    // Reuse the one visible login window; a separate probe context creates another window.
+    const stillValid = await page
       .goto(targets.webBase, { waitUntil: "domcontentloaded" })
       .then(() =>
-        probePage.waitForSelector(WORKSPACE_READY_ANCHOR, {
+        page.waitForSelector(WORKSPACE_READY_ANCHOR, {
           state: "attached",
-          timeout: 45_000,
+          timeout: 15_000,
         }),
       )
       .then(() => true)
@@ -276,13 +276,12 @@ test("确保存在有效会话（必要时人工登录）", async ({ page, conte
       // ── 关键：探测过程本身会消耗会话 ──
       // 页面加载时会调 POST /v1/auth/refresh，而服务端对 refresh token 做「轮转」：
       // 用过一次的 token 立即失效，新 token 写回 cookie。
-      // 这个新 token 只在探测用的 context 里 —— 若不写回文件，
+      // 这个新 token 只在当前 context 里 —— 若不写回文件，
       // 下一次任何测试拿着**已被轮转掉的旧 token**，就会 401。
       //
       // 注意：必须先写回、再关闭 context；先 close 会抛
       // “Target page, context or browser has been closed”，会话也会被用掉。
-      await probeContext.storageState({ path: credentials.storageStatePath });
-      await probeContext.close();
+      await context.storageState({ path: credentials.storageStatePath });
 
       console.log("");
       console.log("✓ 现有会话仍然有效，无需重新登录。");
@@ -291,8 +290,6 @@ test("确保存在有效会话（必要时人工登录）", async ({ page, conte
       console.log("");
       return;
     }
-
-    await probeContext.close();
 
     console.log("");
     console.log("现有会话已失效（或不存在），进入人工登录流程…");
@@ -312,7 +309,7 @@ test("确保存在有效会话（必要时人工登录）", async ({ page, conte
   console.log(`已配置邮箱    : ${status.hasEmail ? "是" : "否"}`);
   console.log(`已配置 API Key: ${status.hasApiKey ? "是" : "否"}`);
   console.log(`保存位置      : ${credentials.storageStatePath}`);
-  console.log(`等待上限      : ${TIMEOUT_MS / 1000} 秒`);
+  console.log(`等待上限      : ${TIMEOUT_MS === 0 ? "持续等待，直到完成登录或手动关闭窗口" : `${TIMEOUT_MS / 1000} 秒`}`);
   console.log("──────────────────────────────────────────────");
   console.log("");
 
@@ -324,6 +321,20 @@ test("确保存在有效会话（必要时人工登录）", async ({ page, conte
   });
 
   await page.goto(targets.webBase, { waitUntil: "domcontentloaded" });
+  if (TIMEOUT_MS === 0) {
+    // Record only the owned browser PID, so the host can focus this window
+    // without touching another Chrome window or persisting any credentials.
+    const cdp = await context.browser()!.newBrowserCDPSession();
+    const processes = await cdp.send("SystemInfo.getProcessInfo");
+    const browserPID = processes.processInfo.find(p => p.type === "browser")?.id;
+    await mkdir(".auth", { recursive: true });
+    await writeFile(".auth/login-window.json", JSON.stringify({ browserPID, openedAt: new Date().toISOString() }));
+    const windowCDP = await context.newCDPSession(page);
+    const { windowId } = await windowCDP.send("Browser.getWindowForTarget");
+    await windowCDP.send("Browser.setWindowBounds", { windowId, bounds: { windowState: "maximized" } });
+    await windowCDP.detach();
+    await cdp.detach();
+  }
   // 把窗口带到最前，避免用户在后台进程启动时找不到浏览器窗口
   await page.bringToFront();
   // 该站点是 SPA：domcontentloaded 时 body 还是空的，必须等实际渲染出文本
@@ -363,7 +374,8 @@ test("确保存在有效会话（必要时人工登录）", async ({ page, conte
   let reason = "";
   let last: AuthSignal = baseline;
 
-  while (Date.now() - startedAt < TIMEOUT_MS) {
+  while (TIMEOUT_MS === 0 || Date.now() - startedAt < TIMEOUT_MS) {
+    if (page.isClosed()) throw new Error("登录窗口已手动关闭，会话未保存");
     last = await inspect(page, context);
     const verdict = isLoggedIn(last);
 

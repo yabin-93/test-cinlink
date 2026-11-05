@@ -12,14 +12,16 @@
 export const UPLOAD_CHUNK_SIZE_BYTES = 5 * 1024 * 1024;
 
 /**
- * `cloud_file_id` 的实测格式（预发 2026-10-16 实测）。
+ * `cloud_file_id` 的实测格式。
  *
- * 样例：`file_72c83ab55d4542f3` —— `file_` 前缀 + 16 位小写十六进制。
+ * 两代契约都接受（2026-11-02 新版预发实测）：
+ * - 旧：`file_` + 16 位小写十六进制，如 `file_72c83ab55d4542f3`
+ * - 新：`file_cloud_` + 26 位小写 base32，如 `file_cloud_zquu6agl4hjy5eyplmfrfxv4ji`
  *
  * **这是一条契约断言**：后端若改了 ID 生成规则，这里会红。
  * 失败时先判断是"契约变更"还是"生成逻辑出了缺陷"，不要直接当缺陷上报。
  */
-export const CLOUD_FILE_ID_PATTERN = /^file_[0-9a-f]{16}$/;
+export const CLOUD_FILE_ID_PATTERN = /^file_(?:cloud_)?[0-9a-z]{16,}$/i;
 
 export interface UploadedAsset {
   cloud_file_id?: string;

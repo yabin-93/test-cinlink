@@ -20,15 +20,15 @@ import { targets } from "./config.js";
  *   **控制台出现这一个 401 不代表失败**，断言不要把它当错误信号。
  */
 
-/** 工作台就绪的唯一判据：这个锚点只在真正进入工作台后才存在 */
-export const WORKSPACE_READY_ANCHOR = "[data-workspace-new-session]";
+/** 工作台就绪的唯一判据：新旧两版工作台都只有进入后才渲染 composer */
+export const WORKSPACE_READY_ANCHOR = "#workspace-prompt";
 
 /** 工作台骨架锚点 —— 全部缺失说明不是会话问题，而是前端结构变了 */
 export const WORKSPACE_SHELL_ANCHORS = [
+  "#workspace-prompt",
+  "#workspace-send",
   "[data-workspace-new-session]",
-  "[data-workspace-upload]",
-  "[data-workspace-sidebar-toggle]",
-  "[data-workspace-project-toggle]",
+  "input[type=file]",
 ] as const;
 
 /** 登录页特征（用于失败归因） */

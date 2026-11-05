@@ -1,4 +1,5 @@
-import { copyFileSync, rmSync } from "node:fs";
+import { copyFileSync, readFileSync, rmSync } from "node:fs";
+import { createHash } from "node:crypto";
 import os from "node:os";
 import path from "node:path";
 
@@ -45,7 +46,12 @@ export const RUNS_ENDPOINT = "/v1/agent/runs";
 
 /** 只计创建 Run，不把取消、事件流或查询请求混入提交数。 */
 export function isRunSubmission(url: string, method: string): boolean {
-  return method === "POST" && /\/(?:studio-api\/)?v1\/agent\/runs$/.test(new URL(url).pathname);
+  if (method !== "POST") return false;
+  const pathname = new URL(url).pathname;
+  return (
+    /\/(?:studio-api\/)?v1\/agent\/runs$/.test(pathname) ||
+    /\/runtime-api\/v1\/conversations\/[^/]+\/turns$/.test(pathname)
+  );
 }
 
 /** 在任意嵌套结构里找第一个非空字符串字段（应对后端字段位置变化） */
@@ -136,21 +142,19 @@ export async function openWorkspaceSession(
   const useFresh = options.fresh !== false;
 
   if (useFresh) {
-    // `data-workspace-new-session` 有多个：项目行可见的「＋」与右键菜单里不可见的
-    // 「新建会话」。**必须过滤可见性**，否则 `.first()` 会命中隐藏元素，点了毫无反应。
-    // 必须显式进入非项目区，不把测试素材写进列表中的任意历史项目。
-    const newSession = page.locator('[data-workspace-new-session="non-project"]:visible');
-    if ((await newSession.count()) === 0) {
-      // 新版工作台把「新建会话」压成悬停才显示的图标，:visible 会判定不可见。
-      // 回退到 DOM click（只用于这个普通按钮，不涉及批注卡片的重渲染）。
+    // 新版工作台（/studio/workspace）用 aria-label 标识「新建非项目会话」，
+    // 旧版用 data-workspace-new-session；两套都保留以便回滚。
+    const selector = '[data-workspace-new-session="non-project"], [data-react-new-session="non-project"], [aria-label="New no-project session"]';
+    const newSession = page.locator(selector).first();
+    await newSession.waitFor({ state: "attached", timeout: 30_000 }).catch(() => {
+      throw new Error("未找到新建非项目会话入口，停止而不复用旧项目");
+    });
+    if (!(await newSession.isVisible())) {
       console.warn("[workspace] 新建会话按钮不可见，回退 DOM click（新版侧栏悬停样式）");
-      await page.evaluate(() => {
-        const button = document.querySelector('[data-workspace-new-session="non-project"]');
-        if (button instanceof HTMLElement) button.click();
-      });
+      await newSession.evaluate((element: HTMLElement) => element.click());
       await page.waitForTimeout(800);
     } else {
-      await newSession.first().click({ timeout: 10_000 });
+      await newSession.click({ timeout: 10_000 });
     }
   } else {
     const existing = page.locator("[data-workspace-project-id]:visible").first();
@@ -165,8 +169,12 @@ export async function openWorkspaceSession(
 
 /** 确认 composer 已就绪（可见且可编辑） */
 export async function waitForComposer(page: Page): Promise<void> {
-  await page.waitForSelector("[data-workspace-upload]:visible", { timeout: 45_000 });
   await page.waitForSelector("#workspace-prompt", { state: "attached", timeout: 45_000 });
+  // 旧版有 data-workspace-upload 按钮；新版只保留一个隐藏的 input[type=file]
+  await page
+    .locator("[data-workspace-upload], input[type=file]")
+    .first()
+    .waitFor({ state: "attached", timeout: 45_000 });
 }
 
 export interface UploadOutcome {
@@ -279,7 +287,7 @@ export async function uploadAsset(
   );
 
   try {
-    await page.locator("#workspace-file-input").setInputFiles(uploadPath);
+    await page.locator("#workspace-file-input, input[type=file]").first().setInputFiles(uploadPath);
 
     const response = await completePromise;
     const raw = await response.json().catch(() => null);
@@ -299,6 +307,314 @@ export async function uploadAsset(
   } finally {
     page.off("request", onRequest);
     if (tempPath) rmSync(tempPath, { force: true });
+  }
+}
+
+/** 新版工作台「附件」：只挂到 composer，不立即上传（实测上传发生在发送时） */
+export interface AttachedAsset {
+  /** 实际使用的文件名（唯一名策略下带时间戳） */
+  uploadedAs: string;
+  sizeBytes: number;
+  mimeType: string;
+  /** 唯一名策略下的临时文件；上传发生在发送时，必须等发送结束再删除 */
+  tempPath: string | null;
+}
+
+/** 发送完成后清理 attachAsset 的临时文件 */
+export function disposeAttached(asset: AttachedAsset): void {
+  if (asset.tempPath) rmSync(asset.tempPath, { force: true });
+}
+
+/**
+ * 把素材挂到 composer（新版 `/studio/workspace`）。
+ *
+ * 新版把上传推迟到发送时（i18n: "Ready; uploads when sent"），
+ * 所以这里不再等待 presign/complete；真正的上传事实由 `submitAttachedPrompt` 捕获。
+ */
+export async function attachAsset(
+  page: Page,
+  asset: TestAsset,
+  options: UploadOptions = {},
+): Promise<AttachedAsset> {
+  const useUnique = options.uniqueName !== false;
+  let uploadPath = asset.path;
+  let tempPath: string | null = null;
+
+  if (useUnique) {
+    const ext = path.extname(asset.name);
+    const stem = path.basename(asset.name, ext);
+    const uniqueName = `${stem}-${Date.now()}${ext}`;
+    tempPath = path.join(os.tmpdir(), uniqueName);
+    copyFileSync(asset.path, tempPath);
+    uploadPath = tempPath;
+  }
+
+  const uploadedAs = path.basename(uploadPath);
+
+  await page.locator("#workspace-file-input, input[type=file]").first().setInputFiles(uploadPath);
+  await page.locator("#workspace-prompt").waitFor({ state: "visible", timeout: 30_000 });
+  await page
+    .waitForFunction((name) => (document.body?.innerText || "").includes(name), uploadedAs, {
+      timeout: 30_000,
+    })
+    .catch(() => undefined);
+
+  // 注意：不能在这里删临时文件。新版上传发生在“发送”时，提前删除会让 PUT 失败。
+  return { uploadedAs, sizeBytes: asset.sizeBytes, mimeType: asset.mimeType, tempPath };
+}
+
+/**
+ * 一次挂多个附件（新版 composer 支持多文件输入）。
+ * 返回顺序与传入 assets 一致，供 @ 引用时按名字匹配。
+ */
+export async function attachAssets(page: Page, assets: TestAsset[]): Promise<AttachedAsset[]> {
+  const staged = assets.map((asset) => {
+    const extension = path.extname(asset.name);
+    const stem = path.basename(asset.name, extension);
+    const uniqueName = `${stem}-${Date.now()}${extension}`;
+    const tempPath = path.join(os.tmpdir(), uniqueName);
+    copyFileSync(asset.path, tempPath);
+    return { asset, uploadedAs: uniqueName, tempPath };
+  });
+
+  await page
+    .locator("#workspace-file-input, input[type=file]")
+    .first()
+    .setInputFiles(staged.map((item) => item.tempPath));
+  await page.locator("#workspace-prompt").waitFor({ state: "visible", timeout: 30_000 });
+  for (const item of staged) {
+    await page
+      .waitForFunction((name) => (document.body?.innerText || "").includes(name), item.uploadedAs, {
+        timeout: 30_000,
+      })
+      .catch(() => undefined);
+  }
+
+  return staged.map((item) => ({
+    uploadedAs: item.uploadedAs,
+    sizeBytes: item.asset.sizeBytes,
+    mimeType: item.asset.mimeType,
+    tempPath: item.tempPath,
+  }));
+}
+
+export interface UploadedFacts {
+  httpStatus: number;
+  fileId: string;
+  name: string;
+  sizeBytes: number;
+  mimeType: string;
+  partRequests: number;
+  multipart: boolean;
+  downloadUrl: string;
+}
+
+/**
+ * 发送 composer 里已挂好的附件与提示词，并在发送过程中捕获上传事实。
+ *
+ * 新版上传流程（实测）：
+ *   POST /studio-api/v1/agent/files/presign → PUT S3 → POST .../complete
+ *   complete 返回 file_id / name / size_bytes / mime_type（不再是 cloud_file_id）
+ * 分片文件则走 .../multipart/start + .../multipart/part。
+ */
+export async function submitAttachedPrompt(
+  page: Page,
+  prompt: string,
+): Promise<{ upload: UploadedFacts }> {
+  await appendPromptText(page, prompt);
+
+  let partRequests = 0;
+  let sawMultipartStart = false;
+  const onRequest = (request: { url: () => string }) => {
+    const url = request.url();
+    if (url.includes(UPLOAD_ENDPOINTS.multipartPart)) partRequests += 1;
+    if (url.includes(UPLOAD_ENDPOINTS.multipartStart)) sawMultipartStart = true;
+  };
+  page.on("request", onRequest);
+
+  const completePromise = page.waitForResponse(
+    (response) =>
+      response.request().method() === "POST" &&
+      /\/agent\/files\/(multipart\/)?complete/.test(response.url()),
+    { timeout: 180_000 },
+  );
+
+  try {
+    await page.locator("#workspace-send").first().click({ timeout: 20_000 });
+    const response = await completePromise;
+    const raw = await response.json().catch(() => null);
+
+    const fileId =
+      findStringField(raw, "cloud_file_id") ?? findStringField(raw, "file_id") ?? "";
+    let downloadUrl = findStringField(raw, "url") ?? "";
+    if (!downloadUrl && fileId) {
+      const urlResponse = await page.request
+        .get(
+          `${targets.studioBase}/studio-api/v1/agent/files/${encodeURIComponent(fileId)}/url?disposition=inline`,
+          { timeout: 30_000 },
+        )
+        .catch(() => null);
+      if (urlResponse?.ok()) {
+        const body = await urlResponse.json().catch(() => null);
+        downloadUrl = findStringField(body, "url") ?? "";
+      }
+    }
+
+    return {
+      upload: {
+        httpStatus: response.status(),
+        fileId,
+        name: findStringField(raw, "name") ?? "",
+        sizeBytes: findNumberField(raw, "size_bytes") ?? Number.NaN,
+        mimeType: findStringField(raw, "mime_type") ?? "",
+        partRequests,
+        multipart: sawMultipartStart || partRequests > 0,
+        downloadUrl,
+      },
+    };
+  } finally {
+    page.off("request", onRequest);
+  }
+}
+
+/** 新版上传合同（与前端 bundle 的 uploadAgentFile 一致，直接走 API） */
+export interface ApiUploadOutcome extends UploadedFacts {}
+
+const AGENT_FILES_BASE = "/studio-api/v1/agent/files";
+const MULTIPART_CHUNK_BYTES = 5 * 1024 * 1024;
+
+/**
+ * 按产品前端的同一套合同上传素材（不经过 UI）。
+ *
+ * 新版 composer 把上传推迟、且是否上传不稳定，无法用 UI 稳定断言上传链路；
+ * 这里复用 bundle 实测的请求形状：
+ *   小文件：presign → PUT → complete
+ *   >5MiB：multipart/start → multipart/part（逐片 PUT）→ multipart/complete
+ * UI 侧另有 attachAsset 验证“附件出现在 media thumb / 可被 @ 引用”。
+ */
+export async function uploadAssetViaApi(page: Page, asset: TestAsset): Promise<ApiUploadOutcome> {
+  const extension = path.extname(asset.name);
+  const stem = path.basename(asset.name, extension);
+  const uniqueName = `${stem}-${Date.now()}${extension}`;
+  const buffer = readFileSync(asset.path);
+  const checksum = createHash("sha256").update(buffer).digest("base64");
+  const base = `${targets.studioBase}${AGENT_FILES_BASE}`;
+
+  const descriptor = {
+    filename: uniqueName,
+    kind: asset.mimeType.startsWith("video") ? "video" : asset.mimeType.startsWith("image") ? "image" : "audio",
+    mime_type: asset.mimeType,
+    size_bytes: buffer.byteLength,
+    checksum_sha256: checksum,
+  };
+
+  let partRequests = 0;
+  let multipart = false;
+  let completeBody: Record<string, unknown> | null = null;
+
+  if (buffer.byteLength <= MULTIPART_CHUNK_BYTES) {
+    const presign = await page.request.post(`${base}/presign`, { data: descriptor, timeout: 60_000 });
+    if (!presign.ok()) throw new Error(`presign ${presign.status()}: ${(await presign.text()).slice(0, 200)}`);
+    const signed = await presign.json();
+
+    const put = await page.request.put(signed.upload_url, {
+      data: buffer,
+      headers: signed.upload_headers || {},
+      timeout: 180_000,
+    });
+    if (!put.ok()) throw new Error(`S3 PUT ${put.status()}`);
+
+    const complete = await page.request.post(`${base}/complete`, {
+      data: { ...descriptor, bucket: signed.bucket, object_key: signed.object_key },
+      timeout: 60_000,
+    });
+    if (!complete.ok()) throw new Error(`complete ${complete.status()}: ${(await complete.text()).slice(0, 200)}`);
+    completeBody = await complete.json();
+  } else {
+    multipart = true;
+    const start = await page.request.post(`${base}/multipart/start`, { data: descriptor, timeout: 60_000 });
+    if (!start.ok()) throw new Error(`multipart/start ${start.status()}: ${(await start.text()).slice(0, 200)}`);
+    const session = await start.json();
+    const total = Math.ceil(buffer.byteLength / MULTIPART_CHUNK_BYTES);
+    const parts: Array<{ part_number: number; etag: string }> = [];
+
+    for (let partNumber = 1; partNumber <= total; partNumber += 1) {
+      const from = (partNumber - 1) * MULTIPART_CHUNK_BYTES;
+      const chunk = buffer.subarray(from, Math.min(buffer.byteLength, from + MULTIPART_CHUNK_BYTES));
+      const part = await page.request.post(`${base}/multipart/part`, {
+        data: {
+          bucket: session.bucket,
+          object_key: session.object_key,
+          upload_id: session.upload_id,
+          part_number: partNumber,
+        },
+        timeout: 60_000,
+      });
+      if (!part.ok()) throw new Error(`multipart/part ${partNumber} ${part.status()}`);
+      const signedPart = await part.json();
+      const put = await page.request.put(signedPart.upload_url, {
+        data: chunk,
+        headers: signedPart.upload_headers || {},
+        timeout: 180_000,
+      });
+      if (!put.ok()) throw new Error(`part ${partNumber} PUT ${put.status()}`);
+      parts.push({ part_number: partNumber, etag: put.headers()["etag"] || "" });
+      partRequests += 1;
+    }
+
+    const complete = await page.request.post(`${base}/multipart/complete`, {
+      data: {
+        ...descriptor,
+        bucket: session.bucket,
+        object_key: session.object_key,
+        upload_id: session.upload_id,
+        parts,
+      },
+      timeout: 120_000,
+    });
+    if (!complete.ok()) throw new Error(`multipart/complete ${complete.status()}: ${(await complete.text()).slice(0, 200)}`);
+    completeBody = await complete.json();
+  }
+
+  const raw = completeBody ?? {};
+  const fileId =
+    String(raw.cloud_file_id || raw.file_id || raw.resource_id || "");
+  const downloadResponse = await page.request.get(
+    `${base}/${encodeURIComponent(fileId)}/url?disposition=inline`,
+    { timeout: 30_000 },
+  );
+  const downloadBody = downloadResponse.ok() ? await downloadResponse.json().catch(() => null) : null;
+
+  return {
+    httpStatus: 200,
+    fileId,
+    name: String(raw.name || uniqueName),
+    sizeBytes: Number(raw.size_bytes ?? buffer.byteLength),
+    mimeType: String(raw.mime_type || asset.mimeType),
+    partRequests,
+    multipart,
+    downloadUrl: String(downloadBody?.url || raw.url || ""),
+  };
+}
+
+/** 在已有 @ 引用的 composer 末尾追加指令；新版 composer 在聚焦/重建后光标不可靠，这里显式折叠选区 */
+export async function appendPromptText(page: Page, prompt: string): Promise<void> {
+  const editor = page.locator("#workspace-prompt");
+  await editor.click({ timeout: 20_000 });
+  await editor.evaluate((el) => {
+    el.focus();
+    const range = document.createRange();
+    range.selectNodeContents(el);
+    range.collapse(false);
+    const selection = window.getSelection();
+    selection?.removeAllRanges();
+    selection?.addRange(range);
+  });
+  await page.keyboard.insertText(` ${prompt}`);
+
+  const composed = await editor.innerText();
+  if (!composed.includes(prompt)) {
+    throw new Error(`composer 未包含指令文本，实际内容：${composed.replace(/\s+/g, " ").slice(0, 120)}`);
   }
 }
 
@@ -349,14 +665,39 @@ export async function submitCurrentPrompt(page: Page): Promise<SubmitOutcome> {
       { timeout: 120_000 },
     );
 
-    await page.locator("#workspace-send").first().click({ timeout: 20_000 });
+    const send = page.locator("#workspace-send").first();
+    await send.waitFor({ state: "visible", timeout: 20_000 });
+
+    // 新版 composer 的发送按钮会因输入事件/焦点重建短暂保持 disabled；
+    // 这里最多等 10 秒，并用一次空格+退格触发输入事件，避免误判为“不可发送”。
+    let enabled = await send.isEnabled().catch(() => false);
+    if (!enabled) {
+      await page.locator("#workspace-prompt").click({ timeout: 10_000 }).catch(() => undefined);
+      await page.keyboard.press("Space").catch(() => undefined);
+      await page.keyboard.press("Backspace").catch(() => undefined);
+      for (let i = 0; i < 20; i += 1) {
+        enabled = await send.isEnabled().catch(() => false);
+        if (enabled) break;
+        await page.waitForTimeout(500);
+      }
+    }
+    if (!enabled) {
+      const composed = await page.locator("#workspace-prompt").innerText().catch(() => "");
+      throw new Error(`发送按钮不可用，composer 内容：${composed.replace(/\s+/g, " ").slice(0, 120)}`);
+    }
+    await send.click({ timeout: 20_000 });
 
     const response = await responsePromise;
     const raw = await response.json().catch(() => null);
+    const runId = findStringField(raw, "run_id") ?? "";
+
+    // 记录 run → 会话，供后续状态/产物读取
+    const conversation = response.url().match(/\/runtime-api\/v1\/conversations\/([^/]+)\/turns/);
+    if (runId && conversation) runConversations.set(runId, conversation[1]);
 
     return {
       httpStatus: response.status(),
-      runId: findStringField(raw, "run_id") ?? "",
+      runId,
       status: findStringField(raw, "status") ?? "",
       submitRequests,
       raw,
@@ -396,6 +737,47 @@ export async function readBalanceCents(page: Page): Promise<number> {
     }
   }
   return Number.NaN;
+}
+
+/** 账户快照：余额 + 账本条目（`/platform-api/v1/me`） */
+export interface AccountSnapshot {
+  balanceCents: number;
+  ledger: Array<Record<string, unknown>>;
+}
+
+/** 读取账户快照（/me 的 account.balance_cents 与 ledger）；失败时余额为 NaN */
+export async function readAccount(page: Page): Promise<AccountSnapshot> {
+  try {
+    const response = await page.request.get(`${targets.studioBase}/platform-api/v1/me`, {
+      timeout: 30_000,
+    });
+    if (!response.ok()) return { balanceCents: Number.NaN, ledger: [] };
+    const body = await response.json().catch(() => null);
+    const balance = findNumberField(body, "balance_cents");
+    const ledger = Array.isArray((body as { ledger?: unknown })?.ledger)
+      ? ((body as { ledger: Array<Record<string, unknown>> }).ledger)
+      : [];
+    return { balanceCents: balance ?? Number.NaN, ledger };
+  } catch {
+    return { balanceCents: Number.NaN, ledger: [] };
+  }
+}
+
+/** 读取会话的全部消息（未按 run 过滤），用于校验“一次提交只建一个 Job” */
+export async function readConversationMessages(
+  page: Page,
+  conversationId: string,
+): Promise<Array<Record<string, unknown>>> {
+  if (!conversationId) return [];
+  const response = await page.request.get(
+    `${targets.studioBase}/runtime-api/v1/conversations/${encodeURIComponent(conversationId)}/messages?limit=200`,
+    { timeout: 30_000 },
+  );
+  if (!response.ok()) return [];
+  const body = await response.json().catch(() => null);
+  return Array.isArray((body as { messages?: unknown })?.messages)
+    ? ((body as { messages: Array<Record<string, unknown>> }).messages)
+    : [];
 }
 
 /**
@@ -492,19 +874,30 @@ export async function waitForActiveDrain(
  * 取消一个 Run。
  *
  * G2 用例提交后**必须调用它**——即使 plan 阶段不扣费，也没必要让一个测试任务
- * 继续往下跑真实渲染。端点依据：`api.js:1637`。
+ * 继续往下跑真实渲染。
+ *
+ * 新版端点（2026-11-03 起）：`POST /runtime-api/v2/agent/runs/{id}/cancel`；
+ * 旧版 `/v1/agent/runs/{id}/cancel` 作为兼容回退。
  */
 export async function cancelRun(page: Page, runId: string): Promise<boolean> {
   if (!runId) return false;
-  try {
-    const response = await page.request.post(
-      `${targets.studioBase}/v1/agent/runs/${encodeURIComponent(runId)}/cancel`,
-      { timeout: 30_000 },
-    );
-    return response.ok();
-  } catch {
-    return false;
+
+  const endpoints = [
+    `/runtime-api/v2/agent/runs/${encodeURIComponent(runId)}/cancel`,
+    `/v1/agent/runs/${encodeURIComponent(runId)}/cancel`,
+  ];
+
+  for (const path of endpoints) {
+    try {
+      const response = await page.request.post(`${targets.studioBase}${path}`, {
+        timeout: 30_000,
+      });
+      if (response.ok()) return true;
+    } catch {
+      /* 试下一个端点 */
+    }
   }
+  return false;
 }
 
 /**
@@ -541,12 +934,223 @@ export async function deleteAgentFile(page: Page, cloudFileId: string): Promise<
   }
 }
 
+/** 确认新版计划卡片并返回续跑 Run 的 id（没有确认入口则返回空串）。
+ *
+ * 两种形态：
+ * - 高光/长变短：`Render highlight clips` 折叠菜单 → 点「提交」；
+ * - 去口水词：计划卡片直接给出「提交」（提取音频/转写/分析/渲染 4 步）。
+ */
+export async function confirmRenderPlan(page: Page, options: { allowClarification?: boolean } = {}): Promise<string> {
+  // 计划卡的提交按钮有独立容器；澄清卡的按钮在普通表单里
+  const planSubmit = page
+    .locator(".node-plan-review__actions button")
+    .filter({ hasText: /^提交$|^Submit$/ })
+    .first();
+  const anySubmit = page.getByRole("button", { name: /^提交$|^Submit$/ }).first();
+  const render = page
+    .getByRole("button", { name: /Render\b[^]*highlight|确认并渲染|确认并生成/i })
+    .first();
+
+  const waitResponse = (timeout: number) =>
+    page
+      .waitForResponse(
+        (response) =>
+          isRunSubmission(response.url(), response.request().method()) ||
+          /\/(confirmations|clarifications)(?:\/|$)/.test(response.url()),
+        { timeout },
+      )
+      .catch(() => null);
+
+  const parseTurns = async (response: { url: () => string; json: () => Promise<unknown> }) => {
+    const raw = await response.json().catch(() => null);
+    const runId = findStringField(raw, "run_id") ?? "";
+    const conversation = response.url().match(/\/runtime-api\/v1\/conversations\/([^/]+)\/turns/);
+    const sourceRun = response.url().match(/\/runs\/([^/]+)\/(?:confirmations|clarifications)/)?.[1];
+    const conversationId = conversation?.[1] ?? (sourceRun ? runConversations.get(sourceRun) : undefined);
+    if (runId && conversationId) runConversations.set(runId, conversationId);
+    return runId;
+  };
+
+  // 选择型澄清（例如“Choose videos: A / B / both”）：先选第一个具体视频
+  const selectChoice = async () => {
+    const native = page.locator("select:visible").first();
+    if (await native.count()) {
+      if (!(await native.inputValue())) {
+        const choices = await native.locator("option").evaluateAll(options => options.map(option => ({
+          value: (option as HTMLOptionElement).value, label: option.textContent ?? "", disabled: (option as HTMLOptionElement).disabled,
+        })));
+        const selected = choices.find(option => option.value && !option.disabled && !/both|都|全部/i.test(option.label));
+        if (selected) await native.selectOption(selected.value);
+      }
+      return;
+    }
+    const choice = page
+      .locator(".next-select-trigger, [role=combobox]")
+      .filter({ hasText: /请选择|Select|Choose/i })
+      .first();
+    if ((await choice.count()) === 0 || !(await choice.isVisible().catch(() => false))) return;
+    await choice.click({ timeout: 10_000 }).catch(() => undefined);
+    await page.waitForTimeout(800);
+    const option = page
+      .locator(".next-menu-item, [role=option]")
+      .filter({ hasNotText: /both|都|全部/i })
+      .first();
+    if ((await option.count()) > 0) await option.click({ timeout: 10_000 }).catch(() => undefined);
+    await page.waitForTimeout(500);
+  };
+
+  for (let attempt = 0; attempt < 5; attempt += 1) {
+    if (options.allowClarification !== false) await selectChoice();
+    // 1) 计划卡：点它自己的「提交」，等 /confirmations
+    if ((await planSubmit.count()) > 0 && (await planSubmit.isVisible().catch(() => false))) {
+      const responsePromise = waitResponse(30_000);
+      await planSubmit.click({ timeout: 20_000 }).catch(() => undefined);
+      const response = await responsePromise;
+      if (!response) continue;
+      if (/\/confirmations(?:\/|$)/.test(response.url())) return parseTurns(response);
+      if (/\/clarifications(?:\/|$)/.test(response.url())) {
+        if (options.allowClarification === false) return "";
+        await page.waitForTimeout(2_500);
+        continue;
+      }
+      return parseTurns(response);
+    }
+
+    // 2) 澄清卡（例如“确认最终时长 20 或 30”）：提交答案后等计划卡出现
+    if (options.allowClarification !== false && (await anySubmit.count()) > 0 && (await anySubmit.isEnabled().catch(() => false))) {
+      const responsePromise = waitResponse(20_000);
+      await anySubmit.click({ timeout: 20_000 }).catch(() => undefined);
+      const response = await responsePromise;
+      if (response) {
+        const resumedRun = await parseTurns(response);
+        if (resumedRun) return resumedRun;
+      }
+      const deadline = Date.now() + 120_000;
+      while (Date.now() < deadline && !(await planSubmit.isVisible().catch(() => false))) {
+        await page.waitForTimeout(2_000);
+      }
+      continue;
+    }
+
+    // 3) 只有 Render 的情况：展开后会出现「提交」
+    if ((await render.count()) > 0) {
+      await render.click({ timeout: 20_000 }).catch(() => undefined);
+      await page.waitForTimeout(1_500);
+      continue;
+    }
+
+    await page.waitForTimeout(2_000);
+  }
+
+  return "";
+}
+
+/** 新版把 Run 挂在会话下：提交响应只给 run_id，状态/产物要从会话消息里取 */
+const runConversations = new Map<string, string>();
+
+/** 新版 Run 所属会话（提交时记录） */
+export function conversationForRun(runId: string): string {
+  return runConversations.get(runId) ?? "";
+}
+
+/** Restore an observed Run after a local runner interruption, without creating a second task. */
+export function restoreRunConversation(runId: string, conversationId: string): void {
+  if (!runId || !conversationId) throw new Error("恢复Run需要已观测的run_id和conversation_id");
+  const existing = runConversations.get(runId);
+  if (existing && existing !== conversationId) throw new Error("不能将已知Run重新绑定到不同会话");
+  runConversations.set(runId, conversationId);
+}
+
 /** 读取 Run 详情。
  *
- * 端点依据：`api.js:1337` 的 `getAgentRun`，其 base 由 `_agentBaseForRun` 给出，
- * 而该函数**直接返回 orchestratorBase**（`api.js:509`，注释说明 Studio 会为历史 run 恢复后端）。
+ * 新版（/runtime-api）没有单 Run 详情端点，改为从会话消息里取：
+ *   GET /runtime-api/v1/conversations/{cid}/messages → 按 job_id === runId 过滤
+ * 旧版仍回退到 `/v1/agent/runs/{id}`。
  */
 export async function getRunDetail(page: Page, runId: string): Promise<unknown> {
+  const conversationId = runConversations.get(runId);
+  if (conversationId) {
+    const response = await page.request.get(
+      `${targets.studioBase}/runtime-api/v1/conversations/${encodeURIComponent(conversationId)}/messages?limit=200`,
+      { timeout: 30_000 },
+    );
+    if (response.ok()) {
+      const body = await response.json().catch(() => null);
+      const messages: Array<Record<string, unknown>> = Array.isArray(
+        (body as { messages?: unknown })?.messages,
+      )
+        ? ((body as { messages: Array<Record<string, unknown>> }).messages)
+        : [];
+      const related = messages.filter((message) => message?.job_id === runId);
+      const assistant = [...related].reverse().find((message) => message.role === "assistant");
+      const user = related.find((message) => message.role === "user");
+      const base = assistant ?? user;
+      if (base) {
+        const rawArtifacts = Array.isArray(base.result_files)
+          ? (base.result_files as Array<Record<string, unknown>>)
+          : Array.isArray(base.files)
+            ? (base.files as Array<Record<string, unknown>>)
+            : [];
+
+        // 新版 result_files 只有 file_id / facts，没有 id/url/cloud_file_id；
+        // 这里归一化成框架内 RunArtifact 的形状，并补上预签名下载 URL。
+        const artifacts = [];
+        for (const item of rawArtifacts) {
+          const facts = (item.facts as Record<string, unknown>) ?? {};
+          const fileId = String(item.file_id ?? facts.file_id ?? item.id ?? "");
+          let url = String(item.url ?? "");
+          if (!url && fileId) {
+            const urlResponse = await page.request
+              .get(
+                `${targets.studioBase}/studio-api/v1/agent/files/${encodeURIComponent(fileId)}/url?disposition=inline`,
+                { timeout: 30_000 },
+              )
+              .catch(() => null);
+            if (urlResponse?.ok()) {
+              const payload = await urlResponse.json().catch(() => null);
+              url = findStringField(payload, "url") ?? "";
+            }
+          }
+          const metadata: Record<string, string> = {};
+          for (const [key, value] of Object.entries(facts)) metadata[key] = String(value);
+          if (item.size_bytes !== undefined) metadata.size_bytes = String(item.size_bytes);
+
+          artifacts.push({
+            id: fileId,
+            cloud_file_id: fileId,
+            deliveryId: String(item.artifact_id ?? item.id ?? ""),
+            name: String(item.name ?? ""),
+            kind: String(item.kind ?? ""),
+            url,
+            metadata,
+          });
+        }
+
+        return {
+          run_id: runId,
+          conversation_id: conversationId,
+          // 新版把澄清/确认态叫 waiting_for_clarification / waiting_for_confirmation；
+          // 框架统一按 requires_user_input 处理
+          status:
+            String(base.status ?? "") === "waiting_for_clarification" ||
+            String(base.status ?? "") === "waiting_for_confirmation"
+              ? "requires_user_input"
+              : String(base.status ?? ""),
+          plan: base.plan ?? [],
+          clarifications: base.clarifications ?? [],
+          messages: related,
+          artifacts,
+          context_files: user?.files ?? [],
+          completion: base.completion ?? null,
+          error:
+            base.error_code || base.error_msg
+              ? { code: base.error_code ?? "", message: base.error_msg ?? "" }
+              : null,
+        };
+      }
+    }
+  }
+
   const response = await page.request.get(
     `${targets.studioBase}/v1/agent/runs/${encodeURIComponent(runId)}`,
     { timeout: 30_000 },
@@ -600,11 +1204,17 @@ export async function referenceAssetInPrompt(
   const stem = assetName.replace(/\.[^.]+$/, "");
   await page.keyboard.insertText(`@${stem}`);
 
-  const optionsLocator = page.locator("[data-workspace-mention-file-key]");
-  const candidate = cloudFileId
+  // 旧版候选项带 data-workspace-mention-file-key（可按 cloud_file_id 精确选择）；
+  // 新版（/studio/workspace）改用 [role=option]，只能按显示名匹配。
+  const optionsLocator = page.locator("[data-workspace-mention-file-key], [role=option]");
+  const byCloudId = cloudFileId
     ? page.locator(`[data-workspace-mention-file-key=${JSON.stringify(`cloud:${cloudFileId}`)}]`)
-    : optionsLocator.filter({ hasText: assetName });
-  await candidate.first().waitFor({ state: "visible", timeout: 20_000 });
+    : null;
+  const candidate =
+    byCloudId && (await byCloudId.count()) > 0
+      ? byCloudId.first()
+      : optionsLocator.filter({ hasText: assetName }).first();
+  await candidate.waitFor({ state: "visible", timeout: 20_000 });
 
   const candidates = await optionsLocator.allTextContents();
 

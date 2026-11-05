@@ -22,8 +22,8 @@
     "test:smoke": "playwright test --project=staging --grep @smoke",
     "test:regression": "playwright test --project=staging --grep @regression",
     "test:full": "playwright test --project=staging",
-    "test:quick": "playwright test --project=staging g3-g7-quick-cards",
-    "test:multi": "playwright test --project=staging g3-g7-multi",
+    "test:multi": "playwright test --project=staging g3-g7-multi g3-g7-multi-compound",
+    "test:multi:base": "playwright test --project=staging g3-g7-multi",
     "test:chains": "playwright test --project=staging g3-g7-chains",
     "test:ai": "playwright test --project=staging g3-g7-cards",
     "test:annotation": "playwright test --project=annotation",
@@ -36,7 +36,12 @@
     "report": "playwright show-report reports/html",
     "region:diff": "python tools/annotation/region_diff.py",
     "cases:check": "python tools/design-cases/check-cases.py",
-    "test:multi:compound": "playwright test --project=staging g3-g7-multi-compound"
+    "test:multi:compound": "playwright test --project=staging g3-g7-multi-compound",
+    "test:multi:materials": "playwright test --config=playwright.multi-material.config.ts --project=multi-material",
+    "test:multi:materials:ui": "playwright test --config=playwright.multi-material-ui.config.ts --project=multi-material-ui",
+    "test:sso": "playwright test --config=playwright.sso.config.ts --project=sso",
+    "test:sso:mixed": "playwright test --config=playwright.sso.config.ts --project=sso --grep \"SSO-0(19|2[0-2])\"",
+    "test:footage": "playwright test --config=playwright.footage.config.ts --project=local-footage"
   },
   "devDependencies": {
     "@playwright/test": "^1.56.0",

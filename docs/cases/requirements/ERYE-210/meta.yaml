@@ -1,0 +1,10 @@
+requirement: ERYE-210
+title: 编辑器默认TAB调整
+source: https://devops.aliyun.com/projex/req/ERYE-210
+status: designing
+automation_tag: "@ERYE-210"
+case_prefix: ERYE210
+updated: 2026-11-05
+
+acceptance_basis: "page_business_or_observed_api"
+acceptance_updated: 2026-11-05

@@ -1,9 +1,14 @@
 requirement: ERYE-237
 title: 【全】图像编辑能力新增
 source: https://devops.aliyun.com/projex/req/ERYE-237
-owner: yabinc18
 status: designing
 automation_tag: "@ERYE-237"
 case_prefix: ERYE237
-updated: 2026-10-21
-legacy_file: docs/design-cases/16-image-editing-erye237.md
+case_set_version: "2026-11-05-rewrite"
+updated: 2026-11-05
+source_modified: "2026-10-19 10:42:09 Asia/Shanghai"
+figma_file: SqGzwtxqNjFZa9QIvUPAlc
+figma_node: "1816:50610"
+annotation_limit: 10
+annotation_limit_confirmed: "user 2026-11-05"
+execution_status: Not Run

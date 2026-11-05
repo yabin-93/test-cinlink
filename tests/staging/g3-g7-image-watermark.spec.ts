@@ -19,8 +19,10 @@ import {
   type Observation,
 } from "../../src/levels/gates.js";
 import {
+  appendPromptText,
+  attachAssets,
   cancelRun,
-  deleteAgentFile,
+  disposeAttached,
   getRunDetail,
   openWorkspaceSession,
   readBalanceCents,
@@ -56,7 +58,7 @@ import {
 const SOURCE = TEST_ASSETS.videoShort;
 
 /** 固定提示词：显式说明哪个引用是水印，降低澄清概率 */
-const PROMPT = "给这个视频添加图片水印，水印图片用我引用的这张图片";
+const PROMPT = "给这个视频添加图片水印，水印图片用我引用的这张图片，输出带水印的视频";
 
 const POLL_TIMEOUT_MS = 15 * 60_000;
 // 落盘到 reports/ 而不是 test-results/：后者每次 Playwright 运行都会清空，
@@ -72,11 +74,9 @@ test.describe("@regression G3–G7 图片水印链路", () => {
     const poolBefore = extractPools(await readRuntimeHealth(page));
     const balanceBefore = await readBalanceCents(page);
 
-    const video = await uploadAsset(page, SOURCE);
-    expect(video.cloudFileId, "前置：源视频必须上传成功").not.toBe("");
-
-    const watermark = await uploadAsset(page, WATERMARK_IMAGE);
-    expect(watermark.cloudFileId, "前置：水印图片必须上传成功").not.toBe("");
+    const [video, watermark] = await attachAssets(page, [SOURCE, WATERMARK_IMAGE]);
+    expect(video.uploadedAs, "前置：源视频必须挂到 composer").not.toBe("");
+    expect(watermark.uploadedAs, "前置：水印图片必须挂到 composer").not.toBe("");
 
     let runId = "";
     let poolAfter = poolBefore;
@@ -84,48 +84,21 @@ test.describe("@regression G3–G7 图片水印链路", () => {
     try {
       // ── 依次引用两个素材 ────────────────────────────────────────────
       // 第二次必须传 { clear: false }，否则会把第一个引用抹掉。
-      const videoRef = await referenceAssetInPrompt(
-        page,
-        video.uploadedAs,
-        video.cloudFileId,
-      );
+      const videoRef = await referenceAssetInPrompt(page, video.uploadedAs);
       expect(
         videoRef.ok,
         `源视频未能通过 @ 引用：${videoRef.candidates.join(", ")}`,
       ).toBe(true);
 
-      const imageRef = await referenceAssetInPrompt(
-        page,
-        watermark.uploadedAs,
-        watermark.cloudFileId,
-        { clear: false },
-      );
+      const imageRef = await referenceAssetInPrompt(page, watermark.uploadedAs, undefined, {
+        clear: false,
+      });
       expect(
         imageRef.ok,
         `水印图片未能通过 @ 引用：${imageRef.candidates.join(", ")}`,
       ).toBe(true);
 
-      const editor = page.locator("#workspace-prompt");
-      // 两个引用 chip 占满一行时，普通 click + End 可能把光标落在 chip 上而不是文本末尾，
-      // 导致 insertText 被丢弃（提交里只剩 @ 引用，AI 会反问"你想如何处理"）。
-      // 这里显式把选区折叠到编辑器内容末尾，再插入指令。
-      await editor.evaluate((el) => {
-        el.focus();
-        const range = document.createRange();
-        range.selectNodeContents(el);
-        range.collapse(false);
-        const selection = window.getSelection();
-        selection?.removeAllRanges();
-        selection?.addRange(range);
-      });
-      await page.keyboard.insertText(` ${PROMPT}`);
-
-      // 提交前确认指令真的进了 composer，避免只提交引用导致澄清（会浪费一次真实任务）
-      const composed = (await editor.innerText()).replace(/\s+/g, " ").trim();
-      expect(
-        composed,
-        `composer 中缺少指令文本，实际内容：${composed}`,
-      ).toContain(PROMPT);
+      await appendPromptText(page, PROMPT);
 
       const startedAt = Date.now();
       const submit = await submitCurrentPrompt(page);
@@ -157,7 +130,7 @@ test.describe("@regression G3–G7 图片水印链路", () => {
 
       const observationBase: Observation = {
         uploaded: [
-          { cloudFileId: video.cloudFileId, sizeBytes: video.sizeBytes, listable: true },
+          { cloudFileId: video.uploadedAs, sizeBytes: video.sizeBytes, listable: true },
         ],
         jobIds: [runId],
         poolBefore,
@@ -286,19 +259,8 @@ test.describe("@regression G3–G7 图片水印链路", () => {
         const cancelled = await cancelRun(page, runId).catch(() => false);
         console.log(`清理任务 ${runId}: ${cancelled ? "已取消" : "无需取消或取消失败"}`);
       }
-      for (const [label, id] of [
-        ["源视频", video.cloudFileId],
-        ["水印图片", watermark.cloudFileId],
-      ] as const) {
-        const removed = await deleteAgentFile(page, id).catch(() => false);
-        console.log(`清理${label} ${id}: ${removed ? "成功" : "失败（需人工确认）"}`);
-        if (!removed) {
-          test.info().annotations.push({
-            type: "cleanup",
-            description: `${label}未清理：${id}`,
-          });
-        }
-      }
+      disposeAttached(video);
+      disposeAttached(watermark);
     }
   });
 });

@@ -16,3 +16,8 @@ local.env
 .figma-profile2/
 .figma-auth.json
 .chrome-link/
+# DeepSeek migration: private conversations and local scratch files
+.migration/
+.tmp-*
+__pycache__/
+.playwright-mcp/

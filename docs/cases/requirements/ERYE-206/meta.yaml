@@ -1,0 +1,10 @@
+requirement: ERYE-206
+title: CinLink 会话与视频工程协作
+source: https://devops.aliyun.com/projex/req/ERYE-206
+status: designing
+automation_tag: "@ERYE-206"
+case_prefix: ERYE206
+updated: 2026-11-05
+
+acceptance_basis: "page_business_or_observed_api"
+acceptance_updated: 2026-11-05

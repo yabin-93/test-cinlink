@@ -1,217 +1,5 @@
 # 用例 ↔ 自动化映射（由 cases.md 生成后可手工维护）
 
-ERYE237-001:
-  status: PLAN
-  script: ""
-ERYE237-002:
-  status: PLAN
-  script: ""
-ERYE237-003:
-  status: PLAN
-  script: ""
-ERYE237-004:
-  status: PLAN
-  script: ""
-ERYE237-005:
-  status: PLAN
-  script: ""
-ERYE237-006:
-  status: PLAN
-  script: ""
-ERYE237-007:
-  status: PLAN
-  script: ""
-ERYE237-008:
-  status: PLAN
-  script: ""
-ERYE237-009:
-  status: PLAN
-  script: ""
-ERYE237-010:
-  status: PLAN
-  script: ""
-ERYE237-011:
-  status: PLAN
-  script: ""
-ERYE237-012:
-  status: PLAN
-  script: ""
-ERYE237-013:
-  status: PLAN
-  script: ""
-ERYE237-014:
-  status: PLAN
-  script: ""
-ERYE237-015:
-  status: PLAN
-  script: ""
-ERYE237-016:
-  status: PLAN
-  script: ""
-ERYE237-017:
-  status: PLAN
-  script: ""
-ERYE237-018:
-  status: PLAN
-  script: ""
-ERYE237-019:
-  status: PLAN
-  script: ""
-ERYE237-020:
-  status: PLAN
-  script: ""
-ERYE237-021:
-  status: PLAN
-  script: ""
-ERYE237-022:
-  status: PLAN
-  script: ""
-ERYE237-023:
-  status: PLAN
-  script: ""
-ERYE237-024:
-  status: PLAN
-  script: ""
-ERYE237-025:
-  status: PLAN
-  script: ""
-ERYE237-026:
-  status: PLAN
-  script: ""
-ERYE237-027:
-  status: PLAN
-  script: ""
-ERYE237-028:
-  status: PLAN
-  script: ""
-ERYE237-029:
-  status: PLAN
-  script: ""
-ERYE237-030:
-  status: PLAN
-  script: ""
-ERYE237-031:
-  status: PLAN
-  script: ""
-ERYE237-032:
-  status: PLAN
-  script: ""
-ERYE237-033:
-  status: PLAN
-  script: ""
-ERYE237-034:
-  status: PLAN
-  script: ""
-ERYE237-035:
-  status: PLAN
-  script: ""
-ERYE237-036:
-  status: PLAN
-  script: ""
-ERYE237-037:
-  status: PLAN
-  script: ""
-ERYE237-038:
-  status: PLAN
-  script: ""
-ERYE237-039:
-  status: PLAN
-  script: ""
-ERYE237-040:
-  status: PLAN
-  script: ""
-ERYE237-041:
-  status: PLAN
-  script: ""
-ERYE237-042:
-  status: PLAN
-  script: ""
-ERYE237-043:
-  status: PLAN
-  script: ""
-ERYE237-044:
-  status: PLAN
-  script: ""
-ERYE237-045:
-  status: PLAN
-  script: ""
-ERYE237-046:
-  status: PLAN
-  script: ""
-ERYE237-047:
-  status: PLAN
-  script: ""
-ERYE237-048:
-  status: PLAN
-  script: ""
-ERYE237-049:
-  status: PLAN
-  script: ""
-ERYE237-050:
-  status: PLAN
-  script: ""
-ERYE237-051:
-  status: PLAN
-  script: ""
-ERYE237-052:
-  status: PLAN
-  script: ""
-ERYE237-053:
-  status: PLAN
-  script: ""
-ERYE237-054:
-  status: PLAN
-  script: ""
-ERYE237-055:
-  status: PLAN
-  script: ""
-ERYE237-056:
-  status: PLAN
-  script: ""
-ERYE237-057:
-  status: PLAN
-  script: ""
-ERYE237-058:
-  status: PLAN
-  script: ""
-ERYE237-059:
-  status: PLAN
-  script: ""
-ERYE237-060:
-  status: PLAN
-  script: ""
-ERYE237-061:
-  status: PLAN
-  script: ""
-ERYE237-062:
-  status: PLAN
-  script: ""
-ERYE237-063:
-  status: PLAN
-  script: ""
-ERYE237-064:
-  status: PLAN
-  script: ""
-ERYE237-065:
-  status: PLAN
-  script: ""
-ERYE237-066:
-  status: PLAN
-  script: ""
-ERYE237-067:
-  status: PLAN
-  script: ""
-ERYE237-068:
-  status: PLAN
-  script: ""
-ERYE237-069:
-  status: PLAN
-  script: ""
-ERYE237-070:
-  status: PLAN
-  script: ""
-
-# ERYE-160 计费逻辑
 ERYE160-001:
   status: PLAN
   script: ""
@@ -420,63 +208,6 @@ ERYE160-069:
   status: PLAN
   script: ""
 ERYE160-070:
-  status: PLAN
-  script: ""
-ERYE237-071:
-  status: PLAN
-  script: ""
-ERYE237-072:
-  status: PLAN
-  script: ""
-ERYE237-073:
-  status: PLAN
-  script: ""
-ERYE237-074:
-  status: PLAN
-  script: ""
-ERYE237-075:
-  status: PLAN
-  script: ""
-ERYE237-076:
-  status: PLAN
-  script: ""
-ERYE237-077:
-  status: PLAN
-  script: ""
-ERYE237-078:
-  status: PLAN
-  script: ""
-ERYE237-079:
-  status: PLAN
-  script: ""
-ERYE237-080:
-  status: PLAN
-  script: ""
-ERYE237-081:
-  status: PLAN
-  script: ""
-ERYE237-082:
-  status: PLAN
-  script: ""
-ERYE237-083:
-  status: PLAN
-  script: ""
-ERYE237-084:
-  status: PLAN
-  script: ""
-ERYE237-085:
-  status: PLAN
-  script: ""
-ERYE237-086:
-  status: PLAN
-  script: ""
-ERYE237-087:
-  status: PLAN
-  script: ""
-ERYE237-088:
-  status: PLAN
-  script: ""
-ERYE237-089:
   status: PLAN
   script: ""
 ERYE160-071:
@@ -704,31 +435,1216 @@ ERYE199-068:
   status: PLAN
   script: ""
 
-# MW-MULTI 多工作流复合
-MWMULTI-001:
+# ERYE-196 正文及评论详版，2026-11-05；001人工Passed，002本轮页面验收不适用，003页面业务Passed，004本轮不适用，005受阻，其余未执行；status为自动化接入状态
+ERYE196-001:
   status: PLAN
   script: ""
-MWMULTI-002:
+  execution_status: Passed
+  execution_report: docs/cases/requirements/ERYE-196/results-001-rerun-20261105.md
+ERYE196-002:
   status: PLAN
   script: ""
-MWMULTI-003:
+  execution_status: NotApplicable
+  execution_report: docs/cases/requirements/ERYE-196/results-002-20261105.md
+ERYE196-003:
   status: PLAN
   script: ""
-MWMULTI-004:
+  execution_status: Passed
+  execution_scope: page_business
+  execution_report: docs/cases/requirements/ERYE-196/results-003-ui-20261105.md
+ERYE196-004:
   status: PLAN
   script: ""
-MWMULTI-005:
+  execution_status: NotApplicable
+  execution_scope: excluded_by_latest_design
+  execution_report: docs/cases/requirements/ERYE-196/results-004-ui-20261105.md
+ERYE196-005:
   status: PLAN
   script: ""
-MWMULTI-006:
+  execution_status: NotRun
+  execution_scope: page_business_or_observed_api
+  execution_report: docs/cases/requirements/ERYE-196/business-acceptance-update-20261105.md
+ERYE196-006:
   status: PLAN
   script: ""
-MWMULTI-007:
+ERYE196-007:
   status: PLAN
   script: ""
-MWMULTI-008:
+ERYE196-008:
   status: PLAN
   script: ""
-MWMULTI-009:
+ERYE196-009:
+  status: PLAN
+  script: ""
+ERYE196-010:
+  status: PLAN
+  script: ""
+ERYE196-011:
+  status: PLAN
+  script: ""
+ERYE196-012:
+  status: PLAN
+  script: ""
+ERYE196-013:
+  status: PLAN
+  script: ""
+ERYE196-014:
+  status: PLAN
+  script: ""
+ERYE196-015:
+  status: PLAN
+  script: ""
+ERYE196-016:
+  status: PLAN
+  script: ""
+ERYE196-017:
+  status: PLAN
+  script: ""
+ERYE196-018:
+  status: PLAN
+  script: ""
+ERYE196-019:
+  status: PLAN
+  script: ""
+ERYE196-020:
+  status: PLAN
+  script: ""
+ERYE196-021:
+  status: PLAN
+  script: ""
+ERYE196-022:
+  status: PLAN
+  script: ""
+ERYE196-023:
+  status: PLAN
+  script: ""
+ERYE196-024:
+  status: PLAN
+  script: ""
+ERYE196-025:
+  status: PLAN
+  script: ""
+ERYE196-026:
+  status: PLAN
+  script: ""
+ERYE196-027:
+  status: PLAN
+  script: ""
+ERYE196-028:
+  status: PLAN
+  script: ""
+ERYE196-029:
+  status: PLAN
+  script: ""
+ERYE196-030:
+  status: PLAN
+  script: ""
+ERYE196-031:
+  status: PLAN
+  script: ""
+ERYE196-032:
+  status: PLAN
+  script: ""
+ERYE196-033:
+  status: PLAN
+  script: ""
+ERYE196-034:
+  status: PLAN
+  script: ""
+ERYE196-035:
+  status: PLAN
+  script: ""
+ERYE196-036:
+  status: PLAN
+  script: ""
+ERYE196-037:
+  status: PLAN
+  script: ""
+ERYE196-038:
+  status: PLAN
+  script: ""
+ERYE196-039:
+  status: PLAN
+  script: ""
+ERYE196-040:
+  status: PLAN
+  script: ""
+ERYE196-041:
+  status: PLAN
+  script: ""
+ERYE196-042:
+  status: PLAN
+  script: ""
+ERYE196-043:
+  status: PLAN
+  script: ""
+ERYE196-044:
+  status: PLAN
+  script: ""
+ERYE196-045:
+  status: PLAN
+  script: ""
+ERYE196-046:
+  status: PLAN
+  script: ""
+ERYE196-047:
+  status: PLAN
+  script: ""
+ERYE196-048:
+  status: PLAN
+  script: ""
+ERYE196-049:
+  status: PLAN
+  script: ""
+ERYE196-050:
+  status: PLAN
+  script: ""
+ERYE196-051:
+  status: PLAN
+  script: ""
+ERYE196-052:
+  status: PLAN
+  script: ""
+ERYE196-053:
+  status: PLAN
+  script: ""
+ERYE196-054:
+  status: PLAN
+  script: ""
+ERYE196-055:
+  status: PLAN
+  script: ""
+ERYE196-056:
+  status: PLAN
+  script: ""
+ERYE196-057:
+  status: PLAN
+  script: ""
+ERYE196-058:
+  status: PLAN
+  script: ""
+ERYE196-059:
+  status: PLAN
+  script: ""
+ERYE196-060:
+  status: PLAN
+  script: ""
+ERYE196-061:
+  status: PLAN
+  script: ""
+ERYE196-062:
+  status: PLAN
+  script: ""
+ERYE196-063:
+  status: PLAN
+  script: ""
+ERYE196-064:
+  status: PLAN
+  script: ""
+ERYE196-065:
+  status: PLAN
+  script: ""
+ERYE196-066:
+  status: PLAN
+  script: ""
+ERYE196-067:
+  status: PLAN
+  script: ""
+ERYE196-068:
+  status: PLAN
+  script: ""
+ERYE196-069:
+  status: PLAN
+  script: ""
+ERYE196-070:
+  status: PLAN
+  script: ""
+ERYE196-071:
+  status: PLAN
+  script: ""
+ERYE196-072:
+  status: PLAN
+  script: ""
+ERYE196-073:
+  status: PLAN
+  script: ""
+ERYE196-074:
+  status: PLAN
+  script: ""
+ERYE196-075:
+  status: PLAN
+  script: ""
+ERYE196-076:
+  status: PLAN
+  script: ""
+ERYE196-077:
+  status: PLAN
+  script: ""
+ERYE196-078:
+  status: PLAN
+  script: ""
+ERYE196-079:
+  status: PLAN
+  script: ""
+ERYE196-080:
+  status: PLAN
+  script: ""
+ERYE196-081:
+  status: PLAN
+  script: ""
+ERYE196-082:
+  status: PLAN
+  script: ""
+ERYE196-083:
+  status: PLAN
+  script: ""
+ERYE196-084:
+  status: PLAN
+  script: ""
+ERYE196-085:
+  status: PLAN
+  script: ""
+ERYE196-086:
+  status: PLAN
+  script: ""
+ERYE196-087:
+  status: PLAN
+  script: ""
+ERYE196-088:
+  status: PLAN
+  script: ""
+ERYE196-089:
+  status: PLAN
+  script: ""
+ERYE196-090:
+  status: PLAN
+  script: ""
+ERYE196-091:
+  status: PLAN
+  script: ""
+ERYE196-092:
+  status: PLAN
+  script: ""
+ERYE196-093:
+  status: PLAN
+  script: ""
+ERYE196-094:
+  status: PLAN
+  script: ""
+ERYE196-095:
+  status: PLAN
+  script: ""
+ERYE196-096:
+  status: PLAN
+  script: ""
+ERYE196-097:
+  status: PLAN
+  script: ""
+ERYE196-098:
+  status: PLAN
+  script: ""
+ERYE196-099:
+  status: PLAN
+  script: ""
+ERYE196-100:
+  status: PLAN
+  script: ""
+ERYE196-101:
+  status: PLAN
+  script: ""
+ERYE196-102:
+  status: PLAN
+  script: ""
+ERYE196-103:
+  status: PLAN
+  script: ""
+ERYE196-104:
+  status: PLAN
+  script: ""
+ERYE196-105:
+  status: PLAN
+  script: ""
+ERYE196-106:
+  status: PLAN
+  script: ""
+ERYE196-107:
+  status: PLAN
+  script: ""
+ERYE196-108:
+  status: PLAN
+  script: ""
+ERYE196-109:
+  status: PLAN
+  script: ""
+ERYE196-110:
+  status: PLAN
+  script: ""
+ERYE196-111:
+  status: PLAN
+  script: ""
+ERYE196-112:
+  status: PLAN
+  script: ""
+ERYE196-113:
+  status: PLAN
+  script: ""
+ERYE196-114:
+  status: PLAN
+  script: ""
+ERYE196-115:
+  status: PLAN
+  script: ""
+ERYE196-116:
+  status: PLAN
+  script: ""
+ERYE196-117:
+  status: PLAN
+  script: ""
+ERYE196-118:
+  status: PLAN
+  script: ""
+ERYE196-119:
+  status: PLAN
+  script: ""
+ERYE196-120:
+  status: PLAN
+  script: ""
+ERYE196-121:
+  status: PLAN
+  script: ""
+ERYE196-122:
+  status: PLAN
+  script: ""
+ERYE196-123:
+  status: PLAN
+  script: ""
+ERYE196-124:
+  status: PLAN
+  script: ""
+ERYE196-125:
+  status: PLAN
+  script: ""
+ERYE196-126:
+  status: PLAN
+  script: ""
+ERYE196-127:
+  status: PLAN
+  script: ""
+ERYE196-128:
+  status: PLAN
+  script: ""
+ERYE196-129:
+  status: PLAN
+  script: ""
+ERYE196-130:
+  status: PLAN
+  script: ""
+ERYE196-131:
+  status: PLAN
+  script: ""
+ERYE196-132:
+  status: PLAN
+  script: ""
+ERYE196-133:
+  status: PLAN
+  script: ""
+ERYE196-134:
+  status: PLAN
+  script: ""
+
+# ERYE-206/210 2026-11-05：正文、评论及用户确认五入口；仅设计未执行
+ERYE206-001:
+  status: PLAN
+  script: ""
+ERYE206-002:
+  status: PLAN
+  script: ""
+ERYE206-003:
+  status: PLAN
+  script: ""
+ERYE206-004:
+  status: PLAN
+  script: ""
+ERYE206-005:
+  status: PLAN
+  script: ""
+ERYE206-006:
+  status: PLAN
+  script: ""
+ERYE206-007:
+  status: PLAN
+  script: ""
+ERYE206-008:
+  status: PLAN
+  script: ""
+ERYE206-009:
+  status: PLAN
+  script: ""
+ERYE206-010:
+  status: PLAN
+  script: ""
+ERYE206-011:
+  status: PLAN
+  script: ""
+ERYE206-012:
+  status: PLAN
+  script: ""
+ERYE206-013:
+  status: PLAN
+  script: ""
+ERYE206-014:
+  status: PLAN
+  script: ""
+ERYE206-015:
+  status: PLAN
+  script: ""
+ERYE206-016:
+  status: PLAN
+  script: ""
+ERYE206-017:
+  status: PLAN
+  script: ""
+ERYE206-018:
+  status: PLAN
+  script: ""
+ERYE206-019:
+  status: PLAN
+  script: ""
+ERYE206-020:
+  status: PLAN
+  script: ""
+ERYE206-021:
+  status: PLAN
+  script: ""
+ERYE206-022:
+  status: PLAN
+  script: ""
+ERYE206-023:
+  status: PLAN
+  script: ""
+ERYE206-024:
+  status: PLAN
+  script: ""
+ERYE206-025:
+  status: PLAN
+  script: ""
+ERYE206-026:
+  status: PLAN
+  script: ""
+ERYE206-027:
+  status: PLAN
+  script: ""
+ERYE206-028:
+  status: PLAN
+  script: ""
+ERYE206-029:
+  status: PLAN
+  script: ""
+ERYE206-030:
+  status: PLAN
+  script: ""
+ERYE206-031:
+  status: PLAN
+  script: ""
+ERYE206-032:
+  status: PLAN
+  script: ""
+ERYE206-033:
+  status: PLAN
+  script: ""
+ERYE206-034:
+  status: PLAN
+  script: ""
+ERYE206-035:
+  status: PLAN
+  script: ""
+ERYE206-036:
+  status: PLAN
+  script: ""
+ERYE206-037:
+  status: PLAN
+  script: ""
+ERYE206-038:
+  status: PLAN
+  script: ""
+ERYE206-039:
+  status: PLAN
+  script: ""
+ERYE206-040:
+  status: PLAN
+  script: ""
+ERYE206-041:
+  status: PLAN
+  script: ""
+ERYE206-042:
+  status: PLAN
+  script: ""
+ERYE206-043:
+  status: PLAN
+  script: ""
+ERYE206-044:
+  status: PLAN
+  script: ""
+ERYE206-045:
+  status: PLAN
+  script: ""
+ERYE206-046:
+  status: PLAN
+  script: ""
+ERYE206-047:
+  status: PLAN
+  script: ""
+ERYE206-048:
+  status: PLAN
+  script: ""
+ERYE206-049:
+  status: PLAN
+  script: ""
+ERYE206-050:
+  status: PLAN
+  script: ""
+ERYE206-051:
+  status: PLAN
+  script: ""
+ERYE206-052:
+  status: PLAN
+  script: ""
+ERYE206-053:
+  status: PLAN
+  script: ""
+ERYE206-054:
+  status: PLAN
+  script: ""
+ERYE206-055:
+  status: PLAN
+  script: ""
+ERYE206-056:
+  status: PLAN
+  script: ""
+ERYE206-057:
+  status: PLAN
+  script: ""
+ERYE206-058:
+  status: PLAN
+  script: ""
+ERYE206-059:
+  status: PLAN
+  script: ""
+ERYE206-060:
+  status: PLAN
+  script: ""
+ERYE206-061:
+  status: PLAN
+  script: ""
+ERYE206-062:
+  status: PLAN
+  script: ""
+ERYE206-063:
+  status: PLAN
+  script: ""
+ERYE206-064:
+  status: PLAN
+  script: ""
+ERYE206-065:
+  status: PLAN
+  script: ""
+ERYE206-066:
+  status: PLAN
+  script: ""
+ERYE206-067:
+  status: PLAN
+  script: ""
+ERYE210-001:
+  status: PLAN
+  script: ""
+ERYE210-002:
+  status: PLAN
+  script: ""
+ERYE210-003:
+  status: PLAN
+  script: ""
+ERYE210-004:
+  status: PLAN
+  script: ""
+ERYE210-005:
+  status: PLAN
+  script: ""
+ERYE210-006:
+  status: PLAN
+  script: ""
+ERYE210-007:
+  status: PLAN
+  script: ""
+ERYE210-008:
+  status: PLAN
+  script: ""
+ERYE210-009:
+  status: PLAN
+  script: ""
+ERYE210-010:
+  status: PLAN
+  script: ""
+ERYE210-011:
+  status: PLAN
+  script: ""
+ERYE210-012:
+  status: PLAN
+  script: ""
+ERYE210-013:
+  status: PLAN
+  script: ""
+ERYE210-014:
+  status: PLAN
+  script: ""
+ERYE210-015:
+  status: PLAN
+  script: ""
+ERYE210-016:
+  status: PLAN
+  script: ""
+ERYE210-017:
+  status: PLAN
+  script: ""
+ERYE210-018:
+  status: PLAN
+  script: ""
+ERYE210-019:
+  status: PLAN
+  script: ""
+ERYE210-020:
+  status: PLAN
+  script: ""
+ERYE210-021:
+  status: PLAN
+  script: ""
+ERYE210-022:
+  status: PLAN
+  script: ""
+ERYE210-023:
+  status: PLAN
+  script: ""
+ERYE210-024:
+  status: PLAN
+  script: ""
+ERYE210-025:
+  status: PLAN
+  script: ""
+ERYE210-026:
+  status: PLAN
+  script: ""
+ERYE210-027:
+  status: PLAN
+  script: ""
+ERYE210-028:
+  status: PLAN
+  script: ""
+ERYE210-029:
+  status: PLAN
+  script: ""
+ERYE210-030:
+  status: PLAN
+  script: ""
+ERYE210-031:
+  status: PLAN
+  script: ""
+ERYE210-032:
+  status: PLAN
+  script: ""
+ERYE210-033:
+  status: PLAN
+  script: ""
+ERYE210-034:
+  status: PLAN
+  script: ""
+ERYE210-035:
+  status: PLAN
+  script: ""
+ERYE210-036:
+  status: PLAN
+  script: ""
+ERYE210-037:
+  status: PLAN
+  script: ""
+ERYE210-038:
+  status: PLAN
+  script: ""
+ERYE210-039:
+  status: PLAN
+  script: ""
+ERYE210-040:
+  status: PLAN
+  script: ""
+ERYE210-041:
+  status: PLAN
+  script: ""
+ERYE210-042:
+  status: PLAN
+  script: ""
+ERYE210-043:
+  status: PLAN
+  script: ""
+ERYE210-044:
+  status: PLAN
+  script: ""
+ERYE210-045:
+  status: PLAN
+  script: ""
+ERYE210-046:
+  status: PLAN
+  script: ""
+ERYE210-047:
+  status: PLAN
+  script: ""
+ERYE210-048:
+  status: PLAN
+  script: ""
+ERYE210-049:
+  status: PLAN
+  script: ""
+ERYE210-050:
+  status: PLAN
+  script: ""
+ERYE210-051:
+  status: PLAN
+  script: ""
+ERYE210-052:
+  status: PLAN
+  script: ""
+ERYE210-053:
+  status: PLAN
+  script: ""
+ERYE210-054:
+  status: PLAN
+  script: ""
+ERYE237-001:
+  status: PLAN
+  script: ""
+ERYE237-002:
+  status: PLAN
+  script: ""
+ERYE237-003:
+  status: PLAN
+  script: ""
+ERYE237-004:
+  status: PLAN
+  script: ""
+ERYE237-005:
+  status: PLAN
+  script: ""
+ERYE237-006:
+  status: PLAN
+  script: ""
+ERYE237-007:
+  status: PLAN
+  script: ""
+ERYE237-008:
+  status: PLAN
+  script: ""
+ERYE237-009:
+  status: PLAN
+  script: ""
+ERYE237-010:
+  status: PLAN
+  script: ""
+ERYE237-011:
+  status: PLAN
+  script: ""
+ERYE237-012:
+  status: PLAN
+  script: ""
+ERYE237-013:
+  status: PLAN
+  script: ""
+ERYE237-014:
+  status: PLAN
+  script: ""
+ERYE237-015:
+  status: PLAN
+  script: ""
+ERYE237-016:
+  status: PLAN
+  script: ""
+ERYE237-017:
+  status: PLAN
+  script: ""
+ERYE237-018:
+  status: PLAN
+  script: ""
+ERYE237-019:
+  status: PLAN
+  script: ""
+ERYE237-020:
+  status: PLAN
+  script: ""
+ERYE237-021:
+  status: PLAN
+  script: ""
+ERYE237-022:
+  status: PLAN
+  script: ""
+ERYE237-023:
+  status: PLAN
+  script: ""
+ERYE237-024:
+  status: PLAN
+  script: ""
+ERYE237-025:
+  status: PLAN
+  script: ""
+ERYE237-026:
+  status: PLAN
+  script: ""
+ERYE237-027:
+  status: PLAN
+  script: ""
+ERYE237-028:
+  status: PLAN
+  script: ""
+ERYE237-029:
+  status: PLAN
+  script: ""
+ERYE237-030:
+  status: PLAN
+  script: ""
+ERYE237-031:
+  status: PLAN
+  script: ""
+ERYE237-032:
+  status: PLAN
+  script: ""
+ERYE237-033:
+  status: PLAN
+  script: ""
+ERYE237-034:
+  status: PLAN
+  script: ""
+ERYE237-035:
+  status: PLAN
+  script: ""
+ERYE237-036:
+  status: PLAN
+  script: ""
+ERYE237-037:
+  status: PLAN
+  script: ""
+ERYE237-038:
+  status: PLAN
+  script: ""
+ERYE237-039:
+  status: PLAN
+  script: ""
+ERYE237-040:
+  status: PLAN
+  script: ""
+ERYE237-041:
+  status: PLAN
+  script: ""
+ERYE237-042:
+  status: PLAN
+  script: ""
+ERYE237-043:
+  status: PLAN
+  script: ""
+ERYE237-044:
+  status: PLAN
+  script: ""
+ERYE237-045:
+  status: PLAN
+  script: ""
+ERYE237-046:
+  status: PLAN
+  script: ""
+ERYE237-047:
+  status: PLAN
+  script: ""
+ERYE237-048:
+  status: PLAN
+  script: ""
+ERYE237-049:
+  status: PLAN
+  script: ""
+ERYE237-050:
+  status: PLAN
+  script: ""
+ERYE237-051:
+  status: PLAN
+  script: ""
+ERYE237-052:
+  status: PLAN
+  script: ""
+ERYE237-053:
+  status: PLAN
+  script: ""
+ERYE237-054:
+  status: PLAN
+  script: ""
+ERYE237-055:
+  status: PLAN
+  script: ""
+ERYE237-056:
+  status: PLAN
+  script: ""
+ERYE237-057:
+  status: PLAN
+  script: ""
+ERYE237-058:
+  status: PLAN
+  script: ""
+ERYE237-059:
+  status: PLAN
+  script: ""
+ERYE237-060:
+  status: PLAN
+  script: ""
+ERYE237-061:
+  status: PLAN
+  script: ""
+ERYE237-062:
+  status: PLAN
+  script: ""
+ERYE237-063:
+  status: PLAN
+  script: ""
+ERYE237-064:
+  status: PLAN
+  script: ""
+ERYE237-065:
+  status: PLAN
+  script: ""
+ERYE237-066:
+  status: PLAN
+  script: ""
+ERYE237-067:
+  status: PLAN
+  script: ""
+ERYE237-068:
+  status: PLAN
+  script: ""
+ERYE237-069:
+  status: PLAN
+  script: ""
+ERYE237-070:
+  status: PLAN
+  script: ""
+ERYE237-071:
+  status: PLAN
+  script: ""
+ERYE237-072:
+  status: PLAN
+  script: ""
+ERYE237-073:
+  status: PLAN
+  script: ""
+ERYE237-074:
+  status: PLAN
+  script: ""
+ERYE237-075:
+  status: PLAN
+  script: ""
+ERYE237-076:
+  status: PLAN
+  script: ""
+ERYE237-077:
+  status: PLAN
+  script: ""
+ERYE237-078:
+  status: PLAN
+  script: ""
+ERYE237-079:
+  status: PLAN
+  script: ""
+ERYE237-080:
+  status: PLAN
+  script: ""
+ERYE237-081:
+  status: PLAN
+  script: ""
+ERYE237-082:
+  status: PLAN
+  script: ""
+ERYE237-083:
+  status: PLAN
+  script: ""
+ERYE237-084:
+  status: PLAN
+  script: ""
+ERYE237-085:
+  status: PLAN
+  script: ""
+ERYE237-086:
+  status: PLAN
+  script: ""
+ERYE237-087:
+  status: PLAN
+  script: ""
+ERYE237-088:
+  status: PLAN
+  script: ""
+ERYE237-089:
+  status: PLAN
+  script: ""
+ERYE237-090:
+  status: PLAN
+  script: ""
+ERYE237-091:
+  status: PLAN
+  script: ""
+ERYE237-092:
+  status: PLAN
+  script: ""
+ERYE237-093:
+  status: PLAN
+  script: ""
+ERYE237-094:
+  status: PLAN
+  script: ""
+ERYE237-095:
+  status: PLAN
+  script: ""
+ERYE237-096:
+  status: PLAN
+  script: ""
+ERYE237-097:
+  status: PLAN
+  script: ""
+ERYE237-098:
+  status: PLAN
+  script: ""
+ERYE237-099:
+  status: PLAN
+  script: ""
+ERYE237-100:
+  status: PLAN
+  script: ""
+ERYE237-101:
+  status: PLAN
+  script: ""
+ERYE237-102:
+  status: PLAN
+  script: ""
+ERYE237-103:
+  status: PLAN
+  script: ""
+ERYE237-104:
+  status: PLAN
+  script: ""
+ERYE237-105:
+  status: PLAN
+  script: ""
+ERYE237-106:
+  status: PLAN
+  script: ""
+ERYE237-107:
+  status: PLAN
+  script: ""
+ERYE237-108:
+  status: PLAN
+  script: ""
+ERYE237-109:
+  status: PLAN
+  script: ""
+ERYE237-110:
+  status: PLAN
+  script: ""
+ERYE237-111:
+  status: PLAN
+  script: ""
+ERYE237-112:
+  status: PLAN
+  script: ""
+ERYE237-113:
+  status: PLAN
+  script: ""
+ERYE237-114:
+  status: PLAN
+  script: ""
+ERYE237-115:
+  status: PLAN
+  script: ""
+ERYE237-116:
+  status: PLAN
+  script: ""
+ERYE237-117:
+  status: PLAN
+  script: ""
+ERYE237-118:
+  status: PLAN
+  script: ""
+ERYE237-119:
+  status: PLAN
+  script: ""
+ERYE237-120:
+  status: PLAN
+  script: ""
+ERYE237-121:
+  status: PLAN
+  script: ""
+ERYE237-122:
+  status: PLAN
+  script: ""
+ERYE237-123:
+  status: PLAN
+  script: ""
+ERYE237-124:
+  status: PLAN
+  script: ""
+ERYE237-125:
+  status: PLAN
+  script: ""
+ERYE237-126:
+  status: PLAN
+  script: ""
+ERYE237-127:
+  status: PLAN
+  script: ""
+ERYE237-128:
+  status: PLAN
+  script: ""
+ERYE237-129:
+  status: PLAN
+  script: ""
+ERYE237-130:
+  status: PLAN
+  script: ""
+ERYE237-131:
+  status: PLAN
+  script: ""
+ERYE237-132:
+  status: PLAN
+  script: ""
+ERYE237-133:
+  status: PLAN
+  script: ""
+ERYE237-134:
+  status: PLAN
+  script: ""
+ERYE237-135:
+  status: PLAN
+  script: ""
+ERYE237-136:
+  status: PLAN
+  script: ""
+ERYE237-137:
+  status: PLAN
+  script: ""
+ERYE237-138:
+  status: PLAN
+  script: ""
+ERYE237-139:
+  status: PLAN
+  script: ""
+ERYE237-140:
+  status: PLAN
+  script: ""
+ERYE237-141:
+  status: PLAN
+  script: ""
+ERYE237-142:
+  status: PLAN
+  script: ""
+ERYE237-143:
+  status: PLAN
+  script: ""
+ERYE237-144:
   status: PLAN
   script: ""

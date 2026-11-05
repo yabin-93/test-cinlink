@@ -1,4 +1,6 @@
-﻿# 在 DeepSeek 中使用本测试框架
+> 历史 DeepSeek 使用说明。2026-11-03 已迁入 Codex；当前根目录为 `C:\Users\chen\Documents\ChatGPT\cinlink`。后续请先读 [Codex 上下文](codex-context.md)，本文中的源工程路径仅作历史参考。
+
+# 在 DeepSeek 中使用本测试框架
 
 本文面向在 DeepSeek Harness（Web GUI / CLI）里调用本工程的 Agent 或人。工程根目录固定为 `E:\proj\deepseek-cinlink`，所有命令都在该目录执行。
 
@@ -7,7 +9,7 @@
 ```powershell
 cd E:\proj\deepseek-cinlink
 npm ci          # 首次或依赖变更后
-npm run verify  # 类型检查 + 116 条离线用例
+npm run verify  # 类型检查 + 118 条离线用例
 ```
 
 `verify` 是给 Agent 用的单一入口：不联网、不写 `reports/` 之外的文件、不产生业务副作用，可反复执行。
@@ -75,6 +77,8 @@ npm run test:watermark
 ## 4. 会话失效怎么办
 
 `npm run auth` 会启动**有头** Chrome 并停在登录页，需要人工完成邮箱验证码登录；登录状态保存到 `local.env` 指定的 `CINLINK_TEST_STORAGE_STATE`。这一步不能由 Agent 无人值守完成。
+
+默认登录等待5分钟。人工恢复时可设 `$env:CINLINK_AUTH_WAIT_MS='0'` 后执行 `npm run auth`，窗口持续保留到登录成功或手动关闭；只打开一个窗口，完成后用 `Remove-Item Env:CINLINK_AUTH_WAIT_MS` 恢复默认等待。
 
 判定会话失效的可靠信号（不要误判成产品缺陷）：
 
