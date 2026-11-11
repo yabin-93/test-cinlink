@@ -1,0 +1,3947 @@
+{
+  "date": "2026-11-06",
+  "environment": "https://app.cinlink.ai",
+  "entry": "direct editor UI",
+  "projectId": "b34e8f29-25ac-4dc0-968f-76aabdd20e13",
+  "conversationId": "8bd67283-c5ae-49d8-9789-78413b3bfa8c",
+  "baselineRevision": 22,
+  "finalRevision": 88,
+  "contentRestored": true,
+  "submittedAgentTurns": 0,
+  "browserKeptOpen": true,
+  "counts": {
+    "Passed": 38,
+    "Failed": 1,
+    "Blocked": 1,
+    "NotRun": 0
+  },
+  "cases": [
+    {
+      "id": "UI-12",
+      "evidenceId": "UI-12",
+      "label": "字幕结束时间输入框：3.20改为2.70",
+      "status": "Failed",
+      "automationStatus": "Failed",
+      "review": "实际时间修改请求失败，页面报Manual layout does not cover parent，保存内容未变；不因原断言字段不适用而掩盖真实失败。",
+      "beforeRevision": 22,
+      "afterRevision": 22,
+      "changed": false,
+      "reason": "AssertionError [ERR_ASSERTION]: 页面操作后的实际保存结果不符合本项预期",
+      "screenshot": "UI-12-failed.png",
+      "observation": {
+        "subtitleDiff": [],
+        "mediaTracks": [
+          {
+            "type": "video",
+            "trackId": "edit_e0429b05d7c943c6244f2dd637d15918",
+            "muted": true,
+            "visible": true,
+            "clips": [
+              {
+                "clipId": "edit_d10594184fa1dd722cde996ce6e0c7ca",
+                "fileId": "file_cloud_77n2ver2wfe2enu7bddp42egdx",
+                "in": 0,
+                "out": 30.630599999999998,
+                "start": 0,
+                "rate": 1,
+                "volume": 1
+              }
+            ]
+          },
+          {
+            "type": "audio",
+            "role": "source",
+            "trackId": "edit_d0860d76beaf26cbadd9c9ef92d6406a",
+            "muted": true,
+            "clips": [
+              {
+                "clipId": "edit_d2c907cb3b4c2d40e4e1fdf6ed851100",
+                "fileId": "file_cloud_77n2ver2wfe2enu7bddp42egdx",
+                "in": 0,
+                "out": 30.630599999999998,
+                "start": 0,
+                "rate": 1,
+                "volume": 1
+              }
+            ]
+          },
+          {
+            "type": "audio",
+            "role": "narration",
+            "trackId": "artifact:audio_files:file_cloud_4mfgdwukxlkb7rfbc4ryfd3hjr",
+            "muted": false,
+            "clips": [
+              {
+                "clipId": "artifact:audio_files:file_cloud_4mfgdwukxlkb7rfbc4ryfd3hjr:clip",
+                "fileId": "file_cloud_4mfgdwukxlkb7rfbc4ryfd3hjr",
+                "in": 0,
+                "out": 28.975192743764172,
+                "start": 0,
+                "rate": 1,
+                "volume": 1
+              }
+            ]
+          }
+        ],
+        "watermarks": {
+          "text": null,
+          "image": null,
+          "timing": {
+            "mode": "whole_project",
+            "end_sec": null,
+            "start_sec": 0
+          }
+        }
+      }
+    },
+    {
+      "id": "UI-13",
+      "evidenceId": "UI-13",
+      "label": "字幕结束早于开始：阻止保存",
+      "status": "Passed",
+      "automationStatus": "Failed",
+      "review": "验收复核：无效时间保持输入框并显示错误是正确行为；原自动断言误要求输入框关闭。原始Failed、截图及断言原因保留，不重写原记录。请求计数包含后台exchange，不能直接当成保存次数。",
+      "beforeRevision": 22,
+      "afterRevision": 22,
+      "changed": false,
+      "reason": "AssertionError [ERR_ASSERTION]: 页面操作后的实际保存结果不符合本项预期",
+      "screenshot": "UI-13-failed.png",
+      "observation": {
+        "subtitleDiff": [],
+        "mediaTracks": [
+          {
+            "type": "video",
+            "trackId": "edit_e0429b05d7c943c6244f2dd637d15918",
+            "muted": true,
+            "visible": true,
+            "clips": [
+              {
+                "clipId": "edit_d10594184fa1dd722cde996ce6e0c7ca",
+                "fileId": "file_cloud_77n2ver2wfe2enu7bddp42egdx",
+                "in": 0,
+                "out": 30.630599999999998,
+                "start": 0,
+                "rate": 1,
+                "volume": 1
+              }
+            ]
+          },
+          {
+            "type": "audio",
+            "role": "source",
+            "trackId": "edit_d0860d76beaf26cbadd9c9ef92d6406a",
+            "muted": true,
+            "clips": [
+              {
+                "clipId": "edit_d2c907cb3b4c2d40e4e1fdf6ed851100",
+                "fileId": "file_cloud_77n2ver2wfe2enu7bddp42egdx",
+                "in": 0,
+                "out": 30.630599999999998,
+                "start": 0,
+                "rate": 1,
+                "volume": 1
+              }
+            ]
+          },
+          {
+            "type": "audio",
+            "role": "narration",
+            "trackId": "artifact:audio_files:file_cloud_4mfgdwukxlkb7rfbc4ryfd3hjr",
+            "muted": false,
+            "clips": [
+              {
+                "clipId": "artifact:audio_files:file_cloud_4mfgdwukxlkb7rfbc4ryfd3hjr:clip",
+                "fileId": "file_cloud_4mfgdwukxlkb7rfbc4ryfd3hjr",
+                "in": 0,
+                "out": 28.975192743764172,
+                "start": 0,
+                "rate": 1,
+                "volume": 1
+              }
+            ]
+          }
+        ],
+        "watermarks": {
+          "text": null,
+          "image": null,
+          "timing": {
+            "mode": "whole_project",
+            "end_sec": null,
+            "start_sec": 0
+          }
+        }
+      }
+    },
+    {
+      "id": "UI-14",
+      "evidenceId": "UI-14",
+      "label": "字幕字号90改为72",
+      "status": "Passed",
+      "automationStatus": "Passed",
+      "review": null,
+      "beforeRevision": 22,
+      "afterRevision": 23,
+      "changed": true,
+      "reason": null,
+      "screenshot": "UI-14-passed.png",
+      "observation": {
+        "styles": {
+          "color": "#FFFFFF",
+          "effect": "regular",
+          "outline": {
+            "color": "#000000",
+            "width": 7.5,
+            "enabled": true
+          },
+          "case_mode": "original",
+          "font_name": "Liberation Sans",
+          "font_size": 72,
+          "placement": {
+            "mode": "preset",
+            "preset": "bottom",
+            "position": null,
+            "margin_px": 90
+          },
+          "background": {
+            "color": "#000000",
+            "enabled": true,
+            "opacity": 0
+          },
+          "font_weight": 400,
+          "bold_override": false,
+          "highlight_color": "#FFFFFF",
+          "highlight_typography": {
+            "bold": false,
+            "italic": false,
+            "font_name": null,
+            "font_size": null,
+            "underline": false
+          }
+        },
+        "subtitleDiff": [],
+        "mediaTracks": [
+          {
+            "type": "video",
+            "trackId": "edit_e0429b05d7c943c6244f2dd637d15918",
+            "muted": true,
+            "visible": true,
+            "clips": [
+              {
+                "clipId": "edit_d10594184fa1dd722cde996ce6e0c7ca",
+                "fileId": "file_cloud_77n2ver2wfe2enu7bddp42egdx",
+                "in": 0,
+                "out": 30.630599999999998,
+                "start": 0,
+                "rate": 1,
+                "volume": 1
+              }
+            ]
+          },
+          {
+            "type": "audio",
+            "role": "source",
+            "trackId": "edit_d0860d76beaf26cbadd9c9ef92d6406a",
+            "muted": true,
+            "clips": [
+              {
+                "clipId": "edit_d2c907cb3b4c2d40e4e1fdf6ed851100",
+                "fileId": "file_cloud_77n2ver2wfe2enu7bddp42egdx",
+                "in": 0,
+                "out": 30.630599999999998,
+                "start": 0,
+                "rate": 1,
+                "volume": 1
+              }
+            ]
+          },
+          {
+            "type": "audio",
+            "role": "narration",
+            "trackId": "artifact:audio_files:file_cloud_4mfgdwukxlkb7rfbc4ryfd3hjr",
+            "muted": false,
+            "clips": [
+              {
+                "clipId": "artifact:audio_files:file_cloud_4mfgdwukxlkb7rfbc4ryfd3hjr:clip",
+                "fileId": "file_cloud_4mfgdwukxlkb7rfbc4ryfd3hjr",
+                "in": 0,
+                "out": 28.975192743764172,
+                "start": 0,
+                "rate": 1,
+                "volume": 1
+              }
+            ]
+          }
+        ],
+        "watermarks": {
+          "text": null,
+          "image": null,
+          "timing": {
+            "mode": "whole_project",
+            "end_sec": null,
+            "start_sec": 0
+          }
+        }
+      }
+    },
+    {
+      "id": "UI-15",
+      "evidenceId": "UI-15-direct",
+      "label": "字幕粗体开关",
+      "status": "Passed",
+      "automationStatus": "Passed",
+      "review": null,
+      "beforeRevision": 24,
+      "afterRevision": 25,
+      "changed": true,
+      "reason": null,
+      "screenshot": "UI-15-direct-passed.png",
+      "observation": {
+        "styles": {
+          "color": "#FFFFFF",
+          "effect": "regular",
+          "outline": {
+            "color": "#000000",
+            "width": 7.5,
+            "enabled": true
+          },
+          "case_mode": "original",
+          "font_name": "Liberation Sans",
+          "font_size": 90,
+          "placement": {
+            "mode": "preset",
+            "preset": "bottom",
+            "position": null,
+            "margin_px": 90
+          },
+          "background": {
+            "color": "#000000",
+            "enabled": true,
+            "opacity": 0
+          },
+          "font_weight": 400,
+          "bold_override": true,
+          "highlight_color": "#FFFFFF",
+          "highlight_typography": {
+            "bold": false,
+            "italic": false,
+            "font_name": null,
+            "font_size": null,
+            "underline": false
+          }
+        },
+        "subtitleDiff": [],
+        "mediaTracks": [
+          {
+            "type": "video",
+            "trackId": "edit_e0429b05d7c943c6244f2dd637d15918",
+            "muted": true,
+            "visible": true,
+            "clips": [
+              {
+                "clipId": "edit_d10594184fa1dd722cde996ce6e0c7ca",
+                "fileId": "file_cloud_77n2ver2wfe2enu7bddp42egdx",
+                "in": 0,
+                "out": 30.630599999999998,
+                "start": 0,
+                "rate": 1,
+                "volume": 1
+              }
+            ]
+          },
+          {
+            "type": "audio",
+            "role": "source",
+            "trackId": "edit_d0860d76beaf26cbadd9c9ef92d6406a",
+            "muted": true,
+            "clips": [
+              {
+                "clipId": "edit_d2c907cb3b4c2d40e4e1fdf6ed851100",
+                "fileId": "file_cloud_77n2ver2wfe2enu7bddp42egdx",
+                "in": 0,
+                "out": 30.630599999999998,
+                "start": 0,
+                "rate": 1,
+                "volume": 1
+              }
+            ]
+          },
+          {
+            "type": "audio",
+            "role": "narration",
+            "trackId": "artifact:audio_files:file_cloud_4mfgdwukxlkb7rfbc4ryfd3hjr",
+            "muted": false,
+            "clips": [
+              {
+                "clipId": "artifact:audio_files:file_cloud_4mfgdwukxlkb7rfbc4ryfd3hjr:clip",
+                "fileId": "file_cloud_4mfgdwukxlkb7rfbc4ryfd3hjr",
+                "in": 0,
+                "out": 28.975192743764172,
+                "start": 0,
+                "rate": 1,
+                "volume": 1
+              }
+            ]
+          }
+        ],
+        "watermarks": {
+          "text": null,
+          "image": null,
+          "timing": {
+            "mode": "whole_project",
+            "end_sec": null,
+            "start_sec": 0
+          }
+        }
+      }
+    },
+    {
+      "id": "UI-16",
+      "evidenceId": "UI-16-direct",
+      "label": "字幕斜体开关",
+      "status": "Passed",
+      "automationStatus": "Passed",
+      "review": null,
+      "beforeRevision": 26,
+      "afterRevision": 27,
+      "changed": true,
+      "reason": null,
+      "screenshot": "UI-16-direct-passed.png",
+      "observation": {
+        "styles": {
+          "color": "#FFFFFF",
+          "effect": "regular",
+          "italic": true,
+          "outline": {
+            "color": "#000000",
+            "width": 7.5,
+            "enabled": true
+          },
+          "case_mode": "original",
+          "font_name": "Liberation Sans",
+          "font_size": 90,
+          "placement": {
+            "mode": "preset",
+            "preset": "bottom",
+            "position": null,
+            "margin_px": 90
+          },
+          "background": {
+            "color": "#000000",
+            "enabled": true,
+            "opacity": 0
+          },
+          "font_weight": 400,
+          "bold_override": false,
+          "highlight_color": "#FFFFFF",
+          "highlight_typography": {
+            "bold": false,
+            "italic": false,
+            "font_name": null,
+            "font_size": null,
+            "underline": false
+          }
+        },
+        "subtitleDiff": [],
+        "mediaTracks": [
+          {
+            "type": "video",
+            "trackId": "edit_e0429b05d7c943c6244f2dd637d15918",
+            "muted": true,
+            "visible": true,
+            "clips": [
+              {
+                "clipId": "edit_d10594184fa1dd722cde996ce6e0c7ca",
+                "fileId": "file_cloud_77n2ver2wfe2enu7bddp42egdx",
+                "in": 0,
+                "out": 30.630599999999998,
+                "start": 0,
+                "rate": 1,
+                "volume": 1
+              }
+            ]
+          },
+          {
+            "type": "audio",
+            "role": "source",
+            "trackId": "edit_d0860d76beaf26cbadd9c9ef92d6406a",
+            "muted": true,
+            "clips": [
+              {
+                "clipId": "edit_d2c907cb3b4c2d40e4e1fdf6ed851100",
+                "fileId": "file_cloud_77n2ver2wfe2enu7bddp42egdx",
+                "in": 0,
+                "out": 30.630599999999998,
+                "start": 0,
+                "rate": 1,
+                "volume": 1
+              }
+            ]
+          },
+          {
+            "type": "audio",
+            "role": "narration",
+            "trackId": "artifact:audio_files:file_cloud_4mfgdwukxlkb7rfbc4ryfd3hjr",
+            "muted": false,
+            "clips": [
+              {
+                "clipId": "artifact:audio_files:file_cloud_4mfgdwukxlkb7rfbc4ryfd3hjr:clip",
+                "fileId": "file_cloud_4mfgdwukxlkb7rfbc4ryfd3hjr",
+                "in": 0,
+                "out": 28.975192743764172,
+                "start": 0,
+                "rate": 1,
+                "volume": 1
+              }
+            ]
+          }
+        ],
+        "watermarks": {
+          "text": null,
+          "image": null,
+          "timing": {
+            "mode": "whole_project",
+            "end_sec": null,
+            "start_sec": 0
+          }
+        }
+      }
+    },
+    {
+      "id": "UI-17",
+      "evidenceId": "UI-17",
+      "label": "字幕下划线开关",
+      "status": "Passed",
+      "automationStatus": "Passed",
+      "review": null,
+      "beforeRevision": 28,
+      "afterRevision": 29,
+      "changed": true,
+      "reason": null,
+      "screenshot": "UI-17-passed.png",
+      "observation": {
+        "styles": {
+          "color": "#FFFFFF",
+          "effect": "regular",
+          "outline": {
+            "color": "#000000",
+            "width": 7.5,
+            "enabled": true
+          },
+          "case_mode": "original",
+          "font_name": "Liberation Sans",
+          "font_size": 90,
+          "placement": {
+            "mode": "preset",
+            "preset": "bottom",
+            "position": null,
+            "margin_px": 90
+          },
+          "underline": true,
+          "background": {
+            "color": "#000000",
+            "enabled": true,
+            "opacity": 0
+          },
+          "font_weight": 400,
+          "bold_override": false,
+          "highlight_color": "#FFFFFF",
+          "highlight_typography": {
+            "bold": false,
+            "italic": false,
+            "font_name": null,
+            "font_size": null,
+            "underline": false
+          }
+        },
+        "subtitleDiff": [],
+        "mediaTracks": [
+          {
+            "type": "video",
+            "trackId": "edit_e0429b05d7c943c6244f2dd637d15918",
+            "muted": true,
+            "visible": true,
+            "clips": [
+              {
+                "clipId": "edit_d10594184fa1dd722cde996ce6e0c7ca",
+                "fileId": "file_cloud_77n2ver2wfe2enu7bddp42egdx",
+                "in": 0,
+                "out": 30.630599999999998,
+                "start": 0,
+                "rate": 1,
+                "volume": 1
+              }
+            ]
+          },
+          {
+            "type": "audio",
+            "role": "source",
+            "trackId": "edit_d0860d76beaf26cbadd9c9ef92d6406a",
+            "muted": true,
+            "clips": [
+              {
+                "clipId": "edit_d2c907cb3b4c2d40e4e1fdf6ed851100",
+                "fileId": "file_cloud_77n2ver2wfe2enu7bddp42egdx",
+                "in": 0,
+                "out": 30.630599999999998,
+                "start": 0,
+                "rate": 1,
+                "volume": 1
+              }
+            ]
+          },
+          {
+            "type": "audio",
+            "role": "narration",
+            "trackId": "artifact:audio_files:file_cloud_4mfgdwukxlkb7rfbc4ryfd3hjr",
+            "muted": false,
+            "clips": [
+              {
+                "clipId": "artifact:audio_files:file_cloud_4mfgdwukxlkb7rfbc4ryfd3hjr:clip",
+                "fileId": "file_cloud_4mfgdwukxlkb7rfbc4ryfd3hjr",
+                "in": 0,
+                "out": 28.975192743764172,
+                "start": 0,
+                "rate": 1,
+                "volume": 1
+              }
+            ]
+          }
+        ],
+        "watermarks": {
+          "text": null,
+          "image": null,
+          "timing": {
+            "mode": "whole_project",
+            "end_sec": null,
+            "start_sec": 0
+          }
+        }
+      }
+    },
+    {
+      "id": "UI-18",
+      "evidenceId": "UI-18",
+      "label": "字幕字母转大写",
+      "status": "Passed",
+      "automationStatus": "Passed",
+      "review": null,
+      "beforeRevision": 30,
+      "afterRevision": 31,
+      "changed": true,
+      "reason": null,
+      "screenshot": "UI-18-passed.png",
+      "observation": {
+        "styles": {
+          "color": "#FFFFFF",
+          "effect": "regular",
+          "outline": {
+            "color": "#000000",
+            "width": 7.5,
+            "enabled": true
+          },
+          "case_mode": "upper",
+          "font_name": "Liberation Sans",
+          "font_size": 90,
+          "placement": {
+            "mode": "preset",
+            "preset": "bottom",
+            "position": null,
+            "margin_px": 90
+          },
+          "background": {
+            "color": "#000000",
+            "enabled": true,
+            "opacity": 0
+          },
+          "font_weight": 400,
+          "bold_override": false,
+          "highlight_color": "#FFFFFF",
+          "highlight_typography": {
+            "bold": false,
+            "italic": false,
+            "font_name": null,
+            "font_size": null,
+            "underline": false
+          }
+        },
+        "subtitleDiff": [],
+        "mediaTracks": [
+          {
+            "type": "video",
+            "trackId": "edit_e0429b05d7c943c6244f2dd637d15918",
+            "muted": true,
+            "visible": true,
+            "clips": [
+              {
+                "clipId": "edit_d10594184fa1dd722cde996ce6e0c7ca",
+                "fileId": "file_cloud_77n2ver2wfe2enu7bddp42egdx",
+                "in": 0,
+                "out": 30.630599999999998,
+                "start": 0,
+                "rate": 1,
+                "volume": 1
+              }
+            ]
+          },
+          {
+            "type": "audio",
+            "role": "source",
+            "trackId": "edit_d0860d76beaf26cbadd9c9ef92d6406a",
+            "muted": true,
+            "clips": [
+              {
+                "clipId": "edit_d2c907cb3b4c2d40e4e1fdf6ed851100",
+                "fileId": "file_cloud_77n2ver2wfe2enu7bddp42egdx",
+                "in": 0,
+                "out": 30.630599999999998,
+                "start": 0,
+                "rate": 1,
+                "volume": 1
+              }
+            ]
+          },
+          {
+            "type": "audio",
+            "role": "narration",
+            "trackId": "artifact:audio_files:file_cloud_4mfgdwukxlkb7rfbc4ryfd3hjr",
+            "muted": false,
+            "clips": [
+              {
+                "clipId": "artifact:audio_files:file_cloud_4mfgdwukxlkb7rfbc4ryfd3hjr:clip",
+                "fileId": "file_cloud_4mfgdwukxlkb7rfbc4ryfd3hjr",
+                "in": 0,
+                "out": 28.975192743764172,
+                "start": 0,
+                "rate": 1,
+                "volume": 1
+              }
+            ]
+          }
+        ],
+        "watermarks": {
+          "text": null,
+          "image": null,
+          "timing": {
+            "mode": "whole_project",
+            "end_sec": null,
+            "start_sec": 0
+          }
+        }
+      }
+    },
+    {
+      "id": "UI-19",
+      "evidenceId": "UI-19",
+      "label": "字幕左对齐",
+      "status": "Passed",
+      "automationStatus": "Failed",
+      "review": "验收复核：真实保存字段alignment=left，原自动断言误写text_align。业务结果、刷新及完整撤销恢复通过，保留原始Failed记录。",
+      "beforeRevision": 32,
+      "afterRevision": 33,
+      "changed": true,
+      "reason": "AssertionError [ERR_ASSERTION]: 页面操作后的实际保存结果不符合本项预期",
+      "screenshot": "UI-19-failed.png",
+      "observation": {
+        "styles": {
+          "color": "#FFFFFF",
+          "effect": "regular",
+          "outline": {
+            "color": "#000000",
+            "width": 7.5,
+            "enabled": true
+          },
+          "alignment": "left",
+          "case_mode": "original",
+          "font_name": "Liberation Sans",
+          "font_size": 90,
+          "placement": {
+            "mode": "preset",
+            "preset": "bottom",
+            "position": null,
+            "margin_px": 90
+          },
+          "background": {
+            "color": "#000000",
+            "enabled": true,
+            "opacity": 0
+          },
+          "font_weight": 400,
+          "bold_override": false,
+          "highlight_color": "#FFFFFF",
+          "highlight_typography": {
+            "bold": false,
+            "italic": false,
+            "font_name": null,
+            "font_size": null,
+            "underline": false
+          }
+        },
+        "subtitleDiff": [],
+        "mediaTracks": [
+          {
+            "type": "video",
+            "trackId": "edit_e0429b05d7c943c6244f2dd637d15918",
+            "muted": true,
+            "visible": true,
+            "clips": [
+              {
+                "clipId": "edit_d10594184fa1dd722cde996ce6e0c7ca",
+                "fileId": "file_cloud_77n2ver2wfe2enu7bddp42egdx",
+                "in": 0,
+                "out": 30.630599999999998,
+                "start": 0,
+                "rate": 1,
+                "volume": 1
+              }
+            ]
+          },
+          {
+            "type": "audio",
+            "role": "source",
+            "trackId": "edit_d0860d76beaf26cbadd9c9ef92d6406a",
+            "muted": true,
+            "clips": [
+              {
+                "clipId": "edit_d2c907cb3b4c2d40e4e1fdf6ed851100",
+                "fileId": "file_cloud_77n2ver2wfe2enu7bddp42egdx",
+                "in": 0,
+                "out": 30.630599999999998,
+                "start": 0,
+                "rate": 1,
+                "volume": 1
+              }
+            ]
+          },
+          {
+            "type": "audio",
+            "role": "narration",
+            "trackId": "artifact:audio_files:file_cloud_4mfgdwukxlkb7rfbc4ryfd3hjr",
+            "muted": false,
+            "clips": [
+              {
+                "clipId": "artifact:audio_files:file_cloud_4mfgdwukxlkb7rfbc4ryfd3hjr:clip",
+                "fileId": "file_cloud_4mfgdwukxlkb7rfbc4ryfd3hjr",
+                "in": 0,
+                "out": 28.975192743764172,
+                "start": 0,
+                "rate": 1,
+                "volume": 1
+              }
+            ]
+          }
+        ],
+        "watermarks": {
+          "text": null,
+          "image": null,
+          "timing": {
+            "mode": "whole_project",
+            "end_sec": null,
+            "start_sec": 0
+          }
+        }
+      }
+    },
+    {
+      "id": "UI-20",
+      "evidenceId": "UI-20-direct",
+      "label": "字幕位置Y改为0.70",
+      "status": "Passed",
+      "automationStatus": "Passed",
+      "review": null,
+      "beforeRevision": 38,
+      "afterRevision": 39,
+      "changed": true,
+      "reason": null,
+      "screenshot": "UI-20-direct-passed.png",
+      "observation": {
+        "styles": {
+          "color": "#FFFFFF",
+          "effect": "regular",
+          "outline": {
+            "color": "#000000",
+            "width": 7.5,
+            "enabled": true
+          },
+          "case_mode": "original",
+          "font_name": "Liberation Sans",
+          "font_size": 90,
+          "placement": {
+            "mode": "manual",
+            "preset": "bottom",
+            "position": {
+              "x": 0.5,
+              "y": 0.7,
+              "anchor_x": 0.5,
+              "anchor_y": 0.5
+            },
+            "margin_px": 90
+          },
+          "background": {
+            "color": "#000000",
+            "enabled": true,
+            "opacity": 0
+          },
+          "font_weight": 400,
+          "bold_override": false,
+          "highlight_color": "#FFFFFF",
+          "highlight_typography": {
+            "bold": false,
+            "italic": false,
+            "font_name": null,
+            "font_size": null,
+            "underline": false
+          }
+        },
+        "subtitleDiff": [],
+        "mediaTracks": [
+          {
+            "type": "video",
+            "trackId": "edit_e0429b05d7c943c6244f2dd637d15918",
+            "muted": true,
+            "visible": true,
+            "clips": [
+              {
+                "clipId": "edit_d10594184fa1dd722cde996ce6e0c7ca",
+                "fileId": "file_cloud_77n2ver2wfe2enu7bddp42egdx",
+                "in": 0,
+                "out": 30.630599999999998,
+                "start": 0,
+                "rate": 1,
+                "volume": 1
+              }
+            ]
+          },
+          {
+            "type": "audio",
+            "role": "source",
+            "trackId": "edit_d0860d76beaf26cbadd9c9ef92d6406a",
+            "muted": true,
+            "clips": [
+              {
+                "clipId": "edit_d2c907cb3b4c2d40e4e1fdf6ed851100",
+                "fileId": "file_cloud_77n2ver2wfe2enu7bddp42egdx",
+                "in": 0,
+                "out": 30.630599999999998,
+                "start": 0,
+                "rate": 1,
+                "volume": 1
+              }
+            ]
+          },
+          {
+            "type": "audio",
+            "role": "narration",
+            "trackId": "artifact:audio_files:file_cloud_4mfgdwukxlkb7rfbc4ryfd3hjr",
+            "muted": false,
+            "clips": [
+              {
+                "clipId": "artifact:audio_files:file_cloud_4mfgdwukxlkb7rfbc4ryfd3hjr:clip",
+                "fileId": "file_cloud_4mfgdwukxlkb7rfbc4ryfd3hjr",
+                "in": 0,
+                "out": 28.975192743764172,
+                "start": 0,
+                "rate": 1,
+                "volume": 1
+              }
+            ]
+          }
+        ],
+        "watermarks": {
+          "text": null,
+          "image": null,
+          "timing": {
+            "mode": "whole_project",
+            "end_sec": null,
+            "start_sec": 0
+          }
+        }
+      }
+    },
+    {
+      "id": "UI-21",
+      "evidenceId": "UI-21",
+      "label": "关闭字幕描边",
+      "status": "Passed",
+      "automationStatus": "Passed",
+      "review": null,
+      "beforeRevision": 34,
+      "afterRevision": 35,
+      "changed": true,
+      "reason": null,
+      "screenshot": "UI-21-passed.png",
+      "observation": {
+        "styles": {
+          "color": "#FFFFFF",
+          "effect": "regular",
+          "outline": {
+            "color": "#000000",
+            "width": 7.5,
+            "enabled": false
+          },
+          "case_mode": "original",
+          "font_name": "Liberation Sans",
+          "font_size": 90,
+          "placement": {
+            "mode": "preset",
+            "preset": "bottom",
+            "position": null,
+            "margin_px": 90
+          },
+          "background": {
+            "color": "#000000",
+            "enabled": true,
+            "opacity": 0
+          },
+          "font_weight": 400,
+          "bold_override": false,
+          "highlight_color": "#FFFFFF",
+          "highlight_typography": {
+            "bold": false,
+            "italic": false,
+            "font_name": null,
+            "font_size": null,
+            "underline": false
+          }
+        },
+        "subtitleDiff": [],
+        "mediaTracks": [
+          {
+            "type": "video",
+            "trackId": "edit_e0429b05d7c943c6244f2dd637d15918",
+            "muted": true,
+            "visible": true,
+            "clips": [
+              {
+                "clipId": "edit_d10594184fa1dd722cde996ce6e0c7ca",
+                "fileId": "file_cloud_77n2ver2wfe2enu7bddp42egdx",
+                "in": 0,
+                "out": 30.630599999999998,
+                "start": 0,
+                "rate": 1,
+                "volume": 1
+              }
+            ]
+          },
+          {
+            "type": "audio",
+            "role": "source",
+            "trackId": "edit_d0860d76beaf26cbadd9c9ef92d6406a",
+            "muted": true,
+            "clips": [
+              {
+                "clipId": "edit_d2c907cb3b4c2d40e4e1fdf6ed851100",
+                "fileId": "file_cloud_77n2ver2wfe2enu7bddp42egdx",
+                "in": 0,
+                "out": 30.630599999999998,
+                "start": 0,
+                "rate": 1,
+                "volume": 1
+              }
+            ]
+          },
+          {
+            "type": "audio",
+            "role": "narration",
+            "trackId": "artifact:audio_files:file_cloud_4mfgdwukxlkb7rfbc4ryfd3hjr",
+            "muted": false,
+            "clips": [
+              {
+                "clipId": "artifact:audio_files:file_cloud_4mfgdwukxlkb7rfbc4ryfd3hjr:clip",
+                "fileId": "file_cloud_4mfgdwukxlkb7rfbc4ryfd3hjr",
+                "in": 0,
+                "out": 28.975192743764172,
+                "start": 0,
+                "rate": 1,
+                "volume": 1
+              }
+            ]
+          }
+        ],
+        "watermarks": {
+          "text": null,
+          "image": null,
+          "timing": {
+            "mode": "whole_project",
+            "end_sec": null,
+            "start_sec": 0
+          }
+        }
+      }
+    },
+    {
+      "id": "UI-22",
+      "evidenceId": "UI-22-direct",
+      "label": "字幕背景不透明度0.5",
+      "status": "Passed",
+      "automationStatus": "Passed",
+      "review": null,
+      "beforeRevision": 40,
+      "afterRevision": 41,
+      "changed": true,
+      "reason": null,
+      "screenshot": "UI-22-direct-passed.png",
+      "observation": {
+        "styles": {
+          "color": "#FFFFFF",
+          "effect": "regular",
+          "outline": {
+            "color": "#000000",
+            "width": 7.5,
+            "enabled": true
+          },
+          "case_mode": "original",
+          "font_name": "Liberation Sans",
+          "font_size": 90,
+          "placement": {
+            "mode": "preset",
+            "preset": "bottom",
+            "position": null,
+            "margin_px": 90
+          },
+          "background": {
+            "color": "#000000",
+            "enabled": true,
+            "opacity": 0.5
+          },
+          "font_weight": 400,
+          "bold_override": false,
+          "highlight_color": "#FFFFFF",
+          "highlight_typography": {
+            "bold": false,
+            "italic": false,
+            "font_name": null,
+            "font_size": null,
+            "underline": false
+          }
+        },
+        "subtitleDiff": [],
+        "mediaTracks": [
+          {
+            "type": "video",
+            "trackId": "edit_e0429b05d7c943c6244f2dd637d15918",
+            "muted": true,
+            "visible": true,
+            "clips": [
+              {
+                "clipId": "edit_d10594184fa1dd722cde996ce6e0c7ca",
+                "fileId": "file_cloud_77n2ver2wfe2enu7bddp42egdx",
+                "in": 0,
+                "out": 30.630599999999998,
+                "start": 0,
+                "rate": 1,
+                "volume": 1
+              }
+            ]
+          },
+          {
+            "type": "audio",
+            "role": "source",
+            "trackId": "edit_d0860d76beaf26cbadd9c9ef92d6406a",
+            "muted": true,
+            "clips": [
+              {
+                "clipId": "edit_d2c907cb3b4c2d40e4e1fdf6ed851100",
+                "fileId": "file_cloud_77n2ver2wfe2enu7bddp42egdx",
+                "in": 0,
+                "out": 30.630599999999998,
+                "start": 0,
+                "rate": 1,
+                "volume": 1
+              }
+            ]
+          },
+          {
+            "type": "audio",
+            "role": "narration",
+            "trackId": "artifact:audio_files:file_cloud_4mfgdwukxlkb7rfbc4ryfd3hjr",
+            "muted": false,
+            "clips": [
+              {
+                "clipId": "artifact:audio_files:file_cloud_4mfgdwukxlkb7rfbc4ryfd3hjr:clip",
+                "fileId": "file_cloud_4mfgdwukxlkb7rfbc4ryfd3hjr",
+                "in": 0,
+                "out": 28.975192743764172,
+                "start": 0,
+                "rate": 1,
+                "volume": 1
+              }
+            ]
+          }
+        ],
+        "watermarks": {
+          "text": null,
+          "image": null,
+          "timing": {
+            "mode": "whole_project",
+            "end_sec": null,
+            "start_sec": 0
+          }
+        }
+      }
+    },
+    {
+      "id": "UI-23",
+      "evidenceId": "UI-23",
+      "label": "应用Sunshine字幕模板",
+      "status": "Passed",
+      "automationStatus": "Failed",
+      "review": "验收复核：当前Sunshine实际为#F0DD44／Geist／84，原断言误写另一颜色。模板已应用且仅样式变化，刷新与撤销通过，保留原始Failed记录。",
+      "beforeRevision": 36,
+      "afterRevision": 37,
+      "changed": true,
+      "reason": "AssertionError [ERR_ASSERTION]: 页面操作后的实际保存结果不符合本项预期",
+      "screenshot": "UI-23-failed.png",
+      "observation": {
+        "styles": {
+          "color": "#F0DD44",
+          "effect": "regular",
+          "italic": false,
+          "outline": {
+            "color": "#000000",
+            "width": 6,
+            "enabled": false
+          },
+          "alignment": "center",
+          "case_mode": "original",
+          "font_name": "Geist",
+          "font_size": 84,
+          "placement": {
+            "mode": "preset",
+            "preset": "bottom",
+            "position": null,
+            "margin_px": 90
+          },
+          "underline": false,
+          "background": {
+            "color": "#000000",
+            "enabled": false,
+            "opacity": 1,
+            "corner_radius": 0
+          },
+          "font_weight": 700,
+          "bold_override": false,
+          "highlight_color": "#F6BBD3",
+          "highlight_typography": {
+            "bold": false,
+            "italic": false,
+            "font_name": null,
+            "font_size": null,
+            "underline": false,
+            "font_weight": null
+          }
+        },
+        "subtitleDiff": [],
+        "mediaTracks": [
+          {
+            "type": "video",
+            "trackId": "edit_e0429b05d7c943c6244f2dd637d15918",
+            "muted": true,
+            "visible": true,
+            "clips": [
+              {
+                "clipId": "edit_d10594184fa1dd722cde996ce6e0c7ca",
+                "fileId": "file_cloud_77n2ver2wfe2enu7bddp42egdx",
+                "in": 0,
+                "out": 30.630599999999998,
+                "start": 0,
+                "rate": 1,
+                "volume": 1
+              }
+            ]
+          },
+          {
+            "type": "audio",
+            "role": "source",
+            "trackId": "edit_d0860d76beaf26cbadd9c9ef92d6406a",
+            "muted": true,
+            "clips": [
+              {
+                "clipId": "edit_d2c907cb3b4c2d40e4e1fdf6ed851100",
+                "fileId": "file_cloud_77n2ver2wfe2enu7bddp42egdx",
+                "in": 0,
+                "out": 30.630599999999998,
+                "start": 0,
+                "rate": 1,
+                "volume": 1
+              }
+            ]
+          },
+          {
+            "type": "audio",
+            "role": "narration",
+            "trackId": "artifact:audio_files:file_cloud_4mfgdwukxlkb7rfbc4ryfd3hjr",
+            "muted": false,
+            "clips": [
+              {
+                "clipId": "artifact:audio_files:file_cloud_4mfgdwukxlkb7rfbc4ryfd3hjr:clip",
+                "fileId": "file_cloud_4mfgdwukxlkb7rfbc4ryfd3hjr",
+                "in": 0,
+                "out": 28.975192743764172,
+                "start": 0,
+                "rate": 1,
+                "volume": 1
+              }
+            ]
+          }
+        ],
+        "watermarks": {
+          "text": null,
+          "image": null,
+          "timing": {
+            "mode": "whole_project",
+            "end_sec": null,
+            "start_sec": 0
+          }
+        }
+      }
+    },
+    {
+      "id": "UI-24",
+      "evidenceId": "UI-24",
+      "label": "隐藏译文字幕轨",
+      "status": "Passed",
+      "automationStatus": "Passed",
+      "review": null,
+      "beforeRevision": 60,
+      "afterRevision": 61,
+      "changed": true,
+      "reason": null,
+      "screenshot": "UI-24-passed.png",
+      "observation": {
+        "subtitleDiff": [],
+        "mediaTracks": [
+          {
+            "type": "video",
+            "trackId": "edit_e0429b05d7c943c6244f2dd637d15918",
+            "muted": true,
+            "visible": true,
+            "clips": [
+              {
+                "clipId": "edit_d10594184fa1dd722cde996ce6e0c7ca",
+                "fileId": "file_cloud_77n2ver2wfe2enu7bddp42egdx",
+                "in": 0,
+                "out": 30.630599999999998,
+                "start": 0,
+                "rate": 1,
+                "volume": 1
+              }
+            ]
+          },
+          {
+            "type": "audio",
+            "role": "source",
+            "trackId": "edit_d0860d76beaf26cbadd9c9ef92d6406a",
+            "muted": true,
+            "clips": [
+              {
+                "clipId": "edit_d2c907cb3b4c2d40e4e1fdf6ed851100",
+                "fileId": "file_cloud_77n2ver2wfe2enu7bddp42egdx",
+                "in": 0,
+                "out": 30.630599999999998,
+                "start": 0,
+                "rate": 1,
+                "volume": 1
+              }
+            ]
+          },
+          {
+            "type": "audio",
+            "role": "narration",
+            "trackId": "artifact:audio_files:file_cloud_4mfgdwukxlkb7rfbc4ryfd3hjr",
+            "muted": false,
+            "clips": [
+              {
+                "clipId": "artifact:audio_files:file_cloud_4mfgdwukxlkb7rfbc4ryfd3hjr:clip",
+                "fileId": "file_cloud_4mfgdwukxlkb7rfbc4ryfd3hjr",
+                "in": 0,
+                "out": 28.975192743764172,
+                "start": 0,
+                "rate": 1,
+                "volume": 1
+              }
+            ]
+          }
+        ],
+        "watermarks": {
+          "text": null,
+          "image": null,
+          "timing": {
+            "mode": "whole_project",
+            "end_sec": null,
+            "start_sec": 0
+          }
+        }
+      }
+    },
+    {
+      "id": "UI-25",
+      "evidenceId": "UI-25",
+      "label": "删除第二条字幕real?",
+      "status": "Passed",
+      "automationStatus": "Passed",
+      "review": null,
+      "beforeRevision": 62,
+      "afterRevision": 63,
+      "changed": true,
+      "reason": null,
+      "screenshot": "UI-25-passed.png",
+      "observation": {
+        "subtitleDiff": [
+          {
+            "text": "",
+            "end_sec": 3.52,
+            "identity": "cue_3b27e9b60eb5c52f885bfd53",
+            "start_sec": 3.26
+          }
+        ],
+        "mediaTracks": [
+          {
+            "type": "video",
+            "trackId": "edit_e0429b05d7c943c6244f2dd637d15918",
+            "muted": true,
+            "visible": true,
+            "clips": [
+              {
+                "clipId": "edit_d10594184fa1dd722cde996ce6e0c7ca",
+                "fileId": "file_cloud_77n2ver2wfe2enu7bddp42egdx",
+                "in": 0,
+                "out": 30.630599999999998,
+                "start": 0,
+                "rate": 1,
+                "volume": 1
+              }
+            ]
+          },
+          {
+            "type": "audio",
+            "role": "source",
+            "trackId": "edit_d0860d76beaf26cbadd9c9ef92d6406a",
+            "muted": true,
+            "clips": [
+              {
+                "clipId": "edit_d2c907cb3b4c2d40e4e1fdf6ed851100",
+                "fileId": "file_cloud_77n2ver2wfe2enu7bddp42egdx",
+                "in": 0,
+                "out": 30.630599999999998,
+                "start": 0,
+                "rate": 1,
+                "volume": 1
+              }
+            ]
+          },
+          {
+            "type": "audio",
+            "role": "narration",
+            "trackId": "artifact:audio_files:file_cloud_4mfgdwukxlkb7rfbc4ryfd3hjr",
+            "muted": false,
+            "clips": [
+              {
+                "clipId": "artifact:audio_files:file_cloud_4mfgdwukxlkb7rfbc4ryfd3hjr:clip",
+                "fileId": "file_cloud_4mfgdwukxlkb7rfbc4ryfd3hjr",
+                "in": 0,
+                "out": 28.975192743764172,
+                "start": 0,
+                "rate": 1,
+                "volume": 1
+              }
+            ]
+          }
+        ],
+        "watermarks": {
+          "text": null,
+          "image": null,
+          "timing": {
+            "mode": "whole_project",
+            "end_sec": null,
+            "start_sec": 0
+          }
+        }
+      }
+    },
+    {
+      "id": "UI-26",
+      "evidenceId": "UI-26-direct",
+      "label": "添加字幕：新空行可在面板定位并编辑",
+      "status": "Passed",
+      "automationStatus": "Passed",
+      "review": null,
+      "beforeRevision": 72,
+      "afterRevision": 73,
+      "changed": true,
+      "reason": null,
+      "screenshot": "UI-26-direct-passed.png",
+      "observation": {
+        "subtitleDiff": [
+          {
+            "text": "",
+            "after": "cue_aa522fb0541ec66c28793e9e",
+            "end_sec": 30.630599999999998,
+            "identity": "a3e17470-8d3c-49cc-a092-6811ac47bf4e",
+            "start_sec": 28.2,
+            "speaker_id": null,
+            "manual_layout": null
+          }
+        ],
+        "mediaTracks": [
+          {
+            "type": "video",
+            "trackId": "edit_e0429b05d7c943c6244f2dd637d15918",
+            "muted": true,
+            "visible": true,
+            "clips": [
+              {
+                "clipId": "edit_d10594184fa1dd722cde996ce6e0c7ca",
+                "fileId": "file_cloud_77n2ver2wfe2enu7bddp42egdx",
+                "in": 0,
+                "out": 30.630599999999998,
+                "start": 0,
+                "rate": 1,
+                "volume": 1
+              }
+            ]
+          },
+          {
+            "type": "audio",
+            "role": "source",
+            "trackId": "edit_d0860d76beaf26cbadd9c9ef92d6406a",
+            "muted": true,
+            "clips": [
+              {
+                "clipId": "edit_d2c907cb3b4c2d40e4e1fdf6ed851100",
+                "fileId": "file_cloud_77n2ver2wfe2enu7bddp42egdx",
+                "in": 0,
+                "out": 30.630599999999998,
+                "start": 0,
+                "rate": 1,
+                "volume": 1
+              }
+            ]
+          },
+          {
+            "type": "audio",
+            "role": "narration",
+            "trackId": "artifact:audio_files:file_cloud_4mfgdwukxlkb7rfbc4ryfd3hjr",
+            "muted": false,
+            "clips": [
+              {
+                "clipId": "artifact:audio_files:file_cloud_4mfgdwukxlkb7rfbc4ryfd3hjr:clip",
+                "fileId": "file_cloud_4mfgdwukxlkb7rfbc4ryfd3hjr",
+                "in": 0,
+                "out": 28.975192743764172,
+                "start": 0,
+                "rate": 1,
+                "volume": 1
+              }
+            ]
+          }
+        ],
+        "watermarks": {
+          "text": null,
+          "image": null,
+          "timing": {
+            "mode": "whole_project",
+            "end_sec": null,
+            "start_sec": 0
+          }
+        }
+      }
+    },
+    {
+      "id": "UI-27",
+      "evidenceId": "UI-27",
+      "label": "第一条字幕在1.50秒处分割",
+      "status": "Passed",
+      "automationStatus": "Passed",
+      "review": null,
+      "beforeRevision": 66,
+      "afterRevision": 67,
+      "changed": true,
+      "reason": null,
+      "screenshot": "UI-27-passed.png",
+      "observation": {
+        "subtitleDiff": [
+          {
+            "end_sec": 3.2,
+            "identity": "cue_6e51166f0b40e25b34577de6",
+            "start_sec": 0.08,
+            "properties": {
+              "manual_layout": {
+                "segments": [
+                  {
+                    "end_sec": 1.5,
+                    "text_end": 27,
+                    "start_sec": 0.08,
+                    "segment_id": "7e863e42-7556-471e-a859-804787755d72",
+                    "text_start": 0
+                  },
+                  {
+                    "end_sec": 3.2,
+                    "text_end": 60,
+                    "start_sec": 1.5,
+                    "segment_id": "22fdf0f3-d585-4157-b5f6-e58b600d5b5f",
+                    "text_start": 27
+                  }
+                ]
+              }
+            }
+          }
+        ],
+        "mediaTracks": [
+          {
+            "type": "video",
+            "trackId": "edit_e0429b05d7c943c6244f2dd637d15918",
+            "muted": true,
+            "visible": true,
+            "clips": [
+              {
+                "clipId": "edit_d10594184fa1dd722cde996ce6e0c7ca",
+                "fileId": "file_cloud_77n2ver2wfe2enu7bddp42egdx",
+                "in": 0,
+                "out": 30.630599999999998,
+                "start": 0,
+                "rate": 1,
+                "volume": 1
+              }
+            ]
+          },
+          {
+            "type": "audio",
+            "role": "source",
+            "trackId": "edit_d0860d76beaf26cbadd9c9ef92d6406a",
+            "muted": true,
+            "clips": [
+              {
+                "clipId": "edit_d2c907cb3b4c2d40e4e1fdf6ed851100",
+                "fileId": "file_cloud_77n2ver2wfe2enu7bddp42egdx",
+                "in": 0,
+                "out": 30.630599999999998,
+                "start": 0,
+                "rate": 1,
+                "volume": 1
+              }
+            ]
+          },
+          {
+            "type": "audio",
+            "role": "narration",
+            "trackId": "artifact:audio_files:file_cloud_4mfgdwukxlkb7rfbc4ryfd3hjr",
+            "muted": false,
+            "clips": [
+              {
+                "clipId": "artifact:audio_files:file_cloud_4mfgdwukxlkb7rfbc4ryfd3hjr:clip",
+                "fileId": "file_cloud_4mfgdwukxlkb7rfbc4ryfd3hjr",
+                "in": 0,
+                "out": 28.975192743764172,
+                "start": 0,
+                "rate": 1,
+                "volume": 1
+              }
+            ]
+          }
+        ],
+        "watermarks": {
+          "text": null,
+          "image": null,
+          "timing": {
+            "mode": "whole_project",
+            "end_sec": null,
+            "start_sec": 0
+          }
+        }
+      }
+    },
+    {
+      "id": "UI-28",
+      "evidenceId": "UI-28",
+      "label": "每条字幕字符数60改为30",
+      "status": "Passed",
+      "automationStatus": "Passed",
+      "review": null,
+      "beforeRevision": 68,
+      "afterRevision": 69,
+      "changed": true,
+      "reason": null,
+      "screenshot": "UI-28-passed.png",
+      "observation": {
+        "subtitleDiff": [],
+        "mediaTracks": [
+          {
+            "type": "video",
+            "trackId": "edit_e0429b05d7c943c6244f2dd637d15918",
+            "muted": true,
+            "visible": true,
+            "clips": [
+              {
+                "clipId": "edit_d10594184fa1dd722cde996ce6e0c7ca",
+                "fileId": "file_cloud_77n2ver2wfe2enu7bddp42egdx",
+                "in": 0,
+                "out": 30.630599999999998,
+                "start": 0,
+                "rate": 1,
+                "volume": 1
+              }
+            ]
+          },
+          {
+            "type": "audio",
+            "role": "source",
+            "trackId": "edit_d0860d76beaf26cbadd9c9ef92d6406a",
+            "muted": true,
+            "clips": [
+              {
+                "clipId": "edit_d2c907cb3b4c2d40e4e1fdf6ed851100",
+                "fileId": "file_cloud_77n2ver2wfe2enu7bddp42egdx",
+                "in": 0,
+                "out": 30.630599999999998,
+                "start": 0,
+                "rate": 1,
+                "volume": 1
+              }
+            ]
+          },
+          {
+            "type": "audio",
+            "role": "narration",
+            "trackId": "artifact:audio_files:file_cloud_4mfgdwukxlkb7rfbc4ryfd3hjr",
+            "muted": false,
+            "clips": [
+              {
+                "clipId": "artifact:audio_files:file_cloud_4mfgdwukxlkb7rfbc4ryfd3hjr:clip",
+                "fileId": "file_cloud_4mfgdwukxlkb7rfbc4ryfd3hjr",
+                "in": 0,
+                "out": 28.975192743764172,
+                "start": 0,
+                "rate": 1,
+                "volume": 1
+              }
+            ]
+          }
+        ],
+        "watermarks": {
+          "text": null,
+          "image": null,
+          "timing": {
+            "mode": "whole_project",
+            "end_sec": null,
+            "start_sec": 0
+          }
+        }
+      }
+    },
+    {
+      "id": "UI-29",
+      "evidenceId": "UI-29",
+      "label": "隐藏视频轨",
+      "status": "Passed",
+      "automationStatus": "Passed",
+      "review": null,
+      "beforeRevision": 42,
+      "afterRevision": 43,
+      "changed": true,
+      "reason": null,
+      "screenshot": "UI-29-passed.png",
+      "observation": {
+        "subtitleDiff": [],
+        "mediaTracks": [
+          {
+            "type": "video",
+            "trackId": "edit_e0429b05d7c943c6244f2dd637d15918",
+            "muted": true,
+            "visible": false,
+            "clips": [
+              {
+                "clipId": "edit_d10594184fa1dd722cde996ce6e0c7ca",
+                "fileId": "file_cloud_77n2ver2wfe2enu7bddp42egdx",
+                "in": 0,
+                "out": 30.630599999999998,
+                "start": 0,
+                "rate": 1,
+                "volume": 1
+              }
+            ]
+          },
+          {
+            "type": "audio",
+            "role": "source",
+            "trackId": "edit_d0860d76beaf26cbadd9c9ef92d6406a",
+            "muted": true,
+            "clips": [
+              {
+                "clipId": "edit_d2c907cb3b4c2d40e4e1fdf6ed851100",
+                "fileId": "file_cloud_77n2ver2wfe2enu7bddp42egdx",
+                "in": 0,
+                "out": 30.630599999999998,
+                "start": 0,
+                "rate": 1,
+                "volume": 1
+              }
+            ]
+          },
+          {
+            "type": "audio",
+            "role": "narration",
+            "trackId": "artifact:audio_files:file_cloud_4mfgdwukxlkb7rfbc4ryfd3hjr",
+            "muted": false,
+            "clips": [
+              {
+                "clipId": "artifact:audio_files:file_cloud_4mfgdwukxlkb7rfbc4ryfd3hjr:clip",
+                "fileId": "file_cloud_4mfgdwukxlkb7rfbc4ryfd3hjr",
+                "in": 0,
+                "out": 28.975192743764172,
+                "start": 0,
+                "rate": 1,
+                "volume": 1
+              }
+            ]
+          }
+        ],
+        "watermarks": {
+          "text": null,
+          "image": null,
+          "timing": {
+            "mode": "whole_project",
+            "end_sec": null,
+            "start_sec": 0
+          }
+        }
+      }
+    },
+    {
+      "id": "UI-30",
+      "evidenceId": "UI-30",
+      "label": "视频片段整体右移约2秒",
+      "status": "Passed",
+      "automationStatus": "Passed",
+      "review": null,
+      "beforeRevision": 44,
+      "afterRevision": 45,
+      "changed": true,
+      "reason": null,
+      "screenshot": "UI-30-passed.png",
+      "observation": {
+        "subtitleDiff": [],
+        "mediaTracks": [
+          {
+            "type": "video",
+            "trackId": "edit_e0429b05d7c943c6244f2dd637d15918",
+            "muted": true,
+            "visible": true,
+            "clips": [
+              {
+                "clipId": "edit_d10594184fa1dd722cde996ce6e0c7ca",
+                "fileId": "file_cloud_77n2ver2wfe2enu7bddp42egdx",
+                "in": 0,
+                "out": 30.630599999999998,
+                "start": 2.002002002002002,
+                "rate": 1,
+                "volume": 1
+              }
+            ]
+          },
+          {
+            "type": "audio",
+            "role": "source",
+            "trackId": "edit_d0860d76beaf26cbadd9c9ef92d6406a",
+            "muted": true,
+            "clips": [
+              {
+                "clipId": "edit_d2c907cb3b4c2d40e4e1fdf6ed851100",
+                "fileId": "file_cloud_77n2ver2wfe2enu7bddp42egdx",
+                "in": 0,
+                "out": 30.630599999999998,
+                "start": 2.002002002002002,
+                "rate": 1,
+                "volume": 1
+              }
+            ]
+          },
+          {
+            "type": "audio",
+            "role": "narration",
+            "trackId": "artifact:audio_files:file_cloud_4mfgdwukxlkb7rfbc4ryfd3hjr",
+            "muted": false,
+            "clips": [
+              {
+                "clipId": "artifact:audio_files:file_cloud_4mfgdwukxlkb7rfbc4ryfd3hjr:clip",
+                "fileId": "file_cloud_4mfgdwukxlkb7rfbc4ryfd3hjr",
+                "in": 0,
+                "out": 28.975192743764172,
+                "start": 0,
+                "rate": 1,
+                "volume": 1
+              }
+            ]
+          }
+        ],
+        "watermarks": {
+          "text": null,
+          "image": null,
+          "timing": {
+            "mode": "whole_project",
+            "end_sec": null,
+            "start_sec": 0
+          }
+        }
+      }
+    },
+    {
+      "id": "UI-31",
+      "evidenceId": "UI-31",
+      "label": "复制视频并粘贴到结尾",
+      "status": "Passed",
+      "automationStatus": "Passed",
+      "review": null,
+      "beforeRevision": 46,
+      "afterRevision": 47,
+      "changed": true,
+      "reason": null,
+      "screenshot": "UI-31-passed.png",
+      "observation": {
+        "subtitleDiff": [],
+        "mediaTracks": [
+          {
+            "type": "video",
+            "trackId": "edit_e0429b05d7c943c6244f2dd637d15918",
+            "muted": true,
+            "visible": true,
+            "clips": [
+              {
+                "clipId": "edit_d10594184fa1dd722cde996ce6e0c7ca",
+                "fileId": "file_cloud_77n2ver2wfe2enu7bddp42egdx",
+                "in": 0,
+                "out": 30.630599999999998,
+                "start": 0,
+                "rate": 1,
+                "volume": 1
+              },
+              {
+                "clipId": "b8518bde-e660-4414-919a-a2604e864d34",
+                "fileId": "file_cloud_77n2ver2wfe2enu7bddp42egdx",
+                "in": 0,
+                "out": 30.630599999999998,
+                "start": 30.63,
+                "rate": 1,
+                "volume": 1
+              }
+            ]
+          },
+          {
+            "type": "audio",
+            "role": "source",
+            "trackId": "edit_d0860d76beaf26cbadd9c9ef92d6406a",
+            "muted": true,
+            "clips": [
+              {
+                "clipId": "edit_d2c907cb3b4c2d40e4e1fdf6ed851100",
+                "fileId": "file_cloud_77n2ver2wfe2enu7bddp42egdx",
+                "in": 0,
+                "out": 30.630599999999998,
+                "start": 0,
+                "rate": 1,
+                "volume": 1
+              },
+              {
+                "clipId": "942e8fd6-5132-440f-9991-8fcdf384de46",
+                "fileId": "file_cloud_77n2ver2wfe2enu7bddp42egdx",
+                "in": 0,
+                "out": 30.630599999999998,
+                "start": 30.63,
+                "rate": 1,
+                "volume": 1
+              }
+            ]
+          },
+          {
+            "type": "audio",
+            "role": "narration",
+            "trackId": "artifact:audio_files:file_cloud_4mfgdwukxlkb7rfbc4ryfd3hjr",
+            "muted": false,
+            "clips": [
+              {
+                "clipId": "artifact:audio_files:file_cloud_4mfgdwukxlkb7rfbc4ryfd3hjr:clip",
+                "fileId": "file_cloud_4mfgdwukxlkb7rfbc4ryfd3hjr",
+                "in": 0,
+                "out": 28.975192743764172,
+                "start": 0,
+                "rate": 1,
+                "volume": 1
+              }
+            ]
+          }
+        ],
+        "watermarks": {
+          "text": null,
+          "image": null,
+          "timing": {
+            "mode": "whole_project",
+            "end_sec": null,
+            "start_sec": 0
+          }
+        }
+      }
+    },
+    {
+      "id": "UI-32",
+      "evidenceId": "UI-32",
+      "label": "删除唯一视频片段",
+      "status": "Passed",
+      "automationStatus": "Passed",
+      "review": null,
+      "beforeRevision": 48,
+      "afterRevision": 49,
+      "changed": true,
+      "reason": null,
+      "screenshot": "UI-32-passed.png",
+      "observation": {
+        "subtitleDiff": [],
+        "mediaTracks": [
+          {
+            "type": "audio",
+            "role": "narration",
+            "trackId": "artifact:audio_files:file_cloud_4mfgdwukxlkb7rfbc4ryfd3hjr",
+            "muted": false,
+            "clips": [
+              {
+                "clipId": "artifact:audio_files:file_cloud_4mfgdwukxlkb7rfbc4ryfd3hjr:clip",
+                "fileId": "file_cloud_4mfgdwukxlkb7rfbc4ryfd3hjr",
+                "in": 0,
+                "out": 28.975192743764172,
+                "start": 0,
+                "rate": 1,
+                "volume": 1
+              }
+            ]
+          }
+        ],
+        "watermarks": {
+          "text": null,
+          "image": null,
+          "timing": {
+            "mode": "whole_project",
+            "end_sec": null,
+            "start_sec": 0
+          }
+        }
+      }
+    },
+    {
+      "id": "UI-33",
+      "evidenceId": "UI-33",
+      "label": "独立旁白裁头约1秒",
+      "status": "Passed",
+      "automationStatus": "Passed",
+      "review": null,
+      "beforeRevision": 50,
+      "afterRevision": 51,
+      "changed": true,
+      "reason": null,
+      "screenshot": "UI-33-passed.png",
+      "observation": {
+        "subtitleDiff": [],
+        "mediaTracks": [
+          {
+            "type": "video",
+            "trackId": "edit_e0429b05d7c943c6244f2dd637d15918",
+            "muted": true,
+            "visible": true,
+            "clips": [
+              {
+                "clipId": "edit_d10594184fa1dd722cde996ce6e0c7ca",
+                "fileId": "file_cloud_77n2ver2wfe2enu7bddp42egdx",
+                "in": 0,
+                "out": 30.630599999999998,
+                "start": 0,
+                "rate": 1,
+                "volume": 1
+              }
+            ]
+          },
+          {
+            "type": "audio",
+            "role": "source",
+            "trackId": "edit_d0860d76beaf26cbadd9c9ef92d6406a",
+            "muted": true,
+            "clips": [
+              {
+                "clipId": "edit_d2c907cb3b4c2d40e4e1fdf6ed851100",
+                "fileId": "file_cloud_77n2ver2wfe2enu7bddp42egdx",
+                "in": 0,
+                "out": 30.630599999999998,
+                "start": 0,
+                "rate": 1,
+                "volume": 1
+              }
+            ]
+          },
+          {
+            "type": "audio",
+            "role": "narration",
+            "trackId": "artifact:audio_files:file_cloud_4mfgdwukxlkb7rfbc4ryfd3hjr",
+            "muted": false,
+            "clips": [
+              {
+                "clipId": "artifact:audio_files:file_cloud_4mfgdwukxlkb7rfbc4ryfd3hjr:clip",
+                "fileId": "file_cloud_4mfgdwukxlkb7rfbc4ryfd3hjr",
+                "in": 0.999993896484375,
+                "out": 28.975192743764172,
+                "start": 0.999993896484375,
+                "rate": 1,
+                "volume": 1
+              }
+            ]
+          }
+        ],
+        "watermarks": {
+          "text": null,
+          "image": null,
+          "timing": {
+            "mode": "whole_project",
+            "end_sec": null,
+            "start_sec": 0
+          }
+        }
+      }
+    },
+    {
+      "id": "UI-34",
+      "evidenceId": "UI-34",
+      "label": "独立旁白裁尾约1秒",
+      "status": "Passed",
+      "automationStatus": "Passed",
+      "review": null,
+      "beforeRevision": 52,
+      "afterRevision": 53,
+      "changed": true,
+      "reason": null,
+      "screenshot": "UI-34-passed.png",
+      "observation": {
+        "subtitleDiff": [],
+        "mediaTracks": [
+          {
+            "type": "video",
+            "trackId": "edit_e0429b05d7c943c6244f2dd637d15918",
+            "muted": true,
+            "visible": true,
+            "clips": [
+              {
+                "clipId": "edit_d10594184fa1dd722cde996ce6e0c7ca",
+                "fileId": "file_cloud_77n2ver2wfe2enu7bddp42egdx",
+                "in": 0,
+                "out": 30.630599999999998,
+                "start": 0,
+                "rate": 1,
+                "volume": 1
+              }
+            ]
+          },
+          {
+            "type": "audio",
+            "role": "source",
+            "trackId": "edit_d0860d76beaf26cbadd9c9ef92d6406a",
+            "muted": true,
+            "clips": [
+              {
+                "clipId": "edit_d2c907cb3b4c2d40e4e1fdf6ed851100",
+                "fileId": "file_cloud_77n2ver2wfe2enu7bddp42egdx",
+                "in": 0,
+                "out": 30.630599999999998,
+                "start": 0,
+                "rate": 1,
+                "volume": 1
+              }
+            ]
+          },
+          {
+            "type": "audio",
+            "role": "narration",
+            "trackId": "artifact:audio_files:file_cloud_4mfgdwukxlkb7rfbc4ryfd3hjr",
+            "muted": false,
+            "clips": [
+              {
+                "clipId": "artifact:audio_files:file_cloud_4mfgdwukxlkb7rfbc4ryfd3hjr:clip",
+                "fileId": "file_cloud_4mfgdwukxlkb7rfbc4ryfd3hjr",
+                "in": 0,
+                "out": 27.975198847279795,
+                "start": 0,
+                "rate": 1,
+                "volume": 1
+              }
+            ]
+          }
+        ],
+        "watermarks": {
+          "text": null,
+          "image": null,
+          "timing": {
+            "mode": "whole_project",
+            "end_sec": null,
+            "start_sec": 0
+          }
+        }
+      }
+    },
+    {
+      "id": "UI-35",
+      "evidenceId": "UI-35",
+      "label": "独立旁白整体右移约1秒",
+      "status": "Passed",
+      "automationStatus": "Passed",
+      "review": null,
+      "beforeRevision": 54,
+      "afterRevision": 55,
+      "changed": true,
+      "reason": null,
+      "screenshot": "UI-35-passed.png",
+      "observation": {
+        "subtitleDiff": [],
+        "mediaTracks": [
+          {
+            "type": "video",
+            "trackId": "edit_e0429b05d7c943c6244f2dd637d15918",
+            "muted": true,
+            "visible": true,
+            "clips": [
+              {
+                "clipId": "edit_d10594184fa1dd722cde996ce6e0c7ca",
+                "fileId": "file_cloud_77n2ver2wfe2enu7bddp42egdx",
+                "in": 0,
+                "out": 30.630599999999998,
+                "start": 0,
+                "rate": 1,
+                "volume": 1
+              }
+            ]
+          },
+          {
+            "type": "audio",
+            "role": "source",
+            "trackId": "edit_d0860d76beaf26cbadd9c9ef92d6406a",
+            "muted": true,
+            "clips": [
+              {
+                "clipId": "edit_d2c907cb3b4c2d40e4e1fdf6ed851100",
+                "fileId": "file_cloud_77n2ver2wfe2enu7bddp42egdx",
+                "in": 0,
+                "out": 30.630599999999998,
+                "start": 0,
+                "rate": 1,
+                "volume": 1
+              }
+            ]
+          },
+          {
+            "type": "audio",
+            "role": "narration",
+            "trackId": "artifact:audio_files:file_cloud_4mfgdwukxlkb7rfbc4ryfd3hjr",
+            "muted": false,
+            "clips": [
+              {
+                "clipId": "artifact:audio_files:file_cloud_4mfgdwukxlkb7rfbc4ryfd3hjr:clip",
+                "fileId": "file_cloud_4mfgdwukxlkb7rfbc4ryfd3hjr",
+                "in": 0,
+                "out": 28.975192743764172,
+                "start": 1.001001001001001,
+                "rate": 1,
+                "volume": 1
+              }
+            ]
+          }
+        ],
+        "watermarks": {
+          "text": null,
+          "image": null,
+          "timing": {
+            "mode": "whole_project",
+            "end_sec": null,
+            "start_sec": 0
+          }
+        }
+      }
+    },
+    {
+      "id": "UI-36",
+      "evidenceId": "UI-36",
+      "label": "旁白音量0%边界",
+      "status": "Passed",
+      "automationStatus": "Passed",
+      "review": null,
+      "beforeRevision": 56,
+      "afterRevision": 57,
+      "changed": true,
+      "reason": null,
+      "screenshot": "UI-36-passed.png",
+      "observation": {
+        "subtitleDiff": [],
+        "mediaTracks": [
+          {
+            "type": "video",
+            "trackId": "edit_e0429b05d7c943c6244f2dd637d15918",
+            "muted": true,
+            "visible": true,
+            "clips": [
+              {
+                "clipId": "edit_d10594184fa1dd722cde996ce6e0c7ca",
+                "fileId": "file_cloud_77n2ver2wfe2enu7bddp42egdx",
+                "in": 0,
+                "out": 30.630599999999998,
+                "start": 0,
+                "rate": 1,
+                "volume": 1
+              }
+            ]
+          },
+          {
+            "type": "audio",
+            "role": "source",
+            "trackId": "edit_d0860d76beaf26cbadd9c9ef92d6406a",
+            "muted": true,
+            "clips": [
+              {
+                "clipId": "edit_d2c907cb3b4c2d40e4e1fdf6ed851100",
+                "fileId": "file_cloud_77n2ver2wfe2enu7bddp42egdx",
+                "in": 0,
+                "out": 30.630599999999998,
+                "start": 0,
+                "rate": 1,
+                "volume": 1
+              }
+            ]
+          },
+          {
+            "type": "audio",
+            "role": "narration",
+            "trackId": "artifact:audio_files:file_cloud_4mfgdwukxlkb7rfbc4ryfd3hjr",
+            "muted": false,
+            "clips": [
+              {
+                "clipId": "artifact:audio_files:file_cloud_4mfgdwukxlkb7rfbc4ryfd3hjr:clip",
+                "fileId": "file_cloud_4mfgdwukxlkb7rfbc4ryfd3hjr",
+                "in": 0,
+                "out": 28.975192743764172,
+                "start": 0,
+                "rate": 1,
+                "volume": 0
+              }
+            ]
+          }
+        ],
+        "watermarks": {
+          "text": null,
+          "image": null,
+          "timing": {
+            "mode": "whole_project",
+            "end_sec": null,
+            "start_sec": 0
+          }
+        }
+      }
+    },
+    {
+      "id": "UI-37",
+      "evidenceId": "UI-37",
+      "label": "启用原声",
+      "status": "Passed",
+      "automationStatus": "Passed",
+      "review": null,
+      "beforeRevision": 58,
+      "afterRevision": 59,
+      "changed": true,
+      "reason": null,
+      "screenshot": "UI-37-passed.png",
+      "observation": {
+        "subtitleDiff": [],
+        "mediaTracks": [
+          {
+            "type": "video",
+            "trackId": "edit_e0429b05d7c943c6244f2dd637d15918",
+            "muted": true,
+            "visible": true,
+            "clips": [
+              {
+                "clipId": "edit_d10594184fa1dd722cde996ce6e0c7ca",
+                "fileId": "file_cloud_77n2ver2wfe2enu7bddp42egdx",
+                "in": 0,
+                "out": 30.630599999999998,
+                "start": 0,
+                "rate": 1,
+                "volume": 1
+              }
+            ]
+          },
+          {
+            "type": "audio",
+            "role": "source",
+            "trackId": "edit_d0860d76beaf26cbadd9c9ef92d6406a",
+            "muted": false,
+            "clips": [
+              {
+                "clipId": "edit_d2c907cb3b4c2d40e4e1fdf6ed851100",
+                "fileId": "file_cloud_77n2ver2wfe2enu7bddp42egdx",
+                "in": 0,
+                "out": 30.630599999999998,
+                "start": 0,
+                "rate": 1,
+                "volume": 1
+              }
+            ]
+          },
+          {
+            "type": "audio",
+            "role": "narration",
+            "trackId": "artifact:audio_files:file_cloud_4mfgdwukxlkb7rfbc4ryfd3hjr",
+            "muted": false,
+            "clips": [
+              {
+                "clipId": "artifact:audio_files:file_cloud_4mfgdwukxlkb7rfbc4ryfd3hjr:clip",
+                "fileId": "file_cloud_4mfgdwukxlkb7rfbc4ryfd3hjr",
+                "in": 0,
+                "out": 28.975192743764172,
+                "start": 0,
+                "rate": 1,
+                "volume": 1
+              }
+            ]
+          }
+        ],
+        "watermarks": {
+          "text": null,
+          "image": null,
+          "timing": {
+            "mode": "whole_project",
+            "end_sec": null,
+            "start_sec": 0
+          }
+        }
+      }
+    },
+    {
+      "id": "UI-38",
+      "evidenceId": "UI-38",
+      "label": "时间轴放大及恢复",
+      "status": "Passed",
+      "automationStatus": "Passed",
+      "review": null,
+      "beforeRevision": 70,
+      "afterRevision": 70,
+      "changed": false,
+      "reason": null,
+      "screenshot": "UI-38-passed.png",
+      "observation": {
+        "subtitleDiff": [],
+        "mediaTracks": [
+          {
+            "type": "video",
+            "trackId": "edit_e0429b05d7c943c6244f2dd637d15918",
+            "muted": true,
+            "visible": true,
+            "clips": [
+              {
+                "clipId": "edit_d10594184fa1dd722cde996ce6e0c7ca",
+                "fileId": "file_cloud_77n2ver2wfe2enu7bddp42egdx",
+                "in": 0,
+                "out": 30.630599999999998,
+                "start": 0,
+                "rate": 1,
+                "volume": 1
+              }
+            ]
+          },
+          {
+            "type": "audio",
+            "role": "source",
+            "trackId": "edit_d0860d76beaf26cbadd9c9ef92d6406a",
+            "muted": true,
+            "clips": [
+              {
+                "clipId": "edit_d2c907cb3b4c2d40e4e1fdf6ed851100",
+                "fileId": "file_cloud_77n2ver2wfe2enu7bddp42egdx",
+                "in": 0,
+                "out": 30.630599999999998,
+                "start": 0,
+                "rate": 1,
+                "volume": 1
+              }
+            ]
+          },
+          {
+            "type": "audio",
+            "role": "narration",
+            "trackId": "artifact:audio_files:file_cloud_4mfgdwukxlkb7rfbc4ryfd3hjr",
+            "muted": false,
+            "clips": [
+              {
+                "clipId": "artifact:audio_files:file_cloud_4mfgdwukxlkb7rfbc4ryfd3hjr:clip",
+                "fileId": "file_cloud_4mfgdwukxlkb7rfbc4ryfd3hjr",
+                "in": 0,
+                "out": 28.975192743764172,
+                "start": 0,
+                "rate": 1,
+                "volume": 1
+              }
+            ]
+          }
+        ],
+        "watermarks": {
+          "text": null,
+          "image": null,
+          "timing": {
+            "mode": "whole_project",
+            "end_sec": null,
+            "start_sec": 0
+          }
+        }
+      }
+    },
+    {
+      "id": "UI-39",
+      "evidenceId": "UI-39-direct",
+      "label": "逐帧前后与跳转开头",
+      "status": "Passed",
+      "automationStatus": "Passed",
+      "review": null,
+      "beforeRevision": 76,
+      "afterRevision": 76,
+      "changed": false,
+      "reason": null,
+      "screenshot": "UI-39-direct-passed.png",
+      "observation": {
+        "subtitleDiff": [],
+        "mediaTracks": [
+          {
+            "type": "video",
+            "trackId": "edit_e0429b05d7c943c6244f2dd637d15918",
+            "muted": true,
+            "visible": true,
+            "clips": [
+              {
+                "clipId": "edit_d10594184fa1dd722cde996ce6e0c7ca",
+                "fileId": "file_cloud_77n2ver2wfe2enu7bddp42egdx",
+                "in": 0,
+                "out": 30.630599999999998,
+                "start": 0,
+                "rate": 1,
+                "volume": 1
+              }
+            ]
+          },
+          {
+            "type": "audio",
+            "role": "source",
+            "trackId": "edit_d0860d76beaf26cbadd9c9ef92d6406a",
+            "muted": true,
+            "clips": [
+              {
+                "clipId": "edit_d2c907cb3b4c2d40e4e1fdf6ed851100",
+                "fileId": "file_cloud_77n2ver2wfe2enu7bddp42egdx",
+                "in": 0,
+                "out": 30.630599999999998,
+                "start": 0,
+                "rate": 1,
+                "volume": 1
+              }
+            ]
+          },
+          {
+            "type": "audio",
+            "role": "narration",
+            "trackId": "artifact:audio_files:file_cloud_4mfgdwukxlkb7rfbc4ryfd3hjr",
+            "muted": false,
+            "clips": [
+              {
+                "clipId": "artifact:audio_files:file_cloud_4mfgdwukxlkb7rfbc4ryfd3hjr:clip",
+                "fileId": "file_cloud_4mfgdwukxlkb7rfbc4ryfd3hjr",
+                "in": 0,
+                "out": 28.975192743764172,
+                "start": 0,
+                "rate": 1,
+                "volume": 1
+              }
+            ]
+          }
+        ],
+        "watermarks": {
+          "text": null,
+          "image": null,
+          "timing": {
+            "mode": "whole_project",
+            "end_sec": null,
+            "start_sec": 0
+          }
+        }
+      }
+    },
+    {
+      "id": "UI-40",
+      "evidenceId": "UI-40",
+      "label": "当前字幕SRT导出",
+      "status": "Blocked",
+      "automationStatus": "Blocked",
+      "review": "当前生产字幕面板没有字幕管理或SRT下载入口；仅有顶部视频导出。不绕过UI调用接口替代本例。",
+      "beforeRevision": 76,
+      "afterRevision": 76,
+      "changed": false,
+      "reason": "当前正式环境字幕面板仅有字幕/样式切换与字符数，未找到SRT导出或字幕管理入口；未执行导出，不计通过",
+      "screenshot": "UI-40-blocked.png",
+      "observation": {
+        "subtitleDiff": [],
+        "mediaTracks": [
+          {
+            "type": "video",
+            "trackId": "edit_e0429b05d7c943c6244f2dd637d15918",
+            "muted": true,
+            "visible": true,
+            "clips": [
+              {
+                "clipId": "edit_d10594184fa1dd722cde996ce6e0c7ca",
+                "fileId": "file_cloud_77n2ver2wfe2enu7bddp42egdx",
+                "in": 0,
+                "out": 30.630599999999998,
+                "start": 0,
+                "rate": 1,
+                "volume": 1
+              }
+            ]
+          },
+          {
+            "type": "audio",
+            "role": "source",
+            "trackId": "edit_d0860d76beaf26cbadd9c9ef92d6406a",
+            "muted": true,
+            "clips": [
+              {
+                "clipId": "edit_d2c907cb3b4c2d40e4e1fdf6ed851100",
+                "fileId": "file_cloud_77n2ver2wfe2enu7bddp42egdx",
+                "in": 0,
+                "out": 30.630599999999998,
+                "start": 0,
+                "rate": 1,
+                "volume": 1
+              }
+            ]
+          },
+          {
+            "type": "audio",
+            "role": "narration",
+            "trackId": "artifact:audio_files:file_cloud_4mfgdwukxlkb7rfbc4ryfd3hjr",
+            "muted": false,
+            "clips": [
+              {
+                "clipId": "artifact:audio_files:file_cloud_4mfgdwukxlkb7rfbc4ryfd3hjr:clip",
+                "fileId": "file_cloud_4mfgdwukxlkb7rfbc4ryfd3hjr",
+                "in": 0,
+                "out": 28.975192743764172,
+                "start": 0,
+                "rate": 1,
+                "volume": 1
+              }
+            ]
+          }
+        ],
+        "watermarks": {
+          "text": null,
+          "image": null,
+          "timing": {
+            "mode": "whole_project",
+            "end_sec": null,
+            "start_sec": 0
+          }
+        }
+      }
+    },
+    {
+      "id": "UI-41",
+      "evidenceId": "UI-41",
+      "label": "导出当前视频：任务及实际产物",
+      "status": "Passed",
+      "automationStatus": "Passed",
+      "review": "仅在通过页面新产物卡下载，核对字节数与回执SHA256一致，ffprobe及ffmpeg完整音视频解码成功后，确认基础导出通过。",
+      "beforeRevision": 88,
+      "afterRevision": 88,
+      "changed": false,
+      "reason": null,
+      "screenshot": "UI-41-passed.png",
+      "observation": {
+        "subtitleDiff": [],
+        "mediaTracks": [
+          {
+            "type": "video",
+            "trackId": "edit_e0429b05d7c943c6244f2dd637d15918",
+            "muted": true,
+            "visible": true,
+            "clips": [
+              {
+                "clipId": "edit_d10594184fa1dd722cde996ce6e0c7ca",
+                "fileId": "file_cloud_77n2ver2wfe2enu7bddp42egdx",
+                "in": 0,
+                "out": 30.630599999999998,
+                "start": 0,
+                "rate": 1,
+                "volume": 1
+              }
+            ]
+          },
+          {
+            "type": "audio",
+            "role": "source",
+            "trackId": "edit_d0860d76beaf26cbadd9c9ef92d6406a",
+            "muted": true,
+            "clips": [
+              {
+                "clipId": "edit_d2c907cb3b4c2d40e4e1fdf6ed851100",
+                "fileId": "file_cloud_77n2ver2wfe2enu7bddp42egdx",
+                "in": 0,
+                "out": 30.630599999999998,
+                "start": 0,
+                "rate": 1,
+                "volume": 1
+              }
+            ]
+          },
+          {
+            "type": "audio",
+            "role": "narration",
+            "trackId": "artifact:audio_files:file_cloud_4mfgdwukxlkb7rfbc4ryfd3hjr",
+            "muted": false,
+            "clips": [
+              {
+                "clipId": "artifact:audio_files:file_cloud_4mfgdwukxlkb7rfbc4ryfd3hjr:clip",
+                "fileId": "file_cloud_4mfgdwukxlkb7rfbc4ryfd3hjr",
+                "in": 0,
+                "out": 28.975192743764172,
+                "start": 0,
+                "rate": 1,
+                "volume": 1
+              }
+            ]
+          }
+        ],
+        "watermarks": {
+          "text": null,
+          "image": null,
+          "timing": {
+            "mode": "whole_project",
+            "end_sec": null,
+            "start_sec": 0
+          }
+        }
+      }
+    },
+    {
+      "id": "UI-42",
+      "evidenceId": "UI-42",
+      "label": "添加文字水印TEST",
+      "status": "Passed",
+      "automationStatus": "Passed",
+      "review": null,
+      "beforeRevision": 76,
+      "afterRevision": 77,
+      "changed": true,
+      "reason": null,
+      "screenshot": "UI-42-passed.png",
+      "observation": {
+        "subtitleDiff": [],
+        "mediaTracks": [
+          {
+            "type": "video",
+            "trackId": "edit_e0429b05d7c943c6244f2dd637d15918",
+            "muted": true,
+            "visible": true,
+            "clips": [
+              {
+                "clipId": "edit_d10594184fa1dd722cde996ce6e0c7ca",
+                "fileId": "file_cloud_77n2ver2wfe2enu7bddp42egdx",
+                "in": 0,
+                "out": 30.630599999999998,
+                "start": 0,
+                "rate": 1,
+                "volume": 1
+              }
+            ]
+          },
+          {
+            "type": "audio",
+            "role": "source",
+            "trackId": "edit_d0860d76beaf26cbadd9c9ef92d6406a",
+            "muted": true,
+            "clips": [
+              {
+                "clipId": "edit_d2c907cb3b4c2d40e4e1fdf6ed851100",
+                "fileId": "file_cloud_77n2ver2wfe2enu7bddp42egdx",
+                "in": 0,
+                "out": 30.630599999999998,
+                "start": 0,
+                "rate": 1,
+                "volume": 1
+              }
+            ]
+          },
+          {
+            "type": "audio",
+            "role": "narration",
+            "trackId": "artifact:audio_files:file_cloud_4mfgdwukxlkb7rfbc4ryfd3hjr",
+            "muted": false,
+            "clips": [
+              {
+                "clipId": "artifact:audio_files:file_cloud_4mfgdwukxlkb7rfbc4ryfd3hjr:clip",
+                "fileId": "file_cloud_4mfgdwukxlkb7rfbc4ryfd3hjr",
+                "in": 0,
+                "out": 28.975192743764172,
+                "start": 0,
+                "rate": 1,
+                "volume": 1
+              }
+            ]
+          }
+        ],
+        "watermarks": {
+          "text": {
+            "text": "TEST",
+            "color": "#F6BBD3",
+            "opacity": 0.75,
+            "font_name": "Geist",
+            "font_size": 28,
+            "placement": {
+              "mode": "preset",
+              "preset": "top-right",
+              "position": null,
+              "margin_px": 24
+            },
+            "font_weight": 600,
+            "watermark_id": "4b483767-a3e7-4ecd-a234-22f6a410297a"
+          },
+          "image": null,
+          "timing": {
+            "mode": "whole_project",
+            "end_sec": null,
+            "start_sec": 0
+          }
+        }
+      }
+    },
+    {
+      "id": "UI-43",
+      "evidenceId": "UI-43",
+      "label": "字幕字号0非法值拦截",
+      "status": "Passed",
+      "automationStatus": "Passed",
+      "review": null,
+      "beforeRevision": 70,
+      "afterRevision": 70,
+      "changed": false,
+      "reason": null,
+      "screenshot": "UI-43-passed.png",
+      "observation": {
+        "subtitleDiff": [],
+        "mediaTracks": [
+          {
+            "type": "video",
+            "trackId": "edit_e0429b05d7c943c6244f2dd637d15918",
+            "muted": true,
+            "visible": true,
+            "clips": [
+              {
+                "clipId": "edit_d10594184fa1dd722cde996ce6e0c7ca",
+                "fileId": "file_cloud_77n2ver2wfe2enu7bddp42egdx",
+                "in": 0,
+                "out": 30.630599999999998,
+                "start": 0,
+                "rate": 1,
+                "volume": 1
+              }
+            ]
+          },
+          {
+            "type": "audio",
+            "role": "source",
+            "trackId": "edit_d0860d76beaf26cbadd9c9ef92d6406a",
+            "muted": true,
+            "clips": [
+              {
+                "clipId": "edit_d2c907cb3b4c2d40e4e1fdf6ed851100",
+                "fileId": "file_cloud_77n2ver2wfe2enu7bddp42egdx",
+                "in": 0,
+                "out": 30.630599999999998,
+                "start": 0,
+                "rate": 1,
+                "volume": 1
+              }
+            ]
+          },
+          {
+            "type": "audio",
+            "role": "narration",
+            "trackId": "artifact:audio_files:file_cloud_4mfgdwukxlkb7rfbc4ryfd3hjr",
+            "muted": false,
+            "clips": [
+              {
+                "clipId": "artifact:audio_files:file_cloud_4mfgdwukxlkb7rfbc4ryfd3hjr:clip",
+                "fileId": "file_cloud_4mfgdwukxlkb7rfbc4ryfd3hjr",
+                "in": 0,
+                "out": 28.975192743764172,
+                "start": 0,
+                "rate": 1,
+                "volume": 1
+              }
+            ]
+          }
+        ],
+        "watermarks": {
+          "text": null,
+          "image": null,
+          "timing": {
+            "mode": "whole_project",
+            "end_sec": null,
+            "start_sec": 0
+          }
+        }
+      }
+    },
+    {
+      "id": "UI-44",
+      "evidenceId": "UI-44",
+      "label": "字幕Y坐标1.20越界拦截",
+      "status": "Passed",
+      "automationStatus": "Passed",
+      "review": null,
+      "beforeRevision": 70,
+      "afterRevision": 70,
+      "changed": false,
+      "reason": null,
+      "screenshot": "UI-44-passed.png",
+      "observation": {
+        "subtitleDiff": [],
+        "mediaTracks": [
+          {
+            "type": "video",
+            "trackId": "edit_e0429b05d7c943c6244f2dd637d15918",
+            "muted": true,
+            "visible": true,
+            "clips": [
+              {
+                "clipId": "edit_d10594184fa1dd722cde996ce6e0c7ca",
+                "fileId": "file_cloud_77n2ver2wfe2enu7bddp42egdx",
+                "in": 0,
+                "out": 30.630599999999998,
+                "start": 0,
+                "rate": 1,
+                "volume": 1
+              }
+            ]
+          },
+          {
+            "type": "audio",
+            "role": "source",
+            "trackId": "edit_d0860d76beaf26cbadd9c9ef92d6406a",
+            "muted": true,
+            "clips": [
+              {
+                "clipId": "edit_d2c907cb3b4c2d40e4e1fdf6ed851100",
+                "fileId": "file_cloud_77n2ver2wfe2enu7bddp42egdx",
+                "in": 0,
+                "out": 30.630599999999998,
+                "start": 0,
+                "rate": 1,
+                "volume": 1
+              }
+            ]
+          },
+          {
+            "type": "audio",
+            "role": "narration",
+            "trackId": "artifact:audio_files:file_cloud_4mfgdwukxlkb7rfbc4ryfd3hjr",
+            "muted": false,
+            "clips": [
+              {
+                "clipId": "artifact:audio_files:file_cloud_4mfgdwukxlkb7rfbc4ryfd3hjr:clip",
+                "fileId": "file_cloud_4mfgdwukxlkb7rfbc4ryfd3hjr",
+                "in": 0,
+                "out": 28.975192743764172,
+                "start": 0,
+                "rate": 1,
+                "volume": 1
+              }
+            ]
+          }
+        ],
+        "watermarks": {
+          "text": null,
+          "image": null,
+          "timing": {
+            "mode": "whole_project",
+            "end_sec": null,
+            "start_sec": 0
+          }
+        }
+      }
+    },
+    {
+      "id": "UI-45",
+      "evidenceId": "UI-45",
+      "label": "字幕默认颜色白色改为绿色",
+      "status": "Passed",
+      "automationStatus": "Passed",
+      "review": null,
+      "beforeRevision": 70,
+      "afterRevision": 71,
+      "changed": true,
+      "reason": null,
+      "screenshot": "UI-45-passed.png",
+      "observation": {
+        "styles": {
+          "color": "#00ff00",
+          "effect": "regular",
+          "outline": {
+            "color": "#000000",
+            "width": 7.5,
+            "enabled": true
+          },
+          "case_mode": "original",
+          "font_name": "Liberation Sans",
+          "font_size": 90,
+          "placement": {
+            "mode": "preset",
+            "preset": "bottom",
+            "position": null,
+            "margin_px": 90
+          },
+          "background": {
+            "color": "#000000",
+            "enabled": true,
+            "opacity": 0
+          },
+          "font_weight": 400,
+          "bold_override": false,
+          "highlight_color": "#FFFFFF",
+          "highlight_typography": {
+            "bold": false,
+            "italic": false,
+            "font_name": null,
+            "font_size": null,
+            "underline": false
+          }
+        },
+        "subtitleDiff": [],
+        "mediaTracks": [
+          {
+            "type": "video",
+            "trackId": "edit_e0429b05d7c943c6244f2dd637d15918",
+            "muted": true,
+            "visible": true,
+            "clips": [
+              {
+                "clipId": "edit_d10594184fa1dd722cde996ce6e0c7ca",
+                "fileId": "file_cloud_77n2ver2wfe2enu7bddp42egdx",
+                "in": 0,
+                "out": 30.630599999999998,
+                "start": 0,
+                "rate": 1,
+                "volume": 1
+              }
+            ]
+          },
+          {
+            "type": "audio",
+            "role": "source",
+            "trackId": "edit_d0860d76beaf26cbadd9c9ef92d6406a",
+            "muted": true,
+            "clips": [
+              {
+                "clipId": "edit_d2c907cb3b4c2d40e4e1fdf6ed851100",
+                "fileId": "file_cloud_77n2ver2wfe2enu7bddp42egdx",
+                "in": 0,
+                "out": 30.630599999999998,
+                "start": 0,
+                "rate": 1,
+                "volume": 1
+              }
+            ]
+          },
+          {
+            "type": "audio",
+            "role": "narration",
+            "trackId": "artifact:audio_files:file_cloud_4mfgdwukxlkb7rfbc4ryfd3hjr",
+            "muted": false,
+            "clips": [
+              {
+                "clipId": "artifact:audio_files:file_cloud_4mfgdwukxlkb7rfbc4ryfd3hjr:clip",
+                "fileId": "file_cloud_4mfgdwukxlkb7rfbc4ryfd3hjr",
+                "in": 0,
+                "out": 28.975192743764172,
+                "start": 0,
+                "rate": 1,
+                "volume": 1
+              }
+            ]
+          }
+        ],
+        "watermarks": {
+          "text": null,
+          "image": null,
+          "timing": {
+            "mode": "whole_project",
+            "end_sec": null,
+            "start_sec": 0
+          }
+        }
+      }
+    },
+    {
+      "id": "UI-46",
+      "evidenceId": "UI-46",
+      "label": "新增空字幕填写并提交文字",
+      "status": "Passed",
+      "automationStatus": "Passed",
+      "review": null,
+      "beforeRevision": 73,
+      "afterRevision": 74,
+      "changed": true,
+      "reason": null,
+      "screenshot": "UI-46-passed.png",
+      "observation": {
+        "subtitleDiff": [
+          {
+            "text": "TEST caption",
+            "after": "cue_aa522fb0541ec66c28793e9e",
+            "end_sec": 30.630599999999998,
+            "identity": "a3e17470-8d3c-49cc-a092-6811ac47bf4e",
+            "start_sec": 28.2,
+            "speaker_id": null,
+            "manual_layout": null
+          }
+        ],
+        "mediaTracks": [
+          {
+            "type": "video",
+            "trackId": "edit_e0429b05d7c943c6244f2dd637d15918",
+            "muted": true,
+            "visible": true,
+            "clips": [
+              {
+                "clipId": "edit_d10594184fa1dd722cde996ce6e0c7ca",
+                "fileId": "file_cloud_77n2ver2wfe2enu7bddp42egdx",
+                "in": 0,
+                "out": 30.630599999999998,
+                "start": 0,
+                "rate": 1,
+                "volume": 1
+              }
+            ]
+          },
+          {
+            "type": "audio",
+            "role": "source",
+            "trackId": "edit_d0860d76beaf26cbadd9c9ef92d6406a",
+            "muted": true,
+            "clips": [
+              {
+                "clipId": "edit_d2c907cb3b4c2d40e4e1fdf6ed851100",
+                "fileId": "file_cloud_77n2ver2wfe2enu7bddp42egdx",
+                "in": 0,
+                "out": 30.630599999999998,
+                "start": 0,
+                "rate": 1,
+                "volume": 1
+              }
+            ]
+          },
+          {
+            "type": "audio",
+            "role": "narration",
+            "trackId": "artifact:audio_files:file_cloud_4mfgdwukxlkb7rfbc4ryfd3hjr",
+            "muted": false,
+            "clips": [
+              {
+                "clipId": "artifact:audio_files:file_cloud_4mfgdwukxlkb7rfbc4ryfd3hjr:clip",
+                "fileId": "file_cloud_4mfgdwukxlkb7rfbc4ryfd3hjr",
+                "in": 0,
+                "out": 28.975192743764172,
+                "start": 0,
+                "rate": 1,
+                "volume": 1
+              }
+            ]
+          }
+        ],
+        "watermarks": {
+          "text": null,
+          "image": null,
+          "timing": {
+            "mode": "whole_project",
+            "end_sec": null,
+            "start_sec": 0
+          }
+        }
+      }
+    },
+    {
+      "id": "UI-47",
+      "evidenceId": "UI-47",
+      "label": "文字水印内容改为TEST 2",
+      "status": "Passed",
+      "automationStatus": "Passed",
+      "review": null,
+      "beforeRevision": 77,
+      "afterRevision": 78,
+      "changed": true,
+      "reason": null,
+      "screenshot": "UI-47-passed.png",
+      "observation": {
+        "subtitleDiff": [],
+        "mediaTracks": [
+          {
+            "type": "video",
+            "trackId": "edit_e0429b05d7c943c6244f2dd637d15918",
+            "muted": true,
+            "visible": true,
+            "clips": [
+              {
+                "clipId": "edit_d10594184fa1dd722cde996ce6e0c7ca",
+                "fileId": "file_cloud_77n2ver2wfe2enu7bddp42egdx",
+                "in": 0,
+                "out": 30.630599999999998,
+                "start": 0,
+                "rate": 1,
+                "volume": 1
+              }
+            ]
+          },
+          {
+            "type": "audio",
+            "role": "source",
+            "trackId": "edit_d0860d76beaf26cbadd9c9ef92d6406a",
+            "muted": true,
+            "clips": [
+              {
+                "clipId": "edit_d2c907cb3b4c2d40e4e1fdf6ed851100",
+                "fileId": "file_cloud_77n2ver2wfe2enu7bddp42egdx",
+                "in": 0,
+                "out": 30.630599999999998,
+                "start": 0,
+                "rate": 1,
+                "volume": 1
+              }
+            ]
+          },
+          {
+            "type": "audio",
+            "role": "narration",
+            "trackId": "artifact:audio_files:file_cloud_4mfgdwukxlkb7rfbc4ryfd3hjr",
+            "muted": false,
+            "clips": [
+              {
+                "clipId": "artifact:audio_files:file_cloud_4mfgdwukxlkb7rfbc4ryfd3hjr:clip",
+                "fileId": "file_cloud_4mfgdwukxlkb7rfbc4ryfd3hjr",
+                "in": 0,
+                "out": 28.975192743764172,
+                "start": 0,
+                "rate": 1,
+                "volume": 1
+              }
+            ]
+          }
+        ],
+        "watermarks": {
+          "text": {
+            "text": "TEST 2",
+            "color": "#F6BBD3",
+            "opacity": 0.75,
+            "font_name": "Geist",
+            "font_size": 28,
+            "placement": {
+              "mode": "preset",
+              "preset": "top-right",
+              "position": null,
+              "margin_px": 24
+            },
+            "font_weight": 600,
+            "watermark_id": "4b483767-a3e7-4ecd-a234-22f6a410297a"
+          },
+          "image": null,
+          "timing": {
+            "mode": "whole_project",
+            "end_sec": null,
+            "start_sec": 0
+          }
+        }
+      }
+    },
+    {
+      "id": "UI-48",
+      "evidenceId": "UI-48",
+      "label": "文字水印不透明度75%改为50%",
+      "status": "Passed",
+      "automationStatus": "Passed",
+      "review": null,
+      "beforeRevision": 79,
+      "afterRevision": 80,
+      "changed": true,
+      "reason": null,
+      "screenshot": "UI-48-passed.png",
+      "observation": {
+        "subtitleDiff": [],
+        "mediaTracks": [
+          {
+            "type": "video",
+            "trackId": "edit_e0429b05d7c943c6244f2dd637d15918",
+            "muted": true,
+            "visible": true,
+            "clips": [
+              {
+                "clipId": "edit_d10594184fa1dd722cde996ce6e0c7ca",
+                "fileId": "file_cloud_77n2ver2wfe2enu7bddp42egdx",
+                "in": 0,
+                "out": 30.630599999999998,
+                "start": 0,
+                "rate": 1,
+                "volume": 1
+              }
+            ]
+          },
+          {
+            "type": "audio",
+            "role": "source",
+            "trackId": "edit_d0860d76beaf26cbadd9c9ef92d6406a",
+            "muted": true,
+            "clips": [
+              {
+                "clipId": "edit_d2c907cb3b4c2d40e4e1fdf6ed851100",
+                "fileId": "file_cloud_77n2ver2wfe2enu7bddp42egdx",
+                "in": 0,
+                "out": 30.630599999999998,
+                "start": 0,
+                "rate": 1,
+                "volume": 1
+              }
+            ]
+          },
+          {
+            "type": "audio",
+            "role": "narration",
+            "trackId": "artifact:audio_files:file_cloud_4mfgdwukxlkb7rfbc4ryfd3hjr",
+            "muted": false,
+            "clips": [
+              {
+                "clipId": "artifact:audio_files:file_cloud_4mfgdwukxlkb7rfbc4ryfd3hjr:clip",
+                "fileId": "file_cloud_4mfgdwukxlkb7rfbc4ryfd3hjr",
+                "in": 0,
+                "out": 28.975192743764172,
+                "start": 0,
+                "rate": 1,
+                "volume": 1
+              }
+            ]
+          }
+        ],
+        "watermarks": {
+          "text": {
+            "text": "TEST",
+            "color": "#F6BBD3",
+            "opacity": 0.5,
+            "font_name": "Geist",
+            "font_size": 28,
+            "placement": {
+              "mode": "preset",
+              "preset": "top-right",
+              "position": null,
+              "margin_px": 24
+            },
+            "font_weight": 600,
+            "watermark_id": "4b483767-a3e7-4ecd-a234-22f6a410297a"
+          },
+          "image": null,
+          "timing": {
+            "mode": "whole_project",
+            "end_sec": null,
+            "start_sec": 0
+          }
+        }
+      }
+    },
+    {
+      "id": "UI-49",
+      "evidenceId": "UI-49",
+      "label": "关闭水印显示",
+      "status": "Passed",
+      "automationStatus": "Passed",
+      "review": null,
+      "beforeRevision": 81,
+      "afterRevision": 82,
+      "changed": true,
+      "reason": null,
+      "screenshot": "UI-49-passed.png",
+      "observation": {
+        "subtitleDiff": [],
+        "mediaTracks": [
+          {
+            "type": "video",
+            "trackId": "edit_e0429b05d7c943c6244f2dd637d15918",
+            "muted": true,
+            "visible": true,
+            "clips": [
+              {
+                "clipId": "edit_d10594184fa1dd722cde996ce6e0c7ca",
+                "fileId": "file_cloud_77n2ver2wfe2enu7bddp42egdx",
+                "in": 0,
+                "out": 30.630599999999998,
+                "start": 0,
+                "rate": 1,
+                "volume": 1
+              }
+            ]
+          },
+          {
+            "type": "audio",
+            "role": "source",
+            "trackId": "edit_d0860d76beaf26cbadd9c9ef92d6406a",
+            "muted": true,
+            "clips": [
+              {
+                "clipId": "edit_d2c907cb3b4c2d40e4e1fdf6ed851100",
+                "fileId": "file_cloud_77n2ver2wfe2enu7bddp42egdx",
+                "in": 0,
+                "out": 30.630599999999998,
+                "start": 0,
+                "rate": 1,
+                "volume": 1
+              }
+            ]
+          },
+          {
+            "type": "audio",
+            "role": "narration",
+            "trackId": "artifact:audio_files:file_cloud_4mfgdwukxlkb7rfbc4ryfd3hjr",
+            "muted": false,
+            "clips": [
+              {
+                "clipId": "artifact:audio_files:file_cloud_4mfgdwukxlkb7rfbc4ryfd3hjr:clip",
+                "fileId": "file_cloud_4mfgdwukxlkb7rfbc4ryfd3hjr",
+                "in": 0,
+                "out": 28.975192743764172,
+                "start": 0,
+                "rate": 1,
+                "volume": 1
+              }
+            ]
+          }
+        ],
+        "watermarks": {
+          "text": {
+            "text": "TEST",
+            "color": "#F6BBD3",
+            "opacity": 0.75,
+            "font_name": "Geist",
+            "font_size": 28,
+            "placement": {
+              "mode": "preset",
+              "preset": "top-right",
+              "position": null,
+              "margin_px": 24
+            },
+            "font_weight": 600,
+            "watermark_id": "4b483767-a3e7-4ecd-a234-22f6a410297a"
+          },
+          "image": null,
+          "timing": {
+            "mode": "whole_project",
+            "end_sec": null,
+            "start_sec": 0
+          },
+          "enabled": false
+        }
+      }
+    },
+    {
+      "id": "UI-50",
+      "evidenceId": "UI-50",
+      "label": "水印全片改为时间范围",
+      "status": "Passed",
+      "automationStatus": "Passed",
+      "review": null,
+      "beforeRevision": 83,
+      "afterRevision": 84,
+      "changed": true,
+      "reason": null,
+      "screenshot": "UI-50-passed.png",
+      "observation": {
+        "subtitleDiff": [],
+        "mediaTracks": [
+          {
+            "type": "video",
+            "trackId": "edit_e0429b05d7c943c6244f2dd637d15918",
+            "muted": true,
+            "visible": true,
+            "clips": [
+              {
+                "clipId": "edit_d10594184fa1dd722cde996ce6e0c7ca",
+                "fileId": "file_cloud_77n2ver2wfe2enu7bddp42egdx",
+                "in": 0,
+                "out": 30.630599999999998,
+                "start": 0,
+                "rate": 1,
+                "volume": 1
+              }
+            ]
+          },
+          {
+            "type": "audio",
+            "role": "source",
+            "trackId": "edit_d0860d76beaf26cbadd9c9ef92d6406a",
+            "muted": true,
+            "clips": [
+              {
+                "clipId": "edit_d2c907cb3b4c2d40e4e1fdf6ed851100",
+                "fileId": "file_cloud_77n2ver2wfe2enu7bddp42egdx",
+                "in": 0,
+                "out": 30.630599999999998,
+                "start": 0,
+                "rate": 1,
+                "volume": 1
+              }
+            ]
+          },
+          {
+            "type": "audio",
+            "role": "narration",
+            "trackId": "artifact:audio_files:file_cloud_4mfgdwukxlkb7rfbc4ryfd3hjr",
+            "muted": false,
+            "clips": [
+              {
+                "clipId": "artifact:audio_files:file_cloud_4mfgdwukxlkb7rfbc4ryfd3hjr:clip",
+                "fileId": "file_cloud_4mfgdwukxlkb7rfbc4ryfd3hjr",
+                "in": 0,
+                "out": 28.975192743764172,
+                "start": 0,
+                "rate": 1,
+                "volume": 1
+              }
+            ]
+          }
+        ],
+        "watermarks": {
+          "text": {
+            "text": "TEST",
+            "color": "#F6BBD3",
+            "opacity": 0.75,
+            "font_name": "Geist",
+            "font_size": 28,
+            "placement": {
+              "mode": "preset",
+              "preset": "top-right",
+              "position": null,
+              "margin_px": 24
+            },
+            "font_weight": 600,
+            "watermark_id": "4b483767-a3e7-4ecd-a234-22f6a410297a"
+          },
+          "image": null,
+          "timing": {
+            "mode": "range",
+            "end_sec": 30.630599999999998,
+            "start_sec": 0
+          }
+        }
+      }
+    },
+    {
+      "id": "UI-51",
+      "evidenceId": "UI-51",
+      "label": "删除文字水印",
+      "status": "Passed",
+      "automationStatus": "Passed",
+      "review": null,
+      "beforeRevision": 85,
+      "afterRevision": 86,
+      "changed": true,
+      "reason": null,
+      "screenshot": "UI-51-passed.png",
+      "observation": {
+        "subtitleDiff": [],
+        "mediaTracks": [
+          {
+            "type": "video",
+            "trackId": "edit_e0429b05d7c943c6244f2dd637d15918",
+            "muted": true,
+            "visible": true,
+            "clips": [
+              {
+                "clipId": "edit_d10594184fa1dd722cde996ce6e0c7ca",
+                "fileId": "file_cloud_77n2ver2wfe2enu7bddp42egdx",
+                "in": 0,
+                "out": 30.630599999999998,
+                "start": 0,
+                "rate": 1,
+                "volume": 1
+              }
+            ]
+          },
+          {
+            "type": "audio",
+            "role": "source",
+            "trackId": "edit_d0860d76beaf26cbadd9c9ef92d6406a",
+            "muted": true,
+            "clips": [
+              {
+                "clipId": "edit_d2c907cb3b4c2d40e4e1fdf6ed851100",
+                "fileId": "file_cloud_77n2ver2wfe2enu7bddp42egdx",
+                "in": 0,
+                "out": 30.630599999999998,
+                "start": 0,
+                "rate": 1,
+                "volume": 1
+              }
+            ]
+          },
+          {
+            "type": "audio",
+            "role": "narration",
+            "trackId": "artifact:audio_files:file_cloud_4mfgdwukxlkb7rfbc4ryfd3hjr",
+            "muted": false,
+            "clips": [
+              {
+                "clipId": "artifact:audio_files:file_cloud_4mfgdwukxlkb7rfbc4ryfd3hjr:clip",
+                "fileId": "file_cloud_4mfgdwukxlkb7rfbc4ryfd3hjr",
+                "in": 0,
+                "out": 28.975192743764172,
+                "start": 0,
+                "rate": 1,
+                "volume": 1
+              }
+            ]
+          }
+        ],
+        "watermarks": {
+          "text": null,
+          "image": null,
+          "timing": {
+            "mode": "whole_project",
+            "end_sec": null,
+            "start_sec": 0
+          }
+        }
+      }
+    }
+  ],
+  "diagnostics": [
+    {
+      "id": "UI-15",
+      "reason": "粗体控件位于折叠的排版更多设置；未点击到控件、未写入",
+      "excludedFromBusinessCounts": true
+    },
+    {
+      "id": "UI-16",
+      "reason": "斜体控件位于折叠的排版更多设置；未点击到控件、未写入",
+      "excludedFromBusinessCounts": true
+    },
+    {
+      "id": "UI-20",
+      "reason": "位置输入位于折叠设置；未填写、未写入",
+      "excludedFromBusinessCounts": true
+    },
+    {
+      "id": "UI-22",
+      "reason": "透明度滑块位于折叠设置；未填写、未写入",
+      "excludedFromBusinessCounts": true
+    },
+    {
+      "id": "UI-26",
+      "reason": "新增空行实际已保存；原断言误将非空时间线片段计数当作新增行判据。原65新增已撤销66；另测面板定位与填写通过",
+      "excludedFromBusinessCounts": true
+    },
+    {
+      "id": "UI-39",
+      "reason": "逐帧按钮位于更多播放控制内；未先展开导致定位超时、未修改内容",
+      "excludedFromBusinessCounts": true
+    },
+    {
+      "id": "UI-20-refresh-screenshot",
+      "reason": "刷新后截图等待超时；没有重做业务编辑。补取真实刷新画面，并先撤销恢复前置后再执行其他项",
+      "excludedFromBusinessCounts": true
+    }
+  ],
+  "acceptanceReviews": {
+    "UI-13": {
+      "status": "Passed",
+      "reason": "验收复核：无效时间保持输入框并显示错误是正确行为；原自动断言误要求输入框关闭。原始Failed、截图及断言原因保留，不重写原记录。请求计数包含后台exchange，不能直接当成保存次数。",
+      "observation": "0.08起点／0.01结束显示“结束时间必须晚于开始时间”，版本22及保存内容不变"
+    },
+    "UI-19": {
+      "status": "Passed",
+      "reason": "验收复核：真实保存字段alignment=left，原自动断言误写text_align。业务结果、刷新及完整撤销恢复通过，保留原始Failed记录。",
+      "observation": "32→33保存左对齐alignment=left；刷新保持、撤销34恢复完整前置"
+    },
+    "UI-23": {
+      "status": "Passed",
+      "reason": "验收复核：当前Sunshine实际为#F0DD44／Geist／84，原断言误写另一颜色。模板已应用且仅样式变化，刷新与撤销通过，保留原始Failed记录。",
+      "observation": "36→37应用Sunshine：Geist、84px、#F0DD44；仅样式变化，刷新保持、撤销38恢复"
+    },
+    "UI-12": {
+      "status": "Failed",
+      "reason": "实际时间修改请求失败，页面报Manual layout does not cover parent，保存内容未变；不因原断言字段不适用而掩盖真实失败。",
+      "observation": "输入结束时间3.20→2.70秒报Manual layout does not cover parent；22→22未保存，与FWXC-356相同报错分支，未同步云效"
+    },
+    "UI-26": {
+      "observation": "72→73保存新增空行，滚至字幕面板底部可定位；空行未出现在非空时间线片段中不能据此判新增失败；UI-46完成填文后逐级撤销至76"
+    },
+    "UI-46": {
+      "observation": "73→74仅新增行填写TEST caption，保存/刷新后保持；撤销75恢复空行，再撤销新增76恢复原13条"
+    },
+    "UI-25": {
+      "observation": "62→63仅real?目标字幕改为删除表示（空文diff），其他字幕及媒体保持；刷新与撤销通过"
+    },
+    "UI-27": {
+      "observation": "66→67第一条排版分成0.08～1.50／1.50～3.20，文字范围0～27／27～60连续；其余对象保持"
+    },
+    "UI-28": {
+      "observation": "68→69字符数60→30重分句，拼接文字完整、其他媒体保持；刷新及撤销通过"
+    },
+    "UI-39": {
+      "observation": "29.97fps项目：播放头1.00→下一帧1.03→上一帧1.00→开头0；仅按页面0.01秒显示精度验收，不声明帧级测量精度"
+    },
+    "UI-40": {
+      "status": "Blocked",
+      "reason": "当前生产字幕面板没有字幕管理或SRT下载入口；仅有顶部视频导出。不绕过UI调用接口替代本例。",
+      "observation": "页面入口核对及截图完成，SRT实际导出/文件验收未执行，不计Passed"
+    },
+    "UI-41": {
+      "status": "Passed",
+      "reason": "仅在通过页面新产物卡下载，核对字节数与回执SHA256一致，ffprobe及ffmpeg完整音视频解码成功后，确认基础导出通过。",
+      "observation": "版本88导出done；真实下载20,510,131字节，1920×1080、H.264/AAC、约30.631秒，哈希与回执一致；完整解码退出0，工程未改"
+    }
+  },
+  "exportVerification": {
+    "taskId": "2218cbd8-efa6-412f-8dc4-af9d814fe1b2",
+    "fileId": "file_cloud_szaqwvdqeyh2mknvezwutq2pmt",
+    "baseRevision": 88,
+    "status": "done",
+    "filename": "editor-export.mp4",
+    "bytes": 20510131,
+    "sha256": "0d14e834ee58ba9049196d2d10315755b2b6862fe5ff34c40fa121d8cdbb8d62",
+    "width": 1920,
+    "height": 1080,
+    "durationSeconds": 30.630631,
+    "streams": [
+      {
+        "type": "video",
+        "codec": "h264",
+        "width": 1920,
+        "height": 1080
+      },
+      {
+        "type": "audio",
+        "codec": "aac",
+        "sampleRate": "48000"
+      }
+    ],
+    "downloadThroughUI": true,
+    "fullDecodeExitCode": 0,
+    "acceptanceScope": "基础导出、真实下载、文件可解码；尚未完成声音听感、逐句字幕及配音同步质量验收"
+  },
+  "complexTestsAllowed": false,
+  "files": [
+    {
+      "name": "UI-12-failed.png",
+      "bytes": 528347,
+      "sha256": "d27645ac9783a79b19f009d22d2d224add47af05706ea8b9c4dec773d682065a"
+    },
+    {
+      "name": "UI-13-failed.png",
+      "bytes": 525028,
+      "sha256": "ffda37f1c71540fb373c60ca7021e6a541f7ad905334dd6b4657f352b73b521e"
+    },
+    {
+      "name": "UI-14-passed.png",
+      "bytes": 570442,
+      "sha256": "f1f33945db4d78b28fcc968a433a34ccff13313dd8a243114137eeeadbb30272"
+    },
+    {
+      "name": "UI-15-direct-passed.png",
+      "bytes": 570356,
+      "sha256": "e494f3d0883751012294a90ebf97008b23cc90f643d9aa7263885ee3fa80183b"
+    },
+    {
+      "name": "UI-16-direct-passed.png",
+      "bytes": 575200,
+      "sha256": "ff91fe6b35ac298692de984c9f45103079382a95c18f36eb250570c5c793e083"
+    },
+    {
+      "name": "UI-17-passed.png",
+      "bytes": 570936,
+      "sha256": "dcb705f30567187a3ecb4f93b96bacda22c523de5c16e18fcd278d382452cf21"
+    },
+    {
+      "name": "UI-18-passed.png",
+      "bytes": 569889,
+      "sha256": "2cfd417a9f37b936f5fb7a867c4b6dd81434ace955defde8c4a0a45acd0f31c5"
+    },
+    {
+      "name": "UI-19-failed.png",
+      "bytes": 573804,
+      "sha256": "9fbc7731c2f4a76703146da24af6c8329215f29a4330b6020e8ba76118ec4623"
+    },
+    {
+      "name": "UI-20-direct-passed.png",
+      "bytes": 569960,
+      "sha256": "ba3324c01cf4b647405185baa1c29a5333e779a11c966dba2ffd6110cda09367"
+    },
+    {
+      "name": "UI-21-passed.png",
+      "bytes": 572633,
+      "sha256": "a5991aa759f3e5b84f38b4f553c9d608ba7b969446c77d27a45e3fb1235df65f"
+    },
+    {
+      "name": "UI-22-direct-passed.png",
+      "bytes": 563011,
+      "sha256": "fa41b0fa68b35fcb8fb2d37f934e4a1f3326febff9cc06584ce2344df181c030"
+    },
+    {
+      "name": "UI-23-failed.png",
+      "bytes": 568370,
+      "sha256": "1e4933b43681bee76d817f4068c3580a1b80ac2d2d1d76f7b69aa246e55ff12d"
+    },
+    {
+      "name": "UI-24-passed.png",
+      "bytes": 521994,
+      "sha256": "2ac5d5de9130afd0a0c60448b0cae8cedc88ddda314f2a830152c22e0c3e61bf"
+    },
+    {
+      "name": "UI-25-passed.png",
+      "bytes": 407825,
+      "sha256": "ad33103373ddde36c84e19a41b1c59d0c2c807804298a190b03254c94ae83f0e"
+    },
+    {
+      "name": "UI-26-direct-passed.png",
+      "bytes": 393597,
+      "sha256": "8893fc54bd89dfbe24aabdea4c221f14bba39a142250cde3dbd6f004656e2ca2"
+    },
+    {
+      "name": "UI-27-passed.png",
+      "bytes": 562474,
+      "sha256": "d0d33b0283c7b03d7ce0fcb5d1e37b9bd2b8b31c0cddba2a938ea3775c434642"
+    },
+    {
+      "name": "UI-28-passed.png",
+      "bytes": 525937,
+      "sha256": "b17afd039564129372671a10da81fed5dea2dfafdb4e773d803e41733e802ae5"
+    },
+    {
+      "name": "UI-29-passed.png",
+      "bytes": 353567,
+      "sha256": "76cd8d303828446f653576109d8d95b1ae8aac6a6a44c33b0394a8a4f69b1dfd"
+    },
+    {
+      "name": "UI-30-passed.png",
+      "bytes": 591718,
+      "sha256": "94371878b236c0b40e29815bf29f62a5adeb140fbd056fd745d1ca5eff7c7645"
+    },
+    {
+      "name": "UI-31-passed.png",
+      "bytes": 489684,
+      "sha256": "233ccbf3eb24ffa3b683b597af9b98b390c9ddc71c7c0084e527d5f636caccb9"
+    },
+    {
+      "name": "UI-32-passed.png",
+      "bytes": 280797,
+      "sha256": "e99222496dd536867b0851cfae99ede569123e04b6ddcae72824f3fbd1b185df"
+    },
+    {
+      "name": "UI-33-passed.png",
+      "bytes": 406127,
+      "sha256": "c5589fcc801a9a873287f4a23185463cf6b1a74935a36cd14f8f204baca7ec16"
+    },
+    {
+      "name": "UI-34-passed.png",
+      "bytes": 394009,
+      "sha256": "b821aec6feee34a032f09d4fb4b4a6c771fc77aef3487af3ae99cd9af7cd632b"
+    },
+    {
+      "name": "UI-35-passed.png",
+      "bytes": 406226,
+      "sha256": "0bfba6cf865d99e8a108a63b4c1409bdd1d9b9be11a4e4ae3056dce5e5602c2e"
+    },
+    {
+      "name": "UI-36-passed.png",
+      "bytes": 522948,
+      "sha256": "a89181005e77613b4efe781a1d192d74ea075a0ec318191ad220ea67d7113238"
+    },
+    {
+      "name": "UI-37-passed.png",
+      "bytes": 524238,
+      "sha256": "1cf5d5e7a25d47141c0c75ff0c31164a6fb66dd0b70e417705fc60826c62fe30"
+    },
+    {
+      "name": "UI-38-passed.png",
+      "bytes": 523095,
+      "sha256": "5bce2a6df625b4128143ce52acba09690198bf67083799097b098b7ed58afe76"
+    },
+    {
+      "name": "UI-39-direct-passed.png",
+      "bytes": 504276,
+      "sha256": "1852183913c4aa7e579cb06d30e84470908c4f4f20b83cf91213f02d95995992"
+    },
+    {
+      "name": "UI-40-blocked.png",
+      "bytes": 522687,
+      "sha256": "a7599f756562ab6ad6b1cf999b3c8a1de24a2fdec56333d4d907efcc2242ad39"
+    },
+    {
+      "name": "UI-41-passed.png",
+      "bytes": 474523,
+      "sha256": "4cb0298cb1617ea912878c07a49984305daa096f56fa15293f286471dc3bf3f7"
+    },
+    {
+      "name": "UI-42-passed.png",
+      "bytes": 523915,
+      "sha256": "abb16147cf0c7222afbe2c0c20640179dbe46662a7f96896a6006665df214142"
+    },
+    {
+      "name": "UI-43-passed.png",
+      "bytes": 572639,
+      "sha256": "e43ac2cad5215275069eca296b6540d4f70a7b01f8475df3e70aa83fda0fa1e3"
+    },
+    {
+      "name": "UI-44-passed.png",
+      "bytes": 570594,
+      "sha256": "ad88ccfbf21b7a63d96408785ce61d39acf12cd0b8334ce78b9946f831e6c3d0"
+    },
+    {
+      "name": "UI-45-passed.png",
+      "bytes": 570341,
+      "sha256": "64b0688166ac748011dfdab6311c2a2d4c208be2276cd747bca00e43c42a2978"
+    },
+    {
+      "name": "UI-46-passed.png",
+      "bytes": 396955,
+      "sha256": "e44ac78896e9fd6bf31ddc14e888e4e3f07ab0027e33f06d0142ab4b48cab167"
+    },
+    {
+      "name": "UI-47-passed.png",
+      "bytes": 524282,
+      "sha256": "178556a9c5a7c2e8b8d422c499c3042afcb0a7586c76e9c1ecd989241d8ab36e"
+    },
+    {
+      "name": "UI-48-passed.png",
+      "bytes": 523543,
+      "sha256": "2a8fb14cd966fbbfb76d333332089796871acbcd7690881942d9c064d9b3a695"
+    },
+    {
+      "name": "UI-49-passed.png",
+      "bytes": 513094,
+      "sha256": "a6e05372102d873a43b4293ce60e07685f47ae8077d7dd0bff3e0ffa35913512"
+    },
+    {
+      "name": "UI-50-passed.png",
+      "bytes": 531962,
+      "sha256": "12c3feef76d6c765212d208a1e978971df4db82eaaf6c07496f65fd850eb336f"
+    },
+    {
+      "name": "UI-51-passed.png",
+      "bytes": 516968,
+      "sha256": "3975b7498bffd242868a9b8d08a4d78e533ac98a0fc28d7e2077f918c9612c1b"
+    },
+    {
+      "name": "final-restored-refreshed.png",
+      "bytes": 524209,
+      "sha256": "da551a4f2af3dc23d96d77c0aa95185ff54313402ed53e9b749490e115fd9741"
+    }
+  ]
+}

@@ -17,8 +17,6 @@ try {
         $item = Invoke-YunxiaoRequest GET "$($config._base)/workitems/$ReferenceWorkitemId" $null $token $config $out
         if ($item.space.id -ne $config.projectId -or $item.workitemType.id -ne $config.workitemTypeId) { throw '参考工作项不属于目标项目/缺陷类型。' }
         $result['reference'] = @{ serialNumber = $item.serialNumber; assignedTo = $item.assignedTo; sprint = $item.sprint; labels = $item.labels }
-        $attachments = @(Invoke-YunxiaoRequest GET "$($config._base)/workitems/$ReferenceWorkitemId/attachments" $null $token $config $out)
-        $result.reference['attachmentCount'] = $attachments.Count
     }
     Write-YunxiaoJson (Join-Path $out 'result.json') $result
     $result | ConvertTo-Json -Depth 10

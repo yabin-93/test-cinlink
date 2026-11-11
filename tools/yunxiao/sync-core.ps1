@@ -24,7 +24,7 @@ function Read-YunxiaoPlan {
     if (-not $description.Contains($plan.key)) { $description = $description.Replace('**补充**', "**补充**`n`n同步标识：$($plan.key)") }
     Assert-YunxiaoEvidenceText $description
     $files = @(); $names = @()
-    if (@($plan.images).Count -lt 1) { throw '缺陷至少需要一张对应场景的真实PNG/JPEG截图。' }
+    if (@($plan.images).Count -lt 1) { throw '缺陷至少需要一张对应场景的真实PNG截图。' }
     foreach ($group in @('images', 'attachments')) {
         foreach ($item in @($plan[$group])) {
             if (-not $item) { continue }
@@ -34,13 +34,9 @@ function Read-YunxiaoPlan {
             $names += $name
             $extension = [IO.Path]::GetExtension($name).ToLowerInvariant()
             if ($group -eq 'images') {
-                if ($extension -notin @('.png', '.jpg', '.jpeg') -or -not $item.caption) { throw '截图须为PNG/JPEG并有对应场景caption。' }
+                if ($extension -ne '.png' -or -not $item.caption) { throw '截图须为PNG并有对应场景caption。' }
                 $bytes = [IO.File]::ReadAllBytes($file)
-                if ($extension -eq '.png') {
-                    if ($bytes.Length -lt 24 -or [Convert]::ToHexString($bytes[0..7]) -ne '89504E470D0A1A0A') { throw '截图不是有效PNG文件。' }
-                } else {
-                    if ($bytes.Length -lt 4 -or [Convert]::ToHexString($bytes[0..2]) -ne 'FFD8FF' -or [Convert]::ToHexString($bytes[($bytes.Length-2)..($bytes.Length-1)]) -ne 'FFD9') { throw '截图不是有效JPEG文件。' }
-                }
+                if ($bytes.Length -lt 24 -or [Convert]::ToHexString($bytes[0..7]) -ne '89504E470D0A1A0A') { throw '截图不是有效PNG文件。' }
             } elseif ($extension -notin @('.json', '.md', '.txt', '.srt', '.wav', '.mp4', '.pdf')) {
                 throw '补充附件仅支持已检查的JSON/MD/TXT/SRT/WAV/MP4/PDF；不直接上传原始trace或诊断压缩包。'
             }
@@ -51,7 +47,7 @@ function Read-YunxiaoPlan {
                 image = $group -eq 'images'; caption = $item.caption }
         }
     }
-    if (@($files | Where-Object image).Count -lt 1) { throw '缺陷至少需要一张真实PNG/JPEG截图。' }
+    if (@($files | Where-Object image).Count -lt 1) { throw '缺陷至少需要一张真实PNG截图。' }
     $metadata = @{} + $Config.defaults
     if ($plan.fields) { foreach ($key in $plan.fields.Keys) { $metadata[$key] = $plan.fields[$key] } }
     $body = @{ subject = $plan.subject; description = $description.Replace('__SCREENSHOTS__', '原始截图附件及嵌入正在同步。'); formatType = 'MARKDOWN';
@@ -133,8 +129,6 @@ function Invoke-YunxiaoDefectSync {
                 if ($state.verified -or $state.uploadAttempts[$file.name]) { throw '截图缺失或上次上传结果不确定；不会重复上传，请先核对附件。' }
                 $state.uploadAttempts[$file.name] = $true; Write-YunxiaoJson $checkpoint $state
                 $attached = & $Upload "$uri/attachments" $file
-                # Upload returns name, whereas the attachment list returns fileName.
-                if (-not $attached.fileName -and $attached.name) { $attached.fileName = $attached.name }
             }
             if (-not $attached.id -or $attached.size -ne $file.size -or $attached.fileName -cne $file.name) { throw '附件名称/ID/字节数不符，已停止。' }
             $state.attachments = @($state.attachments | Where-Object name -cne $file.name) + @(@{ name = $file.name; id = $attached.id; size = $file.size; sha256 = $file.sha256 })

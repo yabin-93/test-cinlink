@@ -1,25 +1,5 @@
 # 云效缺陷同步与家里电脑配置
 
-## 当前 Mac 配置（2026-11-06）
-
-本目录从用户提供的 `Downloads/yunxiao` 导入，已适配 macOS 的 curl 和凭据读取；Windows 继续使用原 DPAPI 缓存。Mac 无需 Homebrew，当前已安装微软官方 ARM64 PowerShell 7.6.9 到用户目录，下载归档与官方发布的 SHA256 一致。其他机器可按[微软安装说明](https://learn.microsoft.com/powershell/scripting/install/install-powershell-on-macos)安装 PowerShell 7.2+。
-
-从工程根目录运行：
-
-```sh
-tools/yunxiao/run.sh check.ps1 -ReferenceWorkitemId 94f54105c3405d30c9df57b56e
-tools/yunxiao/run.sh test-offline.ps1
-tools/yunxiao/run.sh sync-defect.ps1 -PlanPath reports/yunxiao/本次批次/plan.json -DryRun
-# 已有本次同步授权时执行同一计划：
-tools/yunxiao/run.sh sync-defect.ps1 -PlanPath reports/yunxiao/本次批次/plan.json -Execute
-```
-
-`run.sh` 优先使用 PATH 中的 `pwsh`，否则使用 `$HOME/.local/share/cinlink-powershell/current/pwsh`。支持从其他工作目录调用，默认只读 check；check/sync 自动使用已忽略的 `config.local.json`（存在时），也可以显式指定 `-ConfigPath`。
-
-Mac 凭据优先读取进程环境变量 `ALIBABA_CLOUD_YUNXIAO_ACCESS_TOKEN`，兼容 `YUNXIAO_ACCESS_TOKEN`；其次读取工程 `local.env`，再到 `.env.local`。同名键以先出现的为准。`init.ps1 -Force` 可在终端隐式输入并保存令牌，凭据文件权限限制为 0600。不要在聊天或命令行参数中传递密钥；本机配置文件不提交。
-
-当前专用令牌名 `cinlink-openapi-mac-20261106`，2027-02-04 到期，仅选项目协作的相关权限。`config.local.json` 默认字段取自已存在的 FWXC-357：负责人牛诗晴、迭代重构10-29、生产环境、中、3-一般。新批次按实际环境与影响覆盖 `plan.fields`；用户提供的 `config.json` 保留原 Windows 默认值，不能直接照搬为生产标签。配置验证不创建或修改缺陷；实际创建/上传仍需在下一次获授权的缺陷同步中验证。
-
 这套工具使用PowerShell 7.2+和curl调用云效OpenAPI：创建缺陷 → 上传真实截图及补充附件 → 正文嵌图 → 回读验证。目录可随整个工程移动，不再依赖办公室用户名、兄弟`test`工程、临时脚本或旧报告中的公共函数。
 
 ## 目录与入口
@@ -219,5 +199,3 @@ pwsh -NoProfile -File .\tools\yunxiao\check.ps1
 2026-11-06整理验证：7个脚本语法检查、20项离线检查通过；本机复制到独立带空格目录并从其他工作目录执行公开入口DryRun通过，真实PNG哈希已校验；复制后只读check读取cinlink-WEB及参考缺陷通过，云效写入0。家里实体电脑尚未执行，首次到家仍需init和check。详见[验证记录](../../docs/verification.md)。
 
 旧临时批次脚本和原凭据脚本保留历史，不批量改写或删除；新任务优先使用本目录入口。
-
-2026-11-09：截图同步支持原始PNG/JPEG并核对文件签名、SHA256；JPEG按image/jpeg上传。上传响应的name字段规范为fileName，附件列表仍按fileName及ID/字节数回读，兼容官方API两种响应结构。

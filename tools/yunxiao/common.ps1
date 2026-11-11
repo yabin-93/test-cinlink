@@ -33,8 +33,7 @@ function Invoke-YunxiaoRequest {
           [hashtable]$Config, [string]$WorkingDir, [string]$UploadPath)
     Assert-YunxiaoUri $Uri $Config
     if (-not $Token -or $Token -match "[`r`n]") { throw '无有效云效凭据。' }
-    $curlCommand = if ($IsWindows) { 'curl.exe' } else { 'curl' }
-    $curlPath = (Get-Command $curlCommand -CommandType Application -ErrorAction Stop).Source
+    $null = Get-Command curl.exe -ErrorAction Stop
     $null = New-Item -ItemType Directory -Path $WorkingDir -Force
     $tag = [Guid]::NewGuid().ToString('N')
     $responsePath = Join-Path $WorkingDir "$tag-response.json"
@@ -43,7 +42,7 @@ function Invoke-YunxiaoRequest {
     $safeRead = $Method -eq 'GET' -or ($Method -eq 'POST' -and $Uri.EndsWith('/workitems:search'))
     $limit = if ($safeRead) { 3 } else { 1 }
     for ($attempt = 1; $attempt -le $limit; $attempt++) {
-        $start = [Diagnostics.ProcessStartInfo]::new($curlPath)
+        $start = [Diagnostics.ProcessStartInfo]::new('curl.exe')
         $start.UseShellExecute = $false; $start.CreateNoWindow = $true
         $start.RedirectStandardInput = $true; $start.RedirectStandardOutput = $true; $start.RedirectStandardError = $true
         foreach ($arg in @('--config', '-', '--silent', '--show-error', '--http1.1', '--connect-timeout', '10', '--max-time', '50',
@@ -55,7 +54,7 @@ function Invoke-YunxiaoRequest {
         }
         if ($UploadPath) {
             if ($UploadPath -match "[`r`n]") { throw '附件路径含非法换行。' }
-            $types = @{ '.png' = 'image/png'; '.jpg' = 'image/jpeg'; '.jpeg' = 'image/jpeg'; '.json' = 'application/json'; '.md' = 'text/markdown'; '.txt' = 'text/plain';
+            $types = @{ '.png' = 'image/png'; '.json' = 'application/json'; '.md' = 'text/markdown'; '.txt' = 'text/plain';
                 '.srt' = 'application/x-subrip'; '.wav' = 'audio/wav'; '.mp4' = 'video/mp4'; '.pdf' = 'application/pdf' }
             $mime = $types[[IO.Path]::GetExtension($UploadPath).ToLowerInvariant()]
             if (-not $mime) { throw '不支持的附件类型。' }

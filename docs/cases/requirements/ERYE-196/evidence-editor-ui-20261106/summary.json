@@ -1,0 +1,922 @@
+{
+  "target": {
+    "projectId": "b34e8f29-25ac-4dc0-968f-76aabdd20e13",
+    "conversationId": "8bd67283-c5ae-49d8-9789-78413b3bfa8c",
+    "projectName": "英文30S.mp4"
+  },
+  "cases": [
+    {
+      "id": "UI-01",
+      "kind": "case",
+      "label": "编辑器预览播放/暂停",
+      "status": "Passed",
+      "reason": null,
+      "startedAt": "2026-11-06T10:50:56.391Z",
+      "finishedAt": "2026-11-06T10:50:59.308Z",
+      "projectId": "b34e8f29-25ac-4dc0-968f-76aabdd20e13",
+      "conversationId": "8bd67283-c5ae-49d8-9789-78413b3bfa8c",
+      "beforeRevision": 8,
+      "afterRevision": 8,
+      "changed": false,
+      "screenshot": "UI-01-passed.png",
+      "requestCount": 2
+    },
+    {
+      "id": "UI-02-direct",
+      "kind": "case",
+      "label": "直接修改一条字幕文字",
+      "status": "Passed",
+      "reason": null,
+      "startedAt": "2026-11-06T10:52:33.998Z",
+      "finishedAt": "2026-11-06T10:52:36.846Z",
+      "projectId": "b34e8f29-25ac-4dc0-968f-76aabdd20e13",
+      "conversationId": "8bd67283-c5ae-49d8-9789-78413b3bfa8c",
+      "beforeRevision": 8,
+      "afterRevision": 9,
+      "changed": true,
+      "screenshot": "UI-02-direct-passed.png",
+      "requestCount": 2
+    },
+    {
+      "id": "UI-03",
+      "kind": "case",
+      "label": "页面撤销一次",
+      "status": "Passed",
+      "reason": null,
+      "startedAt": "2026-11-06T10:52:37.541Z",
+      "finishedAt": "2026-11-06T10:52:39.319Z",
+      "projectId": "b34e8f29-25ac-4dc0-968f-76aabdd20e13",
+      "conversationId": "8bd67283-c5ae-49d8-9789-78413b3bfa8c",
+      "beforeRevision": 9,
+      "afterRevision": 10,
+      "changed": true,
+      "screenshot": "UI-03-passed.png",
+      "requestCount": 2
+    },
+    {
+      "id": "UI-04",
+      "kind": "case",
+      "label": "页面重做一次",
+      "status": "Passed",
+      "reason": null,
+      "startedAt": "2026-11-06T10:52:39.716Z",
+      "finishedAt": "2026-11-06T10:52:41.726Z",
+      "projectId": "b34e8f29-25ac-4dc0-968f-76aabdd20e13",
+      "conversationId": "8bd67283-c5ae-49d8-9789-78413b3bfa8c",
+      "beforeRevision": 10,
+      "afterRevision": 11,
+      "changed": true,
+      "screenshot": "UI-04-passed.png",
+      "requestCount": 2
+    },
+    {
+      "id": "UI-06",
+      "kind": "case",
+      "label": "直接点击分割视频",
+      "status": "Passed",
+      "reason": null,
+      "startedAt": "2026-11-06T10:54:08.261Z",
+      "finishedAt": "2026-11-06T10:54:11.498Z",
+      "projectId": "b34e8f29-25ac-4dc0-968f-76aabdd20e13",
+      "conversationId": "8bd67283-c5ae-49d8-9789-78413b3bfa8c",
+      "beforeRevision": 12,
+      "afterRevision": 13,
+      "changed": true,
+      "screenshot": "UI-06-passed.png",
+      "requestCount": 3
+    },
+    {
+      "id": "UI-07-page",
+      "kind": "case",
+      "label": "拖左手柄裁视频片头约2秒",
+      "status": "Passed",
+      "reason": null,
+      "startedAt": "2026-11-06T10:59:31.103Z",
+      "finishedAt": "2026-11-06T10:59:36.118Z",
+      "projectId": "b34e8f29-25ac-4dc0-968f-76aabdd20e13",
+      "conversationId": "8bd67283-c5ae-49d8-9789-78413b3bfa8c",
+      "beforeRevision": 14,
+      "afterRevision": 15,
+      "changed": true,
+      "screenshot": "UI-07-page-passed.png",
+      "requestCount": 3
+    },
+    {
+      "id": "UI-08",
+      "kind": "case",
+      "label": "拖右手柄裁视频片尾约3秒",
+      "status": "Passed",
+      "reason": null,
+      "startedAt": "2026-11-06T10:59:51.782Z",
+      "finishedAt": "2026-11-06T10:59:55.124Z",
+      "projectId": "b34e8f29-25ac-4dc0-968f-76aabdd20e13",
+      "conversationId": "8bd67283-c5ae-49d8-9789-78413b3bfa8c",
+      "beforeRevision": 16,
+      "afterRevision": 17,
+      "changed": true,
+      "screenshot": "UI-08-passed.png",
+      "requestCount": 3
+    },
+    {
+      "id": "UI-05",
+      "kind": "case",
+      "label": "拖动第一条字幕的结束时间",
+      "status": "Failed",
+      "reason": "AssertionError [ERR_ASSERTION]: 页面操作后的实际保存结果不符合本项预期",
+      "startedAt": "2026-11-06T11:00:40.423Z",
+      "finishedAt": "2026-11-06T11:01:03.295Z",
+      "projectId": "b34e8f29-25ac-4dc0-968f-76aabdd20e13",
+      "conversationId": "8bd67283-c5ae-49d8-9789-78413b3bfa8c",
+      "beforeRevision": 18,
+      "afterRevision": 18,
+      "changed": false,
+      "screenshot": "UI-05-failed.png",
+      "requestCount": 17
+    },
+    {
+      "id": "UI-09",
+      "kind": "case",
+      "label": "拖动旁白音量线至50%",
+      "status": "Passed",
+      "reason": null,
+      "startedAt": "2026-11-06T11:03:00.824Z",
+      "finishedAt": "2026-11-06T11:03:01.848Z",
+      "projectId": "b34e8f29-25ac-4dc0-968f-76aabdd20e13",
+      "conversationId": "8bd67283-c5ae-49d8-9789-78413b3bfa8c",
+      "beforeRevision": 18,
+      "afterRevision": 19,
+      "changed": true,
+      "screenshot": "UI-09-passed.png",
+      "requestCount": 1
+    },
+    {
+      "id": "UI-10",
+      "kind": "case",
+      "label": "点击旁白静音",
+      "status": "Passed",
+      "reason": null,
+      "startedAt": "2026-11-06T11:03:17.485Z",
+      "finishedAt": "2026-11-06T11:03:19.151Z",
+      "projectId": "b34e8f29-25ac-4dc0-968f-76aabdd20e13",
+      "conversationId": "8bd67283-c5ae-49d8-9789-78413b3bfa8c",
+      "beforeRevision": 20,
+      "afterRevision": 21,
+      "changed": true,
+      "screenshot": "UI-10-passed.png",
+      "requestCount": 1
+    },
+    {
+      "id": "UI-11",
+      "kind": "case",
+      "label": "点击旁白启用取消静音",
+      "status": "Passed",
+      "reason": null,
+      "startedAt": "2026-11-06T11:03:31.704Z",
+      "finishedAt": "2026-11-06T11:03:33.465Z",
+      "projectId": "b34e8f29-25ac-4dc0-968f-76aabdd20e13",
+      "conversationId": "8bd67283-c5ae-49d8-9789-78413b3bfa8c",
+      "beforeRevision": 21,
+      "afterRevision": 22,
+      "changed": true,
+      "screenshot": "UI-11-passed.png",
+      "requestCount": 3
+    }
+  ],
+  "cleanups": [
+    {
+      "id": "UI-02-direct-restore",
+      "kind": "cleanup",
+      "label": "仅撤销本项改动并恢复前置",
+      "status": "Passed",
+      "reason": null,
+      "startedAt": "2026-11-06T10:52:55.600Z",
+      "finishedAt": "2026-11-06T10:52:57.610Z",
+      "projectId": "b34e8f29-25ac-4dc0-968f-76aabdd20e13",
+      "conversationId": "8bd67283-c5ae-49d8-9789-78413b3bfa8c",
+      "beforeRevision": 11,
+      "afterRevision": 12,
+      "changed": true,
+      "screenshot": "UI-02-direct-restore-passed.png",
+      "requestCount": 2
+    },
+    {
+      "id": "UI-06-restore",
+      "kind": "cleanup",
+      "label": "仅撤销本项改动并恢复前置",
+      "status": "Passed",
+      "reason": null,
+      "startedAt": "2026-11-06T10:54:25.412Z",
+      "finishedAt": "2026-11-06T10:54:27.094Z",
+      "projectId": "b34e8f29-25ac-4dc0-968f-76aabdd20e13",
+      "conversationId": "8bd67283-c5ae-49d8-9789-78413b3bfa8c",
+      "beforeRevision": 13,
+      "afterRevision": 14,
+      "changed": true,
+      "screenshot": "UI-06-restore-passed.png",
+      "requestCount": 3
+    },
+    {
+      "id": "UI-07-page-restore",
+      "kind": "cleanup",
+      "label": "仅撤销本项改动并恢复前置",
+      "status": "Passed",
+      "reason": null,
+      "startedAt": "2026-11-06T10:59:49.371Z",
+      "finishedAt": "2026-11-06T10:59:51.402Z",
+      "projectId": "b34e8f29-25ac-4dc0-968f-76aabdd20e13",
+      "conversationId": "8bd67283-c5ae-49d8-9789-78413b3bfa8c",
+      "beforeRevision": 15,
+      "afterRevision": 16,
+      "changed": true,
+      "screenshot": "UI-07-page-restore-passed.png",
+      "requestCount": 3
+    },
+    {
+      "id": "UI-08-restore",
+      "kind": "cleanup",
+      "label": "仅撤销本项改动并恢复前置",
+      "status": "Passed",
+      "reason": null,
+      "startedAt": "2026-11-06T11:00:08.701Z",
+      "finishedAt": "2026-11-06T11:00:09.597Z",
+      "projectId": "b34e8f29-25ac-4dc0-968f-76aabdd20e13",
+      "conversationId": "8bd67283-c5ae-49d8-9789-78413b3bfa8c",
+      "beforeRevision": 17,
+      "afterRevision": 18,
+      "changed": true,
+      "screenshot": "UI-08-restore-passed.png",
+      "requestCount": 1
+    },
+    {
+      "id": "UI-09-restore",
+      "kind": "cleanup",
+      "label": "仅撤销本项改动并恢复前置",
+      "status": "Passed",
+      "reason": null,
+      "startedAt": "2026-11-06T11:03:15.284Z",
+      "finishedAt": "2026-11-06T11:03:17.091Z",
+      "projectId": "b34e8f29-25ac-4dc0-968f-76aabdd20e13",
+      "conversationId": "8bd67283-c5ae-49d8-9789-78413b3bfa8c",
+      "beforeRevision": 19,
+      "afterRevision": 20,
+      "changed": true,
+      "screenshot": "UI-09-restore-passed.png",
+      "requestCount": 3
+    }
+  ],
+  "baselineRevision": 8,
+  "finalRevision": 22,
+  "contentRestored": true,
+  "submittedTurns": 0,
+  "browserKeptOpen": true,
+  "screenshots": [
+    {
+      "name": "UI-01-passed.png",
+      "sha256": "35c0bdd10bedbd88e1b352ce2e22623eea56993e8929ef19cf9e12a50cb6c651",
+      "bytes": 505747
+    },
+    {
+      "name": "UI-02-direct-passed.png",
+      "sha256": "8a15f89c1bc1c97c994a21915272469f37723ec3db6d96ce68dc88fc08651b5b",
+      "bytes": 563884
+    },
+    {
+      "name": "UI-03-passed.png",
+      "sha256": "59659a5ff8166ed77d59fdf118aa2ec7f277b14bb7ee0b1983194228112e3ba8",
+      "bytes": 563401
+    },
+    {
+      "name": "UI-04-passed.png",
+      "sha256": "e3a142cdd061ab86f542ca4fdf1e07c4eeaee64451abd425f5ce5554501a03ea",
+      "bytes": 563953
+    },
+    {
+      "name": "UI-06-passed.png",
+      "sha256": "51c665360ad49d9e20422fbb3a6b7f4d97cf03debfa030db44623cee8d4f0fef",
+      "bytes": 574441
+    },
+    {
+      "name": "UI-07-page-passed.png",
+      "sha256": "471e6c431e116664c6793cb9ed8fdbdd64a76668ae8e1107bbdd7c9d60c3cb9d",
+      "bytes": 398335
+    },
+    {
+      "name": "UI-08-passed.png",
+      "sha256": "e535f9c00503158f45d287535bc55338bad3c9f183939c60c4db3da1dc87a8c0",
+      "bytes": 401690
+    },
+    {
+      "name": "UI-05-failed.png",
+      "sha256": "8d4a987e38716133d0dc482aa7147a8dad545f60f712d9f279b3057398fb459b",
+      "bytes": 412536
+    },
+    {
+      "name": "UI-09-passed.png",
+      "sha256": "bf538a3cc350ec06eacc3e860ed60e28af34bb6d6aea30f84cbea5c22ee50697",
+      "bytes": 524364
+    },
+    {
+      "name": "UI-10-passed.png",
+      "sha256": "28cd9899eaf6efb0c35ab19fc620f2e1237621730824006dc72c07539ee4b8e4",
+      "bytes": 521661
+    },
+    {
+      "name": "UI-11-passed.png",
+      "sha256": "15b7fc4c07c5e32a49539772a4208005c9f21e6c9b25cb84ef9856feae8e6df6",
+      "bytes": 522917
+    },
+    {
+      "name": "UI-02-direct-refreshed.png",
+      "sha256": "eca9306aef13d61d69910234a985bd8fc277c3ee959e20d87153fb3595567539",
+      "bytes": 520164
+    },
+    {
+      "name": "UI-06-refreshed.png",
+      "sha256": "d805b98583731cede21b49676009c63b4338133b219f2d829366af41c63719d9",
+      "bytes": 512026
+    },
+    {
+      "name": "final-restored.png",
+      "sha256": "d9b5169f0a10c53cfbef0ffc41d7c56645dd64302f9352c1a2a2d80f2ed670b5",
+      "bytes": 520755
+    },
+    {
+      "name": "final-restored-refreshed.png",
+      "sha256": "d6ec0c9822a886143baccdd21425e36ed33c5251e5ed727cc573ffc746d35e4f",
+      "bytes": 519243
+    }
+  ],
+  "actuals": {
+    "UI-02-direct": {
+      "before": {
+        "revision": 8,
+        "video": [
+          {
+            "file_id": "file_cloud_77n2ver2wfe2enu7bddp42egdx",
+            "source_in_sec": 0,
+            "source_out_sec": 30.630599999999998,
+            "timeline_start_sec": 0,
+            "playback_rate": 1
+          }
+        ],
+        "subtitleDiff": [
+          []
+        ],
+        "audio": [
+          {
+            "role": "source",
+            "muted": true,
+            "volumes": [
+              1
+            ]
+          },
+          {
+            "role": "narration",
+            "muted": false,
+            "volumes": [
+              1
+            ]
+          }
+        ]
+      },
+      "after": {
+        "revision": 9,
+        "video": [
+          {
+            "file_id": "file_cloud_77n2ver2wfe2enu7bddp42egdx",
+            "source_in_sec": 0,
+            "source_out_sec": 30.630599999999998,
+            "timeline_start_sec": 0,
+            "playback_rate": 1
+          }
+        ],
+        "subtitleDiff": [
+          [
+            {
+              "text": "Really?",
+              "end_sec": 3.52,
+              "identity": "cue_3b27e9b60eb5c52f885bfd53",
+              "start_sec": 3.26,
+              "properties": {
+                "manual_layout": {
+                  "segments": [
+                    {
+                      "end_sec": 3.52,
+                      "text_end": 7,
+                      "start_sec": 3.26,
+                      "segment_id": "block_f28979ae15b3f3dbf44f4412:rendered",
+                      "text_start": 0
+                    }
+                  ]
+                }
+              }
+            }
+          ]
+        ],
+        "audio": [
+          {
+            "role": "source",
+            "muted": true,
+            "volumes": [
+              1
+            ]
+          },
+          {
+            "role": "narration",
+            "muted": false,
+            "volumes": [
+              1
+            ]
+          }
+        ]
+      }
+    },
+    "UI-05": {
+      "before": {
+        "revision": 18,
+        "video": [
+          {
+            "file_id": "file_cloud_77n2ver2wfe2enu7bddp42egdx",
+            "source_in_sec": 0,
+            "source_out_sec": 30.630599999999998,
+            "timeline_start_sec": 0,
+            "playback_rate": 1
+          }
+        ],
+        "subtitleDiff": [
+          []
+        ],
+        "audio": [
+          {
+            "role": "source",
+            "muted": true,
+            "volumes": [
+              1
+            ]
+          },
+          {
+            "role": "narration",
+            "muted": false,
+            "volumes": [
+              1
+            ]
+          }
+        ]
+      },
+      "after": {
+        "revision": 18,
+        "video": [
+          {
+            "file_id": "file_cloud_77n2ver2wfe2enu7bddp42egdx",
+            "source_in_sec": 0,
+            "source_out_sec": 30.630599999999998,
+            "timeline_start_sec": 0,
+            "playback_rate": 1
+          }
+        ],
+        "subtitleDiff": [
+          []
+        ],
+        "audio": [
+          {
+            "role": "source",
+            "muted": true,
+            "volumes": [
+              1
+            ]
+          },
+          {
+            "role": "narration",
+            "muted": false,
+            "volumes": [
+              1
+            ]
+          }
+        ]
+      }
+    },
+    "UI-06": {
+      "before": {
+        "revision": 12,
+        "video": [
+          {
+            "file_id": "file_cloud_77n2ver2wfe2enu7bddp42egdx",
+            "source_in_sec": 0,
+            "source_out_sec": 30.630599999999998,
+            "timeline_start_sec": 0,
+            "playback_rate": 1
+          }
+        ],
+        "subtitleDiff": [
+          []
+        ],
+        "audio": [
+          {
+            "role": "source",
+            "muted": true,
+            "volumes": [
+              1
+            ]
+          },
+          {
+            "role": "narration",
+            "muted": false,
+            "volumes": [
+              1
+            ]
+          }
+        ]
+      },
+      "after": {
+        "revision": 13,
+        "video": [
+          {
+            "file_id": "file_cloud_77n2ver2wfe2enu7bddp42egdx",
+            "source_in_sec": 0,
+            "source_out_sec": 5,
+            "timeline_start_sec": 0,
+            "playback_rate": 1
+          },
+          {
+            "file_id": "file_cloud_77n2ver2wfe2enu7bddp42egdx",
+            "source_in_sec": 5,
+            "source_out_sec": 30.630599999999998,
+            "timeline_start_sec": 5,
+            "playback_rate": 1
+          }
+        ],
+        "subtitleDiff": [
+          []
+        ],
+        "audio": [
+          {
+            "role": "source",
+            "muted": true,
+            "volumes": [
+              1,
+              1
+            ]
+          },
+          {
+            "role": "narration",
+            "muted": false,
+            "volumes": [
+              1
+            ]
+          }
+        ]
+      }
+    },
+    "UI-07-page": {
+      "before": {
+        "revision": 14,
+        "video": [
+          {
+            "file_id": "file_cloud_77n2ver2wfe2enu7bddp42egdx",
+            "source_in_sec": 0,
+            "source_out_sec": 30.630599999999998,
+            "timeline_start_sec": 0,
+            "playback_rate": 1
+          }
+        ],
+        "subtitleDiff": [
+          []
+        ],
+        "audio": [
+          {
+            "role": "source",
+            "muted": true,
+            "volumes": [
+              1
+            ]
+          },
+          {
+            "role": "narration",
+            "muted": false,
+            "volumes": [
+              1
+            ]
+          }
+        ]
+      },
+      "after": {
+        "revision": 15,
+        "video": [
+          {
+            "file_id": "file_cloud_77n2ver2wfe2enu7bddp42egdx",
+            "source_in_sec": 1.9999908447265624,
+            "source_out_sec": 30.630599999999998,
+            "timeline_start_sec": 1.9999908447265624,
+            "playback_rate": 1
+          }
+        ],
+        "subtitleDiff": [
+          []
+        ],
+        "audio": [
+          {
+            "role": "source",
+            "muted": true,
+            "volumes": [
+              1
+            ]
+          },
+          {
+            "role": "narration",
+            "muted": false,
+            "volumes": [
+              1
+            ]
+          }
+        ]
+      }
+    },
+    "UI-08": {
+      "before": {
+        "revision": 16,
+        "video": [
+          {
+            "file_id": "file_cloud_77n2ver2wfe2enu7bddp42egdx",
+            "source_in_sec": 0,
+            "source_out_sec": 30.630599999999998,
+            "timeline_start_sec": 0,
+            "playback_rate": 1
+          }
+        ],
+        "subtitleDiff": [
+          []
+        ],
+        "audio": [
+          {
+            "role": "source",
+            "muted": true,
+            "volumes": [
+              1
+            ]
+          },
+          {
+            "role": "narration",
+            "muted": false,
+            "volumes": [
+              1
+            ]
+          }
+        ]
+      },
+      "after": {
+        "revision": 17,
+        "video": [
+          {
+            "file_id": "file_cloud_77n2ver2wfe2enu7bddp42egdx",
+            "source_in_sec": 0,
+            "source_out_sec": 27.63061220703125,
+            "timeline_start_sec": 0,
+            "playback_rate": 1
+          }
+        ],
+        "subtitleDiff": [
+          []
+        ],
+        "audio": [
+          {
+            "role": "source",
+            "muted": true,
+            "volumes": [
+              1
+            ]
+          },
+          {
+            "role": "narration",
+            "muted": false,
+            "volumes": [
+              1
+            ]
+          }
+        ]
+      }
+    },
+    "UI-09": {
+      "before": {
+        "revision": 18,
+        "video": [
+          {
+            "file_id": "file_cloud_77n2ver2wfe2enu7bddp42egdx",
+            "source_in_sec": 0,
+            "source_out_sec": 30.630599999999998,
+            "timeline_start_sec": 0,
+            "playback_rate": 1
+          }
+        ],
+        "subtitleDiff": [
+          []
+        ],
+        "audio": [
+          {
+            "role": "source",
+            "muted": true,
+            "volumes": [
+              1
+            ]
+          },
+          {
+            "role": "narration",
+            "muted": false,
+            "volumes": [
+              1
+            ]
+          }
+        ]
+      },
+      "after": {
+        "revision": 19,
+        "video": [
+          {
+            "file_id": "file_cloud_77n2ver2wfe2enu7bddp42egdx",
+            "source_in_sec": 0,
+            "source_out_sec": 30.630599999999998,
+            "timeline_start_sec": 0,
+            "playback_rate": 1
+          }
+        ],
+        "subtitleDiff": [
+          []
+        ],
+        "audio": [
+          {
+            "role": "source",
+            "muted": true,
+            "volumes": [
+              1
+            ]
+          },
+          {
+            "role": "narration",
+            "muted": false,
+            "volumes": [
+              0.5
+            ]
+          }
+        ]
+      }
+    },
+    "UI-10": {
+      "before": {
+        "revision": 20,
+        "video": [
+          {
+            "file_id": "file_cloud_77n2ver2wfe2enu7bddp42egdx",
+            "source_in_sec": 0,
+            "source_out_sec": 30.630599999999998,
+            "timeline_start_sec": 0,
+            "playback_rate": 1
+          }
+        ],
+        "subtitleDiff": [
+          []
+        ],
+        "audio": [
+          {
+            "role": "source",
+            "muted": true,
+            "volumes": [
+              1
+            ]
+          },
+          {
+            "role": "narration",
+            "muted": false,
+            "volumes": [
+              1
+            ]
+          }
+        ]
+      },
+      "after": {
+        "revision": 21,
+        "video": [
+          {
+            "file_id": "file_cloud_77n2ver2wfe2enu7bddp42egdx",
+            "source_in_sec": 0,
+            "source_out_sec": 30.630599999999998,
+            "timeline_start_sec": 0,
+            "playback_rate": 1
+          }
+        ],
+        "subtitleDiff": [
+          []
+        ],
+        "audio": [
+          {
+            "role": "source",
+            "muted": true,
+            "volumes": [
+              1
+            ]
+          },
+          {
+            "role": "narration",
+            "muted": true,
+            "volumes": [
+              1
+            ]
+          }
+        ]
+      }
+    },
+    "UI-11": {
+      "before": {
+        "revision": 21,
+        "video": [
+          {
+            "file_id": "file_cloud_77n2ver2wfe2enu7bddp42egdx",
+            "source_in_sec": 0,
+            "source_out_sec": 30.630599999999998,
+            "timeline_start_sec": 0,
+            "playback_rate": 1
+          }
+        ],
+        "subtitleDiff": [
+          []
+        ],
+        "audio": [
+          {
+            "role": "source",
+            "muted": true,
+            "volumes": [
+              1
+            ]
+          },
+          {
+            "role": "narration",
+            "muted": true,
+            "volumes": [
+              1
+            ]
+          }
+        ]
+      },
+      "after": {
+        "revision": 22,
+        "video": [
+          {
+            "file_id": "file_cloud_77n2ver2wfe2enu7bddp42egdx",
+            "source_in_sec": 0,
+            "source_out_sec": 30.630599999999998,
+            "timeline_start_sec": 0,
+            "playback_rate": 1
+          }
+        ],
+        "subtitleDiff": [
+          []
+        ],
+        "audio": [
+          {
+            "role": "source",
+            "muted": true,
+            "volumes": [
+              1
+            ]
+          },
+          {
+            "role": "narration",
+            "muted": false,
+            "volumes": [
+              1
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "diagnostics": [
+    {
+      "id": "UI-02",
+      "label": "直接修改一条字幕文字",
+      "status": "Failed",
+      "failureOrigin": "automation-locator: actual accessible label is 字幕文本",
+      "changed": false
+    },
+    {
+      "id": "UI-07",
+      "label": "拖左手柄裁视频片头约2秒",
+      "status": "Failed",
+      "failureOrigin": "automation-gesture: handle under sticky heading hit panel resize",
+      "changed": false
+    },
+    {
+      "id": "UI-07-direct",
+      "label": "拖左手柄裁视频片头约2秒",
+      "status": "Failed",
+      "failureOrigin": "handle hit-test: playhead covered boundary, no drag sent",
+      "changed": false
+    }
+  ],
+  "acceptanceScope": "Direct editor UI controls and saved/refreshed state. Audio subjective listening and export quality not verified. No conversation tasks.",
+  "finalConfirmation": {
+    "projectId": "b34e8f29-25ac-4dc0-968f-76aabdd20e13",
+    "revision": 22,
+    "contentRestored": true,
+    "noDialogueTasks": true,
+    "windowOpen": true
+  }
+}

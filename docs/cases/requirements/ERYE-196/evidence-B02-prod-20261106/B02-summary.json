@@ -1,0 +1,173 @@
+{
+  "caseId": "B02",
+  "status": "Failed",
+  "prompt": "只把当前工程中唯一的视频片段在时间线5秒处分成两段，保留全部视频内容，不移动片段。",
+  "runId": "run_v2_aec40ab42ad14b9792b26e618bd1d1b4",
+  "traceId": "5f6b4eed-9dc1-4dde-bb87-cadd428543bc",
+  "projectId": "a4c860bc-f50d-4f73-9b20-7c31ca2dd748",
+  "conversationId": "9500f848-2da3-4dd4-be21-43149cd5fd29",
+  "startedAt": "2026-11-06T09:40:05.776Z",
+  "finishedAt": "2026-11-06T09:44:29.025Z",
+  "runtimeStatus": "failed",
+  "intentSatisfied": true,
+  "beforeRevision": 18,
+  "afterRevision": 18,
+  "refreshedRevision": 18,
+  "unchanged": true,
+  "nonVideoUnchanged": true,
+  "checks": [
+    {
+      "name": "任务成功结束且未声明未完成",
+      "passed": false
+    },
+    {
+      "name": "无失败工具步骤",
+      "passed": false
+    },
+    {
+      "name": "视频实际由一段变为两段",
+      "passed": false
+    },
+    {
+      "name": "两段均来自原视频且速度保持",
+      "passed": false
+    },
+    {
+      "name": "源范围在5秒切开且无丢重",
+      "passed": false
+    },
+    {
+      "name": "时间线不移动且切点连续",
+      "passed": false
+    },
+    {
+      "name": "总视频内容时长保持",
+      "passed": false
+    },
+    {
+      "name": "保存同一用户工程",
+      "passed": true
+    },
+    {
+      "name": "刷新后保存结果和版本一致",
+      "passed": true
+    },
+    {
+      "name": "刷新仍在用户会话且未重提任务",
+      "passed": true
+    }
+  ],
+  "failedChecks": [
+    "任务成功结束且未声明未完成",
+    "无失败工具步骤",
+    "视频实际由一段变为两段",
+    "两段均来自原视频且速度保持",
+    "源范围在5秒切开且无丢重",
+    "时间线不移动且切点连续",
+    "总视频内容时长保持"
+  ],
+  "playback": {
+    "status": "NotRun",
+    "reason": "分割未完成，不把原片播放当成切点验收"
+  },
+  "restoration": {
+    "status": "NotNeeded",
+    "reason": "本轮未改工程",
+    "revision": 18
+  },
+  "tools": [
+    {
+      "tool": "editor_project_get",
+      "status": "done",
+      "error": null,
+      "arguments": {
+        "project_id": "a4c860bc-f50d-4f73-9b20-7c31ca2dd748",
+        "plan_node_id": "current_project_video_split_plan_1_0_editor_project_get"
+      }
+    },
+    {
+      "tool": "editor_video_clip_split",
+      "status": "failed",
+      "error": {
+        "error": {
+          "code": "INVALID_ARGUMENT",
+          "message": "Editor tool arguments do not match its schema; base_revision: invalid type"
+        },
+        "status": "failed"
+      },
+      "arguments": {
+        "parameters": "{\"track_id\":\"{{steps[0].result.content.video_tracks[0].track_id}}\",\"clip_id\":\"{{steps[0].result.content.video_tracks[0].clips[0].clip_id}}\",\"timeline_time_sec\":5,\"new_clip_id\":\"f615c180-8f77-42a2-ae58-661569ece642\"}",
+        "project_id": "a4c860bc-f50d-4f73-9b20-7c31ca2dd748",
+        "operation_id": "8d34716f-86ce-44a7-8cef-678d45f8fdf3",
+        "plan_node_id": "current_project_video_split_plan_1_1_editor_video_clip_split",
+        "base_revision": "{{steps[0].result.revision}}"
+      }
+    },
+    {
+      "tool": "editor_project_get",
+      "status": "failed",
+      "error": {
+        "code": "RUN_FAILED",
+        "message": "Editor tool arguments do not match its schema; base_revision: invalid type"
+      },
+      "arguments": {
+        "project_id": "a4c860bc-f50d-4f73-9b20-7c31ca2dd748",
+        "plan_node_id": "current_project_video_split_plan_1_2_editor_project_get"
+      }
+    }
+  ],
+  "assistant": "Editor tool arguments do not match its schema; base_revision: invalid type",
+  "screenshot": "B02-failed.png",
+  "clarificationCount": 0,
+  "browserKeptOpen": true,
+  "beforeVideo": [
+    {
+      "track_id": "edit_728d71cfd1bf701ea515f155b0185015",
+      "clip_id": "edit_3970e98669ed3c7a1d90576b82bf781b",
+      "file_id": "file_cloud_77n2ver2wfe2enu7bddp42egdx",
+      "source_in_sec": 0,
+      "source_out_sec": 30.630599999999998,
+      "timeline_start_sec": 0,
+      "offset_sec": 0,
+      "playback_rate": 1
+    }
+  ],
+  "afterVideo": [
+    {
+      "track_id": "edit_728d71cfd1bf701ea515f155b0185015",
+      "clip_id": "edit_3970e98669ed3c7a1d90576b82bf781b",
+      "file_id": "file_cloud_77n2ver2wfe2enu7bddp42egdx",
+      "source_in_sec": 0,
+      "source_out_sec": 30.630599999999998,
+      "timeline_start_sec": 0,
+      "offset_sec": 0,
+      "playback_rate": 1
+    }
+  ],
+  "screenshots": [
+    {
+      "name": "B02-before.png",
+      "sha256": "95d2fc2f3efd92ee431c3108d9c1b4457c56a43b4c639e1773554ca549ef2761",
+      "bytes": 476424
+    },
+    {
+      "name": "B02-failed.png",
+      "sha256": "dcde25e5d7c57ed3ab217864f9ef216a1e0aebffaa106381e9d947f4fa4c6442",
+      "bytes": 468746
+    },
+    {
+      "name": "B02-failed-settled.png",
+      "sha256": "c92f42edbdc7dd93f7a1138da8deeda213b419260878e18fecd7c27543abb611",
+      "bytes": 508079
+    }
+  ],
+  "finalWindowState": {
+    "windowOpen": true,
+    "projectName": "英文30S.mp4",
+    "revision": 18,
+    "contentMatchesBefore": true,
+    "captionRows": 12,
+    "acceptedCount": 1
+  },
+  "primaryScreenshot": "B02-failed-settled.png"
+}

@@ -1,0 +1,93 @@
+{
+  "caseId": "B01",
+  "status": "Failed",
+  "runId": "run_v2_3f68ce46e80b48c0b9e00c02596476b2",
+  "traceId": "4a5a9057-73c8-4b19-8a9b-11cc07b8c7c3",
+  "prompt": "查看当前工程的素材、音轨、字幕和时长。",
+  "projectId": "a4c860bc-f50d-4f73-9b20-7c31ca2dd748",
+  "conversationId": "9500f848-2da3-4dd4-be21-43149cd5fd29",
+  "startedAt": "2026-11-06T09:15:23.668Z",
+  "finishedAt": "2026-11-06T09:18:26.611Z",
+  "runtimeStatus": "done",
+  "beforeRevision": 2,
+  "afterRevision": 2,
+  "checks": [
+    {
+      "name": "任务成功结束且未声明目标未完成",
+      "passed": true
+    },
+    {
+      "name": "实际工程读取成功",
+      "passed": true
+    },
+    {
+      "name": "无失败工具步骤",
+      "passed": true
+    },
+    {
+      "name": "仅使用读取工具",
+      "passed": true
+    },
+    {
+      "name": "回复描述视频实际时长30.63秒",
+      "passed": false
+    },
+    {
+      "name": "回复包含原声及静音状态",
+      "passed": false
+    },
+    {
+      "name": "回复区分独立旁白",
+      "passed": true
+    },
+    {
+      "name": "回复包含英文可编辑字幕及13条数量",
+      "passed": false
+    },
+    {
+      "name": "结果回读内容及版本保持",
+      "passed": true
+    },
+    {
+      "name": "读取后仍在用户工程",
+      "passed": true
+    },
+    {
+      "name": "刷新后内容及版本保持",
+      "passed": true
+    },
+    {
+      "name": "刷新后当前工程正确且未重复提交任务",
+      "passed": true
+    }
+  ],
+  "failedChecks": [
+    "回复描述视频实际时长30.63秒",
+    "回复包含原声及静音状态",
+    "回复包含英文可编辑字幕及13条数量"
+  ],
+  "assistant": "将只读取当前已保存工程“英文30S.mp4”，汇总素材、音轨及静音状态、字幕内容与时间，以及当前工程总时长。不执行裁切或移动，不修改字幕和旁白，也不新建工程或导出视频。",
+  "screenshot": "B01-failed.png",
+  "clarificationCount": 0,
+  "tools": [
+    {
+      "tool": "editor_project_get",
+      "status": "done",
+      "error": null
+    },
+    {
+      "tool": "editor_media_list",
+      "status": "done",
+      "error": null
+    },
+    {
+      "tool": "editor_subtitle_list",
+      "status": "done",
+      "error": null
+    }
+  ],
+  "refreshedTurns": [],
+  "unchanged": true,
+  "browserKeptOpen": true,
+  "screenshotSha256": "16389c5358386a0eac510d3c78327cbd7ce7aa6d207c43b03c4e6169ed029134"
+}

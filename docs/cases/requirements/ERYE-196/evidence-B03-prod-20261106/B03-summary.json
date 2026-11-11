@@ -1,0 +1,197 @@
+{
+  "caseId": "B03",
+  "status": "Failed",
+  "runtimeStatus": "failed",
+  "intentSatisfied": true,
+  "projectId": "b34e8f29-25ac-4dc0-968f-76aabdd20e13",
+  "conversationId": "8bd67283-c5ae-49d8-9789-78413b3bfa8c",
+  "runId": "run_v2_85dd052b99f742a4b9067ac4175c6df8",
+  "traceId": "aa35bfdf-30bd-421a-bcc9-595de029dc96",
+  "prompt": "先只做一步：在当前工程“英文30S.mp4”中裁掉视频片段开头4秒，暂时不移动片段，也不调整字幕和旁白。",
+  "startedAt": "2026-11-06T10:16:32.190Z",
+  "finishedAt": "2026-11-06T10:18:11.155Z",
+  "beforeRevision": 2,
+  "afterRevision": 8,
+  "refreshedRevision": 8,
+  "unchanged": true,
+  "expectedSourceIn": 4,
+  "expectedRemainingSeconds": 26.630599999999998,
+  "actualRemainingSeconds": 30.630599999999998,
+  "checks": [
+    {
+      "name": "任务成功结束且未声明未完成",
+      "passed": false
+    },
+    {
+      "name": "无失败工具步骤",
+      "passed": false
+    },
+    {
+      "name": "仍为同一原始视频的一个片段",
+      "passed": true
+    },
+    {
+      "name": "视频源入点已裁到请求4秒",
+      "passed": false
+    },
+    {
+      "name": "源终点及播放速度保持",
+      "passed": true
+    },
+    {
+      "name": "没有额外移动视频片段",
+      "passed": true
+    },
+    {
+      "name": "视频保留原4秒之后的全部内容",
+      "passed": false
+    },
+    {
+      "name": "结果保存于用户原工程",
+      "passed": true
+    },
+    {
+      "name": "字幕及独立旁白未被额外调整",
+      "passed": true
+    },
+    {
+      "name": "刷新后实际保存结果和版本一致",
+      "passed": true
+    },
+    {
+      "name": "刷新仍在用户会话且未重提任务",
+      "passed": true
+    }
+  ],
+  "failedChecks": [
+    "任务成功结束且未声明未完成",
+    "无失败工具步骤",
+    "视频源入点已裁到请求4秒",
+    "视频保留原4秒之后的全部内容"
+  ],
+  "linkedChanges": {
+    "subtitlesUnchanged": true,
+    "narrationUnchanged": true,
+    "nonVideoUnchanged": true
+  },
+  "firstFrame": {
+    "status": "NotRun",
+    "reason": "裁头未完成，不用原片首帧冒充裁后画面通过"
+  },
+  "restoration": {
+    "status": "NotNeeded",
+    "reason": "本轮未改工程",
+    "revision": 8
+  },
+  "tools": [
+    {
+      "tool": "editor_project_get",
+      "status": "done",
+      "error": null,
+      "arguments": {
+        "project_id": "b34e8f29-25ac-4dc0-968f-76aabdd20e13",
+        "plan_node_id": "current_project_trim_head_4s_plan_0_editor_project_get"
+      }
+    },
+    {
+      "tool": "editor_video_clip_trim",
+      "status": "failed",
+      "error": {
+        "error": {
+          "code": "STALE_REVISION",
+          "message": "Project changed outside this run; read the current project before continuing",
+          "current_revision": 8
+        },
+        "status": "failed"
+      },
+      "arguments": {
+        "project_id": "b34e8f29-25ac-4dc0-968f-76aabdd20e13",
+        "operation_id": "94ccdc69-9c48-40e5-86c2-6bd3fef2b551",
+        "plan_node_id": "current_project_trim_head_4s_plan_1_editor_video_clip_trim"
+      }
+    }
+  ],
+  "assistant": "Project changed outside this run; read the current project before continuing",
+  "refreshedTurns": [],
+  "clarificationCount": 0,
+  "browserKeptOpen": true,
+  "primaryScreenshot": "B03-failed-visible.png",
+  "currentProjectSelectedByUser": true,
+  "script": "tools/editor/single-action-basics.mjs",
+  "entrypoints": [
+    "runB03",
+    "finishB03"
+  ],
+  "currentScopeSubmissionCount": 1,
+  "currentScopeBusinessRetries": 0,
+  "finalReadRevision": 8,
+  "finalContentMatchesBefore": true,
+  "priorAuthorizedExecution": {
+    "projectId": "a4c860bc-f50d-4f73-9b20-7c31ca2dd748",
+    "conversationId": "9500f848-2da3-4dd4-be21-43149cd5fd29",
+    "runId": "run_v2_3cd4fca07fd941c6a4299c29e4fd08d3",
+    "traceId": "1cf13b9e-e344-4d78-981d-e4097405c061",
+    "status": "Failed",
+    "runtimeStatus": "done",
+    "intentSatisfied": false,
+    "beforeRevision": 18,
+    "afterRevision": 18,
+    "refreshedRevision": 18,
+    "assistant": "你的要求很明确：只裁掉视频片段开头4秒，保留片段位置，字幕和旁白都不动，也不新建工程或导出视频。\n\n但本次上下文没有当前视频片段的真实轨道ID、片段ID和最新修订号；此前报错也不能证明裁切已保存。为避免再次提交缺参或未解析的占位符操作，本轮不提交工程修改。"
+  },
+  "priorPostExecutionObservation": {
+    "revision": 19,
+    "changedTrackType": "subtitle",
+    "notAttributedToB03": true,
+    "preserved": true
+  },
+  "sourceFrameReference": {
+    "sourceSeconds": 4,
+    "frames": [
+      {
+        "currentTime": 4,
+        "readyState": 4,
+        "error": null,
+        "width": 1920,
+        "height": 1080,
+        "pixelSha256": "e0c15b084c4f808e9ac756628379cbc20ad2d34da30ae3e2575c40c7f7883369"
+      }
+    ],
+    "screenshot": "B03-source-frame.png"
+  },
+  "screenshots": [
+    {
+      "name": "B03-failed-visible.png",
+      "source": "reports/editor-196/20261106-prod-B03-open-project/B03-failed-visible.png",
+      "bytes": 591219,
+      "width": 1658,
+      "height": 945,
+      "sha256": "6a825452db1cfb0c9b98211cd9603cedfcb935cd134dd652c5d4f04cc4482f0a"
+    },
+    {
+      "name": "B03-before.png",
+      "source": "reports/editor-196/20261106-prod-B03-open-project/B03-before.png",
+      "bytes": 524341,
+      "width": 1658,
+      "height": 945,
+      "sha256": "3eedc764064300d9545d426ebfb8e918d54d49322fc8cd8dd6f6e64077160ba8"
+    },
+    {
+      "name": "B03-source-frame.png",
+      "source": "reports/editor-196/20261106-prod-B03-open-project/B03-source-frame.png",
+      "bytes": 588639,
+      "width": 1658,
+      "height": 945,
+      "sha256": "bb86185185a907f88fb9dc7f7fede2965f07e539c35f74fdff66a3517f2c4687"
+    },
+    {
+      "name": "B03-prior-project-failed.png",
+      "source": "reports/editor-196/20261106-prod-B03-current/B03-failed.png",
+      "bytes": 525100,
+      "width": 1658,
+      "height": 945,
+      "sha256": "8ef7d30490c642d8bf23ac2e89fa9344031313bb36290bf41705f395e29544fa"
+    }
+  ],
+  "yunxiaoWrites": 0
+}

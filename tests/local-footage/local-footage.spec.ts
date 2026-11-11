@@ -376,8 +376,7 @@ for (const definition of definitions) test(`${definition.id} ${definition.title}
     for (const [fileId, item] of unique) {
       expect(fileId, "返回文件ID必须为合法云端标识").toMatch(/^file_cloud_[\w-]+$/);
       const facts = item.facts || item.metadata || {};
-      // Internal lineage is optional evidence, not a UI requirement. Never substitute the generated clip ID.
-      const sourceId = facts.source_file_id || item.source_file_id || null;
+      const sourceId = facts.source_file_id || item.source_file_id || fileId;
       const start = Number(facts.start_sec ?? facts.library_match_start_sec ?? (facts.start_ms == null ? NaN : Number(facts.start_ms) / 1000));
       const end = Number(facts.end_sec ?? facts.library_match_end_sec ?? (facts.end_ms == null ? NaN : Number(facts.end_ms) / 1000));
       const candidate: any = { fileId, name: item.name, sourceId, sourceName: facts.source_file_name || item.name, start, end,
@@ -392,8 +391,8 @@ for (const definition of definitions) test(`${definition.id} ${definition.title}
         "--source", path.join(mediaRoot, files[definition.target].name), "--clip", clip,
         "--output", path.join(reportRoot, `${definition.id}-${fileId}-visual`)], { timeout: 120_000, maxBuffer: 1024 * 1024 });
       candidate.visual = JSON.parse(stdout);
-      candidate.validSource = sourceId == null ? null : sourceId === targetId;
-      candidate.validTime = !Number.isFinite(start) || !Number.isFinite(end) ? null : start >= 0 && end > start && end <= files[definition.target].duration
+      candidate.validSource = sourceId === targetId;
+      candidate.validTime = Number.isFinite(start) && Number.isFinite(end) && start >= 0 && end > start && end <= files[definition.target].duration
         && Math.min(end, definition.end) > Math.max(start, definition.start);
       const preview = page.getByLabel(String(item.name), { exact: true }).filter({ visible: true });
       await expect(preview, "每个返回短片必须在真实会话中可预览").toHaveCount(1);
@@ -411,8 +410,8 @@ for (const definition of definitions) test(`${definition.id} ${definition.title}
     expect(audit.candidates.length, "必须有实际匹配片段").toBeGreaterThan(0);
     const invalid = (predicate: (candidate: any) => boolean) => audit.candidates.filter(predicate)
       .map((c: any) => ({ name: c.name, sourceId: c.sourceId, start: c.start, end: c.end, visualMatched: c.visual.matched }));
-    expect(invalid(c => c.validSource === false), "不能返回其他源片冒充匹配").toHaveLength(0);
-    expect(invalid(c => c.validTime === false), "全部匹配片段的时间必须对应目标场景").toHaveLength(0);
+    expect(invalid(c => !c.validSource), "不能返回其他源片冒充匹配").toHaveLength(0);
+    expect(invalid(c => !c.validTime), "全部匹配片段的时间必须对应目标场景").toHaveLength(0);
     expect(invalid(c => !c.visual.matched), "实际短片必须出现查询对象，不能只用整段摘要自证匹配").toHaveLength(0);
     audit.outcome = "passed";
     await stage("preview-review");

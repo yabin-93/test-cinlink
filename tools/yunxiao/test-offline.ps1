@@ -13,23 +13,11 @@ $configFile = Join-Path $fixture 'config.json'
 Copy-Item -LiteralPath (Join-Path $PSScriptRoot 'config.json') -Destination $configFile
 $config = Read-YunxiaoConfig $configFile
 $config._stateRoot = Join-Path $out 'states'
-$credentialFile = Join-Path $fixture $(if ($IsWindows) { 'profile/.codex/.sandbox-secrets/test-only.clixml' } else { 'private-local.env' })
+$credentialFile = Join-Path $fixture 'profile/.codex/.sandbox-secrets/test-only.clixml'
 Save-YunxiaoAccessToken -SecureToken (ConvertTo-SecureString 'offline-cache-check-not-real' -AsPlainText -Force) -CredentialPath $credentialFile
-if ($IsWindows) {
-    $cached = Import-Clixml -LiteralPath $credentialFile
-    Assert-Test ($cached.GetNetworkCredential().Password -eq 'offline-cache-check-not-real') 'DPAPI在临时用户目录保存/解密，未触碰实际凭据'
-    Assert-Test ((Get-YunxiaoCredentialPath) -eq (Join-Path ([Environment]::GetFolderPath('UserProfile')) '.codex/.sandbox-secrets/yunxiao-pat.clixml')) '凭据路径从当前用户计算'
-} else {
-    $savedCanonical = $env:ALIBABA_CLOUD_YUNXIAO_ACCESS_TOKEN; $savedLegacy = $env:YUNXIAO_ACCESS_TOKEN
-    try {
-        $env:ALIBABA_CLOUD_YUNXIAO_ACCESS_TOKEN = $null; $env:YUNXIAO_ACCESS_TOKEN = $null
-        Assert-Test ((Get-YunxiaoAccessToken -CredentialPath $credentialFile -NoPrompt) -eq 'offline-cache-check-not-real') 'Mac临时私有env凭据保存读取，未触碰实际凭据'
-        Assert-Test ((& stat -f '%Lp' $credentialFile) -eq '600') 'Mac凭据文件权限0600'
-        $env:ALIBABA_CLOUD_YUNXIAO_ACCESS_TOKEN = 'offline-process-token'
-        Assert-Test ((Get-YunxiaoAccessToken -CredentialPath $credentialFile -NoPrompt) -eq 'offline-process-token') '进程令牌优先于本机文件'
-        Assert-Test ((Get-YunxiaoCredentialPath) -eq (Join-Path $root 'local.env')) 'Mac默认凭据定位工程local.env'
-    } finally { $env:ALIBABA_CLOUD_YUNXIAO_ACCESS_TOKEN = $savedCanonical; $env:YUNXIAO_ACCESS_TOKEN = $savedLegacy }
-}
+$cached = Import-Clixml -LiteralPath $credentialFile
+Assert-Test ($cached.GetNetworkCredential().Password -eq 'offline-cache-check-not-real') 'DPAPI在临时用户目录保存/解密，未触碰实际凭据'
+Assert-Test ((Get-YunxiaoCredentialPath) -eq (Join-Path ([Environment]::GetFolderPath('UserProfile')) '.codex/.sandbox-secrets/yunxiao-pat.clixml')) '凭据路径从当前用户计算'
 function Get-YunxiaoAccessToken { return 'offline-transport-token-not-real' }
 # 1px fixture is ONLY for this fake transport; CLI rejects OFFLINE keys.
 $png = Join-Path $fixture 'offline-transport-fixture.png'
@@ -77,7 +65,7 @@ $upload = {
     $entry = @{ id = 'offline-file-' + ($remote.files.Count + 1); fileName = $file.name; size = $file.size }
     $remote.files += $entry
     if ($remote.fault -eq 'upload-timeout') { $remote.fault = ''; throw '模拟上传成功但响应丢失' }
-    return @{ id = $entry.id; name = $entry.fileName; size = $entry.size }
+    return $entry
 }
 Reset-Fake
 $plan = New-TestPlan 'OFFLINE-SUCCESS'

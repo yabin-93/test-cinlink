@@ -22,3 +22,4 @@ local.env
 __pycache__/
 .playwright-mcp/
 tools/yunxiao/config.local.json
+tools/yunxiao/config.local.json
