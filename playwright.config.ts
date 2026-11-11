@@ -32,6 +32,12 @@ export default defineConfig({
       use: { storageState: optionalStorageState() },
     },
     {
+      name: "erye237",
+      testDir: "./tests/erye237",
+      timeout: 300_000,
+      use: { storageState: optionalStorageState() },
+    },
+    {
       name: "auth",
       testDir: "./tools",
       testMatch: "login.spec.ts",

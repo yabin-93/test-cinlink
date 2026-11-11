@@ -1,0 +1,497 @@
+{
+  "updated": "2026-11-10",
+  "counts": {
+    "Failed": 15,
+    "Passed": 13,
+    "Not Run": 0
+  },
+  "cases": [
+    {
+      "id": "LF-01",
+      "status": "Failed",
+      "environment": "production",
+      "automation": "AUTO",
+      "note": "机器人混入留声机/飞机",
+      "report": "local-footage-results-prod-20261110.md"
+    },
+    {
+      "id": "LF-02",
+      "status": "Failed",
+      "environment": "production",
+      "automation": "AUTO",
+      "note": "两秒兔子片段缺仙人掌/男孩",
+      "report": "local-footage-results-prod-20261110.md"
+    },
+    {
+      "id": "LF-03",
+      "status": "Failed",
+      "environment": "production",
+      "automation": "AUTO",
+      "note": "两秒兔子片段缺蓝衣男孩/仙人掌",
+      "report": "local-footage-results-prod-20261110.md"
+    },
+    {
+      "id": "LF-04",
+      "status": "Failed",
+      "environment": "staging",
+      "automation": "PLAN",
+      "note": "女孩与乌龟目标漏检",
+      "report": "local-footage-results-staging-04-07-20261110.md",
+      "defect": {
+        "key": "FWXC-389",
+        "url": "https://devops.aliyun.com/projex/project/1e401ac99539c3999e00e40006/bug#openWorkitemIdentifier=ef24914cd54923896d77ba80c2",
+        "relation": "已提交"
+      }
+    },
+    {
+      "id": "LF-05",
+      "status": "Failed",
+      "environment": "staging",
+      "automation": "PLAN",
+      "note": "机器人混入留声机/飞机",
+      "report": "local-footage-results-staging-04-07-20261110.md",
+      "defect": {
+        "key": "FWXC-390",
+        "url": "https://devops.aliyun.com/projex/project/1e401ac99539c3999e00e40006/bug#openWorkitemIdentifier=673e49a905e5a52e8ebff0e073",
+        "relation": "已提交"
+      }
+    },
+    {
+      "id": "LF-06",
+      "status": "Failed",
+      "environment": "staging",
+      "automation": "PLAN",
+      "note": "飞机/卫星两轮混入无关候选",
+      "report": "local-footage-results-staging-04-07-20261110.md",
+      "defect": {
+        "key": "FWXC-390",
+        "url": "https://devops.aliyun.com/projex/project/1e401ac99539c3999e00e40006/bug#openWorkitemIdentifier=673e49a905e5a52e8ebff0e073",
+        "relation": "已提交"
+      }
+    },
+    {
+      "id": "LF-07",
+      "status": "Failed",
+      "environment": "staging",
+      "automation": "PLAN",
+      "note": "火车混入长颈鹿",
+      "report": "local-footage-results-staging-04-07-20261110.md",
+      "defect": {
+        "key": "FWXC-390",
+        "url": "https://devops.aliyun.com/projex/project/1e401ac99539c3999e00e40006/bug#openWorkitemIdentifier=673e49a905e5a52e8ebff0e073",
+        "relation": "已提交"
+      }
+    },
+    {
+      "id": "LF-08",
+      "status": "Failed",
+      "environment": "staging",
+      "automation": "PLAN",
+      "note": "58秒，漏F2/误入F4；本轮F4哈希确认",
+      "report": "local-footage-results-optimized-staging-20261110.md",
+      "defect": {
+        "key": "FWXC-395",
+        "url": "https://devops.aliyun.com/projex/project/1e401ac99539c3999e00e40006/bug#openWorkitemIdentifier=bea27b77acf70304e5b948f1b8",
+        "verified": true
+      }
+    },
+    {
+      "id": "LF-09",
+      "status": "Passed",
+      "environment": "staging",
+      "automation": "PLAN",
+      "note": "47秒明确无匹配、0新增候选（UI）",
+      "report": "local-footage-results-staging-08-10-20261110.md"
+    },
+    {
+      "id": "LF-10",
+      "status": "Passed",
+      "environment": "staging",
+      "automation": "PLAN",
+      "note": "空值/空格禁用发送；网络未抓取（UI）",
+      "report": "local-footage-results-staging-08-10-20261110.md"
+    },
+    {
+      "id": "LF-11",
+      "status": "Passed",
+      "environment": "staging",
+      "automation": "PLAN",
+      "note": "Q命中机器人，P123明确无匹配（UI隔离）",
+      "report": "local-footage-results-staging-11-20261110.md"
+    },
+    {
+      "id": "LF-12",
+      "status": "Failed",
+      "environment": "staging",
+      "automation": "PLAN",
+      "note": "39秒，火车正确但混入长颈鹿；A历史保留",
+      "report": "local-footage-results-optimized-staging-20261110.md",
+      "defect": {
+        "key": "FWXC-390",
+        "url": "https://devops.aliyun.com/projex/project/1e401ac99539c3999e00e40006/bug#openWorkitemIdentifier=673e49a905e5a52e8ebff0e073",
+        "relation": "与已提交问题现象一致，根因未确认"
+      }
+    },
+    {
+      "id": "LF-13",
+      "status": "Passed",
+      "environment": "staging",
+      "automation": "PLAN",
+      "note": "44/35秒，机器人→瀑布切换及历史保留通过（UI范围）",
+      "report": "local-footage-results-optimized-staging-20261110.md"
+    },
+    {
+      "id": "LF-14",
+      "status": "Failed",
+      "environment": "staging",
+      "automation": "PLAN",
+      "note": "火车可预览但混入长颈鹿；后续引用未完成确认",
+      "report": "local-footage-results-staging-14-20261110.md",
+      "defect": {
+        "key": "FWXC-390",
+        "url": "https://devops.aliyun.com/projex/project/1e401ac99539c3999e00e40006/bug#openWorkitemIdentifier=673e49a905e5a52e8ebff0e073",
+        "relation": "与已提交问题现象一致，根因未确认"
+      }
+    },
+    {
+      "id": "LF-15",
+      "status": "Passed",
+      "environment": "staging",
+      "automation": "PLAN",
+      "note": "刷新后历史/候选保留，机器人可播放；网络及手动暂存未覆盖",
+      "report": "local-footage-results-staging-15-20261110.md"
+    },
+    {
+      "id": "LF-16",
+      "status": "Passed",
+      "environment": "staging",
+      "automation": "PLAN",
+      "note": "客户端提交被阻断后明确失败，解除后重试200/43秒完成、机器人可播放；规则已清理",
+      "report": "local-footage-results-staging-16-20261110.md"
+    },
+    {
+      "id": "LF-17",
+      "status": "Failed",
+      "environment": "staging",
+      "automation": "PLAN",
+      "note": "人工确认目标原句存在，单F2分析1/1，98秒明确无匹配；能力范围待确认",
+      "report": "local-footage-results-staging-17-20261110.md",
+      "preparation_project": "055b5131-5f11-4e5b-80c6-9d6a40ab3834",
+      "defect": {
+        "key": "FWXC-398",
+        "url": "https://devops.aliyun.com/projex/project/1e401ac99539c3999e00e40006/bug#openWorkitemIdentifier=f5f458852040ec3afba11cac2b",
+        "verified": true
+      }
+    },
+    {
+      "id": "LF-18",
+      "status": "Passed",
+      "environment": "staging",
+      "planned_environment": "staging",
+      "automation": "PLAN",
+      "priority": "P0",
+      "note": "两组各36秒，F5/F6名称及播放画面正确，下载哈希均与原片一致。",
+      "report": "local-footage-results-staging-18-35-20261110.md",
+      "fixtures": [
+        "F5",
+        "F6"
+      ],
+      "chain_reuse": null,
+      "conversation_id": "c9be8984-c396-4dd2-9993-12bad64f6574",
+      "executed": "2026-11-10"
+    },
+    {
+      "id": "LF-20",
+      "status": "Passed",
+      "environment": "staging",
+      "planned_environment": "staging",
+      "automation": "PLAN",
+      "priority": "P0",
+      "note": "正式空会话部分名称7MB一次命中F5，播放为女士及旗帜，无须澄清，无生成。另一次有历史上下文的28秒探测不计正式结论。",
+      "report": "local-footage-results-staging-18-35-20261110.md",
+      "fixtures": [
+        "F5",
+        "F6"
+      ],
+      "chain_reuse": null,
+      "conversation_id": "ac4f6497-181c-4ae7-bb59-79f994031787",
+      "executed": "2026-11-10"
+    },
+    {
+      "id": "LF-21",
+      "status": "Passed",
+      "environment": "staging",
+      "planned_environment": "staging",
+      "automation": "PLAN",
+      "priority": "P0",
+      "note": "两原片分别返回，各自播放为女士及男子，未漏项、误合并或混入其他素材。",
+      "report": "local-footage-results-staging-18-35-20261110.md",
+      "fixtures": [
+        "F5",
+        "F6"
+      ],
+      "chain_reuse": null,
+      "conversation_id": "2cf0177c-e4b8-4821-bd72-c76d42c561ea",
+      "executed": "2026-11-10"
+    },
+    {
+      "id": "LF-22",
+      "status": "Failed",
+      "environment": "staging",
+      "planned_environment": "staging",
+      "automation": "PLAN",
+      "priority": "P0",
+      "note": "终态已完成，但仅回复将核对、若不存在将告知，未给出文件不存在/未找到的实际结论；无新增候选，前轮F5保留。",
+      "report": "local-footage-results-staging-18-35-20261110.md",
+      "fixtures": [
+        "F5",
+        "F6"
+      ],
+      "chain_reuse": null,
+      "conversation_id": "c9be8984-c396-4dd2-9993-12bad64f6574",
+      "executed": "2026-11-10"
+    },
+    {
+      "id": "LF-28",
+      "status": "Failed",
+      "environment": "staging",
+      "planned_environment": "staging",
+      "automation": "PLAN",
+      "priority": "P0",
+      "note": "36/43/36秒三轮完成，F5到F6切换及历史保留正常，但中间不存在名称仅回复将核对，未给无匹配结论；复用LF18及LF22证据。",
+      "report": "local-footage-results-staging-18-35-20261110.md",
+      "fixtures": [
+        "F5",
+        "F6"
+      ],
+      "chain_reuse": "LF18 parameter groups plus LF22 in one S-name; no duplicate query",
+      "conversation_id": "c9be8984-c396-4dd2-9993-12bad64f6574",
+      "executed": "2026-11-10"
+    },
+    {
+      "id": "LF-30",
+      "status": "Passed",
+      "environment": "staging",
+      "planned_environment": "staging",
+      "automation": "PLAN",
+      "priority": "P0",
+      "note": "不使用文件名，唯一候选7MB.mp4，实际播放为黑外套蓝上衣女士及旗帜，未混入男子。",
+      "report": "local-footage-results-staging-18-35-20261110.md",
+      "fixtures": [
+        "F5",
+        "F6"
+      ],
+      "conversation_id": "b5bee2c5-ceea-4bf7-b1bc-5df421334954",
+      "executed": "2026-11-10"
+    },
+    {
+      "id": "LF-31",
+      "status": "Passed",
+      "environment": "staging",
+      "planned_environment": "staging",
+      "automation": "PLAN",
+      "priority": "P0",
+      "note": "不使用文件名，唯一候选9s.mp4，播放确认为黑框眼镜男子、木桌与电脑，无女士混入。",
+      "report": "local-footage-results-staging-18-35-20261110.md",
+      "fixtures": [
+        "F5",
+        "F6"
+      ],
+      "conversation_id": "24bbc785-3823-48d1-a78b-8e7ba3d1034b",
+      "executed": "2026-11-10"
+    },
+    {
+      "id": "LF-32",
+      "status": "Passed",
+      "environment": "staging",
+      "planned_environment": "staging",
+      "automation": "PLAN",
+      "priority": "P0",
+      "note": "已由用户完整预览确认目标不存在；终态显示素材搜索未找到匹配片段，0候选，无生成。",
+      "report": "local-footage-results-staging-18-35-20261110.md",
+      "fixtures": [
+        "F5",
+        "F6"
+      ],
+      "conversation_id": "db9b3332-deea-4464-b8f7-09862cdb4137",
+      "executed": "2026-11-10"
+    },
+    {
+      "id": "LF-33",
+      "status": "Failed",
+      "environment": "staging",
+      "planned_environment": "staging",
+      "automation": "PLAN",
+      "priority": "P1",
+      "note": "明确要求女士及男子同一画面，却返回7MB.mp4与9s.mp4两个独立候选；逐一播放只有各自人物，未说明不满足同框条件。根因未确认。",
+      "report": "local-footage-results-staging-18-35-20261110.md",
+      "fixtures": [
+        "F5",
+        "F6"
+      ],
+      "conversation_id": "722634f0-4daf-45af-9387-73361d2f7caa",
+      "executed": "2026-11-10"
+    },
+    {
+      "id": "LF-34",
+      "status": "Passed",
+      "environment": "staging",
+      "planned_environment": "staging",
+      "automation": "PLAN",
+      "priority": "P1",
+      "note": "复用LF31前轮F6，排除男子后唯一返回F5，实际播放女士正确，男子历史仍保留；之后项目分析仍2/2，无删除或生成任务。",
+      "report": "local-footage-results-staging-18-35-20261110.md",
+      "fixtures": [
+        "F5",
+        "F6"
+      ],
+      "conversation_id": "24bbc785-3823-48d1-a78b-8e7ba3d1034b",
+      "executed": "2026-11-10"
+    },
+    {
+      "id": "LF-35",
+      "status": "Failed",
+      "environment": "staging",
+      "planned_environment": "staging",
+      "automation": "PLAN",
+      "priority": "P1",
+      "note": "首轮仅列F5；补充选择男子后，本轮新返回F6及不符合条件的F5，均实际播放核验，回复仍称暂不能选、将重新检索，未收敛到明确男子选择。不是仅因旧历史保留而失败。",
+      "report": "local-footage-results-staging-18-35-20261110.md",
+      "fixtures": [
+        "F5",
+        "F6"
+      ],
+      "conversation_id": "cb7d8b1a-ea84-408d-a07e-00be54f791de",
+      "executed": "2026-11-10"
+    }
+  ],
+  "automation_counts": {
+    "AUTO": 3,
+    "PLAN": 25
+  },
+  "priority_counts": {
+    "P0": 25,
+    "P1": 3
+  },
+  "retired_cases": [
+    {
+      "id": "LF-19",
+      "status": "Not Run",
+      "environment": null,
+      "planned_environment": "staging",
+      "automation": "PLAN",
+      "priority": "P0",
+      "note": "正向：F6完整文件名；仅整理，待授权执行",
+      "report": null,
+      "fixtures": [
+        "F5",
+        "F6"
+      ],
+      "chain_reuse": null,
+      "retired": true,
+      "retirement_reason": "合并到LF18，两份素材按完整名称验证"
+    },
+    {
+      "id": "LF-23",
+      "status": "Not Run",
+      "environment": null,
+      "planned_environment": "staging",
+      "automation": "PLAN",
+      "priority": "P0",
+      "note": "反向：扩展名不一致；仅整理，待授权执行",
+      "report": null,
+      "fixtures": [
+        "F5",
+        "F6"
+      ],
+      "chain_reuse": null,
+      "retired": true,
+      "retirement_reason": "扩展名细分移出核心，基本无匹配由LF22覆盖"
+    },
+    {
+      "id": "LF-24",
+      "status": "Not Run",
+      "environment": null,
+      "planned_environment": "staging",
+      "automation": "PLAN",
+      "priority": "P0",
+      "note": "反向：文件名与内容指代冲突；仅整理，待授权执行",
+      "report": null,
+      "fixtures": [
+        "F5",
+        "F6"
+      ],
+      "chain_reuse": null,
+      "retired": true,
+      "retirement_reason": "名称/内容冲突移出本轮核心"
+    },
+    {
+      "id": "LF-25",
+      "status": "Not Run",
+      "environment": null,
+      "planned_environment": "staging",
+      "automation": "PLAN",
+      "priority": "P0",
+      "note": "反向：明确排除一个已存在素材；仅整理，待授权执行",
+      "report": null,
+      "fixtures": [
+        "F5",
+        "F6"
+      ],
+      "chain_reuse": null,
+      "retired": true,
+      "retirement_reason": "名称排除细分移出核心，内容否定由LF34覆盖"
+    },
+    {
+      "id": "LF-26",
+      "status": "Not Run",
+      "environment": null,
+      "planned_environment": "staging",
+      "automation": "PLAN",
+      "priority": "P0",
+      "note": "反向：宽泛名称匹配存在歧义；仅整理，待授权执行",
+      "report": null,
+      "fixtures": [
+        "F5",
+        "F6"
+      ],
+      "chain_reuse": null,
+      "retired": true,
+      "retirement_reason": "名称宽泛歧义细分移出核心，内容澄清由LF35覆盖"
+    },
+    {
+      "id": "LF-27",
+      "status": "Not Run",
+      "environment": null,
+      "planned_environment": "staging",
+      "automation": "PLAN",
+      "priority": "P0",
+      "note": "反向：同账号跨项目名称不存在；仅整理，待授权执行",
+      "report": null,
+      "fixtures": [
+        "F5",
+        "F6"
+      ],
+      "chain_reuse": null,
+      "retired": true,
+      "retirement_reason": "名称跨项目细分移出核心，项目隔离已有LF11"
+    },
+    {
+      "id": "LF-29",
+      "status": "Not Run",
+      "environment": null,
+      "planned_environment": "staging",
+      "automation": "PLAN",
+      "priority": "P0",
+      "note": "串联：真实内容查找后按名称切换；仅整理，待授权执行",
+      "report": null,
+      "fixtures": [
+        "F5",
+        "F6"
+      ],
+      "chain_reuse": null,
+      "retired": true,
+      "retirement_reason": "混合内容/名称长链移出核心，实际画面由LF30/31覆盖"
+    }
+  ]
+}

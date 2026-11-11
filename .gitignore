@@ -21,3 +21,4 @@ local.env
 .tmp-*
 __pycache__/
 .playwright-mcp/
+tools/yunxiao/config.local.json

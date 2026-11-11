@@ -4,11 +4,19 @@ source: https://devops.aliyun.com/projex/req/ERYE-237
 status: designing
 automation_tag: "@ERYE-237"
 case_prefix: ERYE237
-case_set_version: "2026-11-05-rewrite"
-updated: 2026-11-05
+case_set_version: "2026-11-09-layered-execution"
+updated: 2026-11-09
 source_modified: "2026-10-19 10:42:09 Asia/Shanghai"
 figma_file: SqGzwtxqNjFZa9QIvUPAlc
 figma_node: "1816:50610"
 annotation_limit: 10
 annotation_limit_confirmed: "user 2026-11-05"
-execution_status: Not Run
+execution_status: Partial
+historical_execution_status: Partial
+historical_execution_summary: "1 Passed / 12 Failed / 12 Blocked / 119 Not Run; 014-032: 1 UI-business Passed / 6 Failed / 12 Blocked; prior 001-005 and 033 Failed retained"
+historical_execution_report: docs/cases/requirements/ERYE-237/results-014-032-prod-20261109.md
+execution_summary: "001-005 primary branches: 2 Passed / 3 Failed; 258 other branches Not Run; 139 other primary cases Not Run"
+execution_guide: docs/cases/requirements/ERYE-237/execution-guide.md
+execution_report: docs/cases/requirements/ERYE-237/results-001-005-layered-prod-20261109.md
+latest_case_retest: "005/Agent; original image retaining background; Failed billing input validation; green not sent"
+latest_case_retest_report: docs/cases/requirements/ERYE-237/results-005-original-prod-20261109-r2.md

@@ -1,0 +1,16 @@
+{
+  "schemaVersion": 1,
+  "apiBase": "https://openapi-rdc.aliyuncs.com/oapi/v1/projex",
+  "organizationId": "645887adc88feae8ff9706ae",
+  "projectId": "1e401ac99539c3999e00e40006",
+  "projectName": "cinlink-WEB",
+  "workitemTypeId": "37da3a07df4d08aef2e3b393",
+  "stateDirectory": "../../reports/yunxiao",
+  "defaults": {
+    "assignedTo": "64b0b42a4530dc9bfa7b641c",
+    "sprint": "31d9bd3351e4e4dd60420b5c09",
+    "labels": ["600aa733de3fd8da735809eebf"],
+    "priority": "5341ff22ce75040255752bb465",
+    "seriousLevel": "91721612f43903f6a1a438ba98"
+  }
+}

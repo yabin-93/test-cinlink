@@ -1219,432 +1219,1680 @@ ERYE210-054:
 ERYE237-001:
   status: PLAN
   script: ""
+  execution_status: Failed
+  execution_scope: production_web_headed
+  execution_date: 2026-11-06
+  execution_report: docs/cases/requirements/ERYE-237/results-001-005-prod-20261106-r2.md
+  execution_record_role: historical_before_layered_reorganization
+  execution_record_version: "2026-11-09-ui-evidence-baseline"
+  current_case_version: "2026-11-09-layered-execution"
+  execution_branches:
+    UI:
+      execution_status: Passed
+      specification: docs/cases/requirements/ERYE-237/cases.md
+      execution_date: 2026-11-09
+      execution_scope: production_web_headed_primary_branch
+      execution_report: docs/cases/requirements/ERYE-237/results-001-005-layered-prod-20261109.md
+    Agent:
+      execution_status: Not Run
+      specification: docs/cases/requirements/ERYE-237/agent-checks.md
+    Technical:
+      execution_status: Not Run
+      specification: docs/cases/requirements/ERYE-237/technical-checks.md
 ERYE237-002:
   status: PLAN
-  script: ""
+  script: tools/erye237/erye237-002.cua.mjs
+  automation_scope: partial_cua_headed
+  execution_status: Failed
+  execution_scope: production_web_headed
+  execution_date: 2026-11-06
+  execution_report: docs/cases/requirements/ERYE-237/results-001-005-prod-20261106-r2.md
+  execution_record_role: historical_before_layered_reorganization
+  execution_record_version: "2026-11-09-ui-evidence-baseline"
+  current_case_version: "2026-11-09-layered-execution"
+  execution_branches:
+    Agent:
+      execution_status: Failed
+      specification: docs/cases/requirements/ERYE-237/cases.md
+      execution_date: 2026-11-09
+      execution_scope: production_web_headed_primary_branch
+      execution_report: docs/cases/requirements/ERYE-237/results-001-005-layered-prod-20261109.md
+    Technical:
+      execution_status: Not Run
+      specification: docs/cases/requirements/ERYE-237/technical-checks.md
 ERYE237-003:
   status: PLAN
-  script: ""
+  script: tools/erye237/erye237-003.cua.mjs
+  automation_scope: partial_cua_headed
+  execution_status: Failed
+  execution_scope: production_web_headed
+  execution_date: 2026-11-06
+  execution_report: docs/cases/requirements/ERYE-237/results-001-005-prod-20261106-r2.md
+  execution_record_role: historical_before_layered_reorganization
+  execution_record_version: "2026-11-09-ui-evidence-baseline"
+  current_case_version: "2026-11-09-layered-execution"
+  execution_branches:
+    Agent:
+      execution_status: Failed
+      specification: docs/cases/requirements/ERYE-237/cases.md
+      execution_date: 2026-11-09
+      execution_scope: production_web_headed_primary_branch
+      execution_report: docs/cases/requirements/ERYE-237/results-001-005-layered-prod-20261109.md
+    Technical:
+      execution_status: Not Run
+      specification: docs/cases/requirements/ERYE-237/technical-checks.md
 ERYE237-004:
   status: PLAN
   script: ""
+  execution_status: Failed
+  execution_scope: production_web_headed
+  execution_date: 2026-11-06
+  execution_report: docs/cases/requirements/ERYE-237/results-001-005-prod-20261106-r2.md
+
+  execution_record_role: historical_before_layered_reorganization
+  execution_record_version: "2026-11-09-ui-evidence-baseline"
+  current_case_version: "2026-11-09-layered-execution"
+  execution_branches:
+    UI:
+      execution_status: Passed
+      specification: docs/cases/requirements/ERYE-237/cases.md
+      execution_date: 2026-11-09
+      execution_scope: production_web_headed_primary_branch
+      execution_report: docs/cases/requirements/ERYE-237/results-001-005-layered-prod-20261109.md
+    Agent:
+      execution_status: Not Run
+      specification: docs/cases/requirements/ERYE-237/agent-checks.md
+    Technical:
+      execution_status: Not Run
+      specification: docs/cases/requirements/ERYE-237/technical-checks.md
 ERYE237-005:
   status: PLAN
   script: ""
+  execution_status: Failed
+  execution_scope: production_web_headed
+  execution_date: 2026-11-06
+  execution_report: docs/cases/requirements/ERYE-237/results-001-005-prod-20261106-r2.md
+
+  execution_record_role: historical_before_layered_reorganization
+  execution_record_version: "2026-11-09-ui-evidence-baseline"
+  current_case_version: "2026-11-09-layered-execution"
+  execution_branches:
+    Agent:
+      execution_status: Failed
+      specification: docs/cases/requirements/ERYE-237/cases.md
+      execution_date: 2026-11-09
+      execution_scope: production_web_headed_primary_branch
+      execution_report: docs/cases/requirements/ERYE-237/results-005-original-prod-20261109-r2.md
+      baseline_scope: original_image_with_background
+      previous_execution_report: docs/cases/requirements/ERYE-237/results-001-005-layered-prod-20261109.md
+    Technical:
+      execution_status: Not Run
+      specification: docs/cases/requirements/ERYE-237/technical-checks.md
 ERYE237-006:
   status: PLAN
   script: ""
+  current_case_version: "2026-11-09-layered-execution"
+  execution_branches:
+    Agent:
+      execution_status: Not Run
+      specification: docs/cases/requirements/ERYE-237/cases.md
+    Technical:
+      execution_status: Not Run
+      specification: docs/cases/requirements/ERYE-237/technical-checks.md
 ERYE237-007:
   status: PLAN
   script: ""
+  current_case_version: "2026-11-09-layered-execution"
+  execution_branches:
+    UI:
+      execution_status: Not Run
+      specification: docs/cases/requirements/ERYE-237/cases.md
+    Agent:
+      execution_status: Not Run
+      specification: docs/cases/requirements/ERYE-237/agent-checks.md
+    Technical:
+      execution_status: Not Run
+      specification: docs/cases/requirements/ERYE-237/technical-checks.md
 ERYE237-008:
   status: PLAN
   script: ""
+  current_case_version: "2026-11-09-layered-execution"
+  execution_branches:
+    UI:
+      execution_status: Not Run
+      specification: docs/cases/requirements/ERYE-237/cases.md
+    Agent:
+      execution_status: Not Run
+      specification: docs/cases/requirements/ERYE-237/agent-checks.md
+    Technical:
+      execution_status: Not Run
+      specification: docs/cases/requirements/ERYE-237/technical-checks.md
 ERYE237-009:
   status: PLAN
   script: ""
+  current_case_version: "2026-11-09-layered-execution"
+  execution_branches:
+    UI:
+      execution_status: Not Run
+      specification: docs/cases/requirements/ERYE-237/cases.md
+    Agent:
+      execution_status: Not Run
+      specification: docs/cases/requirements/ERYE-237/agent-checks.md
+    Technical:
+      execution_status: Not Run
+      specification: docs/cases/requirements/ERYE-237/technical-checks.md
 ERYE237-010:
   status: PLAN
   script: ""
+  current_case_version: "2026-11-09-layered-execution"
+  execution_branches:
+    UI:
+      execution_status: Not Run
+      specification: docs/cases/requirements/ERYE-237/cases.md
+    Agent:
+      execution_status: Not Run
+      specification: docs/cases/requirements/ERYE-237/agent-checks.md
+    Technical:
+      execution_status: Not Run
+      specification: docs/cases/requirements/ERYE-237/technical-checks.md
 ERYE237-011:
   status: PLAN
   script: ""
+  current_case_version: "2026-11-09-layered-execution"
+  execution_branches:
+    Agent:
+      execution_status: Not Run
+      specification: docs/cases/requirements/ERYE-237/cases.md
+    Technical:
+      execution_status: Not Run
+      specification: docs/cases/requirements/ERYE-237/technical-checks.md
 ERYE237-012:
   status: PLAN
   script: ""
+  current_case_version: "2026-11-09-layered-execution"
+  execution_branches:
+    UI:
+      execution_status: Not Run
+      specification: docs/cases/requirements/ERYE-237/cases.md
+    Agent:
+      execution_status: Not Run
+      specification: docs/cases/requirements/ERYE-237/agent-checks.md
+    Technical:
+      execution_status: Not Run
+      specification: docs/cases/requirements/ERYE-237/technical-checks.md
 ERYE237-013:
   status: PLAN
   script: ""
+  current_case_version: "2026-11-09-layered-execution"
+  execution_branches:
+    UI:
+      execution_status: Not Run
+      specification: docs/cases/requirements/ERYE-237/cases.md
+    Agent:
+      execution_status: Not Run
+      specification: docs/cases/requirements/ERYE-237/agent-checks.md
+    Technical:
+      execution_status: Not Run
+      specification: docs/cases/requirements/ERYE-237/technical-checks.md
 ERYE237-014:
   status: PLAN
   script: ""
+  execution_status: Failed
+  execution_scope: production_web_headed_partial_branches
+  execution_date: 2026-11-09
+  execution_report: docs/cases/requirements/ERYE-237/results-014-032-prod-20261109.md
+  execution_record_role: historical_before_layered_reorganization
+  execution_record_version: "2026-11-09-ui-evidence-baseline"
+  current_case_version: "2026-11-09-layered-execution"
+  execution_branches:
+    UI:
+      execution_status: Not Run
+      specification: docs/cases/requirements/ERYE-237/cases.md
+    Agent:
+      execution_status: Not Run
+      specification: docs/cases/requirements/ERYE-237/agent-checks.md
+    Technical:
+      execution_status: Not Run
+      specification: docs/cases/requirements/ERYE-237/technical-checks.md
 ERYE237-015:
   status: PLAN
   script: ""
+  execution_status: Blocked
+  execution_scope: production_web_headed_partial_branches
+  execution_date: 2026-11-09
+  execution_report: docs/cases/requirements/ERYE-237/results-014-032-prod-20261109.md
+  execution_record_role: historical_before_layered_reorganization
+  execution_record_version: "2026-11-09-ui-evidence-baseline"
+  current_case_version: "2026-11-09-layered-execution"
+  execution_branches:
+    UI:
+      execution_status: Not Run
+      specification: docs/cases/requirements/ERYE-237/cases.md
+    Agent:
+      execution_status: Not Run
+      specification: docs/cases/requirements/ERYE-237/agent-checks.md
+    Technical:
+      execution_status: Not Run
+      specification: docs/cases/requirements/ERYE-237/technical-checks.md
 ERYE237-016:
   status: PLAN
   script: ""
+  execution_status: Blocked
+  execution_scope: production_web_headed_partial_branches
+  execution_date: 2026-11-09
+  execution_report: docs/cases/requirements/ERYE-237/results-014-032-prod-20261109.md
+  execution_record_role: historical_before_layered_reorganization
+  execution_record_version: "2026-11-09-ui-evidence-baseline"
+  current_case_version: "2026-11-09-layered-execution"
+  execution_branches:
+    UI:
+      execution_status: Not Run
+      specification: docs/cases/requirements/ERYE-237/cases.md
+    Agent:
+      execution_status: Not Run
+      specification: docs/cases/requirements/ERYE-237/agent-checks.md
+    Technical:
+      execution_status: Not Run
+      specification: docs/cases/requirements/ERYE-237/technical-checks.md
 ERYE237-017:
   status: PLAN
   script: ""
+  execution_status: Failed
+  execution_scope: production_web_headed_partial_branches
+  execution_date: 2026-11-09
+  execution_report: docs/cases/requirements/ERYE-237/results-014-032-prod-20261109.md
+  execution_record_role: historical_before_layered_reorganization
+  execution_record_version: "2026-11-09-ui-evidence-baseline"
+  current_case_version: "2026-11-09-layered-execution"
+  execution_branches:
+    UI:
+      execution_status: Not Run
+      specification: docs/cases/requirements/ERYE-237/cases.md
+    Agent:
+      execution_status: Not Run
+      specification: docs/cases/requirements/ERYE-237/agent-checks.md
+    Technical:
+      execution_status: Not Run
+      specification: docs/cases/requirements/ERYE-237/technical-checks.md
 ERYE237-018:
   status: PLAN
   script: ""
+  execution_status: Failed
+  execution_scope: production_web_headed_partial_branches
+  execution_date: 2026-11-09
+  execution_report: docs/cases/requirements/ERYE-237/results-014-032-prod-20261109.md
+  execution_record_role: historical_before_layered_reorganization
+  execution_record_version: "2026-11-09-ui-evidence-baseline"
+  current_case_version: "2026-11-09-layered-execution"
+  execution_branches:
+    UI:
+      execution_status: Not Run
+      specification: docs/cases/requirements/ERYE-237/cases.md
+    Agent:
+      execution_status: Not Run
+      specification: docs/cases/requirements/ERYE-237/agent-checks.md
+    Technical:
+      execution_status: Not Run
+      specification: docs/cases/requirements/ERYE-237/technical-checks.md
 ERYE237-019:
   status: PLAN
   script: ""
+  execution_status: Blocked
+  execution_scope: production_web_headed_partial_branches
+  execution_date: 2026-11-09
+  execution_report: docs/cases/requirements/ERYE-237/results-014-032-prod-20261109.md
+  execution_record_role: historical_before_layered_reorganization
+  execution_record_version: "2026-11-09-ui-evidence-baseline"
+  current_case_version: "2026-11-09-layered-execution"
+  execution_branches:
+    Technical:
+      execution_status: Not Run
+      specification: docs/cases/requirements/ERYE-237/cases.md
 ERYE237-020:
   status: PLAN
   script: ""
+  execution_status: Blocked
+  execution_scope: production_web_headed_partial_branches
+  execution_date: 2026-11-09
+  execution_report: docs/cases/requirements/ERYE-237/results-014-032-prod-20261109.md
+  execution_record_role: historical_before_layered_reorganization
+  execution_record_version: "2026-11-09-ui-evidence-baseline"
+  current_case_version: "2026-11-09-layered-execution"
+  execution_branches:
+    UI:
+      execution_status: Not Run
+      specification: docs/cases/requirements/ERYE-237/cases.md
+    Agent:
+      execution_status: Not Run
+      specification: docs/cases/requirements/ERYE-237/agent-checks.md
+    Technical:
+      execution_status: Not Run
+      specification: docs/cases/requirements/ERYE-237/technical-checks.md
 ERYE237-021:
   status: PLAN
   script: ""
+  execution_status: Blocked
+  execution_scope: production_web_headed_partial_branches
+  execution_date: 2026-11-09
+  execution_report: docs/cases/requirements/ERYE-237/results-014-032-prod-20261109.md
+  execution_record_role: historical_before_layered_reorganization
+  execution_record_version: "2026-11-09-ui-evidence-baseline"
+  current_case_version: "2026-11-09-layered-execution"
+  execution_branches:
+    Technical:
+      execution_status: Not Run
+      specification: docs/cases/requirements/ERYE-237/cases.md
 ERYE237-022:
   status: PLAN
   script: ""
+  execution_status: Blocked
+  execution_scope: production_web_headed_partial_branches
+  execution_date: 2026-11-09
+  execution_report: docs/cases/requirements/ERYE-237/results-014-032-prod-20261109.md
+  execution_record_role: historical_before_layered_reorganization
+  execution_record_version: "2026-11-09-ui-evidence-baseline"
+  current_case_version: "2026-11-09-layered-execution"
+  execution_branches:
+    UI:
+      execution_status: Not Run
+      specification: docs/cases/requirements/ERYE-237/cases.md
+    Agent:
+      execution_status: Not Run
+      specification: docs/cases/requirements/ERYE-237/agent-checks.md
+    Technical:
+      execution_status: Not Run
+      specification: docs/cases/requirements/ERYE-237/technical-checks.md
 ERYE237-023:
   status: PLAN
   script: ""
+  execution_status: Blocked
+  execution_scope: production_web_headed_partial_branches
+  execution_date: 2026-11-09
+  execution_report: docs/cases/requirements/ERYE-237/results-014-032-prod-20261109.md
+  execution_record_role: historical_before_layered_reorganization
+  execution_record_version: "2026-11-09-ui-evidence-baseline"
+  current_case_version: "2026-11-09-layered-execution"
+  execution_branches:
+    Technical:
+      execution_status: Not Run
+      specification: docs/cases/requirements/ERYE-237/cases.md
 ERYE237-024:
   status: PLAN
   script: ""
+  execution_status: Blocked
+  execution_scope: production_web_headed_partial_branches
+  execution_date: 2026-11-09
+  execution_report: docs/cases/requirements/ERYE-237/results-014-032-prod-20261109.md
+  execution_record_role: historical_before_layered_reorganization
+  execution_record_version: "2026-11-09-ui-evidence-baseline"
+  current_case_version: "2026-11-09-layered-execution"
+  execution_branches:
+    UI:
+      execution_status: Not Run
+      specification: docs/cases/requirements/ERYE-237/cases.md
+    Agent:
+      execution_status: Not Run
+      specification: docs/cases/requirements/ERYE-237/agent-checks.md
+    Technical:
+      execution_status: Not Run
+      specification: docs/cases/requirements/ERYE-237/technical-checks.md
 ERYE237-025:
   status: PLAN
   script: ""
+  execution_status: Passed
+  execution_scope: production_web_headed_ui_business
+  execution_date: 2026-11-09
+  execution_report: docs/cases/requirements/ERYE-237/results-014-032-prod-20261109.md
+  execution_record_role: historical_before_layered_reorganization
+  execution_record_version: "2026-11-09-ui-evidence-baseline"
+  current_case_version: "2026-11-09-layered-execution"
+  execution_branches:
+    UI:
+      execution_status: Not Run
+      specification: docs/cases/requirements/ERYE-237/cases.md
+    Agent:
+      execution_status: Not Run
+      specification: docs/cases/requirements/ERYE-237/agent-checks.md
+    Technical:
+      execution_status: Not Run
+      specification: docs/cases/requirements/ERYE-237/technical-checks.md
 ERYE237-026:
   status: PLAN
   script: ""
+  execution_status: Blocked
+  execution_scope: production_web_headed_partial_branches
+  execution_date: 2026-11-09
+  execution_report: docs/cases/requirements/ERYE-237/results-014-032-prod-20261109.md
+  execution_record_role: historical_before_layered_reorganization
+  execution_record_version: "2026-11-09-ui-evidence-baseline"
+  current_case_version: "2026-11-09-layered-execution"
+  execution_branches:
+    Agent:
+      execution_status: Not Run
+      specification: docs/cases/requirements/ERYE-237/cases.md
+    Technical:
+      execution_status: Not Run
+      specification: docs/cases/requirements/ERYE-237/technical-checks.md
 ERYE237-027:
   status: PLAN
   script: ""
+  execution_status: Blocked
+  execution_scope: production_web_headed_partial_branches
+  execution_date: 2026-11-09
+  execution_report: docs/cases/requirements/ERYE-237/results-014-032-prod-20261109.md
+  execution_record_role: historical_before_layered_reorganization
+  execution_record_version: "2026-11-09-ui-evidence-baseline"
+  current_case_version: "2026-11-09-layered-execution"
+  execution_branches:
+    UI:
+      execution_status: Not Run
+      specification: docs/cases/requirements/ERYE-237/cases.md
+    Agent:
+      execution_status: Not Run
+      specification: docs/cases/requirements/ERYE-237/agent-checks.md
+    Technical:
+      execution_status: Not Run
+      specification: docs/cases/requirements/ERYE-237/technical-checks.md
 ERYE237-028:
   status: PLAN
   script: ""
+  execution_status: Blocked
+  execution_scope: production_web_headed_partial_branches
+  execution_date: 2026-11-09
+  execution_report: docs/cases/requirements/ERYE-237/results-014-032-prod-20261109.md
+  execution_record_role: historical_before_layered_reorganization
+  execution_record_version: "2026-11-09-ui-evidence-baseline"
+  current_case_version: "2026-11-09-layered-execution"
+  execution_branches:
+    Agent:
+      execution_status: Not Run
+      specification: docs/cases/requirements/ERYE-237/cases.md
+    Technical:
+      execution_status: Not Run
+      specification: docs/cases/requirements/ERYE-237/technical-checks.md
 ERYE237-029:
   status: PLAN
   script: ""
+  execution_status: Failed
+  execution_scope: production_web_headed_partial_branches
+  execution_date: 2026-11-09
+  execution_report: docs/cases/requirements/ERYE-237/results-014-032-prod-20261109.md
+  execution_record_role: historical_before_layered_reorganization
+  execution_record_version: "2026-11-09-ui-evidence-baseline"
+  current_case_version: "2026-11-09-layered-execution"
+  execution_branches:
+    UI:
+      execution_status: Not Run
+      specification: docs/cases/requirements/ERYE-237/cases.md
+    Agent:
+      execution_status: Not Run
+      specification: docs/cases/requirements/ERYE-237/agent-checks.md
+    Technical:
+      execution_status: Not Run
+      specification: docs/cases/requirements/ERYE-237/technical-checks.md
 ERYE237-030:
   status: PLAN
   script: ""
+  execution_status: Failed
+  execution_scope: production_web_headed_partial_branches
+  execution_date: 2026-11-09
+  execution_report: docs/cases/requirements/ERYE-237/results-014-032-prod-20261109.md
+  execution_record_role: historical_before_layered_reorganization
+  execution_record_version: "2026-11-09-ui-evidence-baseline"
+  current_case_version: "2026-11-09-layered-execution"
+  execution_branches:
+    UI:
+      execution_status: Not Run
+      specification: docs/cases/requirements/ERYE-237/cases.md
+    Agent:
+      execution_status: Not Run
+      specification: docs/cases/requirements/ERYE-237/agent-checks.md
+    Technical:
+      execution_status: Not Run
+      specification: docs/cases/requirements/ERYE-237/technical-checks.md
 ERYE237-031:
   status: PLAN
   script: ""
+  execution_status: Blocked
+  execution_scope: production_web_headed_partial_branches
+  execution_date: 2026-11-09
+  execution_report: docs/cases/requirements/ERYE-237/results-014-032-prod-20261109.md
+  execution_record_role: historical_before_layered_reorganization
+  execution_record_version: "2026-11-09-ui-evidence-baseline"
+  current_case_version: "2026-11-09-layered-execution"
+  execution_branches:
+    UI:
+      execution_status: Not Run
+      specification: docs/cases/requirements/ERYE-237/cases.md
+    Agent:
+      execution_status: Not Run
+      specification: docs/cases/requirements/ERYE-237/agent-checks.md
+    Technical:
+      execution_status: Not Run
+      specification: docs/cases/requirements/ERYE-237/technical-checks.md
 ERYE237-032:
   status: PLAN
   script: ""
+  execution_status: Failed
+  execution_scope: production_web_headed_partial_branches
+  execution_date: 2026-11-09
+  execution_report: docs/cases/requirements/ERYE-237/results-014-032-prod-20261109.md
+  execution_record_role: historical_before_layered_reorganization
+  execution_record_version: "2026-11-09-ui-evidence-baseline"
+  current_case_version: "2026-11-09-layered-execution"
+  execution_branches:
+    Agent:
+      execution_status: Not Run
+      specification: docs/cases/requirements/ERYE-237/cases.md
+    Technical:
+      execution_status: Not Run
+      specification: docs/cases/requirements/ERYE-237/technical-checks.md
 ERYE237-033:
   status: PLAN
   script: ""
+  execution_status: Failed
+  execution_scope: production_web_headed_new_project_business_adapted_source
+  execution_date: 2026-11-09
+  execution_report: docs/cases/requirements/ERYE-237/results-033-prod-20261109-r2.md
+  execution_record_role: historical_before_layered_reorganization
+  execution_record_version: "2026-11-09-ui-evidence-baseline"
+  current_case_version: "2026-11-09-layered-execution"
+  execution_branches:
+    UI:
+      execution_status: Not Run
+      specification: docs/cases/requirements/ERYE-237/cases.md
+    Agent:
+      execution_status: Not Run
+      specification: docs/cases/requirements/ERYE-237/agent-checks.md
+    Technical:
+      execution_status: Not Run
+      specification: docs/cases/requirements/ERYE-237/technical-checks.md
 ERYE237-034:
   status: PLAN
   script: ""
+  current_case_version: "2026-11-09-layered-execution"
+  execution_branches:
+    Technical:
+      execution_status: Not Run
+      specification: docs/cases/requirements/ERYE-237/cases.md
 ERYE237-035:
   status: PLAN
   script: ""
+  current_case_version: "2026-11-09-layered-execution"
+  execution_branches:
+    Technical:
+      execution_status: Not Run
+      specification: docs/cases/requirements/ERYE-237/cases.md
 ERYE237-036:
   status: PLAN
   script: ""
+  current_case_version: "2026-11-09-layered-execution"
+  execution_branches:
+    UI:
+      execution_status: Not Run
+      specification: docs/cases/requirements/ERYE-237/cases.md
+    Agent:
+      execution_status: Not Run
+      specification: docs/cases/requirements/ERYE-237/agent-checks.md
+    Technical:
+      execution_status: Not Run
+      specification: docs/cases/requirements/ERYE-237/technical-checks.md
 ERYE237-037:
   status: PLAN
   script: ""
+  current_case_version: "2026-11-09-layered-execution"
+  execution_branches:
+    Agent:
+      execution_status: Not Run
+      specification: docs/cases/requirements/ERYE-237/cases.md
+    Technical:
+      execution_status: Not Run
+      specification: docs/cases/requirements/ERYE-237/technical-checks.md
 ERYE237-038:
   status: PLAN
   script: ""
+  current_case_version: "2026-11-09-layered-execution"
+  execution_branches:
+    UI:
+      execution_status: Not Run
+      specification: docs/cases/requirements/ERYE-237/cases.md
+    Agent:
+      execution_status: Not Run
+      specification: docs/cases/requirements/ERYE-237/agent-checks.md
+    Technical:
+      execution_status: Not Run
+      specification: docs/cases/requirements/ERYE-237/technical-checks.md
 ERYE237-039:
   status: PLAN
   script: ""
+  current_case_version: "2026-11-09-layered-execution"
+  execution_branches:
+    UI:
+      execution_status: Not Run
+      specification: docs/cases/requirements/ERYE-237/cases.md
+    Agent:
+      execution_status: Not Run
+      specification: docs/cases/requirements/ERYE-237/agent-checks.md
+    Technical:
+      execution_status: Not Run
+      specification: docs/cases/requirements/ERYE-237/technical-checks.md
 ERYE237-040:
   status: PLAN
   script: ""
+  current_case_version: "2026-11-09-layered-execution"
+  execution_branches:
+    UI:
+      execution_status: Not Run
+      specification: docs/cases/requirements/ERYE-237/cases.md
+    Agent:
+      execution_status: Not Run
+      specification: docs/cases/requirements/ERYE-237/agent-checks.md
+    Technical:
+      execution_status: Not Run
+      specification: docs/cases/requirements/ERYE-237/technical-checks.md
 ERYE237-041:
   status: PLAN
   script: ""
+  current_case_version: "2026-11-09-layered-execution"
+  execution_branches:
+    UI:
+      execution_status: Not Run
+      specification: docs/cases/requirements/ERYE-237/cases.md
+    Agent:
+      execution_status: Not Run
+      specification: docs/cases/requirements/ERYE-237/agent-checks.md
+    Technical:
+      execution_status: Not Run
+      specification: docs/cases/requirements/ERYE-237/technical-checks.md
 ERYE237-042:
   status: PLAN
   script: ""
+  current_case_version: "2026-11-09-layered-execution"
+  execution_branches:
+    UI:
+      execution_status: Not Run
+      specification: docs/cases/requirements/ERYE-237/cases.md
+    Agent:
+      execution_status: Not Run
+      specification: docs/cases/requirements/ERYE-237/agent-checks.md
+    Technical:
+      execution_status: Not Run
+      specification: docs/cases/requirements/ERYE-237/technical-checks.md
 ERYE237-043:
   status: PLAN
   script: ""
+  current_case_version: "2026-11-09-layered-execution"
+  execution_branches:
+    UI:
+      execution_status: Not Run
+      specification: docs/cases/requirements/ERYE-237/cases.md
+    Agent:
+      execution_status: Not Run
+      specification: docs/cases/requirements/ERYE-237/agent-checks.md
+    Technical:
+      execution_status: Not Run
+      specification: docs/cases/requirements/ERYE-237/technical-checks.md
 ERYE237-044:
   status: PLAN
   script: ""
+  current_case_version: "2026-11-09-layered-execution"
+  execution_branches:
+    UI:
+      execution_status: Not Run
+      specification: docs/cases/requirements/ERYE-237/cases.md
+    Agent:
+      execution_status: Not Run
+      specification: docs/cases/requirements/ERYE-237/agent-checks.md
+    Technical:
+      execution_status: Not Run
+      specification: docs/cases/requirements/ERYE-237/technical-checks.md
 ERYE237-045:
   status: PLAN
   script: ""
+  current_case_version: "2026-11-09-layered-execution"
+  execution_branches:
+    Technical:
+      execution_status: Not Run
+      specification: docs/cases/requirements/ERYE-237/cases.md
 ERYE237-046:
   status: PLAN
   script: ""
+  current_case_version: "2026-11-09-layered-execution"
+  execution_branches:
+    Technical:
+      execution_status: Not Run
+      specification: docs/cases/requirements/ERYE-237/cases.md
 ERYE237-047:
   status: PLAN
   script: ""
+  current_case_version: "2026-11-09-layered-execution"
+  execution_branches:
+    Technical:
+      execution_status: Not Run
+      specification: docs/cases/requirements/ERYE-237/cases.md
 ERYE237-048:
   status: PLAN
   script: ""
+  current_case_version: "2026-11-09-layered-execution"
+  execution_branches:
+    Technical:
+      execution_status: Not Run
+      specification: docs/cases/requirements/ERYE-237/cases.md
 ERYE237-049:
   status: PLAN
   script: ""
+  current_case_version: "2026-11-09-layered-execution"
+  execution_branches:
+    Technical:
+      execution_status: Not Run
+      specification: docs/cases/requirements/ERYE-237/cases.md
 ERYE237-050:
   status: PLAN
   script: ""
+  current_case_version: "2026-11-09-layered-execution"
+  execution_branches:
+    Agent:
+      execution_status: Not Run
+      specification: docs/cases/requirements/ERYE-237/cases.md
+    Technical:
+      execution_status: Not Run
+      specification: docs/cases/requirements/ERYE-237/technical-checks.md
 ERYE237-051:
   status: PLAN
   script: ""
+  current_case_version: "2026-11-09-layered-execution"
+  execution_branches:
+    Agent:
+      execution_status: Not Run
+      specification: docs/cases/requirements/ERYE-237/cases.md
+    Technical:
+      execution_status: Not Run
+      specification: docs/cases/requirements/ERYE-237/technical-checks.md
 ERYE237-052:
   status: PLAN
   script: ""
+  current_case_version: "2026-11-09-layered-execution"
+  execution_branches:
+    Agent:
+      execution_status: Not Run
+      specification: docs/cases/requirements/ERYE-237/cases.md
+    Technical:
+      execution_status: Not Run
+      specification: docs/cases/requirements/ERYE-237/technical-checks.md
 ERYE237-053:
   status: PLAN
   script: ""
+  current_case_version: "2026-11-09-layered-execution"
+  execution_branches:
+    Agent:
+      execution_status: Not Run
+      specification: docs/cases/requirements/ERYE-237/cases.md
+    Technical:
+      execution_status: Not Run
+      specification: docs/cases/requirements/ERYE-237/technical-checks.md
 ERYE237-054:
   status: PLAN
   script: ""
+  current_case_version: "2026-11-09-layered-execution"
+  execution_branches:
+    Technical:
+      execution_status: Not Run
+      specification: docs/cases/requirements/ERYE-237/cases.md
 ERYE237-055:
   status: PLAN
   script: ""
+  current_case_version: "2026-11-09-layered-execution"
+  execution_branches:
+    Agent:
+      execution_status: Not Run
+      specification: docs/cases/requirements/ERYE-237/cases.md
+    Technical:
+      execution_status: Not Run
+      specification: docs/cases/requirements/ERYE-237/technical-checks.md
 ERYE237-056:
   status: PLAN
   script: ""
+  current_case_version: "2026-11-09-layered-execution"
+  execution_branches:
+    Agent:
+      execution_status: Not Run
+      specification: docs/cases/requirements/ERYE-237/cases.md
+    Technical:
+      execution_status: Not Run
+      specification: docs/cases/requirements/ERYE-237/technical-checks.md
 ERYE237-057:
   status: PLAN
   script: ""
+  current_case_version: "2026-11-09-layered-execution"
+  execution_branches:
+    Technical:
+      execution_status: Not Run
+      specification: docs/cases/requirements/ERYE-237/cases.md
 ERYE237-058:
   status: PLAN
   script: ""
+  current_case_version: "2026-11-09-layered-execution"
+  execution_branches:
+    Agent:
+      execution_status: Not Run
+      specification: docs/cases/requirements/ERYE-237/cases.md
+    Technical:
+      execution_status: Not Run
+      specification: docs/cases/requirements/ERYE-237/technical-checks.md
 ERYE237-059:
   status: PLAN
   script: ""
+  current_case_version: "2026-11-09-layered-execution"
+  execution_branches:
+    Agent:
+      execution_status: Not Run
+      specification: docs/cases/requirements/ERYE-237/cases.md
+    Technical:
+      execution_status: Not Run
+      specification: docs/cases/requirements/ERYE-237/technical-checks.md
 ERYE237-060:
   status: PLAN
   script: ""
+  current_case_version: "2026-11-09-layered-execution"
+  execution_branches:
+    Agent:
+      execution_status: Not Run
+      specification: docs/cases/requirements/ERYE-237/cases.md
+    Technical:
+      execution_status: Not Run
+      specification: docs/cases/requirements/ERYE-237/technical-checks.md
 ERYE237-061:
   status: PLAN
   script: ""
+  current_case_version: "2026-11-09-layered-execution"
+  execution_branches:
+    Agent:
+      execution_status: Not Run
+      specification: docs/cases/requirements/ERYE-237/cases.md
+    Technical:
+      execution_status: Not Run
+      specification: docs/cases/requirements/ERYE-237/technical-checks.md
 ERYE237-062:
   status: PLAN
   script: ""
+  current_case_version: "2026-11-09-layered-execution"
+  execution_branches:
+    Agent:
+      execution_status: Not Run
+      specification: docs/cases/requirements/ERYE-237/cases.md
+    Technical:
+      execution_status: Not Run
+      specification: docs/cases/requirements/ERYE-237/technical-checks.md
 ERYE237-063:
   status: PLAN
   script: ""
+  current_case_version: "2026-11-09-layered-execution"
+  execution_branches:
+    UI:
+      execution_status: Not Run
+      specification: docs/cases/requirements/ERYE-237/cases.md
+    Agent:
+      execution_status: Not Run
+      specification: docs/cases/requirements/ERYE-237/agent-checks.md
+    Technical:
+      execution_status: Not Run
+      specification: docs/cases/requirements/ERYE-237/technical-checks.md
 ERYE237-064:
   status: PLAN
   script: ""
+  current_case_version: "2026-11-09-layered-execution"
+  execution_branches:
+    UI:
+      execution_status: Not Run
+      specification: docs/cases/requirements/ERYE-237/cases.md
+    Agent:
+      execution_status: Not Run
+      specification: docs/cases/requirements/ERYE-237/agent-checks.md
+    Technical:
+      execution_status: Not Run
+      specification: docs/cases/requirements/ERYE-237/technical-checks.md
 ERYE237-065:
   status: PLAN
   script: ""
+  current_case_version: "2026-11-09-layered-execution"
+  execution_branches:
+    Agent:
+      execution_status: Not Run
+      specification: docs/cases/requirements/ERYE-237/cases.md
+    Technical:
+      execution_status: Not Run
+      specification: docs/cases/requirements/ERYE-237/technical-checks.md
 ERYE237-066:
   status: PLAN
   script: ""
+  current_case_version: "2026-11-09-layered-execution"
+  execution_branches:
+    UI:
+      execution_status: Not Run
+      specification: docs/cases/requirements/ERYE-237/cases.md
+    Agent:
+      execution_status: Not Run
+      specification: docs/cases/requirements/ERYE-237/agent-checks.md
+    Technical:
+      execution_status: Not Run
+      specification: docs/cases/requirements/ERYE-237/technical-checks.md
 ERYE237-067:
   status: PLAN
   script: ""
+  current_case_version: "2026-11-09-layered-execution"
+  execution_branches:
+    UI:
+      execution_status: Not Run
+      specification: docs/cases/requirements/ERYE-237/cases.md
+    Agent:
+      execution_status: Not Run
+      specification: docs/cases/requirements/ERYE-237/agent-checks.md
+    Technical:
+      execution_status: Not Run
+      specification: docs/cases/requirements/ERYE-237/technical-checks.md
 ERYE237-068:
   status: PLAN
   script: ""
+  current_case_version: "2026-11-09-layered-execution"
+  execution_branches:
+    Technical:
+      execution_status: Not Run
+      specification: docs/cases/requirements/ERYE-237/cases.md
 ERYE237-069:
   status: PLAN
   script: ""
+  current_case_version: "2026-11-09-layered-execution"
+  execution_branches:
+    Technical:
+      execution_status: Not Run
+      specification: docs/cases/requirements/ERYE-237/cases.md
 ERYE237-070:
   status: PLAN
   script: ""
+  current_case_version: "2026-11-09-layered-execution"
+  execution_branches:
+    UI:
+      execution_status: Not Run
+      specification: docs/cases/requirements/ERYE-237/cases.md
+    Agent:
+      execution_status: Not Run
+      specification: docs/cases/requirements/ERYE-237/agent-checks.md
+    Technical:
+      execution_status: Not Run
+      specification: docs/cases/requirements/ERYE-237/technical-checks.md
 ERYE237-071:
   status: PLAN
   script: ""
+  current_case_version: "2026-11-09-layered-execution"
+  execution_branches:
+    UI:
+      execution_status: Not Run
+      specification: docs/cases/requirements/ERYE-237/cases.md
+    Agent:
+      execution_status: Not Run
+      specification: docs/cases/requirements/ERYE-237/agent-checks.md
+    Technical:
+      execution_status: Not Run
+      specification: docs/cases/requirements/ERYE-237/technical-checks.md
 ERYE237-072:
   status: PLAN
   script: ""
+  current_case_version: "2026-11-09-layered-execution"
+  execution_branches:
+    UI:
+      execution_status: Not Run
+      specification: docs/cases/requirements/ERYE-237/cases.md
+    Agent:
+      execution_status: Not Run
+      specification: docs/cases/requirements/ERYE-237/agent-checks.md
+    Technical:
+      execution_status: Not Run
+      specification: docs/cases/requirements/ERYE-237/technical-checks.md
 ERYE237-073:
   status: PLAN
   script: ""
+  current_case_version: "2026-11-09-layered-execution"
+  execution_branches:
+    Agent:
+      execution_status: Not Run
+      specification: docs/cases/requirements/ERYE-237/cases.md
+    Technical:
+      execution_status: Not Run
+      specification: docs/cases/requirements/ERYE-237/technical-checks.md
 ERYE237-074:
   status: PLAN
   script: ""
+  current_case_version: "2026-11-09-layered-execution"
+  execution_branches:
+    Agent:
+      execution_status: Not Run
+      specification: docs/cases/requirements/ERYE-237/cases.md
+    Technical:
+      execution_status: Not Run
+      specification: docs/cases/requirements/ERYE-237/technical-checks.md
 ERYE237-075:
   status: PLAN
   script: ""
+  current_case_version: "2026-11-09-layered-execution"
+  execution_branches:
+    Agent:
+      execution_status: Not Run
+      specification: docs/cases/requirements/ERYE-237/cases.md
+    Technical:
+      execution_status: Not Run
+      specification: docs/cases/requirements/ERYE-237/technical-checks.md
 ERYE237-076:
   status: PLAN
   script: ""
+  current_case_version: "2026-11-09-layered-execution"
+  execution_branches:
+    Agent:
+      execution_status: Not Run
+      specification: docs/cases/requirements/ERYE-237/cases.md
+    Technical:
+      execution_status: Not Run
+      specification: docs/cases/requirements/ERYE-237/technical-checks.md
 ERYE237-077:
   status: PLAN
   script: ""
+  current_case_version: "2026-11-09-layered-execution"
+  execution_branches:
+    UI:
+      execution_status: Not Run
+      specification: docs/cases/requirements/ERYE-237/cases.md
+    Agent:
+      execution_status: Not Run
+      specification: docs/cases/requirements/ERYE-237/agent-checks.md
+    Technical:
+      execution_status: Not Run
+      specification: docs/cases/requirements/ERYE-237/technical-checks.md
 ERYE237-078:
   status: PLAN
   script: ""
+  current_case_version: "2026-11-09-layered-execution"
+  execution_branches:
+    UI:
+      execution_status: Not Run
+      specification: docs/cases/requirements/ERYE-237/cases.md
+    Agent:
+      execution_status: Not Run
+      specification: docs/cases/requirements/ERYE-237/agent-checks.md
+    Technical:
+      execution_status: Not Run
+      specification: docs/cases/requirements/ERYE-237/technical-checks.md
 ERYE237-079:
   status: PLAN
   script: ""
+  current_case_version: "2026-11-09-layered-execution"
+  execution_branches:
+    UI:
+      execution_status: Not Run
+      specification: docs/cases/requirements/ERYE-237/cases.md
+    Agent:
+      execution_status: Not Run
+      specification: docs/cases/requirements/ERYE-237/agent-checks.md
+    Technical:
+      execution_status: Not Run
+      specification: docs/cases/requirements/ERYE-237/technical-checks.md
 ERYE237-080:
   status: PLAN
   script: ""
+  current_case_version: "2026-11-09-layered-execution"
+  execution_branches:
+    UI:
+      execution_status: Not Run
+      specification: docs/cases/requirements/ERYE-237/cases.md
+    Agent:
+      execution_status: Not Run
+      specification: docs/cases/requirements/ERYE-237/agent-checks.md
+    Technical:
+      execution_status: Not Run
+      specification: docs/cases/requirements/ERYE-237/technical-checks.md
 ERYE237-081:
   status: PLAN
   script: ""
+  current_case_version: "2026-11-09-layered-execution"
+  execution_branches:
+    UI:
+      execution_status: Not Run
+      specification: docs/cases/requirements/ERYE-237/cases.md
+    Agent:
+      execution_status: Not Run
+      specification: docs/cases/requirements/ERYE-237/agent-checks.md
+    Technical:
+      execution_status: Not Run
+      specification: docs/cases/requirements/ERYE-237/technical-checks.md
 ERYE237-082:
   status: PLAN
   script: ""
+  current_case_version: "2026-11-09-layered-execution"
+  execution_branches:
+    Technical:
+      execution_status: Not Run
+      specification: docs/cases/requirements/ERYE-237/cases.md
 ERYE237-083:
   status: PLAN
   script: ""
+  current_case_version: "2026-11-09-layered-execution"
+  execution_branches:
+    UI:
+      execution_status: Not Run
+      specification: docs/cases/requirements/ERYE-237/cases.md
+    Agent:
+      execution_status: Not Run
+      specification: docs/cases/requirements/ERYE-237/agent-checks.md
+    Technical:
+      execution_status: Not Run
+      specification: docs/cases/requirements/ERYE-237/technical-checks.md
 ERYE237-084:
   status: PLAN
   script: ""
+  current_case_version: "2026-11-09-layered-execution"
+  execution_branches:
+    UI:
+      execution_status: Not Run
+      specification: docs/cases/requirements/ERYE-237/cases.md
+    Agent:
+      execution_status: Not Run
+      specification: docs/cases/requirements/ERYE-237/agent-checks.md
+    Technical:
+      execution_status: Not Run
+      specification: docs/cases/requirements/ERYE-237/technical-checks.md
 ERYE237-085:
   status: PLAN
   script: ""
+  current_case_version: "2026-11-09-layered-execution"
+  execution_branches:
+    UI:
+      execution_status: Not Run
+      specification: docs/cases/requirements/ERYE-237/cases.md
+    Agent:
+      execution_status: Not Run
+      specification: docs/cases/requirements/ERYE-237/agent-checks.md
+    Technical:
+      execution_status: Not Run
+      specification: docs/cases/requirements/ERYE-237/technical-checks.md
 ERYE237-086:
   status: PLAN
   script: ""
+  current_case_version: "2026-11-09-layered-execution"
+  execution_branches:
+    UI:
+      execution_status: Not Run
+      specification: docs/cases/requirements/ERYE-237/cases.md
+    Agent:
+      execution_status: Not Run
+      specification: docs/cases/requirements/ERYE-237/agent-checks.md
+    Technical:
+      execution_status: Not Run
+      specification: docs/cases/requirements/ERYE-237/technical-checks.md
 ERYE237-087:
   status: PLAN
   script: ""
+  current_case_version: "2026-11-09-layered-execution"
+  execution_branches:
+    Technical:
+      execution_status: Not Run
+      specification: docs/cases/requirements/ERYE-237/cases.md
 ERYE237-088:
   status: PLAN
   script: ""
+  current_case_version: "2026-11-09-layered-execution"
+  execution_branches:
+    UI:
+      execution_status: Not Run
+      specification: docs/cases/requirements/ERYE-237/cases.md
+    Agent:
+      execution_status: Not Run
+      specification: docs/cases/requirements/ERYE-237/agent-checks.md
+    Technical:
+      execution_status: Not Run
+      specification: docs/cases/requirements/ERYE-237/technical-checks.md
 ERYE237-089:
   status: PLAN
   script: ""
+  current_case_version: "2026-11-09-layered-execution"
+  execution_branches:
+    Technical:
+      execution_status: Not Run
+      specification: docs/cases/requirements/ERYE-237/cases.md
 ERYE237-090:
   status: PLAN
   script: ""
+  current_case_version: "2026-11-09-layered-execution"
+  execution_branches:
+    Technical:
+      execution_status: Not Run
+      specification: docs/cases/requirements/ERYE-237/cases.md
 ERYE237-091:
   status: PLAN
   script: ""
+  current_case_version: "2026-11-09-layered-execution"
+  execution_branches:
+    Technical:
+      execution_status: Not Run
+      specification: docs/cases/requirements/ERYE-237/cases.md
 ERYE237-092:
   status: PLAN
   script: ""
+  current_case_version: "2026-11-09-layered-execution"
+  execution_branches:
+    Technical:
+      execution_status: Not Run
+      specification: docs/cases/requirements/ERYE-237/cases.md
 ERYE237-093:
   status: PLAN
   script: ""
+  current_case_version: "2026-11-09-layered-execution"
+  execution_branches:
+    Technical:
+      execution_status: Not Run
+      specification: docs/cases/requirements/ERYE-237/cases.md
 ERYE237-094:
   status: PLAN
   script: ""
+  current_case_version: "2026-11-09-layered-execution"
+  execution_branches:
+    Technical:
+      execution_status: Not Run
+      specification: docs/cases/requirements/ERYE-237/cases.md
 ERYE237-095:
   status: PLAN
   script: ""
+  current_case_version: "2026-11-09-layered-execution"
+  execution_branches:
+    Technical:
+      execution_status: Not Run
+      specification: docs/cases/requirements/ERYE-237/cases.md
 ERYE237-096:
   status: PLAN
   script: ""
+  current_case_version: "2026-11-09-layered-execution"
+  execution_branches:
+    Technical:
+      execution_status: Not Run
+      specification: docs/cases/requirements/ERYE-237/cases.md
 ERYE237-097:
   status: PLAN
   script: ""
+  current_case_version: "2026-11-09-layered-execution"
+  execution_branches:
+    Technical:
+      execution_status: Not Run
+      specification: docs/cases/requirements/ERYE-237/cases.md
 ERYE237-098:
   status: PLAN
   script: ""
+  current_case_version: "2026-11-09-layered-execution"
+  execution_branches:
+    Technical:
+      execution_status: Not Run
+      specification: docs/cases/requirements/ERYE-237/cases.md
 ERYE237-099:
   status: PLAN
   script: ""
+  current_case_version: "2026-11-09-layered-execution"
+  execution_branches:
+    Technical:
+      execution_status: Not Run
+      specification: docs/cases/requirements/ERYE-237/cases.md
 ERYE237-100:
   status: PLAN
   script: ""
+  current_case_version: "2026-11-09-layered-execution"
+  execution_branches:
+    Technical:
+      execution_status: Not Run
+      specification: docs/cases/requirements/ERYE-237/cases.md
 ERYE237-101:
   status: PLAN
   script: ""
+  current_case_version: "2026-11-09-layered-execution"
+  execution_branches:
+    Technical:
+      execution_status: Not Run
+      specification: docs/cases/requirements/ERYE-237/cases.md
 ERYE237-102:
   status: PLAN
   script: ""
+  current_case_version: "2026-11-09-layered-execution"
+  execution_branches:
+    Technical:
+      execution_status: Not Run
+      specification: docs/cases/requirements/ERYE-237/cases.md
 ERYE237-103:
   status: PLAN
   script: ""
+  current_case_version: "2026-11-09-layered-execution"
+  execution_branches:
+    Technical:
+      execution_status: Not Run
+      specification: docs/cases/requirements/ERYE-237/cases.md
 ERYE237-104:
   status: PLAN
   script: ""
+  current_case_version: "2026-11-09-layered-execution"
+  execution_branches:
+    Technical:
+      execution_status: Not Run
+      specification: docs/cases/requirements/ERYE-237/cases.md
 ERYE237-105:
   status: PLAN
   script: ""
+  current_case_version: "2026-11-09-layered-execution"
+  execution_branches:
+    Technical:
+      execution_status: Not Run
+      specification: docs/cases/requirements/ERYE-237/cases.md
 ERYE237-106:
   status: PLAN
   script: ""
+  current_case_version: "2026-11-09-layered-execution"
+  execution_branches:
+    Technical:
+      execution_status: Not Run
+      specification: docs/cases/requirements/ERYE-237/cases.md
 ERYE237-107:
   status: PLAN
   script: ""
+  current_case_version: "2026-11-09-layered-execution"
+  execution_branches:
+    Technical:
+      execution_status: Not Run
+      specification: docs/cases/requirements/ERYE-237/cases.md
 ERYE237-108:
   status: PLAN
   script: ""
+  current_case_version: "2026-11-09-layered-execution"
+  execution_branches:
+    Technical:
+      execution_status: Not Run
+      specification: docs/cases/requirements/ERYE-237/cases.md
 ERYE237-109:
   status: PLAN
   script: ""
+  current_case_version: "2026-11-09-layered-execution"
+  execution_branches:
+    Technical:
+      execution_status: Not Run
+      specification: docs/cases/requirements/ERYE-237/cases.md
 ERYE237-110:
   status: PLAN
   script: ""
+  current_case_version: "2026-11-09-layered-execution"
+  execution_branches:
+    Technical:
+      execution_status: Not Run
+      specification: docs/cases/requirements/ERYE-237/cases.md
 ERYE237-111:
   status: PLAN
   script: ""
+  current_case_version: "2026-11-09-layered-execution"
+  execution_branches:
+    Technical:
+      execution_status: Not Run
+      specification: docs/cases/requirements/ERYE-237/cases.md
 ERYE237-112:
   status: PLAN
   script: ""
+  current_case_version: "2026-11-09-layered-execution"
+  execution_branches:
+    Technical:
+      execution_status: Not Run
+      specification: docs/cases/requirements/ERYE-237/cases.md
 ERYE237-113:
   status: PLAN
   script: ""
+  current_case_version: "2026-11-09-layered-execution"
+  execution_branches:
+    Technical:
+      execution_status: Not Run
+      specification: docs/cases/requirements/ERYE-237/cases.md
 ERYE237-114:
   status: PLAN
   script: ""
+  current_case_version: "2026-11-09-layered-execution"
+  execution_branches:
+    Technical:
+      execution_status: Not Run
+      specification: docs/cases/requirements/ERYE-237/cases.md
 ERYE237-115:
   status: PLAN
   script: ""
+  current_case_version: "2026-11-09-layered-execution"
+  execution_branches:
+    Technical:
+      execution_status: Not Run
+      specification: docs/cases/requirements/ERYE-237/cases.md
 ERYE237-116:
   status: PLAN
   script: ""
+  current_case_version: "2026-11-09-layered-execution"
+  execution_branches:
+    Technical:
+      execution_status: Not Run
+      specification: docs/cases/requirements/ERYE-237/cases.md
 ERYE237-117:
   status: PLAN
   script: ""
+  current_case_version: "2026-11-09-layered-execution"
+  execution_branches:
+    Technical:
+      execution_status: Not Run
+      specification: docs/cases/requirements/ERYE-237/cases.md
 ERYE237-118:
   status: PLAN
   script: ""
+  current_case_version: "2026-11-09-layered-execution"
+  execution_branches:
+    Technical:
+      execution_status: Not Run
+      specification: docs/cases/requirements/ERYE-237/cases.md
 ERYE237-119:
   status: PLAN
   script: ""
+  current_case_version: "2026-11-09-layered-execution"
+  execution_branches:
+    Technical:
+      execution_status: Not Run
+      specification: docs/cases/requirements/ERYE-237/cases.md
 ERYE237-120:
   status: PLAN
   script: ""
+  current_case_version: "2026-11-09-layered-execution"
+  execution_branches:
+    Technical:
+      execution_status: Not Run
+      specification: docs/cases/requirements/ERYE-237/cases.md
 ERYE237-121:
   status: PLAN
   script: ""
+  current_case_version: "2026-11-09-layered-execution"
+  execution_branches:
+    Technical:
+      execution_status: Not Run
+      specification: docs/cases/requirements/ERYE-237/cases.md
 ERYE237-122:
   status: PLAN
   script: ""
+  current_case_version: "2026-11-09-layered-execution"
+  execution_branches:
+    Technical:
+      execution_status: Not Run
+      specification: docs/cases/requirements/ERYE-237/cases.md
 ERYE237-123:
   status: PLAN
   script: ""
+  current_case_version: "2026-11-09-layered-execution"
+  execution_branches:
+    Technical:
+      execution_status: Not Run
+      specification: docs/cases/requirements/ERYE-237/cases.md
 ERYE237-124:
   status: PLAN
   script: ""
+  current_case_version: "2026-11-09-layered-execution"
+  execution_branches:
+    Technical:
+      execution_status: Not Run
+      specification: docs/cases/requirements/ERYE-237/cases.md
 ERYE237-125:
   status: PLAN
   script: ""
+  current_case_version: "2026-11-09-layered-execution"
+  execution_branches:
+    Technical:
+      execution_status: Not Run
+      specification: docs/cases/requirements/ERYE-237/cases.md
 ERYE237-126:
   status: PLAN
   script: ""
+  current_case_version: "2026-11-09-layered-execution"
+  execution_branches:
+    Technical:
+      execution_status: Not Run
+      specification: docs/cases/requirements/ERYE-237/cases.md
 ERYE237-127:
   status: PLAN
   script: ""
+  current_case_version: "2026-11-09-layered-execution"
+  execution_branches:
+    Technical:
+      execution_status: Not Run
+      specification: docs/cases/requirements/ERYE-237/cases.md
 ERYE237-128:
   status: PLAN
   script: ""
+  current_case_version: "2026-11-09-layered-execution"
+  execution_branches:
+    Technical:
+      execution_status: Not Run
+      specification: docs/cases/requirements/ERYE-237/cases.md
 ERYE237-129:
   status: PLAN
   script: ""
+  current_case_version: "2026-11-09-layered-execution"
+  execution_branches:
+    Technical:
+      execution_status: Not Run
+      specification: docs/cases/requirements/ERYE-237/cases.md
 ERYE237-130:
   status: PLAN
   script: ""
+  current_case_version: "2026-11-09-layered-execution"
+  execution_branches:
+    Technical:
+      execution_status: Not Run
+      specification: docs/cases/requirements/ERYE-237/cases.md
 ERYE237-131:
   status: PLAN
   script: ""
+  current_case_version: "2026-11-09-layered-execution"
+  execution_branches:
+    Technical:
+      execution_status: Not Run
+      specification: docs/cases/requirements/ERYE-237/cases.md
 ERYE237-132:
   status: PLAN
   script: ""
+  current_case_version: "2026-11-09-layered-execution"
+  execution_branches:
+    Technical:
+      execution_status: Not Run
+      specification: docs/cases/requirements/ERYE-237/cases.md
 ERYE237-133:
   status: PLAN
   script: ""
+  current_case_version: "2026-11-09-layered-execution"
+  execution_branches:
+    Technical:
+      execution_status: Not Run
+      specification: docs/cases/requirements/ERYE-237/cases.md
 ERYE237-134:
   status: PLAN
   script: ""
+  current_case_version: "2026-11-09-layered-execution"
+  execution_branches:
+    Technical:
+      execution_status: Not Run
+      specification: docs/cases/requirements/ERYE-237/cases.md
 ERYE237-135:
   status: PLAN
   script: ""
+  current_case_version: "2026-11-09-layered-execution"
+  execution_branches:
+    Technical:
+      execution_status: Not Run
+      specification: docs/cases/requirements/ERYE-237/cases.md
 ERYE237-136:
   status: PLAN
   script: ""
+  current_case_version: "2026-11-09-layered-execution"
+  execution_branches:
+    Technical:
+      execution_status: Not Run
+      specification: docs/cases/requirements/ERYE-237/cases.md
 ERYE237-137:
   status: PLAN
   script: ""
+  current_case_version: "2026-11-09-layered-execution"
+  execution_branches:
+    Technical:
+      execution_status: Not Run
+      specification: docs/cases/requirements/ERYE-237/cases.md
 ERYE237-138:
   status: PLAN
   script: ""
+  current_case_version: "2026-11-09-layered-execution"
+  execution_branches:
+    Technical:
+      execution_status: Not Run
+      specification: docs/cases/requirements/ERYE-237/cases.md
 ERYE237-139:
   status: PLAN
   script: ""
+  current_case_version: "2026-11-09-layered-execution"
+  execution_branches:
+    Technical:
+      execution_status: Not Run
+      specification: docs/cases/requirements/ERYE-237/cases.md
 ERYE237-140:
   status: PLAN
   script: ""
+  current_case_version: "2026-11-09-layered-execution"
+  execution_branches:
+    Technical:
+      execution_status: Not Run
+      specification: docs/cases/requirements/ERYE-237/cases.md
 ERYE237-141:
   status: PLAN
   script: ""
+  current_case_version: "2026-11-09-layered-execution"
+  execution_branches:
+    Technical:
+      execution_status: Not Run
+      specification: docs/cases/requirements/ERYE-237/cases.md
 ERYE237-142:
   status: PLAN
   script: ""
+  current_case_version: "2026-11-09-layered-execution"
+  execution_branches:
+    Technical:
+      execution_status: Not Run
+      specification: docs/cases/requirements/ERYE-237/cases.md
 ERYE237-143:
   status: PLAN
   script: ""
+  current_case_version: "2026-11-09-layered-execution"
+  execution_branches:
+    Technical:
+      execution_status: Not Run
+      specification: docs/cases/requirements/ERYE-237/cases.md
 ERYE237-144:
   status: PLAN
   script: ""
+  current_case_version: "2026-11-09-layered-execution"
+  execution_branches:
+    Technical:
+      execution_status: Not Run
+      specification: docs/cases/requirements/ERYE-237/cases.md

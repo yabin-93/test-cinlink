@@ -58,3 +58,5 @@
 - 导出画板保留在 `reports/figma-exports/`，可直接对照截图评审。
 
 - 需求用例必须写清前置条件、操作步骤、预期结果；用 `npm run cases:check` 校验（空字段、短字段、重号、非法优先级）。
+
+2026-11-09新增[图片工具栏UI专项20条](18-image-toolbar-ui.md)（IMG-TB-UI-001～020，P0 13/P1 7，最新3 Passed/2 Failed/15 Not Run，未接自动化；002/005关联[FWXC-369](https://devops.aliyun.com/projex/project/1e401ac99539c3999e00e40006/bug#openWorkitemIdentifier=e6d492be908d55a9d0b86124e6)），独立专项不计入上表717条或正式需求543条；[图片批注专项10条](17-image-annotation-ui.md)继续单独维护。

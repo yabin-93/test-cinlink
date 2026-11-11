@@ -1,0 +1,10 @@
+{
+  "key": "REPLACE-WITH-UNIQUE-DEFECT-KEY",
+  "subject": "功能/场景：可观察的问题（替换为本次真实现象）",
+  "descriptionPath": "description.md",
+  "fields": {},
+  "images": [
+    {"path": "failure.png", "caption": "替换为真实用例、批次及失败场景说明", "sha256": "REPLACE-WITH-ORIGINAL-PNG-SHA256"}
+  ],
+  "attachments": []
+}

@@ -81,6 +81,10 @@ $env:CINLINK_HEADLESS='0'; npm run test:watermark
 
 ## 运行约束（不要违反）
 
+- 用户2026-11-09最新补充：IMG-TB-UI系列在一个会话执行，不再每例新建会话；每例复位到已登记源版并隔离草稿/引用、保留结果历史。该要求仅覆盖本工具栏专项的旧独立会话安排。
+
+- 用户2026-11-09最新纠正：同一轮测试可在一个专用测试项目中新建多个独立会话，不必每例新建项目；各例仍须准备并核实独立图片工程/源版本，不能串用上一例编辑结果。
+
 - **串行、零重试**：`workers: 1`、`retries: 0` 写在 `playwright.config.ts`，不要为了"跑绿"调大。
 - **不要并发跑预发用例**：`local.env` 里的会话会被 fixture 轮转回写，同一份会话同一时间只允许一个工程使用。
 - **不要在没有专用测试账号时跑 `test:g1` / `test:g2` / `test:g3` / `test:watermark`**：会产生真实数据、积分消耗和真实 AI 任务。
@@ -126,6 +130,11 @@ tools/                 auth 登录、doctor 配置诊断
 | `ENOENT ffprobe` | PATH 缺 ffmpeg | 安装/加入 PATH，或设 `CINLINK_FFPROBE` |
 
 ## 缺陷同步
+
+- 用户于2026-11-06明确：后续云效同步仅使用官方OpenAPI，不打开云效页面操作；使用用户在本机配置的个人访问令牌。未配置、权限不足或接口失败时报告具体阻塞，不自动退回浏览器。
+- 云效凭据从环境变量/已gitignore的`local.env`读取：`ALIBABA_CLOUD_YUNXIAO_ACCESS_TOKEN`、`ALIBABA_CLOUD_YUNXIAO_API_BASE_URL`、`ALIBABA_CLOUD_YUNXIAO_ORGANIZATION_ID`，项目使用`YUNXIAO_PROJECT_ID`。不得输出令牌、写入报告/代码或通过命令行参数传明文令牌。
+- 当前Mac同步入口为`tools/yunxiao/run.sh`，详见`tools/yunxiao/README.md`。已导入用户提供的同步工具并适配Mac凭据/curl；check/sync优先使用已忽略的`tools/yunxiao/config.local.json`，目标组织/项目/字段由该配置提供。2026-11-06已新建本机专用PAT并完成只读API验证，2027-02-04到期；Windows保留原DPAPI支持。运行前按本次实际环境核对标签/迭代/严重程度，不沿用原包Windows测试环境默认值。
+- 后续已授权的缺陷同步由OpenAPI读取字段、上传对应截图、创建缺陷及回读验证正文/附件；沿用用户“不去重”要求直接新建，不更改旧项。当前已同步缺陷不因切换接入方式再次创建。
 
 - 同步到云效的缺陷必须上传与本次失败场景对应的真实截图，并在描述中嵌入，方便研发和回归人员直接查看；日志、JSON 不能代替截图。
 - 上传前核对截图与用例、运行批次的对应关系，检查敏感信息；保留原始证据，不生成或修改画面来替代实测截图。

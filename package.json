@@ -41,7 +41,8 @@
     "test:multi:materials:ui": "playwright test --config=playwright.multi-material-ui.config.ts --project=multi-material-ui",
     "test:sso": "playwright test --config=playwright.sso.config.ts --project=sso",
     "test:sso:mixed": "playwright test --config=playwright.sso.config.ts --project=sso --grep \"SSO-0(19|2[0-2])\"",
-    "test:footage": "playwright test --config=playwright.footage.config.ts --project=local-footage"
+    "test:footage": "playwright test --config=playwright.footage.config.ts --project=local-footage",
+    "test:erye237": "playwright test --project=erye237"
   },
   "devDependencies": {
     "@playwright/test": "^1.56.0",

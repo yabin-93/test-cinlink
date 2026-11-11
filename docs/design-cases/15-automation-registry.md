@@ -1,5 +1,7 @@
 # 自动化状态登记（用例 ↔ 脚本）
 
+本地素材查找当前汇总：28条当前设计、28条已执行，15 Failed/13 Passed（各例限定范围）/0 Not Run；AUTO3、PLAN25。名称仅LF18/20/21/22/28五条P0，非名称LF30～35六条保留；7个旧未执行编号退役不复用。[最新状态表](multi-workflow/local-footage-execution-status.md)，下方旧统计为历史。
+
 用于区分：**设计用例**、**已加入自动化脚本**、**计划中**、**被缺陷阻塞**。
 
 ## 标记规则
@@ -24,7 +26,7 @@
 | 图片水印 | `tests/staging/g3-g7-image-watermark.spec.ts` | 1 | `[AUTO]` | `npm run test:watermark` |
 | 主工作流（表驱动） | `tests/staging/g3-g7-workflows.spec.ts` | 6 | `[AUTO]`（translation/clean-cut/enhance/text-watermark/long-to-short/mix） | `npm run test:flows` |
 | 卡片入口 | `tests/staging/g3-g7-cards.spec.ts` | 7 | 5 `[AUTO]` + 2 `[FIXME]`（本地素材查找旧结果空占位、生成解说不可用） | `npm run test:cards` |
-| 本地素材查找P0 | `tests/local-footage/local-footage.spec.ts`，独立配置 `playwright.footage.config.ts` | 3 | LF-01～03 `[AUTO]`，有头实测0通过/3未通过；其余14条PLAN，旧卡片空占位不重复计数 | `npm run test:footage` |
+| 本地素材查找P0 | `tests/local-footage/local-footage.spec.ts`，独立配置 `playwright.footage.config.ts` | 3 | LF-01～03 `[AUTO]`，有头实测0通过/3未通过；其余25条PLAN（均已人工有头执行，新增11条7 Passed/4 Failed），旧卡片空占位不重复计数 | `npm run test:footage` |
 | 多工作流基础 | `tests/staging/g3-g7-multi.spec.ts` | 5 | 4 `[AUTO]` + 1 `[FIXME]` | `npm run test:multi:base` |
 | 多工作流复合 | `tests/staging/g3-g7-multi-compound.spec.ts` | 15 | 11 `[AUTO]` + 4 `[FIXME]`（MW-18/24/25/26 复测通过并默认启用） | `npm run test:multi:compound` |
 | 多工作流全量 | 上述两个 spec | 20 | 15 `[AUTO]` + 5 `[FIXME]` | `npm run test:multi` |
@@ -107,3 +109,29 @@
 批注预发用例统一带 `@regression`，单独用 `npm run test:annotation:staging` 执行。
 
 > 标签写在测试标题里；`--grep @smoke` 只跑冒烟。全量与回归共用同一份脚本，避免两套用例漂移。
+
+2026-11-10 LF-01～03生产复测：0 Passed/3 Failed，当前入口为已分析项目输入框；本轮原生CUA操作并人工播放，未运行旧Playwright脚本。旧AUTO登记不变，不能把本轮称为脚本运行结果。[生产报告](multi-workflow/local-footage-results-prod-20261110.md)。
+
+2026-11-10 LF-04～07预发原生CUA手工执行：4条5次查询，0 Passed/4 Failed；11份候选下载解码核验，源ID/源区间未取回。LF04～07保持PLAN未接脚本；专项共7条已实测未通过、10条未执行，AUTO仍3条。详见[预发报告](multi-workflow/local-footage-results-staging-04-07-20261110.md)。
+
+2026-11-10 LF-08～10预发CUA手工执行：1 Failed/2 Passed（UI范围），三例仍PLAN；专项最新8 Failed/2 Passed（UI范围）/7未执行，AUTO3不变。详见[报告](multi-workflow/local-footage-results-staging-08-10-20261110.md)。
+
+2026-11-10 LF-11预发CUA手工执行：Passed（UI业务隔离），仍PLAN未接脚本；累计8 Failed/3 Passed（UI范围）/6未执行，AUTO3不变。[报告](multi-workflow/local-footage-results-staging-11-20261110.md)。
+
+2026-11-10 LF-12预发CUA手工Failed：B报API version not supported，A历史保留；仍PLAN，累计9 Failed/3 Passed（UI范围）/5未执行，AUTO3不变。[报告](multi-workflow/local-footage-results-staging-12-20261110.md)。
+
+2026-11-10 LF12 R2：37秒完成但混入长颈鹿、源区间未核，仍Failed；A历史保留，API错误本轮未复现，仍PLAN。[报告](multi-workflow/local-footage-results-staging-12-20261110-r2.md)。
+
+2026-11-10 LF13预发手工完整Failed（定位交付缺失），UI连续查询/历史保留通过；仍PLAN，累计10 Failed/3 Passed（UI范围）/4未执行。[报告](multi-workflow/local-footage-results-staging-13-20261110.md)。
+
+2026-11-10用户确认校正LF13：Passed（UI连续查询及历史保留），源ID/时间技术未覆盖，不以UI缺内部字段报失败。最新9 Failed/4 Passed（UI范围）/4未执行，仍PLAN，AUTO3不变。
+
+2026-11-10全部LF源ID/时间条件校正：可选技术追溯，缺字段不单独失败；LF08改Passed，LF12实际无关候选失败保留，LF13通过。最新8 Failed/5 Passed（UI范围）/4未执行，AUTO3不变。
+
+2026-11-10 LF14预发手工Failed（长颈鹿混入），火车预览通过，引用未完成；仍PLAN，最新9 Failed/5 Passed（UI范围）/3未执行。[报告](multi-workflow/local-footage-results-staging-14-20261110.md)。
+
+2026-11-10 LF15预发手工Passed（UI刷新恢复/预览），仍PLAN；最新9 Failed/6 Passed（UI范围）/2未执行，AUTO3不变。[报告](multi-workflow/local-footage-results-staging-15-20261110.md)。
+
+2026-11-10 LF16客户端网络异常与恢复手工Passed，仍PLAN；[报告](multi-workflow/local-footage-results-staging-16-20261110.md)。
+
+2026-11-10 LF17预发手工Failed：人工听审原句后查询98秒明确无匹配，正式能力范围待确认，仍PLAN。[报告](multi-workflow/local-footage-results-staging-17-20261110.md)。
