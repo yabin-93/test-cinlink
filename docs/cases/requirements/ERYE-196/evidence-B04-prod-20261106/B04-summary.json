@@ -1,0 +1,150 @@
+{
+  "caseId": "B04",
+  "status": "Failed",
+  "verificationComplete": true,
+  "prompt": "只裁掉当前工程中唯一视频片段的最后3秒，不另做其他编辑。",
+  "projectId": "b34e8f29-25ac-4dc0-968f-76aabdd20e13",
+  "conversationId": "8bd67283-c5ae-49d8-9789-78413b3bfa8c",
+  "projectName": "英文30S.mp4",
+  "runId": "run_v2_ed056deffb6d4ba9920ec9ff2887b3ac",
+  "traceId": "7b327113-a71e-4c93-be87-7fde83a877c2",
+  "startedAt": "2026-11-06T10:29:49.411Z",
+  "finishedAt": "2026-11-06T10:31:26.136Z",
+  "runtimeStatus": "done",
+  "intentSatisfied": false,
+  "beforeRevision": 8,
+  "afterRevision": 8,
+  "refreshedRevision": 8,
+  "unchanged": true,
+  "expectedSourceOut": 27.630599999999998,
+  "actualRemainingSeconds": 30.630599999999998,
+  "checks": [
+    {
+      "name": "任务成功结束且未声明未完成",
+      "passed": false
+    },
+    {
+      "name": "无失败工具步骤",
+      "passed": true
+    },
+    {
+      "name": "仍为同一原视频的一个片段",
+      "passed": true
+    },
+    {
+      "name": "只将视频源终点裁去最后3秒",
+      "passed": false
+    },
+    {
+      "name": "视频源起点和播放速度保持",
+      "passed": true
+    },
+    {
+      "name": "视频片段没有额外移动",
+      "passed": true
+    },
+    {
+      "name": "视频内容时长减少3秒",
+      "passed": false
+    },
+    {
+      "name": "结果仍属用户指定的最新工程",
+      "passed": true
+    },
+    {
+      "name": "刷新后实际保存内容及版本一致",
+      "passed": true
+    },
+    {
+      "name": "刷新未重新提交编辑任务",
+      "passed": true
+    }
+  ],
+  "failedChecks": [
+    "任务成功结束且未声明未完成",
+    "只将视频源终点裁去最后3秒",
+    "视频内容时长减少3秒"
+  ],
+  "linkedChanges": {
+    "subtitlesUnchanged": true,
+    "narrationUnchanged": true,
+    "nonVideoUnchanged": true
+  },
+  "retainedFrames": {
+    "status": "NotRun",
+    "reason": "裁尾未完成，不用原片画面冒充裁后画面通过"
+  },
+  "restoration": {
+    "status": "NotNeeded",
+    "reason": "本轮未改工程",
+    "revision": 8
+  },
+  "assistant": "本次要求是只裁掉当前工程唯一视频片段的最后3秒，不再执行此前的开头裁剪，也不调整片段位置、字幕或旁白。\n\n目前提供的上下文缺少最新片段ID、现有裁剪范围和工程修订，无法安全提交参数完整的裁剪操作；本次尚未修改工程。请刷新编辑器的工程状态后重试，不需要重新上传视频。",
+  "tools": [],
+  "screenshot": "B04-failed.png",
+  "refreshedTurns": [],
+  "clarificationCount": 0,
+  "browserKeptOpen": true,
+  "beforeVideo": [
+    {
+      "track_id": "edit_e0429b05d7c943c6244f2dd637d15918",
+      "clip_id": "edit_d10594184fa1dd722cde996ce6e0c7ca",
+      "file_id": "file_cloud_77n2ver2wfe2enu7bddp42egdx",
+      "source_in_sec": 0,
+      "source_out_sec": 30.630599999999998,
+      "timeline_start_sec": 0,
+      "offset_sec": 0,
+      "playback_rate": 1
+    }
+  ],
+  "afterVideo": [
+    {
+      "track_id": "edit_e0429b05d7c943c6244f2dd637d15918",
+      "clip_id": "edit_d10594184fa1dd722cde996ce6e0c7ca",
+      "file_id": "file_cloud_77n2ver2wfe2enu7bddp42egdx",
+      "source_in_sec": 0,
+      "source_out_sec": 30.630599999999998,
+      "timeline_start_sec": 0,
+      "offset_sec": 0,
+      "playback_rate": 1
+    }
+  ],
+  "screenshots": [
+    {
+      "name": "B04-before.png",
+      "sha256": "ebfc826f0430cc941d5760257da7943d77502b7c5b2623b9b0cc9046694c94ba",
+      "bytes": 551441
+    },
+    {
+      "name": "B04-source-0s.png",
+      "sha256": "9c0d1fe15d248efc1581c8844b61a7562fb67d5be2ebb334028117c2451de740",
+      "bytes": 482613
+    },
+    {
+      "name": "B04-source-27s.png",
+      "sha256": "b9ca167250ad8394da6ff6275f0b87a3ce539c25896d427dd0d781671ca199c9",
+      "bytes": 678844
+    },
+    {
+      "name": "B04-source-29s.png",
+      "sha256": "e960fad0182352c75dd12af7e06940ab6f8561927e7fdbaaf6404d57a60df7ef",
+      "bytes": 375935
+    },
+    {
+      "name": "B04-failed.png",
+      "sha256": "9bf9de7be10aa88647571599449bdededeb91188ff4be3b1e15de807d08122ad",
+      "bytes": 521928
+    }
+  ],
+  "finalWindowState": {
+    "windowOpen": true,
+    "url": "https://app.cinlink.ai/c/8bd67283-c5ae-49d8-9789-78413b3bfa8c",
+    "projectName": "英文30S.mp4",
+    "selectedProjectIds": [
+      "b34e8f29-25ac-4dc0-968f-76aabdd20e13"
+    ],
+    "revision": 8,
+    "contentMatchesBefore": true,
+    "acceptedCount": 1
+  }
+}

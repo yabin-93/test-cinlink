@@ -480,7 +480,7 @@ export async function submitAttachedPrompt(
 /** 新版上传合同（与前端 bundle 的 uploadAgentFile 一致，直接走 API） */
 export interface ApiUploadOutcome extends UploadedFacts {}
 
-const AGENT_FILES_BASE = "/studio-api/v1/agent/files";
+const AGENT_FILES_BASE = process.env.CINLINK_FILES_API_BASE || "/studio-api/v1/agent/files";
 const MULTIPART_CHUNK_BYTES = 5 * 1024 * 1024;
 
 /**

@@ -1,0 +1,174 @@
+{
+  "name": "E196-A20-control",
+  "canvas": {
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "background_color": "#000000"
+  },
+  "tracks": [
+    {
+      "type": "video",
+      "clips": [
+        {
+          "fade": {
+            "in_sec": 0,
+            "out_sec": 0
+          },
+          "volume": 1,
+          "clip_id": "14212db7-b675-4b2d-ba42-3a2f64d50a68",
+          "file_id": "__VIDEO__",
+          "opacity": 1,
+          "transform": {
+            "position": {
+              "x": 960,
+              "y": 540
+            },
+            "rotation_deg": 0,
+            "scale_percent": 100
+          },
+          "playback_rate": 1,
+          "source_in_sec": 0,
+          "source_out_sec": 20,
+          "timeline_start_sec": 0
+        }
+      ],
+      "muted": false,
+      "visible": true,
+      "track_id": "76df3ce4-89b7-41c8-8db7-2805185463d1",
+      "offset_sec": 0
+    },
+    {
+      "role": "source",
+      "type": "audio",
+      "clips": [
+        {
+          "volume": 1,
+          "clip_id": "f2b519be-ceb4-4cc1-b779-b049f9b3744f",
+          "file_id": "__VIDEO__",
+          "playback_rate": 1,
+          "source_in_sec": 0,
+          "source_out_sec": 20,
+          "timeline_start_sec": 0
+        }
+      ],
+      "muted": false,
+      "track_id": "665f6848-b190-4ccb-a5f0-28e0a04f7af7",
+      "offset_sec": 0,
+      "linked_video_track_id": "76df3ce4-89b7-41c8-8db7-2805185463d1"
+    },
+    {
+      "type": "subtitle",
+      "clips": [
+        {
+          "diff": [],
+          "role": "source",
+          "clip_id": "61733ff7-82eb-4a75-bf66-82272be92649",
+          "file_id": "__SOURCE_SRT__",
+          "visible": true,
+          "bindings": [
+            {
+              "block_id": "fe9179d3-1805-4b13-ab3e-6662cc906ea2",
+              "speaker_id": null,
+              "source_ordinal": 1,
+              "original_end_sec": 6,
+              "original_start_sec": 4
+            },
+            {
+              "block_id": "b854fb07-7664-4049-aaaa-a33b521536a1",
+              "speaker_id": null,
+              "source_ordinal": 2,
+              "original_end_sec": 12,
+              "original_start_sec": 10
+            }
+          ],
+          "language": "en",
+          "track_id": "47e0d4ae-c660-4991-a355-8a823f34cad8",
+          "content_sha256": "696f515a060a885e438e6e1ecc850d73fb2369026214751f7185bc897e50f49e",
+          "segmenter_version": "parent-layout-v2",
+          "characters_per_cue": 60
+        }
+      ],
+      "track_id": "47e0d4ae-c660-4991-a355-8a823f34cad8"
+    },
+    {
+      "type": "subtitle",
+      "clips": [
+        {
+          "diff": [],
+          "role": "translation",
+          "clip_id": "9bc8fb26-26de-42fc-845b-972060bcb26d",
+          "file_id": "__TRANSLATION_SRT__",
+          "visible": true,
+          "bindings": [
+            {
+              "block_id": "0f83eb25-270d-4ae5-a49d-c685767b0267",
+              "speaker_id": null,
+              "source_ordinal": 1,
+              "original_end_sec": 6,
+              "original_start_sec": 4
+            },
+            {
+              "block_id": "f2aa9866-94c8-4777-8806-ae51541da387",
+              "speaker_id": null,
+              "source_ordinal": 2,
+              "original_end_sec": 12,
+              "original_start_sec": 10
+            }
+          ],
+          "language": "zh",
+          "track_id": "8b90e6d9-bd67-4896-af84-4d7ac5b76843",
+          "content_sha256": "923ca70f47e3f1c682180a12403f98aacc974bc7a8256de8bd57d74ee5df2fec",
+          "segmenter_version": "parent-layout-v2",
+          "characters_per_cue": 60
+        }
+      ],
+      "track_id": "8b90e6d9-bd67-4896-af84-4d7ac5b76843"
+    }
+  ],
+  "dubbing": [],
+  "project_id": "__PROJECT__",
+  "watermarks": {
+    "text": null,
+    "image": null,
+    "timing": {
+      "mode": "whole_project",
+      "end_sec": null,
+      "start_sec": 0
+    }
+  },
+  "format_version": 3,
+  "subtitle_style": {
+    "color": "#FFFFFF",
+    "effect": "regular",
+    "outline": {
+      "color": "#000000",
+      "width": 3.375,
+      "enabled": true
+    },
+    "case_mode": "original",
+    "font_name": "Arial",
+    "font_size": 40,
+    "placement": {
+      "mode": "preset",
+      "preset": "bottom",
+      "position": null,
+      "margin_px": 67.5
+    },
+    "background": {
+      "color": "#111111",
+      "enabled": true,
+      "opacity": 0.45
+    },
+    "font_weight": 400,
+    "bold_override": false,
+    "highlight_color": "#FFD54F",
+    "highlight_typography": {
+      "bold": false,
+      "italic": false,
+      "font_name": null,
+      "font_size": null,
+      "underline": false
+    }
+  }
+}
