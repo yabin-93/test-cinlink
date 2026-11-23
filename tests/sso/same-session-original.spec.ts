@@ -11,6 +11,7 @@ import { checkSrtStructure } from "../../src/assertions/srt.js";
 import { SSOSessionRecovery, type SSORecoveryMode, type SSORecoveryRecord } from "../../src/fixtures/sso-session-recovery.js";
 import { auditSourceLineage } from "../../src/fixtures/sso-source-lineage.js";
 import { resolveRoundInput } from "../../src/fixtures/sso-round-input.js";
+import { editorOperationCases } from "./cases/editor-operations.js";
 import { sourceArtifactCases, type SSODefinition } from "./cases/source-artifact.js";
 import { appendPromptText, cancelRun, confirmRenderPlan, conversationForRun,
   findStringField, getRunDetail, isRunSubmission, openWorkspaceSession,
@@ -1255,7 +1256,7 @@ const definitions: SSODefinition[] = [
     ]
   }
 ];
-definitions.push(...sourceArtifactCases);
+definitions.push(...sourceArtifactCases, ...editorOperationCases);
 type Download = { id: string; name: string; file: string; sha256: string; sizeBytes: number; durationSec?: number; width?: number; height?: number; cues?: number };
 type InputSnapshot = { stepId: string; tool: string; rootStep?: boolean; inputFileIds: string[]; currentOutputIds?: string[]; nodeId?: string; groupId?: string; evidence: "live-poll" | "initial-trace" | "original-runtime-plan" };
 type Round = { prompt: string; runIds: string[]; finalStatus?: string; submittedFileIds?: string[]; userFileIds?: string[]; planInputIds?: string[]; inputSnapshots?: InputSnapshot[]; evidencedInputIds?: string[]; producedFileIds?: string[]; downloads: Download[]; error?: string; blockedReason?: string; expectedInputRound?: number; expectedInputId?: string; checks?: string[]; priorObservationErrors?: string[]; recoveryChecks?: SSORecoveryRecord[]; historyChecks?: Array<{round:number;runId:string;fileId:string;sha256:string;unchanged:boolean}> };

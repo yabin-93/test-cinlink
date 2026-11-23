@@ -1,0 +1,7 @@
+Built-in imagegen, source:
+Photorealistic square ACME glass perfume bottle, slight three-quarter view with right side visible, plain pale gray background, silver removable cap, transparent glass and pale golden liquid. Crisp front label: outline triangle logo; ACME; FRESH CITRUS; DAILY FRAGRANCE; 测试香氛; 50 mL. Whole bottle and cap visible, no damage, no other objects or watermark.
+
+Built-in imagegen, edit of source:
+Keep source composition, dimensions, bottle, liquid, label, logo and exact lettering. Remove the silver cap to expose the neck/sprayer and fill its former region with background. Add exactly two thin diagonal white abrasion scratches on clear right shoulder above label, around x.62–.69,y.37–.40. No other intentional edits. This is a synthetic missing-structure/scratch fixture, not a real photograph restoration gold image.
+
+The full generation calls are in the task history. These are concise saved prompt specifications. Actual results were visually checked before CinLink execution; fixture-standard.json contains observed text/regions rather than presumed prompt compliance.

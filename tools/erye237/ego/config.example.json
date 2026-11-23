@@ -1,0 +1,85 @@
+{
+  "baseURL": "https://app.cinlink.ai/",
+  "taskSpace": 8,
+  "page": "p1",
+  "repoRoot": "/absolute/test-cinlink",
+  "outputDir": "/absolute/test-cinlink/reports/erye237-automation-new-run",
+  "egoBinary": "/absolute/path/ego-browser",
+  "python": "/absolute/path/python3-with-Pillow",
+  "fixtures": {
+    "imported": {
+      "cid": "REGISTERED_CONVERSATION_UUID",
+      "name": "REGISTERED_EXACT_IMAGE_NAME",
+      "version": "REGISTERED_EDITOR_IMAGE_ID",
+      "width": 1024,
+      "height": 1024
+    },
+    "generated": {
+      "cid": "REGISTERED_CONVERSATION_UUID",
+      "name": "REGISTERED_EXACT_IMAGE_NAME",
+      "version": "REGISTERED_EDITOR_IMAGE_ID",
+      "width": 1024,
+      "height": 1024
+    },
+    "multi1": {
+      "cid": "REGISTERED_CONVERSATION_UUID",
+      "name": "REGISTERED_EXACT_IMAGE_NAME",
+      "version": "REGISTERED_EDITOR_IMAGE_ID",
+      "width": 1024,
+      "height": 1024
+    },
+    "multi2": {
+      "cid": "REGISTERED_CONVERSATION_UUID",
+      "name": "REGISTERED_EXACT_IMAGE_NAME",
+      "version": "REGISTERED_EDITOR_IMAGE_ID",
+      "width": 1000,
+      "height": 666
+    },
+    "multi3": {
+      "cid": "REGISTERED_CONVERSATION_UUID",
+      "name": "REGISTERED_EXACT_IMAGE_NAME",
+      "version": "REGISTERED_EDITOR_IMAGE_ID",
+      "width": 1024,
+      "height": 1024
+    },
+    "emptyTarget": {
+      "cid": "REGISTERED_CONVERSATION_UUID",
+      "name": "REGISTERED_EXACT_IMAGE_NAME",
+      "version": "REGISTERED_EDITOR_IMAGE_ID",
+      "width": 1024,
+      "height": 1024
+    },
+    "originalBoat": {
+      "cid": "REGISTERED_CONVERSATION_UUID",
+      "name": "REGISTERED_EXACT_IMAGE_NAME",
+      "version": "REGISTERED_EDITOR_IMAGE_ID",
+      "width": 1024,
+      "height": 1024
+    },
+    "branch1": {
+      "cid": "REGISTERED_CONVERSATION_UUID",
+      "name": "REGISTERED_EXACT_IMAGE_NAME",
+      "version": "REGISTERED_EDITOR_IMAGE_ID",
+      "width": 1000,
+      "height": 666
+    },
+    "branch2": {
+      "cid": "REGISTERED_CONVERSATION_UUID",
+      "name": "REGISTERED_EXACT_IMAGE_NAME",
+      "version": "REGISTERED_EDITOR_IMAGE_ID",
+      "width": 1024,
+      "height": 1024
+    },
+    "branch3": {
+      "cid": "REGISTERED_CONVERSATION_UUID",
+      "name": "REGISTERED_EXACT_IMAGE_NAME",
+      "version": "REGISTERED_EDITOR_IMAGE_ID",
+      "width": 1024,
+      "height": 1024
+    }
+  },
+  "emptyConversation": "VERIFIED_EMPTY_CONVERSATION_UUID",
+  "emptyTargetProjectId": "REGISTERED_IMAGE_PROJECT_UUID",
+  "projectName": "DEDICATED_TEST_PROJECT",
+  "originalBirdPath": "/absolute/authorized-source/birds.jpeg"
+}

@@ -1,6 +1,10 @@
 # CINLINK-MW01-001 · [FWXC-255](https://devops.aliyun.com/projex/project/1e401ac99539c3999e00e40006/bug#viewIdentifier=1dedc5afd44979211cad516f&openWorkitemIdentifier=9abeb86a98cba72e7158bc3d60)
 
-**最新复测（2026-11-11）**
+> 2026-11-12最新实际回归：[FWXC-255专项报告](FWXC-255-retest-staging-20261112.md)，单次字幕链双文件交付**Passed**；151秒、两份SRT各18条、时间戳一致，云效已改✅AI通过并回读。内部唯一输入绑定/intent字段未从UI核实，保留验收边界。下方凌晨Blocked及原始失败为历史。
+
+> 2026-11-12凌晨批次：[本轮记录](nightly-fixed-regression-20261112.md)。被选为陈亚宾创建且已修复的回归候选，但Mac锁屏/扩展控制失败，**Blocked，业务未执行**；等待人工解锁续跑。本轮未修改云效状态，下方历史结果保持。
+
+**历史复测（2026-11-11）**
 
 17:14依用户“未复现就改AI通过”的明确要求，云效FWXC-255已由“已修复”改为“✅AI通过”，仅更新status，回读状态ID/名称通过，其他核对字段保持；无新增评论或附件。下段未写云效指原复测执行阶段。
 

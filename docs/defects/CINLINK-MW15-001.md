@@ -1,5 +1,9 @@
 # CINLINK-MW15-001 · [FWXC-249](https://devops.aliyun.com/projex/project/1e401ac99539c3999e00e40006/bug#viewIdentifier=1dedc5afd44979211cad516f&openWorkitemIdentifier=dc950e30e2c88409857929f4a4)
 
+> 2026-11-12最新实际回归： [FWXC-249专项报告](FWXC-249-retest-staging-20261112.md)，本轮业务交付 Passed，实际下载及媒体审计完成，云效已改✅AI通过并回读。下方保留旧失败历史。
+
+> 2026-11-12凌晨批次：[本轮记录](nightly-fixed-regression-20261112.md)。被选为陈亚宾创建且已修复的回归候选，但Mac锁屏/扩展控制失败，**Blocked，业务未执行**；等待人工解锁续跑。本轮未修改云效状态，下方历史结果保持。
+
 **现象**
 
 一次请求让两个视频分别生成、翻译并烧录不同语言字幕，提交后规划模型等待超时，任务失败且没有任何交付物。

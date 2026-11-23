@@ -4,8 +4,8 @@ source: https://devops.aliyun.com/projex/req/ERYE-237
 status: designing
 automation_tag: "@ERYE-237"
 case_prefix: ERYE237
-case_set_version: "2026-11-09-layered-execution"
-updated: "2026-11-13"
+case_set_version: "2026-11-18-annotation-single-image-v11"
+updated: "2026-11-18"
 source_modified: "2026-10-19 10:42:09 Asia/Shanghai"
 figma_file: SqGzwtxqNjFZa9QIvUPAlc
 figma_node: "1816:50610"
@@ -15,12 +15,148 @@ execution_status: Partial
 historical_execution_status: Partial
 historical_execution_summary: "1 Passed / 12 Failed / 12 Blocked / 119 Not Run; 014-032: 1 UI-business Passed / 6 Failed / 12 Blocked; prior 001-005 and 033 Failed retained"
 historical_execution_report: docs/cases/requirements/ERYE-237/results-014-032-prod-20261109.md
-execution_summary: "active143;001-005 primary:2 Passed/3 Failed;other255 branches Not Run including138 primary;029 retired, all3 branches excluded"
+execution_summary: "122 current IDs;109 unique+13 aliases;latest optimized018/019/028/029/031 batch3P/2F/0B;028 full-V2 undo not covered due clipped fixture;PLAN"
 execution_guide: docs/cases/requirements/ERYE-237/execution-guide.md
-execution_report: docs/cases/requirements/ERYE-237/results-001-005-layered-prod-20261109.md
-latest_case_retest: "005/Agent; original image retaining background; Failed billing input validation; green not sent"
-latest_case_retest_report: docs/cases/requirements/ERYE-237/results-005-original-prod-20261109-r2.md
+execution_report: "docs/cases/requirements/ERYE-237/results-018019028029031-ego-prod-20261118.md"
+latest_case_retest: "011 actual production rerun Passed: undo-return isolates reference, pure16 settings, redo old8 unchanged, new16 measured; no image generation"
+latest_case_retest_report: docs/cases/requirements/ERYE-237/results-011-ego-prod-20261113-r2.md
+defect_sync_date: "2026-11-18"
+defect_sync_summary: "019→FWXC-679新建；028→FWXC-670评论24359000关联；5原图/5JSON及正文评论回读通过，两单AI提缺陷，0产品重跑，3P/2F/0B及PLAN保持。"
 
-active_case_count: 143
-retired_case_ids: [ERYE237-029]
-latest_scope_revision: "retired-case-029-20261113.json"
+latest_requirement_review: "019: UI range prevention meets requirement; no arbitrary invalid-entry requirement; revised case and existing evidence reviewed Passed, not rerun"
+latest_requirement_review_report: docs/cases/requirements/ERYE-237/review-019-requirement-20261113.md
+
+latest_batch_scope: "2026-11-18 production optimized018/019/028/029/031;3Passed018/029/031;2Failed019/028;0Blocked;one valid compose,one blue-point generation,one excluded setup compose;PLAN"
+
+latest_case_optimization: "050 revised to sequential independent single-image annotation requests;Not Run;old multi-image verdict not applicable"
+latest_case_optimization_report: "docs/cases/requirements/ERYE-237/revision-050-single-image-annotation-20261118.md"
+
+latest_four_case_rerun: docs/cases/requirements/ERYE-237/results-four-rerun-ego-prod-20261116.md
+
+latest_031_rule_review: docs/cases/requirements/ERYE-237/review-031-draft-lifecycle-20261116.md
+
+latest_031_lifecycle_rerun: docs/cases/requirements/ERYE-237/results-031-lifecycle-ego-prod-20261116.md
+
+latest_022_scope_revision: "2026-11-16-ui-content-sampling-v3; UI Not Run; historical Blocked retained, helper-layer Technical separate"
+latest_022_scope_report: docs/cases/requirements/ERYE-237/revision-022-ui-scope-20261116.md
+
+latest_022_ui_rerun: docs/cases/requirements/ERYE-237/results-022-ui-ego-prod-20261116.md
+
+latest_023_flow_revision: "2026-11-16-real-mask-submission-v3; Not Run; historical Blocked retained"
+latest_023_flow_report: docs/cases/requirements/ERYE-237/revision-023-real-mask-flow-20261116.md
+
+latest_023_real_mask_rerun: docs/cases/requirements/ERYE-237/results-023-real-mask-ego-prod-20261116.md
+
+latest_023_defect_sync: "2026-11-16 FWXC-581; 2 screenshots and1 audit verified; actual erase generation only"
+
+latest_050_070_defect_sync: docs/defects/ERYE237-050-070-sync-prod-20261116.md
+
+latest_six_blocker_optimization: "2026-11-16-blocker-parameter-isolation-v2 actual rerun: 2 Passed056/067,1 Failed055,3 partial Blocked057/068/069; previous evidence retained; PLAN"
+latest_six_blocker_optimization_report: docs/cases/requirements/ERYE-237/optimization-055-056-057-067-068-069-20261116.md
+
+latest_six_optimized_rerun: docs/cases/requirements/ERYE-237/results-six-optimized-ego-prod-20261116.md
+
+latest_070_090_execution: docs/cases/requirements/ERYE-237/results-070-090-ego-prod-20261116.md
+
+latest_070_090_defect_sync: docs/defects/ERYE237-070-090-sync-prod-20261116.md
+
+latest_074_082_revision: docs/cases/requirements/ERYE-237/revision-074-082-real-scope-20261116.md
+historical_070_090_primary_summary_20261116: "9 Passed / 11 Failed / 1 Not Applicable074; 082 revised UI actual Passed; Technical gaps separate"
+
+latest_082_revised_rerun: docs/cases/requirements/ERYE-237/results-082-revised-ego-prod-20261116.md
+
+latest_071_090_execution: docs/cases/requirements/ERYE-237/results-071-090-ego-prod-20261117.md
+
+latest_071_090_defect_sync: docs/defects/ERYE237-071-090-sync-prod-20261117.md
+
+latest_074_089_090_optimization: docs/cases/requirements/ERYE-237/optimization-074-089-090-existing-business-20261117.md
+latest_074_089_090_revision: "2026-11-17-existing-business-v3; primary UI/Agent/Agent executed; historical contracts retained"
+current_071_090_primary_summary: "13 Passed / 7 Failed merged latest primary; only074/089/090 rerun; old executed20 batch10P7F3NA retained"
+latest_074_089_090_execution: docs/cases/requirements/ERYE-237/results-revised-074-089-090-ego-prod-20261117.md
+latest_091_110_execution: "docs/cases/requirements/ERYE-237/results-revised-eleven-plus-six-ego-prod-20261117.md"
+latest_091_110_summary: "v8 current091-110:8P/2F/0NR plus10 aliases;latest091/096/103 actual UI Passed;old technical reports retain historical meanings"
+latest_091_110_defects: "ERYE237-105 FWXC-652; ERYE237-107 FWXC-653; ERYE237-105 FWXC-610; test statuses unchanged"
+latest_091_110_defect_sync: docs/defects/ERYE237-091-110-sync-prod-20261117.md
+
+latest_revised_eleven_plus_six_summary: "3P/4F/10B final; production TaskSpace28 finished; PLAN"
+latest_revised_eleven_plus_six_execution: docs/cases/requirements/ERYE-237/results-revised-eleven-plus-six-ego-prod-20261117.md
+latest_eleven_blocked_optimization: docs/cases/requirements/ERYE-237/optimization-eleven-blocked-20261117.md
+
+latest_annotation_ui_revision: "docs/cases/requirements/ERYE-237/revision-110-144-image-annotation-20261117.md"
+latest_annotation_ui_revision_status: "current110-122:13 Passed;22 duplicates remain deleted;production actual UI"
+current_primary_scope_report: "docs/cases/requirements/ERYE-237/revision-110-144-image-annotation-20261117.md"
+annotation_unique_additions: [ERYE237-091, ERYE237-096, ERYE237-103, ERYE237-110, ERYE237-111, ERYE237-112, ERYE237-113, ERYE237-114, ERYE237-115, ERYE237-116, ERYE237-117, ERYE237-118, ERYE237-119, ERYE237-120, ERYE237-121, ERYE237-122]
+annotation_merged_reference_count: 10
+latest_110_144_annotation_scope: docs/cases/requirements/ERYE-237/revision-110-144-image-annotation-20261117.md
+latest_110_144_annotation_summary: "original scope thirteen retained cases now110-122;22 duplicates remain deleted"
+current_case_entry_count: 122
+current_unique_primary_count: 112
+latest_deleted_duplicate_count: 22
+latest_deleted_duplicates_record: docs/cases/requirements/ERYE-237/deleted-22-annotation-duplicates-20261117.md
+current_case_number_range: "ERYE237-001～122"
+current_annotation_case_range: "ERYE237-110～122"
+renumbering_record: docs/cases/requirements/ERYE-237/renumbering-20261117-v8.md
+
+latest_110_122_execution: "docs/cases/requirements/ERYE-237/results-110-122-ego-prod-20261117.md"
+
+latest_110_122_summary: "13 Passed / 0 Failed / 0 Blocked; sourceV1 final; TaskSpace29; PLAN/empty script"
+
+latest_three_annotation_ui_execution: "docs/cases/requirements/ERYE-237/results-091-096-103-annotation-ui-ego-prod-20261117.md"
+
+latest_three_annotation_ui_summary: "091/096/103 production3 Passed;PLAN/empty script;TaskSpace30"
+
+latest_boundaries_and_ann009010_execution: "docs/cases/requirements/ERYE-237/results-045-048-ann009010-ego-prod-20261117.md"
+
+latest_boundaries_and_ann009010_summary: "12 UI boundary rows+4 direct backend413 passed;10 native jobs9done1failed; redball clipping local only;PLAN"
+
+latest_boundary_case_optimization: "11999 each annotation actionable;v9 production execution completed;independent audit not gating UI"
+
+latest_boundary_case_optimization_report: "docs/cases/requirements/ERYE-237/revision-045-048-actionable-boundaries-20261117.md"
+
+latest_boundary_case_fixture: "docs/cases/requirements/ERYE-237/fixtures-045-048-annotation-boundaries-v9.json"
+
+latest_boundary_before_optimization_archive: "docs/cases/requirements/ERYE-237/archive-045-048-before-business-v9-20261117.md"
+
+current_primary_branch_counts: {UI: 69, Agent: 26, Technical: 17}
+
+latest_boundary_v9_execution_report: "docs/cases/requirements/ERYE-237/results-045-048-v9-ego-prod-20261117.md"
+
+latest_boundary_v9_execution_summary: "2026-11-17生产ego-browser有头TaskSpace32完成新版045～048全部4条/12行：主用例3 Passed、1 Failed、0 Blocked；参数行11 Passed、1 Failed。045/10条受理后5处蓝色圆点残缺，已提交云效FWXC-670，2张原图及3份补充证据回读通过；11999明确动作实图通过。8次有效生成及4组UI拒绝均已核终态/保留输入，另1次助手退格导致引用不足的无效准备任务完整留档、不计有效覆盖。provider/费用审计及直接后端校验未执行，不阻塞主UI；PLAN/空脚本保持。"
+
+latest_boundary_v9_cloud_defect: "https://devops.aliyun.com/projex/project/1e401ac99539c3999e00e40006/bug#openWorkitemIdentifier=29354182937908ffb882916ff1"
+latest_boundary_v9_cloud_sync_verified: true
+
+latest_annotation_five_revision: "2026-11-17-annotation-five-ui-dedup-v10"
+
+latest_annotation_five_archive: "docs/cases/requirements/ERYE-237/archive-007-028-057-068-069-before-v10-20261117.md"
+
+latest_annotation_five_execution_report: "docs/cases/requirements/ERYE-237/results-annotation-v10-ego-prod-20261117.md"
+
+latest_annotation_five_execution_summary: "2026-11-17生产ego有头TaskSpace33完成v10实际5入口：057/010/043 Passed，028 Failed（双蓝点成品残缺，整组撤销/重做仅诊断，不算完整V2验收通过），088 Failed（运行中历史导出禁用）；3P/2F/0B。007→088、068→010、069→043仍只索引，不重复计数。2次原任务均done/applied，无业务重发；自有草稿清理、原图/历史保留。PLAN/空脚本，业务执行阶段未写云效；后续028已关联FWXC-670，088关联FWXC-618并改为再次打开，4图/4附件及评论回读通过。"
+
+latest_annotation_five_cloud_sync: docs/defects/ERYE237-v10-028-088-cloud-sync-20261117.md
+latest_annotation_five_cloud_sync_verified: true
+
+latest_optimized_five_execution: "docs/cases/requirements/ERYE-237/results-018019028029031-ego-prod-20261118.md"
+
+latest_optimized_five_execution_summary: "2026-11-18生产ego-browser有头TaskSpace34重跑优化018/019/028/029/031：{'Passed': 3, 'Failed': 2}；各例独立结论及未覆盖范围见报告。019非法7未拒绝、实际文字变8；029正式8px合成PNG逐像素一致，另1次准备偏差完整保留不计覆盖。默认字号与Agent参数分开；PLAN/空脚本，未写云效。"
+
+latest_ui_text_size_execution: "docs/cases/requirements/ERYE-237/results-018019028029031-ego-prod-20261118.md"
+
+latest_optimized_five_cloud_sync: "docs/defects/ERYE237-019-028-cloud-sync-20261118.md"
+
+latest_optimized_five_cloud_sync_verified: true
+
+latest_050_regression: "docs/defects/FWXC-599-retest-ego-prod-20261118.md"
+
+latest_050_regression_summary: "Historical original/E1 Failed and E2 Passed under old multi-image scope;missing-second-image negative criterion superseded by user single-image clarification;new050 Not Run;cloud last read AI未通过 unchanged"
+
+latest_050_regression_cloud_verified: true
+
+latest_050_revision: "docs/cases/requirements/ERYE-237/revision-050-single-image-annotation-20261118.md"
+
+latest_050_revision_execution_status: "Not Run"
+
+latest_050_revision_summary: "用户确认图片批注单次仅一张，同图多批注仍允许；050改为先I1单独完成再I2单独提交，验证跨请求来源/引用/成品隔离。新版Not Run、PLAN/空脚本；旧多图请求及“未同时交付另一图”负向依据不适用，不计新版失败或通过。历史未知错误保留；本次未生成、未写云效。"
+
+latest_050_regression_applicability: "Not Applicable:old unsupported single-request multi-image scope;history retained"

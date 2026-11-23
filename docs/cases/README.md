@@ -141,6 +141,10 @@
 SSO-019～022共4条、每例5轮。执行命令：`npm run test:sso:mixed`；有头、串行、零重试。结果查看[专项报告](../design-cases/multi-workflow/sso019-022-source-artifact-results-20261105.md)。
 
 
+## 剪辑师多轮对话 SSO-023～027
+
+[用例正文](../design-cases/multi-workflow/editor-operation-cases.md) · [脚本](../../tests/sso/same-session-original.spec.ts) · 运行 `npm run test:sso:editor`。
+
 ## 剪辑配音与字幕同步P0
 
 [完整前置、素材哈希、两轮提示词及同步验收标准](../design-cases/multi-workflow/editing-dubbing-sync-cases.md)。新增6条P0，按素材类别固定抽样；使用会话任务和下载成片验收，不依赖编辑页。
@@ -169,7 +173,7 @@ SSO-019～022共4条、每例5轮。执行命令：`npm run test:sso:mixed`；�
 
 [196/206/210联合规则与复用](editor-linked-196-206-210.md) · [统一业务验收口径](editor-business-acceptance.md)。按页面、实际文件或真实接口的业务结果验收。
 
-正式需求采用“一需求一目录”，各目录的 `meta.yaml` 保存来源与元数据。工作流用例不加入正式需求目录或本目录的 `registry.yaml`。
+正式需求按一需求一目录维护，来源及元数据见各目录的 `meta.yaml`。工作流专项保留在 `docs/design-cases/multi-workflow/`，不重复加入正式需求目录或登记表。
 
 ## 工作流与上下文专项
 
@@ -215,18 +219,39 @@ SSO-019～022共4条、每例5轮。执行命令：`npm run test:sso:mixed`；�
 
 本页维护用例定义与导航；执行结果、统计和缺陷同步记录在对应报告中维护。
 
-## 约定
+| 范围 | 用例入口 | 脚本或映射 |
+|---|---|---|
+| 设计稿覆盖索引 | [模块覆盖地图](../design-cases/00-overview.md) | [自动化登记](../design-cases/15-automation-registry.md) |
+| 首页输入与产物预览 | [预置场景与输入框](../design-cases/01-preset-scenes.md) · [产物实时预览](../design-cases/02-artifact-preview.md) | [自动化登记](../design-cases/15-automation-registry.md) |
+| 项目与会话 | [项目分离](../design-cases/04-project-separation.md) | [自动化登记](../design-cases/15-automation-registry.md) |
+| 登录与引导 | [iOS邮箱登录](../design-cases/08-ios-login.md) · [视频理解引导](../design-cases/09-video-onboarding.md) | [自动化登记](../design-cases/15-automation-registry.md) |
+| 移动端 | [移动端页面](../design-cases/10-mobile.md) | [自动化登记](../design-cases/15-automation-registry.md) |
+| 积分与素材重链 | [积分阻碍](../design-cases/11-credit-upsell.md) · [素材重链](../design-cases/12-relink.md) | [自动化登记](../design-cases/15-automation-registry.md) |
+| 个人设置 | [个人中心设置](../design-cases/13-profile-settings.md) | [自动化登记](../design-cases/15-automation-registry.md) |
+| 视频批注 | [批注用例](../design-cases/07-video-annotation.md) | [脚本映射](../design-cases/07-annotation-automation.md) · [脚本目录](../../tests/annotation) |
+| 图片批注工具 | [IMG-ANN-UI用例](../design-cases/17-image-annotation-ui.md) | 按专项正文查映射 |
+| 图片工具栏 | [IMG-TB-UI用例](../design-cases/18-image-toolbar-ui.md) | 按专项正文查映射 |
+| 上传、提交与取消 | [自动化登记](../design-cases/15-automation-registry.md) | [上传脚本](../../tests/staging/g1-upload.spec.ts) · [提交脚本](../../tests/staging/g2-submit.spec.ts) |
+| 离线断言与关卡 | [单元测试](../../tests/unit) · [关卡测试](../../tests/gates) | [框架验证说明](../verification.md) |
 
-- ID：`<REQ前缀>-<三位序号>`，如 `ERYE237-001`；
-- 一需求一目录、一前缀、一 Playwright 标签（`@ERYE-237`）；
-- 用例表列：ID / 优先级 / 前置条件 / 操作步骤 / 预期结果 / 来源 / 自动化 / 脚本 / 锚点提示；
-- `自动化` 取值：`[AUTO]` / `[PLAN]` / `[FIXME]` / `[BLOCKED]`；
-- 脚本落地后同步更新 `registry.yaml` 与 `cases.md` 的「脚本」列；
-- `reports/design-cases.xlsx` 由 `tools/design-cases/build-xlsx.py` 汇总其支持的正文；当前尚未读取SSO独立文件，不应宣称已包含SSO。
+## 常用运行命令
 
-总表分别读取正式需求、设计稿和 `docs/design-cases/multi-workflow/cases.md`，将后者标为“工作流”来源；无需为了汇总而把工作流文件放入 requirements。
+| 范围 | 命令 |
+|---|---|
+| 离线框架校验 | `npm run verify` |
+| 用例格式检查 | `npm run cases:check`；没有 `python` 别名时用 `python3 tools/design-cases/check-cases.py` |
+| 字幕、图片水印及其他工作流 | `npm run test:g3` / `npm run test:watermark` / `npm run test:flows` |
+| 卡片入口 | `npm run test:cards` |
+| 多工作流基础与复合 | `npm run test:multi:base` / `npm run test:multi:compound` |
+| 多素材专项 | `npm run test:multi:materials` |
+| 同会话单原片及产物穿插 | `npm run test:sso` / `npm run test:sso:mixed` |
+| 剪辑师多轮对话 | `npm run test:sso:editor` |
+| 本地素材查找 | `npm run test:footage` |
+| 视频批注 | `npm run test:annotation` / `npm run test:annotation:staging` |
+| 图像编辑专项 | `npm run test:erye237` |
+| 跨工作流链路 | `npm run test:chains` |
 
-## 图片批注工具优先专项
+线上命令可能上传素材、创建任务及消耗积分。执行范围、账号、环境和串行要求按当前任务授权及[回归规范](../regression-policy.md)处理；脚本实际覆盖范围以对应正文和登记表为准。
 
 [IMG-ANN-UI-001～010完整用例](../design-cases/17-image-annotation-ui.md)：使用授权生成人像，优先通过批注浮层填写提示词、添加引用及页面编辑。可在同一专用项目中使用多个独立会话，各例核对独立图片工程及源版本。
 

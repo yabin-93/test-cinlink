@@ -75,3 +75,7 @@
 005实际导出结果：1024×1024，原始PNG可下载核对
 
 ![005-result-export.png](https://devops.aliyun.com/projex/api/workitem/file/url?fileIdentifier=aaa4d591830103904b08a28b86)
+
+## 2026-11-12 R2最新回归
+
+[本轮报告](FWXC-369-retest-prod-20261112-r2.md)：Failed。源1254×1254，画笔及文字实际PNG均1264×1264，未保持源尺寸；文字位置也变化。旧1024缩小未复现，不能据此判全部通过。云效保持已修复。

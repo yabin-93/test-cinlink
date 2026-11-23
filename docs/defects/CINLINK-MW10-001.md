@@ -1,5 +1,7 @@
 # CINLINK-MW10-001 · [FWXC-254](https://devops.aliyun.com/projex/project/1e401ac99539c3999e00e40006/bug#viewIdentifier=1dedc5afd44979211cad516f&openWorkitemIdentifier=31ee059fefbd6acaa43a3e8dad)
 
+> 2026-11-12最新回归：[FWXC-254专项报告](FWXC-254-retest-staging-20261112.md)，完整原链 Passed，实际18.84秒2560×1440 MP4及7条短片SRT均下载核验，原空对象错误未复现；云效已改✅AI通过并回读。原英语源/中文提示词差异保留，下方为历史。
+
 **现象**
 
 按“增强分辨率→中文字幕烧录→20秒高光”的顺序处理视频，增强及字幕相关步骤完成后，高光阶段的Extract audio报空对象异常，任务Failed且无最终视频或SRT。

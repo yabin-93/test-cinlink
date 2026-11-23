@@ -1,6 +1,6 @@
 # 图片工具栏功能专项测试用例
 
-整理日期：2026-11-09。编号 **IMG-TB-UI-001～020**，共20条：P0 13条、P1 7条，最新 **13 Passed / 6 Failed / 1 Blocked / 0 Not Run，未接自动化**。001～005生产有头实测见[执行报告](img-tb-ui-001-005-results-20261109.md)；002/005纯绘制结果缩至1024²，不符合1254²源尺寸保持。002/005关联云效[FWXC-369](https://devops.aliyun.com/projex/project/1e401ac99539c3999e00e40006/bug#openWorkitemIdentifier=e6d492be908d55a9d0b86124e6)，证据与回读见[缺陷记录](../defects/img-tb-ui-compose-size-prod-20261109.md)。
+整理日期：2026-11-09。编号 **IMG-TB-UI-001～020**，共20条：P0 13条、P1 7条，2026-11-09完整执行统计 **13 Passed / 6 Failed / 1 Blocked / 0 Not Run，未接自动化**。2026-11-12缺陷专项及020实际运行期失败见下方最新记录，不沿用历史失败作为本轮复现。001～005生产有头实测见[执行报告](img-tb-ui-001-005-results-20261109.md)；002/005纯绘制结果缩至1024²，不符合1254²源尺寸保持。002/005关联云效[FWXC-369](https://devops.aliyun.com/projex/project/1e401ac99539c3999e00e40006/bug#openWorkitemIdentifier=e6d492be908d55a9d0b86124e6)，证据与回读见[缺陷记录](../defects/img-tb-ui-compose-size-prod-20261109.md)。
 
 范围为图片编辑器主工具栏和画笔子工具栏，以及必要的保存、导出、任务状态闭环。按用户要求优先直接点击页面工具；聊天仅用于提交已由工具建立的草稿及完整处理要求，不用聊天指令代替工具操作。正式ERYE237的144条、既有图片批注专项10条及其执行状态保持，专项不重复计入正式需求统计。
 
@@ -23,13 +23,15 @@
 
 ## 执行索引
 
+2026-11-12 R2缺陷专项更新：020/FWXC-373有效涂抹黄包后实际提交一次擦除，运行中按钮未disabled但点击原版仍处理占位，终态3版恢复；黄包未移除，Failed，云效保持已修复。[本轮报告](../defects/FWXC-373-retest-prod-20261112-r2.md)。相关FWXC-363放弃草稿弹窗显示专项已通过、FWXC-410已有文字直接追加入口专项已通过，均不替代工具栏用例的全部生成/导出步骤。
+
 | 编号 | 优先级 | 场景 | 主要来源 | 状态 |
 |---|---|---|---|---|
 | IMG-TB-UI-001 | P0 | 进入画笔、空草稿与退出 | §3.2；ERYE237-014/015 | Passed（共享会话补跑） |
-| IMG-TB-UI-002 | P0 | 连续笔迹及纯绘制合成 | §3.2/A02；ERYE237-016/029 | Failed（1254²→1024²；[FWXC-369](https://devops.aliyun.com/projex/project/1e401ac99539c3999e00e40006/bug#openWorkitemIdentifier=e6d492be908d55a9d0b86124e6)） |
+| IMG-TB-UI-002 | P0 | 连续笔迹及纯绘制合成 | §3.2/A02；ERYE237-016/029 | 2026-11-12 R2尺寸保持Failed（1254²→1264²；连续线未覆盖；[最新专项](../defects/FWXC-369-retest-prod-20261112-r2.md)；[FWXC-369](https://devops.aliyun.com/projex/project/1e401ac99539c3999e00e40006/bug#openWorkitemIdentifier=e6d492be908d55a9d0b86124e6)） |
 | IMG-TB-UI-003 | P1 | 笔宽、颜色默认值与旧笔迹隔离 | §3.2；ERYE237-011/023 | Passed（UI业务范围） |
 | IMG-TB-UI-004 | P0 | 六类形状创建与保存 | §3.2/D05；ERYE237-020 | Passed（6/6保存重开可选） |
-| IMG-TB-UI-005 | P0 | 中文混排文字编辑与合成 | §3.2；ERYE237-018 | Failed（文字准确，尺寸缩小）；[FWXC-369](https://devops.aliyun.com/projex/project/1e401ac99539c3999e00e40006/bug#openWorkitemIdentifier=e6d492be908d55a9d0b86124e6) |
+| IMG-TB-UI-005 | P0 | 中文混排文字编辑与合成 | §3.2；ERYE237-018 | 2026-11-12 R2合成Failed（文字准确，1254²→1264²且位置移动；[最新专项](../defects/FWXC-369-retest-prod-20261112-r2.md)）；[FWXC-369](https://devops.aliyun.com/projex/project/1e401ac99539c3999e00e40006/bug#openWorkitemIdentifier=e6d492be908d55a9d0b86124e6)；2026-11-17 Chrome预发[FWXC463最新](../defects/FWXC-463-retest-20261116-2200-monitor.md)原36px字号前置Blocked、实际字号/多文字位置变体Failed、独立单蓝字本地入口合成Passed；不覆盖原完整48蓝→36流程或FWXC369尺寸问题，固定脚本PLAN |
 | IMG-TB-UI-006 | P0 | 选择、移动、调整边界、删除 | §3.2/A03；ERYE237-017 | Passed（选择/移动/边界/删除） |
 | IMG-TB-UI-007 | P1 | 色板、RGB与吸管 | §3.2；ERYE237-021/022 | Passed（色板/RGB/吸管/隔离） |
 | IMG-TB-UI-008 | P0 | 绘制橡皮擦只作用于草稿 | §3.2/A04；ERYE237-024/025 | Passed（笔迹/文字/形状/底图四项） |
@@ -44,7 +46,7 @@
 | IMG-TB-UI-017 | P0 | 16:9扩图保留完整人像 | §3.4/§8/A10；ERYE237-072/074 | Failed（背景明显竖向接缝） |
 | IMG-TB-UI-018 | P1 | 工具草稿已保存后收起重开 | §3.1～3.2/A14；ERYE237-008/018/085/086 | Passed（复测改写及再次重开均保留） |
 | IMG-TB-UI-019 | P0 | 导出包含内容、排除交互层 | §5.2/§8；ERYE237-077～082 | Passed（完成版导出排除交互层） |
-| IMG-TB-UI-020 | P1 | 任务执行中工具限制及终态恢复 | §3.5/A16；ERYE237-007/088 | Failed（运行中全部历史版本禁用；[FWXC-373](https://devops.aliyun.com/projex/project/1e401ac99539c3999e00e40006/bug#openWorkitemIdentifier=680b9622f88e0dbbd8a9741a3d)） |
+| IMG-TB-UI-020 | P1 | 任务执行中工具限制及终态恢复 | §3.5/A16；ERYE237-007/088 | 2026-11-12 R2 Failed（运行中点击原历史仍处理占位；[本轮](../defects/FWXC-373-retest-prod-20261112-r2.md)）；原disabled表象未复现 |
 
 ## 用例正文
 
@@ -231,3 +233,9 @@
 2026-11-09按用户要求重跑018：三对象保存恢复、可选，T1实际追加“ 已恢复”并回读，第二次重开仍保留，改为Passed；累计13 Passed/5 Failed/2 Blocked。详见[018复测](img-tb-ui-018-results-20261109-r2.md)。
 
 2026-11-09按用户要求重跑020：区域保存成功，真实任务一次完成，运行中所有历史入口disabled，违反§3.5查看历史可用，改Failed；终态工具/历史/导出恢复及收起重开可用。运行态缩放/收起实操未覆盖，不重发采样。详见[020复测](img-tb-ui-020-results-20261109-r2.md)。
+
+### 2026-11-12 R2 FWXC-286生产专项补测
+
+用户最新将原预发缺陷改在生产验证，yabinc92新会话93ae2b38-c2f7-4d2e-b74b-da1138490ec5，原16:9／1K生成92秒后绘制连续线、矩形、你好、三角形；四项有效非零绘制均保存，刷新重开保留，1920×1088实际PNG导出解码及画面通过，原输入校验错误未现，[专项报告](../defects/FWXC-286-retest-prod-20261112-r2.md)。官方API已改✅AI通过并回读。
+
+该结论覆盖004中的矩形/三角形、018保存和019导出相关子范围；未穷举004全部六类、未重跑002纯绘制合成或005中文混排完整用例，原FWXC-369尺寸与布局失败状态保留。字体首次等待约90秒就绪后再输入，不将准备中禁用当成形状失败；不以生产通过声称预发也通过。

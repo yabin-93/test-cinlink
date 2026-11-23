@@ -1,5 +1,25 @@
 # 云效缺陷同步与家里电脑配置
 
+## 当前 Mac 配置（2026-11-06）
+
+本目录从用户提供的 `Downloads/yunxiao` 导入，已适配 macOS 的 curl 和凭据读取；Windows 继续使用原 DPAPI 缓存。Mac 无需 Homebrew，当前已安装微软官方 ARM64 PowerShell 7.6.9 到用户目录，下载归档与官方发布的 SHA256 一致。其他机器可按[微软安装说明](https://learn.microsoft.com/powershell/scripting/install/install-powershell-on-macos)安装 PowerShell 7.2+。
+
+从工程根目录运行：
+
+```sh
+tools/yunxiao/run.sh check.ps1 -ReferenceWorkitemId 94f54105c3405d30c9df57b56e
+tools/yunxiao/run.sh test-offline.ps1
+tools/yunxiao/run.sh sync-defect.ps1 -PlanPath reports/yunxiao/本次批次/plan.json -DryRun
+# 已有本次同步授权时执行同一计划：
+tools/yunxiao/run.sh sync-defect.ps1 -PlanPath reports/yunxiao/本次批次/plan.json -Execute
+```
+
+`run.sh` 优先使用 PATH 中的 `pwsh`，否则使用 `$HOME/.local/share/cinlink-powershell/current/pwsh`。支持从其他工作目录调用，默认只读 check；check/sync 自动使用已忽略的 `config.local.json`（存在时），也可以显式指定 `-ConfigPath`。
+
+Mac 凭据优先读取进程环境变量 `ALIBABA_CLOUD_YUNXIAO_ACCESS_TOKEN`，兼容 `YUNXIAO_ACCESS_TOKEN`；其次读取工程 `local.env`，再到 `.env.local`。同名键以先出现的为准。`init.ps1 -Force` 可在终端隐式输入并保存令牌，凭据文件权限限制为 0600。不要在聊天或命令行参数中传递密钥；本机配置文件不提交。
+
+当前专用令牌名 `cinlink-openapi-mac-20261106`，2027-02-04 到期，仅选项目协作的相关权限。2026-11-11按用户授权补充“工作项评论”读写，现项目协作已选11项，其他权限与有效期保持；支持评论回归及状态更新。`config.local.json` 默认字段取自已存在的 FWXC-357：负责人牛诗晴、迭代重构10-29、生产环境、中、3-一般。新批次按实际环境与影响覆盖 `plan.fields`；用户提供的 `config.json` 保留原 Windows 默认值，不能直接照搬为生产标签。配置验证不创建或修改缺陷；实际创建/上传仍需在下一次获授权的缺陷同步中验证。
+
 这套工具使用PowerShell 7.2+和curl调用云效OpenAPI：创建缺陷 → 上传真实截图及补充附件 → 正文嵌图 → 回读验证。目录可随整个工程移动，不再依赖办公室用户名、兄弟`test`工程、临时脚本或旧报告中的公共函数。
 
 ## 目录与入口
@@ -121,7 +141,7 @@ Copy-Item .\tools\yunxiao\examples\description.md $batch
 编辑`plan.json`：
 
 - `key`：本次缺陷的唯一同步标识，例如`CINLINK-NEW-CASE-20261106-001`，也用作检查点目录名。不能使用示例占位。
-- `subject`：功能/场景 + 可观察的问题。
+- `subject`：必须带用例编号，格式为“【用例编号】功能/场景 + 可观察的问题”，例如“【ERYE196-003】视频编辑器跨标签保存字幕后，原标签仍显示旧文且无刷新提示”。
 - `descriptionPath`：正文文件相对路径。
 - `fields`：可覆盖配置中的`assignedTo/sprint/labels/priority/seriousLevel`；保留`{}`时沿用配置。
 - `images`：真实PNG相对路径、场景说明`caption`和原图SHA256，至少一张。
@@ -224,3 +244,7 @@ pwsh -NoProfile -File .\tools\yunxiao\check.ps1
 ## 2026-11-13 上传回执与恢复
 
 真实上传回执可能使用`name`，附件列表使用`fileName`。同步工具现于上传后GET附件列表，必须唯一匹配返回ID、原文件名和字节数后才嵌入正文；字段不同不视为未上传。保留检查点恢复时，会核对已存在的同名附件继续，不自动重传。新增该真实回执形态的离线检查，合计21项通过；本次FWXC-488/489的6张截图、12附件及正文回读通过。
+
+2026-11-09：截图同步支持原始PNG/JPEG并核对文件签名、SHA256；JPEG按image/jpeg上传。上传响应的name字段规范为fileName，附件列表仍按fileName及ID/字节数回读，兼容官方API两种响应结构。
+
+2026-11-13标题规范：用户要求在缺陷标题加入用例编号。修改已提交缺陷时先读取原项，只更新subject并回读；原同步计划与检查点作为提交历史保留，标题变更另存记录，不重新执行旧创建计划。
