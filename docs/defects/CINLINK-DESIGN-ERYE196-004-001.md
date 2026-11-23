@@ -79,3 +79,5 @@ ERYE-196评论第03节要求将编辑器中选中的片段、字幕、轨道或�
 | ERYE196-004-runtime-audio-deselected.png | reports/erye196-004-rerun-20261105-after-restart/03-audio-deselected.png | 1be911a49795e6fff1349dce872ea7d7b3988496e4b471aa150676a215cec580 |
 
 三个PNG附件ID及正文中的fileIdentifier逐一对应；本机副本SHA256与源文件一致，未加工画面。云效正文按九段模板记录来源、前置、未发送提示词、资料对照/已有实测步骤、实际/预期及验证边界，没有排查信息节或本机路径。同步未修改产品源码、需求正文或Figma。
+
+2026-11-13后续记录：用户最新按明确需求验收，将004重新判为Failed，并授权另提页面能力缺失[FWXC-481](https://devops.aliyun.com/projex/project/1e401ac99539c3999e00e40006/bug#openWorkitemIdentifier=5e2ce0344457542d499e78529b)；[新记录](ERYE196-004-object-reference-missing-20261113.md)。本历史差异单正文和截图保留，未修改云效FWXC-315。新单明确使用11月5日预发历史证据，不代表11月13日新执行。

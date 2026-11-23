@@ -1,11 +1,13 @@
 # 缺陷报告 · 部分多工作流任务报 “Missing CinLink access token or API key.”
 
+**最新回归：2026-11-11预发原凭证缺失专项Passed。** [本轮报告](FWXC-242-retest-staging-20261111.md)：三个新会话按原指令及@引用执行MW-24/25/26，308/232/238秒完成，三份MP4实际下载、完整解码及字幕/水印抽查正常，未复现原错误。18:36通过官方OpenAPI将FWXC-242由已修复改“✅AI通过”并回读。MW-24实际清理5个停顿、0个口水词；专项结论不替代识别准确率、内部字幕链路或过期登录恢复测试。以下保留原发现及历史复测。
+
 | 字段 | 内容 |
 |---|---|
 | 缺陷 ID | CINLINK-TOKEN-001（本地编号，提交云效后以工作项为准） |
 | 标题 | 多工作流任务（去口癖/长变短/文字水印）提交后 agent 直接 Failed：Missing CinLink access token or API key |
 | 严重级别 | **高（P1）**：任务无法执行，用户只看到 Failed 与凭证错误，无产物 |
-| 状态 | **本地复测通过，本轮未复现**（2026-11-03 17:10–17:21，MW-24/25/26 3 passed）；已核对云效[FWXC-242](https://devops.aliyun.com/projex/project/1e401ac99539c3999e00e40006/bug#viewIdentifier=1dedc5afd44979211cad516f&openWorkitemIdentifier=eb0c12526cebd6614f7735a894)仍待确认，本次未改云效状态 |
+| 状态 | **2026-11-11原凭证缺失专项Passed**，三分支实际交付；云效[FWXC-242](https://devops.aliyun.com/projex/bug/FWXC-242)已改“✅AI通过”并回读；[最新范围及证据](FWXC-242-retest-staging-20261111.md) |
 | 自动化状态 | 复测后已移除 MW-24/25/26 的 `fixme`，三条均恢复默认执行，无需强制开关 |
 | 发现日期 | 2026-11-03 |
 | 环境 | 预发 `https://staging-app.cinlink.ai`，新版工作台 `/studio/workspace` |
@@ -16,7 +18,7 @@
 
 ---
 
-## 最新复测：2026-11-03 Codex
+## 历史复测：2026-11-03 Codex
 
 恢复人工登录后，使用 `CINLINK_INCLUDE_BLOCKED=1`，单 worker、零重试执行原三条用例：
 

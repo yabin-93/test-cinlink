@@ -70,3 +70,7 @@ I2点击后新标签页地址为blob:https://app.cinlink.ai/d2c24b02-2d0f-47b2-a
 ![03-I1-thumbnail-blob.png](../../reports/erye237-001-prod-20261106/03-I1-thumbnail-blob.png)
 
 ![10-I2-thumbnail-blob.png](../../reports/erye237-001-prod-20261106/10-I2-thumbnail-blob.png)
+
+## 2026-11-12 R2最新回归
+
+[实际回归报告](FWXC-352-retest-prod-20261112-r2.md)Failed：原11.png和本轮102秒真实生成水彩图的卡片均打开blob原图页，未进入产品图片编辑器；生成PNG已下载全解码0。云效保持已修复，未写评论或新缺陷。

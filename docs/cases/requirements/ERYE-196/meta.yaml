@@ -4,20 +4,196 @@ source: https://devops.aliyun.com/projex/req/ERYE-196
 status: designing
 automation_tag: "@ERYE-196"
 case_prefix: ERYE196
-updated: 2026-11-05
+updated: "2026-11-18"
 comment_id: "23563211"
-execution_status: "001/003 Passed; 002/004 NotApplicable; 005-134 Not Run; no current Blocked"
-execution_report: results-001-005-20261105.md
+execution_status: "71 Passed; 76 Failed; 8 Blocked; 3 Not Applicable; 0 Not Run; current revisions; histories retained"
+execution_report: results-016-047-chrome-prod-20261113.md
 latest_retest_report: results-001-rerun-20261105.md
 acceptance_001: "用户2026-11-05确认按可观察业务结果验收，不验证字段映射或服务端历史实现"
-latest_execution_report: business-acceptance-update-20261105.md
-acceptance_002: "用户2026-11-05确认：原范围分页属于接口专项，本轮页面验收不适用；撤销缺少UI入口的阻塞，保留列表补充核验通过证据"
+latest_execution_report: "results-135-158-nl-chrome-prod-20261118.md"
+acceptance_002: "2026-11-13新版页面字幕列表核验Chrome生产Passed，刷新前后各143条一致；旧范围分页专项保留历史"
 acceptance_003: "用户2026-11-05明确按页面业务结果验收：跨标签页改文后的列表更新及刷新一致性，不验证游标或开发实现"
-acceptance_004: "用户2026-11-05明确以最新设计稿为准，004原引用标签/移除交互本轮不适用；保留观察与截图，不计通过或产品执行失败；另记需求/设计差异FWXC-315，不改变本轮不适用状态"
-latest_004_attempt: "2026-11-05 browser restarted; revision 9 unchanged; latest acceptance status NotApplicable by user-confirmed design scope"
-source_004: "云效ERYE-196评论§03页面用户流程；最新Figma未展示完整对象引用状态，另记需求/设计差异FWXC-315，待评审，不认定页面实现回归"
-scope_decision_004: "2026-11-05 用户：以最新设计稿为准，把004改为本轮不适用，并同步更新测试进度"
+acceptance_004: "2026-11-13用户要求需求明确存在而未实现则Failed；当前§03对象引用及移除明确，依据既有实测重新判定Failed，不是本次重跑"
+latest_004_attempt: "2026-11-05实际页面操作证据保留；2026-11-13仅需求及判定复核，无新的完整执行"
+source_004: "2026-11-13官方OpenAPI回读ERYE-196及评论23563211，§03仍明确要求对象引用、名称/时间显示及移除；不是接口实现细节"
+scope_decision_004: "2026-11-13最新用户规则覆盖2026-11-05设计稿排除；详见acceptance-004-review-20261113.md"
 
 acceptance_basis: "page_business_or_observed_api"
-acceptance_updated: 2026-11-05
-acceptance_005: "取消旧引用标签前置，按实际字幕原文/时间明确目标；原Blocked撤销为Not Run，未重跑"
+acceptance_updated: 2026-11-13
+acceptance_005: "按真实时间/原文唯一目标；2026-11-13生产页面业务Passed，详见最新执行报告"
+
+latest_004_review: acceptance-004-review-20261113.md
+
+latest_004_defect: "FWXC-481; historical staging observation, requirement reclassification 2026-11-13; not a fresh production execution"
+
+latest_002_execution_report: results-002-chrome-prod-20261113.md
+
+latest_006_010_execution: "2026-11-13 Chrome production: 4 Passed, 1 Failed; script integration paused by user"
+
+latest_010_defect: "FWXC-490; production split failure; 3 screenshots and 1 audit attachment verified"
+
+latest_016_047_execution: "Chrome production 2026-11-13: 15 Passed, 9 Failed, 7 Blocked, 1 Not Applicable; fixed scripts PLAN with empty path, integration paused"
+
+latest_016_047_sync_report: docs/defects/ERYE196-016-047-sync-prod-20261116.md
+latest_016_047_defects: "017=FWXC-568; 018=FWXC-569; 019=FWXC-570; 020=FWXC-571; 023=FWXC-572; 030=FWXC-573; 039=FWXC-574; 042=FWXC-575; 044=FWXC-576"
+
+latest_016_case_revision: "2026-11-16-default-editor-boundary"
+latest_016_revision_status: Passed
+latest_016_revision_document: docs/cases/requirements/ERYE-196/revision-016-default-editor-boundary-20261116.md
+
+latest_028_case_revision: "2026-11-16-character-slider-6-100-v2"
+latest_028_revision_status: Passed
+latest_028_revision_document: docs/cases/requirements/ERYE-196/revision-028-character-slider-wrapping-20261116.md
+
+confirmed_028_slider_range: "6-100 inclusive; reference 60; user confirmed 2026-11-16"
+
+latest_028_execution_report: results-028-slider-chrome-prod-20261116.md
+latest_028_execution_status: Passed
+
+latest_043_047_case_revision: "2026-11-16-independent-batch-v2"
+latest_043_047_revision_status: "043 Passed UI pre-submit serial control, two copies/server rollback not covered; 047 Passed undo-redo-reload"
+latest_043_047_revision_document: revision-043-047-independent-batch-20261116.md
+
+latest_047_execution_status: Passed
+latest_047_execution_report: results-043-047-chrome-prod-20261116.md
+
+latest_043_execution_status: Passed
+latest_043_execution_scope: UI pre-submit rejection, serialized same-project control
+latest_043_execution_report: results-043-047-chrome-prod-20261116.md
+
+latest_blocked_step_plan: "blocked-step-plan-071-076-088-089-090-20261117.md"
+latest_blocked_step_plan_cases: "071,076,088,089,090"
+latest_blocked_step_plan_status: "historical technical plan; 071/076/088/090 superseded by natural-language-only design; 089 remains Passed"
+
+latest_stepwise_execution_report: results-stepwise-016-021-022-041-chrome-prod-20261116.md
+latest_stepwise_execution_status: "016 Passed UI scope; 021/022/041 Blocked, detailed preparation checkpoints retained; PLAN"
+
+latest_048_070_execution_report: results-048-070-chrome-prod-20261116.md
+latest_048_070_defect_review_report: docs/defects/ERYE196-048-070-confirmed-dedup-prod-20261116.md
+latest_048_070_defect_review_status: "5 confirmed observed failures; 053 pending save acknowledgement evidence; 4 candidate groups; 0 confirmed cloud duplicates, 1 possible, 3 no-match groups; cloud writes 0"
+latest_048_070_execution_status: "13 Passed; 6 Failed; 2 Blocked; 2 Not Applicable; Chrome production with Safari U1 supplement for066; fixed scripts PLAN with empty path"
+
+latest_048_070_sync_report: docs/defects/ERYE196-048-070-sync-prod-20261116.md
+latest_048_070_submitted_defects: "049=FWXC-617; 061/065=FWXC-621; 067=FWXC-622; verified 6 screenshots and 3 audits; 062 possible duplicate,053 pending evidence"
+
+latest_055_068_optimization: docs/cases/requirements/ERYE-196/blocked-step-plan-055-068-20261116.md
+latest_055_068_revision_status: "rerun completed 2 Failed;055 response-delay prerequisite not established,save-failure recovery tested;068 cached-page isolation failed"
+
+latest_055_068_rerun_report: results-055-068-rerun-chrome-prod-20261116.md
+latest_055_068_rerun_status: "055 Failed in save-failure recovery branch;068 Failed old U1 tab contents remain after Chrome switches to U2; scripts PLAN/empty; no Yunxiao writes"
+
+latest_055_068_sync_report: docs/defects/ERYE196-055-068-sync-prod-20261116.md
+latest_055_068_submitted_defects: "055→FWXC-623，068→FWXC-624; 5 screenshots and 2 audits verified"
+
+latest_070_090_execution_report: "docs/cases/requirements/ERYE-196/results-070-090-chrome-prod-20261117.md"
+
+latest_070_090_execution_status: "21/21 recorded; {\"Passed\": 8, \"Blocked\": 5, \"Failed\": 8}"
+
+latest_070_090_script_status: "PLAN / empty script; headed tool-assisted execution"
+
+latest_070_090_sync_report: "docs/defects/ERYE196-070-090-sync-prod-20261117.md"
+
+latest_070_090_submitted_defects: "ERYE196-073→FWXC-637; ERYE196-077→FWXC-638; ERYE196-080→FWXC-639; ERYE196-081→FWXC-641; ERYE196-083→FWXC-642; ERYE196-084→FWXC-643; ERYE196-086→FWXC-644; ERYE196-087→FWXC-645"
+
+latest_070_090_sync_verified: "8/8; 13 original screenshots; OpenAPI verified"
+
+latest_071_076_088_090_optimization: "docs/cases/requirements/ERYE-196/revision-071-076-088-090-natural-language-20261117.md"
+
+latest_071_076_088_090_revision_status: "4/4 current NL cases recorded; {\"Failed\": 4}"
+
+previous_016_021_022_041_step_plan: "blocked-step-plan-016-021-022-041-20261116.md"
+
+latest_071_076_088_090_rerun_report: "results-nl-four-chrome-prod-20261117.md"
+
+latest_070_090_combined_status: "9 Passed; 12 Failed; 0 Blocked; 0 Not Run; only090 newly run in this batch; others retain their latest records"
+
+latest_070_090_combined_report: "revision-090-134-natural-language-undo-20261117.md"
+
+billing_scope_088_090: "2026-11-17 user defers fees and ledger; not verified; does not imply free or no duplicate billing"
+
+project_creation_scope: "2026-11-17 user allows new testing projects when needed"
+
+latest_case_revision_document: "revision-090-134-natural-language-undo-20261117.md"
+
+latest_case_revision: "2026-11-17-editor-nl-090-134-v1"
+
+last_actual_070_090_combined_status: "10 Passed; 9 Failed; 2 Blocked; prior non-billing scope; not current NL execution"
+
+last_actual_070_090_combined_report: "results-five-no-billing-chrome-prod-20261117.md"
+
+latest_natural_language_revision_status: "071/076/088 retain last actual Failed;090-100 actual7 Passed/4 Failed;101-134 Not Run; old failure and cloud associations retained; PLAN"
+
+latest_natural_language_execution_report: "results-090-100-dubbing-nl-chrome-prod-20261117.md"
+
+latest_nl_defect_sync_report: "docs/defects/ERYE196-NL-135-158-sync-prod-20261118.md"
+
+latest_nl_defect_sync_status: "9/9 groups; 3 new/6 associated"
+
+latest_nl_defects: "ERYE196-135/ERYE196-142/ERYE196-152=FWXC-317; ERYE196-136=FWXC-576; ERYE196-137=FWXC-666; ERYE196-138/ERYE196-140/ERYE196-141/ERYE196-155=FWXC-573; ERYE196-139/ERYE196-148/ERYE196-150/ERYE196-151=FWXC-674; ERYE196-154=FWXC-349; ERYE196-143/ERYE196-144=FWXC-689; ERYE196-149=FWXC-690; ERYE196-151=FWXC-691"
+
+latest_090_134_revision_document: "revision-090-134-natural-language-undo-20261117.md"
+
+latest_090_134_revision_status: "7 Passed; 4 Failed; 0 Blocked; 34 Not Run; 101-134 remain Not Run; PLAN / empty scripts"
+
+latest_090_134_revision_scope: "current editor natural-language only; 122-134 undo/redo; original M2 and technical scopes retained as history"
+
+latest_090_100_execution_report: "results-090-100-dubbing-nl-chrome-prod-20261117.md"
+
+latest_090_100_execution_status: "11/11 formally recorded; {\"Failed\": 4, \"Passed\": 7}; dubbing project scope; PLAN/empty scripts"
+
+latest_090_100_preparation_status: "090～100已完成本轮判定：{\"Failed\":4,\"Passed\":7}。099前置已解除并完整配对通过；095/097依赖失败的后续步骤未发送。PB工程已保存并打开，无在途正式任务、无额外导出，固定脚本PLAN。"
+
+latest_natural_language_execution_status: "090-100: 7 Passed; 4 Failed; 0 Blocked; Chrome production; PLAN / empty scripts"
+
+latest_090_100_script_status: "PLAN / empty path; temporary headed execution helper is not fixed automation"
+
+latest_090_100_failed_cases: "090,092,095,097; synced 090,092,095,097; pending "
+
+latest_090_100_PB_conversation: "https://app.cinlink.ai/c/cd9009f7-8fcd-4158-a348-208e6ba1444b"
+
+latest_090_100_PB_status: "created and reopened R13;20s video at1x;source audio retained muted;6 editable Chinese dubbing clips at100%;editable subtitle tracks;default reference-audio mode, built-in non-reference voice requirement not verified"
+
+previous_natural_language_execution_report: "results-nl-four-chrome-prod-20261117.md"
+
+latest_090_100_defect_sync_report: "docs/defects/ERYE196-NL-090-092-095-097-sync-prod-20261117.md"
+
+latest_090_100_defect_sync_status: "3/3 groups verified; 4/4 failed cases; 2 new/1 associated"
+
+latest_101_110_execution_report: "results-101-110-nl-chrome-prod-20261117.md"
+
+latest_101_110_execution_status: "10/10; {\"Passed\": 1, \"Failed\": 5, \"Blocked\": 4}"
+
+latest_101_110_defect_sync_report: "docs/defects/ERYE196-NL-105-107-108-109-110-sync-prod-20261117.md"
+
+latest_101_110_defect_sync_status: "4/4 groups; 5/5 failed cases; 1 new/3 associated"
+
+latest_111_120_execution_report: "results-111-120-nl-chrome-prod-20261117.md"
+
+latest_111_120_execution_status: "10/10; {\"Passed\": 4, \"Failed\": 6}"
+
+latest_111_120_defect_sync_report: "docs/defects/ERYE196-NL-113-115-116-118-119-120-sync-prod-20261117.md"
+
+latest_111_120_defect_sync_status: "4/4 groups; 6/6 failed cases; 1 new/3 associated"
+
+latest_120_134_execution_report: "results-120-134-nl-chrome-prod-20261118.md"
+
+latest_120_134_execution_status: "15/15; {\"Failed\": 12, \"Passed\": 3}"
+
+latest_120_134_defect_sync_report: "docs/defects/ERYE196-NL-120-134-sync-prod-20261118.md"
+
+latest_120_134_defect_sync_status: "9/9 groups; 12/12 failed cases; 5 new/4 associated"
+
+# 2026-11-18新增设计范围；已有执行汇总仅对应001～134。
+designed_case_count: 158
+latest_case_addition: "2026-11-18-editor-nl-135-158-v1"
+latest_case_addition_document: "supplement-135-158-natural-language-20261118.md"
+latest_case_addition_status: "24/24 execution records; {\"Failed\": 17, \"Passed\": 6, \"Blocked\": 1}; PLAN / empty scripts"
+previous_execution_summary_scope: "001-134; 65 Passed/59 Failed/7 Blocked/3 Not Applicable before addition; reports retained"
+
+latest_135_158_execution_report: "results-135-158-nl-chrome-prod-20261118.md"
+
+latest_135_158_execution_status: "24/24; {\"Failed\": 17, \"Passed\": 6, \"Blocked\": 1}"
+
+latest_135_158_defect_sync_report: "docs/defects/ERYE196-NL-135-158-sync-prod-20261118.md"
+
+latest_135_158_defect_sync_status: "9/9 groups; 17/17 failed cases; 3 new/6 associated"

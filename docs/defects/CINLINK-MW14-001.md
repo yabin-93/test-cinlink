@@ -1,5 +1,9 @@
 # 云效同步记录：MW-14
 
+> 2026-11-12最新实际回归： [FWXC-246专项报告](FWXC-246-retest-staging-20261112.md)，本轮业务交付 Passed，实际下载及媒体审计完成，云效已改✅AI通过并回读。下方保留旧失败历史。
+
+> 2026-11-12凌晨批次：[本轮记录](nightly-fixed-regression-20261112.md)。被选为陈亚宾创建且已修复的回归候选，但Mac锁屏/扩展控制失败，**Blocked，业务未执行**；等待人工解锁续跑。本轮未修改云效状态，下方历史结果保持。
+
 - 2026-11-03 已按用户“本次无需去重”要求直接新建，未检索或更新已有缺陷。
 - 项目：cinlink-WEB；工作项：[FWXC-246](https://devops.aliyun.com/projex/project/1e401ac99539c3999e00e40006/bug#viewIdentifier=1dedc5afd44979211cad516f&openWorkitemIdentifier=514a280c2861b2903950c6783d)；ID：`514a280c2861b2903950c6783d`。
 - 已回读验证：标题、完整描述、项目/类型、负责人、迭代、标签、优先级/严重程度、原两份文档/JSON附件与 1 张截图。

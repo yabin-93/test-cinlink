@@ -1,11 +1,15 @@
 # 缺陷报告 · 取消任务后在同一会话重新提交，Run 显示 done 但 0 产物
 
+> 2026-11-12凌晨批次：[本轮记录](nightly-fixed-regression-20261112.md)。被选为陈亚宾创建且已修复的回归候选，但Mac锁屏/扩展控制失败，**Blocked，业务未执行**；等待人工解锁续跑。本轮未修改云效状态，下方历史结果保持。
+
+> 最新回归：2026-11-12预发 [FWXC-236回归报告](FWXC-236-retest-staging-20261112.md)，**Passed（UI业务交付）**。实际取消并刷新，同会话重新挂载/@原片重提一次，审核后交付18.84秒MP4，全部解码正常；昨天节点ID错误未复现。11:21云效已改✅AI通过并回读。内部Run/取消计费未核；自动化FIXME保留至脚本适配。下文保留原始及历史失败。
+
 | 字段 | 内容 |
 |---|---|
 | 缺陷 ID | CINLINK-CANCEL-RESUBMIT-001（本地编号；云效工作项 `b6b809cfd596d4f47862fc68ed`） |
 | 标题 | 取消任务后在同一会话重新提交，run 到 done 但无任何产物，助手回复“workflow’s required tool definitions were not supplied” |
 | 严重级别 | **高（P1）**：用户取消后重试无法完成，且 UI 显示成功（done），没有任何产物或明确错误提示 |
-| 状态 | **已提交云效**（2026-11-03，工作项 `b6b809cfd596d4f47862fc68ed`，`🤔AI提缺陷`；严重程度 2-严重） |
+| 状态 | 云效2026-11-11回读**已修复**；当日UI业务回归**Failed**，本轮未改AI通过。2026-11-03已提交的原始失败历史见下文 |
 | 发现日期 | 2026-11-03 |
 | 环境 | 预发 `https://staging-app.cinlink.ai`，新版工作台 `/studio/workspace`，Chrome（headless），Windows |
 | 账号 | `yabinc18` / `acct_603598179755` |
@@ -126,7 +130,7 @@ POST /runtime-api/v2/agent/runs/{runId}/cancel
 | 工作项 ID | `b6b809cfd596d4f47862fc68ed` |
 | 严重程度 | 2-严重 |
 | 标签 | 测试环境win-chrome |
-| 状态 | 🤔AI提缺陷 |
+| 状态（2026-11-03提交时） | 🤔AI提缺陷 |
 | 链接 | https://devops.aliyun.com/projex/project/1e401ac99539c3999e00e40006/bug#viewIdentifier=1dedc5afd44979211cad516f&openWorkitemIdentifier=b6b809cfd596d4f47862fc68ed |
 | 附件 | 失败截图 `cancel-resubmit-001.png`、日志 `mw05-20261103e.log`、本报告 |
 

@@ -1,5 +1,7 @@
 # 图片200%视图平移尝试未生效 — FWXC-368
 
+> 最新回归：2026-11-12生产新会话原人像200%缩放正常，画布滚动被控制工具以noWindowsAvailable拒绝，平移与右下批注前置未覆盖，Blocked；云效保持已修复，不以工具故障判产品仍失败。[本轮报告](FWXC-368-retest-prod-20261112.md)。下方保留历史。
+
 云效：[FWXC-368](https://devops.aliyun.com/projex/project/1e401ac99539c3999e00e40006/bug#openWorkitemIdentifier=7676dafe333fa5832e64c3441e)。通过官方OpenAPI新建1条，不做去重，旧项修改0。3张原始JPEG已上传并嵌入，正文、字段、附件ID/名称/字节数及图片引用回读通过。操作方式待确认，010仍Blocked。
 
 **现象**
@@ -65,3 +67,11 @@
 010：继续尝试滚动及空格拖动后，视图仍未平移
 
 ![010-space-pan200.jpg](https://devops.aliyun.com/projex/api/workitem/file/url?fileIdentifier=e1602bf2611264aee616f99df9)
+
+## 2026-11-12 R2续轮
+
+[FWXC-368新一轮前置检查](FWXC-368-retest-prod-20261112-r2.md)：坐标输入送达前控制故障，原目标提交0，Blocked。保持云效已修复，不用旧失败作为本轮复现。
+
+## 2026-11-12 R2恢复后最终结果
+
+[本轮平移专项](FWXC-368-retest-prod-20261112-r2.md)Passed：普通左拖在200%实际平移，并将原右下批注移入视区，内容保留。源图RGBA不变。FWXC-368已官方API改✅AI通过并回读。此前阶段Blocked撤销，完整010生成狗流程本轮未重跑。

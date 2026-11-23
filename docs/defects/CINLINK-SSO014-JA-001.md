@@ -1,5 +1,7 @@
 # CINLINK-SSO014-JA-001 · [FWXC-282](https://devops.aliyun.com/projex/project/1e401ac99539c3999e00e40006/bug#viewIdentifier=1dedc5afd44979211cad516f&openWorkitemIdentifier=8f4587beeafd93082783651e90)
 
+最新回归：2026-11-11[预发专项通过](FWXC-282-retest-staging-20261111.md)，新会话按原素材/指令生成，原异常点及已检烧录字幕未见多余`】【`，用户确认日语及同步正常；云效已改“✅AI通过”并回读。独立SRT未取得、整例5轮未重测，下面保留原失败记录。
+
 2026-11-05按用户要求跳过去重并新建；正文、字段和3份附件均已回读验证。优先级中，严重程度3-一般；1张原始失败截图嵌入正文，另附实际SRT和脱敏定位JSON。
 
 **现象**

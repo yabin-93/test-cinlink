@@ -39,6 +39,12 @@
 | 批注本地 UI | `tests/annotation/video-annotation-ui.spec.ts` | 12 | `[AUTO]` | `npm run test:annotation` |
 | 批注预发 | `tests/annotation/video-annotation-staging.spec.ts` | 16 | 15 `[AUTO]` + 1 `[FIXME]` | `npm run test:annotation:staging` |
 
+图像编辑占位映射：
+
+| 套件 | 位置 | 数量 | 实现边界 | 命令 |
+|---|---|---|---|---|
+| 图像编辑001～005占位 | `tests/erye237/erye237-001-005.spec.ts` | 5 | 全部`test.fixme`空骨架；对应正式用例已登记，固定业务实现仍为PLAN，不计已实现自动化 | `npm run test:erye237` |
+
 ## 二、工作流链路：哪些已进脚本
 
 | 工作流 | 设计编号 | 脚本 | 状态 |
@@ -73,7 +79,7 @@
 
 2026-11-04 本地素材查找P0：[LF-01～17正文](multi-workflow/local-footage-p0-cases.md)，LF-01～03已接脚本且有头实测未通过，LF-04～17共14条仍PLAN/未执行。真实分析与3次查询已完成，回读相同run核验短片内容；旧入口冒烟/空FIXME不重复计数。LF-17仍需执行前听审；Excel尚未同步专项，详情见[执行记录](multi-workflow/local-footage-results-20261104.md)。
 
-2026-11-04 AI生图P0专项：[IG-01～08正文](multi-workflow/ai-image-p0-cases.md)，8条均为P0设计，仅IG-05对应已有默认AI生图脚本的部分检查，其余7条PLAN。已在[统一入口](../cases/README.md#ai生图p0用例)逐条列出分辨率/比例与状态。没有新增或执行脚本，卡片套件仍7条、其中AI生图1条；Excel尚未同步本次参数扩展。
+2026-11-04 AI生图P0专项：[IG-01～08正文](multi-workflow/ai-image-p0-cases.md)，8条均为P0设计，仅IG-05对应已有默认AI生图脚本的部分检查，其余7条PLAN。分辨率、比例及脚本映射见[专项正文](multi-workflow/ai-image-p0-cases.md)，统一入口仅保留分类导航。没有新增或执行脚本，卡片套件仍7条、其中AI生图1条；Excel尚未同步本次参数扩展。
 
 2026-11-05：[同会话单原片专项](multi-workflow/same-session-original-cases.md)共18条、14 AUTO/4 PLAN。009～014本批6例30轮完成，4例通过/2例未通过（28轮指定核验通过/2轮未通过/0轮待复核）；来源30/30可追溯，未发现串用；010 R4法文混语、014 R1日文多余字符；014 R3用户人工审核通过。详见[本批记录](multi-workflow/sso009-014-five-round-results-20261104.md)。001～008既有结果保留，015～018未执行；默认预发数量不变。
 

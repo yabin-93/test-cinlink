@@ -73,3 +73,7 @@ Agent应按独立登记的会话附件顺序，在图片编辑器打开第2张JP
 ![01-I2-document-baseline.png](../../reports/erye237-002-prod-20261106/01-I2-document-baseline.png)
 
 ![03-failure-visible.png](../../reports/erye237-002-prod-20261106/03-failure-visible.png)
+
+## 2026-11-12 R2最新回归
+
+[FWXC-357本轮报告](FWXC-357-retest-prod-20261112-r2.md)：独立三图单历史，按第2张目标57秒实际打开正确群鸟照片，三图历史均保持，Passed并官方API回读✅AI通过。去背景多版本FWXC-359未由本例继承通过。

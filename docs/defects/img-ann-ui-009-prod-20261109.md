@@ -1,5 +1,7 @@
 # 图片批注草稿保存丢失 — FWXC-367
 
+> 最新回归：2026-11-12生产新会话验证批注正文和自定义名称已保存后收起重开均保留，持久性专项Passed；云效已设✅AI通过并回读。点位为画布中心，后续小狗生成未重跑，不替代IMG-ANN-UI-009全部步骤。[本轮报告](FWXC-367-retest-prod-20261112.md)。下方为历史失败。
+
 云效：[FWXC-367](https://devops.aliyun.com/projex/project/1e401ac99539c3999e00e40006/bug#openWorkitemIdentifier=8c5a17dabe849b6a8a6a56ee71)。2026-11-09通过官方OpenAPI新建1条，不做去重，旧项修改0。正文、字段及两张原始JPEG附件ID/名称/字节数和嵌图引用回读通过；009仍Failed。
 
 **现象**

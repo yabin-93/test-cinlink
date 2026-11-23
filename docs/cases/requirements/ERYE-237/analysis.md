@@ -1,4 +1,20 @@
+<!-- ERYE237-050-SINGLE-IMAGE-V11-20261118 -->
+2026-11-18 新版050已在生产ego有头TaskSpace37重跑Passed：先I1蓝星完成并核验，再I2原源单独加SYNC50；A/B各Passed，2请求/2生成零重发，来源/引用/成品不串用，原源/全历史及前轮成品保持。自有批注/待发/输入清理、窗口已finish；PLAN/空脚本。Technical未选Not Run，0云端写入；FWXC-599历史状态不因新版通过自动更改。旧单请求双图不适用。 [本轮执行报告](results-050-single-image-v11-ego-prod-20261118.md)。
+<!-- /ERYE237-050-SINGLE-IMAGE-V11-20261118 -->
+
+<!-- ERYE237-ANNOTATION-BLOCK5-V10-20261117 -->
+2026-11-17生产ego有头TaskSpace33完成v10实际5入口：057/010/043 Passed，028 Failed（双蓝点成品残缺，整组撤销/重做仅诊断，不算完整V2验收通过），088 Failed（运行中历史导出禁用）；3P/2F/0B。007→088、068→010、069→043仍只索引，不重复计数。2次原任务均done/applied，无业务重发；自有草稿清理、原图/历史保留。PLAN/空脚本，业务执行阶段未写云效；后续028已关联FWXC-670，088关联FWXC-618并改为再次打开，4图/4附件及评论回读通过。 [本轮报告](results-annotation-v10-ego-prod-20261117.md)。当前122登记＝109独立＋13合并；旧设计/阻塞仅历史。
+<!-- /ERYE237-ANNOTATION-BLOCK5-V10-20261117 -->
+
 # ERYE-237 图像编辑能力需求分析与测试点
+
+2026-11-17当前集合版本2026-11-17-contiguous-renumber-v8：122条连续001～122，其中批注补充110～122；旧来源覆盖矩阵/报告保持原语义并指向历史存档。见[新旧对照](renumbering-20261117-v8.md)，重新编号不证明需求覆盖或产品修复。
+
+2026-11-17最新：用户允许删除22条重复项，当前正文和登记已实际移除，原技术定义与删除历史见[存档](deleted-22-annotation-duplicates-20261117.md)。当前122登记、112独立主入口＋10前批合并；本批只保留13条批注UI待执行。以下144/35范围统计按各历史时点读取。
+
+2026-11-17最新范围：110～144收敛为图片批注UI，13补充＋22合并，均未新执行。去重依据、推导的UI风险及旧技术退出边界见[修订](revision-110-144-image-annotation-20261117.md)和[历史](archive-110-144-before-annotation-20261117.md)；保留144编号但112独立主入口＋32合并索引，不再声称原技术责任由UI覆盖。
+
+2026-11-17最新去重：上一版14条仅保留091/096/103三个未覆盖的图片批注检查，Not Run；11条并回原有入口，不新增相同需求覆盖。133独立主入口（52 UI/26 Agent/55 Technical）＋11合并索引，见[逐项对照](revision-fourteen-image-annotation-20261117.md#dedup-map)。旧技术责任和v4定义存档，未判修复或通过。
 
 ## 2026-11-09 ERYE237分层重整（当前版本）
 
@@ -31,7 +47,7 @@
 
 1. 打开/引用/修改绑定明确的conversation、document、asset和version；源文件与已完成版本不可变，历史编辑产生正确分支。
 2. 视图操作、草稿修改、确定性合成、图片问答、AI生成分别处理；只点工具/添加到对话不执行生成；纯绘制合成不调用付费模型。
-3. 批注、对象引用、content、guide和AI mask分离。单次提交一个源版本；多源需求拆独立submission；提交冻结快照，历史消息不随草稿变化。
+3. 批注、对象引用、content、guide和AI mask分离。图片批注单次请求只允许一张图片的一个源版本；不同图片逐张独立提交，不要求一个多图请求自动拆单；提交冻结快照，历史消息不随草稿变化。
 4. 主工具栏“擦除”是AI填补；画笔子工具橡皮只擦当前草稿绘制内容。去背景产出真实alpha，不能伪棋盘格；比例默认扩图保持主体，不静默裁剪或拉伸。
 5. 服务端权威revision、原子batch、幂等command、冻结生成输入及阶段恢复保护内容和费用；取消与完成竞争服从真实终态。
 6. v1.2强调结束不抢画布；草稿7天/过期恢复、字体回退、pending_review部分流程标为拟定，须批准再放行。
@@ -150,29 +166,29 @@ PRD内链接的是旧Figma文件`aViEDnEJu4EJUmsLtIXmm8`，本次UI证据使用�
 | 需求验收编号 | 本版用例 |
 |---|---|
 | A01 | [ERYE237-001](cases.md#erye237-001)、[ERYE237-002](cases.md#erye237-002)、[ERYE237-003](cases.md#erye237-003)、[ERYE237-008](cases.md#erye237-008)、[ERYE237-009](cases.md#erye237-009) |
-| A02 | [ERYE237-011](cases.md#erye237-011)、[ERYE237-014](cases.md#erye237-014)、[ERYE237-015](cases.md#erye237-015)、[ERYE237-016](cases.md#erye237-016)、[ERYE237-018](cases.md#erye237-018)、[ERYE237-019](cases.md#erye237-019)、[ERYE237-020](cases.md#erye237-020)、[ERYE237-021](cases.md#erye237-021)、[ERYE237-023](cases.md#erye237-023)、[ERYE237-029](cases.md#erye237-029)、[ERYE237-030](cases.md#erye237-030)、[ERYE237-031](cases.md#erye237-031)、[ERYE237-135](cases.md#erye237-135) |
+| A02 | [ERYE237-011](cases.md#erye237-011)、[ERYE237-014](cases.md#erye237-014)、[ERYE237-015](cases.md#erye237-015)、[ERYE237-016](cases.md#erye237-016)、[ERYE237-018](cases.md#erye237-018)、[ERYE237-019](cases.md#erye237-019)、[ERYE237-020](cases.md#erye237-020)、[ERYE237-021](cases.md#erye237-021)、[ERYE237-023](cases.md#erye237-023)、[ERYE237-029](cases.md#erye237-029)、[ERYE237-030](cases.md#erye237-030)、[ERYE237-031](cases.md#erye237-031)、[ERYE237-135](archive-110-144-before-annotation-20261117.md#erye237-135-previous) |
 | A03 | [ERYE237-017](cases.md#erye237-017)、[ERYE237-022](cases.md#erye237-022) |
 | A04 | [ERYE237-024](cases.md#erye237-024)、[ERYE237-025](cases.md#erye237-025)、[ERYE237-030](cases.md#erye237-030)、[ERYE237-066](cases.md#erye237-066)、[ERYE237-067](cases.md#erye237-067)、[ERYE237-069](cases.md#erye237-069)、[ERYE237-070](cases.md#erye237-070) |
 | A05 | [ERYE237-033](cases.md#erye237-033)、[ERYE237-034](cases.md#erye237-034)、[ERYE237-035](cases.md#erye237-035)、[ERYE237-036](cases.md#erye237-036)、[ERYE237-038](cases.md#erye237-038)、[ERYE237-039](cases.md#erye237-039)、[ERYE237-040](cases.md#erye237-040)、[ERYE237-041](cases.md#erye237-041)、[ERYE237-042](cases.md#erye237-042) |
 | A06 | [ERYE237-039](cases.md#erye237-039)、[ERYE237-043](cases.md#erye237-043)、[ERYE237-050](cases.md#erye237-050)、[ERYE237-076](cases.md#erye237-076) |
 | A07 | [ERYE237-051](cases.md#erye237-051)、[ERYE237-052](cases.md#erye237-052)、[ERYE237-053](cases.md#erye237-053)、[ERYE237-054](cases.md#erye237-054) |
 | A08 | [ERYE237-037](cases.md#erye237-037)、[ERYE237-055](cases.md#erye237-055)、[ERYE237-056](cases.md#erye237-056) |
-| A09 | [ERYE237-058](cases.md#erye237-058)、[ERYE237-063](cases.md#erye237-063)、[ERYE237-064](cases.md#erye237-064)、[ERYE237-065](cases.md#erye237-065)、[ERYE237-076](cases.md#erye237-076)、[ERYE237-134](cases.md#erye237-134) |
+| A09 | [ERYE237-058](cases.md#erye237-058)、[ERYE237-063](cases.md#erye237-063)、[ERYE237-064](cases.md#erye237-064)、[ERYE237-065](cases.md#erye237-065)、[ERYE237-076](cases.md#erye237-076)、[ERYE237-134](archive-110-144-before-annotation-20261117.md#erye237-134-previous) |
 | A10 | [ERYE237-071](cases.md#erye237-071)、[ERYE237-072](cases.md#erye237-072)、[ERYE237-073](cases.md#erye237-073)、[ERYE237-074](cases.md#erye237-074)、[ERYE237-075](cases.md#erye237-075)、[ERYE237-076](cases.md#erye237-076) |
-| A11 | [ERYE237-059](cases.md#erye237-059)、[ERYE237-060](cases.md#erye237-060)、[ERYE237-061](cases.md#erye237-061)、[ERYE237-062](cases.md#erye237-062)、[ERYE237-134](cases.md#erye237-134) |
+| A11 | [ERYE237-059](cases.md#erye237-059)、[ERYE237-060](cases.md#erye237-060)、[ERYE237-061](cases.md#erye237-061)、[ERYE237-062](cases.md#erye237-062)、[ERYE237-134](archive-110-144-before-annotation-20261117.md#erye237-134-previous) |
 | A12 | [ERYE237-032](cases.md#erye237-032)、[ERYE237-062](cases.md#erye237-062)、[ERYE237-080](cases.md#erye237-080)、[ERYE237-092](cases.md#erye237-092) |
 | A13 | [ERYE237-016](cases.md#erye237-016)、[ERYE237-026](cases.md#erye237-026)、[ERYE237-027](cases.md#erye237-027)、[ERYE237-028](cases.md#erye237-028) |
 | A14 | [ERYE237-008](cases.md#erye237-008)、[ERYE237-012](cases.md#erye237-012)、[ERYE237-013](cases.md#erye237-013)、[ERYE237-083](cases.md#erye237-083)、[ERYE237-084](cases.md#erye237-084)、[ERYE237-085](cases.md#erye237-085)、[ERYE237-086](cases.md#erye237-086) |
-| A15 | [ERYE237-009](cases.md#erye237-009)、[ERYE237-010](cases.md#erye237-010)、[ERYE237-023](cases.md#erye237-023)、[ERYE237-033](cases.md#erye237-033)、[ERYE237-068](cases.md#erye237-068)、[ERYE237-129](cases.md#erye237-129) |
-| A16 | [ERYE237-007](cases.md#erye237-007)、[ERYE237-088](cases.md#erye237-088)、[ERYE237-105](cases.md#erye237-105)、[ERYE237-106](cases.md#erye237-106)、[ERYE237-107](cases.md#erye237-107)、[ERYE237-120](cases.md#erye237-120) |
+| A15 | [ERYE237-009](cases.md#erye237-009)、[ERYE237-010](cases.md#erye237-010)、[ERYE237-023](cases.md#erye237-023)、[ERYE237-033](cases.md#erye237-033)、[ERYE237-068](cases.md#erye237-068)、[ERYE237-129](archive-110-144-before-annotation-20261117.md#erye237-129-previous) |
+| A16 | [ERYE237-007](cases.md#erye237-007)、[ERYE237-088](cases.md#erye237-088)、[ERYE237-105](cases.md#erye237-105)、[ERYE237-106](cases.md#erye237-106)、[ERYE237-107](cases.md#erye237-107)、[ERYE237-120](archive-110-144-before-annotation-20261117.md#erye237-120-previous) |
 | A17 | [ERYE237-093](cases.md#erye237-093)、[ERYE237-094](cases.md#erye237-094)、[ERYE237-095](cases.md#erye237-095)、[ERYE237-096](cases.md#erye237-096)、[ERYE237-097](cases.md#erye237-097)、[ERYE237-099](cases.md#erye237-099) |
-| A18 | [ERYE237-015](cases.md#erye237-015)、[ERYE237-073](cases.md#erye237-073)、[ERYE237-098](cases.md#erye237-098)、[ERYE237-101](cases.md#erye237-101)、[ERYE237-102](cases.md#erye237-102)、[ERYE237-103](cases.md#erye237-103)、[ERYE237-108](cases.md#erye237-108)、[ERYE237-122](cases.md#erye237-122)、[ERYE237-123](cases.md#erye237-123) |
-| A19 | [ERYE237-086](cases.md#erye237-086)、[ERYE237-100](cases.md#erye237-100)、[ERYE237-103](cases.md#erye237-103)、[ERYE237-108](cases.md#erye237-108)、[ERYE237-109](cases.md#erye237-109)、[ERYE237-110](cases.md#erye237-110)、[ERYE237-111](cases.md#erye237-111)、[ERYE237-112](cases.md#erye237-112)、[ERYE237-113](cases.md#erye237-113)、[ERYE237-114](cases.md#erye237-114)、[ERYE237-115](cases.md#erye237-115)、[ERYE237-120](cases.md#erye237-120)、[ERYE237-121](cases.md#erye237-121)、[ERYE237-132](cases.md#erye237-132) |
-| A20 | [ERYE237-116](cases.md#erye237-116)、[ERYE237-117](cases.md#erye237-117)、[ERYE237-118](cases.md#erye237-118)、[ERYE237-119](cases.md#erye237-119)、[ERYE237-123](cases.md#erye237-123) |
+| A18 | [ERYE237-015](cases.md#erye237-015)、[ERYE237-073](cases.md#erye237-073)、[ERYE237-098](cases.md#erye237-098)、[ERYE237-101](cases.md#erye237-101)、[ERYE237-102](cases.md#erye237-102)、[ERYE237-103](cases.md#erye237-103)、[ERYE237-108](cases.md#erye237-108)、[ERYE237-122](archive-110-144-before-annotation-20261117.md#erye237-122-previous)、[ERYE237-123](archive-110-144-before-annotation-20261117.md#erye237-123-previous) |
+| A19 | [ERYE237-086](cases.md#erye237-086)、[ERYE237-100](cases.md#erye237-100)、[ERYE237-103](cases.md#erye237-103)、[ERYE237-108](cases.md#erye237-108)、[ERYE237-109](cases.md#erye237-109)、[ERYE237-110](archive-110-144-before-annotation-20261117.md#erye237-110-previous)、[ERYE237-111](archive-110-144-before-annotation-20261117.md#erye237-111-previous)、[ERYE237-112](archive-110-144-before-annotation-20261117.md#erye237-112-previous)、[ERYE237-113](archive-110-144-before-annotation-20261117.md#erye237-113-previous)、[ERYE237-114](archive-110-144-before-annotation-20261117.md#erye237-114-previous)、[ERYE237-115](archive-110-144-before-annotation-20261117.md#erye237-115-previous)、[ERYE237-120](archive-110-144-before-annotation-20261117.md#erye237-120-previous)、[ERYE237-121](archive-110-144-before-annotation-20261117.md#erye237-121-previous)、[ERYE237-132](archive-110-144-before-annotation-20261117.md#erye237-132-previous) |
+| A20 | [ERYE237-116](archive-110-144-before-annotation-20261117.md#erye237-116-previous)、[ERYE237-117](archive-110-144-before-annotation-20261117.md#erye237-117-previous)、[ERYE237-118](archive-110-144-before-annotation-20261117.md#erye237-118-previous)、[ERYE237-119](archive-110-144-before-annotation-20261117.md#erye237-119-previous)、[ERYE237-123](archive-110-144-before-annotation-20261117.md#erye237-123-previous) |
 | A21 | [ERYE237-004](cases.md#erye237-004)、[ERYE237-005](cases.md#erye237-005)、[ERYE237-006](cases.md#erye237-006)、[ERYE237-027](cases.md#erye237-027)、[ERYE237-044](cases.md#erye237-044) |
 | A22 | [ERYE237-077](cases.md#erye237-077)、[ERYE237-078](cases.md#erye237-078)、[ERYE237-079](cases.md#erye237-079)、[ERYE237-080](cases.md#erye237-080)、[ERYE237-081](cases.md#erye237-081) |
-| A23 | [ERYE237-019](cases.md#erye237-019)、[ERYE237-021](cases.md#erye237-021)、[ERYE237-045](cases.md#erye237-045)、[ERYE237-046](cases.md#erye237-046)、[ERYE237-047](cases.md#erye237-047)、[ERYE237-048](cases.md#erye237-048)、[ERYE237-049](cases.md#erye237-049)、[ERYE237-067](cases.md#erye237-067)、[ERYE237-068](cases.md#erye237-068)、[ERYE237-074](cases.md#erye237-074)、[ERYE237-082](cases.md#erye237-082)、[ERYE237-091](cases.md#erye237-091)、[ERYE237-124](cases.md#erye237-124)、[ERYE237-125](cases.md#erye237-125)、[ERYE237-126](cases.md#erye237-126)、[ERYE237-127](cases.md#erye237-127)、[ERYE237-128](cases.md#erye237-128)、[ERYE237-129](cases.md#erye237-129)、[ERYE237-130](cases.md#erye237-130)、[ERYE237-131](cases.md#erye237-131)、[ERYE237-132](cases.md#erye237-132)、[ERYE237-133](cases.md#erye237-133) |
-| A24 | [ERYE237-011](cases.md#erye237-011)、[ERYE237-053](cases.md#erye237-053)、[ERYE237-056](cases.md#erye237-056)、[ERYE237-057](cases.md#erye237-057)、[ERYE237-058](cases.md#erye237-058)、[ERYE237-089](cases.md#erye237-089)、[ERYE237-090](cases.md#erye237-090)、[ERYE237-104](cases.md#erye237-104)、[ERYE237-136](cases.md#erye237-136)、[ERYE237-143](cases.md#erye237-143)、[ERYE237-144](cases.md#erye237-144) |
+| A23 | [ERYE237-019](cases.md#erye237-019)、[ERYE237-021](cases.md#erye237-021)、[ERYE237-045](cases.md#erye237-045)、[ERYE237-046](cases.md#erye237-046)、[ERYE237-047](cases.md#erye237-047)、[ERYE237-048](cases.md#erye237-048)、[ERYE237-049](cases.md#erye237-049)、[ERYE237-067](cases.md#erye237-067)、[ERYE237-068](cases.md#erye237-068)、[ERYE237-074](cases.md#erye237-074)、[ERYE237-082](cases.md#erye237-082)、[ERYE237-091](cases.md#erye237-091)、[ERYE237-124](archive-110-144-before-annotation-20261117.md#erye237-124-previous)、[ERYE237-125](archive-110-144-before-annotation-20261117.md#erye237-125-previous)、[ERYE237-126](archive-110-144-before-annotation-20261117.md#erye237-126-previous)、[ERYE237-127](archive-110-144-before-annotation-20261117.md#erye237-127-previous)、[ERYE237-128](archive-110-144-before-annotation-20261117.md#erye237-128-previous)、[ERYE237-129](archive-110-144-before-annotation-20261117.md#erye237-129-previous)、[ERYE237-130](archive-110-144-before-annotation-20261117.md#erye237-130-previous)、[ERYE237-131](archive-110-144-before-annotation-20261117.md#erye237-131-previous)、[ERYE237-132](archive-110-144-before-annotation-20261117.md#erye237-132-previous)、[ERYE237-133](archive-110-144-before-annotation-20261117.md#erye237-133-previous) |
+| A24 | [ERYE237-011](cases.md#erye237-011)、[ERYE237-053](cases.md#erye237-053)、[ERYE237-056](cases.md#erye237-056)、[ERYE237-057](cases.md#erye237-057)、[ERYE237-058](cases.md#erye237-058)、[ERYE237-089](cases.md#erye237-089)、[ERYE237-090](cases.md#erye237-090)、[ERYE237-104](cases.md#erye237-104)、[ERYE237-136](archive-110-144-before-annotation-20261117.md#erye237-136-previous)、[ERYE237-143](archive-110-144-before-annotation-20261117.md#erye237-143-previous)、[ERYE237-144](archive-110-144-before-annotation-20261117.md#erye237-144-previous) |
 
 ## Missing/Unclear Requirements 资料缺口
 

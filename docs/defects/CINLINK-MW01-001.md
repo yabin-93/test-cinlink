@@ -1,5 +1,9 @@
 # CINLINK-MW01-001 · [FWXC-255](https://devops.aliyun.com/projex/project/1e401ac99539c3999e00e40006/bug#viewIdentifier=1dedc5afd44979211cad516f&openWorkitemIdentifier=9abeb86a98cba72e7158bc3d60)
 
+> 2026-11-12最新实际回归：[FWXC-255专项报告](FWXC-255-retest-staging-20261112.md)，单次字幕链双文件交付**Passed**；151秒、两份SRT各18条、时间戳一致，云效已改✅AI通过并回读。内部唯一输入绑定/intent字段未从UI核实，保留验收边界。下方凌晨Blocked及原始失败为历史。
+
+> 2026-11-12凌晨批次：[本轮记录](nightly-fixed-regression-20261112.md)。被选为陈亚宾创建且已修复的回归候选，但Mac锁屏/扩展控制失败，**Blocked，业务未执行**；等待人工解锁续跑。本轮未修改云效状态，下方历史结果保持。
+
 **现象**
 
 一次完整指令明确要求“英文原片→中文字幕SRT→基于该中文字幕翻译英文SRT”，分别交付中英文两个文件。实际只交付中文SRT，英文仍待后续规划；服务端`intent_fully_satisfied=false`，状态却为`done`，页面显示Completed，没有自动完成后置英译。

@@ -1,0 +1,78 @@
+{
+  "assets": {
+    "acme-perfume-source.png": {
+      "width": 1254,
+      "height": 1254,
+      "mode": "RGB",
+      "sha256": "d1b71df57f25bea7d6a495e9935bc10e06b3f1320ee4ea99b0d870c885b467ba"
+    },
+    "acme-perfume-damaged.png": {
+      "width": 1254,
+      "height": 1254,
+      "mode": "RGB",
+      "sha256": "7c3bf3208d05bd9334e0086a3ab0b8d1d97d664ddb1c8d1d975fb47980490560"
+    }
+  },
+  "source_text": [
+    "ACME",
+    "FRESH CITRUS",
+    "DAILY FRAGRANCE",
+    "测试香氛",
+    "50 mL"
+  ],
+  "allowed_translation": {
+    "FRESH CITRUS": "清新柑橘",
+    "DAILY FRAGRANCE": "日用香氛"
+  },
+  "preserve_text": [
+    "ACME",
+    "测试香氛",
+    "50 mL"
+  ],
+  "brand_logo": "black outline triangle above ACME",
+  "source_regions_normalized": {
+    "cap": [
+      0.408,
+      0.14,
+      0.182,
+      0.184
+    ],
+    "label": [
+      0.338,
+      0.407,
+      0.274,
+      0.339
+    ],
+    "glass_right_edge": [
+      0.64,
+      0.35,
+      0.061,
+      0.51
+    ],
+    "label_english_anchor": [
+      0.475,
+      0.58
+    ],
+    "scratch_damaged": [
+      0.58,
+      0.368,
+      0.06,
+      0.038
+    ],
+    "missing_cap_damaged": [
+      0.405,
+      0.135,
+      0.187,
+      0.19
+    ]
+  },
+  "generation": "Built-in imagegen; source generated, damaged variant edited from source; prompts in batch evidence. Visually transcribed by QA before CinLink results, not tested OCR.",
+  "quality_M0": [
+    "Background corners transparent for cutout; no baked checkerboard",
+    "Bottle silhouette, cap and triangle/ACME lettering retained",
+    "Clear glass boundaries not grossly cut away, no opaque background fringe",
+    "Hair sample uses existing authorized portrait; no gross hair clipping or opaque halo",
+    "Uncertain semitransparent edge judgment remains manual/unconfirmed; no invented pixel gold mask"
+  ],
+  "damage_notes": "Two white scratches and removed silver cap visible. Derived image not pixel-identical elsewhere; repair compared to its OWN input, intact base only structural reference."
+}
