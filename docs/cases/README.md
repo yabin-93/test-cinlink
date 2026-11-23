@@ -1,93 +1,126 @@
 # CinLink 测试用例统一入口
 
-更新：2026-11-10。从本页查找用例正文、自动化脚本、运行命令和执行状态。各分类保留一份正文，不在本页复制操作步骤；正式需求仍放在 `requirements/`，工作流专项仍放在 `../design-cases/multi-workflow/`。
+本页维护用例目录、用例正文、前置操作、步骤、预期结果、脚本和运行命令。执行结果、通过/失败统计、截图及缺陷同步明细请查看[测试进度](../testing-progress.md)、[验证记录](../verification.md)和各专项报告。
+
+[ICP-EC-01～05电商完整用例](#icp-ecommerce-cases)（25轮原文提示词、前置和预期）。
+
+<a id="editor-card-multitrack"></a>
+## 编辑器能力补充：卡片入口与多轨组合（ERYE-199）
+
+[ERYE199-069～116完整前置、提示词、步骤和预期](requirements/ERYE-199/cases.md#erye199-card-multitrack)。已正式归入ERYE-199，原ECMT编号仅作历史别名，不重复计数。
+
+| 编号 | 范围 |
+|---|---|
+| ERYE199-069～082 | 卡片入口、原文/译文/双语模式、完整六类组合、产物与工程对应 |
+| ERYE199-083～102 | 视频、独立音频、BGM、原声、译声分别分割、平移、左右裁剪及跨同类型轨移动 |
+| ERYE199-103～108 | 字幕/音量隔离、视频与BGM双向联动、其他轨位置保持 |
+| ERYE199-109～116 | 类型防误放、多轨选择、撤销重做、重开、项目隔离、试听导出及边界 |
+
+视频默认仅与BGM双向强关联；其他声音和字幕不随其移动、裁剪、分割。069～075使用[原生卡片分阶段脚本](../../tools/editor/erye199/workflow-cards.mjs)，命令和检查点续跑见[自动化说明](requirements/ERYE-199/automation.md)；076～080使用[组合及六轨脚本](../../tools/editor/erye199/workflow-combinations.mjs)，081～085使用[时间轴专项脚本](../../tools/editor/erye199/run-timeline-case.mjs)，086～090使用[跨轨与独立音频脚本](../../tools/editor/erye199/run-audio-cross-track.mjs)，091～116保持PLAN，映射见[需求登记](registry.yaml)。[旧编号映射](requirements/ERYE-199/revision-multitrack-merge-20261118.md)。
+
+<a id="editor-existing-feature-gaps"></a>
+## 编辑器现有功能补充（ERYE199-117～148）
+
+[完整前置、测试数据、步骤和预期](requirements/ERYE-199/cases.md#erye199-editor-existing-feature-gaps)。32条定义，自动化PLAN，无自动化执行命令。
+
+| 编号 | 范围 |
+|---|---|
+| ERYE199-117～123 | 多选、复制、剪切粘贴、关联去重及空剪贴板 |
+| ERYE199-124～128 | 快捷键焦点、文字编辑和中文输入法 |
+| ERYE199-129～132 | 首尾吸附、缩放、Alt及关联组 |
+| ERYE199-133～137 | 双向删除、混合删除、删除最后片段及空时间轴 |
+| ERYE199-138～141 | 视频/音频占用轨、首尾相接、完全重叠及关联组 |
+| ERYE199-142～145 | 普通图片片段时长、平移、叠放及副本恢复 |
+| ERYE199-146～148 | 隐藏上层视频、各声音单独启用及全部静音后导出 |
+
+用户确认：视频/BGM删除、复制、剪切粘贴也双向联动；占用位置新建同类型轨、不覆盖。旧010覆盖场景按历史保留，当前放置规则见138～141。定义和脚本登记见[需求登记表](registry.yaml)。
 
 ## 本地素材查找P0用例
 
-**最新状态（2026-11-10）：当前28条设计均已执行，15 Failed、13 Passed（各例限定UI/客户端/内容验证范围）、0 Not Run。** 名称查找5条P0（LF18/20/21/22/28），非名称扩展6条（LF30～35，3 P0/3 P1）。总计P0 25/P1 3，AUTO3、PLAN25；7个退役编号不计当前集合、不复用。
+当前设计28条：本地素材查找、名称检索及组合条件；自动化映射见下表。
 
 [最新逐例状态与报告索引](../design-cases/multi-workflow/local-footage-execution-status.md) · [完整用例步骤](../design-cases/multi-workflow/local-footage-p0-cases.md) · [本批LF18～35报告](../design-cases/multi-workflow/local-footage-results-staging-18-35-20261110.md) · [历史优化版重跑](../design-cases/multi-workflow/local-footage-results-optimized-staging-20261110.md) · [新增测试素材F5/F6](../design-cases/multi-workflow/local-footage-p0-cases.md#lf-real-media)。
 
-新增素材：F5 `7MB.mp4`（60.50秒，1280×720，女士在旗帜前讲话）；F6 `9s.mp4`（9.45秒，1920×1080，戴黑框眼镜男子坐木桌前讲话）。路径、大小、音轨、SHA-256及用例关联见上方素材登记；关联新增11条已执行，7 Passed/4 Failed；[本批报告](../design-cases/multi-workflow/local-footage-results-staging-18-35-20261110.md)。
+新增素材：F5 `7MB.mp4`（60.50秒，1280×720，女士在旗帜前讲话）；F6 `9s.mp4`（9.45秒，1920×1080，戴黑框眼镜男子坐木桌前讲话）。路径、大小、音轨、SHA-256及用例关联见上方素材登记。
 
-| 用例 | 场景 | 核心检查点 | 自动化与执行状态 |
-|---|---|---|---|
-| LF-01 | 项目导入、分析到检索 | 4/4分析成功，含无音轨视频，机器人段可命中 | 2026-11-10 Failed；production；机器人混入留声机/飞机；[最新报告](../design-cases/multi-workflow/local-footage-results-prod-20261110.md)；AUTO |
-| LF-02 | F1音乐类素材视觉检索 | 正确定位仙人掌，来源对应F1（ID可选） | 2026-11-10 Failed；production；两秒兔子片段缺仙人掌/男孩；[最新报告](../design-cases/multi-workflow/local-footage-results-prod-20261110.md)；AUTO |
-| LF-03 | F2有语音素材视觉检索 | 蓝衣男孩与仙人掌，来源对应F2（ID可选） | 2026-11-10 Failed；production；两秒兔子片段缺蓝衣男孩/仙人掌；[最新报告](../design-cases/multi-workflow/local-footage-results-prod-20261110.md)；AUTO |
-| LF-04 | F3无音轨素材视觉检索 | 女孩与乌龟，不依赖ASR | 2026-11-10 Failed；staging；女孩与乌龟目标漏检；[最新报告](../design-cases/multi-workflow/local-footage-results-staging-04-07-20261110.md)；云效[FWXC-389](https://devops.aliyun.com/projex/project/1e401ac99539c3999e00e40006/bug#openWorkitemIdentifier=ef24914cd54923896d77ba80c2)；PLAN |
-| LF-05 | F4多镜头单目标定位 | 机器人90～105秒及真实预览 | 2026-11-10 Failed；staging；机器人混入留声机/飞机；[最新报告](../design-cases/multi-workflow/local-footage-results-staging-04-07-20261110.md)；云效[FWXC-390](https://devops.aliyun.com/projex/project/1e401ac99539c3999e00e40006/bug#openWorkitemIdentifier=673e49a905e5a52e8ebff0e073)；PLAN |
-| LF-06 | 长视频首尾边界 | 飞机0～15秒、卫星285～300秒 | 2026-11-10 Failed；staging；飞机/卫星两轮混入无关候选；[最新报告](../design-cases/multi-workflow/local-footage-results-staging-04-07-20261110.md)；云效[FWXC-390](https://devops.aliyun.com/projex/project/1e401ac99539c3999e00e40006/bug#openWorkitemIdentifier=673e49a905e5a52e8ebff0e073)；PLAN |
-| LF-07 | 多文件中唯一目标 | 火车仅命中F4的30～45秒 | 2026-11-10 Failed；staging；火车混入长颈鹿；[最新报告](../design-cases/multi-workflow/local-footage-results-staging-04-07-20261110.md)；云效[FWXC-390](https://devops.aliyun.com/projex/project/1e401ac99539c3999e00e40006/bug#openWorkitemIdentifier=673e49a905e5a52e8ebff0e073)；PLAN |
-| LF-08 | 相同画面的不同原片 | F1/F2/F3来源完整、原片不错误合并 | 2026-11-10 Failed；staging；58秒，漏F2/误入F4；本轮F4哈希确认；[最新报告](../design-cases/multi-workflow/local-footage-results-optimized-staging-20261110.md)；云效[FWXC-395](https://devops.aliyun.com/projex/project/1e401ac99539c3999e00e40006/bug#openWorkitemIdentifier=bea27b77acf70304e5b948f1b8)；PLAN |
-| LF-09 | 无匹配 | 足球实拍查询明确0匹配，不虚构结果 | 2026-11-10 Passed；staging；47秒明确无匹配、0新增候选（UI）；[最新报告](../design-cases/multi-workflow/local-footage-results-staging-08-10-20261110.md)；PLAN |
-| LF-10 | 空白查询 | 空值/空格不提交实际检索 | 2026-11-10 Passed；staging；空值/空格禁用发送；网络未抓取（UI）；[最新报告](../design-cases/multi-workflow/local-footage-results-staging-08-10-20261110.md)；PLAN |
-| LF-11 | 项目隔离 | Q机器人可命中，P123不泄漏Q素材 | 2026-11-10 Passed；staging；Q命中机器人，P123明确无匹配（UI隔离）；[最新报告](../design-cases/multi-workflow/local-footage-results-staging-11-20261110.md)；PLAN |
-| LF-12 | 同项目双会话复用 | B不重传/重分析，A/B结果各自保留 | 2026-11-10 Failed；staging；39秒，火车正确但混入长颈鹿；A历史保留；[最新报告](../design-cases/multi-workflow/local-footage-results-optimized-staging-20261110.md)；关联[FWXC-390](https://devops.aliyun.com/projex/project/1e401ac99539c3999e00e40006/bug#openWorkitemIdentifier=673e49a905e5a52e8ebff0e073)；PLAN |
-| LF-13 | 同会话连续查询 | 同一F4由机器人改查瀑布，不残留旧内容 | 2026-11-10 Passed；staging；44/35秒，机器人→瀑布切换及历史保留通过（UI范围）；[最新报告](../design-cases/multi-workflow/local-footage-results-optimized-staging-20261110.md)；PLAN |
-| LF-14 | 结果可用性 | 正确源片预览、候选可作当前会话输入 | 2026-11-10 Failed；staging；火车可预览但混入长颈鹿；后续引用未完成确认；[最新报告](../design-cases/multi-workflow/local-footage-results-staging-14-20261110.md)；关联[FWXC-390](https://devops.aliyun.com/projex/project/1e401ac99539c3999e00e40006/bug#openWorkitemIdentifier=673e49a905e5a52e8ebff0e073)；PLAN |
-| LF-15 | 刷新恢复 | 查询/候选恢复，不重复检索或分析 | 2026-11-10 Passed；staging；刷新后历史/候选保留，机器人可播放；网络及手动暂存未覆盖；[最新报告](../design-cases/multi-workflow/local-footage-results-staging-15-20261110.md)；PLAN |
-| LF-16 | 浏览器网络异常与恢复 | 明确失败，恢复后可重新检索 | 2026-11-10 Passed；staging；客户端提交被阻断后明确失败，解除后重试200/43秒完成、机器人可播放；规则已清理；[最新报告](../design-cases/multi-workflow/local-footage-results-staging-16-20261110.md)；PLAN |
-| LF-17 | 按旁白内容定位 | 听审原句后查询F2语音片段 | 2026-11-10 Failed；staging；人工确认目标原句存在，单F2分析1/1，98秒明确无匹配；能力范围待确认；[最新报告](../design-cases/multi-workflow/local-footage-results-staging-17-20261110.md)；云效[FWXC-398](https://devops.aliyun.com/projex/project/1e401ac99539c3999e00e40006/bug#openWorkitemIdentifier=f5f458852040ec3afba11cac2b)；PLAN |
-| LF-18 | 完整文件名（两素材） | 7MB.mp4→F5、9s.mp4→F6，名称不误作处理参数 | 2026-11-10 Passed；staging；两组各36秒，F5/F6名称及播放画面正确，下载哈希均与原片一致。；[本批报告](../design-cases/multi-workflow/local-footage-results-staging-18-35-20261110.md)；PLAN |
-| LF-20 | 正向：唯一名称片段 | 真实F5/F6；名称、内容及项目范围核对 | 2026-11-10 Passed；staging；正式空会话部分名称7MB一次命中F5，播放为女士及旗帜，无须澄清，无生成。另一次有历史上下文的28秒探测不计正式结论。；[本批报告](../design-cases/multi-workflow/local-footage-results-staging-18-35-20261110.md)；PLAN |
-| LF-21 | 正向：同时按两个名称查找 | 真实F5/F6；名称、内容及项目范围核对 | 2026-11-10 Passed；staging；两原片分别返回，各自播放为女士及男子，未漏项、误合并或混入其他素材。；[本批报告](../design-cases/multi-workflow/local-footage-results-staging-18-35-20261110.md)；PLAN |
-| LF-22 | 反向：不存在的精确文件名 | 真实F5/F6；名称、内容及项目范围核对 | 2026-11-10 Failed；staging；终态已完成，但仅回复将核对、若不存在将告知，未给出文件不存在/未找到的实际结论；无新增候选，前轮F5保留。；[本批报告](../design-cases/multi-workflow/local-footage-results-staging-18-35-20261110.md)；PLAN |
-| LF-28 | 串联：名称查询→无结果→另一素材 | S-name F5→不存在→F6，复用LF18两组/LF22证据 | 2026-11-10 Failed；staging；36/43/36秒三轮完成，F5到F6切换及历史保留正常，但中间不存在名称仅回复将核对，未给无匹配结论；复用LF18及LF22证据。；[本批报告](../design-cases/multi-workflow/local-footage-results-staging-18-35-20261110.md)；PLAN |
-| LF-30 | 正向：真实女士画面检索 | 不用文件名，按真实画面/组合/否定条件验收 | 2026-11-10 Passed；staging；不使用文件名，唯一候选7MB.mp4，实际播放为黑外套蓝上衣女士及旗帜，未混入男子。；[本批报告](../design-cases/multi-workflow/local-footage-results-staging-18-35-20261110.md)；PLAN |
-| LF-31 | 正向：真实男子画面检索 | 不用文件名，按真实画面/组合/否定条件验收 | 2026-11-10 Passed；staging；不使用文件名，唯一候选9s.mp4，播放确认为黑框眼镜男子、木桌与电脑，无女士混入。；[本批报告](../design-cases/multi-workflow/local-footage-results-staging-18-35-20261110.md)；PLAN |
-| LF-32 | 反向：两真实素材均无目标 | 不用文件名，按真实画面/组合/否定条件验收 | 2026-11-10 Passed；staging；已由用户完整预览确认目标不存在；终态显示素材搜索未找到匹配片段，0候选，无生成。；[本批报告](../design-cases/multi-workflow/local-footage-results-staging-18-35-20261110.md)；PLAN |
-| LF-33 | 反向：组合条件不能拆开命中 | 不用文件名，按真实画面/组合/否定条件验收 | 2026-11-10 Failed；staging；明确要求女士及男子同一画面，却返回7MB.mp4与9s.mp4两个独立候选；逐一播放只有各自人物，未说明不满足同框条件。根因未确认。；[本批报告](../design-cases/multi-workflow/local-footage-results-staging-18-35-20261110.md)；PLAN |
-| LF-34 | 串联反向：排除前轮对象后改查 | 不用文件名，按真实画面/组合/否定条件验收 | 2026-11-10 Passed；staging；复用LF31前轮F6，排除男子后唯一返回F5，实际播放女士正确，男子历史仍保留；之后项目分析仍2/2，无删除或生成任务。；[本批报告](../design-cases/multi-workflow/local-footage-results-staging-18-35-20261110.md)；PLAN |
-| LF-35 | 反向边界：宽泛内容描述需选择 | 不用文件名，按真实画面/组合/否定条件验收 | 2026-11-10 Failed；staging；首轮仅列F5；补充选择男子后，本轮新返回F6及不符合条件的F5，均实际播放核验，回复仍称暂不能选、将重新检索，未收敛到明确男子选择。不是仅因旧历史保留而失败。；[本批报告](../design-cases/multi-workflow/local-footage-results-staging-18-35-20261110.md)；PLAN |
+| 用例 | 场景 | 核心检查点 | 自动化 / 报告入口 |
+| --- | --- | --- | --- |
+| LF-01 | 项目导入、分析到检索 | 4/4分析成功，含无音轨视频，机器人段可命中 | AUTO；[最新报告](../design-cases/multi-workflow/local-footage-results-prod-20261110.md) |
+| LF-02 | F1音乐类素材视觉检索 | 正确定位仙人掌，来源对应F1（ID可选） | AUTO；[最新报告](../design-cases/multi-workflow/local-footage-results-prod-20261110.md) |
+| LF-03 | F2有语音素材视觉检索 | 蓝衣男孩与仙人掌，来源对应F2（ID可选） | AUTO；[最新报告](../design-cases/multi-workflow/local-footage-results-prod-20261110.md) |
+| LF-04 | F3无音轨素材视觉检索 | 女孩与乌龟，不依赖ASR | PLAN；[最新报告](../design-cases/multi-workflow/local-footage-results-staging-04-07-20261110.md) |
+| LF-05 | F4多镜头单目标定位 | 机器人90～105秒及真实预览 | PLAN；[最新报告](../design-cases/multi-workflow/local-footage-results-staging-04-07-20261110.md) |
+| LF-06 | 长视频首尾边界 | 飞机0～15秒、卫星285～300秒 | PLAN；[最新报告](../design-cases/multi-workflow/local-footage-results-staging-04-07-20261110.md) |
+| LF-07 | 多文件中唯一目标 | 火车仅命中F4的30～45秒 | PLAN；[最新报告](../design-cases/multi-workflow/local-footage-results-staging-04-07-20261110.md) |
+| LF-08 | 相同画面的不同原片 | F1/F2/F3来源完整、原片不错误合并 | PLAN；[最新报告](../design-cases/multi-workflow/local-footage-results-optimized-staging-20261110.md) |
+| LF-09 | 无匹配 | 足球实拍查询明确0匹配，不虚构结果 | PLAN；[最新报告](../design-cases/multi-workflow/local-footage-results-staging-08-10-20261110.md) |
+| LF-10 | 空白查询 | 空值/空格不提交实际检索 | PLAN；[最新报告](../design-cases/multi-workflow/local-footage-results-staging-08-10-20261110.md) |
+| LF-11 | 项目隔离 | Q机器人可命中，P123不泄漏Q素材 | PLAN；[最新报告](../design-cases/multi-workflow/local-footage-results-staging-11-20261110.md) |
+| LF-12 | 同项目双会话复用 | B不重传/重分析，A/B结果各自保留 | PLAN；[最新报告](../design-cases/multi-workflow/local-footage-results-optimized-staging-20261110.md) |
+| LF-13 | 同会话连续查询 | 同一F4由机器人改查瀑布，不残留旧内容 | PLAN；[最新报告](../design-cases/multi-workflow/local-footage-results-optimized-staging-20261110.md) |
+| LF-14 | 结果可用性 | 正确源片预览、候选可作当前会话输入 | PLAN；[最新报告](../design-cases/multi-workflow/local-footage-results-staging-14-20261110.md) |
+| LF-15 | 刷新恢复 | 查询/候选恢复，不重复检索或分析 | PLAN；[最新报告](../design-cases/multi-workflow/local-footage-results-staging-15-20261110.md) |
+| LF-16 | 浏览器网络异常与恢复 | 明确失败，恢复后可重新检索 | PLAN；[最新报告](../design-cases/multi-workflow/local-footage-results-staging-16-20261110.md) |
+| LF-17 | 按旁白内容定位 | 听审原句后查询F2语音片段 | PLAN；[最新报告](../design-cases/multi-workflow/local-footage-results-staging-17-20261110.md) |
+| LF-18 | 完整文件名（两素材） | 7MB.mp4→F5、9s.mp4→F6，名称不误作处理参数 | PLAN；[本批报告](../design-cases/multi-workflow/local-footage-results-staging-18-35-20261110.md) |
+| LF-20 | 正向：唯一名称片段 | 真实F5/F6；名称、内容及项目范围核对 | PLAN；[本批报告](../design-cases/multi-workflow/local-footage-results-staging-18-35-20261110.md) |
+| LF-21 | 正向：同时按两个名称查找 | 真实F5/F6；名称、内容及项目范围核对 | PLAN；[本批报告](../design-cases/multi-workflow/local-footage-results-staging-18-35-20261110.md) |
+| LF-22 | 反向：不存在的精确文件名 | 真实F5/F6；名称、内容及项目范围核对 | PLAN；[本批报告](../design-cases/multi-workflow/local-footage-results-staging-18-35-20261110.md) |
+| LF-28 | 串联：名称查询→无结果→另一素材 | S-name F5→不存在→F6，复用LF18两组/LF22证据 | PLAN；[本批报告](../design-cases/multi-workflow/local-footage-results-staging-18-35-20261110.md) |
+| LF-30 | 正向：真实女士画面检索 | 不用文件名，按真实画面/组合/否定条件验收 | PLAN；[本批报告](../design-cases/multi-workflow/local-footage-results-staging-18-35-20261110.md) |
+| LF-31 | 正向：真实男子画面检索 | 不用文件名，按真实画面/组合/否定条件验收 | PLAN；[本批报告](../design-cases/multi-workflow/local-footage-results-staging-18-35-20261110.md) |
+| LF-32 | 反向：两真实素材均无目标 | 不用文件名，按真实画面/组合/否定条件验收 | PLAN；[本批报告](../design-cases/multi-workflow/local-footage-results-staging-18-35-20261110.md) |
+| LF-33 | 反向：组合条件不能拆开命中 | 不用文件名，按真实画面/组合/否定条件验收 | PLAN；[本批报告](../design-cases/multi-workflow/local-footage-results-staging-18-35-20261110.md) |
+| LF-34 | 串联反向：排除前轮对象后改查 | 不用文件名，按真实画面/组合/否定条件验收 | PLAN；[本批报告](../design-cases/multi-workflow/local-footage-results-staging-18-35-20261110.md) |
+| LF-35 | 反向边界：宽泛内容描述需选择 | 不用文件名，按真实画面/组合/否定条件验收 | PLAN；[本批报告](../design-cases/multi-workflow/local-footage-results-staging-18-35-20261110.md) |
 
-`npm run test:footage`已接LF01～03；本轮实际执行使用原生CUA有头操作，不冒称已运行Playwright。历史云效FWXC274/275不等同本次生产重跑提交；预发LF04/05～07已分别提交FWXC389/390，最新报告内保留链接。
+`npm run test:footage`对应LF-01～03；其余条目的操作和自动化映射见专项正文。
 
 ## AI生图P0用例
 
 [完整前置、步骤与预期](../design-cases/multi-workflow/ai-image-p0-cases.md)。共8条，全部P0；覆盖3档分辨率、5种常用比例、默认参数及同会话参数切换。每条均含卡片操作、有效参数、本轮产物、下载和像素验收。
 
-| 用例 | 分辨率 | 图片比例 | 场景 | 自动化与执行状态 |
-|---|---|---|---|---|
-| IG-01 | 显式1K | 显式1:1 | 手动选择基础参数生成 | 未接脚本，本轮未执行 |
-| IG-02 | 2K | 9:16 | 中档竖图生成 | 未接脚本，本轮未执行 |
-| IG-03 | 4K | 16:9 | 高档横图生成 | 未接脚本，本轮未执行 |
-| IG-04 | 2K不变 | 9:16 → 3:4 | 同会话切换比例 | 未接脚本，本轮未执行 |
-| IG-05 | 默认1K | 默认1:1 | 不手动修改参数直接生成 | [已有脚本部分覆盖](../../tests/staging/g3-g7-cards.spec.ts)，完整验收未执行 |
-| IG-06 | 1K | 4:3 | 低档横图生成 | 未接脚本，本轮未执行 |
-| IG-07 | 4K | 1:1 | 高档正方形生成 | 未接脚本，本轮未执行 |
-| IG-08 | 1K → 4K | 1:1不变 | 同会话切换分辨率 | 未接脚本，本轮未执行 |
+| 用例 | 分辨率 | 图片比例 | 场景 | 自动化 |
+| --- | --- | --- | --- | --- |
+| IG-01 | 显式1K | 显式1:1 | 手动选择基础参数生成 | PLAN |
+| IG-02 | 2K | 9:16 | 中档竖图生成 | PLAN |
+| IG-03 | 4K | 16:9 | 高档横图生成 | PLAN |
+| IG-04 | 2K不变 | 9:16 → 3:4 | 同会话切换比例 | PLAN |
+| IG-05 | 默认1K | 默认1:1 | 不手动修改参数直接生成 | [已有脚本部分覆盖](../../tests/staging/g3-g7-cards.spec.ts) |
+| IG-06 | 1K | 4:3 | 低档横图生成 | PLAN |
+| IG-07 | 4K | 1:1 | 高档正方形生成 | PLAN |
+| IG-08 | 1K → 4K | 1:1不变 | 同会话切换分辨率 | PLAN |
 
-**数量口径：8条文字用例，AI生图自动化仍只有1条；全部卡片自动化仍为7条。** 精确像素按当前模型规格表验收，该映射尚待补齐，不能仅凭分辨率标签判通过。本轮只补写用例，没有提交生图任务。
+8条文字用例；精确像素按当前模型规格表验收，不能仅凭分辨率标签代替尺寸检查。
 
 ## 同会话单原片 SSO
 
-[001～004本次14轮执行记录](../design-cases/multi-workflow/same-session-original-interleaved-results-20261104.md)：0补槽、3计划确认；10轮仅正文、4轮删除前已发。
+[001～004本次14轮执行记录](../design-cases/multi-workflow/same-session-original-interleaved-results-20261104.md)。
 
 完整前置、逐轮提示词及验收标准：[SSO-001～018](../design-cases/multi-workflow/same-session-original-cases.md)。每轮不@视频，纯文本明确处理最初上传的源视频F。001～004按既有顺序穿插工作流；005～008各5轮且每例固定同一工作流。009～014各5轮组合、共30轮；015～018各5轮恢复/历史交互、共20轮，四例使用同一组组合要求对照恢复方式。每轮最终一个MP4体现全部要求的效果，核验各处理分支来自F、不使用前轮产物。
 
-| 用例 | 场景 | 脚本状态 | 当前执行状态 |
-|---|---|---|---|
-| SSO-001 | 2轮：英文字幕→20秒高光 | [已接入](../../tests/sso/same-session-original.spec.ts) | 2轮来源/流程/结构及抽样通过；两轮为删除前已发记录 |
-| SSO-002 | 3轮：水印→增强→英文字幕 | [已接入](../../tests/sso/same-session-original.spec.ts) | 3轮来源/流程/结构及抽样通过；前2轮删除前已发，第3轮仅正文 |
-| SSO-003 | 4轮：中文翻译→30秒高光→水印→增强 | [已接入](../../tests/sso/same-session-original.spec.ts) | 4轮来源/流程/结构及抽样通过；仅发送正文 |
-| SSO-004 | 5轮：英文字幕→水印→增强→20秒高光→日文翻译 | [已接入](../../tests/sso/same-session-original.spec.ts) | 5轮来源/流程/结构及抽样通过；仅发送正文 |
-| SSO-005 | 5轮添加字幕：中文→日文→韩文→法文→西班牙文；保留原英语音轨 | [已接入](../../tests/sso/same-session-original.spec.ts) | 未通过：第4轮法文字幕混入亚美尼亚文；5轮已执行；[记录](../design-cases/multi-workflow/sso005-008-five-round-results-20261104.md)；[FWXC-278](https://devops.aliyun.com/projex/project/1e401ac99539c3999e00e40006/bug#viewIdentifier=1dedc5afd44979211cad516f&openWorkitemIdentifier=381366768cf968880d087e2735) |
-| SSO-006 | 5轮翻译配音：中文普通话→日语→韩语→法语→西班牙语；烧录对应同语字幕 | [已接入](../../tests/sso/same-session-original.spec.ts) | 5轮通过；[记录](../design-cases/multi-workflow/sso005-008-five-round-results-20261104.md) |
-| SSO-007 | 5轮同工作流：文字水印R1～R5及四角位置切换 | [已接入](../../tests/sso/same-session-original.spec.ts) | 5轮通过；第5轮以原run原始计划补齐来源证据；[记录](../design-cases/multi-workflow/sso005-008-five-round-results-20261104.md) |
-| SSO-008 | 5轮同工作流：高光20→30→15→25→20秒 | [已接入](../../tests/sso/same-session-original.spec.ts) | 5轮通过；[记录](../design-cases/multi-workflow/sso005-008-five-round-results-20261104.md) |
-| SSO-009 | 五轮不同组合交替 | [已接入](../../tests/sso/same-session-original.spec.ts) | 5轮完成，指定范围通过；5/5来源F、无串用告警；[记录](../design-cases/multi-workflow/sso009-014-five-round-results-20261104.md) |
-| SSO-010 | 五轮组合字幕语言切换 | [已接入](../../tests/sso/same-session-original.spec.ts) | 5轮完成，业务未通过：R4；5/5来源F、无串用告警；[记录](../design-cases/multi-workflow/sso009-014-five-round-results-20261104.md)；[FWXC-281](https://devops.aliyun.com/projex/project/1e401ac99539c3999e00e40006/bug#viewIdentifier=1dedc5afd44979211cad516f&openWorkitemIdentifier=924be6ade88ed3f7bac77b4f7d) |
-| SSO-011 | 五轮高光组合与完整原片组合交替 | [已接入](../../tests/sso/same-session-original.spec.ts) | 5轮完成，指定范围通过；5/5来源F、无串用告警；[记录](../design-cases/multi-workflow/sso009-014-five-round-results-20261104.md) |
-| SSO-012 | 五轮组合效果扩增与缩减 | [已接入](../../tests/sso/same-session-original.spec.ts) | 5轮完成，指定范围通过；5/5来源F、无串用告警；[记录](../design-cases/multi-workflow/sso009-014-five-round-results-20261104.md) |
-| SSO-013 | 五轮相同组合连续及间隔恢复 | [已接入](../../tests/sso/same-session-original.spec.ts) | 5轮完成，指定范围通过；5/5来源F、无串用告警；[记录](../design-cases/multi-workflow/sso009-014-five-round-results-20261104.md) |
-| SSO-014 | 五轮译制组合与原英语组合交替 | [已接入](../../tests/sso/same-session-original.spec.ts) | 2026-11-10生产复测5/5轮完成、5份MP4已下载解码；R1/R3/R5人工听审正常，内部来源链路待核，整例部分验证；[本轮记录](../design-cases/multi-workflow/sso014-results-prod-20261110.md)。旧批次记录及FWXC-282保留历史，不迁移结论 |
-| SSO-015 | 五轮完成后刷新恢复 | [已接入](../../tests/sso/same-session-original.spec.ts) | 未通过：受理5/5轮，服务端失败4轮，指定操作覆盖1次；[本批记录](../design-cases/multi-workflow/sso015-018-recovery-results-20261105.md)；[FWXC-279](https://devops.aliyun.com/projex/project/1e401ac99539c3999e00e40006/bug#viewIdentifier=1dedc5afd44979211cad516f&openWorkitemIdentifier=49b6b410843766dee777c4f8a6) |
-| SSO-016 | 五轮执行中刷新恢复 | [已接入](../../tests/sso/same-session-original.spec.ts) | 未通过：受理5/5轮，服务端失败4轮，指定操作覆盖1次；[本批记录](../design-cases/multi-workflow/sso015-018-recovery-results-20261105.md)；[FWXC-279](https://devops.aliyun.com/projex/project/1e401ac99539c3999e00e40006/bug#viewIdentifier=1dedc5afd44979211cad516f&openWorkitemIdentifier=49b6b410843766dee777c4f8a6) |
-| SSO-017 | 五轮完成后关闭重开恢复 | [已接入](../../tests/sso/same-session-original.spec.ts) | 未通过：受理5/5轮，任务失败1轮；R2媒体/API下载恢复，重开后UI认证阻塞保留；人工重新登录后续跑已完成；[本批记录](../design-cases/multi-workflow/sso015-018-recovery-results-20261105.md)；[FWXC-279](https://devops.aliyun.com/projex/project/1e401ac99539c3999e00e40006/bug#viewIdentifier=1dedc5afd44979211cad516f&openWorkitemIdentifier=49b6b410843766dee777c4f8a6)；[FWXC-280](https://devops.aliyun.com/projex/project/1e401ac99539c3999e00e40006/bug#viewIdentifier=1dedc5afd44979211cad516f&openWorkitemIdentifier=2a054eeafdcc228eb453d2c94a) |
-| SSO-018 | 五轮查看历史后处理原片 | [已接入](../../tests/sso/same-session-original.spec.ts) | 5轮指定验收通过；[本批记录](../design-cases/multi-workflow/sso015-018-recovery-results-20261105.md) |
+| 用例 | 场景 | 脚本状态 |
+| --- | --- | --- |
+| SSO-001 | 2轮：英文字幕→20秒高光 | [已接入](../../tests/sso/same-session-original.spec.ts) |
+| SSO-002 | 3轮：水印→增强→英文字幕 | [已接入](../../tests/sso/same-session-original.spec.ts) |
+| SSO-003 | 4轮：中文翻译→30秒高光→水印→增强 | [已接入](../../tests/sso/same-session-original.spec.ts) |
+| SSO-004 | 5轮：英文字幕→水印→增强→20秒高光→日文翻译 | [已接入](../../tests/sso/same-session-original.spec.ts) |
+| SSO-005 | 5轮添加字幕：中文→日文→韩文→法文→西班牙文；保留原英语音轨 | [已接入](../../tests/sso/same-session-original.spec.ts) |
+| SSO-006 | 5轮翻译配音：中文普通话→日语→韩语→法语→西班牙语；烧录对应同语字幕 | [已接入](../../tests/sso/same-session-original.spec.ts) |
+| SSO-007 | 5轮同工作流：文字水印R1～R5及四角位置切换 | [已接入](../../tests/sso/same-session-original.spec.ts) |
+| SSO-008 | 5轮同工作流：高光20→30→15→25→20秒 | [已接入](../../tests/sso/same-session-original.spec.ts) |
+| SSO-009 | 五轮不同组合交替 | [已接入](../../tests/sso/same-session-original.spec.ts) |
+| SSO-010 | 五轮组合字幕语言切换 | [已接入](../../tests/sso/same-session-original.spec.ts) |
+| SSO-011 | 五轮高光组合与完整原片组合交替 | [已接入](../../tests/sso/same-session-original.spec.ts) |
+| SSO-012 | 五轮组合效果扩增与缩减 | [已接入](../../tests/sso/same-session-original.spec.ts) |
+| SSO-013 | 五轮相同组合连续及间隔恢复 | [已接入](../../tests/sso/same-session-original.spec.ts) |
+| SSO-014 | 五轮译制组合与原英语组合交替 | [已接入](../../tests/sso/same-session-original.spec.ts) |
+| SSO-015 | 五轮完成后刷新恢复 | [已接入](../../tests/sso/same-session-original.spec.ts) |
+| SSO-016 | 五轮执行中刷新恢复 | [已接入](../../tests/sso/same-session-original.spec.ts) |
+| SSO-017 | 五轮完成后关闭重开恢复 | [已接入](../../tests/sso/same-session-original.spec.ts) |
+| SSO-018 | 五轮查看历史后处理原片 | [已接入](../../tests/sso/same-session-original.spec.ts) |
 
-**001～018原片子集：18 AUTO/0 PLAN；015～018本批有头执行已结束，实际受理20/20轮，11轮产出MP4、9轮任务失败、0轮前置受阻未执行；整例1通过/3未通过/0受阻。已接入不等同通过；017原UI认证阻塞及人工续跑分别保留。新增019～022见下节，SSO合计22条。**
+001～018为原片子集，019～022为原片与产物穿插子集；脚本登记和执行记录分别维护。
 
 - 查看全部22条脚本定义（不打开浏览器、不提交任务）：`npm run test:sso -- --list`；仅原18条加`--grep "SSO-0(0[1-9]|1[0-8])"`。
 - 有头执行（会真实处理并可能计费）：`npm run test:sso`；独立配置 [playwright.sso.config.ts](../../playwright.sso.config.ts)，单worker、零重试，不并入原默认46条预发。 仅执行005～008：`npm run test:sso -- --grep 'SSO-00[5-8]'`。
@@ -98,58 +131,58 @@
 
 [完整前置、20轮提示词与验收标准](../design-cases/multi-workflow/same-session-source-artifact-cases.md)。每例5轮均不@，按原片F与指定产物穿插处理；与001～018每轮回到F的范围分别统计。
 
-| 用例 | 场景 | 自动化与执行状态 |
-|---|---|---|
-| SSO-019 | 不同工作流在原片与最近产物间切换 | [已接入](../../tests/sso/same-session-original.spec.ts)；指定检查通过，5轮通过/0未通过/0阻塞；[记录](../design-cases/multi-workflow/sso019-022-source-artifact-results-20261105.md) |
-| SSO-020 | 指定历史产物，避免误用最新视频 | [已接入](../../tests/sso/same-session-original.spec.ts)；未通过，4轮通过/1未通过/0阻塞；[记录](../design-cases/multi-workflow/sso019-022-source-artifact-results-20261105.md)；[FWXC-284](https://devops.aliyun.com/projex/project/1e401ac99539c3999e00e40006/bug#viewIdentifier=1dedc5afd44979211cad516f&openWorkitemIdentifier=5d97cd56033b5f4caee04d8a6c) |
-| SSO-021 | 同一水印工作流重复执行，验证叠加与分支隔离 | [已接入](../../tests/sso/same-session-original.spec.ts)；指定检查通过，5轮通过/0未通过/0阻塞；[记录](../design-cases/multi-workflow/sso019-022-source-artifact-results-20261105.md) |
-| SSO-022 | 自然指代最近成功产物，穿插显式返回原片 | [已接入](../../tests/sso/same-session-original.spec.ts)；指定检查通过，5轮通过/0未通过/0阻塞；[记录](../design-cases/multi-workflow/sso019-022-source-artifact-results-20261105.md) |
+| 用例 | 场景 | 自动化 |
+| --- | --- | --- |
+| SSO-019 | 不同工作流在原片与最近产物间切换 | [已接入](../../tests/sso/same-session-original.spec.ts) |
+| SSO-020 | 指定历史产物，避免误用最新视频 | [已接入](../../tests/sso/same-session-original.spec.ts) |
+| SSO-021 | 同一水印工作流重复执行，验证叠加与分支隔离 | [已接入](../../tests/sso/same-session-original.spec.ts) |
+| SSO-022 | 自然指代最近成功产物，穿插显式返回原片 | [已接入](../../tests/sso/same-session-original.spec.ts) |
 
-SSO合计22条设计、22 AUTO/0 PLAN；新增4条共20轮。[本批执行结果与失败截图](../design-cases/multi-workflow/sso019-022-source-artifact-results-20261105.md)。仅执行这4条：`npm run test:sso:mixed`；有头、串行、零重试，不并入默认staging。001～018定义与既有结果保留。
+SSO-019～022共4条、每例5轮。执行命令：`npm run test:sso:mixed`；有头、串行、零重试。结果查看[专项报告](../design-cases/multi-workflow/sso019-022-source-artifact-results-20261105.md)。
 
 
 ## 剪辑配音与字幕同步P0
 
 [完整前置、素材哈希、两轮提示词及同步验收标准](../design-cases/multi-workflow/editing-dubbing-sync-cases.md)。新增6条P0，按素材类别固定抽样；使用会话任务和下载成片验收，不依赖编辑页。
 
-| 用例 | 场景 | 素材 | 自动化与执行状态 |
-|---|---|---|---|
-| [SYNC-001](../design-cases/multi-workflow/editing-dubbing-sync-cases.md#sync-001) | 30秒剪辑→中文配音及字幕 | 英语新闻、多镜头 | PLAN，未执行 |
-| [SYNC-002](../design-cases/multi-workflow/editing-dubbing-sync-cases.md#sync-002) | 20秒剪辑→英语配音及字幕 | 中文竖屏产品口播 | PLAN，未执行 |
-| [SYNC-003](../design-cases/multi-workflow/editing-dubbing-sync-cases.md#sync-003) | 中文配音及字幕→30秒剪辑 | 英语访谈、多镜头 | PLAN，未执行 |
-| [SYNC-004](../design-cases/multi-workflow/editing-dubbing-sync-cases.md#sync-004) | 中文配音及字幕→20秒剪辑 | 日语竖屏、原带字幕 | PLAN，未执行；源语言能力执行前核对 |
-| [SYNC-005](../design-cases/multi-workflow/editing-dubbing-sync-cases.md#sync-005) | 去口癖→英语配音及字幕 | 3处金标的受控中文人声 | PLAN，未执行；配套视频夹具待准备 |
-| [SYNC-006](../design-cases/multi-workflow/editing-dubbing-sync-cases.md#sync-006) | 双素材18秒混剪→中文配音及字幕 | 9.45秒英语短片＋HEVC视频 | PLAN，未执行 |
+| 用例 | 场景 | 素材 | 自动化 |
+| --- | --- | --- | --- |
+| [SYNC-001](../design-cases/multi-workflow/editing-dubbing-sync-cases.md#sync-001) | 30秒剪辑→中文配音及字幕 | 英语新闻、多镜头 | AUTO |
+| [SYNC-002](../design-cases/multi-workflow/editing-dubbing-sync-cases.md#sync-002) | 20秒剪辑→英语配音及字幕 | 中文竖屏产品口播 | AUTO |
+| [SYNC-003](../design-cases/multi-workflow/editing-dubbing-sync-cases.md#sync-003) | 中文配音及字幕→30秒剪辑 | 英语访谈、多镜头 | AUTO |
+| [SYNC-004](../design-cases/multi-workflow/editing-dubbing-sync-cases.md#sync-004) | 中文配音及字幕→20秒剪辑 | 日语竖屏、原带字幕 | AUTO |
+| [SYNC-005](../design-cases/multi-workflow/editing-dubbing-sync-cases.md#sync-005) | 去口癖→英语配音及字幕 | 3处金标的受控中文人声 | AUTO |
+| [SYNC-006](../design-cases/multi-workflow/editing-dubbing-sync-cases.md#sync-006) | 双素材18秒混剪→中文配音及字幕 | 9.45秒英语短片＋HEVC视频 | AUTO |
 
-**本专项0 AUTO / 6 PLAN，业务执行0条**。按用户确认的“逐句对应、无持续漂移、无截断或已删内容回流”验收，暂不设毫秒阈值。单列专项计数；原SSO仍22条，默认预发脚本数量不变。
+[执行命令](../../tools/sync/README.md) · [专项报告](../design-cases/multi-workflow/sync001006-staging-results-20261116.md)。
 
 ## 正式需求用例
 
-| 需求 | 用例正文 | 自动化映射与状态 |
-|---|---|---|
-| ERYE-160 计费逻辑 | [计费用例](requirements/ERYE-160/cases.md) | [正式需求登记表](registry.yaml)；按具体用例查看脚本 |
-| ERYE-196 编辑器能力接入(web) | [详细用例](requirements/ERYE-196/cases.md) · [需求及评论分析](requirements/ERYE-196/analysis.md) · [前置与数据](requirements/ERYE-196/test-data.md) | 134条：M1 121/M2 13；001/003按用户确认的页面业务口径Passed（有头执行）；002/004本轮Not Applicable；005取消旧引用前置改Not Run；合计2 Passed/2 Not Applicable/130 Not Run；[本次口径与状态](requirements/ERYE-196/business-acceptance-update-20261105.md)；[首批记录](requirements/ERYE-196/results-001-005-20261105.md) · [001当前工程复测](requirements/ERYE-196/results-001-rerun-20261105.md) · [002当前工程核验](requirements/ERYE-196/results-002-20261105.md) · [003页面业务执行](requirements/ERYE-196/results-003-ui-20261105.md) · [004最新设计范围及执行证据](requirements/ERYE-196/results-004-ui-20261105.md) · [004需求/设计差异FWXC-315](../defects/CINLINK-DESIGN-ERYE196-004-001.md) · [登记表](registry.yaml) |
-| ERYE-206 会话与视频工程协作 | [67条详细用例](requirements/ERYE-206/cases.md) · [正文/评论分析](requirements/ERYE-206/analysis.md) · [数据前置](requirements/ERYE-206/test-data.md) | 页面业务/真实接口结果验收；全部PLAN/Not Run；复用196底层用例，新增多工程/路由/字幕评论覆盖 |
-| ERYE-210 编辑器默认TAB调整 | [54条详细用例](requirements/ERYE-210/cases.md) · [需求/最新Figma分析](requirements/ERYE-210/analysis.md) · [数据前置](requirements/ERYE-210/test-data.md) | 用户确认五入口为准；页面业务/真实接口结果验收；全部PLAN/Not Run；未确认业务边界单列 |
-| ERYE-199 编辑器能力 | [编辑器用例](requirements/ERYE-199/cases.md) | [正式需求登记表](registry.yaml)；按具体用例查看脚本 |
-| ERYE-237 图像编辑 | [144条主用例](requirements/ERYE-237/cases.md) · [执行规则](requirements/ERYE-237/execution-guide.md) · [Agent配对](requirements/ERYE-237/agent-checks.md) · [技术专项](requirements/ERYE-237/technical-checks.md) | 当前分层版：47 UI /25 Agent /72 Technical主入口，P0 95/P1 48/P2 1；新版主分支001/UI及004/UI Passed，002/003/005 Agent Failed；其余258分支Not Run、全部PLAN；[本轮报告](requirements/ERYE-237/results-001-005-layered-prod-20261109.md)。旧1 Passed/12 Failed/12 Blocked/119 Not Run仅为历史；[历史报告](requirements/ERYE-237/results-014-032-prod-20261109.md)；[登记表](registry.yaml) |
+| 需求 | 用例正文 | 登记 / 报告入口 |
+| --- | --- | --- |
+| ERYE-160 计费逻辑 | [计费用例](requirements/ERYE-160/cases.md) | [需求登记表](registry.yaml) |
+| ERYE-196 编辑器能力接入(web) | [详细用例](requirements/ERYE-196/cases.md) · [需求及评论分析](requirements/ERYE-196/analysis.md) · [前置与数据](requirements/ERYE-196/test-data.md) | [执行记录](requirements/ERYE-196/execution-status-20261111.md) |
+| ERYE-206 会话与视频工程协作 | [67条详细用例](requirements/ERYE-206/cases.md) · [正文/评论分析](requirements/ERYE-206/analysis.md) · [数据前置](requirements/ERYE-206/test-data.md) | [需求登记表](registry.yaml) |
+| ERYE-210 编辑器默认TAB调整 | [详细用例](requirements/ERYE-210/cases.md) · [分析](requirements/ERYE-210/analysis.md) · [数据前置](requirements/ERYE-210/test-data.md) | [执行记录](requirements/ERYE-210/execution-status-current.md) |
+| ERYE-199 编辑器能力 | [142条详细用例](requirements/ERYE-199/cases.md) · [多轨补充069～116](requirements/ERYE-199/cases.md#erye199-card-multitrack) · [编写范围简要说明](requirements/ERYE-199/coverage-overview.md) | [执行记录](requirements/ERYE-199/execution-status-current.md) |
+| ERYE-237 图像编辑 | [详细用例](requirements/ERYE-237/cases.md) · [执行规则](requirements/ERYE-237/execution-guide.md) · [Agent配对](requirements/ERYE-237/agent-checks.md) · [技术专项](requirements/ERYE-237/technical-checks.md) | [执行规则](requirements/ERYE-237/execution-guide.md) |
 
-[196/206/210联合规则与复用](editor-linked-196-206-210.md) · [统一业务验收口径](editor-business-acceptance.md)。三需求255条，按页面/实际文件或真实接口业务结果验收；本次只优化，未新增执行。196为2 Passed/2 Not Applicable/130 Not Run；206/210共121条Not Run。全工程正式需求543条。
+[196/206/210联合规则与复用](editor-linked-196-206-210.md) · [统一业务验收口径](editor-business-acceptance.md)。按页面、实际文件或真实接口的业务结果验收。
 
 正式需求采用“一需求一目录”，各目录的 `meta.yaml` 保存来源与元数据。工作流用例不加入正式需求目录或本目录的 `registry.yaml`。
 
 ## 工作流与上下文专项
 
 | 范围 | 用例入口 | 脚本 | 命令与范围 |
-|---|---|---|---|
+| --- | --- | --- | --- |
 | 单工作流、素材方式、发送方式 | [工作流矩阵](../design-cases/14-workflow-material-paths.md) | [字幕](../../tests/staging/g3-g7-subtitle.spec.ts)、[图片水印](../../tests/staging/g3-g7-image-watermark.spec.ts)、[其他工作流](../../tests/staging/g3-g7-workflows.spec.ts) | `test:g3` / `test:watermark` / `test:flows`；矩阵设计组合不等于脚本数量 |
 | 多工作流基础 MW-01～05 | [基础场景正文](../design-cases/multi-workflow/cases.md#基础场景的前置操作步骤与预期) | [基础脚本](../../tests/staging/g3-g7-multi.spec.ts) | `npm run test:multi:base`，5条 |
 | 一句话多工作流 MW-06～14/18/21/23～26 | [多工作流正文](../design-cases/multi-workflow/cases.md) | [复合脚本](../../tests/staging/g3-g7-multi-compound.spec.ts) | `npm run test:multi:compound`，15条；与基础合计20条 |
 | 多素材 MW-15/16/17/19/20/22 | [原编号正文](../design-cases/multi-workflow/cases.md) | [多素材脚本](../../tests/multi-material/multi-material.spec.ts) | `npm run test:multi:materials`，6条独立按需执行 |
-| 同会话单原片 SSO-001～018 | [SSO正文](../design-cases/multi-workflow/same-session-original-cases.md) | [SSO脚本](../../tests/sso/same-session-original.spec.ts) | 18 AUTO/0 PLAN；015～018结果见[恢复执行记录](../design-cases/multi-workflow/sso015-018-recovery-results-20261105.md)，其余既有结论保留 |
-| 剪辑配音与字幕同步P0 | [SYNC-001～006正文](../design-cases/multi-workflow/editing-dubbing-sync-cases.md) | 未接入 | 6条P0，0 AUTO/6 PLAN，全部未执行；005视频夹具待准备 |
+| 同会话单原片 SSO-001～018 | [SSO正文](../design-cases/multi-workflow/same-session-original-cases.md) | [SSO脚本](../../tests/sso/same-session-original.spec.ts) | `npm run test:sso`；[执行记录](../design-cases/multi-workflow/sso015-018-recovery-results-20261105.md) |
+| 剪辑配音与字幕同步P0 | [SYNC-001～006正文](../design-cases/multi-workflow/editing-dubbing-sync-cases.md) | `tools/sync/run.mjs` | 6条P0；[执行命令](../../tools/sync/README.md) |
 | AI生图P0专项 | [IG-01～08正文](../design-cases/multi-workflow/ai-image-p0-cases.md) | [IG-05默认脚本部分覆盖](../../tests/staging/g3-g7-cards.spec.ts)；其余7条未接入 | 8条P0文字用例，AI生图脚本仍1条 |
-| 本地素材查找专项 | [当前28条正文及素材](../design-cases/multi-workflow/local-footage-p0-cases.md) | [LF-01～03脚本](../../tests/local-footage/local-footage.spec.ts)，其余25条PLAN | `npm run test:footage`仅3条；[最新逐例状态](../design-cases/multi-workflow/local-footage-execution-status.md)：已执行28条，15 Failed/13 Passed（各例限定范围）；新增11条本批7 Passed/4 Failed |
+| 本地素材查找专项 | [当前28条正文及素材](../design-cases/multi-workflow/local-footage-p0-cases.md) | [LF-01～03脚本](../../tests/local-footage/local-footage.spec.ts)，其余25条PLAN | `npm run test:footage`；[报告入口](../design-cases/multi-workflow/local-footage-execution-status.md) |
 | 卡片入口 | [矩阵卡片章节](../design-cases/14-workflow-material-paths.md)、[脚本登记](../design-cases/15-automation-registry.md) | [卡片脚本](../../tests/staging/g3-g7-cards.spec.ts) | `npm run test:cards`，仍7条脚本，包含上述1条AI生图 |
 | 跨工作流链路 | [矩阵链路章节](../design-cases/14-workflow-material-paths.md#十八链路用例跨工作流plan) | [链路脚本](../../tests/staging/g3-g7-chains.spec.ts) | `npm run test:chains`；设计链路与已接脚本分开统计 |
 | CTX上下文与媒体专项 | [矩阵上下文章节](../design-cases/14-workflow-material-paths.md#十七上下文用例横向维度) | [自动化登记](../design-cases/15-automation-registry.md) | 按条目状态选取，未落地的不能当已执行 |
@@ -162,7 +195,7 @@ SSO合计22条设计、22 AUTO/0 PLAN；新增4条共20轮。[本批执行结果
 ## 设计稿、批注与框架校验
 
 | 范围 | 用例/规则入口 | 脚本入口 | 命令 |
-|---|---|---|---|
+| --- | --- | --- | --- |
 | 首页、预览、项目、移动端、个人中心等设计稿用例 | [设计用例覆盖地图](../design-cases/00-overview.md) | [自动化登记](../design-cases/15-automation-registry.md) | 按具体模块选择，未自动化条目人工执行 |
 | 视频批注 | [批注用例](../design-cases/07-video-annotation.md)、[批注脚本映射](../design-cases/07-annotation-automation.md) | [批注脚本目录](../../tests/annotation) | `npm run test:annotation` / `npm run test:annotation:staging` |
 | 上传、提交及取消 G1/G2 | [脚本登记](../design-cases/15-automation-registry.md) | [G1](../../tests/staging/g1-upload.spec.ts)、[G2](../../tests/staging/g2-submit.spec.ts) | `npm run test:g1` / `npm run test:g2` |
@@ -170,15 +203,17 @@ SSO合计22条设计、22 AUTO/0 PLAN；新增4条共20轮。[本批执行结果
 
 ## 查状态与报告
 
+[从统一入口移出的历史执行记录](history/unified-entry-execution-notes-20261117.md)。
+
 | 内容 | 入口 | 使用口径 |
-|---|---|---|
+| --- | --- | --- |
 | 最新真实执行与待办 | [测试进度](../testing-progress.md) | 通过、失败、前置阻塞、未执行分开报告 |
 | 历次验证与证据批次 | [验证记录](../verification.md) | 取对应批次的截图、trace、审计和下载产物 |
 | 工作流脚本映射 | [自动化登记](../design-cases/15-automation-registry.md)、[MW登记](../design-cases/multi-workflow/registry.yaml) | “已接脚本”不等同“已实测通过” |
 | 已有缺陷 | [本地缺陷目录](../defects) | 提交前核对状态；@缺陷本轮不重复提交 |
 | Excel辅助资料 | [工作流矩阵](../design-cases/workflow-material-matrix.xlsx) | 历史汇总；SSO、AI生图P0扩展及本地素材查找P0尚未同步，以本页和各专项正文为准 |
 
-本页统一导航与当前状态，详细步骤只在分类正文维护；执行报告保留原始批次记录。
+本页维护用例定义与导航；执行结果、统计和缺陷同步记录在对应报告中维护。
 
 ## 约定
 
@@ -193,22 +228,22 @@ SSO合计22条设计、22 AUTO/0 PLAN；新增4条共20轮。[本批执行结果
 
 ## 图片批注工具优先专项
 
-[IMG-ANN-UI-001～010完整用例](../design-cases/17-image-annotation-ui.md)：使用授权生成人像，优先通过批注浮层填写提示词、添加引用及页面编辑。可在同一专用项目中使用多个独立会话，各例核对独立图片工程及源版本。以下为2026-11-09生产有头UI实测结果：**8 Passed / 1 Failed / 1 Blocked**。本专项未接入独立自动化，不计入正式543条或ERYE237的144条统计。
+[IMG-ANN-UI-001～010完整用例](../design-cases/17-image-annotation-ui.md)：使用授权生成人像，优先通过批注浮层填写提示词、添加引用及页面编辑。可在同一专用项目中使用多个独立会话，各例核对独立图片工程及源版本。
 
-| 用例 | 场景 | 最新执行状态 | 报告及缺陷 |
-|---|---|---|---|
-| IMG-ANN-UI-001 | 单批注新增棕白小狗 | Passed | [001～005报告](../design-cases/img-ann-ui-001-005-results-20261109.md) |
-| IMG-ANN-UI-002 | 提交前将黑狗提示词改为白狗 | Passed | [001～005报告](../design-cases/img-ann-ui-001-005-results-20261109.md) |
-| IMG-ANN-UI-003 | 人物红色上衣改为蓝色 | Passed | [001～005报告](../design-cases/img-ann-ui-001-005-results-20261109.md) |
-| IMG-ANN-UI-004 | 移除小狗并补齐地面 | Passed | [001～005报告](../design-cases/img-ann-ui-001-005-results-20261109.md) |
-| IMG-ANN-UI-005 | 双批注左侧白狗、右侧红球 | Passed | [001～005报告](../design-cases/img-ann-ui-001-005-results-20261109.md) |
-| IMG-ANN-UI-006 | 同一批注重复添加引用 | Passed | [006～010报告](../design-cases/img-ann-ui-006-010-results-20261109.md) |
-| IMG-ANN-UI-007 | 浮层右上角垃圾桶移除批注及待发引用 | Passed（R3复测，旧失败撤销） | [007最新报告](../design-cases/img-ann-ui-007-results-20261109-r3.md) |
-| IMG-ANN-UI-008 | 删除一条草稿批注，保留另一条并执行 | Passed | [006～010报告](../design-cases/img-ann-ui-006-010-results-20261109.md) |
-| IMG-ANN-UI-009 | 未发送批注保存后收起重开 | Failed：正文及自定义对象名丢失 | [缺陷记录](../defects/img-ann-ui-009-prod-20261109.md)；[FWXC-367](https://devops.aliyun.com/projex/project/1e401ac99539c3999e00e40006/bug#openWorkitemIdentifier=8c5a17dabe849b6a8a6a56ee71) |
-| IMG-ANN-UI-010 | 缩放、平移后的批注定位与编辑 | Blocked：缩放及编辑成功，平移操作待确认 | [缺陷记录](../defects/img-ann-ui-010-prod-20261109.md)；[FWXC-368](https://devops.aliyun.com/projex/project/1e401ac99539c3999e00e40006/bug#openWorkitemIdentifier=7676dafe333fa5832e64c3441e) |
+| 用例 | 场景 | 报告入口 |
+| --- | --- | --- |
+| IMG-ANN-UI-001 | 单批注新增棕白小狗 | [001～005报告](../design-cases/img-ann-ui-001-005-results-20261109.md) |
+| IMG-ANN-UI-002 | 提交前将黑狗提示词改为白狗 | [001～005报告](../design-cases/img-ann-ui-001-005-results-20261109.md) |
+| IMG-ANN-UI-003 | 人物红色上衣改为蓝色 | [001～005报告](../design-cases/img-ann-ui-001-005-results-20261109.md) |
+| IMG-ANN-UI-004 | 移除小狗并补齐地面 | [001～005报告](../design-cases/img-ann-ui-001-005-results-20261109.md) |
+| IMG-ANN-UI-005 | 双批注左侧白狗、右侧红球 | [001～005报告](../design-cases/img-ann-ui-001-005-results-20261109.md) |
+| IMG-ANN-UI-006 | 同一批注重复添加引用 | [006～010报告](../design-cases/img-ann-ui-006-010-results-20261109.md) |
+| IMG-ANN-UI-007 | 浮层右上角垃圾桶移除批注及待发引用 | [007最新报告](../design-cases/img-ann-ui-007-results-20261109-r3.md) |
+| IMG-ANN-UI-008 | 删除一条草稿批注，保留另一条并执行 | [006～010报告](../design-cases/img-ann-ui-006-010-results-20261109.md) |
+| IMG-ANN-UI-009 | 未发送批注保存后收起重开 | [缺陷记录](../defects/img-ann-ui-009-prod-20261109.md) |
+| IMG-ANN-UI-010 | 缩放、平移后的批注定位与编辑 | [缺陷记录](../defects/img-ann-ui-010-prod-20261109.md) |
 
-007按垃圾桶入口验收，不要求空输入框退格移除。010有ERYE-237 §3.1、§5.2及A15的平移需求依据；现有证据仅显示尝试的拖动、滚动、空格拖动未观察到平移，提交待排查缺陷不改变Blocked判定。009、010均已通过云效官方API新建，分别附2张及3张原始截图并完成正文和附件回读。
+007按垃圾桶入口验收，不要求空输入框退格移除；010平移验收依据见ERYE-237 §3.1、§5.2及A15。
 
 ## 质量要求
 
@@ -244,36 +279,493 @@ npm run cases:check
 
 生成 Excel 前会自动跑一次；不通过会直接阻断 `build-xlsx.py`，不会产出半成品。
 
-- [图片工具栏专项：IMG-TB-UI-001～020](../design-cases/18-image-toolbar-ui.md)：新增20条UI文字用例（P0 13/P1 7），覆盖画笔、六类形状、文字/颜色、绘制橡皮擦、撤销/放弃、模式隔离、去背景、AI擦除、宽高比、保存/导出及处理中限制；最新13 Passed/6 Failed/1 Blocked/0 Not Run；002/005关联[FWXC-369](https://devops.aliyun.com/projex/project/1e401ac99539c3999e00e40006/bug#openWorkitemIdentifier=e6d492be908d55a9d0b86124e6)；001～005见[报告](../design-cases/img-tb-ui-001-005-results-20261109.md)，006～010均Passed见[报告](../design-cases/img-tb-ui-006-010-results-20261109.md)，011～015见[报告](../design-cases/img-tb-ui-011-015-results-20261109.md)（最新3通过/1失败/1阻塞；[013/014排查](../design-cases/img-tb-ui-013-014-investigation-20261109.md)），016～020见[报告](../design-cases/img-tb-ui-016-020-results-20261109.md)（1通过/2失败/2阻塞）；未接自动化，不计入正式543条。 016/017已同步[FWXC-371](https://devops.aliyun.com/projex/project/1e401ac99539c3999e00e40006/bug#openWorkitemIdentifier=c0b830eb50e111cb243f475b69)、[FWXC-372](https://devops.aliyun.com/projex/project/1e401ac99539c3999e00e40006/bug#openWorkitemIdentifier=f08ed4417846c25c3a8e038a4b)。 018[复测通过](../design-cases/img-tb-ui-018-results-20261109-r2.md)，原批报告保留历史。 020[复测失败](../design-cases/img-tb-ui-020-results-20261109-r2.md)：运行中历史入口禁用，终态恢复。 020已同步[FWXC-373](https://devops.aliyun.com/projex/project/1e401ac99539c3999e00e40006/bug#openWorkitemIdentifier=680b9622f88e0dbbd8a9741a3d)，截图/AX附件及正文回读通过。
+## 图片工具栏专项
 
-### ERYE-237 2026-11-09专项反馈优化
+[IMG-TB-UI-001～020完整用例](../design-cases/18-image-toolbar-ui.md)：覆盖画笔、形状、文字和颜色、擦除、撤销、模式隔离、去背景、宽高比及保存导出；前置、步骤与预期在专项正文维护。
 
-[237正式144条用例](requirements/ERYE-237/cases.md)已结合两组UI实测更新33条操作和验收，版本2026-11-09-ui-evidence-baseline；[变更及证据映射](requirements/ERYE-237/optimization-20261109.md)。新增人像数据和实际入口规范，保留精确尺寸、双入口、平移及运行中历史可用等需求；正式6 Failed/138 Not Run不从专项状态继承，仍全PLAN。
+## 需求补充与变更资料
 
-### ERYE-237 正式014～032本轮执行
+[ERYE-237优化定义及证据映射](requirements/ERYE-237/optimization-20261109.md) · [本地素材查找完整定义](../design-cases/multi-workflow/local-footage-p0-cases.md)。编号调整和退役规则见对应正文，历史执行记录见报告入口。
 
-[生产有头报告](requirements/ERYE-237/results-014-032-prod-20261109.md)：1 Passed（025 UI业务）/6 Failed（014、017、018、029、030、032）/12 Blocked。正式144条累计1 Passed/12 Failed/12 Blocked/119 Not Run，仍全PLAN；3个图片任务完成、4次普通Agent请求、2份PNG、零已受理重发；未同步云效。阻塞项覆盖和操作偏差见逐例表，不将UI部分成功升级双入口或精度通过。
+<!-- ICP-EC-DINGTALK-20261116 -->
+<a id="icp-ecommerce-cases"></a>
 
-正式014～032三组缺陷已同步：[FWXC-379](https://devops.aliyun.com/projex/project/1e401ac99539c3999e00e40006/bug#openWorkitemIdentifier=208c359a4550c1e3d299e5dc5a)、[FWXC-380](https://devops.aliyun.com/projex/project/1e401ac99539c3999e00e40006/bug#openWorkitemIdentifier=f83f190cfe0ef713c9414db2ba)、[FWXC-381](https://devops.aliyun.com/projex/project/1e401ac99539c3999e00e40006/bug#openWorkitemIdentifier=95e907f84a3c8a2dd59d0352c5)。共8图+3补充附件回读通过，原失败状态不变，详见[本轮执行报告](requirements/ERYE-237/results-014-032-prod-20261109.md)。
+## ICP 电商工作流用例（Case 01～05）
 
-ERYE237-005/Agent已按用户纠正以未去背景原图重跑，最新Failed为计费输入校验失败，绿底依赖未发送；[005原图R2报告](requirements/ERYE-237/results-005-original-prod-20261109-r2.md)。001/004 UI及002/003 Agent原结果保持。
+来源：钉钉《ICP工作流模拟》“电商场景”工作表，Case 01～05。用户已限定本轮仅此5例；其他工作表不纳入执行。
 
-2026-11-10 LF-08～10预发：[执行报告](../design-cases/multi-workflow/local-footage-results-staging-08-10-20261110.md)。1 Failed/2 Passed（UI范围），复用项目4/4就绪；LF08三个原片哈希一致但未交付匹配时间，LF09明确无匹配，LF10空值/空格禁用发送。专项最新累计8 Failed/2 Passed（UI范围）/7未执行，AUTO仍3。
+[当前测试进度与失败原图](../design-cases/icp-workflows/execution-status-current.md)
 
-2026-11-10 LF-11预发：[隔离执行报告](../design-cases/multi-workflow/local-footage-results-staging-11-20261110.md)。Q仅F4、1/1就绪，43秒命中机器人；P123仅F1～F3、3/3就绪，38秒无匹配，Passed（UI业务隔离），请求范围及内部源ID未获取。最新累计8 Failed/3 Passed（UI范围）/6未执行，AUTO3不变。
+每例在本批专用测试项目中新建独立会话，源素材可以复用，编辑结果不能串用。每例包括一次完整首次制片指令和四轮原表后续修改，原始提示词保留如下。前置资料接收不计制片轮次。
 
-2026-11-10 LF-12预发：[执行报告](../design-cases/multi-workflow/local-footage-results-staging-12-20261110.md)。同P4新会话B一次火车查询报model HTTP 400/API version not supported，Failed；A原机器人查询及三卡未覆盖。累计9 Failed/3 Passed（UI范围）/5未执行，AUTO3不变。
+验收以页面交付、实际图片/视频、正确来源与未指定内容不变为准。遇补槽填写后沿原任务继续；遇明确失败先保存原图。后续提示词中的错误属于原表假设，先核对是否实际触发；未发生的错误不直接记缺陷。没有首稿时，依赖首稿的后续步骤记未执行，不能用无关产物代替。
 
-2026-11-10 LF-12复测R2：[报告](../design-cases/multi-workflow/local-footage-results-staging-12-20261110-r2.md)。新B37秒完成，上次API错误未复现；火车首候选正确但混入长颈鹿，源ID/区间未取得，仍Failed；A原机器人历史保留。
+自动化：`tools/icp/run.mjs`、`tools/icp/driver.mjs`；真实结果独立记录在本目录执行报告，不以脚本存在或准备素材成功代替通过。
 
-2026-11-10 LF-13预发：[报告](../design-cases/multi-workflow/local-footage-results-staging-13-20261110.md)。同会话机器人40秒/瀑布32秒完成，首候选内容正确且历史保留，未见旧画面残留；匹配时间未提供、源ID未核，完整Failed，累计10 Failed/3 Passed（UI范围）/4未执行，AUTO3不变。
+| 编号 | 原表 | 场景 | 自动化 |
+| --- | --- | --- | --- |
+| [ICP-EC-01](#icp-ec-01) | 电商Case 01 | DTC 电动自行车广告投手 | AUTO |
+| [ICP-EC-02](#icp-ec-02) | 电商Case 02 | 女装 shopify独立站运营 | AUTO |
+| [ICP-EC-03](#icp-ec-03) | 电商Case 03 | 品牌的社媒运营岗 | AUTO |
+| [ICP-EC-04](#icp-ec-04) | 电商Case 04 | 准备进军墨西哥市场的自行车DTC品牌运营 | AUTO |
+| [ICP-EC-05](#icp-ec-05) | 电商Case 05 | Amazon 美国站手持吸尘器小家电drop shipping 卖家 | AUTO |
 
-2026-11-10验收校正：用户确认源ID/匹配时间未证实为正式UI需求，撤销LF13仅因字段缺失的Failed，改Passed（UI连续查询及历史保留）；技术追溯未覆盖。最新累计9 Failed/4 Passed（UI范围）/4未执行，AUTO3不变。[校正报告](../design-cases/multi-workflow/local-footage-results-staging-13-20261110.md)。
+<a id="icp-ec-01"></a>
 
-2026-11-10统一校正源ID/时间验收：全部LF条目取消内部ID/时间展示硬前置，仅可选技术取证；目标实际画面/声音、来源正确性及隔离检查保留。LF08改Passed（三原片哈希及目标正确），LF12仍因长颈鹿误入Failed，LF13 Passed（连续查询）。最新8 Failed/5 Passed（UI范围）/4未执行、AUTO3不变；历史统计以上述最新口径为准。
+### ICP-EC-01：DTC 电动自行车广告投手
 
-2026-11-10 LF14预发：[报告](../design-cases/multi-workflow/local-footage-results-staging-14-20261110.md)。39秒完成，火车播放通过、混入长颈鹿Failed；@按结果名无匹配且内部名列表未可靠对应，引用未确认，不冒称功能缺失。最新9 Failed/5 Passed（UI范围）/3未执行，AUTO3不变。
+原表定位：电商场景!A2:B16；首次提示词 B5。
 
-2026-11-10 LF15预发：[报告](../design-cases/multi-workflow/local-footage-results-staging-15-20261110.md)。原会话刷新一次，两轮查询/四候选/40与32秒终态保留，机器人可播放，Passed（UI范围）；无新查询，网络及手动暂存未覆盖。累计9 Failed/6 Passed（UI范围）/2未执行，AUTO3不变。
+前置操作：
 
-名称检索已精简为5条P0：完整名称、部分名称、双文件、不存在、连续切换。原LF19合并LF18，LF23～27及LF29移出核心、均未执行，编号不复用。非名称LF30～35保持。
+1. 登录生产环境，在本批专用项目中新建本例独立会话。
+2. 准备约10分钟ADO Air 20 Ultra 2025真实测评、副片段/产品图3张、已确认卖点、官方Logo、CTA Shop Now。完整测评保存副本和原网址必须对应同一型号；核验时长、画面、声音及来源。
+3. 上传后核对文件名、SKU/型号、图片及视频预览；在本例填写完整提示词，一次发送首次制片要求。
+
+**Input（B4）**
+
+10 分钟达人 UGC 测评视频，包含产品介绍、骑行体验、真实评价等。
+3–5 段产品补充图片视频：产品全景、折叠过程、骑行展示等。（我自己在条件有限下拍摄的）
+产品卖点资料：折叠功能、重量、续航里程等真实参数。
+品牌 Logo、CTA、1–2 条参考爆款视频。
+
+**首次 Prompt（B5）**
+
+```text
+我是一名 DTC 电动自行车品牌的广告投手。请分析上传的达人测评视频和产品素材，帮我制作 3 条 20–30 秒的 9:16 竖屏广告，每条使用不同的开头：
+A：便携性卖点。突出普通自行车在日常收纳、携带时的不方便，再展示这款电动自行车的折叠功能。
+B：续航卖点。突出用户担心电动自行车电量不够的问题，再展示产品的续航能力和实际骑行画面。
+C：真实体验。直接使用达人在视频中的真实评价作为开头，展示他的实际骑行体验。
+请尽量使用原视频中的真实画面，找到适合的片段进行剪辑，并添加英语字幕、背景音乐和结尾 CTA。
+要求三条广告的开头明显不同，产品展示清楚，节奏紧凑。不要编造用户评价、产品功能、续航数据或优惠信息。
+```
+
+**首稿预期（B6）**
+
+三条 20–30 秒、9:16 的广告初稿，分别突出便携性、续航和达人真实体验，包含英语字幕、产品展示和结尾 CTA
+
+**人工干预假设 1：素材调整（B7）**
+
+```text
+第一条广告的开头不够吸引人，请重新查看已有素材，找一个更能展示电动自行车折叠功能的镜头，替换前 3 秒。后面的内容不要改动
+```
+
+**人工干预假设 2：精准修改（B8）**
+
+```text
+第二条广告结尾的 CTA 不合适，请只把结尾文字改成“Shop Now”，其他画面、字幕和音乐保持不变
+```
+
+**人工干预假设 3：语义纠正（B9）**
+
+```text
+第三条广告把达人的评价剪得有歧义，和他原本表达的意思不一样。请重新查看原视频，调整这部分剪辑，保留达人完整的真实意思，不要改变其他已经完成的内容。
+```
+
+**人工干预假设 4：AI补充镜头（B10）**
+
+```text
+第一条广告如果找不到合适的折叠展示镜头，请尝试用 AI 生成一段 3 秒的电动自行车折叠画面，并替换原来的开头。
+要求生成的自行车外观、颜色和折叠结构与真实产品一致，不能生成实际产品做不到的动作。
+```
+
+**Output（B11）**
+
+三条完整的 20–30 秒、9:16 竖屏广告，可用于 Meta / TikTok 广告素材测试。
+三条视频具有不同开头，产品信息、达人评价和英语字幕准确，包含品牌 Logo 和 CTA，经过修改后能够正常导出
+
+执行与预期核验：
+
+1. 首次任务结束后，逐一核验原表首稿数量、时长、比例、产品/人物/字幕/声音和可编辑交付；下载或实际播放核验，不能只看完成状态。
+2. 对四轮修改，先确认目标版本与原表假设是否匹配，再一次提交该轮完整原提示词；补槽记录问题和填写值，沿该轮原任务继续。
+3. 每轮核验指定修改真实生效，其余版本、其他SKU、非目标镜头/字幕/音乐保持；对照源素材检查无串料、无编造。
+4. 按Output核验最终交付和可导出性；失败截图保存本批目录，依赖前置失败导致未执行的轮次单列。
+
+
+<a id="icp-ec-02"></a>
+
+### ICP-EC-02：女装 shopify独立站运营
+
+原表定位：电商场景!A17:B31；首次提示词 B20。
+
+前置操作：
+
+1. 登录生产环境，在本批专用项目中新建本例独立会话。
+2. 准备10个不同商品SKU的正面图、对应实拍视频、SKU03补充视角、SKU对照表、虚构AI女模参考和Logo。SKU10只给正面图及2秒正面视频。单次最多20素材：先在本例会话载入5份公共参考并要求暂不生成，确认接收后，再在首次制片指令中附10图+10视频；仍使用全部25份素材，不减少SKU。商品名/颜色/对应视频须按真实商品ID核对，未知材质不推测。
+3. 上传后核对文件名、SKU/型号、图片及视频预览；在本例填写完整提示词，一次发送首次制片要求。
+
+**Input（B19）**
+
+10 款新品的零散视频素材：包含商品正面、背面、细节等拍摄内容，不同款式的素材完整程度可能不同。
+10 款商品图片：每款至少一张清晰正面图，部分提供侧面、背面和细节图。
+10 款产品 SKU 对照表：商品名称、颜色、版型、长度、材质、设计特点和对应素材文件名。
+品牌 Logo、品牌视觉风格参考、1–2 张参考成品图或视频。
+AI 女模形象参考图。
+目标渠道：Shopify 店铺商品详情页。
+
+**首次 Prompt（B20）**
+
+```text
+我是一家 Shopify 女装独立站的运营，最近有 10 款女装新品需要上架，但目前只有一些零散的商品图片和拍摄视频，没有完整的真人模特展示素材。
+我希望你根据上传的商品素材，帮我一次性制作 10 款女装的 AI 模特上身展示图，以及每款对应的一条 5–10 秒商品展示视频，用于 Shopify 商品详情页。
+具体要求：
+1. 先整理商品和素材
+请先查看我上传的全部素材，根据 SKU 对照表，将图片、视频和商品信息正确匹配到对应的 10 款服装，确保不会把不同款式的素材混在一起。
+
+2. 制作 AI 模特上身图
+根据提供的 AI 女模参考图，让同一位 AI 女模分别穿上这 10 款服装，每款生成一张清晰的全身展示图。
+要求：
+服装的颜色、版型、长度、领口、袖子、印花等尽量与原商品一致。
+不要随意改变服装设计，也不要添加原商品没有的细节。
+模特形象、背景、光线和整体拍摄风格保持统一。
+图片要清晰、自然，重点展示服装本身。
+图片优先使用 4:5 比例。
+
+3. 制作商品展示视频
+基于每款服装的 AI 模特上身图和已有商品素材，分别制作一条 5–10 秒的展示视频。
+要求：
+模特先正面展示服装，再通过自然的站姿变化、侧身或转身动作展示服装。
+尽量展示服装整体版型、穿着效果和重要设计细节。
+模特动作自然，不要出现手脚变形、衣服扭曲等明显问题。
+10 款视频的模特、背景、光线和整体风格保持一致。
+每条视频中的服装必须与对应的商品图片一致。
+视频优先使用适合店铺商品页的 4:5 比例。
+
+4. 其他要求
+每款商品单独生成图片和视频，不要把 10 款混成一条视频。
+如果某款商品素材不足，请告诉我缺少什么，不要自行编造服装设计。
+如果某项要求无法完成，请明确说明，不要直接跳过。
+最终按 SKU01–SKU10 分别整理好对应的图片和视频，方便我上传到店铺。
+
+请尽可能完成整个制作流程。
+```
+
+**首稿预期（B21）**
+
+10 款新品各生成一张 AI 女模上身图和一条 5–10 秒展示视频，共 20 个成品。
+要求商品不混淆、服装外观准确、模特及画面风格统一、图片和视频能够一一对应
+
+**人工干预假设 1：素材调整（B22）**
+
+```text
+SKU03 生成的模特上身图和展示视频没有正确还原服装细节，部分镜头与实际产品不符。请重新检索 SKU03 对应的正面、侧面和背面素材，优先使用能够清晰展示服装整体版型和细节的素材，重新生成这款产品的上身图及视频。其他 9 款商品保持不变。
+```
+
+**人工干预假设 2：精准修改（B23）**
+
+```text
+SKU05 的展示视频中模特动作太快，无法看清服装整体版型。请仅将这条视频调整为 8 秒，前 3 秒展示正面全身，中间 3 秒缓慢转身展示侧面，最后 2 秒突出服装细节。保持原有模特形象、服装和背景风格不变，其他 SKU 的图片和视频不要修改。
+```
+
+**人工干预假设 3：风格统一（B24）**
+
+```text
+目前生成的 10 款商品图片和视频，模特长相、背景、光线和画面风格不太一致，放在同一个店铺里看起来不够统一。
+请以 SKU01 的模特形象和画面风格为参考，将其他 9 款商品统一成相同的模特、背景和拍摄风格。
+不要改变各款服装本身的设计，并确保每款商品的图片和视频看起来是同一套风格。
+```
+
+**人工干预假设 4：AI补充镜头（B25）**
+
+```text
+SKU10 目前只有正面服装图片和正面拍摄视频，但我希望 AI 模特能够完成一个转身动作，展示服装背面效果。请判断现有素材是否足以准确生成背面设计。如果无法确认，请明确告诉我还需要补充哪些素材，不要自行编造服装背面的结构和细节。同时尽可能基于现有素材完成可用的上身图和展示视频。
+```
+
+**Output（B26）**
+
+10 款 SKU 分别交付：
+10 张 AI 女模上身展示图。
+10 条对应的 5–10 秒商品展示视频。
+商品款式、颜色、版型和主要设计细节准确。
+全部图片与视频的模特形象、背景、光线和整体风格统一。
+每款商品的图片和视频一致，不混淆、不遗漏。
+支持在 CinLink 内继续修改，最终能够分别导出并用于 Shopify 商品详情页。
+
+执行与预期核验：
+
+1. 首次任务结束后，逐一核验原表首稿数量、时长、比例、产品/人物/字幕/声音和可编辑交付；下载或实际播放核验，不能只看完成状态。
+2. 对四轮修改，先确认目标版本与原表假设是否匹配，再一次提交该轮完整原提示词；补槽记录问题和填写值，沿该轮原任务继续。
+3. 每轮核验指定修改真实生效，其余版本、其他SKU、非目标镜头/字幕/音乐保持；对照源素材检查无串料、无编造。
+4. 按Output核验最终交付和可导出性；失败截图保存本批目录，依赖前置失败导致未执行的轮次单列。
+
+
+<a id="icp-ec-03"></a>
+
+### ICP-EC-03：品牌的社媒运营岗
+
+原表定位：电商场景!A32:B46；首次提示词 B35。
+
+前置操作：
+
+1. 登录生产环境，在本批专用项目中新建本例独立会话。
+2. 准备300秒、16:9的产品介绍测试输入，含真实产品展示/讲解、英语字幕与品牌结尾；保留ADO Logo和产品事实。该输入是在本机从真实公开素材预制，不能计为CinLink生成成果。
+3. 上传后核对文件名、SKU/型号、图片及视频预览；在本例填写完整提示词，一次发送首次制片要求。
+
+**Input（B34）**
+
+一条 5分钟、16:9 的横版产品介绍视频，包含产品展示、功能演示、字幕和品牌结尾。
+产品基本信息和品牌 Logo（如原视频中没有）
+目标渠道：Instagram Reels、TikTok、Shopify 商品详情页
+
+**首次 Prompt（B35）**
+
+```text
+我是一名品牌社媒运营，现在有一条已经制作好的 5分钟的横版产品视频，希望你帮我改成适合不同平台的三个版本：
+A：Instagram Reels 版本
+调整成 9:16 竖屏，时长控制在 20–30 秒。
+保留原视频中最好的产品展示镜头和主要卖点。
+保持品牌原有的画面风格，整体看起来简洁、精致。
+调整字幕和产品位置，确保竖屏下都能完整看到。
+
+B：TikTok 版本
+调整成 9:16 竖屏，时长控制在 15–20 秒。
+开头 2–3 秒直接展示产品最吸引人的功能或使用效果。
+适当加快剪辑节奏，删掉不重要的内容。
+添加清晰的英语字幕和结尾 CTA。
+
+C：Shopify 商品详情页版本
+
+保留 16:9 横屏，时长控制在 25–30 秒。
+重点展示产品外观、主要功能和实际使用过程。
+保留必要的产品介绍和品牌信息。
+即使静音播放，也能通过画面和文字看懂产品的主要特点。
+
+其他要求：
+请优先使用原视频中的真实画面，不要随意改变产品外观和功能。
+横屏转竖屏时，尽量保证产品主体完整，不要把产品的重要部分裁掉。
+如果原画面不适合直接裁成竖屏，可以尝试用 AI 补充缺失的背景，让画面看起来自然，但不要改变产品本身。
+三个版本分别制作，保留各自适合的平台风格，并支持后续单独修改和导出。
+```
+
+**首稿预期（B36）**
+
+三条适合不同渠道的视频初稿：
+
+A：一条 20–30 秒的 9:16 Instagram Reels 视频。
+B：一条 15–20 秒的 9:16 TikTok 视频。
+C：一条 25–30 秒的 16:9 Shopify 商品详情页视频。
+三个版本的画面比例正确、产品展示完整、字幕清晰，并且内容符合各自平台的使用场景。
+
+**人工干预假设 1：画面调整（B37）**
+
+```text
+Reels 版本里有几个产品展示镜头被裁掉了一部分，导致产品看起来不完整。请重新调整这些镜头的画面位置和大小，让产品能够完整显示。如果竖屏空间不够，可以尝试用 AI 补充周围的背景。保持产品本身不变，其他已经正常的镜头不要修改。
+```
+
+**人工干预假设 2：AI 补充画面纠错（B38）**
+
+```text
+TikTok 版本有一个镜头使用 AI 补充了背景，但生成的画面出现了原视频中没有的产品配件，产品外观也和真实商品不太一样。请重新对照原视频，修正这部分画面。AI 只能补充周围环境，不能随意改变产品的颜色、外观和配件。如果无法准确补全，请使用原画面搭配模糊背景等方式，保证产品本身真实。
+```
+
+**人工干预假设 3：精准修改（B39）**
+
+```text
+TikTok 版本的开头不够吸引人，而且整体节奏有点慢。请把原视频中最能体现产品使用效果的镜头放到前 3 秒，并删除部分不重要的介绍，将视频控制在 15 秒左右。Reels 和 Shopify 两个版本保持不变。
+```
+
+**人工干预假设 4：字幕和画面位置调整（B40）**
+
+```text
+Reels 和 TikTok 版本的部分字幕太靠下，发布后可能会被平台的按钮和文字挡住。另外，部分镜头的产品主体也比较靠边。
+请分别调整这两个版本的字幕和产品位置，让重要内容完整显示在画面中间的安全区域。不要改变视频原本的内容和剪辑顺序，Shopify 版本保持不变。
+```
+
+**Output（B41）**
+
+三条可分别用于 Instagram Reels、TikTok 和 Shopify 商品详情页的视频：
+
+Reels：20–30 秒、9:16，画面完整，品牌风格统一。
+TikTok：15–20 秒、9:16，开头吸引人，节奏紧凑。
+Shopify：25–30 秒、16:9，清楚展示产品及主要功能。
+三条视频的产品外观和信息准确，没有明显的画面裁切、AI 生成错误或字幕遮挡问题。
+所有版本可以在 CinLink 内单独修改并正常导出。
+
+执行与预期核验：
+
+1. 首次任务结束后，逐一核验原表首稿数量、时长、比例、产品/人物/字幕/声音和可编辑交付；下载或实际播放核验，不能只看完成状态。
+2. 对四轮修改，先确认目标版本与原表假设是否匹配，再一次提交该轮完整原提示词；补槽记录问题和填写值，沿该轮原任务继续。
+3. 每轮核验指定修改真实生效，其余版本、其他SKU、非目标镜头/字幕/音乐保持；对照源素材检查无串料、无编造。
+4. 按Output核验最终交付和可导出性；失败截图保存本批目录，依赖前置失败导致未执行的轮次单列。
+
+
+<a id="icp-ec-04"></a>
+
+### ICP-EC-04：准备进军墨西哥市场的自行车DTC品牌运营
+
+原表定位：电商场景!A47:B61；首次提示词 B50。
+
+前置操作：
+
+1. 登录生产环境，在本批专用项目中新建本例独立会话。
+2. 准备35秒、9:16的英语产品广告测试输入，包含英语原声、烧录英语字幕、独立英语卖点字样和Shop Now CTA、背景音乐。品牌及型号ADO/Air 20 Ultra不翻译；输入是本机从真实公开素材预制，保留音乐署名和来源。
+3. 上传后核对文件名、SKU/型号、图片及视频预览；在本例填写完整提示词，一次发送首次制片要求。
+
+**Input（B49）**
+
+一条 30–40 秒、9:16 的英语产品广告，包含英语配音、英语字幕（原视频中部分英语文字已经直接加在画面上，不能简单关闭，用来测试 AI 能否替换）、产品展示、背景音乐和品牌结尾。
+原视频英语文案及产品 Selling Points，方便检查翻译是否准确（如有，没有也行）
+告知AI 品牌 Logo、产品名称及不能翻译的品牌词汇。
+告知AI 目标市场：墨西哥，使用当地习惯的西班牙语
+
+**首次 Prompt（B50）**
+
+```text
+我是一名 DTC 电动自行车品牌的海外营销运营，现在需要把上传的英语产品广告制作成适合墨西哥市场的西班牙语版本。
+请直接使用原视频的画面，帮我完成以下工作：
+将视频中的英语配音翻译成自然、符合墨西哥用户表达习惯的西班牙语，并替换成西语配音。声音自然，语速不要太快，不需要模仿原配音者的声音。
+将原来的英语字幕全部替换成西班牙语字幕，确保翻译准确，字幕出现的时间和配音一致。
+将画面中的除字幕以外的英语卖点文字、标题和结尾 CTA 一并替换成西班牙语，例如将“Shop Now”改成“Compra ahora”。
+尽量保留原来的产品镜头、剪辑顺序、背景音乐和品牌风格，不要随意改变产品画面。
+如果西班牙语句子比英语长，可以适当调整字幕显示时间或配音速度，但要保证听起来自然，也不要让字幕挡住产品。
+产品名称、品牌名称保持原样，不要编造产品功能、续航数据、价格或促销活动。
+把背景音乐更换为符合西语市场的音乐
+
+请制作一条完整的西班牙语广告视频，时长尽量与原视频一致。
+```
+
+**首稿预期（B51）**
+
+一条 30–40 秒、9:16 的西班牙语广告视频，包含完整的西语配音、西语字幕和西语画面文字。
+
+保留原视频的产品画面、品牌风格，配音自然，字幕与声音同步，没有残留的英语文字。更换为符合西语市场的背景音乐
+
+**人工干预假设 1：翻译纠正（B52）**
+
+```text
+视频中有一处产品功能翻译错误。原视频说的是“Foldable Electric Bike”，意思是可折叠电动自行车，但西语版本翻译得不准确，让用户误以为自行车可以拆卸。请重新检查这一段的原文，将产品功能正确翻译成西班牙语，并同步修改对应的配音和字幕。其他内容不要改变。（这里如果西语看不懂，让这个任务变成翻译中文也行）
+```
+
+**人工干预假设 2：精准修改（B53）**
+
+```text
+视频结尾的西语 CTA 不太符合我们想要的表达方式。请只将结尾的“Compra ahora”修改为“Descubre más”，并同步修改结尾配音和画面文字，其他镜头、字幕、音乐和配音内容保持不变。
+```
+
+**人工干预假设 3：配音与画面同步（B54）**
+
+```text
+西语版本中有几段配音和产品展示画面对不上。例如视频已经切换到折叠功能展示，但配音还在介绍上一段内容。请调整这几段西语配音的时间，让语音介绍和对应的产品画面保持一致。不要为了赶时间把语速加得太快，也不要修改其他正常的内容。
+```
+
+**人工干预假设 4：画面英语文字替换（B55）**
+
+```text
+视频中还有几处原本就加在画面里的英语文字没有替换，例如“Long Battery Life”和“Easy to Fold”。
+请把这些英语文字替换成对应的西班牙语，并尽量保持原来的字体风格、位置和动画效果。不要让新文字挡住产品，也不要破坏文字后面的画面。
+如果无法直接替换，请告诉我，并尝试使用自然的文字遮盖等方式完成修改。
+```
+
+**Output（B56）**
+
+一条完整的 30–40 秒、9:16 西班牙语广告视频：
+
+英语配音已经替换成自然的墨西哥西班牙语配音。
+所有字幕和画面中的英语卖点文字已经替换成西语。
+西语配音、字幕与产品展示画面同步。
+品牌名称、产品信息及实际功能准确，没有错误翻译。
+保留原有产品镜头和品牌风格。
+背景音乐替换成符合西语市场风格的音乐
+可以在 CinLink 内继续修改并正常导出，用于墨西哥市场的 TikTok / Meta 广告素材测试
+
+执行与预期核验：
+
+1. 首次任务结束后，逐一核验原表首稿数量、时长、比例、产品/人物/字幕/声音和可编辑交付；下载或实际播放核验，不能只看完成状态。
+2. 对四轮修改，先确认目标版本与原表假设是否匹配，再一次提交该轮完整原提示词；补槽记录问题和填写值，沿该轮原任务继续。
+3. 每轮核验指定修改真实生效，其余版本、其他SKU、非目标镜头/字幕/音乐保持；对照源素材检查无串料、无编造。
+4. 按Output核验最终交付和可导出性；失败截图保存本批目录，依赖前置失败导致未执行的轮次单列。
+
+
+<a id="icp-ec-05"></a>
+
+### ICP-EC-05：Amazon 美国站手持吸尘器小家电drop shipping 卖家
+
+原表定位：电商场景!A62:B74；首次提示词 B65。
+
+前置操作：
+
+1. 登录生产环境，在本批专用项目中新建本例独立会话。
+2. 准备BLACK+DECKER HHVK515JP07的5张官方同款图片（整体/侧面、配件、吸头、集尘盒、手持使用）、已确认卖点和兼容图片格式Logo；不提供任何现成视频及背面/底部图。正文明确禁止编造吸力、续航和折扣。
+3. 上传后核对文件名、SKU/型号、图片及视频预览；在本例填写完整提示词，一次发送首次制片要求。
+
+**Input（B64）**
+
+5 张产品图片：产品正面、侧面、吸头特写、集尘盒特写、手持展示图。
+商品卖点资料：产品功能、尺寸、配件、使用方式等已确认的信息。
+品牌 Logo、1–2 条参考广告。
+目标渠道：Amazon 美国站 Sponsored Brands Video 广告，16:9 横屏。
+特别设置：没有任何现成视频，也没有产品背面和底部的照片，用来测试 AI 在素材不够时会怎么处理。
+
+**首次 Prompt（B65）**
+
+```text
+我是一名 Amazon 美国站的手持吸尘器卖家，现在只有几张商品图片和产品介绍，没有拍摄好的产品视频。
+
+我希望你根据现有素材，帮我制作一条 20 秒、16:9 的产品广告视频。
+
+具体要求：
+先查看上传的商品图片和产品介绍，了解产品的真实外观、配件和主要功能。
+视频开头展示产品整体外观，可以让静态图片中的产品产生自然的镜头运动，让用户看清产品。
+根据现有图片，尝试用 AI 生成模特（或手部模特）手持产品在桌面清洁碎屑、手持使用等场景。如果素材无法确认实际使用方式，请先告诉我，不要随意生成不符合产品真实功能的画面。
+中间重点展示产品吸头、集尘盒等已经提供素材的部分，让用户了解产品的特点。
+添加简短的英语卖点文字，最后展示品牌 Logo。
+整体风格简洁、真实，适合 Amazon 商品广告。即使没有声音，用户也能看懂视频内容。
+生成画面中的产品外观、颜色、按钮、吸头和配件必须与真实商品一致，不要添加不存在的结构。
+不要编造吸力数据、续航时间或其他未经证实的产品效果。
+请尽量使用现有图片生成需要的动态画面，并完成整条广告。如果某些镜头无法准确生成，请告诉我原因，并尝试其他不改变真实产品的展示方式。
+```
+
+**首稿预期（B66）**
+
+一条 20 秒、16:9 的产品广告视频。
+
+包含产品整体展示、AI 生成的动态镜头、AI生成的模特手持产品展示的动态镜头、产品细节展示和品牌收尾。画面中的产品外观与真实商品一致，不能出现明显变形、错误配件或虚假的功能展示。
+
+**人工干预假设 1：产品外观修正（B67）**
+
+```text
+视频中 AI 生成的吸尘器和原始图片不太一样，产品手柄形状发生了变化，侧面的按钮也不见了。
+请重新对照上传的产品图片，修正这几个画面，确保吸尘器外观和真实产品一致。已经正确的其他镜头不要修改。
+```
+
+**人工干预假设 2：AI使用场景修正（B68）**
+
+```text
+目前生成的桌面清洁画面不太自然，吸尘器的移动方式有问题，而且使用过程中吸头形状发生了变化。
+请重新生成这段使用画面，让产品移动更自然，同时确保吸头和机身外观保持不变。其他产品展示镜头不要修改。
+如果无法准确生成清洁过程，可以改成手持产品展示或产品细节镜头，不要生成不真实的使用效果。
+```
+
+**人工干预假设 3：商品信息纠正（B69）**
+
+```text
+视频里出现了“Up to 60 Minutes Runtime”的卖点，但我提供的商品资料里没有确认这个续航数据。
+请删除这个说法，改成商品资料中已经确认的卖点，例如“Detachable Dust Cup”
+只修改相关的文字和画面，不要改变其他镜头。
+```
+
+**人工干预假设 4：素材不足时的AI补充（B70）**
+
+```text
+我希望增加一个吸尘器背面和底部的旋转展示镜头，但目前上传的素材里没有这两个角度的照片。
+请先判断能不能根据现有素材准确生成这些画面。如果无法确定背面结构和底部设计，请告诉我还需要补充什么图片，不要自己编造接口、按钮或其他结构。
+如果无法准确生成完整旋转镜头，请尝试只用已有的正面和侧面图片制作自然的动态展示效果。
+```
+
+**Output（B71）**
+
+一条完整的 20 秒、16:9 Amazon 产品广告视频：
+使用商品图片生成动态展示画面以及AI生成模特手持产品展示使用的动态画面
+包含产品外观、细节及能够真实还原的使用场景。
+商品外观、结构、配件和卖点准确，没有明显的 AI 生成错误。
+视频节奏自然，英语文字清楚，没有编造商品功能。
+即使静音播放，也能看懂产品特点。
+可以在 CinLink 内修改并正常导出，用于 Amazon 广告素材审核。
+
+执行与预期核验：
+
+1. 首次任务结束后，逐一核验原表首稿数量、时长、比例、产品/人物/字幕/声音和可编辑交付；下载或实际播放核验，不能只看完成状态。
+2. 对四轮修改，先确认目标版本与原表假设是否匹配，再一次提交该轮完整原提示词；补槽记录问题和填写值，沿该轮原任务继续。
+3. 每轮核验指定修改真实生效，其余版本、其他SKU、非目标镜头/字幕/音乐保持；对照源素材检查无串料、无编造。
+4. 按Output核验最终交付和可导出性；失败截图保存本批目录，依赖前置失败导致未执行的轮次单列。
+<!-- /ICP-EC-DINGTALK-20261116 -->

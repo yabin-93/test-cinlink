@@ -6,11 +6,11 @@ automation_tag: "@ERYE-196"
 case_prefix: ERYE196
 updated: 2026-11-05
 comment_id: "23563211"
-execution_status: "001/003 Passed; 002/004 NotApplicable; 005-134 Not Run; no current Blocked"
+execution_status: "2026-11-11 In Progress; {'Passed': 3, 'Not Applicable': 2, 'Failed': 12, 'Not Run': 98, 'Blocked': 19}"
 execution_report: results-001-005-20261105.md
 latest_retest_report: results-001-rerun-20261105.md
 acceptance_001: "用户2026-11-05确认按可观察业务结果验收，不验证字段映射或服务端历史实现"
-latest_execution_report: business-acceptance-update-20261105.md
+latest_execution_report: execution-status-20261111.md
 acceptance_002: "用户2026-11-05确认：原范围分页属于接口专项，本轮页面验收不适用；撤销缺少UI入口的阻塞，保留列表补充核验通过证据"
 acceptance_003: "用户2026-11-05明确按页面业务结果验收：跨标签页改文后的列表更新及刷新一致性，不验证游标或开发实现"
 acceptance_004: "用户2026-11-05明确以最新设计稿为准，004原引用标签/移除交互本轮不适用；保留观察与截图，不计通过或产品执行失败；另记需求/设计差异FWXC-315，不改变本轮不适用状态"

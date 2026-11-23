@@ -231,284 +231,1661 @@ ERYE160-076:
 
 # ERYE-199 编辑器能力
 ERYE199-001:
-  status: PLAN
-  script: ""
+  status: AUTO
+  script: "tools/editor/erye199/cases.mjs#001"
+  automation_command: "npm run test:editor:199 -- --base-url https://app.cinlink.ai --cases 001"
+  execution_status: "Passed"
+  execution_report: "docs/cases/requirements/ERYE-199/results-automation-001-010-production-20261113.md"
+  execution_note: "四类对象、四个画面点、原声及刷新恢复断言通过"
+  definition_revision: 2
+  previous_execution_status: "Blocked"
+  previous_execution_report: "docs/cases/requirements/ERYE-199/results-production-001-005-20261113.md#erye199-001"
+  execution_batch: "erye199-auto-2026-11-13T08-03-53-949Z"
 ERYE199-002:
-  status: PLAN
-  script: ""
+  status: AUTO
+  script: "tools/editor/erye199/cases.mjs#002"
+  automation_command: "npm run test:editor:199 -- --base-url https://app.cinlink.ai --cases 002"
+  execution_status: "Passed"
+  execution_report: "docs/cases/requirements/ERYE-199/results-failed-ten-rerun-production-20261116.md"
+  execution_note: "29.97fps新工程在页面1秒处分割，实际边界1.0010000000000001秒，等于30个30000/1001帧；关联范围及刷新保持，原帧对齐错误未复现。"
+  defect_id: "FWXC-479"
+  defect_url: "https://devops.aliyun.com/projex/project/1e401ac99539c3999e00e40006/bug#openWorkitemIdentifier=9ba270e32cb1770640a69d088f"
+  defect_sync_verified: true
+  defect_screenshots: 2
+  defect_attachments: 4
+  execution_batch: "erye199-auto-2026-11-13T07-52-54-814Z"
+  latest_regression_report: "docs/cases/requirements/ERYE-199/results-failed-ten-rerun-production-20261116.md"
+  reported_defect_reproduced: false
 ERYE199-003:
-  status: PLAN
-  script: ""
+  status: AUTO
+  script: "tools/editor/erye199/cases.mjs#003"
+  automation_command: "npm run test:editor:199 -- --base-url https://app.cinlink.ai --cases 003"
+  execution_status: "Passed"
+  execution_report: "docs/cases/requirements/ERYE-199/results-automation-001-010-production-20261113.md"
+  execution_note: "VFR独立PTS、跨帧率区间连续播放及刷新恢复通过"
+  definition_revision: 2
+  previous_execution_status: "Blocked"
+  previous_execution_report: "docs/cases/requirements/ERYE-199/results-production-001-005-20261113.md#erye199-003"
+  execution_batch: "erye199-auto-2026-11-13T08-03-53-949Z"
 ERYE199-004:
-  status: PLAN
-  script: ""
+  status: AUTO
+  script: "tools/editor/erye199/cases.mjs#004"
+  automation_command: "npm run test:editor:199 -- --base-url https://app.cinlink.ai --cases 004"
+  execution_status: "Passed"
+  execution_report: "docs/cases/requirements/ERYE-199/results-automation-001-010-production-20261113.md"
+  execution_note: "10秒源片2倍速时间线5秒，2秒映射源4秒"
+  execution_batch: "erye199-auto-2026-11-13T07-52-54-814Z"
 ERYE199-005:
-  status: PLAN
-  script: ""
+  status: AUTO
+  script: "tools/editor/erye199/cases.mjs#005"
+  automation_command: "npm run test:editor:199 -- --base-url https://app.cinlink.ai --cases 005"
+  execution_status: "Passed"
+  execution_report: "docs/cases/requirements/ERYE-199/results-automation-001-010-production-20261113.md"
+  execution_note: "页面裁头、撤销、重做及刷新后的源范围/原声正确"
+  definition_revision: 2
+  previous_execution_status: "Blocked"
+  previous_execution_report: "docs/cases/requirements/ERYE-199/results-production-001-005-20261113.md#erye199-005"
+  execution_batch: "erye199-auto-2026-11-13T07-52-54-814Z"
 ERYE199-006:
-  status: PLAN
-  script: ""
+  status: AUTO
+  script: "tools/editor/erye199/cases.mjs#006"
+  automation_command: "npm run test:editor:199 -- --base-url https://app.cinlink.ai --cases 006"
+  execution_status: "Passed"
+  execution_report: "docs/cases/requirements/ERYE-199/results-006-v2-current-transform-production-20261116.md"
+  execution_note: "006 v2：中心序列像素(400,200)、50%等比缩放、顺时针30度在普通预览/全屏/刷新后均正确；实际播放正常，原片/源范围/10秒时间线/关联原声未改。独立蒙版、局部锚点及输入局部坐标跳过。"
+  execution_batch: "erye199-006-v2-20261116"
+  definition_revision: 2
+  skipped_scope: "独立蒙版/局部锚点/输入局部坐标；旧完整范围仍未覆盖"
 ERYE199-007:
-  status: PLAN
-  script: ""
+  status: AUTO
+  script: "tools/editor/erye199/cases.mjs#007"
+  automation_command: "npm run test:editor:199 -- --base-url https://app.cinlink.ai --cases 007"
+  execution_status: "Passed"
+  execution_report: "docs/cases/requirements/ERYE-199/results-failed-ten-rerun-production-20261116.md"
+  execution_note: "同一新工程选中第二视频片段并打开媒体，重开后第二片段选择和媒体面板均恢复；原状态丢失未复现。"
+  execution_batch: "erye199-auto-2026-11-13T07-47-31-582Z"
+  defect_id: "FWXC-485"
+  defect_url: "https://devops.aliyun.com/projex/project/1e401ac99539c3999e00e40006/bug#openWorkitemIdentifier=3fbd5d5e667e7484e372ef0f6e"
+  defect_status: "🤔AI提缺陷"
+  defect_sync_verified: true
+  defect_screenshots: 2
+  defect_attachments: 4
+  latest_regression_report: "docs/cases/requirements/ERYE-199/results-failed-ten-rerun-production-20261116.md"
+  reported_defect_reproduced: false
 ERYE199-008:
-  status: PLAN
-  script: ""
+  status: AUTO
+  script: "tools/editor/erye199/cases.mjs#008"
+  automation_command: "npm run test:editor:199 -- --base-url https://app.cinlink.ai --cases 008"
+  execution_status: "Passed"
+  execution_report: "docs/cases/requirements/ERYE-199/revision-008-registration-scope-20261118.md"
+  execution_note: "按2026-11-18 v2口径，三类素材登记与放入分离、对应轨道放入及撤销放入通过；基于2026-11-16既有证据校正，未重跑。素材登记阶段撤销可用性不作判定；FWXC-486已撤回为不是问题。"
+  execution_batch: "erye199-failed-ten-rerun-20261116"
+  defect_id: "FWXC-486"
+  defect_url: "https://devops.aliyun.com/projex/project/1e401ac99539c3999e00e40006/bug#openWorkitemIdentifier=1f7044b8c2c88b7d275ef4f643"
+  defect_status: "不是问题"
+  defect_sync_verified: true
+  defect_screenshots: 4
+  defect_attachments: 7
+  latest_regression_report: "docs/cases/requirements/ERYE-199/results-failed-ten-rerun-production-20261116.md"
+  reported_defect_reproduced: false
+  acceptance_revision: "008-registration-placement-v2-20261118"
+  execution_reassessed_without_rerun: true
+  evidence_execution_date: "2026-11-16"
+
 ERYE199-009:
-  status: PLAN
-  script: ""
+  status: AUTO
+  script: "tools/editor/erye199/cases.mjs#009"
+  automation_command: "npm run test:editor:199 -- --base-url https://app.cinlink.ai --cases 009"
+  execution_status: "Passed"
+  execution_report: "docs/cases/requirements/ERYE-199/results-automation-001-010-production-20261113.md"
+  execution_note: "同源两实例效果隔离且刷新保持"
+  execution_batch: "erye199-auto-2026-11-13T07-58-52-369Z"
 ERYE199-010:
-  status: PLAN
-  script: ""
+  status: AUTO
+  script: "tools/editor/erye199/cases.mjs#010"
+  automation_command: "npm run test:editor:199 -- --base-url https://app.cinlink.ai --cases 010"
+  execution_status: "Failed"
+  execution_report: "docs/cases/requirements/ERYE-199/results-failed-ten-rerun-production-20261116.md"
+  execution_note: "B拖到原视频轨5秒仍新增第二视频轨，A保留0～10秒、B位于新轨5～15秒，未同轨覆盖。"
+  execution_batch: "erye199-auto-2026-11-13T07-47-31-582Z"
+  defect_id: "FWXC-487"
+  defect_url: "https://devops.aliyun.com/projex/project/1e401ac99539c3999e00e40006/bug#openWorkitemIdentifier=610e1b8f4457eb703db0293ab1"
+  defect_status: "🤔AI提缺陷"
+  defect_sync_verified: true
+  defect_screenshots: 1
+  defect_attachments: 4
+  latest_regression_report: "docs/cases/requirements/ERYE-199/results-failed-ten-rerun-production-20261116.md"
+  reported_defect_reproduced: true
 ERYE199-011:
-  status: PLAN
-  script: ""
+  status: AUTO
+  script: "tools/editor/erye199/cases-current-v2.mjs#011"
+  automation_command: "npm run test:editor:199 -- --base-url https://app.cinlink.ai --cases 011"
+  execution_status: "Passed"
+  execution_report: "docs/cases/requirements/ERYE-199/results-nine-v2-production-20261116.md"
+  definition_revision: 2
+  execution_note: "A及已有关联原声从0～10移至2～12秒；M源0～2秒/时间线8～10秒/30%不变，空档与原片映射、实际播放和刷新正确。"
+  definition_report: "docs/cases/requirements/ERYE-199/revision-na31-current-capabilities-20261116.md"
+
 ERYE199-012:
-  status: PLAN
-  script: ""
+  status: AUTO
+  script: "tools/editor/erye199/cases-011-015.mjs#012"
+  automation_command: "npm run test:editor:199 -- --base-url https://app.cinlink.ai --cases 012"
+  execution_status: "Blocked"
+  execution_report: "docs/cases/requirements/ERYE-199/results-failed-ten-rerun-production-20261116.md"
+  execution_note: "普通移动B到7秒正确，Delete删除A后B仍7～12秒，原自动前移缺陷未复现；应用明确不支持独立波纹删除空隙，后半步骤未完成，整例Blocked。"
+  execution_batch: "erye199-auto-2026-11-13T08-43-24-066Z"
+  release_scope: "applicable-current-version"
+  defect_id: "FWXC-491"
+  defect_url: "https://devops.aliyun.com/projex/project/1e401ac99539c3999e00e40006/bug#openWorkitemIdentifier=759a901c1536c53599d1fd4e74"
+  defect_status: "🤔AI提缺陷"
+  defect_sync_verified: true
+  defect_screenshots: 2
+  defect_attachments: 4
+  latest_regression_report: "docs/cases/requirements/ERYE-199/results-failed-ten-rerun-production-20261116.md"
+  reported_defect_reproduced: false
 ERYE199-013:
-  status: PLAN
-  script: ""
+  status: AUTO
+  script: "tools/editor/erye199/cases-current-v2.mjs#013"
+  automation_command: "npm run test:editor:199 -- --base-url https://app.cinlink.ai --cases 013"
+  execution_status: "Passed"
+  execution_report: "docs/cases/requirements/ERYE-199/results-nine-v2-production-20261116.md"
+  definition_revision: 2
+  execution_note: "视频/关联原声0.5倍速20秒，Fixed A1～3秒和Fixed B6～8秒未拉伸；2/7秒字幕及源画面正确、4/14秒空字幕，刷新保持。"
+  definition_report: "docs/cases/requirements/ERYE-199/revision-na31-current-capabilities-20261116.md"
+
 ERYE199-014:
   status: PLAN
-  script: ""
+  script: "tools/editor/erye199/cases-011-015.mjs#014"
+  automation_command: "npm run test:editor:199 -- --base-url https://app.cinlink.ai --cases 014"
+  execution_status: "Not Applicable"
+  execution_report: "docs/cases/requirements/ERYE-199/results-version-scope-012-rerun-production-20261113.md"
+  execution_note: "本轮仅定义复核；没有真实轨道编辑锁，隐藏/静音不构成编辑锁。 恢复步骤见修订报告。"
+  execution_batch: "erye199-auto-2026-11-13T08-29-39-866Z"
+  release_scope: "deferred-current-version"
+  historical_execution_status: "Blocked"
+  definition_report: "docs/cases/requirements/ERYE-199/revision-na31-current-capabilities-20261116.md"
+  restore_preconditions: "提供可写测试工程、可用的轨道锁控件与批量移动/删除；视频轨锁定，独立音轨未锁。"
+  defect_id: "FWXC-595"
+  defect_url: "https://devops.aliyun.com/projex/project/1e401ac99539c3999e00e40006/bug#openWorkitemIdentifier=da802459f8a291e0c713adde60"
+  defect_status: "🤔AI提缺陷"
+  defect_sync_verified: true
+  defect_screenshots: 2
+  defect_attachments: 5
+
 ERYE199-015:
-  status: PLAN
-  script: ""
+  status: AUTO
+  script: "tools/editor/erye199/cases-011-015.mjs#015"
+  automation_command: "npm run test:editor:199 -- --base-url https://app.cinlink.ai --cases 015"
+  execution_status: "Passed"
+  execution_report: "docs/cases/requirements/ERYE-199/results-015-v2-visibility-production-20261113.md"
+  execution_note: "015 v2 Passed：点击时间轨前方图标，隐藏/显示画面、原声静音/启用均正确；隐藏静音及恢复后刷新保持；片段、原片引用和源范围未删除或串改。不包含solo、导出隔离。"
+  execution_batch: "erye199-auto-2026-11-13T09-20-46-570Z"
+  release_scope: "applicable-current-version-v2"
+  historical_execution_status: "Blocked"
+  definition_revision: 2
+  previous_execution_status: "Not Applicable（旧版完整范围）"
 ERYE199-016:
   status: PLAN
-  script: ""
+  script: "tools/editor/erye199/cases-016-020.mjs#016"
+  automation_command: "npm run test:editor:199 -- --base-url https://app.cinlink.ai --cases 016"
+  execution_status: "Not Applicable"
+  execution_report: "docs/cases/requirements/ERYE-199/scope-skip-016-018-20261113.md"
+  execution_note: "本轮仅定义复核；没有真实可编辑子序列及父实例入口，不能用普通新工程或成片替代。 恢复步骤见修订报告。"
+  execution_batch: "erye199-auto-2026-11-13T09-00-00-686Z"
+  release_scope: "deferred-current-version"
+  historical_execution_status: "Blocked"
+  defect_id: "FWXC-509"
+  defect_url: "https://devops.aliyun.com/projex/project/1e401ac99539c3999e00e40006/bug#openWorkitemIdentifier=5ceb3b7e12534e1bd3b98d8e28"
+  defect_status: "🤔AI提缺陷"
+  defect_sync_verified: true
+  defect_screenshots: 2
+  defect_attachments: 5
+  definition_report: "docs/cases/requirements/ERYE-199/revision-na31-current-capabilities-20261116.md"
+  restore_preconditions: "提供真实子序列创建与父实例回放入口；V/原声0～10秒、字幕1～3/6～8秒选中，图片0～5秒不选。"
+
 ERYE199-017:
-  status: PLAN
-  script: ""
+  status: AUTO
+  script: "tools/editor/erye199/cases-current-v2.mjs#017"
+  automation_command: "npm run test:editor:199 -- --base-url https://app.cinlink.ai --cases 017"
+  execution_status: "Failed"
+  execution_report: "docs/cases/requirements/ERYE-199/results-nine-v2-production-20261116.md"
+  definition_revision: 2
+  execution_note: "仅裁短A后，B和关联原声B被自动从5秒移到3秒，3～5秒空隙被闭合；4秒已播放B源1秒，7秒为B源4秒，刷新后仍错误。A/B源引用未串换，失败点是B被连带移动。"
+  definition_report: "docs/cases/requirements/ERYE-199/revision-na31-current-capabilities-20261116.md"
+  defect_id: "FWXC-590"
+  defect_url: "https://devops.aliyun.com/projex/project/1e401ac99539c3999e00e40006/bug#openWorkitemIdentifier=df4df4dc44a01c0fa27b75c627"
+  defect_status: "🤔AI提缺陷"
+  defect_sync_verified: true
+  defect_screenshots: 3
+  defect_attachments: 5
+  historical_defect_id: "FWXC-510"
+
 ERYE199-018:
   status: PLAN
-  script: ""
+  script: "tools/editor/erye199/cases-016-020.mjs#018"
+  automation_command: "npm run test:editor:199 -- --base-url https://app.cinlink.ai --cases 018"
+  execution_status: "Not Applicable"
+  execution_report: "docs/cases/requirements/ERYE-199/scope-skip-016-018-20261113.md"
+  execution_note: "本轮仅定义复核；真实子序列及嵌套引用前置缺失，参数校验错误不能替代真实引用验证。 恢复步骤见修订报告。"
+  execution_batch: "erye199-auto-2026-11-13T09-00-00-686Z"
+  release_scope: "deferred-current-version"
+  historical_execution_status: "Blocked"
+  defect_id: "FWXC-511"
+  defect_url: "https://devops.aliyun.com/projex/project/1e401ac99539c3999e00e40006/bug#openWorkitemIdentifier=13a898129511a8a2adf1019ddd"
+  defect_status: "🤔AI提缺陷"
+  defect_sync_verified: true
+  defect_screenshots: 1
+  defect_attachments: 4
+  definition_report: "docs/cases/requirements/ERYE-199/revision-na31-current-capabilities-20261116.md"
+  restore_preconditions: "先恢复016原子序列目标；提供固定源范围父实例、可增减长子序列与嵌套操作入口。"
+
 ERYE199-019:
-  status: PLAN
-  script: ""
+  status: AUTO
+  script: "tools/editor/erye199/cases-016-020.mjs#019"
+  automation_command: "npm run test:editor:199 -- --base-url https://app.cinlink.ai --cases 019"
+  execution_status: "Passed"
+  execution_report: "docs/cases/requirements/ERYE-199/results-019-v2-static-transform-production-20261113.md"
+  execution_note: "019 v2 Passed：中心(400,200)、等比缩放60%、旋转15度、不透明度50%生效并刷新保持；A原片引用/源范围/速度、背景B及两条原声均未串改。未实现属性已移出当前步骤。"
+  execution_batch: "erye199-auto-2026-11-13T10-14-49-536Z"
+  definition_revision: 2
+  historical_execution_status: "Blocked"
+  release_scope: "applicable-current-version-v2"
 ERYE199-020:
-  status: PLAN
-  script: ""
+  status: AUTO
+  script: "tools/editor/erye199/cases-current-v2.mjs#020"
+  automation_command: "npm run test:editor:199 -- --base-url https://app.cinlink.ai --cases 020"
+  execution_status: "Passed"
+  execution_report: "docs/cases/requirements/ERYE-199/results-nine-v2-production-20261116.md"
+  definition_revision: 2
+  execution_note: "播放头5秒提交静态50%后，1/5/9秒均同一作用范围，跨4～6秒无额外动画；源/背景/原声未改、刷新保持。"
+  definition_report: "docs/cases/requirements/ERYE-199/revision-na31-current-capabilities-20261116.md"
+
 ERYE199-021:
   status: PLAN
   script: ""
+  execution_status: "Not Applicable"
+  execution_report: "docs/cases/requirements/ERYE-199/results-021-049-manual-production-20261113.md"
+  execution_note: "本轮仅定义复核；没有位置动画开关及真实关键帧，不能把静态设置当通道。 恢复步骤见修订报告。"
+  execution_method: "页面执行；按用户要求暂不接入自动化"
+  requirement_gap_defect_id: "FWXC-525"
+  requirement_gap_defect_url: "https://devops.aliyun.com/projex/project/1e401ac99539c3999e00e40006/bug#openWorkitemIdentifier=1bea8a02a752c39eb065fe77f6"
+  requirement_gap_scope: "原24条未完成需求汇总；不代表收窄后的v2已执行或失败"
+  definition_report: "docs/cases/requirements/ERYE-199/revision-na31-current-capabilities-20261116.md"
+  restore_preconditions: "提供真实参数动画开关、关键帧编辑及撤销；独立V0～10秒，播放头5秒。"
+
 ERYE199-022:
   status: PLAN
   script: ""
+  execution_status: "Not Applicable"
+  execution_report: "docs/cases/requirements/ERYE-199/results-021-049-manual-production-20261113.md"
+  execution_note: "本轮仅定义复核；依赖真实关键帧和源绑定时间轴，当前不能建立目标对象。 恢复步骤见修订报告。"
+  execution_method: "页面执行；按用户要求暂不接入自动化"
+  requirement_gap_defect_id: "FWXC-525"
+  requirement_gap_defect_url: "https://devops.aliyun.com/projex/project/1e401ac99539c3999e00e40006/bug#openWorkitemIdentifier=1bea8a02a752c39eb065fe77f6"
+  requirement_gap_scope: "原24条未完成需求汇总；不代表收窄后的v2已执行或失败"
+  definition_report: "docs/cases/requirements/ERYE-199/revision-na31-current-capabilities-20261116.md"
+  restore_preconditions: "恢复真实关键帧；独立V源0～10秒，在源1秒与8秒各有可编辑关键帧。"
+
 ERYE199-023:
   status: PLAN
   script: ""
+  execution_status: "Not Applicable"
+  execution_report: "docs/cases/requirements/ERYE-199/results-021-049-manual-production-20261113.md"
+  execution_note: "本轮仅定义复核；没有工程内可编辑视频蒙版，视频批注/图片/裁剪不等同蒙版。 恢复步骤见修订报告。"
+  execution_method: "页面执行；按用户要求暂不接入自动化"
+  requirement_gap_defect_id: "FWXC-525"
+  requirement_gap_defect_url: "https://devops.aliyun.com/projex/project/1e401ac99539c3999e00e40006/bug#openWorkitemIdentifier=1bea8a02a752c39eb065fe77f6"
+  requirement_gap_scope: "原24条未完成需求汇总；不代表收窄后的v2已执行或失败"
+  definition_report: "docs/cases/requirements/ERYE-199/revision-na31-current-capabilities-20261116.md"
+  restore_preconditions: "提供矩形/椭圆/自由路径蒙版、反选、羽化/扩展/透明度与布尔运算入口；测试片段有前后景。"
+
 ERYE199-024:
   status: PLAN
   script: ""
+  execution_status: "Not Applicable"
+  execution_report: "docs/cases/requirements/ERYE-199/results-021-049-manual-production-20261113.md"
+  execution_note: "本轮仅定义复核；依赖023的真实路径蒙版与路径关键帧。 恢复步骤见修订报告。"
+  execution_method: "页面执行；按用户要求暂不接入自动化"
+  requirement_gap_defect_id: "FWXC-525"
+  requirement_gap_defect_url: "https://devops.aliyun.com/projex/project/1e401ac99539c3999e00e40006/bug#openWorkitemIdentifier=1bea8a02a752c39eb065fe77f6"
+  requirement_gap_scope: "原24条未完成需求汇总；不代表收窄后的v2已执行或失败"
+  definition_report: "docs/cases/requirements/ERYE-199/revision-na31-current-capabilities-20261116.md"
+  restore_preconditions: "真实路径蒙版可编辑，在源1秒和8秒有可区分的路径关键帧，提供点数变化策略。"
+
 ERYE199-025:
   status: PLAN
   script: ""
+  execution_status: "Not Applicable"
+  execution_report: "docs/cases/requirements/ERYE-199/results-021-049-manual-production-20261113.md"
+  execution_note: "本轮仅定义复核；没有可编辑效果栈及效果实例，不以字幕样式或水印代替。 恢复步骤见修订报告。"
+  execution_method: "页面执行；按用户要求暂不接入自动化"
+  requirement_gap_defect_id: "FWXC-525"
+  requirement_gap_defect_url: "https://devops.aliyun.com/projex/project/1e401ac99539c3999e00e40006/bug#openWorkitemIdentifier=1bea8a02a752c39eb065fe77f6"
+  requirement_gap_scope: "原24条未完成需求汇总；不代表收窄后的v2已执行或失败"
+  definition_report: "docs/cases/requirements/ERYE-199/revision-na31-current-capabilities-20261116.md"
+  restore_preconditions: "提供高斯模糊/投影/羽化/线性擦除及效果级蒙版、复制/排序/重置入口。"
+
 ERYE199-026:
   status: PLAN
   script: ""
+  execution_status: "Not Applicable"
+  execution_report: "docs/cases/requirements/ERYE-199/results-021-049-manual-production-20261113.md"
+  execution_note: "本轮仅定义复核；依赖025中两个真实可排序效果，普通轨道顺序不是效果栈顺序。 恢复步骤见修订报告。"
+  execution_method: "页面执行；按用户要求暂不接入自动化"
+  requirement_gap_defect_id: "FWXC-525"
+  requirement_gap_defect_url: "https://devops.aliyun.com/projex/project/1e401ac99539c3999e00e40006/bug#openWorkitemIdentifier=1bea8a02a752c39eb065fe77f6"
+  requirement_gap_scope: "原24条未完成需求汇总；不代表收窄后的v2已执行或失败"
+  definition_report: "docs/cases/requirements/ERYE-199/revision-na31-current-capabilities-20261116.md"
+  restore_preconditions: "两个不交换律的已支持效果同时作用同一片段，提供排序及正式导出。"
+
 ERYE199-027:
   status: PLAN
   script: ""
+  execution_status: "Not Applicable"
+  execution_report: "docs/cases/requirements/ERYE-199/results-021-049-manual-production-20261113.md"
+  execution_note: "本轮仅定义复核；没有独立Graphic组、组内元素及模板保存；水印不是Graphic组。 恢复步骤见修订报告。"
+  execution_method: "页面执行；按用户要求暂不接入自动化"
+  requirement_gap_defect_id: "FWXC-525"
+  requirement_gap_defect_url: "https://devops.aliyun.com/projex/project/1e401ac99539c3999e00e40006/bug#openWorkitemIdentifier=1bea8a02a752c39eb065fe77f6"
+  requirement_gap_scope: "原24条未完成需求汇总；不代表收窄后的v2已执行或失败"
+  definition_report: "docs/cases/requirements/ERYE-199/revision-na31-current-capabilities-20261116.md"
+  restore_preconditions: "提供含至少两个独立元素的真实Graphic组、组变换、内部顺序和可编辑模板入口。"
+
 ERYE199-028:
   status: PLAN
   script: ""
+  execution_status: "Passed"
+  execution_report: "docs/cases/requirements/ERYE-199/results-current-six-v2-production-20261116.md"
+  execution_note: "双语Source A/译文甲、Source B/译文乙全局字号20→24→20生效并刷新保持；2/7秒匹配、4秒空档；原文/时间/原声引用及其他工程内容保持。"
+  execution_method: "Ego Lite生产有头页面执行；按用户要求暂不接入自动化"
+  requirement_gap_defect_id: "FWXC-525"
+  requirement_gap_defect_url: "https://devops.aliyun.com/projex/project/1e401ac99539c3999e00e40006/bug#openWorkitemIdentifier=1bea8a02a752c39eb065fe77f6"
+  requirement_gap_scope: "原24条未完成需求汇总；不代表收窄后的v2已执行或失败"
 ERYE199-029:
   status: PLAN
   script: ""
+  execution_status: "Failed"
+  execution_report: "docs/cases/requirements/ERYE-199/results-failed-ten-rerun-production-20261116.md"
+  execution_note: "混合文字/Emoji/换行及刷新可见；原生导出报错：编辑器执行数据不符合正式 v2 协议，请保留当前工程并核对服务返回。；未从结果区取得可下载MP4，文件结果未完成核验。"
+  execution_method: "Ego Lite生产有头页面执行；按用户要求暂不接入自动化"
+  requirement_gap_defect_id: "FWXC-525"
+  requirement_gap_defect_url: "https://devops.aliyun.com/projex/project/1e401ac99539c3999e00e40006/bug#openWorkitemIdentifier=1bea8a02a752c39eb065fe77f6"
+  requirement_gap_scope: "原24条未完成需求汇总；不代表收窄后的v2已执行或失败"
+  local_defect_report: "docs/defects/ERYE199-029-047-048-native-export-protocol-production-20261116.md"
+  current_failure_cloud_sync: "Verified; shared FWXC-578"
+  defect_id: "FWXC-578"
+  defect_url: "https://devops.aliyun.com/projex/project/1e401ac99539c3999e00e40006/bug#openWorkitemIdentifier=8997db131fa05bc3a8e6e62ffe"
+  defect_status: "🤔AI提缺陷"
+  defect_sync_verified: true
+  defect_shared: true
+  defect_screenshots: 3
+  defect_attachments: 7
+  defect_case_screenshot: "docs/cases/requirements/ERYE-199/evidence-current-six-v2-production-20261116/029-failure-export-protocol.png"
+  latest_regression_report: "docs/cases/requirements/ERYE-199/results-failed-ten-rerun-production-20261116.md"
+  reported_defect_reproduced: true
 ERYE199-030:
   status: PLAN
   script: ""
+  execution_status: "Failed"
+  execution_report: "docs/cases/requirements/ERYE-199/results-failed-ten-rerun-production-20261116.md"
+  execution_note: "原生MP4导出仍报“编辑器执行数据不符合正式 v2 协议”；组合SRT+ASS/SSA请求本轮done，真实SRT已下载，两条原文/时间与源SRT一致且无样式；未交付ASS/SSA，应用未明确说明支持情况。旧Unknown or missing editor fields本轮未复现，整例因MP4及样式字幕分支未通过。"
+  execution_method: "页面执行；按用户要求暂不接入自动化"
+  defect_id: "FWXC-517"
+  defect_url: "https://devops.aliyun.com/projex/project/1e401ac99539c3999e00e40006/bug#openWorkitemIdentifier=a8dc2ee87914e60ad64d64254c"
+  defect_status: "🤔AI提缺陷"
+  defect_sync_verified: true
+  defect_screenshots: 3
+  defect_attachments: 7
+  latest_regression_report: "docs/cases/requirements/ERYE-199/results-failed-ten-rerun-production-20261116.md"
+  reported_defect_reproduced: false
 ERYE199-031:
   status: PLAN
   script: ""
+  execution_status: "Not Applicable"
+  execution_report: "docs/cases/requirements/ERYE-199/results-021-049-manual-production-20261113.md"
+  execution_note: "本轮仅定义复核；没有工程内可编辑转场对象，普通切点或渐入渐出不替代转场。 恢复步骤见修订报告。"
+  execution_method: "页面执行；按用户要求暂不接入自动化"
+  requirement_gap_defect_id: "FWXC-525"
+  requirement_gap_defect_url: "https://devops.aliyun.com/projex/project/1e401ac99539c3999e00e40006/bug#openWorkitemIdentifier=1bea8a02a752c39eb065fe77f6"
+  requirement_gap_scope: "原24条未完成需求汇总；不代表收窄后的v2已执行或失败"
+  definition_report: "docs/cases/requirements/ERYE-199/revision-na31-current-capabilities-20261116.md"
+  restore_preconditions: "相邻两视频段切点两侧有足够源余量，提供需求中的六类真实转场和对齐控件。"
+
 ERYE199-032:
   status: PLAN
   script: ""
+  execution_status: "Not Applicable"
+  execution_report: "docs/cases/requirements/ERYE-199/results-021-049-manual-production-20261113.md"
+  execution_note: "本轮仅定义复核；依赖031真实转场，当前无法建立余量不足的有效提交。 恢复步骤见修订报告。"
+  execution_method: "页面执行；按用户要求暂不接入自动化"
+  requirement_gap_defect_id: "FWXC-525"
+  requirement_gap_defect_url: "https://devops.aliyun.com/projex/project/1e401ac99539c3999e00e40006/bug#openWorkitemIdentifier=1bea8a02a752c39eb065fe77f6"
+  requirement_gap_scope: "原24条未完成需求汇总；不代表收窄后的v2已执行或失败"
+  definition_report: "docs/cases/requirements/ERYE-199/revision-na31-current-capabilities-20261116.md"
+  restore_preconditions: "恢复转场；准备相邻片段，切点两侧源余量小于本例请求转场时长。"
+
 ERYE199-033:
   status: PLAN
   script: ""
+  execution_status: "Not Applicable"
+  execution_report: "docs/cases/requirements/ERYE-199/results-021-049-manual-production-20261113.md"
+  execution_note: "本轮仅定义复核；没有恒定增益/恒定功率/指数的工程音频转场对象。 恢复步骤见修订报告。"
+  execution_method: "页面执行；按用户要求暂不接入自动化"
+  requirement_gap_defect_id: "FWXC-525"
+  requirement_gap_defect_url: "https://devops.aliyun.com/projex/project/1e401ac99539c3999e00e40006/bug#openWorkitemIdentifier=1bea8a02a752c39eb065fe77f6"
+  requirement_gap_scope: "原24条未完成需求汇总；不代表收窄后的v2已执行或失败"
+  definition_report: "docs/cases/requirements/ERYE-199/revision-na31-current-capabilities-20261116.md"
+  restore_preconditions: "两段相邻独立音频且余量充足，原视频原声静音；提供三种转场曲线和独立时长。"
+
 ERYE199-034:
   status: PLAN
   script: ""
+  execution_status: "Passed"
+  execution_report: "docs/cases/requirements/ERYE-199/results-current-six-v2-production-20261116.md"
+  execution_note: "三个独立新工程分别以0.25/0.3178/4倍执行，时长40/31.466331/2.5秒；5/5/1秒对应源约1.25/1.589/4秒，相邻源帧范围内；实际播放与刷新保持，视频及关联原声同倍率、同源范围，无字幕或替代片段。"
+  execution_method: "Ego Lite生产有头页面执行；按用户要求暂不接入自动化"
+  requirement_gap_defect_id: "FWXC-525"
+  requirement_gap_defect_url: "https://devops.aliyun.com/projex/project/1e401ac99539c3999e00e40006/bug#openWorkitemIdentifier=1bea8a02a752c39eb065fe77f6"
+  requirement_gap_scope: "原24条未完成需求汇总；不代表收窄后的v2已执行或失败"
 ERYE199-035:
   status: PLAN
   script: ""
+  execution_status: "Not Applicable"
+  execution_report: "docs/cases/requirements/ERYE-199/results-021-049-manual-production-20261113.md"
+  execution_note: "本轮仅定义复核；没有工程LUT及可编辑调色入口，文件级滤镜不算工程LUT。 恢复步骤见修订报告。"
+  execution_method: "页面执行；按用户要求暂不接入自动化"
+  requirement_gap_defect_id: "FWXC-525"
+  requirement_gap_defect_url: "https://devops.aliyun.com/projex/project/1e401ac99539c3999e00e40006/bug#openWorkitemIdentifier=1bea8a02a752c39eb065fe77f6"
+  requirement_gap_scope: "原24条未完成需求汇总；不代表收窄后的v2已执行或失败"
+  definition_report: "docs/cases/requirements/ERYE-199/revision-na31-current-capabilities-20261116.md"
+  restore_preconditions: "有效SDR709源、合法.cube和明确已支持的工程LUT/调色控件。"
+
 ERYE199-036:
   status: PLAN
   script: ""
+  execution_status: "Passed"
+  execution_report: "docs/cases/requirements/ERYE-199/results-021-049-manual-production-20261113.md"
+  execution_note: "按需求允许的“明确拒绝HDR处理”分支通过：真实PQ/BT2020/10bit样本已登记并打开，应用明确拒绝调色/导出且解释无法保证正确转换；无输出、原工程未改。仅拒绝分支通过，不代表已支持或验证HDR→SDR转换质量。"
+  execution_method: "页面执行；按用户要求暂不接入自动化"
 ERYE199-037:
   status: PLAN
   script: ""
+  execution_status: "Not Applicable"
+  execution_report: "docs/cases/requirements/ERYE-199/results-021-049-manual-production-20261113.md"
+  execution_note: "本轮仅定义复核；没有真实调整层及可编辑曝光/模糊和效果蒙版。 恢复步骤见修订报告。"
+  execution_method: "页面执行；按用户要求暂不接入自动化"
+  requirement_gap_defect_id: "FWXC-525"
+  requirement_gap_defect_url: "https://devops.aliyun.com/projex/project/1e401ac99539c3999e00e40006/bug#openWorkitemIdentifier=1bea8a02a752c39eb065fe77f6"
+  requirement_gap_scope: "原24条未完成需求汇总；不代表收窄后的v2已执行或失败"
+  definition_report: "docs/cases/requirements/ERYE-199/revision-na31-current-capabilities-20261116.md"
+  restore_preconditions: "多段工程中建立2～6秒真实调整层，具备所要求的曝光/模糊/蒙版控件。"
+
 ERYE199-038:
   status: PLAN
   script: ""
+  execution_status: "Not Applicable"
+  execution_report: "docs/cases/requirements/ERYE-199/results-021-049-manual-production-20261113.md"
+  execution_note: "本轮仅定义复核；没有视频波形/矢量示波器入口，音频波形不替代视频示波器。 恢复步骤见修订报告。"
+  execution_method: "页面执行；按用户要求暂不接入自动化"
+  requirement_gap_defect_id: "FWXC-525"
+  requirement_gap_defect_url: "https://devops.aliyun.com/projex/project/1e401ac99539c3999e00e40006/bug#openWorkitemIdentifier=1bea8a02a752c39eb065fe77f6"
+  requirement_gap_scope: "原24条未完成需求汇总；不代表收窄后的v2已执行或失败"
+  definition_report: "docs/cases/requirements/ERYE-199/revision-na31-current-capabilities-20261116.md"
+  restore_preconditions: "恢复工程调色及视频波形/矢量示波器，准备有可辨亮度/色彩变化的源片。"
+
 ERYE199-039:
   status: PLAN
   script: ""
-ERYE199-040:
-  status: PLAN
-  script: ""
+  execution_status: "Not Applicable"
+  execution_report: "docs/cases/requirements/ERYE-199/results-021-049-manual-production-20261113.md"
+  execution_note: "本轮仅定义复核；没有工程色度抠像、alpha/三视图及边缘蒙版控制。 恢复步骤见修订报告。"
+  execution_method: "页面执行；按用户要求暂不接入自动化"
+  requirement_gap_defect_id: "FWXC-525"
+  requirement_gap_defect_url: "https://devops.aliyun.com/projex/project/1e401ac99539c3999e00e40006/bug#openWorkitemIdentifier=1bea8a02a752c39eb065fe77f6"
+  requirement_gap_scope: "原24条未完成需求汇总；不代表收窄后的v2已执行或失败"
+  definition_report: "docs/cases/requirements/ERYE-199/revision-na31-current-capabilities-20261116.md"
+  restore_preconditions: "真实绿幕人物、不同下层背景及已实现的可编辑抠像/alpha预览和边缘控件。"
+
 ERYE199-041:
   status: PLAN
   script: ""
+  execution_status: "Not Applicable"
+  execution_report: "docs/cases/requirements/ERYE-199/results-021-049-manual-production-20261113.md"
+  execution_note: "本轮仅定义复核；没有工程稳定器及后台分析/取消/失败保留流程。 恢复步骤见修订报告。"
+  execution_method: "页面执行；按用户要求暂不接入自动化"
+  requirement_gap_defect_id: "FWXC-525"
+  requirement_gap_defect_url: "https://devops.aliyun.com/projex/project/1e401ac99539c3999e00e40006/bug#openWorkitemIdentifier=1bea8a02a752c39eb065fe77f6"
+  requirement_gap_scope: "原24条未完成需求汇总；不代表收窄后的v2已执行或失败"
+  definition_report: "docs/cases/requirements/ERYE-199/revision-na31-current-capabilities-20261116.md"
+  restore_preconditions: "已知抖动源、真实工程稳定模式、后台分析和受控取消/失败入口。"
+
 ERYE199-042:
   status: PLAN
   script: ""
+  execution_status: "Passed"
+  execution_report: "docs/cases/requirements/ERYE-199/results-current-six-v2-production-20261116.md"
+  execution_note: "对白D100→58→0→58%、音乐M30→15→30%原生拖动及刷新保存通过，双片段互不串改。实际混合预览录音核验：D/M约0.581/0.300→对白约0→0.579/0.149，额外V原声静音；源/范围/时长保持。"
+  execution_method: "Ego Lite生产有头页面执行；按用户要求暂不接入自动化"
+  requirement_gap_defect_id: "FWXC-525"
+  requirement_gap_defect_url: "https://devops.aliyun.com/projex/project/1e401ac99539c3999e00e40006/bug#openWorkitemIdentifier=1bea8a02a752c39eb065fe77f6"
+  requirement_gap_scope: "原24条未完成需求汇总；不代表收窄后的v2已执行或失败"
 ERYE199-043:
   status: PLAN
   script: ""
+  execution_status: "Passed"
+  execution_report: "docs/cases/requirements/ERYE-199/results-021-049-manual-production-20261113.md"
+  execution_note: "按原前置单/立体声主场景通过：48kHz单声道与44.1kHz立体声在同一新工程导出为48kHz双声道AAC；实测前段L/R相关0.9999999，后段L440/R880分别保留，源引用/原采样信息保持。附加5.1仅查询、未放入时间线，端到端支持未验证，不计多声道通过。"
+  execution_method: "页面执行；按用户要求暂不接入自动化"
 ERYE199-044:
   status: PLAN
   script: ""
+  execution_status: "Not Applicable"
+  execution_report: "docs/cases/requirements/ERYE-199/results-021-049-manual-production-20261113.md"
+  execution_note: "本轮仅定义复核；没有工程音频效果链、参数EQ、半音/音分及限幅控制。 恢复步骤见修订报告。"
+  execution_method: "页面执行；按用户要求暂不接入自动化"
+  requirement_gap_defect_id: "FWXC-525"
+  requirement_gap_defect_url: "https://devops.aliyun.com/projex/project/1e401ac99539c3999e00e40006/bug#openWorkitemIdentifier=1bea8a02a752c39eb065fe77f6"
+  requirement_gap_scope: "原24条未完成需求汇总；不代表收窄后的v2已执行或失败"
+  definition_report: "docs/cases/requirements/ERYE-199/revision-na31-current-capabilities-20261116.md"
+  restore_preconditions: "提供真实可编辑降噪/去混响/EQ/变调/限幅效果链和顺序/参数入口。"
+
 ERYE199-045:
   status: PLAN
   script: ""
+  automation_command: ""
+  execution_status: "Passed"
+  execution_report: "docs/cases/requirements/ERYE-199/results-nine-v2-production-20261116.md"
+  definition_revision: 2
+  execution_note: "页面仅将M2（3～7秒）从50%调至15%，M1/M3仍50%、独立对白100%，源范围与片段边界未改；实际混音采样、刷新保持及恢复50%通过。"
+  definition_report: "docs/cases/requirements/ERYE-199/revision-na31-current-capabilities-20261116.md"
+
 ERYE199-046:
   status: PLAN
   script: ""
+  execution_status: "Not Applicable"
+  execution_report: "docs/cases/requirements/ERYE-199/results-021-049-manual-production-20261113.md"
+  execution_note: "本轮仅定义复核；没有结构分析候选、保护映射与原子可撤销替换，普通拼接不算音乐重组。 恢复步骤见修订报告。"
+  execution_method: "页面执行；按用户要求暂不接入自动化"
+  requirement_gap_defect_id: "FWXC-525"
+  requirement_gap_defect_url: "https://devops.aliyun.com/projex/project/1e401ac99539c3999e00e40006/bug#openWorkitemIdentifier=1bea8a02a752c39eb065fe77f6"
+  requirement_gap_scope: "原24条未完成需求汇总；不代表收窄后的v2已执行或失败"
+  definition_report: "docs/cases/requirements/ERYE-199/revision-na31-current-capabilities-20261116.md"
+  restore_preconditions: "13秒音乐源、10秒目标、保护源4～6秒；提供结构分析和至少两个可审阅候选。"
+
 ERYE199-047:
   status: PLAN
   script: ""
+  execution_status: "Failed"
+  execution_report: "docs/cases/requirements/ERYE-199/results-failed-ten-rerun-production-20261116.md"
+  execution_note: "2秒图片+A、4秒图片、7秒B、9秒仅原片及刷新预览已核对；原生导出报错：编辑器执行数据不符合正式 v2 协议，请保留当前工程并核对服务返回。；未从结果区取得可下载MP4，文件结果未完成核验。"
+  execution_method: "Ego Lite生产有头页面执行；按用户要求暂不接入自动化"
+  requirement_gap_defect_id: "FWXC-525"
+  requirement_gap_defect_url: "https://devops.aliyun.com/projex/project/1e401ac99539c3999e00e40006/bug#openWorkitemIdentifier=1bea8a02a752c39eb065fe77f6"
+  requirement_gap_scope: "原24条未完成需求汇总；不代表收窄后的v2已执行或失败"
+  local_defect_report: "docs/defects/ERYE199-029-047-048-native-export-protocol-production-20261116.md"
+  current_failure_cloud_sync: "Verified; shared FWXC-578"
+  defect_id: "FWXC-578"
+  defect_url: "https://devops.aliyun.com/projex/project/1e401ac99539c3999e00e40006/bug#openWorkitemIdentifier=8997db131fa05bc3a8e6e62ffe"
+  defect_status: "🤔AI提缺陷"
+  defect_sync_verified: true
+  defect_shared: true
+  defect_screenshots: 3
+  defect_attachments: 7
+  defect_case_screenshot: "docs/cases/requirements/ERYE-199/evidence-current-six-v2-production-20261116/047-failure-export-protocol.png"
+  latest_regression_report: "docs/cases/requirements/ERYE-199/results-failed-ten-rerun-production-20261116.md"
+  reported_defect_reproduced: true
 ERYE199-048:
   status: PLAN
   script: ""
+  execution_status: "Failed"
+  execution_report: "docs/cases/requirements/ERYE-199/results-failed-ten-rerun-production-20261116.md"
+  execution_note: "全屏进出及9.17秒→9.17秒位置保持，刷新后原片/10秒时间线正常；原生导出报错：编辑器执行数据不符合正式 v2 协议，请保留当前工程并核对服务返回。；未从结果区取得可下载MP4，文件结果未完成核验。"
+  execution_method: "Ego Lite生产有头页面执行；按用户要求暂不接入自动化"
+  requirement_gap_defect_id: "FWXC-525"
+  requirement_gap_defect_url: "https://devops.aliyun.com/projex/project/1e401ac99539c3999e00e40006/bug#openWorkitemIdentifier=1bea8a02a752c39eb065fe77f6"
+  requirement_gap_scope: "原24条未完成需求汇总；不代表收窄后的v2已执行或失败"
+  local_defect_report: "docs/defects/ERYE199-029-047-048-native-export-protocol-production-20261116.md"
+  current_failure_cloud_sync: "Verified; shared FWXC-578"
+  defect_id: "FWXC-578"
+  defect_url: "https://devops.aliyun.com/projex/project/1e401ac99539c3999e00e40006/bug#openWorkitemIdentifier=8997db131fa05bc3a8e6e62ffe"
+  defect_status: "🤔AI提缺陷"
+  defect_sync_verified: true
+  defect_shared: true
+  defect_screenshots: 3
+  defect_attachments: 7
+  defect_case_screenshot: "docs/cases/requirements/ERYE-199/evidence-current-six-v2-production-20261116/048-failure-export-protocol.png"
+  latest_regression_report: "docs/cases/requirements/ERYE-199/results-failed-ten-rerun-production-20261116.md"
+  reported_defect_reproduced: true
 ERYE199-049:
   status: PLAN
   script: ""
-ERYE199-050:
-  status: PLAN
-  script: ""
+  execution_status: "Passed"
+  execution_report: "docs/cases/requirements/ERYE-199/results-049-v2-send-stop-production-20261113.md"
+  execution_note: "049 v2 Passed：会话发送位置出现停止任务，已受理排队请求queued→cancelled且无产物；停止后新任务A及完成后独立提交B均完成并可下载，B后重下A内容未变；20秒/640×360/30fps/48kHz，工程未改。仅覆盖排队停止，不含渲染开始后停止或失败重试。"
+  execution_method: "页面执行；按用户要求暂不接入自动化"
+  definition_revision: 2
+  historical_execution_status: "Blocked"
+  historical_execution_report: "docs/cases/requirements/ERYE-199/results-021-049-manual-production-20261113.md"
+  execution_batch: "erye199-049-v2-2026-11-13T11-52-25-367Z"
 ERYE199-051:
   status: PLAN
   script: ""
-ERYE199-052:
-  status: PLAN
-  script: ""
-ERYE199-053:
-  status: PLAN
-  script: ""
-ERYE199-054:
-  status: PLAN
-  script: ""
-ERYE199-055:
-  status: PLAN
-  script: ""
-ERYE199-056:
-  status: PLAN
-  script: ""
-ERYE199-057:
-  status: PLAN
-  script: ""
-ERYE199-058:
-  status: PLAN
-  script: ""
-ERYE199-059:
-  status: PLAN
-  script: ""
-ERYE199-060:
-  status: PLAN
-  script: ""
-ERYE199-061:
-  status: PLAN
-  script: ""
-ERYE199-062:
-  status: PLAN
-  script: ""
-ERYE199-063:
-  status: PLAN
-  script: ""
-ERYE199-064:
-  status: PLAN
-  script: ""
-ERYE199-065:
-  status: PLAN
-  script: ""
-ERYE199-066:
-  status: PLAN
-  script: ""
-ERYE199-067:
-  status: PLAN
-  script: ""
-ERYE199-068:
-  status: PLAN
-  script: ""
+  specification: "docs/cases/requirements/ERYE-199/cases.md#erye199-051-current-v4"
+  execution_status: "Passed"
+  definition_revision: 4
+  execution_note: "无视频工程时空态的「选择媒体」可用，选择 MP4 在同一会话创建视频工程后入口消失，刷新重开同一工程后仍不显示。按用户修正的预期复核原生产证据为 Passed。"
+  execution_report: "docs/cases/requirements/ERYE-199/revision-051-select-media-20261123.md"
+  definition_report: "docs/cases/requirements/ERYE-199/revision-051-select-media-20261123.md"
 
+ERYE199-052:
+  status: AUTO
+  script: "tools/editor/erye199/cases-current-v2.mjs#052"
+  automation_command: "npm run test:editor:199 -- --base-url https://app.cinlink.ai --cases 052"
+  execution_status: "Passed"
+  execution_report: "docs/cases/requirements/ERYE-199/results-nine-v2-production-20261116.md"
+  definition_revision: 2
+  execution_note: "同名same.mp4的A/B为不同源引用；B独立新轨0～10秒、原声静音，显示B/隐藏后A的画面对照及刷新保持，A未被同名导入重绑定。"
+  definition_report: "docs/cases/requirements/ERYE-199/revision-na31-current-capabilities-20261116.md"
+
+ERYE199-053:
+  status: AUTO
+  script: "tools/editor/erye199/cases-current-v2.mjs#053"
+  automation_command: "npm run test:editor:199 -- --base-url https://app.cinlink.ai --cases 053"
+  execution_status: "Failed"
+  execution_report: "docs/cases/requirements/ERYE-199/results-nine-v2-production-20261116.md"
+  definition_revision: 2
+  execution_note: "空SRT登记后放入字幕轨，未给出无有效字幕提示并持久化一条bindings为空的字幕轨；非法时码SRT被“Subtitle block has no timing”正确拒绝。原A/B字幕保留，后续RECOVER053编辑和刷新通过；整例因空SRT分支Failed。"
+  definition_report: "docs/cases/requirements/ERYE-199/revision-na31-current-capabilities-20261116.md"
+  defect_id: "FWXC-591"
+  defect_url: "https://devops.aliyun.com/projex/project/1e401ac99539c3999e00e40006/bug#openWorkitemIdentifier=cf695e0a8ad4e178279e339726"
+  defect_status: "🤔AI提缺陷"
+  defect_sync_verified: true
+  defect_screenshots: 3
+  defect_attachments: 8
+
+ERYE199-054:
+  status: AUTO
+  script: "tools/editor/erye199/cases-051-068.mjs#054"
+  execution_status: "Passed"
+  execution_report: "docs/cases/requirements/ERYE-199/results-051-068-production-20261113.md"
+  execution_note: "补齐页面选择与真实目标后，Agent一次改位置/透明度；一次撤销恢复二者并保留手动静音，一次重做恢复；非法组合拒绝无部分写入，刷新保持。"
+  execution_method: "Ego Lite生产有头；原生操作；无computer-use"
+  automation_command: "npm run test:editor:199 -- --base-url https://app.cinlink.ai --cases 054"
+ERYE199-055:
+  status: AUTO
+  script: "tools/editor/erye199/cases-current-v2.mjs#055"
+  automation_command: "npm run test:editor:199 -- --base-url https://app.cinlink.ai --cases 055"
+  execution_status: "Passed"
+  execution_report: "docs/cases/requirements/ERYE-199/results-nine-v2-production-20261116.md"
+  definition_revision: 2
+  execution_note: "一次相对降6dB后约50.12%，切面板/两次刷新/离开重开仍约50%而非重复降为25%；原片/原声/位置与源范围保持。"
+  definition_report: "docs/cases/requirements/ERYE-199/revision-na31-current-capabilities-20261116.md"
+
+ERYE199-056:
+  status: AUTO
+  script: "tools/editor/erye199/cases-051-068.mjs#056"
+  execution_status: "Not Applicable"
+  execution_report: "docs/cases/requirements/ERYE-199/results-051-068-production-20261113.md"
+  execution_note: "本轮仅定义复核；没有实际效果注册表读取入口，不能把源码/静态工具定义当在线能力注册表。 恢复步骤见修订报告。"
+  execution_method: "Ego Lite生产有头；原生操作；无computer-use"
+  automation_command: "npm run test:editor:199 -- --base-url https://app.cinlink.ai --cases 056"
+  definition_report: "docs/cases/requirements/ERYE-199/revision-na31-current-capabilities-20261116.md"
+  restore_preconditions: "提供真实可查效果表、一个可用效果及一个明确缺后端的测试项；只使用已公开能力字段。"
+  defect_id: "FWXC-596"
+  defect_url: "https://devops.aliyun.com/projex/project/1e401ac99539c3999e00e40006/bug#openWorkitemIdentifier=5345dc4d3fcf3d04cf27456949"
+  defect_status: "🤔AI提缺陷"
+  defect_sync_verified: true
+  defect_screenshots: 1
+  defect_attachments: 3
+
+ERYE199-057:
+  status: AUTO
+  script: "tools/editor/erye199/cases-051-068.mjs#057"
+  execution_status: "Passed"
+  execution_report: "docs/cases/requirements/ERYE-199/results-051-068-production-20261113.md"
+  execution_note: "独立测试页在真实保存请求发送前暂停，已捕获Inspector.targetCrashed及Target crashed；用户接管后授权继续，重开原工程内容/版本保持且可播放，未落库修改未重放。仅覆盖页面崩溃、未发送保存分支，未覆盖落库后回执丢失或整机崩溃。"
+  execution_method: "Ego Lite生产有头；原生操作；无computer-use"
+  automation_command: "npm run test:editor:199 -- --base-url https://app.cinlink.ai --cases 057"
+ERYE199-059:
+  status: AUTO
+  script: "tools/editor/erye199/cases-051-068.mjs#059"
+  execution_status: "Passed"
+  execution_report: "docs/cases/requirements/ERYE-199/results-051-068-production-20261113.md"
+  execution_note: "真实断网后提示执行请求结果未知并保留原始提交和静音草稿；恢复网络点击“重试原始提交”成功，刷新保持。首次脚本未识别同义提示/按钮已修正，不是产品失败；未覆盖磁盘满。"
+  execution_method: "Ego Lite生产有头；原生操作；无computer-use"
+  automation_command: "npm run test:editor:199 -- --base-url https://app.cinlink.ai --cases 059"
+ERYE199-062:
+  status: AUTO
+  script: "tools/editor/erye199/cases-051-068.mjs#062"
+  execution_status: "Passed"
+  execution_report: "docs/cases/requirements/ERYE-199/results-051-068-production-20261113.md"
+  execution_note: "带烧录字幕的测试视频从收起状态重新展开，现行五入口、预览、时间轴和导出均显示，工程内容保持；按用户确认最新页面验收，不要求旧Speech布局。"
+  execution_method: "Ego Lite生产有头；原生操作；无computer-use"
+  automation_command: "npm run test:editor:199 -- --base-url https://app.cinlink.ai --cases 062"
+ERYE199-064:
+  status: AUTO
+  script: "tools/editor/erye199/cases-051-068.mjs#064"
+  execution_status: "Passed"
+  execution_report: "docs/cases/requirements/ERYE-199/results-failed-ten-rerun-production-20261116.md"
+  execution_note: "字幕A/B加载后正常显示；媒体→工程素材列表成功加载且无504；返回字幕仍为2秒，工程内容保持，原504未复现。"
+  execution_method: "Ego Lite生产有头；原生操作；无computer-use"
+  automation_command: "npm run test:editor:199 -- --base-url https://app.cinlink.ai --cases 064"
+  defect_id: "FWXC-577"
+  defect_url: "https://devops.aliyun.com/projex/project/1e401ac99539c3999e00e40006/bug#openWorkitemIdentifier=c8a5ca57b2162f6850176c6ff1"
+  defect_status: "🤔AI提缺陷"
+  defect_sync_verified: true
+  defect_screenshots: 3
+  defect_attachments: 6
+  latest_regression_report: "docs/cases/requirements/ERYE-199/results-failed-ten-rerun-production-20261116.md"
+  reported_defect_reproduced: false
+ERYE199-065:
+  status: AUTO
+  script: "tools/editor/erye199/cases-051-068.mjs#065"
+  execution_status: "Passed"
+  execution_report: "docs/cases/requirements/ERYE-199/results-051-068-production-20261113.md"
+  execution_note: "真实播放、暂停及时间轴播放头拖动到约7秒，画面媒体时间和页面进度一致且停住；工程内容未改。"
+  execution_method: "Ego Lite生产有头；原生操作；无computer-use"
+  automation_command: "npm run test:editor:199 -- --base-url https://app.cinlink.ai --cases 065"
+ERYE199-066:
+  status: AUTO
+  script: "tools/editor/erye199/cases-051-068.mjs#066"
+  execution_status: "Passed"
+  execution_report: "docs/cases/requirements/ERYE-199/results-051-068-production-20261113.md"
+  execution_note: "60秒多片段时间线放大后刻度/片段像素宽度变化，真实横向滚动有效，5秒播放位置及工程内容保持。"
+  execution_method: "Ego Lite生产有头；原生操作；无computer-use"
+  automation_command: "npm run test:editor:199 -- --base-url https://app.cinlink.ai --cases 066"
+ERYE199-067:
+  status: AUTO
+  script: "tools/editor/erye199/cases-051-068.mjs#067"
+  execution_status: "Passed"
+  execution_report: "docs/cases/requirements/ERYE-199/results-051-068-production-20261113.md"
+  execution_note: "按最新布局收起/展开字幕功能面板，预览宽度自适应且恢复，当前字幕面板、2秒进度及暂停状态保持；不将项目列表栏当旧Speech功能栏。"
+  execution_method: "Ego Lite生产有头；原生操作；无computer-use"
+  automation_command: "npm run test:editor:199 -- --base-url https://app.cinlink.ai --cases 067"
+ERYE199-068:
+  status: AUTO
+  script: "tools/editor/erye199/cases-051-068.mjs#068"
+
+  execution_status: "Passed"
+  execution_report: "docs/cases/requirements/ERYE-199/results-068-v2-empty-project-production-20261116.md"
+  execution_note: "068 v2生产新工程Passed：总空态和引导、选择媒体启用/导出禁用、刷新及收起再展开保持；无新增对象或任务。原Blocked保留历史，不要求独立两页入口。"
+  execution_method: "Ego Lite有头；无媒体上传或Agent生成；2026-11-16实跑"
+  automation_command: "npm run test:editor:199 -- --base-url https://app.cinlink.ai --cases 068"
+# ERYE-199 多轨补充；069～080有独立分阶段Ego执行器，081～116保持PLAN
+ERYE199-069:
+  status: AUTO
+  script: "tools/editor/erye199/workflow-cards.mjs#069"
+  execution_status: "Passed"
+  specification: "docs/cases/requirements/ERYE-199/cases.md#erye199-card-multitrack"
+  legacy_id: "ECMT-001"
+  definition_version: "v1-merged-erye199-20261118"
+  automation_command: "node tools/editor/erye199/run-workflow-cards.mjs --case 069 --action observe --space 6 --report reports/erye199-069-075-production-20261118"
+  execution_report: "docs/cases/requirements/ERYE-199/results-069-075-production-20261118.md"
+  execution_note: "原文字幕/视频/原声3轨、8句英文；原英语声音保持；20秒1280×720；两处原生预览播放、重入与刷新通过。"
+ERYE199-070:
+  status: AUTO
+  script: "tools/editor/erye199/workflow-cards.mjs#070"
+  execution_status: "Passed"
+  specification: "docs/cases/requirements/ERYE-199/cases.md#erye199-card-multitrack"
+  legacy_id: "ECMT-002"
+  definition_version: "v1-merged-erye199-20261118"
+  automation_command: "node tools/editor/erye199/run-workflow-cards.mjs --case 070 --action observe --space 6 --report reports/erye199-069-075-production-20261118"
+  execution_report: "docs/cases/requirements/ERYE-199/results-069-075-production-20261118.md"
+  execution_note: "译文字幕/视频/原声3轨、中文可编辑字幕；实际声音仍英语；20秒1280×720；预览、重入与刷新通过，无额外译声/BGM轨。"
+ERYE199-071:
+  status: AUTO
+  script: "tools/editor/erye199/workflow-cards.mjs#071"
+  execution_status: "Failed"
+  specification: "docs/cases/requirements/ERYE-199/cases.md#erye199-card-multitrack"
+  legacy_id: "ECMT-003"
+  definition_version: "v1-merged-erye199-20261118"
+  automation_command: "node tools/editor/erye199/run-workflow-cards.mjs --case 071 --action observe --space 6 --report reports/erye199-069-075-production-20261118"
+  execution_report: "docs/cases/requirements/ERYE-199/results-069-075-production-20261118.md"
+  execution_note: "译文模式仍在编辑器2秒和10秒处显示中文+英文，重入/刷新保持；下载成片对应帧只有中文。五类轨、中文译声及20秒成片正常；整例Failed。"
+  defect_id: "FWXC-693"
+  defect_url: "https://devops.aliyun.com/projex/project/1e401ac99539c3999e00e40006/bug#openWorkitemIdentifier=ff5598f33938a383abd2f7590c"
+  defect_status: "🤔AI提缺陷"
+  defect_sync_verified: true
+  defect_screenshots: 3
+  defect_comparison_frames: 2
+  defect_attachments: 8
+ERYE199-072:
+  status: AUTO
+  script: "tools/editor/erye199/workflow-cards.mjs#072"
+  execution_status: "Passed"
+  specification: "docs/cases/requirements/ERYE-199/cases.md#erye199-card-multitrack"
+  legacy_id: "ECMT-004"
+  definition_version: "v1-merged-erye199-20261118"
+  automation_command: "node tools/editor/erye199/run-workflow-cards.mjs --case 072 --action observe --space 6 --report reports/erye199-069-075-production-20261118"
+  execution_report: "docs/cases/requirements/ERYE-199/results-069-075-production-20261118.md"
+  execution_note: "双语模式保留译文字幕/视频/原声/配音/背景音乐5轨；两处预览中英对应、实际声音中文；20秒1280×720，重入与刷新通过。"
+ERYE199-073:
+  status: AUTO
+  script: "tools/editor/erye199/workflow-cards.mjs#073"
+  execution_status: "Passed"
+  specification: "docs/cases/requirements/ERYE-199/cases.md#erye199-card-multitrack"
+  legacy_id: "ECMT-005"
+  definition_version: "v1-merged-erye199-20261118"
+  automation_command: "node tools/editor/erye199/run-workflow-cards.mjs --case 073 --action observe --space 6 --report reports/erye199-069-075-production-20261118"
+  execution_report: "docs/cases/requirements/ERYE-199/results-069-075-production-20261118.md"
+  execution_note: "画质增强交付20秒2560×1440；视频/原声2轨、源标记和原英语语音保持，重入刷新通过。当前卡片无独立2倍选项，按原完整提示词指定2倍并核验实际输出。"
+ERYE199-074:
+  status: AUTO
+  script: "tools/editor/erye199/workflow-cards.mjs#074"
+  execution_status: "Passed"
+  specification: "docs/cases/requirements/ERYE-199/cases.md#erye199-card-multitrack"
+  legacy_id: "ECMT-006"
+  definition_version: "v1-merged-erye199-20261118"
+  automation_command: "node tools/editor/erye199/run-workflow-cards.mjs --case 074 --action observe --space 6 --report reports/erye199-069-075-production-20261118"
+  execution_report: "docs/cases/requirements/ERYE-199/results-069-075-production-20261118.md"
+  execution_note: "默认审核3口水词+6停顿后点击移除；实际44.744秒，视频/原声各10段（末段在时间轴视口外）；三段正文独立ASR完整保持，画面/原声与保留源区间对照通过，接缝播放、重入刷新通过。"
+ERYE199-075:
+  status: AUTO
+  script: "tools/editor/erye199/workflow-cards.mjs#075"
+  execution_status: "Passed"
+  specification: "docs/cases/requirements/ERYE-199/cases.md#erye199-card-multitrack"
+  legacy_id: "ECMT-007"
+  definition_version: "v1-merged-erye199-20261118"
+  automation_command: "node tools/editor/erye199/run-workflow-cards.mjs --case 075 --action observe --space 6 --report reports/erye199-069-075-production-20261118"
+  execution_report: "docs/cases/requirements/ERYE-199/results-069-075-production-20261118.md"
+  execution_note: "原生时长选30秒；审核确认源20.400～35.250、39.750～54.900两段，实际输出30秒1280×720；编辑器视频/原声各2段与方案/成片对应，首中尾源标记、接缝播放和重入刷新通过。"
+ERYE199-076:
+  status: AUTO
+  script: "tools/editor/erye199/workflow-combinations.mjs#076"
+  execution_status: "Passed"
+  specification: "docs/cases/requirements/ERYE-199/cases.md#erye199-card-multitrack"
+  legacy_id: "ECMT-008"
+  definition_version: "v1-merged-erye199-20261118"
+  automation_command: "node tools/editor/erye199/run-workflow-combinations.mjs --case 076 --action resume --space 7 --report reports/erye199-076-080-production-20261118"
+  execution_report: "docs/cases/requirements/ERYE-199/results-076-080-production-20261118.md"
+  execution_note: "无参考生成红杯视频，5秒/1280×720；本轮独立工程的视频与原生音频对应生成结果，预览播放、重入及刷新通过，无旧F20/字幕/译配混入。"
+ERYE199-077:
+  status: AUTO
+  script: "tools/editor/erye199/workflow-combinations.mjs#077"
+  execution_status: "Passed"
+  specification: "docs/cases/requirements/ERYE-199/cases.md#erye199-card-multitrack"
+  legacy_id: "ECMT-009"
+  definition_version: "v1-merged-erye199-20261118"
+  automation_command: "node tools/editor/erye199/run-workflow-combinations.mjs --case 077 --action resume --space 7 --report reports/erye199-076-080-production-20261118"
+  execution_report: "docs/cases/requirements/ERYE-199/results-076-080-production-20261118.md"
+  execution_note: "无参考生成白底蓝杯图片1024×1024；打开本次图片画布及版本，重入/刷新保持；未混入视频时间轴，原图下载有效。"
+ERYE199-078:
+  status: AUTO
+  script: "tools/editor/erye199/workflow-combinations.mjs#078"
+  execution_status: "Failed"
+  specification: "docs/cases/requirements/ERYE-199/cases.md#erye199-card-multitrack"
+  legacy_id: "ECMT-010"
+  definition_version: "v1-merged-erye199-20261118"
+  automation_command: "node tools/editor/erye199/run-workflow-combinations.mjs --case 078-T2 --action verifyHistory --space 7 --report reports/erye199-076-080-production-20261118"
+  execution_report: "docs/cases/requirements/ERYE-199/results-076-080-production-20261118.md"
+  execution_note: "同一会话三轮均重新附加原F20，源视频身份及原音/译声对应；历史三个独立工程内容未被覆盖。但S1出现2条字幕/视频/原声共4轨，T2出现2条字幕/视频/原声/配音/BGM共6轨，均多出前轮英文字幕。整例Failed。"
+  defect_id: "FWXC-694"
+  defect_url: "https://devops.aliyun.com/projex/project/1e401ac99539c3999e00e40006/bug#openWorkitemIdentifier=c6fcf26c6c51304682eec70a9b"
+  defect_status: "🤔AI提缺陷"
+  defect_sync_verified: true
+  defect_screenshots: 4
+  defect_attachments: 6
+ERYE199-079:
+  status: AUTO
+  script: "tools/editor/erye199/workflow-combinations.mjs#079"
+  execution_status: "Passed"
+  specification: "docs/cases/requirements/ERYE-199/cases.md#erye199-card-multitrack"
+  legacy_id: "ECMT-011"
+  definition_version: "v1-merged-erye199-20261118"
+  automation_command: "node tools/editor/erye199/run-workflow-combinations.mjs --case 079 --action resume --space 7 --report reports/erye199-076-080-production-20261118"
+  execution_report: "docs/cases/requirements/ERYE-199/results-076-080-production-20261118.md"
+  execution_note: "T1五类原生内容加独立D，登记不自动放入；D唯一实例6～18秒、源0～12秒且无视频关联，四种声音分别播放并恢复，原生内容/绑定/位置/启用及刷新重入保持。D页面也标“背景音乐”，按源及无视频关联识别；译文双语预览已知FWXC-693单列，未宣称已修复。"
+ERYE199-080:
+  status: AUTO
+  script: "tools/editor/erye199/workflow-combinations.mjs#080"
+  execution_status: "Passed"
+  specification: "docs/cases/requirements/ERYE-199/cases.md#erye199-card-multitrack"
+  legacy_id: "ECMT-012"
+  definition_version: "v1-merged-erye199-20261118"
+  automation_command: "node tools/editor/erye199/run-workflow-combinations.mjs --case 080 --action resume --space 7 --report reports/erye199-076-080-production-20261118"
+  execution_report: "docs/cases/requirements/ERYE-199/results-076-080-production-20261118.md"
+  execution_note: "T2原生五类内容加独立D形成六类组合；D唯一实例位于6～18秒、源0～12秒且无视频关联；四种声音分别播放，双语和原生五类绑定/位置/启用保持，保存重入/刷新通过。D页面名称同为“背景音乐”，按源文件和范围区分。"
+ERYE199-081:
+  status: AUTO
+  script: "tools/editor/erye199/timeline-operations.mjs#081"
+  execution_status: "Failed"
+  specification: "docs/cases/requirements/ERYE-199/cases.md#erye199-card-multitrack"
+  legacy_id: "ECMT-013"
+  definition_version: "v1-merged-erye199-20261118"
+  automation_command: "node tools/editor/erye199/run-timeline-case.mjs --case 081 --space 8 --report reports/erye199-081-085-production-20261118"
+  execution_report: "docs/cases/requirements/ERYE-199/results-081-085-production-20261118.md"
+  execution_note: "按本轮完整参数矩阵记录，1 Failed；查看报告及实际截图，不代表其他变体或旧缺陷已修复。"
+  defect_id: "FWXC-699"
+  defect_ids: ["FWXC-699"]
+  defect_url: "https://devops.aliyun.com/projex/project/1e401ac99539c3999e00e40006/bug#openWorkitemIdentifier=5358262d15393bcd3c20790044"
+  defect_urls: ["https://devops.aliyun.com/projex/project/1e401ac99539c3999e00e40006/bug#openWorkitemIdentifier=5358262d15393bcd3c20790044"]
+  defect_status: "🤔AI提缺陷"
+  defect_sync_verified: true
+  defect_sync_report: "docs/cases/requirements/ERYE-199/defects-081-083-085-production-20261119.md"
+  defect_screenshots: 29
+  defect_attachments: 34
+ERYE199-082:
+  status: AUTO
+  script: "tools/editor/erye199/timeline-operations.mjs#082"
+  execution_status: "Passed"
+  specification: "docs/cases/requirements/ERYE-199/cases.md#erye199-card-multitrack"
+  legacy_id: "ECMT-014"
+  definition_version: "v1-merged-erye199-20261118"
+  automation_command: "node tools/editor/erye199/run-timeline-case.mjs --case 082 --space 8 --report reports/erye199-081-085-production-20261118"
+  execution_report: "docs/cases/requirements/ERYE-199/results-081-085-production-20261118.md"
+  execution_note: "按本轮完整参数矩阵记录，2 Passed；查看报告及实际截图，不代表其他变体或旧缺陷已修复。"
+ERYE199-083:
+  status: AUTO
+  script: "tools/editor/erye199/timeline-operations.mjs#083"
+  execution_status: "Failed"
+  specification: "docs/cases/requirements/ERYE-199/cases.md#erye199-card-multitrack"
+  legacy_id: "ECMT-015"
+  definition_version: "v1-merged-erye199-20261118"
+  automation_command: "node tools/editor/erye199/run-timeline-case.mjs --case 083 --space 8 --report reports/erye199-081-085-production-20261118"
+  execution_report: "docs/cases/requirements/ERYE-199/results-081-085-production-20261118.md"
+  execution_note: "按本轮完整参数矩阵记录，2 Passed / 6 Failed；查看报告及实际截图，不代表其他变体或旧缺陷已修复。"
+  defect_id: "FWXC-699"
+  defect_ids: ["FWXC-699", "FWXC-700"]
+  defect_url: "https://devops.aliyun.com/projex/project/1e401ac99539c3999e00e40006/bug#openWorkitemIdentifier=5358262d15393bcd3c20790044"
+  defect_urls: ["https://devops.aliyun.com/projex/project/1e401ac99539c3999e00e40006/bug#openWorkitemIdentifier=5358262d15393bcd3c20790044", "https://devops.aliyun.com/projex/project/1e401ac99539c3999e00e40006/bug#openWorkitemIdentifier=2bcaf2fdf68499e36c6bb14d74"]
+  defect_status: "🤔AI提缺陷"
+  defect_sync_verified: true
+  defect_sync_report: "docs/cases/requirements/ERYE-199/defects-081-083-085-production-20261119.md"
+  defect_screenshots: 31
+  defect_attachments: 38
+ERYE199-084:
+  status: AUTO
+  script: "tools/editor/erye199/timeline-operations.mjs#084"
+  execution_status: "Failed"
+  specification: "docs/cases/requirements/ERYE-199/cases.md#erye199-card-multitrack"
+  legacy_id: "ECMT-016"
+  definition_version: "v1-merged-erye199-20261118"
+  automation_command: "node tools/editor/erye199/run-timeline-case.mjs --case 084 --space 8 --report reports/erye199-081-085-production-20261118"
+  execution_report: "docs/cases/requirements/ERYE-199/results-081-085-production-20261118.md"
+  execution_note: "按本轮完整参数矩阵记录，2 Passed / 6 Failed；查看报告及实际截图，不代表其他变体或旧缺陷已修复。"
+  defect_id: "FWXC-699"
+  defect_ids: ["FWXC-699"]
+  defect_url: "https://devops.aliyun.com/projex/project/1e401ac99539c3999e00e40006/bug#openWorkitemIdentifier=5358262d15393bcd3c20790044"
+  defect_urls: ["https://devops.aliyun.com/projex/project/1e401ac99539c3999e00e40006/bug#openWorkitemIdentifier=5358262d15393bcd3c20790044"]
+  defect_status: "🤔AI提缺陷"
+  defect_sync_verified: true
+  defect_sync_report: "docs/cases/requirements/ERYE-199/defects-081-083-085-production-20261119.md"
+  defect_screenshots: 29
+  defect_attachments: 34
+ERYE199-085:
+  status: AUTO
+  script: "tools/editor/erye199/timeline-operations.mjs#085"
+  execution_status: "Failed"
+  specification: "docs/cases/requirements/ERYE-199/cases.md#erye199-card-multitrack"
+  legacy_id: "ECMT-017"
+  definition_version: "v1-merged-erye199-20261118"
+  automation_command: "node tools/editor/erye199/run-timeline-case.mjs --case 085 --space 8 --report reports/erye199-081-085-production-20261118"
+  execution_report: "docs/cases/requirements/ERYE-199/results-081-085-production-20261118.md"
+  execution_note: "按本轮完整参数矩阵记录，4 Passed / 12 Failed；查看报告及实际截图，不代表其他变体或旧缺陷已修复。"
+  defect_id: "FWXC-699"
+  defect_ids: ["FWXC-699"]
+  defect_url: "https://devops.aliyun.com/projex/project/1e401ac99539c3999e00e40006/bug#openWorkitemIdentifier=5358262d15393bcd3c20790044"
+  defect_urls: ["https://devops.aliyun.com/projex/project/1e401ac99539c3999e00e40006/bug#openWorkitemIdentifier=5358262d15393bcd3c20790044"]
+  defect_status: "🤔AI提缺陷"
+  defect_sync_verified: true
+  defect_sync_report: "docs/cases/requirements/ERYE-199/defects-081-083-085-production-20261119.md"
+  defect_screenshots: 29
+  defect_attachments: 34
+ERYE199-086:
+  status: AUTO
+  script: "tools/editor/erye199/audio-cross-track.mjs#086"
+  specification: "docs/cases/requirements/ERYE-199/cases.md#erye199-card-multitrack"
+  legacy_id: "ECMT-018"
+  definition_version: "v1-merged-erye199-20261118"
+  automation_command: "node tools/editor/erye199/run-audio-cross-track.mjs --case 086 --space 9 --report reports/erye199-086-090-production-20261119"
+  execution_report: "docs/cases/requirements/ERYE-199/results-086-090-production-20261119.md"
+  execution_status: "Failed"
+  execution_in_progress: false
+  execution_note: "18个参数变体按本批报告逐项记录，不将未支持步骤记通过。"
+  defect_id: "FWXC-702"
+  defect_ids: ["FWXC-702"]
+  defect_url: "https://devops.aliyun.com/projex/project/1e401ac99539c3999e00e40006/bug#openWorkitemIdentifier=8a33feece92eb1599144ce85b9"
+  defect_urls: ["https://devops.aliyun.com/projex/project/1e401ac99539c3999e00e40006/bug#openWorkitemIdentifier=8a33feece92eb1599144ce85b9"]
+  defect_status: "🤔AI提缺陷"
+  defect_sync_verified: true
+  defect_sync_report: "docs/cases/requirements/ERYE-199/defects-086-087-production-20261119.md"
+  defect_screenshots: 8
+  defect_attachments: 11
+ERYE199-087:
+  status: AUTO
+  script: "tools/editor/erye199/audio-cross-track.mjs#087"
+  specification: "docs/cases/requirements/ERYE-199/cases.md#erye199-card-multitrack"
+  legacy_id: "ECMT-019"
+  definition_version: "v1-merged-erye199-20261118"
+  automation_command: "node tools/editor/erye199/run-audio-cross-track.mjs --case 087 --space 9 --report reports/erye199-086-090-production-20261119"
+  execution_report: "docs/cases/requirements/ERYE-199/results-086-090-production-20261119.md"
+  execution_status: "Failed"
+  execution_in_progress: false
+  execution_note: "18个参数变体按本批报告逐项记录，不将未支持步骤记通过。"
+  defect_id: "FWXC-703"
+  defect_ids: ["FWXC-703"]
+  defect_url: "https://devops.aliyun.com/projex/project/1e401ac99539c3999e00e40006/bug#openWorkitemIdentifier=4141c1deac59c5f123ee27bfb4"
+  defect_urls: ["https://devops.aliyun.com/projex/project/1e401ac99539c3999e00e40006/bug#openWorkitemIdentifier=4141c1deac59c5f123ee27bfb4"]
+  defect_status: "🤔AI提缺陷"
+  defect_sync_verified: true
+  defect_sync_report: "docs/cases/requirements/ERYE-199/defects-086-087-production-20261119.md"
+  defect_screenshots: 5
+  defect_attachments: 8
+ERYE199-088:
+  status: AUTO
+  script: "tools/editor/erye199/audio-cross-track.mjs#088"
+  specification: "docs/cases/requirements/ERYE-199/cases.md#erye199-card-multitrack"
+  legacy_id: "ECMT-020"
+  definition_version: "v1-merged-erye199-20261118"
+  automation_command: "node tools/editor/erye199/run-audio-cross-track.mjs --case 088 --space 9 --report reports/erye199-086-090-production-20261119"
+  execution_report: "docs/cases/requirements/ERYE-199/results-086-090-production-20261119.md"
+  execution_status: "Passed"
+  execution_in_progress: false
+  execution_note: "18个参数变体按本批报告逐项记录，不将未支持步骤记通过。"
+ERYE199-089:
+  status: AUTO
+  script: "tools/editor/erye199/audio-cross-track.mjs#089"
+  specification: "docs/cases/requirements/ERYE-199/cases.md#erye199-card-multitrack"
+  legacy_id: "ECMT-021"
+  definition_version: "v1-merged-erye199-20261118"
+  automation_command: "node tools/editor/erye199/run-audio-cross-track.mjs --case 089 --space 9 --report reports/erye199-086-090-production-20261119"
+  execution_report: "docs/cases/requirements/ERYE-199/results-086-090-production-20261119.md"
+  execution_status: "Passed"
+  execution_in_progress: false
+  execution_note: "18个参数变体按本批报告逐项记录，不将未支持步骤记通过。"
+ERYE199-090:
+  status: AUTO
+  script: "tools/editor/erye199/audio-cross-track.mjs#090"
+  specification: "docs/cases/requirements/ERYE-199/cases.md#erye199-card-multitrack"
+  legacy_id: "ECMT-022"
+  definition_version: "v1-merged-erye199-20261118"
+  automation_command: "node tools/editor/erye199/run-audio-cross-track.mjs --case 090 --space 10 --report reports/erye199-090-095-production-20261119"
+  execution_report: "docs/cases/requirements/ERYE-199/results-090-095-production-20261119.md"
+  execution_status: "Passed"
+  execution_in_progress: false
+  execution_note: "本批31参数变体逐项记录，含090重新执行。"
+ERYE199-091:
+  status: AUTO
+  script: "tools/editor/erye199/native-audio-operations.mjs#091"
+  specification: "docs/cases/requirements/ERYE-199/cases.md#erye199-card-multitrack"
+  legacy_id: "ECMT-023"
+  definition_version: "v1-merged-erye199-20261118"
+  automation_command: "node tools/editor/erye199/run-native-audio-operations.mjs --case 091 --space 10 --report reports/erye199-090-095-production-20261119"
+  execution_report: "docs/cases/requirements/ERYE-199/results-090-095-production-20261119.md"
+  execution_status: "Failed"
+  execution_in_progress: false
+  execution_note: "本批31参数变体逐项记录，含090重新执行。"
+  defect_id: "FWXC-717"
+  defect_ids: ["FWXC-717"]
+  defect_url: "https://devops.aliyun.com/projex/project/1e401ac99539c3999e00e40006/bug#openWorkitemIdentifier=dfda496f8e8460955bf5f689d1"
+  defect_urls: ["https://devops.aliyun.com/projex/project/1e401ac99539c3999e00e40006/bug#openWorkitemIdentifier=dfda496f8e8460955bf5f689d1"]
+  defect_status: "🤔AI提缺陷"
+  defect_sync_verified: true
+  defect_sync_report: "docs/cases/requirements/ERYE-199/defects-091-095-production-20261119.md"
+  defect_screenshots: 17
+  defect_attachments: 20
+ERYE199-092:
+  status: AUTO
+  script: "tools/editor/erye199/native-audio-operations.mjs#092"
+  specification: "docs/cases/requirements/ERYE-199/cases.md#erye199-card-multitrack"
+  legacy_id: "ECMT-024"
+  definition_version: "v1-merged-erye199-20261118"
+  automation_command: "node tools/editor/erye199/run-native-audio-operations.mjs --case 092 --space 10 --report reports/erye199-090-095-production-20261119"
+  execution_report: "docs/cases/requirements/ERYE-199/results-090-095-production-20261119.md"
+  execution_status: "Failed"
+  execution_in_progress: false
+  execution_note: "本批31参数变体逐项记录，含090重新执行。"
+  defect_id: "FWXC-717"
+  defect_ids: ["FWXC-717"]
+  defect_url: "https://devops.aliyun.com/projex/project/1e401ac99539c3999e00e40006/bug#openWorkitemIdentifier=dfda496f8e8460955bf5f689d1"
+  defect_urls: ["https://devops.aliyun.com/projex/project/1e401ac99539c3999e00e40006/bug#openWorkitemIdentifier=dfda496f8e8460955bf5f689d1"]
+  defect_status: "🤔AI提缺陷"
+  defect_sync_verified: true
+  defect_sync_report: "docs/cases/requirements/ERYE-199/defects-091-095-production-20261119.md"
+  defect_screenshots: 17
+  defect_attachments: 20
+ERYE199-093:
+  status: AUTO
+  script: "tools/editor/erye199/native-audio-operations.mjs#093"
+  specification: "docs/cases/requirements/ERYE-199/cases.md#erye199-card-multitrack"
+  legacy_id: "ECMT-025"
+  definition_version: "v1-merged-erye199-20261118"
+  automation_command: "node tools/editor/erye199/run-native-audio-operations.mjs --case 093 --space 10 --report reports/erye199-090-095-production-20261119"
+  execution_report: "docs/cases/requirements/ERYE-199/results-090-095-production-20261119.md"
+  execution_status: "Failed"
+  execution_in_progress: false
+  execution_note: "本批31参数变体逐项记录，含090重新执行。"
+  defect_id: "FWXC-717"
+  defect_ids: ["FWXC-717"]
+  defect_url: "https://devops.aliyun.com/projex/project/1e401ac99539c3999e00e40006/bug#openWorkitemIdentifier=dfda496f8e8460955bf5f689d1"
+  defect_urls: ["https://devops.aliyun.com/projex/project/1e401ac99539c3999e00e40006/bug#openWorkitemIdentifier=dfda496f8e8460955bf5f689d1"]
+  defect_status: "🤔AI提缺陷"
+  defect_sync_verified: true
+  defect_sync_report: "docs/cases/requirements/ERYE-199/defects-091-095-production-20261119.md"
+  defect_screenshots: 17
+  defect_attachments: 20
+ERYE199-094:
+  status: AUTO
+  script: "tools/editor/erye199/native-audio-operations.mjs#094"
+  specification: "docs/cases/requirements/ERYE-199/cases.md#erye199-card-multitrack"
+  legacy_id: "ECMT-026"
+  definition_version: "v1-merged-erye199-20261118"
+  automation_command: "node tools/editor/erye199/run-native-audio-operations.mjs --case 094 --space 10 --report reports/erye199-090-095-production-20261119"
+  execution_report: "docs/cases/requirements/ERYE-199/results-090-095-production-20261119.md"
+  execution_status: "Failed"
+  execution_in_progress: false
+  execution_note: "本批31参数变体逐项记录，含090重新执行。"
+  defect_id: "FWXC-718"
+  defect_ids: ["FWXC-718", "FWXC-719"]
+  defect_url: "https://devops.aliyun.com/projex/project/1e401ac99539c3999e00e40006/bug#openWorkitemIdentifier=556390519ca90daa318f72da8e"
+  defect_urls: ["https://devops.aliyun.com/projex/project/1e401ac99539c3999e00e40006/bug#openWorkitemIdentifier=556390519ca90daa318f72da8e", "https://devops.aliyun.com/projex/project/1e401ac99539c3999e00e40006/bug#openWorkitemIdentifier=88b4c5c5123a367fccd6eab8e5"]
+  defect_status: "🤔AI提缺陷"
+  defect_sync_verified: true
+  defect_sync_report: "docs/cases/requirements/ERYE-199/defects-091-095-production-20261119.md"
+  defect_screenshots: 8
+  defect_attachments: 13
+ERYE199-095:
+  status: AUTO
+  script: "tools/editor/erye199/native-audio-operations.mjs#095"
+  specification: "docs/cases/requirements/ERYE-199/cases.md#erye199-card-multitrack"
+  legacy_id: "ECMT-027"
+  definition_version: "v1-merged-erye199-20261118"
+  automation_command: "node tools/editor/erye199/run-native-audio-operations.mjs --case 095 --space 10 --report reports/erye199-090-095-production-20261119"
+  execution_report: "docs/cases/requirements/ERYE-199/results-090-095-production-20261119.md"
+  execution_status: "Failed"
+  execution_in_progress: false
+  execution_note: "本批31参数变体逐项记录，含090重新执行。"
+  defect_id: "FWXC-720"
+  defect_ids: ["FWXC-720"]
+  defect_url: "https://devops.aliyun.com/projex/project/1e401ac99539c3999e00e40006/bug#openWorkitemIdentifier=fb6bb1e99bf92b757634788d1c"
+  defect_urls: ["https://devops.aliyun.com/projex/project/1e401ac99539c3999e00e40006/bug#openWorkitemIdentifier=fb6bb1e99bf92b757634788d1c"]
+  defect_status: "🤔AI提缺陷"
+  defect_sync_verified: true
+  defect_sync_report: "docs/cases/requirements/ERYE-199/defects-091-095-production-20261119.md"
+  defect_screenshots: 11
+  defect_attachments: 15
+ERYE199-096:
+  status: PLAN
+  script: ""
+  execution_status: "Not Run"
+  specification: "docs/cases/requirements/ERYE-199/cases.md#erye199-card-multitrack"
+  legacy_id: "ECMT-028"
+  definition_version: "v1-merged-erye199-20261118"
+ERYE199-097:
+  status: PLAN
+  script: ""
+  execution_status: "Not Run"
+  specification: "docs/cases/requirements/ERYE-199/cases.md#erye199-card-multitrack"
+  legacy_id: "ECMT-029"
+  definition_version: "v1-merged-erye199-20261118"
+ERYE199-098:
+  status: PLAN
+  script: ""
+  execution_status: "Not Run"
+  specification: "docs/cases/requirements/ERYE-199/cases.md#erye199-card-multitrack"
+  legacy_id: "ECMT-030"
+  definition_version: "v1-merged-erye199-20261118"
+ERYE199-099:
+  status: PLAN
+  script: ""
+  execution_status: "Not Run"
+  specification: "docs/cases/requirements/ERYE-199/cases.md#erye199-card-multitrack"
+  legacy_id: "ECMT-031"
+  definition_version: "v1-merged-erye199-20261118"
+ERYE199-100:
+  status: PLAN
+  script: ""
+  execution_status: "Not Run"
+  specification: "docs/cases/requirements/ERYE-199/cases.md#erye199-card-multitrack"
+  legacy_id: "ECMT-032"
+  definition_version: "v1-merged-erye199-20261118"
+ERYE199-101:
+  status: PLAN
+  script: ""
+  execution_status: "Not Run"
+  specification: "docs/cases/requirements/ERYE-199/cases.md#erye199-card-multitrack"
+  legacy_id: "ECMT-033"
+  definition_version: "v1-merged-erye199-20261118"
+ERYE199-102:
+  status: PLAN
+  script: ""
+  execution_status: "Not Run"
+  specification: "docs/cases/requirements/ERYE-199/cases.md#erye199-card-multitrack"
+  legacy_id: "ECMT-034"
+  definition_version: "v1-merged-erye199-20261118"
+ERYE199-103:
+  status: PLAN
+  script: ""
+  execution_status: "Not Run"
+  specification: "docs/cases/requirements/ERYE-199/cases.md#erye199-card-multitrack"
+  legacy_id: "ECMT-035"
+  definition_version: "v1-merged-erye199-20261118"
+ERYE199-104:
+  status: PLAN
+  script: ""
+  execution_status: "Not Run"
+  specification: "docs/cases/requirements/ERYE-199/cases.md#erye199-card-multitrack"
+  legacy_id: "ECMT-036"
+  definition_version: "v1-merged-erye199-20261118"
+ERYE199-105:
+  status: PLAN
+  script: ""
+  execution_status: "Not Run"
+  specification: "docs/cases/requirements/ERYE-199/cases.md#erye199-card-multitrack"
+  legacy_id: "ECMT-037"
+  definition_version: "v1-merged-erye199-20261118"
+ERYE199-106:
+  status: PLAN
+  script: ""
+  execution_status: "Not Run"
+  specification: "docs/cases/requirements/ERYE-199/cases.md#erye199-card-multitrack"
+  legacy_id: "ECMT-038"
+  definition_version: "v1-merged-erye199-20261118"
+ERYE199-107:
+  status: PLAN
+  script: ""
+  execution_status: "Not Run"
+  specification: "docs/cases/requirements/ERYE-199/cases.md#erye199-card-multitrack"
+  legacy_id: "ECMT-039"
+  definition_version: "v1-merged-erye199-20261118"
+ERYE199-108:
+  status: PLAN
+  script: ""
+  execution_status: "Not Run"
+  specification: "docs/cases/requirements/ERYE-199/cases.md#erye199-card-multitrack"
+  legacy_id: "ECMT-040"
+  definition_version: "v1-merged-erye199-20261118"
+ERYE199-109:
+  status: PLAN
+  script: ""
+  execution_status: "Not Run"
+  specification: "docs/cases/requirements/ERYE-199/cases.md#erye199-card-multitrack"
+  legacy_id: "ECMT-041"
+  definition_version: "v1-merged-erye199-20261118"
+ERYE199-110:
+  status: PLAN
+  script: ""
+  execution_status: "Not Run"
+  specification: "docs/cases/requirements/ERYE-199/cases.md#erye199-card-multitrack"
+  legacy_id: "ECMT-042"
+  definition_version: "v1-merged-erye199-20261118"
+ERYE199-111:
+  status: PLAN
+  script: ""
+  execution_status: "Not Run"
+  specification: "docs/cases/requirements/ERYE-199/cases.md#erye199-card-multitrack"
+  legacy_id: "ECMT-043"
+  definition_version: "v1-merged-erye199-20261118"
+ERYE199-112:
+  status: PLAN
+  script: ""
+  execution_status: "Not Run"
+  specification: "docs/cases/requirements/ERYE-199/cases.md#erye199-card-multitrack"
+  legacy_id: "ECMT-044"
+  definition_version: "v1-merged-erye199-20261118"
+ERYE199-113:
+  status: PLAN
+  script: ""
+  execution_status: "Not Run"
+  specification: "docs/cases/requirements/ERYE-199/cases.md#erye199-card-multitrack"
+  legacy_id: "ECMT-045"
+  definition_version: "v1-merged-erye199-20261118"
+ERYE199-114:
+  status: PLAN
+  script: ""
+  execution_status: "Not Run"
+  specification: "docs/cases/requirements/ERYE-199/cases.md#erye199-card-multitrack"
+  legacy_id: "ECMT-046"
+  definition_version: "v1-merged-erye199-20261118"
+ERYE199-115:
+  status: PLAN
+  script: ""
+  execution_status: "Not Run"
+  specification: "docs/cases/requirements/ERYE-199/cases.md#erye199-card-multitrack"
+  legacy_id: "ECMT-047"
+  definition_version: "v1-merged-erye199-20261118"
+ERYE199-116:
+  status: PLAN
+  script: ""
+  execution_status: "Not Run"
+  specification: "docs/cases/requirements/ERYE-199/cases.md#erye199-card-multitrack"
+  legacy_id: "ECMT-048"
+  definition_version: "v1-merged-erye199-20261118"
+# ERYE-199 现有功能七组缺口117～148；仅设计、未执行
+ERYE199-117:
+  status: PLAN
+  script: ""
+  execution_status: "Not Run"
+  specification: "docs/cases/requirements/ERYE-199/cases.md#erye199-editor-existing-feature-gaps"
+  definition_version: "v1-existing-feature-gaps-r5-r6-20261118"
+ERYE199-118:
+  status: PLAN
+  script: ""
+  execution_status: "Not Run"
+  specification: "docs/cases/requirements/ERYE-199/cases.md#erye199-editor-existing-feature-gaps"
+  definition_version: "v1-existing-feature-gaps-r5-r6-20261118"
+ERYE199-119:
+  status: PLAN
+  script: ""
+  execution_status: "Not Run"
+  specification: "docs/cases/requirements/ERYE-199/cases.md#erye199-editor-existing-feature-gaps"
+  definition_version: "v1-existing-feature-gaps-r5-r6-20261118"
+ERYE199-120:
+  status: PLAN
+  script: ""
+  execution_status: "Not Run"
+  specification: "docs/cases/requirements/ERYE-199/cases.md#erye199-editor-existing-feature-gaps"
+  definition_version: "v1-existing-feature-gaps-r5-r6-20261118"
+ERYE199-121:
+  status: PLAN
+  script: ""
+  execution_status: "Not Run"
+  specification: "docs/cases/requirements/ERYE-199/cases.md#erye199-editor-existing-feature-gaps"
+  definition_version: "v1-existing-feature-gaps-r5-r6-20261118"
+ERYE199-122:
+  status: PLAN
+  script: ""
+  execution_status: "Not Run"
+  specification: "docs/cases/requirements/ERYE-199/cases.md#erye199-editor-existing-feature-gaps"
+  definition_version: "v1-existing-feature-gaps-r5-r6-20261118"
+ERYE199-123:
+  status: PLAN
+  script: ""
+  execution_status: "Not Run"
+  specification: "docs/cases/requirements/ERYE-199/cases.md#erye199-editor-existing-feature-gaps"
+  definition_version: "v1-existing-feature-gaps-r5-r6-20261118"
+ERYE199-124:
+  status: PLAN
+  script: ""
+  execution_status: "Not Run"
+  specification: "docs/cases/requirements/ERYE-199/cases.md#erye199-editor-existing-feature-gaps"
+  definition_version: "v1-existing-feature-gaps-r5-r6-20261118"
+ERYE199-125:
+  status: PLAN
+  script: ""
+  execution_status: "Not Run"
+  specification: "docs/cases/requirements/ERYE-199/cases.md#erye199-editor-existing-feature-gaps"
+  definition_version: "v1-existing-feature-gaps-r5-r6-20261118"
+ERYE199-126:
+  status: PLAN
+  script: ""
+  execution_status: "Not Run"
+  specification: "docs/cases/requirements/ERYE-199/cases.md#erye199-editor-existing-feature-gaps"
+  definition_version: "v1-existing-feature-gaps-r5-r6-20261118"
+ERYE199-127:
+  status: PLAN
+  script: ""
+  execution_status: "Not Run"
+  specification: "docs/cases/requirements/ERYE-199/cases.md#erye199-editor-existing-feature-gaps"
+  definition_version: "v1-existing-feature-gaps-r5-r6-20261118"
+ERYE199-128:
+  status: PLAN
+  script: ""
+  execution_status: "Not Run"
+  specification: "docs/cases/requirements/ERYE-199/cases.md#erye199-editor-existing-feature-gaps"
+  definition_version: "v1-existing-feature-gaps-r5-r6-20261118"
+ERYE199-129:
+  status: PLAN
+  script: ""
+  execution_status: "Not Run"
+  specification: "docs/cases/requirements/ERYE-199/cases.md#erye199-editor-existing-feature-gaps"
+  definition_version: "v1-existing-feature-gaps-r5-r6-20261118"
+ERYE199-130:
+  status: PLAN
+  script: ""
+  execution_status: "Not Run"
+  specification: "docs/cases/requirements/ERYE-199/cases.md#erye199-editor-existing-feature-gaps"
+  definition_version: "v1-existing-feature-gaps-r5-r6-20261118"
+ERYE199-131:
+  status: PLAN
+  script: ""
+  execution_status: "Not Run"
+  specification: "docs/cases/requirements/ERYE-199/cases.md#erye199-editor-existing-feature-gaps"
+  definition_version: "v1-existing-feature-gaps-r5-r6-20261118"
+ERYE199-132:
+  status: PLAN
+  script: ""
+  execution_status: "Not Run"
+  specification: "docs/cases/requirements/ERYE-199/cases.md#erye199-editor-existing-feature-gaps"
+  definition_version: "v1-existing-feature-gaps-r5-r6-20261118"
+ERYE199-133:
+  status: PLAN
+  script: ""
+  execution_status: "Not Run"
+  specification: "docs/cases/requirements/ERYE-199/cases.md#erye199-editor-existing-feature-gaps"
+  definition_version: "v1-existing-feature-gaps-r5-r6-20261118"
+ERYE199-134:
+  status: PLAN
+  script: ""
+  execution_status: "Not Run"
+  specification: "docs/cases/requirements/ERYE-199/cases.md#erye199-editor-existing-feature-gaps"
+  definition_version: "v1-existing-feature-gaps-r5-r6-20261118"
+ERYE199-135:
+  status: PLAN
+  script: ""
+  execution_status: "Not Run"
+  specification: "docs/cases/requirements/ERYE-199/cases.md#erye199-editor-existing-feature-gaps"
+  definition_version: "v1-existing-feature-gaps-r5-r6-20261118"
+ERYE199-136:
+  status: PLAN
+  script: ""
+  execution_status: "Not Run"
+  specification: "docs/cases/requirements/ERYE-199/cases.md#erye199-editor-existing-feature-gaps"
+  definition_version: "v1-existing-feature-gaps-r5-r6-20261118"
+ERYE199-137:
+  status: PLAN
+  script: ""
+  execution_status: "Not Run"
+  specification: "docs/cases/requirements/ERYE-199/cases.md#erye199-editor-existing-feature-gaps"
+  definition_version: "v1-existing-feature-gaps-r5-r6-20261118"
+ERYE199-138:
+  status: PLAN
+  script: ""
+  execution_status: "Not Run"
+  specification: "docs/cases/requirements/ERYE-199/cases.md#erye199-editor-existing-feature-gaps"
+  definition_version: "v1-existing-feature-gaps-r5-r6-20261118"
+ERYE199-139:
+  status: PLAN
+  script: ""
+  execution_status: "Not Run"
+  specification: "docs/cases/requirements/ERYE-199/cases.md#erye199-editor-existing-feature-gaps"
+  definition_version: "v1-existing-feature-gaps-r5-r6-20261118"
+ERYE199-140:
+  status: PLAN
+  script: ""
+  execution_status: "Not Run"
+  specification: "docs/cases/requirements/ERYE-199/cases.md#erye199-editor-existing-feature-gaps"
+  definition_version: "v1-existing-feature-gaps-r5-r6-20261118"
+ERYE199-141:
+  status: PLAN
+  script: ""
+  execution_status: "Not Run"
+  specification: "docs/cases/requirements/ERYE-199/cases.md#erye199-editor-existing-feature-gaps"
+  definition_version: "v1-existing-feature-gaps-r5-r6-20261118"
+ERYE199-142:
+  status: PLAN
+  script: ""
+  execution_status: "Not Run"
+  specification: "docs/cases/requirements/ERYE-199/cases.md#erye199-editor-existing-feature-gaps"
+  definition_version: "v1-existing-feature-gaps-r5-r6-20261118"
+ERYE199-143:
+  status: PLAN
+  script: ""
+  execution_status: "Not Run"
+  specification: "docs/cases/requirements/ERYE-199/cases.md#erye199-editor-existing-feature-gaps"
+  definition_version: "v1-existing-feature-gaps-r5-r6-20261118"
+ERYE199-144:
+  status: PLAN
+  script: ""
+  execution_status: "Not Run"
+  specification: "docs/cases/requirements/ERYE-199/cases.md#erye199-editor-existing-feature-gaps"
+  definition_version: "v1-existing-feature-gaps-r5-r6-20261118"
+ERYE199-145:
+  status: PLAN
+  script: ""
+  execution_status: "Not Run"
+  specification: "docs/cases/requirements/ERYE-199/cases.md#erye199-editor-existing-feature-gaps"
+  definition_version: "v1-existing-feature-gaps-r5-r6-20261118"
+ERYE199-146:
+  status: PLAN
+  script: ""
+  execution_status: "Not Run"
+  specification: "docs/cases/requirements/ERYE-199/cases.md#erye199-editor-existing-feature-gaps"
+  definition_version: "v1-existing-feature-gaps-r5-r6-20261118"
+ERYE199-147:
+  status: PLAN
+  script: ""
+  execution_status: "Not Run"
+  specification: "docs/cases/requirements/ERYE-199/cases.md#erye199-editor-existing-feature-gaps"
+  definition_version: "v1-existing-feature-gaps-r5-r6-20261118"
+ERYE199-148:
+  status: PLAN
+  script: ""
+  execution_status: "Not Run"
+  specification: "docs/cases/requirements/ERYE-199/cases.md#erye199-editor-existing-feature-gaps"
+  definition_version: "v1-existing-feature-gaps-r5-r6-20261118"
 # ERYE-196 正文及评论详版，2026-11-05；001人工Passed，002本轮页面验收不适用，003页面业务Passed，004本轮不适用，005受阻，其余未执行；status为自动化接入状态
 ERYE196-001:
+  previous_execution_report: "docs/cases/requirements/ERYE-196/results-001-rerun-20261105.md"
+  previous_execution_status: "Passed"
   status: PLAN
   script: ""
-  execution_status: Passed
-  execution_report: docs/cases/requirements/ERYE-196/results-001-rerun-20261105.md
+  execution_status: "Passed"
+  execution_report: "docs/cases/requirements/ERYE-196/results-all-applicable-rerun-20261111.md"
+  execution_batch: "20261111-rerun"
+  execution_note: "按本轮真实页面、保存内容及证据核验；历史记录保留"
 ERYE196-002:
+  previous_execution_report: "docs/cases/requirements/ERYE-196/results-002-20261105.md"
+  previous_execution_status: "NotApplicable"
   status: PLAN
   script: ""
-  execution_status: NotApplicable
-  execution_report: docs/cases/requirements/ERYE-196/results-002-20261105.md
+  execution_status: "NotApplicable"
+  execution_report: "docs/cases/requirements/ERYE-196/results-all-applicable-rerun-20261111.md"
+  execution_batch: "20261111-rerun"
+  execution_note: "沿用用户已确认的本轮验收范围排除；002范围分页、004对象引用标签/移除交互不适用"
 ERYE196-003:
+  previous_execution_report: "docs/cases/requirements/ERYE-196/results-003-ui-20261105.md"
+  previous_execution_status: "Passed"
   status: PLAN
   script: ""
-  execution_status: Passed
+  execution_status: "Failed"
   execution_scope: page_business
-  execution_report: docs/cases/requirements/ERYE-196/results-003-ui-20261105.md
+  execution_report: "docs/cases/requirements/ERYE-196/results-all-applicable-rerun-20261111.md"
+  execution_batch: "20261111-rerun"
+  execution_note: "B将10～12秒Second caption改为新版C2并确认保存；回A操作/等待12秒仍为旧文，无更新提示。刷新重开后新文正确、译文及其他对象保持；撤销后按轨道身份核对全部内容恢复。失败证据003-focused-A-check，保存结构中轨道排序变化不作为实现缺陷。"
 ERYE196-004:
+  previous_execution_report: "docs/cases/requirements/ERYE-196/results-004-ui-20261105.md"
+  previous_execution_status: "NotApplicable"
   status: PLAN
   script: ""
-  execution_status: NotApplicable
+  execution_status: "NotApplicable"
   execution_scope: excluded_by_latest_design
-  execution_report: docs/cases/requirements/ERYE-196/results-004-ui-20261105.md
+  execution_report: "docs/cases/requirements/ERYE-196/results-all-applicable-rerun-20261111.md"
+  execution_batch: "20261111-rerun"
+  execution_note: "沿用用户已确认的本轮验收范围排除；002范围分页、004对象引用标签/移除交互不适用"
 ERYE196-005:
+  previous_execution_report: "docs/cases/requirements/ERYE-196/business-acceptance-update-20261105.md"
+  previous_execution_status: "NotRun"
   status: PLAN
   script: ""
-  execution_status: NotRun
+  execution_status: "Failed"
   execution_scope: page_business_or_observed_api
-  execution_report: docs/cases/requirements/ERYE-196/business-acceptance-update-20261105.md
+  execution_report: "docs/cases/requirements/ERYE-196/results-all-applicable-rerun-20261111.md"
+  execution_batch: "20261111-rerun"
+  execution_note: "原完整提示词只提交一次，任务failed：Read this editor project in the current run before using a future revision。目标Welcome未改，译文及其他对象保持；保存版本1→1，刷新重开仍原文。另见编辑器502错误横幅；未点击重试，需求满足字段虽true也不计通过。"
 ERYE196-006:
   status: PLAN
   script: ""
+  execution_status: "Failed"
+  execution_report: "docs/cases/requirements/ERYE-196/results-all-applicable-rerun-20261111.md"
+  execution_batch: "20261111-rerun"
+  execution_note: "两条字幕、未选择目标，提交“把这条字幕原文改成欢迎使用 CinLink”；未出现澄清，直接启动字幕更新并failed：Read this editor project in the current run before using a future revision。原内容/版本1保持；没有可填写补槽，不以额外改写提示词绕过失败。"
 ERYE196-007:
   status: PLAN
   script: ""
+  execution_status: "Failed"
+  execution_report: "docs/cases/requirements/ERYE-196/results-all-applicable-rerun-20261111.md"
+  execution_batch: "20261111-rerun"
+  execution_note: "T2删除Welcome并保存，T1旧目标修改直接失败、未明确指出目标失效；C2未误改。按步骤刷新重开后明确选择10～12秒Second caption，再次任务failed，同为Read this editor project in the current run before using a future revision，C2未改为引用修复测试，版本2/内容保持。两个run均各提交一次，无补槽/重试。"
 ERYE196-008:
   status: PLAN
   script: ""
+  execution_status: "Failed"
+  execution_report: "docs/cases/requirements/ERYE-196/results-all-applicable-rerun-20261111.md"
+  execution_batch: "20261111-rerun"
+  execution_note: "A发出明确C1改文后于19:38:21切到B，任务19:38:34终态failed：Read this editor project in the current run before using a future revision。A版本1/内容保持，未完成改文；B全部状态未变、视图仍停在B。工程隔离观察正常不替代A业务成功。未重发或点重试。"
 ERYE196-009:
   status: PLAN
   script: ""
+  execution_status: "Passed"
+  execution_report: "docs/cases/requirements/ERYE-196/results-all-applicable-rerun-20261111.md"
+  execution_batch: "20261111-rerun"
+  execution_note: "基于本轮实际工程GET：合法PA/PB均可读；把实际路径工程定位分别换成另一资源的会话ID和不存在UUID，均拒绝，无任何工程兜底；PA/PB全部保存状态前后相同。覆盖实际只读请求的无效目标分支，不宣称未测试的写请求。"
 ERYE196-010:
   status: PLAN
   script: ""
+  execution_status: "Failed"
+  execution_report: "docs/cases/requirements/ERYE-196/results-all-applicable-rerun-20261111.md"
+  execution_batch: "20261111-rerun"
+  execution_note: "本轮原指令提交后目标业务未完成。任务状态done；目前不能安全安排这次精确分割：分割工具接收的是工程时间，而你指定的是“片段内部第5秒”；现有上下文没有该已保存片段的时间轴起点，不能直接把切点设为工程第5秒。\n\n本次不安排任何修改、工程创建或替代视频生成。你可以在指定工程中将播放头定位到该片段起点后5秒，再使用编辑器的分割按钮，保留两侧内容和原有位置。\n\n现有工作流包括精彩片段剪辑、口头禅与停顿清理、多视频混剪、视频降噪及字幕烧录，但它们都不符合本次仅分割已保存片段的要求，因此不选用。；内容保持，版本1→1；未点重试。"
 ERYE196-011:
   status: PLAN
   script: ""
+  execution_status: "Failed"
+  execution_report: "docs/cases/requirements/ERYE-196/results-all-applicable-rerun-20261111.md"
+  execution_batch: "20261111-rerun"
+  execution_note: "本轮原指令提交后目标业务未完成。任务状态failed；Read this editor project in the current run before using a future revision；内容保持，版本1→1；未点重试。"
 ERYE196-012:
   status: PLAN
   script: ""
 ERYE196-013:
   status: PLAN
   script: ""
+  execution_status: "Failed"
+  execution_report: "docs/cases/requirements/ERYE-196/results-all-applicable-rerun-20261111.md"
+  execution_batch: "20261111-rerun"
+  execution_note: "任务done但intent_fully_satisfied=false，助手明确说明不能同时满足裁头2秒、关联字幕/配音同步、固定BGM不动。原20秒视频仍源0至20秒、时间线起点0，未裁成源2至20秒/时间线0至18秒；没有用手动编辑替代Agent。版本1至2及其他结构变化另行核验，不作为业务成功。"
 ERYE196-014:
   status: PLAN
   script: ""
+  execution_status: "Failed"
+  execution_report: "docs/cases/requirements/ERYE-196/results-all-applicable-rerun-20261111.md"
+  execution_batch: "20261111-rerun"
+  execution_note: "前置改用真实0～1/1～3秒独立SRT并正常加载后才单次提交。任务done；本次不执行修改，也不会新建工程或生成替代视频。当前工具没有完整支持“在已保存工程内裁去开头2秒，并按删词边界同步波纹更新字幕与配音”的操作。普通视频片段裁剪只声明同步关联原声，不能保证删除跨边界字幕中的“Remove”及其对应配音，因此不能用它冒充完成你的要求。\n\n若在原工程中手动处理，验收目标应为：保留源2～20秒，结果18秒；删除“Intro”和“Remove”；只保留源2～3秒的“Keep”，置于新时间线0～1秒；其余关联字幕和配音同步前移2秒。\n\n目前另有时间裁切与转码、口头禅/停顿清理、语音转写字幕、字幕翻译、视频翻译配音这五类工作流，但它们都不能替代你指定的工程内同步波纹裁剪。；视频源起点实际0，预期2秒；跨边界文字/声音等剩余项不冒称通过。"
 ERYE196-015:
   status: PLAN
   script: ""
+  execution_status: "Passed"
+  execution_report: "docs/cases/requirements/ERYE-196/results-all-applicable-rerun-20261111.md"
+  execution_batch: "20261111-rerun"
+  execution_note: "原21秒超范围裁头被拦截，页面明确指出片段20秒且21秒超范围，并要求修正；答复前完整保存状态/版本1保持。按负向意图填写取消本次操作、保留原片后，同一run done，不改成合法裁剪、不新发提示词；刷新重开内容/updated_at/版本1均保持，撤销/重做均不可用。"
 ERYE196-016:
   status: PLAN
   script: ""
 ERYE196-017:
   status: PLAN
   script: ""
+  execution_status: "Failed"
+  execution_report: "docs/cases/requirements/ERYE-196/results-all-applicable-rerun-20261111.md"
+  execution_batch: "20261111-rerun"
+  execution_note: "本轮原指令提交后目标业务未完成。任务状态done；目前无法在保留全部约束的情况下执行这项编辑。现有片段删除工具会同时裁掉背景音乐的对应区间，并让剩余关联媒体一起前移；它没有“固定背景音乐不动”的选项，也无法明确控制你要求的字幕、配音同步规则。\n因此，本次不安排删除操作，不新建工程，也不生成替代视频。若手动处理，应在原工程中删除5～10秒片段，将后续视频及关联字幕、配音前移5秒，同时保持背景音乐的时间位置和素材范围不变。；内容有变化，版本1→2；未点重试。"
 ERYE196-018:
   status: PLAN
   script: ""
+  execution_status: "Failed"
+  execution_report: "docs/cases/requirements/ERYE-196/results-all-applicable-rerun-20261111.md"
+  execution_batch: "20261111-rerun"
+  execution_note: "本轮原指令提交后目标业务未完成。任务状态done；目前无法在完整保留这些约束的情况下安全执行。现有片段删除接口会切除同区间背景音乐，并对剩余关联媒体进行波纹重排，没有“保留空隙、其他片段不动、固定背景音乐不动”的控制。\n\n因此，本次不安排删除操作，也不新建工程或生成替代视频。要实现你的要求，需要支持非波纹删除的操作：移除5～10秒片段及其绑定内容，保持后段从10秒开始，并排除固定背景音乐。\n\n已有相关流程包括：常规视频编辑（截取、裁剪、转码）、口头语与停顿清理、语音精彩片段剪辑、多视频蒙太奇、视频音频降噪。这些流程都不能替代本次精确的工程修改，本次不会运行它们。；内容有变化，版本1→2；未点重试。"
 ERYE196-019:
   status: PLAN
   script: ""
 ERYE196-020:
   status: PLAN
   script: ""
+  execution_status: "Failed"
+  execution_report: "docs/cases/requirements/ERYE-196/results-all-applicable-rerun-20261111.md"
+  execution_batch: "20261111-rerun"
+  execution_note: "原指令一次提交，任务done；当前可执行能力无法完成这项精确的已保存工程复制追加，并同时保证不复制关联字幕和配音、保留原片段及现有字幕不变。本次不会修改工程，也不会新建工程或生成替代视频。\n\n可在编辑器中手动仅选中该视频片段，复制后粘贴到原片段末尾，并检查新增部分未包含字幕或配音。；保存后视频仍1段。窗口最小化致终态截图失败，已保存原消息/前后工程/页面文本，失败截图待恢复窗口后补取；不得重发本任务。"
 ERYE196-021:
   status: PLAN
   script: ""
@@ -653,6 +2030,10 @@ ERYE196-067:
 ERYE196-068:
   status: PLAN
   script: ""
+  execution_status: "Blocked"
+  execution_report: "docs/cases/requirements/ERYE-196/results-all-applicable-rerun-20261111.md"
+  execution_batch: "20261111-rerun"
+  execution_note: "需要U1退出后登录无PA权限的U2，以验证草稿/缓存隔离；用户确认目前无第二测试账号，不退出当前账号冒充验证。"
 ERYE196-069:
   status: PLAN
   script: ""
@@ -746,6 +2127,10 @@ ERYE196-098:
 ERYE196-099:
   status: PLAN
   script: ""
+  execution_status: "Blocked"
+  execution_report: "docs/cases/requirements/ERYE-196/results-all-applicable-rerun-20261111.md"
+  execution_batch: "20261111-rerun"
+  execution_note: "要求Web和macOS同业务独立对照；用户确认目前无macOS测试环境，当前Windows浏览器结果不能代替跨平台结果。"
 ERYE196-100:
   status: PLAN
   script: ""
@@ -755,9 +2140,17 @@ ERYE196-101:
 ERYE196-102:
   status: PLAN
   script: ""
+  execution_status: "Blocked"
+  execution_report: "docs/cases/requirements/ERYE-196/results-all-applicable-rerun-20261111.md"
+  execution_batch: "20261111-rerun"
+  execution_note: "跨账户读取需要U2和U1私有工程/资产/任务合法对照；用户确认无第二测试账号。"
 ERYE196-103:
   status: PLAN
   script: ""
+  execution_status: "Blocked"
+  execution_report: "docs/cases/requirements/ERYE-196/results-all-applicable-rerun-20261111.md"
+  execution_batch: "20261111-rerun"
+  execution_note: "跨账户编辑/撤销/导出/取消/下载需要U2无PA权限的实际登录；用户确认无第二测试账号。"
 ERYE196-104:
   status: PLAN
   script: ""
@@ -788,9 +2181,17 @@ ERYE196-112:
 ERYE196-113:
   status: PLAN
   script: ""
+  execution_status: "Blocked"
+  execution_report: "docs/cases/requirements/ERYE-196/results-all-applicable-rerun-20261111.md"
+  execution_batch: "20261111-rerun"
+  execution_note: "要求Chrome/Edge/Safari两代及对应OS完整组合；用户确认无macOS/Safari环境，当前Ego Chromium单环境不能代替6个组合。"
 ERYE196-114:
   status: PLAN
   script: ""
+  execution_status: "Blocked"
+  execution_report: "docs/cases/requirements/ERYE-196/results-all-applicable-rerun-20261111.md"
+  execution_batch: "20261111-rerun"
+  execution_note: "需要Firefox和移动浏览器真实支持/降级对照；当前仅Windows Ego Chromium环境，无这些测试环境，不以UA修改代替。"
 ERYE196-115:
   status: PLAN
   script: ""
@@ -815,44 +2216,96 @@ ERYE196-121:
 ERYE196-122:
   status: PLAN
   script: ""
+  execution_status: "Blocked"
+  execution_report: "docs/cases/requirements/ERYE-196/results-all-applicable-rerun-20261111.md"
+  execution_batch: "20261111-rerun"
+  execution_note: "M2外部客户端专项：用户确认目前没有CinLink MCP授权入口及Codex/Claude两端连接测试环境。本轮设置页仅有个人信息/剪辑偏好/关于我们，未观察到外部连接管理入口；未实际建立授权，不能以当前浏览器登录态替代M2授权或计通过。"
 ERYE196-123:
   status: PLAN
   script: ""
+  execution_status: "Blocked"
+  execution_report: "docs/cases/requirements/ERYE-196/results-all-applicable-rerun-20261111.md"
+  execution_batch: "20261111-rerun"
+  execution_note: "M2外部客户端专项：用户确认目前没有CinLink MCP授权入口及Codex/Claude两端连接测试环境。本轮设置页仅有个人信息/剪辑偏好/关于我们，未观察到外部连接管理入口；未实际建立授权，不能以当前浏览器登录态替代M2授权或计通过。"
 ERYE196-124:
   status: PLAN
   script: ""
+  execution_status: "Blocked"
+  execution_report: "docs/cases/requirements/ERYE-196/results-all-applicable-rerun-20261111.md"
+  execution_batch: "20261111-rerun"
+  execution_note: "M2外部客户端专项：用户确认目前没有CinLink MCP授权入口及Codex/Claude两端连接测试环境。本轮设置页仅有个人信息/剪辑偏好/关于我们，未观察到外部连接管理入口；未实际建立授权，不能以当前浏览器登录态替代M2授权或计通过。"
 ERYE196-125:
   status: PLAN
   script: ""
+  execution_status: "Blocked"
+  execution_report: "docs/cases/requirements/ERYE-196/results-all-applicable-rerun-20261111.md"
+  execution_batch: "20261111-rerun"
+  execution_note: "M2外部客户端专项：用户确认目前没有CinLink MCP授权入口及Codex/Claude两端连接测试环境。本轮设置页仅有个人信息/剪辑偏好/关于我们，未观察到外部连接管理入口；未实际建立授权，不能以当前浏览器登录态替代M2授权或计通过。"
 ERYE196-126:
   status: PLAN
   script: ""
+  execution_status: "Blocked"
+  execution_report: "docs/cases/requirements/ERYE-196/results-all-applicable-rerun-20261111.md"
+  execution_batch: "20261111-rerun"
+  execution_note: "M2外部客户端专项：用户确认目前没有CinLink MCP授权入口及Codex/Claude两端连接测试环境。本轮设置页仅有个人信息/剪辑偏好/关于我们，未观察到外部连接管理入口；未实际建立授权，不能以当前浏览器登录态替代M2授权或计通过。"
 ERYE196-127:
   status: PLAN
   script: ""
+  execution_status: "Blocked"
+  execution_report: "docs/cases/requirements/ERYE-196/results-all-applicable-rerun-20261111.md"
+  execution_batch: "20261111-rerun"
+  execution_note: "M2外部客户端专项：用户确认目前没有CinLink MCP授权入口及Codex/Claude两端连接测试环境。本轮设置页仅有个人信息/剪辑偏好/关于我们，未观察到外部连接管理入口；未实际建立授权，不能以当前浏览器登录态替代M2授权或计通过。"
 ERYE196-128:
   status: PLAN
   script: ""
+  execution_status: "Blocked"
+  execution_report: "docs/cases/requirements/ERYE-196/results-all-applicable-rerun-20261111.md"
+  execution_batch: "20261111-rerun"
+  execution_note: "M2外部客户端专项：用户确认目前没有CinLink MCP授权入口及Codex/Claude两端连接测试环境。本轮设置页仅有个人信息/剪辑偏好/关于我们，未观察到外部连接管理入口；未实际建立授权，不能以当前浏览器登录态替代M2授权或计通过。"
 ERYE196-129:
   status: PLAN
   script: ""
+  execution_status: "Blocked"
+  execution_report: "docs/cases/requirements/ERYE-196/results-all-applicable-rerun-20261111.md"
+  execution_batch: "20261111-rerun"
+  execution_note: "M2外部客户端专项：用户确认目前没有CinLink MCP授权入口及Codex/Claude两端连接测试环境。本轮设置页仅有个人信息/剪辑偏好/关于我们，未观察到外部连接管理入口；未实际建立授权，不能以当前浏览器登录态替代M2授权或计通过。"
 ERYE196-130:
   status: PLAN
   script: ""
+  execution_status: "Blocked"
+  execution_report: "docs/cases/requirements/ERYE-196/results-all-applicable-rerun-20261111.md"
+  execution_batch: "20261111-rerun"
+  execution_note: "M2外部客户端专项：用户确认目前没有CinLink MCP授权入口及Codex/Claude两端连接测试环境。本轮设置页仅有个人信息/剪辑偏好/关于我们，未观察到外部连接管理入口；未实际建立授权，不能以当前浏览器登录态替代M2授权或计通过。"
 ERYE196-131:
   status: PLAN
   script: ""
+  execution_status: "Blocked"
+  execution_report: "docs/cases/requirements/ERYE-196/results-all-applicable-rerun-20261111.md"
+  execution_batch: "20261111-rerun"
+  execution_note: "M2外部客户端专项：用户确认目前没有CinLink MCP授权入口及Codex/Claude两端连接测试环境。本轮设置页仅有个人信息/剪辑偏好/关于我们，未观察到外部连接管理入口；未实际建立授权，不能以当前浏览器登录态替代M2授权或计通过。"
 ERYE196-132:
   status: PLAN
   script: ""
+  execution_status: "Blocked"
+  execution_report: "docs/cases/requirements/ERYE-196/results-all-applicable-rerun-20261111.md"
+  execution_batch: "20261111-rerun"
+  execution_note: "M2外部客户端专项：用户确认目前没有CinLink MCP授权入口及Codex/Claude两端连接测试环境。本轮设置页仅有个人信息/剪辑偏好/关于我们，未观察到外部连接管理入口；未实际建立授权，不能以当前浏览器登录态替代M2授权或计通过。"
 ERYE196-133:
   status: PLAN
   script: ""
+  execution_status: "Blocked"
+  execution_report: "docs/cases/requirements/ERYE-196/results-all-applicable-rerun-20261111.md"
+  execution_batch: "20261111-rerun"
+  execution_note: "M2外部客户端专项：用户确认目前没有CinLink MCP授权入口及Codex/Claude两端连接测试环境。本轮设置页仅有个人信息/剪辑偏好/关于我们，未观察到外部连接管理入口；未实际建立授权，不能以当前浏览器登录态替代M2授权或计通过。"
 ERYE196-134:
   status: PLAN
   script: ""
 
 # ERYE-206/210 2026-11-05：正文、评论及用户确认五入口；仅设计未执行
+  execution_status: "Blocked"
+  execution_report: "docs/cases/requirements/ERYE-196/results-all-applicable-rerun-20261111.md"
+  execution_batch: "20261111-rerun"
+  execution_note: "M2外部客户端专项：用户确认目前没有CinLink MCP授权入口及Codex/Claude两端连接测试环境。本轮设置页仅有个人信息/剪辑偏好/关于我们，未观察到外部连接管理入口；未实际建立授权，不能以当前浏览器登录态替代M2授权或计通过。"
 ERYE206-001:
   status: PLAN
   script: ""
@@ -1055,167 +2508,357 @@ ERYE206-067:
   status: PLAN
   script: ""
 ERYE210-001:
-  status: PLAN
-  script: ""
-ERYE210-002:
-  status: PLAN
-  script: ""
+  status: AUTO
+  script: "tests/editor/erye210-navigation.spec.ts"
+  execution_status: "Passed"
+  execution_report: "docs/cases/requirements/ERYE-210/results-001-005-prod-20261113.md"
+  execution_batch: "20261113-production-001-005"
+  execution_note: "生产中文界面五入口为媒体、文稿、字幕、配音、水印，与Media/Scripts/Captions/Voiceover/Watermark一一对应；全部可达，实际切换后返回Media。刷新解决初次创建提示后核验，工程内容及版本1均保持。仅验证本例导航，首次导入保存500另记002，不宣称保存功能通过。"
 ERYE210-003:
-  status: PLAN
-  script: ""
-ERYE210-004:
-  status: PLAN
-  script: ""
-ERYE210-005:
-  status: PLAN
-  script: ""
+  status: AUTO
+  script: "tests/editor/erye210-navigation.spec.ts"
+  execution_status: "Passed"
+  execution_report: "docs/cases/requirements/ERYE-210/results-001-005-prod-20261113.md"
+  execution_batch: "20261113-production-001-005"
+  execution_note: "真实字幕任务112秒完成，无补槽。结果SRT实际下载，8条英语字幕0.160～19.820秒；从该会话当前实际视频编辑器入口首次进入，选中Captions内容页。工程字幕绑定file_cloud_c7kyuocu543kpnakk5k2qdeot5，与本次结果一致；8条文字及时间一致，其他四入口均可访问。导航核验前后工程版本2和全部内容保持。"
 ERYE210-006:
-  status: PLAN
-  script: ""
-ERYE210-007:
-  status: PLAN
-  script: ""
+  status: AUTO
+  script: "tests/editor/erye210-navigation.spec.ts"
+  execution_status: "Passed"
+  execution_report: "docs/cases/requirements/ERYE-210/results-006-010-prod-20261113.md"
+  execution_batch: "20261113-production-006-010"
+  execution_note: "Passed；从Captions通过当前真实Watermark一级→文字/图片二级控件定位，两子页切换正确；NAV006和logo-A.png保持；导航前后版本2及全部内容相同。仅覆盖实际两级入口，不宣称存在独立结果卡快捷入口。"
 ERYE210-008:
-  status: PLAN
-  script: ""
+  status: AUTO
+  script: "tests/editor/erye210-navigation.spec.ts"
+  execution_status: "Passed"
+  execution_report: "docs/cases/requirements/ERYE-210/results-008-v2-prod-20261113-04.md"
+  execution_batch: "prod-008-v2-rerun-20261113-04"
+  execution_note: "生产有头Chrome执行008 v2通过：五模块均可点当前入口收起/展开，收起后切换另一入口显示对应面板；五入口、工程标题和视频预览保留；返回Captions的8条原字幕一致；完整保存内容及版本1→1保持。没有发送Agent指令或生成任务。"
 ERYE210-009:
-  status: PLAN
-  script: ""
-ERYE210-010:
-  status: PLAN
-  script: ""
+  status: AUTO
+  script: "tests/editor/erye210-navigation.spec.ts"
+  execution_status: "Passed"
+  execution_report: "docs/cases/requirements/ERYE-210/results-006-010-prod-20261113.md"
+  execution_batch: "20261113-production-006-010"
+  execution_note: "Passed；五入口及可见子页14个检查点均保持同一工程、12秒、暂停和原C1；版本1及内容不变，会话消息0→0，导航写请求0，页面积分前后及刷新回读均3045。未提交Agent写操作，不宣称Agent执行或服务端账本专项通过。"
 ERYE210-011:
-  status: PLAN
-  script: ""
+  status: AUTO
+  script: "tests/editor/erye210-completion.spec.ts"
+  definition_version: "v3-completion-20261113"
+  execution_status: "Passed"
+  execution_note: "Passed：用户60秒英语原片的独立新工程真实中文配音及双语字幕完成，46次PB/Media观察无抢占/串改；显式工程选择器选择PA后进入Voiceover可见17条中文文稿、8段音频。结果卡快捷直达仍延期，不计覆盖。"
+  execution_batch: "prod-completion-nine-20261113-02"
+  execution_report: "docs/cases/requirements/ERYE-210/results-completion-nine-prod-20261113.md"
 ERYE210-012:
-  status: PLAN
-  script: ""
-ERYE210-013:
-  status: PLAN
-  script: ""
+  status: AUTO
+  script: "tests/editor/erye210-navigation.spec.ts"
+  execution_status: "Passed"
+  execution_batch: "prod-011-015-reviewed-20261113"
+  execution_report: "docs/cases/requirements/ERYE-210/results-011-015-prod-20261113.md"
+  execution_note: "字幕和配音空态均可打开，有生成字幕/创建配音引导；未点击执行，完整内容及版本1→1保持，会话消息0→0，导航写请求0。"
 ERYE210-014:
-  status: PLAN
-  script: ""
-ERYE210-015:
-  status: PLAN
-  script: ""
+  status: AUTO
+  script: tests/editor/erye210-watermark-toggle.spec.ts
+  execution_status: Passed
+  execution_batch: prod-014-v2-watermark-toggle-20261116-03
+  execution_report: docs/cases/requirements/ERYE-210/results-014-v2-production-20261116.md
+  execution_note: 本例独立新工程水印OFF时文字/图片替换/宽度/透明度控件受限、两种预览隐藏；跨五TAB保持OFF及原设置；ON恢复控件、原文字和图片；文字改WM014_EDITED切页及刷新保持，图片参数及原视频/字幕/音频不串改，无Agent/导出。原只读权限继续待覆盖。
+  definition_version: v2-watermark-toggle-navigation-20261116
+  deferred_readonly_coverage: 待覆盖；真实只读身份及授权工程缺失；见case-014-readonly-history-20261116.json
 ERYE210-016:
-  status: PLAN
-  script: ""
+  status: AUTO
+  script: "tests/editor/erye210-navigation.spec.ts"
+  definition_version: "v2-completion-20261113"
+  execution_status: "Passed"
+  execution_note: "Passed：Windows图片水印空态上传可用、宽度/透明度禁用且有引导；真实PNG上传后设宽120、透明度0.6，切页/收起重开保持，原音视频及字幕未改。"
+  execution_batch: "prod-completion-nine-20261113-03"
+  execution_report: "docs/cases/requirements/ERYE-210/results-completion-nine-prod-20261113.md"
 ERYE210-017:
-  status: PLAN
-  script: ""
-ERYE210-018:
-  status: PLAN
-  script: ""
+  status: AUTO
+  script: "tests/editor/erye210-completion.spec.ts"
+  definition_version: "v2-completion-20261113"
+  execution_status: "Passed"
+  execution_note: "Passed：本轮新工程原生生成两句旧配音，改首句后旧声保留；单次真实提交断网错误可见，恢复明确生成成功。沿同一已完成结果实时核对首句新文/新声、第二句原文/旧声及无目标旧声叠音，字幕保持。未覆盖服务端已受理后执行失败重试。"
+  execution_batch: "prod-completion-nine-20261113-05"
+  execution_report: "docs/cases/requirements/ERYE-210/results-completion-nine-prod-20261113.md"
 ERYE210-019:
-  status: PLAN
-  script: ""
-ERYE210-020:
-  status: PLAN
-  script: ""
+  status: AUTO
+  script: "tests/editor/erye210-completion.spec.ts"
+  definition_version: "v3-completion-20261113"
+  execution_status: "Passed"
+  execution_note: "Passed：首条字幕S1和22秒起独立音频A1恰选两个，一次Delete全部移除，其他字幕、原视频和原声未改；一次撤销共同恢复，切五入口及刷新保持。原受限对象拒绝/原子性仍延期。"
+  execution_batch: "prod-completion-nine-20261113-03"
+  execution_report: "docs/cases/requirements/ERYE-210/results-completion-nine-prod-20261113.md"
 ERYE210-021:
-  status: PLAN
-  script: ""
+  status: AUTO
+  script: tests/editor/erye210-fields.spec.ts
+  command: "npm run test:editor:210 -- --grep ERYE210-021"
+  execution_status: Passed
+  current_case_version: v2-current-features-20261113
+  definition_report: docs/cases/requirements/ERYE-210/case-021-035-v2-current-features-20261113.md
+  previous_execution_report: docs/cases/requirements/ERYE-210/results-021-049-prod-20261113.md
+  automation_scope: current_feature_v2_not_executed
+  execution_report: docs/cases/requirements/ERYE-210/results-021-035-v2-prod-20261113.md
 ERYE210-022:
-  status: PLAN
-  script: ""
+  status: AUTO
+  script: tests/editor/erye210-fields.spec.ts
+  command: "npm run test:editor:210 -- --grep ERYE210-022"
+  execution_status: Passed
+  execution_report: docs/cases/requirements/ERYE-210/results-021-049-prod-20261113.md
+  automation_scope: ui_business_branches_see_report
 ERYE210-023:
-  status: PLAN
-  script: ""
+  status: AUTO
+  script: tests/editor/erye210-fields.spec.ts
+  command: "npm run test:editor:210 -- --grep ERYE210-023"
+  execution_status: Passed
+  execution_report: docs/cases/requirements/ERYE-210/results-021-049-prod-20261113.md
+  automation_scope: ui_business_branches_see_report
 ERYE210-024:
-  status: PLAN
-  script: ""
+  status: AUTO
+  script: tests/editor/erye210-fields.spec.ts
+  command: "npm run test:editor:210 -- --grep ERYE210-024"
+  execution_status: Passed
+  execution_report: docs/cases/requirements/ERYE-210/results-021-049-prod-20261113.md
+  automation_scope: ui_business_branches_see_report
 ERYE210-025:
-  status: PLAN
-  script: ""
+  status: AUTO
+  script: tests/editor/erye210-fields.spec.ts
+  command: "npm run test:editor:210 -- --grep ERYE210-025"
+  execution_status: Passed
+  current_case_version: v2-current-features-20261113
+  definition_report: docs/cases/requirements/ERYE-210/case-021-035-v2-current-features-20261113.md
+  previous_execution_report: docs/cases/requirements/ERYE-210/results-021-049-prod-20261113.md
+  automation_scope: current_feature_v2_not_executed
+  execution_report: docs/cases/requirements/ERYE-210/results-021-035-v2-prod-20261113.md
 ERYE210-026:
-  status: PLAN
-  script: ""
+  status: AUTO
+  script: tests/editor/erye210-fields.spec.ts
+  command: "npm run test:editor:210 -- --grep ERYE210-026"
+  execution_status: Passed
+  current_case_version: v2-current-features-20261113
+  definition_report: docs/cases/requirements/ERYE-210/case-021-035-v2-current-features-20261113.md
+  previous_execution_report: docs/cases/requirements/ERYE-210/results-021-049-prod-20261113.md
+  automation_scope: current_feature_v2_not_executed
+  execution_report: docs/cases/requirements/ERYE-210/results-021-035-v2-prod-20261113.md
 ERYE210-027:
-  status: PLAN
-  script: ""
+  status: AUTO
+  script: tests/editor/erye210-fields.spec.ts
+  command: "npm run test:editor:210 -- --grep ERYE210-027"
+  execution_status: Passed
+  current_case_version: v2-current-features-20261113
+  definition_report: docs/cases/requirements/ERYE-210/case-021-035-v2-current-features-20261113.md
+  previous_execution_report: docs/cases/requirements/ERYE-210/results-021-049-prod-20261113.md
+  automation_scope: current_feature_v2_not_executed
+  execution_report: docs/cases/requirements/ERYE-210/results-021-035-v2-prod-20261113.md
 ERYE210-028:
-  status: PLAN
-  script: ""
+  status: AUTO
+  script: tests/editor/erye210-capabilities.spec.ts
+  command: "npm run test:editor:210 -- --grep ERYE210-028"
+  execution_status: Passed
+  execution_report: docs/cases/requirements/ERYE-210/results-021-049-prod-20261113.md
+  automation_scope: ui_business_branches_see_report
 ERYE210-029:
-  status: PLAN
-  script: ""
+  status: AUTO
+  script: tests/editor/erye210-capabilities.spec.ts
+  command: "npm run test:editor:210 -- --grep ERYE210-029"
+  execution_status: Passed
+  current_case_version: v2-current-features-20261113
+  definition_report: docs/cases/requirements/ERYE-210/case-021-035-v2-current-features-20261113.md
+  previous_execution_report: docs/cases/requirements/ERYE-210/results-021-049-prod-20261113.md
+  automation_scope: current_feature_v2_not_executed
+  execution_report: docs/cases/requirements/ERYE-210/results-021-035-v2-prod-20261113.md
 ERYE210-030:
-  status: PLAN
-  script: ""
+  status: AUTO
+  script: tests/editor/erye210-capabilities.spec.ts
+  command: "npm run test:editor:210 -- --grep ERYE210-030"
+  execution_status: Passed
+  current_case_version: v2-current-features-20261113
+  definition_report: docs/cases/requirements/ERYE-210/case-021-035-v2-current-features-20261113.md
+  previous_execution_report: docs/cases/requirements/ERYE-210/results-021-049-prod-20261113.md
+  automation_scope: current_feature_v2_not_executed
+  execution_report: docs/cases/requirements/ERYE-210/results-021-035-v2-prod-20261113.md
 ERYE210-031:
-  status: PLAN
-  script: ""
+  status: AUTO
+  script: tests/editor/erye210-capabilities.spec.ts
+  command: "npm run test:editor:210 -- --grep ERYE210-031"
+  execution_status: Passed
+  current_case_version: v2-current-features-20261113
+  definition_report: docs/cases/requirements/ERYE-210/case-021-035-v2-current-features-20261113.md
+  previous_execution_report: docs/cases/requirements/ERYE-210/results-021-049-prod-20261113.md
+  automation_scope: current_feature_v2_not_executed
+  execution_report: docs/cases/requirements/ERYE-210/results-021-035-v2-prod-20261113.md
 ERYE210-032:
-  status: PLAN
-  script: ""
+  status: AUTO
+  script: tests/editor/erye210-capabilities.spec.ts
+  command: "npm run test:editor:210 -- --grep ERYE210-032"
+  execution_status: Passed
+  current_case_version: v2-current-features-20261113
+  definition_report: docs/cases/requirements/ERYE-210/case-021-035-v2-current-features-20261113.md
+  previous_execution_report: docs/cases/requirements/ERYE-210/results-021-049-prod-20261113.md
+  automation_scope: current_feature_v2_not_executed
+  execution_report: docs/cases/requirements/ERYE-210/results-021-035-v2-prod-20261113.md
 ERYE210-033:
-  status: PLAN
-  script: ""
+  status: AUTO
+  script: tests/editor/erye210-capabilities.spec.ts
+  command: "npm run test:editor:210 -- --grep ERYE210-033"
+  execution_status: Passed
+  current_case_version: v2-current-features-20261113
+  definition_report: docs/cases/requirements/ERYE-210/case-021-035-v2-current-features-20261113.md
+  previous_execution_report: docs/cases/requirements/ERYE-210/results-021-049-prod-20261113.md
+  automation_scope: current_feature_v2_not_executed
+  execution_report: docs/cases/requirements/ERYE-210/results-021-035-v2-prod-20261113.md
 ERYE210-034:
-  status: PLAN
-  script: ""
+  status: AUTO
+  script: tests/editor/erye210-capabilities.spec.ts
+  command: "npm run test:editor:210 -- --grep ERYE210-034"
+  execution_status: Passed
+  current_case_version: v2-current-features-20261113
+  definition_report: docs/cases/requirements/ERYE-210/case-021-035-v2-current-features-20261113.md
+  previous_execution_report: docs/cases/requirements/ERYE-210/results-021-049-prod-20261113.md
+  automation_scope: current_feature_v2_not_executed
+  execution_report: docs/cases/requirements/ERYE-210/results-021-035-v2-prod-20261113.md
 ERYE210-035:
-  status: PLAN
-  script: ""
+  status: AUTO
+  script: tests/editor/erye210-capabilities.spec.ts
+  command: "npm run test:editor:210 -- --grep ERYE210-035"
+  execution_status: Passed
+  current_case_version: v2-current-features-20261113
+  definition_report: docs/cases/requirements/ERYE-210/case-021-035-v2-current-features-20261113.md
+  previous_execution_report: docs/cases/requirements/ERYE-210/results-021-049-prod-20261113.md
+  automation_scope: current_feature_v2_not_executed
+  execution_report: docs/cases/requirements/ERYE-210/results-021-035-v2-prod-20261113.md
 ERYE210-036:
-  status: PLAN
-  script: ""
+  status: AUTO
+  script: tests/editor/erye210-capabilities.spec.ts
+  command: "npm run test:editor:210 -- --grep ERYE210-036"
+  execution_status: Passed
+  execution_report: docs/cases/requirements/ERYE-210/results-021-049-prod-20261113.md
+  automation_scope: ui_business_branches_see_report
 ERYE210-037:
-  status: PLAN
-  script: ""
+  status: AUTO
+  script: tests/editor/erye210-capabilities.spec.ts
+  command: "npm run test:editor:210 -- --grep ERYE210-037"
+  execution_status: Passed
+  execution_report: docs/cases/requirements/ERYE-210/results-021-049-prod-20261113.md
+  automation_scope: ui_business_branches_see_report
 ERYE210-038:
-  status: PLAN
-  script: ""
+  status: AUTO
+  script: tests/editor/erye210-capabilities.spec.ts
+  command: "npm run test:editor:210 -- --grep ERYE210-038"
+  execution_status: Passed
+  execution_report: docs/cases/requirements/ERYE-210/results-021-049-prod-20261113.md
+  automation_scope: ui_business_branches_see_report
 ERYE210-039:
-  status: PLAN
-  script: ""
-ERYE210-040:
-  status: PLAN
-  script: ""
-ERYE210-041:
-  status: PLAN
-  script: ""
+  status: AUTO
+  script: tests/editor/erye210-capabilities.spec.ts
+  command: "npm run test:editor:210 -- --grep ERYE210-039"
+  execution_status: Passed
+  execution_report: docs/cases/requirements/ERYE-210/results-021-049-prod-20261113.md
+  automation_scope: ui_business_branches_see_report
 ERYE210-042:
-  status: PLAN
-  script: ""
+  status: AUTO
+  script: tests/editor/erye210-capabilities.spec.ts
+  command: "npm run test:editor:210 -- --grep ERYE210-042"
+  execution_status: Passed
+  execution_report: docs/cases/requirements/ERYE-210/results-021-049-prod-20261113.md
+  automation_scope: ui_business_branches_see_report
 ERYE210-043:
-  status: PLAN
-  script: ""
+  status: AUTO
+  script: tests/editor/erye210-capabilities.spec.ts
+  command: "npm run test:editor:210 -- --grep ERYE210-043"
+  execution_status: Passed
+  execution_report: docs/cases/requirements/ERYE-210/results-021-049-prod-20261113.md
+  automation_scope: ui_business_branches_see_report
 ERYE210-044:
-  status: PLAN
-  script: ""
+  status: AUTO
+  script: tests/editor/erye210-capabilities.spec.ts
+  command: "npm run test:editor:210 -- --grep ERYE210-044"
+  execution_status: Passed
+  execution_report: docs/cases/requirements/ERYE-210/results-021-049-prod-20261113.md
+  automation_scope: ui_business_branches_see_report
 ERYE210-045:
-  status: PLAN
-  script: ""
+  status: AUTO
+  script: "tests/editor/erye210-current-five.spec.ts"
+  definition_version: "v2-current-functions-20261116"
+  execution_status: "Passed"
+  execution_note: "PA/PB共享真实WAV；PA单删不改PB与原片/字幕，PB音频区间可播放；原素材卡仍在，PA复用同一file_id并刷新保持。；results-045-049-current-functions-prod-20261116.md"
 ERYE210-046:
-  status: PLAN
-  script: ""
+  status: AUTO
+  script: "tests/editor/erye210-current-five.spec.ts"
+  definition_version: "v3-restore-existing-voice-20261116"
+  execution_status: "Passed"
+  execution_note: "v3生产Chrome通过：本轮独立新工程真实分析/清理后，同页仅恢复7.800～8.480秒停顿，18.695896→19.375896秒；另一处17.200～17.824104秒仍删除。视频/原声源区间及时间线一致，8条字幕文字顺序和原画面时码对应，刷新重开保持。只分析保留片段的二次分析仍延期。；results-046-048-v3-production-20261116.md"
 ERYE210-047:
-  status: PLAN
-  script: ""
+  status: AUTO
+  script: "tests/editor/erye210-current-five.spec.ts"
+  definition_version: "v2-translated-prerequisite-20261116"
+  execution_status: "Failed"
+  execution_note: "真实翻译配音工程8句中文声音可用；独立WAV背景音量100%→50%，保存及刷新保持；首句改“混音后重新生成047。”并明确重新生成后，页面报“编辑器执行数据不符合正式v2协议”，新声音未成功交付。未将此前无效准备判产品失败。；results-045-049-current-functions-prod-20261116.md"
+  defect_id: "FWXC-579"
+  defect_url: "https://devops.aliyun.com/projex/project/1e401ac99539c3999e00e40006/bug#openWorkitemIdentifier=d4687bf3633ef6956037e3a63c"
+  defect_status: "🤔AI提缺陷"
+  defect_sync_verified: true
+  defect_screenshots: 3
+  defect_attachments: 6
 ERYE210-048:
-  status: PLAN
-  script: ""
+  status: AUTO
+  script: "tests/editor/erye210-current-five.spec.ts"
+  definition_version: "v3-restore-existing-voice-20261116"
+  execution_status: "Passed"
+  execution_note: "v3生产Chrome通过：独立新工程引用真实已完成译制的原始工程，8句既有中文声音；仅中文C1改“字幕与译制人声独立048。”，时间线配音静音→切模块/刷新保持→配音启用→刷新保持。同一批声音文件不替换/重复，英文、其他中文、视频、原声和BGM保持。未进入配音页或生成声音，原改配音稿并单句生成仍延期。；results-046-048-v3-production-20261116.md"
 ERYE210-049:
-  status: PLAN
-  script: ""
+  status: AUTO
+  script: "tests/editor/erye210-current-five.spec.ts"
+  definition_version: "v2-current-functions-20261116"
+  execution_status: "Failed"
+  execution_note: "双水印关闭状态保存及刷新重开保持；第一次原生导出报页面协议错误且未交付可用结果，原任务后台done仅作辅助证据。沿同一受理任务复核，未再次导出；开启后的第二次导出和视频画面核验未执行。；results-045-049-current-functions-prod-20261116.md"
+  defect_id: "FWXC-580"
+  defect_url: "https://devops.aliyun.com/projex/project/1e401ac99539c3999e00e40006/bug#openWorkitemIdentifier=d07993186a112f50ec9926b266"
+  defect_status: "🤔AI提缺陷"
+  defect_sync_verified: true
+  defect_screenshots: 2
+  defect_attachments: 5
 ERYE210-050:
-  status: PLAN
-  script: ""
+  status: AUTO
+  script: "tests/editor/erye210-completion.spec.ts"
+  definition_version: "current-completion-20261113"
+  execution_status: "Passed"
+  execution_note: "Passed：五入口下工程切换、撤销/重做与Export可达；字幕/文字水印两项已保存修改可跨模块按顺序撤销两次、重做两次，刷新保持且音视频未改。"
+  execution_batch: "prod-completion-nine-20261113-03"
+  execution_report: "docs/cases/requirements/ERYE-210/results-completion-nine-prod-20261113.md"
 ERYE210-051:
-  status: PLAN
-  script: ""
+  status: AUTO
+  script: "tests/editor/erye210-completion.spec.ts"
+  definition_version: "current-completion-20261113"
+  execution_status: "Passed"
+  execution_note: "2026-11-16复测Passed：生产Chrome新工程，在Captions一次提交背景音轨降低6dB请求，Agent约54秒实际执行；音量由100%变为约50.12%（页面音量线显示50%），刷新后仍50%，保存版本1→2。音轨文件/位置及原视频、原声、字幕保持，运行期间未抢占Captions。未手动拖动音量线、未重复提交任务；原11-13失败保留历史。"
+  execution_batch: "prod-051-rerun-20261116-01"
+  execution_report: "docs/cases/requirements/ERYE-210/results-051-rerun-prod-20261116.md"
 ERYE210-052:
-  status: PLAN
-  script: ""
+  status: AUTO
+  script: "tests/editor/erye210-completion.spec.ts"
+  definition_version: "v2-current-export-completion-20261113"
+  execution_status: "Passed"
+  execution_note: "Passed：真实分析2个停顿并应用，20秒变约18.695896秒；原生创建配音、首句改Welcome to CinLink并生成，背景音量50%。一次原导出完成，受理后字幕/水印新编辑保存且重开保持；下载H264/AAC、1920×1080、18.70秒MP4。原始1秒帧为BEFORE052及原英语C1，未混入AFTER052/导出后新文，已按文件/帧哈希完成实际画面审核；未再次导出。"
+  execution_batch: "prod-completion-nine-20261113-05"
+  execution_report: "docs/cases/requirements/ERYE-210/results-completion-nine-prod-20261113.md"
 ERYE210-053:
-  status: PLAN
-  script: ""
+  status: AUTO
+  script: "tests/editor/erye210-completion.spec.ts"
+  definition_version: "v2-windows-completion-20261113"
+  execution_status: "Passed"
+  execution_note: "Passed：1024×768及1280×900下五入口Tab/Enter实际可达、面板正确，Export可见可聚焦；恢复原视口后工程及完整内容保持。仅Windows及实测尺寸，不外推mac或未冻结断点。"
+  execution_batch: "prod-completion-nine-20261113-03"
+  execution_report: "docs/cases/requirements/ERYE-210/results-completion-nine-prod-20261113.md"
 ERYE210-054:
-  status: PLAN
-  script: ""
+  status: AUTO
+  script: "tests/editor/erye210-completion.spec.ts"
+  definition_version: "current-completion-20261113"
+  execution_status: "Passed"
+  execution_note: "Passed：原场景明确中英双显并保存，五入口切换保持；仅C1中文改双语独立编辑054，等待页面已同步后刷新并选回中文通道，文字保持，英语轨及音视频未改。不覆盖首次译制默认。"
+  execution_batch: "prod-completion-nine-20261113-06"
+  execution_report: "docs/cases/requirements/ERYE-210/results-completion-nine-prod-20261113.md"
 ERYE237-001:
   status: PLAN
   script: ""
@@ -1707,26 +3350,6 @@ ERYE237-028:
     Agent:
       execution_status: Not Run
       specification: docs/cases/requirements/ERYE-237/cases.md
-    Technical:
-      execution_status: Not Run
-      specification: docs/cases/requirements/ERYE-237/technical-checks.md
-ERYE237-029:
-  status: PLAN
-  script: ""
-  execution_status: Failed
-  execution_scope: production_web_headed_partial_branches
-  execution_date: 2026-11-09
-  execution_report: docs/cases/requirements/ERYE-237/results-014-032-prod-20261109.md
-  execution_record_role: historical_before_layered_reorganization
-  execution_record_version: "2026-11-09-ui-evidence-baseline"
-  current_case_version: "2026-11-09-layered-execution"
-  execution_branches:
-    UI:
-      execution_status: Not Run
-      specification: docs/cases/requirements/ERYE-237/cases.md
-    Agent:
-      execution_status: Not Run
-      specification: docs/cases/requirements/ERYE-237/agent-checks.md
     Technical:
       execution_status: Not Run
       specification: docs/cases/requirements/ERYE-237/technical-checks.md
@@ -2896,3 +4519,159 @@ ERYE237-144:
     Technical:
       execution_status: Not Run
       specification: docs/cases/requirements/ERYE-237/cases.md
+
+ERYE210-002:
+  status: AUTO
+  script: tests/editor/erye210-restored-eight.spec.ts
+  execution_status: Passed
+  execution_report: docs/cases/requirements/ERYE-210/results-restored-eight-production-20261116.md
+  execution_batch: prod-restored-eight-20261116-02
+  execution_note: 首次导入20秒原片后、任何手动切页前，实际选中['媒体']，页面错误[]；无自动生成结果。
+  defect_id: FWXC-482
+  defect_url: https://devops.aliyun.com/projex/project/1e401ac99539c3999e00e40006/bug#openWorkitemIdentifier=b484370e7d2723d8befafd0441
+  definition_version: v3-restored-six-and-navigation-20261116
+ERYE210-007:
+  status: AUTO
+  script: tests/editor/erye210-restored-eight.spec.ts
+  execution_status: Failed
+  execution_report: docs/cases/requirements/ERYE-210/results-restored-eight-production-20261116.md
+  execution_batch: prod-restored-eight-20261116-01
+  execution_note: Watermark/Image重开记忆：after-close-reopen实际['水印']，Image选中=false；after-refresh实际['水印']，Image选中=false；工程保存内容保持。
+  defect_id: FWXC-585
+  defect_url: https://devops.aliyun.com/projex/project/1e401ac99539c3999e00e40006/bug#openWorkitemIdentifier=b16072b80de8184ee47ca7bb12
+  definition_version: v3-restored-six-and-navigation-20261116
+  historical_defect_id: FWXC-488
+  historical_defect_url: https://devops.aliyun.com/projex/project/1e401ac99539c3999e00e40006/bug#openWorkitemIdentifier=015794cee8eba6c88c1078ec6b
+  defect_status: 🤔AI提缺陷
+  defect_sync_verified: true
+  defect_screenshots: 3
+  defect_attachments: 6
+ERYE210-010:
+  status: AUTO
+  script: tests/editor/erye210-restored-eight.spec.ts
+  execution_status: Passed
+  execution_report: docs/cases/requirements/ERYE-210/results-restored-eight-production-20261116.md
+  execution_batch: prod-restored-eight-20261116-01
+  execution_note: 同账号同Chrome同会话PA=Captions、PB=Media；交替选择及分别刷新后均恢复各自入口，两工程内容保持。本轮未覆盖跨账号/设备。
+  defect_id: FWXC-489
+  defect_url: https://devops.aliyun.com/projex/project/1e401ac99539c3999e00e40006/bug#openWorkitemIdentifier=8f1fd31451866906c2a5208cd2
+  definition_version: v3-restored-six-and-navigation-20261116
+ERYE210-013:
+  status: AUTO
+  script: tests/editor/erye210-restored-eight.spec.ts
+  execution_status: Passed
+  execution_batch: prod-restored-eight-20261116-02
+  execution_report: docs/cases/requirements/ERYE-210/results-restored-eight-production-20261116.md
+  execution_note: 仅导入真实WAV的无视频工程：audio-only-text控件启用=False；audio-only-image控件启用=False；无意外文字水印保存。
+  defect_id: FWXC-492
+  defect_url: https://devops.aliyun.com/projex/project/1e401ac99539c3999e00e40006/bug#openWorkitemIdentifier=0c412f96615825b3473edd810a
+  definition_version: v3-restored-six-and-navigation-20261116
+ERYE210-015:
+  status: AUTO
+  script: tests/editor/erye210-restored-eight.spec.ts
+  execution_status: Failed
+  execution_batch: prod-restored-eight-20261116-01
+  execution_report: docs/cases/requirements/ERYE-210/results-restored-eight-production-20261116.md
+  execution_note: 未选片段时分割禁用，实际提示['分割所选片段']；选中视频后约12秒分割并撤销恢复已完成。
+  defect_id: FWXC-586
+  defect_url: https://devops.aliyun.com/projex/project/1e401ac99539c3999e00e40006/bug#openWorkitemIdentifier=d5da04deb674cf55972715cfb1
+  definition_version: v3-restored-six-and-navigation-20261116
+  historical_defect_id: FWXC-493
+  historical_defect_url: https://devops.aliyun.com/projex/project/1e401ac99539c3999e00e40006/bug#openWorkitemIdentifier=e5fffc8428963d66f61e42d154
+  defect_status: 🤔AI提缺陷
+  defect_sync_verified: true
+  defect_screenshots: 3
+  defect_attachments: 6
+ERYE210-040:
+  status: AUTO
+  script: tests/editor/erye210-restored-eight.spec.ts
+  command: npm run test:editor:210 -- --grep ERYE210-040
+  execution_status: Passed
+  execution_report: docs/cases/requirements/ERYE-210/results-restored-eight-production-20261116.md
+  automation_scope: ui_business_branches_see_report
+  defect_id: FWXC-516
+  defect_url: https://devops.aliyun.com/projex/project/1e401ac99539c3999e00e40006/bug#openWorkitemIdentifier=f319c777b70fbfb7010c5a15ad
+  definition_version: v3-restored-six-and-navigation-20261116
+  execution_note: 独立WAV位于14.066666666666666秒，删除前20秒、删除后20秒；其他音视频保持=True；一次撤销恢复原媒体与音频引用。
+  execution_batch: prod-restored-eight-20261116-02
+ERYE210-055:
+  status: AUTO
+  script: tests/editor/erye210-restored-eight.spec.ts
+  definition_version: v3-restored-six-and-navigation-20261116
+  execution_status: Passed
+  execution_note: 连续3轮快速切换五TAB，最终Watermark/Image连续观察稳定，同一工程、图片预览和唯一选中入口一致，无内容写入或自动生成。
+  execution_report: docs/cases/requirements/ERYE-210/results-restored-eight-production-20261116.md
+  execution_batch: prod-restored-eight-20261116-01
+ERYE210-056:
+  status: AUTO
+  script: tests/editor/erye210-restored-eight.spec.ts
+  definition_version: v3-restored-six-and-navigation-20261116
+  execution_status: Passed
+  execution_note: 一次原生导出形成真实页面错误['编辑器执行数据不符合正式 v2 协议，请保留当前工程并核对服务返回。重新加载媒体×']；错误后Media/Captions/Watermark导航及原内容保持，未重复导出；仅导航隔离通过，不代表导出修复。
+  execution_report: docs/cases/requirements/ERYE-210/results-restored-eight-production-20261116.md
+  execution_batch: prod-restored-eight-20261116-01
+
+ERYE210-004:
+  status: AUTO
+  script: tests/editor/erye210-restored-five.spec.ts
+  execution_status: Passed
+  execution_report: docs/cases/requirements/ERYE-210/results-restored-final-five-production-20261116.md
+  execution_batch: prod-restored-five-20261116-01
+  execution_note: 独立新建真实英语→简体中文翻译配音项目；从Media手动进入Voiceover，选择第1/2句分别定位实际起始时间，切字幕返回稿件与声音保持；未重新生成。结果卡快捷直达仍延期。
+  defect_id: FWXC-483
+  defect_url: https://devops.aliyun.com/projex/project/1e401ac99539c3999e00e40006/bug#openWorkitemIdentifier=bc663b74e4bf60d0019f5c04e3
+  definition_version: v4-restored-final-five-20261116
+ERYE210-005:
+  status: AUTO
+  script: tests/editor/erye210-restored-five.spec.ts
+  execution_status: Passed
+  execution_report: docs/cases/requirements/ERYE-210/results-restored-final-five-production-20261116.md
+  execution_batch: prod-restored-five-20261116-01
+  execution_note: 本例独立新工程真实分析出2个停顿候选，仅停顿/0.8秒且未移除；选择候选后切Captions→Watermark→Scripts，候选、参数和同工程审核内容保持，视频/原声/字幕仍为原结果，无自动裁剪或生成。
+  defect_id: FWXC-484
+  defect_url: https://devops.aliyun.com/projex/project/1e401ac99539c3999e00e40006/bug#openWorkitemIdentifier=f97b390bf7704588fed0bfa706
+  definition_version: v4-restored-final-five-20261116
+ERYE210-018:
+  status: AUTO
+  script: tests/editor/erye210-restored-five.spec.ts
+  execution_status: Failed
+  execution_batch: prod-restored-five-20261116-01
+  execution_report: docs/cases/requirements/ERYE-210/results-restored-final-five-production-20261116.md
+  execution_note: 真实新译制工程8句稿/声音就绪；首句生成处理中保存水印INDEPENDENT_018成功。原目标任务done并产出新WAV，但工程仍使用全部旧声音；沿同一任务重开配音页核验时出现“编辑器执行数据不符合正式v2协议”，新声未应用，水印保持。未重复生成。
+  defect_id: FWXC-588
+  defect_url: https://devops.aliyun.com/projex/project/1e401ac99539c3999e00e40006/bug#openWorkitemIdentifier=6b9e807ea6785e241aae941423
+  definition_version: v4-restored-final-five-20261116
+  historical_defect_id: FWXC-506
+  historical_defect_url: https://devops.aliyun.com/projex/project/1e401ac99539c3999e00e40006/bug#openWorkitemIdentifier=df279e880064725c26669adc36
+  defect_status: 🤔AI提缺陷
+  defect_sync_verified: true
+  defect_screenshots: 3
+  defect_attachments: 6
+ERYE210-020:
+  status: AUTO
+  script: tests/editor/erye210-restored-five.spec.ts
+  execution_status: Failed
+  execution_batch: prod-restored-five-20261116-01
+  execution_report: docs/cases/requirements/ERYE-210/results-restored-final-five-production-20261116.md
+  execution_note: 真实新译制工程8句稿/声音就绪；首句改“配音撤销验证020。”保存并切字幕返回正常。点击一次撤销后未恢复原稿，配音列表随后变为“暂无配音”；旧声音和字幕保持。重做及刷新最终新稿分支未执行，未点击创建配音或再次撤销。
+  defect_id: FWXC-589
+  defect_url: https://devops.aliyun.com/projex/project/1e401ac99539c3999e00e40006/bug#openWorkitemIdentifier=0dd1f5d0d3ba1d48a798f75a03
+  definition_version: v4-restored-final-five-20261116
+  historical_defect_id: FWXC-507
+  historical_defect_url: https://devops.aliyun.com/projex/project/1e401ac99539c3999e00e40006/bug#openWorkitemIdentifier=4861ae7970e41e1293c07e3612
+  defect_status: 🤔AI提缺陷
+  defect_sync_verified: true
+  defect_screenshots: 3
+  defect_attachments: 6
+ERYE210-041:
+  status: AUTO
+  script: tests/editor/erye210-restored-five.spec.ts
+  command: npm run test:editor:210 -- --grep ERYE210-041
+  execution_status: Passed
+  execution_report: docs/cases/requirements/ERYE-210/results-restored-final-five-production-20261116.md
+  automation_scope: ui_business_branches_see_report
+  defect_id: FWXC-518
+  defect_url: https://devops.aliyun.com/projex/project/1e401ac99539c3999e00e40006/bug#openWorkitemIdentifier=775dbf83cad7c40e3d8432d74e
+  definition_version: v4-restored-final-five-20261116
+  execution_note: 同项目两会话实际准备A/B素材，Chat/Project基线可区分；分别按完整名称搜索命中、不存在名称无候选、清空恢复各范围列表；搜索未更换工程、添加时间线素材或生成。
+  execution_batch: prod-restored-five-20261116-01

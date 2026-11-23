@@ -1,6 +1,6 @@
 # ERYE-237 技术专项检查索引
 
-版本：2026-11-09-layered-execution。72条Technical主入口按[cases.md](cases.md)执行；下表列72条UI/Agent业务编号移出的技术验收责任，不增加需求编号。所有Technical分支初始Not Run。
+版本：2026-11-09-layered-execution。72条Technical主入口按[cases.md](cases.md)执行；下表列71条有效UI/Agent业务编号（029已删除）移出的技术验收责任，不增加需求编号。所有Technical分支初始Not Run。
 
 每条只验证技术约束；UI点击/Agent意图本身由各自业务分支负责。须先具备P-TECH中本条实际需要的标准、接口与读权限；缺provider/账本仅相应证据项Blocked。不得以截图替代内部事务或费用证明。
 
@@ -33,7 +33,6 @@
 | `ERYE237-026/Technical` | 原专项数据：P；B-IMG；BO；记录revision和历史头；另准备S1→T1→H1三个可辨UI动作及截断redo分支。技术责任（仅核内部、精度、文件、调用及费用部分）：按真实全局顺序回退/恢复，不出现两个独立栈；撤销/重做可用状态与实际行为一致；复合组粒度正确；UI多工具共享历史的专项证据不替代UI/Agent混合历史或已完成AI版本撤销证据 | [完整原断言](coverage-baseline-20261109.md#erye237-026) |
 | `ERYE237-027/Technical` | 原专项数据：P；B-IMG；BV；撤销V3后工作头V2，V3仍是已完成文件。技术责任（仅核内部、精度、文件、调用及费用部分）：redo路径被新内容截断；V3文件和原消息仍可读取；查看历史不等同执行redo，不触发新生成/退款 | [完整原断言](coverage-baseline-20261109.md#erye237-027) |
 | `ERYE237-028/Technical` | 原专项数据：P；B-IMG；BV；V2为真实收费AI结果，provider/费用已有记录。技术责任（仅核内部、精度、文件、调用及费用部分）：工作头先回父版本再回原V2，revision推进；不删文件、不退款、不新建provider attempt或费用 | [完整原断言](coverage-baseline-20261109.md#erye237-028) |
-| `ERYE237-029/Technical` | 原专项数据：P；B-IMG；BO；只有content文字/形状，无AI意图；TD-PORTRAIT可用1254²源图，登记实际源导出宽高及SHA；使用本例草稿。技术责任（仅核内部、精度、文件、调用及费用部分）：生成可打开的新版本且含content；跳过provider_running，无图像生成费；画笔结果不是只返回回复或截图占位；未要求调整尺寸时输出须与实际源W/H一致，1254²→1024²记尺寸失败；语义文字正确不能抵消缩图；内部provider/费用无证据不得宣称通过 | [完整原断言](coverage-baseline-20261109.md#erye237-029) |
 | `ERYE237-030/Technical` | 原专项数据：P；B-IMG；BD；content文字T1和仅作指示的guide红圈G1。技术责任（仅核内部、精度、文件、调用及费用部分）：T1作为内容存在；G1仅指示不烘焙；实际调用包含源版本及明确编辑目标；批注点/mask不进入成品 | [完整原断言](coverage-baseline-20261109.md#erye237-030) |
 | `ERYE237-031/Technical` | 原专项数据：P；B-IMG；BV；有保留对象草稿D及其AI融合结果V2。技术责任（仅核内部、精度、文件、调用及费用部分）：V2不虚构可精确编辑的旧对象；历史D能恢复真实对象并修改；两条来源和文件均可追溯 | [完整原断言](coverage-baseline-20261109.md#erye237-031) |
 | `ERYE237-032/Technical` | 原专项数据：P；B-IMG；B0；BG定义坐标和批准字体。技术责任（仅核内部、精度、文件、调用及费用部分）：新建文字后续移动作用于同一文字；本地复合编辑作为同一撤销组；一次撤销恢复基线；无付费模型调用或虚报未完成动作 | [完整原断言](coverage-baseline-20261109.md#erye237-032) |

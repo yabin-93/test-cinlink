@@ -1,0 +1,29 @@
+{
+  "case_id": "ERYE199-068",
+  "previous_row": "| ERYE199-068 | P2 | 新项目，无字幕、无素材 | 打开 Subtitles → 打开 Assets | 展示空态提示与引导入口，不出现空白区域 | 03/DC-03-009 | [BLOCKED] | [Ego脚本](../../../../tools/editor/erye199/cases-051-068.mjs)（入口 `068`）；[运行说明](automation.md) | 本轮生产：Blocked；[实际步骤及截图](results-051-068-production-20261113.md#erye199-068)；空工程只有选择媒体引导，尚未出现字幕/媒体导航；素材空态已观察，但两页空态目标无法进入，不把入口未展开视为两页都通过。 |",
+  "previous_execution": {
+    "id": "ERYE199-068",
+    "completed": "2026-11-13T12:52:48.593Z",
+    "fixture": {
+      "conversationId": "0c6dbe4a-6afa-4730-b083-f1ff9958b9c0",
+      "editorId": "db1e6049-e86a-4592-a131-46dc83ba4f3d",
+      "name": "ERYE199-068-2026-11-13T12-29-40-982Z"
+    },
+    "automation": "tools/editor/erye199/cases-051-068.mjs#068",
+    "status": "Blocked",
+    "actual": "空工程只有选择媒体引导，尚未出现字幕/媒体导航；素材空态已观察，但两页空态目标无法进入，不把入口未展开视为两页都通过。",
+    "coverage": "已覆盖空工程总引导；字幕/素材页独立空态未覆盖",
+    "screenshots": [
+      "evidence-051-068-production-20261113/068-empty-editor.png"
+    ],
+    "latest_execution_report": "results-051-068-production-20261113.md",
+    "latest_execution_batch": "2026-11-13T12-29-40-982Z",
+    "workspace_id": "ad06a173-72fb-43cd-b477-3462d41cd2dd",
+    "automation_status": "BLOCKED",
+    "script": "tools/editor/erye199/cases-051-068.mjs#068",
+    "automation_command": "npm run test:editor:199 -- --base-url https://app.cinlink.ai --cases 068",
+    "execution_method": "Ego Lite有头页面/原生操作；工程接口仅准备回读；无computer-use"
+  },
+  "reason": "用户要求依据当前应用优化068并重新执行",
+  "date": "2026-11-16"
+}

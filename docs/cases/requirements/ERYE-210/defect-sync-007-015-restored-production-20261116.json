@@ -1,0 +1,183 @@
+{
+  "date": "2026-11-16",
+  "method": "official Yunxiao OpenAPI",
+  "project": "cinlink-WEB",
+  "created": 2,
+  "historicalDeduplication": false,
+  "ownCheckpointRecoveryEnabled": true,
+  "screenshots": 6,
+  "attachments": 12,
+  "verified": true,
+  "cases": [
+    {
+      "caseId": "ERYE210-007",
+      "key": "ERYE210-007-IMAGE-SUBTAB-MEMORY-PROD-20261116",
+      "identifier": "FWXC-585",
+      "workitemId": "b16072b80de8184ee47ca7bb12",
+      "url": "https://devops.aliyun.com/projex/project/1e401ac99539c3999e00e40006/bug#openWorkitemIdentifier=b16072b80de8184ee47ca7bb12",
+      "subject": "【生产环境】【ERYE210-007】图片水印子页记忆丢失，收起或刷新重开变为文字页",
+      "verified": true,
+      "verifiedAt": "2026-11-16T14:40:18.8368279+08:00",
+      "status": "🤔AI提缺陷",
+      "assignedTo": "牛诗晴",
+      "sprint": "重构10-29",
+      "labels": [
+        "生产环境"
+      ],
+      "priority": "中",
+      "seriousLevel": "3-一般",
+      "screenshots": 3,
+      "attachmentCount": 6,
+      "images": [
+        {
+          "name": "007-01-image-before-close.png",
+          "id": "29eecb84b63b7a08679775684f",
+          "sha256": "2e0dd0de030d0bf8912b7d8173170860a9ae10605b7754f754d774afc991aa39",
+          "size": 554836,
+          "embedded": true,
+          "caption": "操作前对照：本轮同一新工程已选Watermark/Image，512×512 PNG预览可见。"
+        },
+        {
+          "name": "007-02-reopen-loses-image-subtab.png",
+          "id": "28c42a1ec2dd141303c2cc05a0",
+          "sha256": "f2efe9715b8bdcb3205b56a58bd5e776dbe56805687da3fbfc33c4d0958ba735",
+          "size": 539369,
+          "embedded": true,
+          "caption": "失败现场一：收起编辑区后普通重开，Watermark保持，但子页变Text、Image未选中。"
+        },
+        {
+          "name": "007-03-refresh-loses-image-subtab.png",
+          "id": "14bd9b8c3e46387c258bdbb253",
+          "sha256": "1657a17268ec34729ec1ee64b1dedb9eb206e8cce0c15605788ade045f16f77c",
+          "size": 470076,
+          "embedded": true,
+          "caption": "失败现场二：刷新后重开同一工程，仍为Watermark/Text，未恢复Image；本轮未进入Captions。"
+        }
+      ],
+      "attachments": [
+        {
+          "size": 554836,
+          "sha256": "2e0dd0de030d0bf8912b7d8173170860a9ae10605b7754f754d774afc991aa39",
+          "name": "007-01-image-before-close.png",
+          "id": "29eecb84b63b7a08679775684f"
+        },
+        {
+          "size": 539369,
+          "sha256": "f2efe9715b8bdcb3205b56a58bd5e776dbe56805687da3fbfc33c4d0958ba735",
+          "name": "007-02-reopen-loses-image-subtab.png",
+          "id": "28c42a1ec2dd141303c2cc05a0"
+        },
+        {
+          "size": 470076,
+          "sha256": "1657a17268ec34729ec1ee64b1dedb9eb206e8cce0c15605788ade045f16f77c",
+          "name": "007-03-refresh-loses-image-subtab.png",
+          "id": "14bd9b8c3e46387c258bdbb253"
+        },
+        {
+          "size": 10274419,
+          "sha256": "c453166c6396fe1c427c8a045ad2f84a8f5d4e4ff0f905b47d79114172829d15",
+          "name": "E196-A.mp4",
+          "id": "66a2161ea1604c008454958c32"
+        },
+        {
+          "size": 573,
+          "sha256": "4d52152ac06ca6be6667e3be97f0f3e3e654d03d4b92f7c97cde5189dff371d4",
+          "name": "E196-A-en.srt",
+          "id": "67d614ac32c54faa7a6d78d730"
+        },
+        {
+          "size": 4596,
+          "sha256": "6407cd8048787c8e1151c405255fa5991693491fd0dfe667bb16d44bb020e52b",
+          "name": "case-evidence.json",
+          "id": "b97d30239b14f0c62f68a0eacb"
+        }
+      ],
+      "descriptionSha256": "7e7de6bae77ae6a7d67d71d3221a1316122e736df05f1b3c0dd973cffa093f0a"
+    },
+    {
+      "caseId": "ERYE210-015",
+      "key": "ERYE210-015-SELECTION-GUIDANCE-PROD-20261116",
+      "identifier": "FWXC-586",
+      "workitemId": "d5da04deb674cf55972715cfb1",
+      "url": "https://devops.aliyun.com/projex/project/1e401ac99539c3999e00e40006/bug#openWorkitemIdentifier=d5da04deb674cf55972715cfb1",
+      "subject": "【生产环境】【ERYE210-015】未选片段时分割按钮禁用，但缺少先选择片段的原因提示",
+      "verified": true,
+      "verifiedAt": "2026-11-16T14:40:53.1758298+08:00",
+      "status": "🤔AI提缺陷",
+      "assignedTo": "牛诗晴",
+      "sprint": "重构10-29",
+      "labels": [
+        "生产环境"
+      ],
+      "priority": "低",
+      "seriousLevel": "4-轻微",
+      "screenshots": 3,
+      "attachmentCount": 6,
+      "images": [
+        {
+          "name": "015-01-no-selection-guidance.png",
+          "id": "e878b8488fb9ccedb9f24c4358",
+          "sha256": "32583fa9d823169687e6c81dba346a57d66046317f91d24894451c7446d4a315",
+          "size": 543397,
+          "embedded": true,
+          "caption": "失败现场：未选片段时分割禁用，悬停及页面缺少“请先选择片段”的原因提示。"
+        },
+        {
+          "name": "015-02-selected-split-completed.png",
+          "id": "5f9bda933536e41946837bd246",
+          "sha256": "022eecaee3569617970871da75f1568ab965b677d005abdd7d50ed5f55b30428",
+          "size": 630146,
+          "embedded": true,
+          "caption": "正常对照：选择原视频后在12.033333秒分割成功，两段连续，总长20秒。"
+        },
+        {
+          "name": "015-03-single-undo-restored.png",
+          "id": "814a83de0a9c77c6f2281f12a8",
+          "sha256": "300df6e21fc4ec0f4ffdea3bf5e4345f99cb0edf86dbfc22b64d1f86f4f8b660",
+          "size": 633048,
+          "embedded": true,
+          "caption": "正常对照：一次撤销恢复原单片段及媒体；本条只报告缺选区引导，不报告分割或撤销异常。"
+        }
+      ],
+      "attachments": [
+        {
+          "size": 543397,
+          "name": "015-01-no-selection-guidance.png",
+          "sha256": "32583fa9d823169687e6c81dba346a57d66046317f91d24894451c7446d4a315",
+          "id": "e878b8488fb9ccedb9f24c4358"
+        },
+        {
+          "size": 630146,
+          "name": "015-02-selected-split-completed.png",
+          "sha256": "022eecaee3569617970871da75f1568ab965b677d005abdd7d50ed5f55b30428",
+          "id": "5f9bda933536e41946837bd246"
+        },
+        {
+          "size": 633048,
+          "name": "015-03-single-undo-restored.png",
+          "sha256": "300df6e21fc4ec0f4ffdea3bf5e4345f99cb0edf86dbfc22b64d1f86f4f8b660",
+          "id": "814a83de0a9c77c6f2281f12a8"
+        },
+        {
+          "size": 10274419,
+          "name": "E196-A.mp4",
+          "sha256": "c453166c6396fe1c427c8a045ad2f84a8f5d4e4ff0f905b47d79114172829d15",
+          "id": "f6e2175ca33ca1bf954df49ae4"
+        },
+        {
+          "size": 573,
+          "name": "E196-A-en.srt",
+          "sha256": "4d52152ac06ca6be6667e3be97f0f3e3e654d03d4b92f7c97cde5189dff371d4",
+          "id": "421bf89eb55aa59289b7259d4a"
+        },
+        {
+          "size": 5684,
+          "name": "case-evidence.json",
+          "sha256": "5feca9fdf9e81395de458e12ae5b4b74dc67388243f7c7fb13538cada133a43d",
+          "id": "97a24c72046dc6ecdf5dfec987"
+        }
+      ],
+      "descriptionSha256": "defb7e9a30ec0f2726dd3b57fa8a9654e1ec1a71343ad5da14c038d3932a0e86"
+    }
+  ]
+}

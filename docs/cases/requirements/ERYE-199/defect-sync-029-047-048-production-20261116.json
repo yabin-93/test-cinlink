@@ -1,0 +1,96 @@
+{
+  "method": "official OpenAPI via tools/yunxiao",
+  "key": "ERYE199-029-047-048-NATIVE-EXPORT-PROTOCOL-PROD-20261116",
+  "created": 1,
+  "deduplication": false,
+  "case_ids": [
+    "ERYE199-029",
+    "ERYE199-047",
+    "ERYE199-048"
+  ],
+  "defect": {
+    "id": "FWXC-578",
+    "workitem_id": "8997db131fa05bc3a8e6e62ffe",
+    "url": "https://devops.aliyun.com/projex/project/1e401ac99539c3999e00e40006/bug#openWorkitemIdentifier=8997db131fa05bc3a8e6e62ffe",
+    "title": "【生产环境】【ERYE199-029/047/048】编辑器原生导出报协议错误，未交付可下载结果",
+    "status": "🤔AI提缺陷",
+    "assigned_to": "牛诗晴",
+    "verified": true,
+    "screenshots": 3,
+    "attachments": 7,
+    "synced_at": "2026-11-16T12:48:27.6006010+08:00",
+    "local_report": "docs/defects/ERYE199-029-047-048-native-export-protocol-production-20261116.md",
+    "shared": true,
+    "shared_case_ids": [
+      "ERYE199-029",
+      "ERYE199-047",
+      "ERYE199-048"
+    ],
+    "count_scope": "本缺陷共3张截图和7个附件，由3条用例共享；创建计1条。"
+  },
+  "images": [
+    {
+      "path": "029-failure-export-protocol.png",
+      "caption": "ERYE199-029失败现场：原生导出后出现协议错误，未在结果区取得可下载MP4。",
+      "sha256": "e0ed5b25896891b7982be3f48663490d092fb5c33be8f462add61146c3a15d8a"
+    },
+    {
+      "path": "047-failure-export-protocol.png",
+      "caption": "ERYE199-047失败现场：原生导出后出现协议错误，未在结果区取得可下载MP4。",
+      "sha256": "b9038fb60f4357b665f27770cbc0a91ef2350db81461d59c3e005f15a3ad3bef"
+    },
+    {
+      "path": "048-failure-export-protocol.png",
+      "caption": "ERYE199-048失败现场：原生导出后出现协议错误，未在结果区取得可下载MP4。",
+      "sha256": "544c518a8646e45fc37b1ae1dbf5e23dd7f2bc1bc30b5f3396fe1379cded1dd0"
+    }
+  ],
+  "attachment_receipts": [
+    {
+      "sha256": "e0ed5b25896891b7982be3f48663490d092fb5c33be8f462add61146c3a15d8a",
+      "id": "cae2cc889822c74cf3b8986ceb",
+      "name": "029-failure-export-protocol.png",
+      "size": 273008
+    },
+    {
+      "sha256": "b9038fb60f4357b665f27770cbc0a91ef2350db81461d59c3e005f15a3ad3bef",
+      "id": "daa43c26f33783f880c7420650",
+      "name": "047-failure-export-protocol.png",
+      "size": 239504
+    },
+    {
+      "sha256": "544c518a8646e45fc37b1ae1dbf5e23dd7f2bc1bc30b5f3396fe1379cded1dd0",
+      "id": "47406c2c78d3c57d878ec1315d",
+      "name": "048-failure-export-protocol.png",
+      "size": 257472
+    },
+    {
+      "sha256": "e432370eb6cda0797076d6091622f2f7e0acd94cef690f1679c1a01f2349aba9",
+      "id": "d0014838a49e64f6fceee992a3",
+      "name": "V.mp4",
+      "size": 2975172
+    },
+    {
+      "sha256": "9ab288bbe78349acc65f79ba905da66ddec2031fc18747e6a0e194887931c8ff",
+      "id": "ac00ed96d8b92a0f1f3f87c0aa",
+      "name": "mixed.srt",
+      "size": 191
+    },
+    {
+      "sha256": "89815101dda83ca2dd28a24d085b1c1bc49e814368d397940705a1d88a4b1e76",
+      "id": "4818a58f6c2d0c1413e1e56453",
+      "name": "export.srt",
+      "size": 90
+    },
+    {
+      "sha256": "1c29fbf5c2da044e57c00a3a3ed22aa1268a9b9463f7de8e607ab5f81dcdc125",
+      "id": "3832e570f388538afd1e52c537",
+      "name": "evidence.json",
+      "size": 3785
+    }
+  ],
+  "execution_status": "Failed",
+  "automation_status": "PLAN",
+  "rerun_performed": false,
+  "merge_source": "用户要求相同问题合并为一个缺陷"
+}

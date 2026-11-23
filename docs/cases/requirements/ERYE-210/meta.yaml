@@ -1,10 +1,65 @@
 requirement: ERYE-210
 title: 编辑器默认TAB调整
+active_case_count: 56
+retired_case_count: 0
 source: https://devops.aliyun.com/projex/req/ERYE-210
 status: designing
 automation_tag: "@ERYE-210"
 case_prefix: ERYE210
-updated: 2026-11-05
-
+updated: 2026-11-16
 acceptance_basis: "page_business_or_observed_api"
 acceptance_updated: 2026-11-05
+automation: {connected: 56, blocked_precondition_gates: 0, planned: 0, script: "tests/editor/erye210-*.spec.ts", definition_update: "014-v2-watermark-toggle-20261116"}
+execution_status:
+  batch: prod-014-v2-watermark-toggle-20261116-03
+  environment: production
+  result: CompletedWithRecordedFailuresOrBlocks
+  latest_batch_counts: {Passed: 1, Failed: 0, Blocked: 0, NotApplicable: 0, NotRun: 0}
+  historical_batch_counts: {Passed: 2, Failed: 2, Blocked: 1}
+  current_counts: {Passed: 50, Failed: 6, Blocked: 0, NotApplicable: 0, NotRun: 0}
+  report: results-014-v2-production-20261116.md
+  current_progress: execution-status-current.md
+  note: "014 v2生产Chrome通过，原只读权限待覆盖；其他55条及所有云效保持。"
+  prior_cloud_sync: {date: "2026-11-13", batch: "001-005", created: 3, defects: ["FWXC-482", "FWXC-483", "FWXC-484"], screenshots: 7, attachments: 16, verified: true, historicalDeduplication: false, preconditionsPerDefect: 3}
+
+  cloud_sync: {date: "2026-11-13", created: 2, defects: ["FWXC-488", "FWXC-489"], screenshots: 6, attachments: 12, verified: true, historicalDeduplication: false, preconditionsPerDefect: 3}
+
+  cloud_sync_013_015: {date: "2026-11-13", created: 2, defects: ["FWXC-492", "FWXC-493"], screenshots: 4, attachments: 8, verified: true, historicalDeduplication: false, preconditionsPerDefect: 3, priority: ["中", "低"], severity: ["3-一般", "4-轻微"]}
+
+  cloud_sync_018_020: {"date": "2026-11-13", "created": 2, "defects": ["FWXC-506", "FWXC-507"], "screenshots": 6, "attachments": 12, "verified": true, "historicalDeduplication": false, "preconditionsPerDefect": 3, "priority": ["高", "中"], "severity": ["2-严重", "3-一般"]}
+
+  cloud_sync_019_observation: {"date": "2026-11-13", "created": 1, "defects": ["FWXC-513"], "screenshots": 1, "attachments": 5, "verified": true, "historicalDeduplication": false, "preconditionsPerDefect": 3, "scope": "additional_observation_only", "caseStatus": "Blocked"}
+
+  cloud_sync_040_041: {"date": "2026-11-13", "created": 2, "defects": ["FWXC-516", "FWXC-518"], "screenshots": 4, "attachments": 8, "verified": true, "historicalDeduplication": false, "preconditionsPerDefect": 3, "caseStatuses": "Failed", "method": "official OpenAPI"}
+
+
+  cloud_sync_047_049: {"date": "2026-11-16", "created": 2, "defects": ["FWXC-579", "FWXC-580"], "screenshots": 5, "attachments": 11, "verified": true, "historicalDeduplication": false, "report": "defects-047-049-production-20261116.md"}
+
+  cloud_sync_007_015_restored: {"date": "2026-11-16", "created": 2, "defects": ["FWXC-585", "FWXC-586"], "screenshots": 6, "attachments": 12, "verified": true, "historicalDeduplication": false, "report": "defects-007-015-restored-production-20261116.md"}
+
+  cloud_sync_018_020_restored: {"date": "2026-11-16", "created": 2, "defects": ["FWXC-588", "FWXC-589"], "screenshots": 6, "attachments": 12, "verified": true, "historicalDeduplication": false, "report": "defects-018-020-restored-production-20261116.md"}
+
+definition_update_016: {date: "2026-11-13", version: "v2", platform: "Windows Chrome", executed: false, status: "Not Run", priorStatus: "Blocked", report: "case-016-v2-windows-20261113.md"}
+
+definition_update_019: {date: "2026-11-13", version: "v2", platform: "Windows Chrome", status: "Not Run", executed: false, priorStatus: "Not Applicable", report: "case-019-v2-linked-delete-20261113.md"}
+
+definition_update_021_035_v2: {"date": "2026-11-13", "version": "v2-current-features-20261113", "ids": ["ERYE210-021", "ERYE210-025", "ERYE210-026", "ERYE210-027", "ERYE210-029", "ERYE210-030", "ERYE210-031", "ERYE210-032", "ERYE210-033", "ERYE210-034", "ERYE210-035"], "status": "Executed", "executed": true, "report": "case-021-035-v2-current-features-20261113.md", "retainedBlocked": ["ERYE210-045", "ERYE210-046", "ERYE210-047", "ERYE210-048", "ERYE210-049"], "counts": {"Passed": 11}, "executionReport": "results-021-035-v2-prod-20261113.md"}
+
+retirement_20261113: {"date": "2026-11-13", "ids": ["ERYE210-002", "ERYE210-004", "ERYE210-005", "ERYE210-007", "ERYE210-010", "ERYE210-013", "ERYE210-015", "ERYE210-018", "ERYE210-020", "ERYE210-040", "ERYE210-041"], "retainedV2Ids": ["ERYE210-021", "ERYE210-025", "ERYE210-026", "ERYE210-027", "ERYE210-029", "ERYE210-030", "ERYE210-031", "ERYE210-032", "ERYE210-033", "ERYE210-034", "ERYE210-035"], "historyFile": "retired-failed-cases-20261113.json", "report": "retired-failed-cases-20261113.md", "countsChangedByScopeOnly": true, "cloudDefectsUnchanged": true}
+
+execution_011_target_language: {"date": "2026-11-13", "version": "v2-agent-translation-dubbing-20261113", "status": "Blocked", "branches": {"backgroundIsolation": "Passed", "targetLanguageResultContent": "Passed", "directResultEntry": "Blocked"}, "report": "results-011-user-project-prod-20261113.md", "userProject": "ad25bc25-b1c6-4105-84b8-1b845b4a4eb5", "runId": "run_v2_4f9b4423fb4346f3bd9048d22794268e", "resubmissions": 0}
+
+definition_update_completion_nine: {"date": "2026-11-13", "optimized": ["011", "017", "019"], "supplemented": ["016", "050", "051", "052", "053", "054"], "status": "Executed", "history": "case-nine-optimization-history-20261113.json", "definition": "case-nine-optimized-supplement-20261113.md", "script": "tests/editor/erye210-completion.spec.ts", "defaultEntries": 43, "counts": {"Passed": 8, "Failed": 1}, "executionReport": "results-completion-nine-prod-20261113.md"}
+
+execution_completion_nine: {"date": "2026-11-13", "status": "Completed", "counts": {"Passed": 8, "Failed": 1, "Blocked": 0, "Not Applicable": 0, "Not Run": 0}, "report": "results-completion-nine-prod-20261113.md", "evidence": "evidence-completion-nine-prod-20261113/manifest.json", "cloudWrites": 0}
+
+execution_051_rerun_20261116: {"status": "Passed", "batch": "prod-051-rerun-20261116-01", "report": "results-051-rerun-prod-20261116.md", "runId": "run_v2_3d7ebc6967124d3a805ce1f87892f0ed", "volumePercent": 50, "afterRefresh": 50, "manualDragPerformed": false, "cloudWrites": 0}
+
+
+definition_update_046_048_v3: {"date": "2026-11-16", "version": "v3-restore-existing-voice-20261116", "ids": ["ERYE210-046", "ERYE210-048"], "executed": true, "counts": {"Passed": 2}, "definition": "case-046-048-v3-current-controls-20261116.md", "report": "results-046-048-v3-production-20261116.md", "oldScopesDeferred": true, "cloudWrites": 0}
+
+definition_update_restored_eight_20261116: {"version": "v3-restored-six-and-navigation-20261116", "restored": ["002", "007", "010", "013", "015", "040"], "new": ["055", "056"], "status": "Executed", "counts": {"Passed": 6, "Failed": 2, "Blocked": 0, "Not Applicable": 0, "Not Run": 0}, "definition": "case-restored-eight-production-20261116.md", "report": "results-restored-eight-production-20261116.md", "cloudWrites": 0}
+
+definition_update_restored_final_five_20261116: {"version": "v4-restored-final-five-20261116", "ids": ["004", "005", "018", "020", "041"], "status": "Executed", "counts": {"Passed": 3, "Failed": 2, "Blocked": 0, "Not Applicable": 0, "Not Run": 0}, "definition": "case-restored-final-five-production-20261116.md", "report": "results-restored-final-five-production-20261116.md", "nativeTranslationRequired": ["004", "018", "020"], "cloudWrites": 0}
+
+definition_update_014_v2: {"date": "2026-11-16", "version": "v2-watermark-toggle-navigation-20261116", "status": "Passed", "definition": "case-014-v2-watermark-toggle-production-20261116.md", "report": "results-014-v2-production-20261116.md", "readonlyCoverage": "待覆盖", "history": "case-014-readonly-history-20261116.json"}

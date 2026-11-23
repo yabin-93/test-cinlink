@@ -1,8 +1,35 @@
-﻿requirement: ERYE-199
+requirement: ERYE-199
 title: 编辑器能力新增
 source: https://devops.aliyun.com/projex/req/ERYE-199
 owner: 陈圣融
-status: designing
+status: testing
 automation_tag: "@ERYE-199"
 case_prefix: ERYE199
-updated: 2026-10-22
+updated: "2026-11-23"
+latest_execution_report: "results-051-v3-production-20261123.md"
+execution_status: "active142;{'Passed': 47, 'Failed': 20, 'Blocked': 1, 'Not Applicable': 21, 'Not Run': 53}"
+current_execution_status: "execution-status-current.md"
+case_revision_note: "051 v4 passed by reassessment of the existing production evidence under corrected Select Media expectation"
+latest_defect_sync: "2026-11-19 091–095 -> FWXC-717, FWXC-718, FWXC-719, FWXC-720;36 images/48 attachments verified"
+automation_document: "automation.md"
+automation_command: "npm run test:editor:199 -- --base-url https://app.cinlink.ai --cases 011,013,017,020,052-053,055"
+current_version_scope: "069-095 AUTO recorded;096-148 PLAN/Not Run;other136 preserved"
+latest_scope_update_report: "revision-extra-coverage-20261118.md"
+
+latest_case_revision_report: "revision-051-select-media-20261123.md"
+
+latest_current_six_execution_report: "results-current-six-v2-production-20261116.md"
+
+latest_006_v2_execution_report: "results-006-v2-current-transform-production-20261116.md"
+
+latest_failed_cases_regression_report: "results-failed-ten-rerun-production-20261116.md"
+
+latest_nine_v2_execution_report: "results-nine-v2-production-20261116.md"
+
+latest_008_scope_correction_report: "revision-008-registration-scope-20261118.md"
+
+multitrack_definition: "cases.md#erye199-card-multitrack"
+multitrack_status: "execution-status-multitrack-20261118.json"
+
+extra_coverage_definition: "cases.md#erye199-editor-existing-feature-gaps"
+extra_coverage_status: "execution-status-extra-coverage-20261118.json"

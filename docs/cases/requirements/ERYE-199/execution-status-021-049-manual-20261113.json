@@ -1,0 +1,1397 @@
+{
+  "date": "2026-11-13",
+  "stage": "Revised; Pending execution",
+  "environment": "production",
+  "base_url": "https://app.cinlink.ai",
+  "batch": "erye199-manual-021-050-2026-11-13T10-37-48-153Z",
+  "workspace_id": "71793016-cbbf-4e48-be10-b4ce958f33b5",
+  "case_ids": [
+    "ERYE199-021",
+    "ERYE199-022",
+    "ERYE199-023",
+    "ERYE199-024",
+    "ERYE199-025",
+    "ERYE199-026",
+    "ERYE199-027",
+    "ERYE199-028",
+    "ERYE199-029",
+    "ERYE199-030",
+    "ERYE199-031",
+    "ERYE199-032",
+    "ERYE199-033",
+    "ERYE199-034",
+    "ERYE199-035",
+    "ERYE199-036",
+    "ERYE199-037",
+    "ERYE199-038",
+    "ERYE199-039",
+    "ERYE199-041",
+    "ERYE199-042",
+    "ERYE199-043",
+    "ERYE199-044",
+    "ERYE199-045",
+    "ERYE199-046",
+    "ERYE199-047",
+    "ERYE199-048",
+    "ERYE199-049"
+  ],
+  "retired": [
+    "ERYE199-040",
+    "ERYE199-050"
+  ],
+  "automation_integrated": false,
+  "report": "results-021-049-manual-production-20261113.md",
+  "counts": {
+    "Not Applicable": 18,
+    "Not Run": 6,
+    "Failed": 1,
+    "Passed": 3
+  },
+  "cases": [
+    {
+      "id": "ERYE199-021",
+      "status": "Not Applicable",
+      "actual": "生产新工程播放头5秒，位置动画开关、真实关键帧、关闭删通道及撤销恢复均不支持；原工程未改。",
+      "source_case": "021",
+      "run_id": "run_v2_47942d0077374095af1c8ad63b51e3b0",
+      "fixture": {
+        "conversationId": "3e83a493-7900-4338-a077-8a4b74eedb60",
+        "editorId": "1306d31c-8b17-4fd6-9870-b30cd5a21e49",
+        "name": "ERYE199-021-manual-2026-11-13T10-37-48-153Z"
+      },
+      "target_steps_executed": false,
+      "automation_integrated": false,
+      "automation_status": "PLAN",
+      "script": "",
+      "execution_method": "Ego Lite browser operation; no automation integration",
+      "latest_execution_report": "results-021-049-manual-production-20261113.md",
+      "latest_execution_batch": "erye199-manual-021-050-2026-11-13T10-37-48-153Z",
+      "workspace_id": "71793016-cbbf-4e48-be10-b4ce958f33b5",
+      "screenshots": [
+        "evidence-021-049-manual-production-20261113/021-agent-terminal.png",
+        "evidence-021-049-manual-production-20261113/021-baseline.png",
+        "evidence-021-049-manual-production-20261113/021-before-submit.png",
+        "evidence-021-049-manual-production-20261113/021-selection-observation.png"
+      ],
+      "scope_revision_report": "revision-na-current-capabilities-20261113.md",
+      "current_scope_note": "核心功能或依赖缺失，当前延期，不执行替代功能；恢复条件见修订说明。",
+      "requirement_gap_defect": {
+        "id": "FWXC-525",
+        "url": "https://devops.aliyun.com/projex/project/1e401ac99539c3999e00e40006/bug#openWorkitemIdentifier=1bea8a02a752c39eb065fe77f6",
+        "scope": "原需求能力缺口汇总，不作为v2执行失败",
+        "report": "defects-unfinished-24-production-20261113.md",
+        "verified": true
+      }
+    },
+    {
+      "id": "ERYE199-022",
+      "status": "Not Applicable",
+      "actual": "依赖本轮021确认的真实可编辑参数关键帧缺口；多个关键帧无法建立，源边界拖动和同点替换未执行；没有022独立run。",
+      "source_case": "021",
+      "dependency": "ERYE199-021",
+      "run_id": "run_v2_47942d0077374095af1c8ad63b51e3b0",
+      "target_steps_executed": false,
+      "automation_integrated": false,
+      "automation_status": "PLAN",
+      "script": "",
+      "execution_method": "Ego Lite browser operation; no automation integration",
+      "latest_execution_report": "results-021-049-manual-production-20261113.md",
+      "latest_execution_batch": "erye199-manual-021-050-2026-11-13T10-37-48-153Z",
+      "workspace_id": "71793016-cbbf-4e48-be10-b4ce958f33b5",
+      "screenshots": [
+        "evidence-021-049-manual-production-20261113/021-agent-terminal.png",
+        "evidence-021-049-manual-production-20261113/021-baseline.png",
+        "evidence-021-049-manual-production-20261113/021-before-submit.png",
+        "evidence-021-049-manual-production-20261113/021-selection-observation.png"
+      ],
+      "fixture": {
+        "conversationId": "3e83a493-7900-4338-a077-8a4b74eedb60",
+        "editorId": "1306d31c-8b17-4fd6-9870-b30cd5a21e49",
+        "name": "ERYE199-021-manual-2026-11-13T10-37-48-153Z"
+      },
+      "scope_revision_report": "revision-na-current-capabilities-20261113.md",
+      "current_scope_note": "核心功能或依赖缺失，当前延期，不执行替代功能；恢复条件见修订说明。",
+      "requirement_gap_defect": {
+        "id": "FWXC-525",
+        "url": "https://devops.aliyun.com/projex/project/1e401ac99539c3999e00e40006/bug#openWorkitemIdentifier=1bea8a02a752c39eb065fe77f6",
+        "scope": "原需求能力缺口汇总，不作为v2执行失败",
+        "report": "defects-unfinished-24-production-20261113.md",
+        "verified": true
+      }
+    },
+    {
+      "id": "ERYE199-023",
+      "status": "Not Applicable",
+      "actual": "矩形/椭圆/自由路径视频蒙版及独立反选/羽化/扩展/不透明度、布尔运算均不支持，原工程未改；不以视频批注替代。",
+      "source_case": "023",
+      "run_id": "run_v2_ff51539d2d9040ecb0b4501d49aafc89",
+      "fixture": {
+        "conversationId": "c7c646fb-150f-4237-8ed7-35435f5c3d40",
+        "editorId": "d337368f-3b92-4385-9135-ff5003791ddf",
+        "name": "ERYE199-023-manual-2026-11-13T10-37-48-153Z"
+      },
+      "target_steps_executed": false,
+      "automation_integrated": false,
+      "automation_status": "PLAN",
+      "script": "",
+      "execution_method": "Ego Lite browser operation; no automation integration",
+      "latest_execution_report": "results-021-049-manual-production-20261113.md",
+      "latest_execution_batch": "erye199-manual-021-050-2026-11-13T10-37-48-153Z",
+      "workspace_id": "71793016-cbbf-4e48-be10-b4ce958f33b5",
+      "screenshots": [
+        "evidence-021-049-manual-production-20261113/023-agent-terminal.png",
+        "evidence-021-049-manual-production-20261113/023-baseline.png",
+        "evidence-021-049-manual-production-20261113/023-before-submit.png"
+      ],
+      "scope_revision_report": "revision-na-current-capabilities-20261113.md",
+      "current_scope_note": "核心功能或依赖缺失，当前延期，不执行替代功能；恢复条件见修订说明。",
+      "requirement_gap_defect": {
+        "id": "FWXC-525",
+        "url": "https://devops.aliyun.com/projex/project/1e401ac99539c3999e00e40006/bug#openWorkitemIdentifier=1bea8a02a752c39eb065fe77f6",
+        "scope": "原需求能力缺口汇总，不作为v2执行失败",
+        "report": "defects-unfinished-24-production-20261113.md",
+        "verified": true
+      }
+    },
+    {
+      "id": "ERYE199-024",
+      "status": "Not Applicable",
+      "actual": "依赖本轮023的可编辑视频蒙版缺口；路径蒙版及关键帧无法建立，拓扑变化/保持插值目标未执行，没有024独立run。",
+      "source_case": "023",
+      "run_id": "run_v2_ff51539d2d9040ecb0b4501d49aafc89",
+      "fixture": {
+        "conversationId": "c7c646fb-150f-4237-8ed7-35435f5c3d40",
+        "editorId": "d337368f-3b92-4385-9135-ff5003791ddf",
+        "name": "ERYE199-023-manual-2026-11-13T10-37-48-153Z"
+      },
+      "target_steps_executed": false,
+      "automation_integrated": false,
+      "automation_status": "PLAN",
+      "script": "",
+      "execution_method": "Ego Lite browser operation; no automation integration",
+      "latest_execution_report": "results-021-049-manual-production-20261113.md",
+      "latest_execution_batch": "erye199-manual-021-050-2026-11-13T10-37-48-153Z",
+      "workspace_id": "71793016-cbbf-4e48-be10-b4ce958f33b5",
+      "screenshots": [
+        "evidence-021-049-manual-production-20261113/023-agent-terminal.png",
+        "evidence-021-049-manual-production-20261113/023-baseline.png",
+        "evidence-021-049-manual-production-20261113/023-before-submit.png"
+      ],
+      "scope_revision_report": "revision-na-current-capabilities-20261113.md",
+      "current_scope_note": "核心功能或依赖缺失，当前延期，不执行替代功能；恢复条件见修订说明。",
+      "requirement_gap_defect": {
+        "id": "FWXC-525",
+        "url": "https://devops.aliyun.com/projex/project/1e401ac99539c3999e00e40006/bug#openWorkitemIdentifier=1bea8a02a752c39eb065fe77f6",
+        "scope": "原需求能力缺口汇总，不作为v2执行失败",
+        "report": "defects-unfinished-24-production-20261113.md",
+        "verified": true
+      }
+    },
+    {
+      "id": "ERYE199-025",
+      "status": "Not Applicable",
+      "actual": "高斯模糊/投影/羽化/线性擦除真实片段效果栈、单效果蒙版、启停/复制/排序/重置均不支持；原工程未改。",
+      "source_case": "025",
+      "run_id": "run_v2_cbf7281971e64c68b83a08d3f685c74a",
+      "fixture": {
+        "conversationId": "24035a58-e86f-472f-b604-33cec7c7d259",
+        "editorId": "7c80a8e2-44a5-49cf-8a04-9a5b8d42d942",
+        "name": "ERYE199-025-manual-2026-11-13T10-37-48-153Z"
+      },
+      "target_steps_executed": false,
+      "automation_integrated": false,
+      "automation_status": "PLAN",
+      "script": "",
+      "execution_method": "Ego Lite browser operation; no automation integration",
+      "latest_execution_report": "results-021-049-manual-production-20261113.md",
+      "latest_execution_batch": "erye199-manual-021-050-2026-11-13T10-37-48-153Z",
+      "workspace_id": "71793016-cbbf-4e48-be10-b4ce958f33b5",
+      "screenshots": [
+        "evidence-021-049-manual-production-20261113/025-agent-terminal.png",
+        "evidence-021-049-manual-production-20261113/025-baseline.png",
+        "evidence-021-049-manual-production-20261113/025-before-submit.png"
+      ],
+      "scope_revision_report": "revision-na-current-capabilities-20261113.md",
+      "current_scope_note": "核心功能或依赖缺失，当前延期，不执行替代功能；恢复条件见修订说明。",
+      "requirement_gap_defect": {
+        "id": "FWXC-525",
+        "url": "https://devops.aliyun.com/projex/project/1e401ac99539c3999e00e40006/bug#openWorkitemIdentifier=1bea8a02a752c39eb065fe77f6",
+        "scope": "原需求能力缺口汇总，不作为v2执行失败",
+        "report": "defects-unfinished-24-production-20261113.md",
+        "verified": true
+      }
+    },
+    {
+      "id": "ERYE199-026",
+      "status": "Not Applicable",
+      "actual": "依赖本轮025确认的真实效果栈/排序能力缺口，两个效果无法建立；交换顺序及对应预览/导出对比未执行，没有026独立run。",
+      "source_case": "025",
+      "run_id": "run_v2_cbf7281971e64c68b83a08d3f685c74a",
+      "fixture": {
+        "conversationId": "24035a58-e86f-472f-b604-33cec7c7d259",
+        "editorId": "7c80a8e2-44a5-49cf-8a04-9a5b8d42d942",
+        "name": "ERYE199-025-manual-2026-11-13T10-37-48-153Z"
+      },
+      "target_steps_executed": false,
+      "automation_integrated": false,
+      "automation_status": "PLAN",
+      "script": "",
+      "execution_method": "Ego Lite browser operation; no automation integration",
+      "latest_execution_report": "results-021-049-manual-production-20261113.md",
+      "latest_execution_batch": "erye199-manual-021-050-2026-11-13T10-37-48-153Z",
+      "workspace_id": "71793016-cbbf-4e48-be10-b4ce958f33b5",
+      "screenshots": [
+        "evidence-021-049-manual-production-20261113/025-agent-terminal.png",
+        "evidence-021-049-manual-production-20261113/025-baseline.png",
+        "evidence-021-049-manual-production-20261113/025-before-submit.png"
+      ],
+      "scope_revision_report": "revision-na-current-capabilities-20261113.md",
+      "current_scope_note": "核心功能或依赖缺失，当前延期，不执行替代功能；恢复条件见修订说明。",
+      "requirement_gap_defect": {
+        "id": "FWXC-525",
+        "url": "https://devops.aliyun.com/projex/project/1e401ac99539c3999e00e40006/bug#openWorkitemIdentifier=1bea8a02a752c39eb065fe77f6",
+        "scope": "原需求能力缺口汇总，不作为v2执行失败",
+        "report": "defects-unfinished-24-production-20261113.md",
+        "verified": true
+      }
+    },
+    {
+      "id": "ERYE199-027",
+      "status": "Not Applicable",
+      "actual": "独立Graphic组、组内元素/顺序/组变换及可编辑模板保存不支持；未用字幕或水印替代，原工程保持。",
+      "source_case": "027",
+      "run_id": "run_v2_2d6fea6a620a4f3693599679f7ce6851",
+      "fixture": {
+        "conversationId": "d01a1586-b3a1-468e-b187-dcb023e4f029",
+        "editorId": "7b8394f0-bb0c-480c-8c02-aaf341fc0db8",
+        "name": "ERYE199-027-manual-2026-11-13T10-37-48-153Z"
+      },
+      "target_steps_executed": false,
+      "automation_integrated": false,
+      "automation_status": "PLAN",
+      "script": "",
+      "execution_method": "Ego Lite browser operation; no automation integration",
+      "latest_execution_report": "results-021-049-manual-production-20261113.md",
+      "latest_execution_batch": "erye199-manual-021-050-2026-11-13T10-37-48-153Z",
+      "workspace_id": "71793016-cbbf-4e48-be10-b4ce958f33b5",
+      "screenshots": [
+        "evidence-021-049-manual-production-20261113/027-agent-terminal.png",
+        "evidence-021-049-manual-production-20261113/027-baseline.png",
+        "evidence-021-049-manual-production-20261113/027-before-submit.png"
+      ],
+      "scope_revision_report": "revision-na-current-capabilities-20261113.md",
+      "current_scope_note": "核心功能或依赖缺失，当前延期，不执行替代功能；恢复条件见修订说明。",
+      "requirement_gap_defect": {
+        "id": "FWXC-525",
+        "url": "https://devops.aliyun.com/projex/project/1e401ac99539c3999e00e40006/bug#openWorkitemIdentifier=1bea8a02a752c39eb065fe77f6",
+        "scope": "原需求能力缺口汇总，不作为v2执行失败",
+        "report": "defects-unfinished-24-production-20261113.md",
+        "verified": true
+      }
+    },
+    {
+      "id": "ERYE199-028",
+      "status": "Not Run",
+      "actual": "v2定义已按现有能力优化，尚未执行：双语字幕的全局字号及内容隔离。",
+      "definition_revision": 2,
+      "definition": "cases.md#erye199-028-current",
+      "scope_revision_report": "revision-na-current-capabilities-20261113.md",
+      "automation_status": "PLAN",
+      "automation_integrated": false,
+      "script": "",
+      "target_steps_executed": false,
+      "execution_method": "定义修订，尚未页面执行",
+      "current_status_report": "execution-status-current.md",
+      "execution_history": [
+        {
+          "definition_revision": 1,
+          "status": "Not Applicable",
+          "result": {
+            "id": "ERYE199-028",
+            "status": "Not Applicable",
+            "actual": "全项目字号在真实样式面板改为24并保存，双语基线已可见；段级/仅源轨/双语主副行独立样式不支持，未用全局样式替代通过；任务后文字/时间/配音及基线未改。",
+            "source_case": "028",
+            "run_id": "run_v2_3133b58fc6fa4a74a2fcc946332b8603",
+            "fixture": {
+              "conversationId": "f115e94b-35f4-4c0e-828f-220e1addd0d8",
+              "editorId": "890b60bb-04f0-4877-a316-271da07a53d0",
+              "name": "ERYE199-028-manual-2026-11-13T10-37-48-153Z"
+            },
+            "partial_checks": [
+              "全项目字号24真实保存",
+              "双语字幕显示"
+            ],
+            "target_steps_executed": true,
+            "automation_integrated": false,
+            "automation_status": "PLAN",
+            "script": "",
+            "execution_method": "Ego Lite browser operation; no automation integration",
+            "latest_execution_report": "results-021-049-manual-production-20261113.md",
+            "latest_execution_batch": "erye199-manual-021-050-2026-11-13T10-37-48-153Z",
+            "workspace_id": "71793016-cbbf-4e48-be10-b4ce958f33b5",
+            "screenshots": [
+              "evidence-021-049-manual-production-20261113/028-agent-terminal.png",
+              "evidence-021-049-manual-production-20261113/028-baseline.png",
+              "evidence-021-049-manual-production-20261113/028-before-submit.png",
+              "evidence-021-049-manual-production-20261113/028-bilingual-baseline.png",
+              "evidence-021-049-manual-production-20261113/028-global-font24.png",
+              "evidence-021-049-manual-production-20261113/028-style-entry-observation.png",
+              "evidence-021-049-manual-production-20261113/028-style-panel-visible.png"
+            ],
+            "scope_revision_report": "revision-na-current-capabilities-20261113.md"
+          }
+        }
+      ],
+      "screenshots": [],
+      "requirement_gap_defect": {
+        "id": "FWXC-525",
+        "url": "https://devops.aliyun.com/projex/project/1e401ac99539c3999e00e40006/bug#openWorkitemIdentifier=1bea8a02a752c39eb065fe77f6",
+        "scope": "原需求能力缺口汇总，不作为v2执行失败",
+        "report": "defects-unfinished-24-production-20261113.md",
+        "verified": true
+      }
+    },
+    {
+      "id": "ERYE199-029",
+      "status": "Not Run",
+      "actual": "v2定义已按现有能力优化，尚未执行：混合文字的现有字体显示、换行与导出。",
+      "definition_revision": 2,
+      "definition": "cases.md#erye199-029-current",
+      "scope_revision_report": "revision-na-current-capabilities-20261113.md",
+      "automation_status": "PLAN",
+      "automation_integrated": false,
+      "script": "",
+      "target_steps_executed": false,
+      "execution_method": "定义修订，尚未页面执行",
+      "current_status_report": "execution-status-current.md",
+      "execution_history": [
+        {
+          "definition_revision": 1,
+          "status": "Not Applicable",
+          "result": {
+            "id": "ERYE199-029",
+            "status": "Not Applicable",
+            "actual": "缺失字体样本已在页面显示原字体名及中英数字Emoji/长姓名，搜索Arial无匹配；专门的缺失检测、替代对照预览/确认/映射记录及字形安全区检查未实现；未跳过预览强制设置，工程未改。",
+            "source_case": "029",
+            "run_id": "run_v2_004e1c2084334f29b36680e97a5ac277",
+            "fixture": {
+              "conversationId": "b88abc41-60fa-4617-ac17-88503894b6aa",
+              "editorId": "cb9d357c-53eb-40a5-907f-961c568ac197",
+              "name": "ERYE199-029-manual-2026-11-13T10-37-48-153Z"
+            },
+            "target_steps_executed": true,
+            "automation_integrated": false,
+            "automation_status": "PLAN",
+            "script": "",
+            "execution_method": "Ego Lite browser operation; no automation integration",
+            "latest_execution_report": "results-021-049-manual-production-20261113.md",
+            "latest_execution_batch": "erye199-manual-021-050-2026-11-13T10-37-48-153Z",
+            "workspace_id": "71793016-cbbf-4e48-be10-b4ce958f33b5",
+            "screenshots": [
+              "evidence-021-049-manual-production-20261113/029-agent-terminal.png",
+              "evidence-021-049-manual-production-20261113/029-baseline.png",
+              "evidence-021-049-manual-production-20261113/029-before-submit.png",
+              "evidence-021-049-manual-production-20261113/029-missing-font-baseline.png",
+              "evidence-021-049-manual-production-20261113/029-missing-font-search-arial.png"
+            ],
+            "scope_revision_report": "revision-na-current-capabilities-20261113.md"
+          }
+        }
+      ],
+      "screenshots": [],
+      "requirement_gap_defect": {
+        "id": "FWXC-525",
+        "url": "https://devops.aliyun.com/projex/project/1e401ac99539c3999e00e40006/bug#openWorkitemIdentifier=1bea8a02a752c39eb065fe77f6",
+        "scope": "原需求能力缺口汇总，不作为v2执行失败",
+        "report": "defects-unfinished-24-production-20261113.md",
+        "verified": true
+      }
+    },
+    {
+      "id": "ERYE199-030",
+      "status": "Failed",
+      "actual": "页面MP4烧录导出和下载完成，黄色字幕可见，10秒/640×360/48kHz。SRT+ASS/SSA请求失败：Unknown or missing editor fields；另一次仅SRT请求成功并下载，两条原文/时间轴准确且无样式。ASS/SSA明确不支持，保留首次失败，不以随后SRT成功覆盖。",
+      "source_case": "030",
+      "run_id": "run_v2_ca708304203e46b9bf5ac958ea3267a8",
+      "additional_run_id": "run_v2_cb6a4f09cdfa4f5ebb401dd7c9bbf127",
+      "fixture": {
+        "conversationId": "52eba378-bc0c-4631-a044-fe7fa94efaf1",
+        "editorId": "d327db38-aeb7-4cf6-8368-931eda479500",
+        "name": "ERYE199-030-manual-2026-11-13T10-37-48-153Z"
+      },
+      "target_steps_executed": true,
+      "automation_integrated": false,
+      "partial_checks": [
+        "MP4烧录视频真实下载并提取2秒帧核对",
+        "UTF8 SRT两条字幕时间/原文及不携带样式通过"
+      ],
+      "actions": [
+        "准备黄色24号字幕A1～3秒/B6～8秒的新工程，2秒保存预览",
+        "点击页面导出，等待已完成后下载视频",
+        "请求独立SRT及ASS/SSA，原任务failed并保留Unknown or missing editor fields截图",
+        "另发仅SRT的分格式验证请求，任务done，滚动到结果卡后点击文件名下载",
+        "解码MP4及检查SRT原文/时间轴；ASS/SSA未实现，不重复原失败请求"
+      ],
+      "automation_status": "PLAN",
+      "script": "",
+      "execution_method": "Ego Lite browser operation; no automation integration",
+      "latest_execution_report": "results-021-049-manual-production-20261113.md",
+      "latest_execution_batch": "erye199-manual-021-050-2026-11-13T10-37-48-153Z",
+      "workspace_id": "71793016-cbbf-4e48-be10-b4ce958f33b5",
+      "screenshots": [
+        "evidence-021-049-manual-production-20261113/030-agent-terminal.png",
+        "evidence-021-049-manual-production-20261113/030-baseline.png",
+        "evidence-021-049-manual-production-20261113/030-before-submit.png",
+        "evidence-021-049-manual-production-20261113/030-export-frame2.png",
+        "evidence-021-049-manual-production-20261113/030-export-observation.png",
+        "evidence-021-049-manual-production-20261113/030-export-options.png",
+        "evidence-021-049-manual-production-20261113/030-formats-request-failure.png",
+        "evidence-021-049-manual-production-20261113/030-srt-download-outcome.png",
+        "evidence-021-049-manual-production-20261113/030-srt-result-observation.png",
+        "evidence-021-049-manual-production-20261113/030-srt-visible-position.png",
+        "evidence-021-049-manual-production-20261113/030-styled-preview.png"
+      ],
+      "defect": {
+        "id": "FWXC-517",
+        "workitem_id": "a8dc2ee87914e60ad64d64254c",
+        "url": "https://devops.aliyun.com/projex/project/1e401ac99539c3999e00e40006/bug#openWorkitemIdentifier=a8dc2ee87914e60ad64d64254c",
+        "title": "【生产环境】【ERYE199-030】组合请求导出SRT及样式字幕时整体失败，报Unknown or missing editor fields",
+        "status": "🤔AI提缺陷",
+        "assigned_to": "牛诗晴",
+        "verified": true,
+        "screenshots": 3,
+        "attachments": 7,
+        "synced_at": "2026-11-13T19:45:26.8343916+08:00",
+        "local_report": "docs/defects/ERYE199-030-combined-subtitle-export-production-20261113.md"
+      },
+      "latest_defect_sync_report": "defects-030-combined-subtitle-export-production-20261113.md"
+    },
+    {
+      "id": "ERYE199-031",
+      "status": "Not Applicable",
+      "actual": "切点两侧余量足够的两段基线已建立；当前不支持工程内可编辑转场对象，6类类型/时长/对齐核验未执行；未生成拼接视频或用淡入淡出替代。",
+      "source_case": "031",
+      "run_id": "run_v2_5791a43f7bfd41f185fcc25b5848ffe8",
+      "fixture": {
+        "conversationId": "49d49b13-c09d-40b8-8517-7b8cced98650",
+        "editorId": "1ab50323-f5ec-4682-80b0-9c867c3e3abe",
+        "name": "ERYE199-031-manual-2026-11-13T10-37-48-153Z"
+      },
+      "target_steps_executed": false,
+      "automation_integrated": false,
+      "automation_status": "PLAN",
+      "script": "",
+      "execution_method": "Ego Lite browser operation; no automation integration",
+      "latest_execution_report": "results-021-049-manual-production-20261113.md",
+      "latest_execution_batch": "erye199-manual-021-050-2026-11-13T10-37-48-153Z",
+      "workspace_id": "71793016-cbbf-4e48-be10-b4ce958f33b5",
+      "screenshots": [
+        "evidence-021-049-manual-production-20261113/031-agent-terminal.png",
+        "evidence-021-049-manual-production-20261113/031-baseline.png",
+        "evidence-021-049-manual-production-20261113/031-before-submit.png"
+      ],
+      "scope_revision_report": "revision-na-current-capabilities-20261113.md",
+      "current_scope_note": "核心功能或依赖缺失，当前延期，不执行替代功能；恢复条件见修订说明。",
+      "requirement_gap_defect": {
+        "id": "FWXC-525",
+        "url": "https://devops.aliyun.com/projex/project/1e401ac99539c3999e00e40006/bug#openWorkitemIdentifier=1bea8a02a752c39eb065fe77f6",
+        "scope": "原需求能力缺口汇总，不作为v2执行失败",
+        "report": "defects-unfinished-24-production-20261113.md",
+        "verified": true
+      }
+    },
+    {
+      "id": "ERYE199-032",
+      "status": "Not Applicable",
+      "actual": "依赖本轮031的真实可编辑转场缺口；无法建立不足余量的转场提交，提示可用时长/缩短及重复帧检查未执行，没有032独立run。",
+      "source_case": "031",
+      "run_id": "run_v2_5791a43f7bfd41f185fcc25b5848ffe8",
+      "fixture": {
+        "conversationId": "49d49b13-c09d-40b8-8517-7b8cced98650",
+        "editorId": "1ab50323-f5ec-4682-80b0-9c867c3e3abe",
+        "name": "ERYE199-031-manual-2026-11-13T10-37-48-153Z"
+      },
+      "target_steps_executed": false,
+      "automation_integrated": false,
+      "automation_status": "PLAN",
+      "script": "",
+      "execution_method": "Ego Lite browser operation; no automation integration",
+      "latest_execution_report": "results-021-049-manual-production-20261113.md",
+      "latest_execution_batch": "erye199-manual-021-050-2026-11-13T10-37-48-153Z",
+      "workspace_id": "71793016-cbbf-4e48-be10-b4ce958f33b5",
+      "screenshots": [
+        "evidence-021-049-manual-production-20261113/031-agent-terminal.png",
+        "evidence-021-049-manual-production-20261113/031-baseline.png",
+        "evidence-021-049-manual-production-20261113/031-before-submit.png"
+      ],
+      "scope_revision_report": "revision-na-current-capabilities-20261113.md",
+      "current_scope_note": "核心功能或依赖缺失，当前延期，不执行替代功能；恢复条件见修订说明。",
+      "requirement_gap_defect": {
+        "id": "FWXC-525",
+        "url": "https://devops.aliyun.com/projex/project/1e401ac99539c3999e00e40006/bug#openWorkitemIdentifier=1bea8a02a752c39eb065fe77f6",
+        "scope": "原需求能力缺口汇总，不作为v2执行失败",
+        "report": "defects-unfinished-24-production-20261113.md",
+        "verified": true
+      }
+    },
+    {
+      "id": "ERYE199-033",
+      "status": "Not Applicable",
+      "actual": "独立音轨两段相邻、原视频原声静音的基线已准备；恒定增益/恒定功率/指数可编辑音频转场、曲线/独立时长和专属删除均不支持，未生成混音替代。",
+      "source_case": "033",
+      "run_id": "run_v2_cd3a968d12ee4b7b9b60fd18dd80a089",
+      "fixture": {
+        "conversationId": "3aae6e7e-45ab-437e-847f-8bbf106101ee",
+        "editorId": "2b487769-352e-4548-a766-6c47ca2274e4",
+        "name": "ERYE199-033-manual-2026-11-13T10-37-48-153Z"
+      },
+      "target_steps_executed": false,
+      "automation_integrated": false,
+      "automation_status": "PLAN",
+      "script": "",
+      "execution_method": "Ego Lite browser operation; no automation integration",
+      "latest_execution_report": "results-021-049-manual-production-20261113.md",
+      "latest_execution_batch": "erye199-manual-021-050-2026-11-13T10-37-48-153Z",
+      "workspace_id": "71793016-cbbf-4e48-be10-b4ce958f33b5",
+      "screenshots": [
+        "evidence-021-049-manual-production-20261113/033-agent-terminal.png",
+        "evidence-021-049-manual-production-20261113/033-baseline.png",
+        "evidence-021-049-manual-production-20261113/033-before-submit.png"
+      ],
+      "scope_revision_report": "revision-na-current-capabilities-20261113.md",
+      "current_scope_note": "核心功能或依赖缺失，当前延期，不执行替代功能；恢复条件见修订说明。",
+      "requirement_gap_defect": {
+        "id": "FWXC-525",
+        "url": "https://devops.aliyun.com/projex/project/1e401ac99539c3999e00e40006/bug#openWorkitemIdentifier=1bea8a02a752c39eb065fe77f6",
+        "scope": "原需求能力缺口汇总，不作为v2执行失败",
+        "report": "defects-unfinished-24-production-20261113.md",
+        "verified": true
+      }
+    },
+    {
+      "id": "ERYE199-034",
+      "status": "Not Run",
+      "actual": "v2定义已按现有能力优化，尚未执行：0.25／0.3178／4倍工程变速及原声映射。",
+      "definition_revision": 2,
+      "definition": "cases.md#erye199-034-current",
+      "scope_revision_report": "revision-na-current-capabilities-20261113.md",
+      "automation_status": "PLAN",
+      "automation_integrated": false,
+      "script": "",
+      "target_steps_executed": false,
+      "execution_method": "定义修订，尚未页面执行",
+      "current_status_report": "execution-status-current.md",
+      "execution_history": [
+        {
+          "definition_revision": 1,
+          "status": "Not Applicable",
+          "result": {
+            "id": "ERYE199-034",
+            "status": "Not Applicable",
+            "actual": "本轮新工程已准备原片/原声/固定字幕；源时间绑定字幕不支持，0.1/8倍超当前工程0.25～4倍范围，保持音高/起点或时长策略及波纹冲突控制不完整。未绕过前置执行0.3178倍，原工程未改。",
+            "source_case": "034",
+            "run_id": "run_v2_673f0a1932bc4d2e98b05ac261d08c74",
+            "fixture": {
+              "conversationId": "af09b9f5-86d9-4282-9260-bb37bc74dd9b",
+              "editorId": "99b28767-ba22-414b-b219-ed2839554d2b",
+              "name": "ERYE199-034-manual-2026-11-13T10-37-48-153Z"
+            },
+            "target_steps_executed": false,
+            "automation_integrated": false,
+            "automation_status": "PLAN",
+            "script": "",
+            "execution_method": "Ego Lite browser operation; no automation integration",
+            "latest_execution_report": "results-021-049-manual-production-20261113.md",
+            "latest_execution_batch": "erye199-manual-021-050-2026-11-13T10-37-48-153Z",
+            "workspace_id": "71793016-cbbf-4e48-be10-b4ce958f33b5",
+            "screenshots": [
+              "evidence-021-049-manual-production-20261113/034-agent-terminal.png",
+              "evidence-021-049-manual-production-20261113/034-baseline.png",
+              "evidence-021-049-manual-production-20261113/034-before-submit.png"
+            ],
+            "scope_revision_report": "revision-na-current-capabilities-20261113.md"
+          }
+        }
+      ],
+      "screenshots": [],
+      "requirement_gap_defect": {
+        "id": "FWXC-525",
+        "url": "https://devops.aliyun.com/projex/project/1e401ac99539c3999e00e40006/bug#openWorkitemIdentifier=1bea8a02a752c39eb065fe77f6",
+        "scope": "原需求能力缺口汇总，不作为v2执行失败",
+        "report": "defects-unfinished-24-production-20261113.md",
+        "verified": true
+      }
+    },
+    {
+      "id": "ERYE199-035",
+      "status": "Not Applicable",
+      "actual": "SDR源与.cube样本已准备；本轮页面功能入口及Agent不提供LUT导入/持久化和工程内可编辑调色，文件级调色未作替代；未加载LUT/重开验证，工程未改。",
+      "source_case": "035",
+      "run_id": "run_v2_d4a20d8d623e460bbcf1a45459a95975",
+      "fixture": {
+        "conversationId": "57c232f1-5ae5-4ce7-b592-21a2e8213953",
+        "editorId": "ec4bb012-0d7c-4559-ae5c-64aae4d19d35",
+        "name": "ERYE199-035-manual-2026-11-13T10-37-48-153Z"
+      },
+      "target_steps_executed": false,
+      "automation_integrated": false,
+      "automation_status": "PLAN",
+      "script": "",
+      "execution_method": "Ego Lite browser operation; no automation integration",
+      "latest_execution_report": "results-021-049-manual-production-20261113.md",
+      "latest_execution_batch": "erye199-manual-021-050-2026-11-13T10-37-48-153Z",
+      "workspace_id": "71793016-cbbf-4e48-be10-b4ce958f33b5",
+      "screenshots": [
+        "evidence-021-049-manual-production-20261113/035-agent-terminal.png",
+        "evidence-021-049-manual-production-20261113/035-baseline.png",
+        "evidence-021-049-manual-production-20261113/035-before-submit.png"
+      ],
+      "scope_revision_report": "revision-na-current-capabilities-20261113.md",
+      "current_scope_note": "核心功能或依赖缺失，当前延期，不执行替代功能；恢复条件见修订说明。",
+      "requirement_gap_defect": {
+        "id": "FWXC-525",
+        "url": "https://devops.aliyun.com/projex/project/1e401ac99539c3999e00e40006/bug#openWorkitemIdentifier=1bea8a02a752c39eb065fe77f6",
+        "scope": "原需求能力缺口汇总，不作为v2执行失败",
+        "report": "defects-unfinished-24-production-20261113.md",
+        "verified": true
+      }
+    },
+    {
+      "id": "ERYE199-036",
+      "status": "Passed",
+      "actual": "按需求允许的“明确拒绝HDR处理”分支通过：真实PQ/BT2020/10bit样本已登记并打开，应用明确拒绝调色/导出且解释无法保证正确转换；无输出、原工程未改。仅拒绝分支通过，不代表已支持或验证HDR→SDR转换质量。",
+      "source_case": "036",
+      "run_id": "run_v2_734c9f40bbb14c038038cea058a93f02",
+      "fixture": {
+        "conversationId": "2c99cd69-1b43-432f-ae10-26ba6e85336c",
+        "editorId": "7de068e9-387e-4530-985b-83c046ef15c9",
+        "name": "ERYE199-036-manual-2026-11-13T10-37-48-153Z"
+      },
+      "target_steps_executed": true,
+      "automation_integrated": false,
+      "acceptance_branch": "explicit HDR processing refusal",
+      "actions": [
+        "生成并独立ffprobe核验4秒HEVC 10bit PQ/BT2020灰阶文件，登记后放入新工程",
+        "打开真实原片，页面媒体readyState4、时长4秒",
+        "一次提交按能力明确转换或拒绝的完整指令",
+        "核对明确拒绝、没有转换/导出产物及前后工程完全一致；不以拒绝分支声称HDR转换已实现"
+      ],
+      "automation_status": "PLAN",
+      "script": "",
+      "execution_method": "Ego Lite browser operation; no automation integration",
+      "latest_execution_report": "results-021-049-manual-production-20261113.md",
+      "latest_execution_batch": "erye199-manual-021-050-2026-11-13T10-37-48-153Z",
+      "workspace_id": "71793016-cbbf-4e48-be10-b4ce958f33b5",
+      "screenshots": [
+        "evidence-021-049-manual-production-20261113/036-agent-terminal.png",
+        "evidence-021-049-manual-production-20261113/036-baseline.png",
+        "evidence-021-049-manual-production-20261113/036-before-submit.png",
+        "evidence-021-049-manual-production-20261113/036-hdr-source.png"
+      ]
+    },
+    {
+      "id": "ERYE199-037",
+      "status": "Not Applicable",
+      "actual": "当前不支持真实调整层、曝光EV/高斯模糊和视频效果蒙版，2～6秒调整层未建立，1/3/7秒对照及导出检查未执行；未用可见色块或水印替代。",
+      "source_case": "037",
+      "run_id": "run_v2_cbf03ee5f19c4e41991115226e62814f",
+      "fixture": {
+        "conversationId": "dd61e646-b07a-4a6e-8b31-607b8864a373",
+        "editorId": "89ecf904-5068-4f43-9152-781c991cf9af",
+        "name": "ERYE199-037-manual-2026-11-13T10-37-48-153Z"
+      },
+      "target_steps_executed": false,
+      "automation_integrated": false,
+      "automation_status": "PLAN",
+      "script": "",
+      "execution_method": "Ego Lite browser operation; no automation integration",
+      "latest_execution_report": "results-021-049-manual-production-20261113.md",
+      "latest_execution_batch": "erye199-manual-021-050-2026-11-13T10-37-48-153Z",
+      "workspace_id": "71793016-cbbf-4e48-be10-b4ce958f33b5",
+      "screenshots": [
+        "evidence-021-049-manual-production-20261113/037-agent-terminal.png",
+        "evidence-021-049-manual-production-20261113/037-baseline.png",
+        "evidence-021-049-manual-production-20261113/037-before-submit.png"
+      ],
+      "scope_revision_report": "revision-na-current-capabilities-20261113.md",
+      "current_scope_note": "核心功能或依赖缺失，当前延期，不执行替代功能；恢复条件见修订说明。",
+      "requirement_gap_defect": {
+        "id": "FWXC-525",
+        "url": "https://devops.aliyun.com/projex/project/1e401ac99539c3999e00e40006/bug#openWorkitemIdentifier=1bea8a02a752c39eb065fe77f6",
+        "scope": "原需求能力缺口汇总，不作为v2执行失败",
+        "report": "defects-unfinished-24-production-20261113.md",
+        "verified": true
+      }
+    },
+    {
+      "id": "ERYE199-038",
+      "status": "Not Applicable",
+      "actual": "本轮035同场核验：当前页面无可用调色/示波器入口，Agent明确无波形/矢量示波器打开或读取能力；未展示实时变化；复用035证据，无038独立run。",
+      "source_case": "035",
+      "run_id": "run_v2_d4a20d8d623e460bbcf1a45459a95975",
+      "fixture": {
+        "conversationId": "57c232f1-5ae5-4ce7-b592-21a2e8213953",
+        "editorId": "ec4bb012-0d7c-4559-ae5c-64aae4d19d35",
+        "name": "ERYE199-035-manual-2026-11-13T10-37-48-153Z"
+      },
+      "target_steps_executed": false,
+      "automation_integrated": false,
+      "automation_status": "PLAN",
+      "script": "",
+      "execution_method": "Ego Lite browser operation; no automation integration",
+      "latest_execution_report": "results-021-049-manual-production-20261113.md",
+      "latest_execution_batch": "erye199-manual-021-050-2026-11-13T10-37-48-153Z",
+      "workspace_id": "71793016-cbbf-4e48-be10-b4ce958f33b5",
+      "screenshots": [
+        "evidence-021-049-manual-production-20261113/035-agent-terminal.png",
+        "evidence-021-049-manual-production-20261113/035-baseline.png",
+        "evidence-021-049-manual-production-20261113/035-before-submit.png"
+      ],
+      "scope_revision_report": "revision-na-current-capabilities-20261113.md",
+      "current_scope_note": "核心功能或依赖缺失，当前延期，不执行替代功能；恢复条件见修订说明。",
+      "requirement_gap_defect": {
+        "id": "FWXC-525",
+        "url": "https://devops.aliyun.com/projex/project/1e401ac99539c3999e00e40006/bug#openWorkitemIdentifier=1bea8a02a752c39eb065fe77f6",
+        "scope": "原需求能力缺口汇总，不作为v2执行失败",
+        "report": "defects-unfinished-24-production-20261113.md",
+        "verified": true
+      }
+    },
+    {
+      "id": "ERYE199-039",
+      "status": "Not Applicable",
+      "actual": "真实绿幕人物及下层不同背景已准备；当前无可编辑色度抠像、alpha输出/三视图和边缘/垃圾蒙版控制，参数调整及边缘质量目标未执行，原工程未改。",
+      "source_case": "039",
+      "run_id": "run_v2_70e199330b0d457b8e249a5e63f4583b",
+      "fixture": {
+        "conversationId": "dbdc1025-97fc-4a0c-b5a6-98a777d84ca0",
+        "editorId": "4e2be456-12bb-4ba2-9272-b1538e89192d",
+        "name": "ERYE199-039-manual-2026-11-13T10-37-48-153Z"
+      },
+      "target_steps_executed": false,
+      "automation_integrated": false,
+      "automation_status": "PLAN",
+      "script": "",
+      "execution_method": "Ego Lite browser operation; no automation integration",
+      "latest_execution_report": "results-021-049-manual-production-20261113.md",
+      "latest_execution_batch": "erye199-manual-021-050-2026-11-13T10-37-48-153Z",
+      "workspace_id": "71793016-cbbf-4e48-be10-b4ce958f33b5",
+      "screenshots": [
+        "evidence-021-049-manual-production-20261113/039-agent-terminal.png",
+        "evidence-021-049-manual-production-20261113/039-baseline.png",
+        "evidence-021-049-manual-production-20261113/039-before-submit.png",
+        "evidence-021-049-manual-production-20261113/039-green-screen-source.png"
+      ],
+      "scope_revision_report": "revision-na-current-capabilities-20261113.md",
+      "current_scope_note": "核心功能或依赖缺失，当前延期，不执行替代功能；恢复条件见修订说明。",
+      "requirement_gap_defect": {
+        "id": "FWXC-525",
+        "url": "https://devops.aliyun.com/projex/project/1e401ac99539c3999e00e40006/bug#openWorkitemIdentifier=1bea8a02a752c39eb065fe77f6",
+        "scope": "原需求能力缺口汇总，不作为v2执行失败",
+        "report": "defects-unfinished-24-production-20261113.md",
+        "verified": true
+      }
+    },
+    {
+      "id": "ERYE199-041",
+      "status": "Not Applicable",
+      "actual": "已用独立已知抖动的真实人物源准备6秒新工程；当前无工程内稳定模式、后台分析/取消/失败保留/源范围缓存失效流程，未运行稳定或注入失败，原片段未改。",
+      "source_case": "041",
+      "run_id": "run_v2_a955e3361afe4f439f1cb0ede1863a30",
+      "fixture": {
+        "conversationId": "a160090a-975a-4697-9c79-4df272f45a8d",
+        "editorId": "96763e92-771e-4544-b2fc-f24602ff383f",
+        "name": "ERYE199-041-manual-2026-11-13T10-37-48-153Z"
+      },
+      "target_steps_executed": false,
+      "automation_integrated": false,
+      "automation_status": "PLAN",
+      "script": "",
+      "execution_method": "Ego Lite browser operation; no automation integration",
+      "latest_execution_report": "results-021-049-manual-production-20261113.md",
+      "latest_execution_batch": "erye199-manual-021-050-2026-11-13T10-37-48-153Z",
+      "workspace_id": "71793016-cbbf-4e48-be10-b4ce958f33b5",
+      "screenshots": [
+        "evidence-021-049-manual-production-20261113/041-agent-terminal.png",
+        "evidence-021-049-manual-production-20261113/041-baseline.png",
+        "evidence-021-049-manual-production-20261113/041-before-submit.png"
+      ],
+      "scope_revision_report": "revision-na-current-capabilities-20261113.md",
+      "current_scope_note": "核心功能或依赖缺失，当前延期，不执行替代功能；恢复条件见修订说明。",
+      "requirement_gap_defect": {
+        "id": "FWXC-525",
+        "url": "https://devops.aliyun.com/projex/project/1e401ac99539c3999e00e40006/bug#openWorkitemIdentifier=1bea8a02a752c39eb065fe77f6",
+        "scope": "原需求能力缺口汇总，不作为v2执行失败",
+        "report": "defects-unfinished-24-production-20261113.md",
+        "verified": true
+      }
+    },
+    {
+      "id": "ERYE199-042",
+      "status": "Not Run",
+      "actual": "v2定义已按现有能力优化，尚未执行：对白和音乐的片段音量及独立保存。",
+      "definition_revision": 2,
+      "definition": "cases.md#erye199-042-current",
+      "scope_revision_report": "revision-na-current-capabilities-20261113.md",
+      "automation_status": "PLAN",
+      "automation_integrated": false,
+      "script": "",
+      "target_steps_executed": false,
+      "execution_method": "定义修订，尚未页面执行",
+      "current_status_report": "execution-status-current.md",
+      "execution_history": [
+        {
+          "definition_revision": 1,
+          "status": "Not Applicable",
+          "result": {
+            "id": "ERYE199-042",
+            "status": "Not Applicable",
+            "actual": "对白+音乐新工程，真实拖动片段音量至58%，音乐保持30%；原声静音/恢复操作有效。独立轨级dB推子、声像、solo、真实音量关键帧及实时电平表不支持，不以片段音量/静音代替完整混音通过。",
+            "source_case": "042",
+            "run_id": "run_v2_df416cd61b8c48e2bbf62f6ab271f404",
+            "fixture": {
+              "conversationId": "a66ae911-9d81-4526-bbb1-9e541037c5d3",
+              "editorId": "167525dd-7645-4995-8993-ac9a91925f78",
+              "name": "ERYE199-042-manual-2026-11-13T10-37-48-153Z"
+            },
+            "target_steps_executed": true,
+            "automation_integrated": false,
+            "partial_checks": [
+              "原声静音及恢复",
+              "真实拖动对白音量58%，音乐30%不串改"
+            ],
+            "observation_note": "probe前后2→3的差异仅是刚点击的原声恢复异步落盘：muted true→false，非Agent改写；后续真实拖动音量单独留证。键盘试调未改增益、只移动播放头，不计产品缺陷。",
+            "actions": [
+              "准备10秒真实对白原片及独立音乐，音乐音量30%",
+              "点击原声静音再启用，核对恢复非静音",
+              "请求轨级推子/声像/solo/关键帧/电平表，明确不支持",
+              "实际拖动对白音量线降低至58%，核对音乐仍30%、两轨均非静音",
+              "刷新同一工程核对音量及静音状态保持"
+            ],
+            "automation_status": "PLAN",
+            "script": "",
+            "execution_method": "Ego Lite browser operation; no automation integration",
+            "latest_execution_report": "results-021-049-manual-production-20261113.md",
+            "latest_execution_batch": "erye199-manual-021-050-2026-11-13T10-37-48-153Z",
+            "workspace_id": "71793016-cbbf-4e48-be10-b4ce958f33b5",
+            "screenshots": [
+              "evidence-021-049-manual-production-20261113/042-agent-terminal.png",
+              "evidence-021-049-manual-production-20261113/042-audio-slider-observation.png",
+              "evidence-021-049-manual-production-20261113/042-baseline.png",
+              "evidence-021-049-manual-production-20261113/042-before-submit.png",
+              "evidence-021-049-manual-production-20261113/042-dialogue-muted.png",
+              "evidence-021-049-manual-production-20261113/042-dialogue-restored.png",
+              "evidence-021-049-manual-production-20261113/042-gain-drag-baseline.png",
+              "evidence-021-049-manual-production-20261113/042-gain-drag-result.png",
+              "evidence-021-049-manual-production-20261113/042-gain-ui-result.png",
+              "evidence-021-049-manual-production-20261113/042-mixing-controls.png",
+              "evidence-021-049-manual-production-20261113/042-mixing-refreshed.png"
+            ],
+            "scope_revision_report": "revision-na-current-capabilities-20261113.md"
+          }
+        }
+      ],
+      "screenshots": [],
+      "requirement_gap_defect": {
+        "id": "FWXC-525",
+        "url": "https://devops.aliyun.com/projex/project/1e401ac99539c3999e00e40006/bug#openWorkitemIdentifier=1bea8a02a752c39eb065fe77f6",
+        "scope": "原需求能力缺口汇总，不作为v2执行失败",
+        "report": "defects-unfinished-24-production-20261113.md",
+        "verified": true
+      }
+    },
+    {
+      "id": "ERYE199-043",
+      "status": "Passed",
+      "actual": "按原前置单/立体声主场景通过：48kHz单声道与44.1kHz立体声在同一新工程导出为48kHz双声道AAC；实测前段L/R相关0.9999999，后段L440/R880分别保留，源引用/原采样信息保持。附加5.1仅查询、未放入时间线，端到端支持未验证，不计多声道通过。",
+      "source_case": "043",
+      "run_id": "run_v2_5203b37cbb07477993fa7922d9210ac7",
+      "fixture": {
+        "conversationId": "b400c215-0ef3-44ad-816c-65f7fbdd09ae",
+        "editorId": "49de19df-c5ff-42cc-98f8-c5ce3d63de1c",
+        "name": "ERYE199-043-manual-2026-11-13T10-37-48-153Z"
+      },
+      "target_steps_executed": true,
+      "automation_integrated": false,
+      "acceptance_branch": "original mono/stereo prerequisites and 48kHz export",
+      "uncovered_branch": "5.1 end-to-end support; extra file only read inquiry, not inserted or exported",
+      "observation_note": "此Passed覆盖原用例前置中的单声道/立体声及其导出，不代表附加六声道已支持或被明确拒绝。5.1样本仅登记后查询，当前回复不能确认其端到端能力，不将这一未执行分支计通过。",
+      "actions": [
+        "准备前5秒48kHz单声道、后5秒44.1kHz立体声L440/R880的独立音轨，原视频自带音轨静音",
+        "通过页面正式导出，完成后下载真实MP4",
+        "ffprobe核对48kHz/2声道/AAC/10秒；分别解码1秒和6秒附近音频核对单声道复制及立体声L/R频率保持",
+        "查询原素材信息与附加5.1识别边界，工程和原文件不改；5.1未放入时间线，不声称验证其完整支持"
+      ],
+      "automation_status": "PLAN",
+      "script": "",
+      "execution_method": "Ego Lite browser operation; no automation integration",
+      "latest_execution_report": "results-021-049-manual-production-20261113.md",
+      "latest_execution_batch": "erye199-manual-021-050-2026-11-13T10-37-48-153Z",
+      "workspace_id": "71793016-cbbf-4e48-be10-b4ce958f33b5",
+      "screenshots": [
+        "evidence-021-049-manual-production-20261113/043-agent-terminal.png",
+        "evidence-021-049-manual-production-20261113/043-baseline.png",
+        "evidence-021-049-manual-production-20261113/043-before-submit.png",
+        "evidence-021-049-manual-production-20261113/043-channel-export-completed.png",
+        "evidence-021-049-manual-production-20261113/043-export-started.png",
+        "evidence-021-049-manual-production-20261113/043-mono-stereo-baseline.png"
+      ]
+    },
+    {
+      "id": "ERYE199-044",
+      "status": "Not Applicable",
+      "actual": "当前无工程内可编辑音频效果链、排序、参数EQ/独立半音音分/真峰值限幅及处理延迟控制；效果前置无法建立，时长/同步目标未执行。未以文件级降噪或变速替代，原工程未改。",
+      "source_case": "044",
+      "run_id": "run_v2_5aad996d6afd4cdc98d3d226098a88c4",
+      "fixture": {
+        "conversationId": "8b920bec-61aa-4227-b51d-15ec4b2f3860",
+        "editorId": "4ecf6805-3077-45dc-b5cc-2b743ceaea22",
+        "name": "ERYE199-044-manual-2026-11-13T10-37-48-153Z"
+      },
+      "target_steps_executed": false,
+      "automation_integrated": false,
+      "automation_status": "PLAN",
+      "script": "",
+      "execution_method": "Ego Lite browser operation; no automation integration",
+      "latest_execution_report": "results-021-049-manual-production-20261113.md",
+      "latest_execution_batch": "erye199-manual-021-050-2026-11-13T10-37-48-153Z",
+      "workspace_id": "71793016-cbbf-4e48-be10-b4ce958f33b5",
+      "screenshots": [
+        "evidence-021-049-manual-production-20261113/044-agent-terminal.png",
+        "evidence-021-049-manual-production-20261113/044-baseline.png",
+        "evidence-021-049-manual-production-20261113/044-before-submit.png"
+      ],
+      "scope_revision_report": "revision-na-current-capabilities-20261113.md",
+      "current_scope_note": "核心功能或依赖缺失，当前延期，不执行替代功能；恢复条件见修订说明。",
+      "requirement_gap_defect": {
+        "id": "FWXC-525",
+        "url": "https://devops.aliyun.com/projex/project/1e401ac99539c3999e00e40006/bug#openWorkitemIdentifier=1bea8a02a752c39eb065fe77f6",
+        "scope": "原需求能力缺口汇总，不作为v2执行失败",
+        "report": "defects-unfinished-24-production-20261113.md",
+        "verified": true
+      }
+    },
+    {
+      "id": "ERYE199-045",
+      "status": "Not Applicable",
+      "actual": "对白和独立音乐已准备；当前无侧链自动压低、可见可编辑包络/手动点保护，导出也无LUFS归一化及dBTP限幅配置。未执行固定音量或混音文件替代，原工程未改。",
+      "source_case": "045",
+      "run_id": "run_v2_14227a1cc5d0408da6e43bbb25f27b58",
+      "fixture": {
+        "conversationId": "a513d3c8-6430-409f-ab75-558fdc98ecad",
+        "editorId": "50896804-d823-41a7-beb1-5d094bb95723",
+        "name": "ERYE199-045-manual-2026-11-13T10-37-48-153Z"
+      },
+      "target_steps_executed": false,
+      "automation_integrated": false,
+      "automation_status": "PLAN",
+      "script": "",
+      "execution_method": "Ego Lite browser operation; no automation integration",
+      "latest_execution_report": "results-021-049-manual-production-20261113.md",
+      "latest_execution_batch": "erye199-manual-021-050-2026-11-13T10-37-48-153Z",
+      "workspace_id": "71793016-cbbf-4e48-be10-b4ce958f33b5",
+      "screenshots": [
+        "evidence-021-049-manual-production-20261113/045-agent-terminal.png",
+        "evidence-021-049-manual-production-20261113/045-baseline.png",
+        "evidence-021-049-manual-production-20261113/045-before-submit.png"
+      ],
+      "scope_revision_report": "revision-na-current-capabilities-20261113.md",
+      "current_scope_note": "核心功能或依赖缺失，当前延期，不执行替代功能；恢复条件见修订说明。",
+      "requirement_gap_defect": {
+        "id": "FWXC-525",
+        "url": "https://devops.aliyun.com/projex/project/1e401ac99539c3999e00e40006/bug#openWorkitemIdentifier=1bea8a02a752c39eb065fe77f6",
+        "scope": "原需求能力缺口汇总，不作为v2执行失败",
+        "report": "defects-unfinished-24-production-20261113.md",
+        "verified": true
+      }
+    },
+    {
+      "id": "ERYE199-046",
+      "status": "Not Applicable",
+      "actual": "13秒音乐源/10秒目标/保护区间4～6秒已给齐；当前不支持结构分析后生成两个可审阅候选、保护映射校验及工程内单步可撤销替换，未以普通拼接/变速替代，原曲和工程未改。",
+      "source_case": "046",
+      "run_id": "run_v2_2529349a1c5a482dbc55a1ac4954efa0",
+      "fixture": {
+        "conversationId": "1982e064-f51c-4c88-95d8-41c1cee2bf83",
+        "editorId": "36cdd912-677d-4c72-80e1-8e43ad7a8499",
+        "name": "ERYE199-046-manual-2026-11-13T10-37-48-153Z"
+      },
+      "target_steps_executed": false,
+      "automation_integrated": false,
+      "automation_status": "PLAN",
+      "script": "",
+      "execution_method": "Ego Lite browser operation; no automation integration",
+      "latest_execution_report": "results-021-049-manual-production-20261113.md",
+      "latest_execution_batch": "erye199-manual-021-050-2026-11-13T10-37-48-153Z",
+      "workspace_id": "71793016-cbbf-4e48-be10-b4ce958f33b5",
+      "screenshots": [
+        "evidence-021-049-manual-production-20261113/046-agent-terminal.png",
+        "evidence-021-049-manual-production-20261113/046-baseline.png",
+        "evidence-021-049-manual-production-20261113/046-before-submit.png"
+      ],
+      "scope_revision_report": "revision-na-current-capabilities-20261113.md",
+      "current_scope_note": "核心功能或依赖缺失，当前延期，不执行替代功能；恢复条件见修订说明。",
+      "requirement_gap_defect": {
+        "id": "FWXC-525",
+        "url": "https://devops.aliyun.com/projex/project/1e401ac99539c3999e00e40006/bug#openWorkitemIdentifier=1bea8a02a752c39eb065fe77f6",
+        "scope": "原需求能力缺口汇总，不作为v2执行失败",
+        "report": "defects-unfinished-24-production-20261113.md",
+        "verified": true
+      }
+    },
+    {
+      "id": "ERYE199-047",
+      "status": "Not Run",
+      "actual": "v2定义已按现有能力优化，尚未执行：现有四类对象的页面预览与正式导出一致性。",
+      "definition_revision": 2,
+      "definition": "cases.md#erye199-047-current",
+      "scope_revision_report": "revision-na-current-capabilities-20261113.md",
+      "automation_status": "PLAN",
+      "automation_integrated": false,
+      "script": "",
+      "target_steps_executed": false,
+      "execution_method": "定义修订，尚未页面执行",
+      "current_status_report": "execution-status-current.md",
+      "execution_history": [
+        {
+          "definition_revision": 1,
+          "status": "Not Applicable",
+          "result": {
+            "id": "ERYE199-047",
+            "status": "Not Applicable",
+            "actual": "依赖本轮025可编辑效果栈和027独立图形组缺口，无法准备“效果+字幕+图形”的完整工程；三种预览/导出同帧一致性目标未执行。030普通字幕预览/导出局部观察不替代本例通过。",
+            "source_case": "025",
+            "run_id": "run_v2_cbf7281971e64c68b83a08d3f685c74a",
+            "dependencies": [
+              "ERYE199-025",
+              "ERYE199-027"
+            ],
+            "fixture": {
+              "conversationId": "24035a58-e86f-472f-b604-33cec7c7d259",
+              "editorId": "7c80a8e2-44a5-49cf-8a04-9a5b8d42d942",
+              "name": "ERYE199-025-manual-2026-11-13T10-37-48-153Z"
+            },
+            "target_steps_executed": false,
+            "automation_integrated": false,
+            "automation_status": "PLAN",
+            "script": "",
+            "execution_method": "Ego Lite browser operation; no automation integration",
+            "latest_execution_report": "results-021-049-manual-production-20261113.md",
+            "latest_execution_batch": "erye199-manual-021-050-2026-11-13T10-37-48-153Z",
+            "workspace_id": "71793016-cbbf-4e48-be10-b4ce958f33b5",
+            "screenshots": [
+              "evidence-021-049-manual-production-20261113/025-agent-terminal.png",
+              "evidence-021-049-manual-production-20261113/025-baseline.png",
+              "evidence-021-049-manual-production-20261113/025-before-submit.png"
+            ],
+            "scope_revision_report": "revision-na-current-capabilities-20261113.md"
+          }
+        }
+      ],
+      "screenshots": [],
+      "requirement_gap_defect": {
+        "id": "FWXC-525",
+        "url": "https://devops.aliyun.com/projex/project/1e401ac99539c3999e00e40006/bug#openWorkitemIdentifier=1bea8a02a752c39eb065fe77f6",
+        "scope": "原需求能力缺口汇总，不作为v2执行失败",
+        "report": "defects-unfinished-24-production-20261113.md",
+        "verified": true
+      }
+    },
+    {
+      "id": "ERYE199-048",
+      "status": "Not Run",
+      "actual": "v2定义已按现有能力优化，尚未执行：全屏预览退出及原分辨率导出。",
+      "definition_revision": 2,
+      "definition": "cases.md#erye199-048-current",
+      "scope_revision_report": "revision-na-current-capabilities-20261113.md",
+      "automation_status": "PLAN",
+      "automation_integrated": false,
+      "script": "",
+      "target_steps_executed": false,
+      "execution_method": "定义修订，尚未页面执行",
+      "current_status_report": "execution-status-current.md",
+      "execution_history": [
+        {
+          "definition_revision": 1,
+          "status": "Not Applicable",
+          "result": {
+            "id": "ERYE199-048",
+            "status": "Not Applicable",
+            "actual": "已检查当前预览控件；真实代理/320×180预览质量切换及状态/未渲染效果标识未提供，代理前置无法建立，未用浏览器缩放或普通导出替代验证，工程未改。",
+            "source_case": "048",
+            "run_id": "run_v2_27fc84e481f84c0c8981140009ea465a",
+            "fixture": {
+              "conversationId": "45e07233-a033-4f31-ba7e-99c4756a816a",
+              "editorId": "e42e974a-7d31-42ce-9734-de31b2f435d3",
+              "name": "ERYE199-048-manual-2026-11-13T10-37-48-153Z"
+            },
+            "target_steps_executed": false,
+            "automation_integrated": false,
+            "automation_status": "PLAN",
+            "script": "",
+            "execution_method": "Ego Lite browser operation; no automation integration",
+            "latest_execution_report": "results-021-049-manual-production-20261113.md",
+            "latest_execution_batch": "erye199-manual-021-050-2026-11-13T10-37-48-153Z",
+            "workspace_id": "71793016-cbbf-4e48-be10-b4ce958f33b5",
+            "screenshots": [
+              "evidence-021-049-manual-production-20261113/048-agent-terminal.png",
+              "evidence-021-049-manual-production-20261113/048-baseline.png",
+              "evidence-021-049-manual-production-20261113/048-before-submit.png",
+              "evidence-021-049-manual-production-20261113/048-preview-quality-controls.png"
+            ],
+            "scope_revision_report": "revision-na-current-capabilities-20261113.md"
+          }
+        }
+      ],
+      "screenshots": [],
+      "requirement_gap_defect": {
+        "id": "FWXC-525",
+        "url": "https://devops.aliyun.com/projex/project/1e401ac99539c3999e00e40006/bug#openWorkitemIdentifier=1bea8a02a752c39eb065fe77f6",
+        "scope": "原需求能力缺口汇总，不作为v2执行失败",
+        "report": "defects-unfinished-24-production-20261113.md",
+        "verified": true
+      }
+    },
+    {
+      "id": "ERYE199-049",
+      "status": "Passed",
+      "actual": "049 v2 Passed：会话发送位置出现停止任务，已受理排队请求queued→cancelled且无产物；停止后新任务A及完成后独立提交B均完成并可下载，B后重下A内容未变；20秒/640×360/30fps/48kHz，工程未改。仅覆盖排队停止，不含渲染开始后停止或失败重试。",
+      "target_steps_executed": true,
+      "automation_integrated": false,
+      "automation_status": "PLAN",
+      "script": "",
+      "execution_method": "Ego Lite browser operation; no automation integration",
+      "latest_execution_report": "results-049-v2-send-stop-production-20261113.md",
+      "workspace_id": "aa214915-a61b-499d-94fd-cc2d7169174c",
+      "execution_history": [
+        {
+          "id": "ERYE199-049",
+          "status": "Blocked",
+          "actual": "页面原生20秒导出已启动并完成产物回执；运行时未见导出取消/重试入口。通用取消工具是否适用于正式导出仍未确认，未建立可取消任务前置；取消/重试/第二次重复提交及两份产物冲突检查未执行。不直接判功能不存在，也不计普通导出为整例通过。",
+          "source_case": "049",
+          "run_id": "run_v2_92061bee8b86413ca198aec789a66cdb",
+          "fixture": {
+            "conversationId": "6dcb024d-1d9b-4f7a-b295-4a644674992c",
+            "editorId": "19fbf89e-ec5c-49f6-9705-021e9f626a9f",
+            "name": "ERYE199-049-manual-2026-11-13T10-37-48-153Z"
+          },
+          "target_steps_executed": true,
+          "automation_integrated": false,
+          "blocked_reason": "未能建立并验证可取消的正式导出任务前置",
+          "observation_note": "不以任务已经结束推断不支持取消；已知有通用取消能力但正式导出适用性未核验。本轮按页面状态和产物验收，不验证内部冻结字段、临时文件或原子发布实现。没有重发原Agent请求或制造额外重复导出。",
+          "actions": [
+            "在新工程准备两段同源连续视频及原声，时间线总长20秒",
+            "点击页面正式导出，保存运行中按钮禁用及未见取消入口的真实截图",
+            "通过原任务核验取消/重试能力，得到适用性尚未确认的结果",
+            "保留原导出产物；未尝试猜测接口或把停止Agent对话当作取消导出；后续重试/重复提交未执行"
+          ],
+          "automation_status": "PLAN",
+          "script": "",
+          "execution_method": "Ego Lite browser operation; no automation integration",
+          "latest_execution_report": "results-021-049-manual-production-20261113.md",
+          "latest_execution_batch": "erye199-manual-021-050-2026-11-13T10-37-48-153Z",
+          "workspace_id": "71793016-cbbf-4e48-be10-b4ce958f33b5",
+          "screenshots": [
+            "evidence-021-049-manual-production-20261113/049-agent-terminal.png",
+            "evidence-021-049-manual-production-20261113/049-baseline.png",
+            "evidence-021-049-manual-production-20261113/049-before-submit.png",
+            "evidence-021-049-manual-production-20261113/049-export-control-result.png",
+            "evidence-021-049-manual-production-20261113/049-export-controls-baseline.png",
+            "evidence-021-049-manual-production-20261113/049-export-running.png",
+            "evidence-021-049-manual-production-20261113/049-final-export-control-observation.png"
+          ]
+        },
+        {
+          "id": "ERYE199-049",
+          "status": "Not Run",
+          "actual": "049 v2已按用户说明修订：运行中再点发送为停止，无独立失败重试；停止后新提交及完成后独立提交待复测。旧Blocked保留历史，用户说明不代替实跑通过。",
+          "target_steps_executed": false,
+          "automation_integrated": false,
+          "automation_status": "PLAN",
+          "script": "",
+          "execution_method": "Ego Lite browser operation; no automation integration",
+          "latest_execution_report": "revision-049-send-stop-20261113.md",
+          "workspace_id": "71793016-cbbf-4e48-be10-b4ce958f33b5",
+          "definition_revision": 2,
+          "definition": "cases.md#erye199-049-current",
+          "current_definition_report": "revision-049-send-stop-20261113.md",
+          "historical_execution_status": "Blocked",
+          "historical_execution_report": "results-021-049-manual-production-20261113.md",
+          "historical_screenshots": [
+            "evidence-021-049-manual-production-20261113/049-agent-terminal.png",
+            "evidence-021-049-manual-production-20261113/049-baseline.png",
+            "evidence-021-049-manual-production-20261113/049-before-submit.png",
+            "evidence-021-049-manual-production-20261113/049-export-control-result.png",
+            "evidence-021-049-manual-production-20261113/049-export-controls-baseline.png",
+            "evidence-021-049-manual-production-20261113/049-export-running.png",
+            "evidence-021-049-manual-production-20261113/049-final-export-control-observation.png"
+          ]
+        }
+      ],
+      "definition_revision": 2,
+      "definition": "cases.md#erye199-049-current",
+      "current_definition_report": "revision-049-send-stop-20261113.md",
+      "historical_execution_status": "Blocked",
+      "historical_execution_report": "results-021-049-manual-production-20261113.md",
+      "historical_screenshots": [
+        "evidence-021-049-manual-production-20261113/049-agent-terminal.png",
+        "evidence-021-049-manual-production-20261113/049-baseline.png",
+        "evidence-021-049-manual-production-20261113/049-before-submit.png",
+        "evidence-021-049-manual-production-20261113/049-export-control-result.png",
+        "evidence-021-049-manual-production-20261113/049-export-controls-baseline.png",
+        "evidence-021-049-manual-production-20261113/049-export-running.png",
+        "evidence-021-049-manual-production-20261113/049-final-export-control-observation.png"
+      ],
+      "fixture": {
+        "conversationId": "eb91a52a-5621-4311-820e-5d7c09cf2d6e",
+        "editorId": "496297f6-38f4-4e43-a896-ec546c246972",
+        "name": "ERYE199-049-manual-v2-2026-11-13T11-52-25-367Z"
+      },
+      "run_id": "run_v2_bdceb53c09f74682afd5b99e8918f6f7",
+      "phase_runs": {
+        "run-a-full": {
+          "run_id": "run_v2_bdceb53c09f74682afd5b99e8918f6f7",
+          "status": "done",
+          "files": [
+            {
+              "file_id": "file_cloud_rgv4u5bvsffthl4ene4jhgh57p",
+              "name": "editor-export.mp4"
+            }
+          ]
+        },
+        "run-b-full": {
+          "run_id": "run_v2_572941a9a7be4e7a9061d129829b4b3f",
+          "status": "done",
+          "files": [
+            {
+              "file_id": "file_cloud_rgv4u5bvsffthl4ene4jhgh57p",
+              "name": "ERYE199-049-manual-v2-2026-11-13T11-52-25-367Z-full-export-new.mp4"
+            }
+          ]
+        }
+      },
+      "stop_run": {
+        "run_id": "run_v2_66aa3de67ac14a0dad6c974f16e9d7d7",
+        "before": "queued",
+        "after": "cancelled",
+        "final_status": "cancelled",
+        "result_files": []
+      },
+      "latest_execution_batch": "erye199-049-v2-2026-11-13T11-52-25-367Z",
+      "screenshots": [
+        "evidence-049-v2-send-stop-production-20261113/stop-full-project-before-submit.png",
+        "evidence-049-v2-send-stop-production-20261113/stop-full-project-stop-control-visible.png",
+        "evidence-049-v2-send-stop-production-20261113/stop-full-project-stopped.png",
+        "evidence-049-v2-send-stop-production-20261113/run-a-full-agent-terminal.png",
+        "evidence-049-v2-send-stop-production-20261113/run-a-full-download-a-visible.png",
+        "evidence-049-v2-send-stop-production-20261113/run-a-full-a-downloaded.png",
+        "evidence-049-v2-send-stop-production-20261113/run-b-full-agent-terminal.png",
+        "evidence-049-v2-send-stop-production-20261113/run-b-full-b-result-visible.png",
+        "evidence-049-v2-send-stop-production-20261113/run-b-full-a-still-visible-after-b.png",
+        "evidence-049-v2-send-stop-production-20261113/run-b-full-both-results-retained.png",
+        "evidence-049-v2-send-stop-production-20261113/run-a-agent-terminal.png"
+      ],
+      "not_covered": [
+        "stop after rendering actually started",
+        "independent failed-job retry feature",
+        "internal atomic publish implementation"
+      ],
+      "acceptance_branch": "accepted queued-request stop and sequential independent complete-project exports",
+      "verified_summary": "evidence-049-v2-send-stop-production-20261113/verified-summary.json"
+    }
+  ],
+  "latest_defect_sync": {
+    "created": 1,
+    "id": "FWXC-525",
+    "case_ids": [
+      "ERYE199-021",
+      "ERYE199-022",
+      "ERYE199-023",
+      "ERYE199-024",
+      "ERYE199-025",
+      "ERYE199-026",
+      "ERYE199-027",
+      "ERYE199-028",
+      "ERYE199-029",
+      "ERYE199-031",
+      "ERYE199-032",
+      "ERYE199-033",
+      "ERYE199-034",
+      "ERYE199-035",
+      "ERYE199-037",
+      "ERYE199-038",
+      "ERYE199-039",
+      "ERYE199-041",
+      "ERYE199-042",
+      "ERYE199-044",
+      "ERYE199-045",
+      "ERYE199-046",
+      "ERYE199-047",
+      "ERYE199-048"
+    ],
+    "screenshots": 6,
+    "attachments": 7,
+    "verified": true,
+    "report": "defects-unfinished-24-production-20261113.md"
+  },
+  "latest_case_revision_report": "revision-na-current-capabilities-20261113.md",
+  "historical_counts": {
+    "Not Applicable": 24,
+    "Failed": 1,
+    "Passed": 2,
+    "Blocked": 1
+  },
+  "historical_batch_stage": "Completed",
+  "note": "6条按现有功能优化为v2 Not Run，18条保留延期；原24条Not Applicable及截图保留历史；本次未执行或接入脚本，030/049及云效关联不变。",
+  "latest_execution_report": "results-049-v2-send-stop-production-20261113.md",
+  "latest_049_v2_execution_report": "results-049-v2-send-stop-production-20261113.md",
+  "latest_manual_execution_report": "results-049-v2-send-stop-production-20261113.md",
+  "task_space": 10,
+  "workspace_ids": [
+    "71793016-cbbf-4e48-be10-b4ce958f33b5",
+    "aa214915-a61b-499d-94fd-cc2d7169174c"
+  ],
+  "current_capability_revision": {
+    "report": "revision-na-current-capabilities-20261113.md",
+    "revised_case_ids": [
+      "ERYE199-028",
+      "ERYE199-029",
+      "ERYE199-034",
+      "ERYE199-042",
+      "ERYE199-047",
+      "ERYE199-048"
+    ],
+    "deferred_case_ids": [
+      "ERYE199-021",
+      "ERYE199-022",
+      "ERYE199-023",
+      "ERYE199-024",
+      "ERYE199-025",
+      "ERYE199-026",
+      "ERYE199-027",
+      "ERYE199-031",
+      "ERYE199-032",
+      "ERYE199-033",
+      "ERYE199-035",
+      "ERYE199-037",
+      "ERYE199-038",
+      "ERYE199-039",
+      "ERYE199-041",
+      "ERYE199-044",
+      "ERYE199-045",
+      "ERYE199-046"
+    ],
+    "execution_performed": false
+  },
+  "defect_sync_history": [
+    {
+      "created": 1,
+      "case": "ERYE199-030",
+      "id": "FWXC-517",
+      "screenshots": 3,
+      "attachments": 7,
+      "verified": true,
+      "report": "defects-030-combined-subtitle-export-production-20261113.md"
+    }
+  ]
+}

@@ -1,0 +1,743 @@
+{
+  "date": "2026-11-13",
+  "reason": "用户确认优化011/017/019、补齐并执行016/050～054共9条",
+  "rows": {
+    "011": "| ERYE210-011 | P0 | 生产Chrome已登录；新建或用户指定的独立PA真实英语→简体中文配音任务已受理且未完成；同会话PB保存完毕 | 1. 核对原片及目标语言，不重发原任务。<br>2. 任务运行时切PB/Media并记录页面和完整内容。<br>3. 等原任务完成，核对PB未变。<br>4. 检查本次真实结果入口；若有编辑入口则明确点击定位，记录目标工程和功能。<br>5. 无快捷入口时仅用工程选择器打开PA，重开后核对真实中文文稿/音频/字幕，单列定位缺口，不将手动选择计快捷入口通过。 | PA完成不抢占PB/Media、不串改PB；中文配音和字幕真实存在；明确结果编辑入口只定位PA，不落PB。原卡只有播放/下载时定位分支未覆盖，不假设按钮；不硬编码内部配音字段。 | Source: Requirement；ERYE-210 N03/08；206 AC20；AC09；用户指定目标语言工程补验 | [AUTO] | [tests/editor/erye210-fields.spec.ts](../../../../tests/editor/erye210-fields.spec.ts) | v2；已使用用户新建的7MB.mp4工程实测：中文配音原任务178秒完成，PA版本1→2；同会话PB/Media未被抢占，PB完整内容及版本1→1保持。重开PA实际显示17条中文配音文案、中文字幕和8段生成音频；真实MP4可播放，1280×720/60.44秒/H264+AAC。结果卡仅有播放、下载、放大，直达配音编辑入口分支未覆盖；手动选择PA不计该分支通过，整例仍Blocked。 [完整前置/提示词](case-011-v2-translation-dubbing-20261113.md)；[本轮报告](results-011-user-project-prod-20261113.md) |",
+    "017": "| ERYE210-017 | P0 | P；PA已有字幕和旧配音；F使新配音生成失败 | 1. 发起明确新配音生成并等待失败。<br>2. 切入口查看原内容、原因与重试。<br>3. 修复后重试。 | 旧内容/文稿保留，错误可见；重试仍PA，不重复建结果或错误工程；不会清空旧音频。 | Source: Requirement；ERYE-210 N02/05；AC06/09 | [AUTO] | [tests/editor/erye210-navigation.spec.ts](../../../../tests/editor/erye210-navigation.spec.ts) | 业务验收；2026-11-13：Blocked：独立工程两句旧配音ready及文稿正常可读，五入口导航后完整内容保持；当前配音面板只有清空译文，没有可触发新生成/重试的实际控件。未建立真实生成失败场景，失败保留及修复后重试分支未覆盖。；[本轮报告](results-016-020-prod-20261113.md#erye210-017) |",
+    "019": "| ERYE210-019 | P0 | 1. Windows Chrome登录生产环境，有编辑权限，新建专用项目及三个独立会话/工程副本。<br>2. 各副本有20秒视频、4～6秒字幕S1“欢迎使用 CinLink。”及与其真实关联且ready的配音D1。<br>3. 另有22秒（20秒视频结束后）起的独立WAV音频A1，与视频/字幕/配音无联动；各副本基线一致、保存完成、无运行任务。 | 1. 对照工程L中仅选A1按一次Delete，确认A1可删除、S1/D1保持。<br>2. 独立对照工程R中仅选S1按一次Delete，确认因配音关联被明确拒绝且完整内容不变；若没有真实拒绝，停止并记冲突前置未成立。<br>3. 打开未经删除操作的独立工程M，核对S1、D1、A1均存在。<br>4. 按Shift同时选择S1与A1，确认只选这两个对象，按一次Delete。<br>5. 查看整体拒绝提示并核对S1、D1、A1及其他内容。<br>6. 浏览五入口，刷新重开M，再核对原内容和保存状态。 | A1单删合法、S1单删因真实配音关联受限，两项对照先成立；混合删除明确拒绝且全部内容保留，不能A1已删但S1失败。刷新重开仍保留S1/D1/A1，五入口可浏览，不重复生成或删除其他对象。若S1单删可成功、关联无法确认或存在未明确的联动删除选择，则冲突前置未成立，未执行混合分支，不能判Passed/产品失败或仅据缺锁轨入口判不适用。 | Source: Requirement + Inferred QA Risk；ERYE-210 v1.1第一节；NAV-R03；用户2026-11-13确认关联字幕与独立音频混合删除候选场景，真实限制须先核验 | [AUTO] | [tests/editor/erye210-navigation.spec.ts](../../../../tests/editor/erye210-navigation.spec.ts) | 业务验收；v2；Windows Chrome；Negative/Integration；Major；2026-11-13：Blocked；019 v2生产Chrome执行Blocked：22秒起独立音频A1单删对照通过；删除前核验S1/D1引用一致，但单删S1未出现关联拒绝，S1被删除后旧配音仍ready、配音稿引用随后变为独立文件。受限对象前置未成立，未建立混合工程、未执行同时删除S1/A1，不判整批通过或关联保护缺陷。附带发现14秒A1删除会裁掉原视频/原声同范围，已单列保留现场，未同步云效。；[本轮报告](results-019-v2-prod-20261113.md)；附带删除异常[FWXC-513](https://devops.aliyun.com/projex/project/1e401ac99539c3999e00e40006/bug#openWorkitemIdentifier=13b2ef77469fde31d9ca46f97a)（主用例仍Blocked） |",
+    "016": "| ERYE210-016 | P0 | 1. Windows Chrome登录生产环境，有工程编辑权限。<br>2. 新建专用项目、独立会话及可写PA，准备20秒E196-A视频和字幕，确认有画面、无文字/图片水印、保存完成且无运行任务。<br>3. 准备仓库assets/cinlink-smoke-watermark.png（512×512四色PNG）；记录源视频/原声/字幕及保存版本。 | 1. 进入Watermark→图片，核对上传入口及空态指引。<br>2. 检查图片宽度和不透明度控件，未选图片时不可写，工程保持未添加水印。<br>3. 点击上传图片，选择上述PNG，等待缩略图和预览加载及保存完成。<br>4. 核对宽度/不透明度恢复可用，将宽度设120px、不透明度60%，失焦保存。<br>5. 切Captions再回Watermark/图片，核对同一图片和参数。<br>6. 收起编辑区并重开同一工程，再进入Watermark/图片，核对参数和源素材。 | 无图片时模块及上传入口可见可用，并有上传引导；依赖图片的宽度/不透明度不可写，不产生空水印。上传有效PNG后显示对应四色图，控件恢复可用；宽度120px、不透明度60%生效，切页/重开仍为同一图片和参数。原视频/原声/字幕不变，不生成额外音视频；仅浏览不再改内容/版本。只覆盖Windows Chrome的素材前置限制与恢复，不作为未发布/跨端不支持对照已通过。 | Source: Requirement + Inferred QA Risk；ERYE-210 N02；AC04；用户2026-11-13限定Windows Chrome，v2以当前已观察图片水印控件设计可执行状态恢复 | [AUTO] | [tests/editor/erye210-navigation.spec.ts](../../../../tests/editor/erye210-navigation.spec.ts) | 业务验收；v2；Windows Chrome；Functional/Validation；Major；Not Run；[优化说明与完整步骤](case-016-v2-windows-20261113.md)；旧v1 Blocked保留历史 |",
+    "050": "| ERYE210-050 | P0 | P；PA有可撤销编辑和任务；主页面全局区 | 1. 每个入口查看工程切换、保存、撤销重做、任务及Export入口。<br>2. 在两个模块分别提交一项修改，再连续撤销。 | 全局功能可达；统一历史依顺序撤销各批，不按TAB独立；导出/保存不局限某一模块。 | Source: Requirement + Mockup；ERYE-210 N01/07；AC10/12；196 WAC08 | [PLAN] | — | 业务验收；验证全局保存历史任务导出不随入口隐藏；Functional；Major；Not Run |",
+    "051": "| ERYE210-051 | P0 | P；PA当前Captions；明确BGM稳定ID及gain=0 | 1. 明确指定PA的BGM，一次发送“只把工程A的BGM降低6dB，字幕与视频不改”。<br>2. 查看完成不跳入口。<br>3. 明确点结果定位。 | Agent按工程/对象改BGM=-6，不因Captions改字幕；后台不跳转；显式定位到O登记的真实混音控件，不假定Audio一级TAB。 | Source: Requirement；ERYE-210 N08；AC08；206 CP04；196 WAC06 | [PLAN] | — | 业务验收；验证字幕页Agent降低BGM与结果定位；Functional；Major；Not Run |",
+    "052": "| ERYE210-052 | P0 | P；PA有可靠清理候选、配音能力和混音入口；PCLEAN | 1. 从PA字幕结果进入Captions；切Scripts，按PCLEAN金标分析并仅选择候选K1，查看缩短量后应用。<br>2. 在Voiceover选择D1配音稿“Welcome to CinLink”，语言英语、音色为O登记的默认英语音色，明确点击生成并等待成功应用。<br>3. 在O登记的实际混音控件只把BGM设为-6dB。<br>4. Export选择1080p H.264/AAC MP4；受理后仅将C1原文改为导出后的新文，关页重开并下载原任务。 | 始终PA；关联映射正确、文稿互不误改；原任务冻结版本且关页继续；不抢TAB，完成返回正确工程。 | Source: Requirement；ERYE-210 N07/08；AC05～09/12；206 CP10/12；196 WAC21 | [PLAN] | — | 业务验收；验证单工程跨清理配音混音导出持续编辑；Functional；Critical；Not Run；只用已发布能力 |",
+    "053": "| ERYE210-053 | P0 | P；最新主页面五入口基准；Q210-08响应断点/键盘规范已确认；桌面Web和mac环境 | 1. 缩到已冻结窄屏条件。<br>2. 键盘遍历选择五入口、子页及全局Export。<br>3. 放大窗口并回到原入口。 | 五入口名称/顺序和可达性保留；有可见焦点、无焦点丢失；不隐藏当前工程/目标。具体键位、断点未定仅记Needs validation。 | Source: Requirement；ERYE-210 N01/N11；AC12；NAV-R05 | [PLAN] | — | 业务验收；验证窄屏模块选择器及键盘焦点；Usability；Major；Not Run |",
+    "054": "| ERYE210-054 | P0 | P；PT首次译制按206评论原文关译文开；最新主稿双语同显为展示状态 | 1. 用户显式打开两语言字幕。<br>2. 切五入口再回Captions。<br>3. 查看两语言和选中对象。 | 显式两开不因TAB切换强制恢复首次默认；不把Figma双语样例当覆盖206首次译制默认；通道可独立编辑。 | Source: Requirement + Mockup；ERYE-210 N05；206评论23600668；Figma 1528:28905；AC02/06 | [PLAN] | — | 业务验收；验证双语显示默认差异与用户选择不被导航重置；Functional；Major；Not Run |"
+  },
+  "registry": {
+    "011": "ERYE210-011:\n  status: AUTO\n  script: \"tests/editor/erye210-fields.spec.ts\"\n  definition_version: \"v2-agent-translation-dubbing-20261113\"\n  execution_status: \"Blocked\"\n  execution_batch: \"prod-011-user-project-20261113-02\"\n  execution_report: \"docs/cases/requirements/ERYE-210/results-011-user-project-prod-20261113.md\"\n  execution_note: \"已使用用户新建的7MB.mp4工程实测：中文配音原任务178秒完成，PA版本1→2；同会话PB/Media未被抢占，PB完整内容及版本1→1保持。重开PA实际显示17条中文配音文案、中文字幕和8段生成音频；真实MP4可播放，1280×720/60.44秒/H264+AAC。结果卡仅有播放、下载、放大，直达配音编辑入口分支未覆盖；手动选择PA不计该分支通过，整例仍Blocked。\"\n",
+    "017": "ERYE210-017:\n  status: AUTO\n  script: \"tests/editor/erye210-navigation.spec.ts\"\n  execution_status: \"Blocked\"\n  execution_batch: \"prod-016-020-reviewed-20261113\"\n  execution_report: \"docs/cases/requirements/ERYE-210/results-016-020-prod-20261113.md\"\n  execution_note: \"Blocked：独立工程两句旧配音ready及文稿正常可读，五入口导航后完整内容保持；当前配音面板只有清空译文，没有可触发新生成/重试的实际控件。未建立真实生成失败场景，失败保留及修复后重试分支未覆盖。\"\n",
+    "019": "ERYE210-019:\n  status: AUTO\n  script: \"tests/editor/erye210-navigation.spec.ts\"\n  definition_version: \"v2\"\n  execution_status: \"Blocked\"\n  execution_batch: \"prod-019-v2-20261113-06\"\n  execution_report: \"docs/cases/requirements/ERYE-210/results-019-v2-prod-20261113.md\"\n  definition_report: \"docs/cases/requirements/ERYE-210/case-019-v2-linked-delete-20261113.md\"\n  execution_note: \"019 v2生产Chrome执行Blocked：22秒起独立音频A1单删对照通过；删除前核验S1/D1引用一致，但单删S1未出现关联拒绝，S1被删除后旧配音仍ready、配音稿引用随后变为独立文件。受限对象前置未成立，未建立混合工程、未执行同时删除S1/A1，不判整批通过或关联保护缺陷。附带发现14秒A1删除会裁掉原视频/原声同范围，已单列保留现场，未同步云效。\"\n  prior_execution_status: \"Not Applicable\"\n  prior_execution_report: \"docs/cases/requirements/ERYE-210/results-016-020-prod-20261113.md#erye210-019\"\n  observation_defect_id: \"FWXC-513\"\n  observation_defect_url: \"https://devops.aliyun.com/projex/project/1e401ac99539c3999e00e40006/bug#openWorkitemIdentifier=13b2ef77469fde31d9ca46f97a\"\n  observation_scope: \"independent_audio_delete; mixed_delete_not_executed\"\n",
+    "016": "ERYE210-016:\n  status: AUTO\n  script: \"tests/editor/erye210-navigation.spec.ts\"\n  definition_version: \"v2\"\n  execution_status: \"Not Run\"\n  definition_report: \"docs/cases/requirements/ERYE-210/case-016-v2-windows-20261113.md\"\n  execution_note: \"016 v2已优化为Windows Chrome图片水印前置限制与上传后恢复：无图片时上传可用、尺寸/透明度禁用；上传PNG后控件可写，120px/60%切页及重开保留，原视频/原声/字幕保持。仅修改用例与脚本，尚未执行；旧v1跨端Blocked保留历史。\"\n  prior_execution_status: \"Blocked\"\n  prior_execution_report: \"docs/cases/requirements/ERYE-210/results-016-020-prod-20261113.md#erye210-016\"\n",
+    "050": "ERYE210-050:\n  status: PLAN\n  script: \"\"\n",
+    "051": "ERYE210-051:\n  status: PLAN\n  script: \"\"\n",
+    "052": "ERYE210-052:\n  status: PLAN\n  script: \"\"\n",
+    "053": "ERYE210-053:\n  status: PLAN\n  script: \"\"\n",
+    "054": "ERYE210-054:\n  status: PLAN\n  script: \"\"\n"
+  },
+  "results": [
+    {
+      "id": "ERYE210-011",
+      "status": "Blocked",
+      "reason": "后台完成不抢占PB及真实中文配音内容已核验；本次结果卡仅提供播放/下载，直达配音编辑定位分支未覆盖；手动选择PA不计为结果卡通过",
+      "automated": true,
+      "workspaceId": "ad25bc25-b1c6-4105-84b8-1b845b4a4eb5",
+      "caseVersion": "v2-agent-translation-dubbing-20261113",
+      "annotations": [
+        {
+          "type": "case-version",
+          "description": "v2-agent-translation-dubbing-20261113"
+        },
+        {
+          "type": "blocked",
+          "description": "后台完成不抢占PB及真实中文配音内容已核验；本次结果卡仅提供播放/下载，直达配音编辑定位分支未覆盖；手动选择PA不计为结果卡通过"
+        }
+      ],
+      "projects": {
+        "011-PA": {
+          "cid": "af0d5043-d30d-4a91-ba15-dea074199400",
+          "pid": "bf48d731-93a2-4b50-8cb9-f5d46c4a2609",
+          "name": "7MB.mp4"
+        },
+        "011-PB": {
+          "cid": "af0d5043-d30d-4a91-ba15-dea074199400",
+          "pid": "27f00126-9508-47d5-975d-1a8f8c8b1f2b",
+          "name": "ERYE210-011-PB-USER-CONTROL-27f00126"
+        }
+      },
+      "checks": [
+        {
+          "stage": "agent-completed-background",
+          "runIds": [
+            "run_v2_4f9b4423fb4346f3bd9048d22794268e"
+          ],
+          "pa": {
+            "cid": "af0d5043-d30d-4a91-ba15-dea074199400",
+            "pid": "bf48d731-93a2-4b50-8cb9-f5d46c4a2609",
+            "name": "7MB.mp4"
+          },
+          "pb": {
+            "cid": "af0d5043-d30d-4a91-ba15-dea074199400",
+            "pid": "27f00126-9508-47d5-975d-1a8f8c8b1f2b",
+            "name": "ERYE210-011-PB-USER-CONTROL-27f00126"
+          },
+          "sourceLanguage": "auto",
+          "targetLanguage": "zh-Hans",
+          "pbEstablishedAt": 1794573239263,
+          "completed": {
+            "at": 1794573399812,
+            "status": "done"
+          },
+          "violations": [],
+          "pbState": {
+            "name": "ERYE210-011-PB-USER-CONTROL-27f00126",
+            "module": [
+              "媒体"
+            ],
+            "playhead": "0",
+            "selected": [],
+            "media": [
+              {
+                "paused": true,
+                "duration": 60.495778
+              }
+            ]
+          }
+        },
+        {
+          "stage": "target-language-content",
+          "pid": "bf48d731-93a2-4b50-8cb9-f5d46c4a2609",
+          "name": "7MB.mp4",
+          "voiceoverTextCount": 17,
+          "chineseSubtitleFiles": [
+            "file_cloud_sp56262cld3kspt2iyn2jgsrag"
+          ],
+          "generatedAudioCount": 8,
+          "reachedBy": "explicit-project-picker-and-reopen"
+        },
+        {
+          "stage": "result-entry",
+          "directEntry": false,
+          "artifacts": [
+            {
+              "text": "0:00 / 1:001280 × 720",
+              "buttons": [
+                {
+                  "label": "下载",
+                  "title": "下载",
+                  "text": ""
+                },
+                {
+                  "label": "播放",
+                  "title": null,
+                  "text": ""
+                },
+                {
+                  "label": "放大查看",
+                  "title": "放大查看",
+                  "text": ""
+                }
+              ]
+            }
+          ],
+          "verified": false
+        }
+      ],
+      "screenshot": "011\\ERYE210-011-blocked.png",
+      "finishedAt": "2026-11-13T12:36:48.497Z",
+      "conversationId": "af0d5043-d30d-4a91-ba15-dea074199400",
+      "projectId": "bf48d731-93a2-4b50-8cb9-f5d46c4a2609",
+      "projectIdB": "27f00126-9508-47d5-975d-1a8f8c8b1f2b",
+      "runId": "run_v2_4f9b4423fb4346f3bd9048d22794268e",
+      "actual": "已使用用户新建的7MB.mp4工程实测：中文配音原任务178秒完成，PA版本1→2；同会话PB/Media未被抢占，PB完整内容及版本1→1保持。重开PA实际显示17条中文配音文案、中文字幕和8段生成音频；真实MP4可播放，1280×720/60.44秒/H264+AAC。结果卡仅有播放、下载、放大，直达配音编辑入口分支未覆盖；手动选择PA不计该分支通过，整例仍Blocked。",
+      "report": "results-011-user-project-prod-20261113.md",
+      "branches": {
+        "backgroundIsolation": "Passed",
+        "targetLanguageResultContent": "Passed",
+        "directResultEntry": "Blocked"
+      },
+      "screenshots": [
+        "011-PB-established.png",
+        "011-PB-after-completed.png",
+        "011-real-result-cards.png",
+        "011-target-language-result-project.png",
+        "ERYE210-011-blocked.png",
+        "011-user-result-playback-and-Voiceover.png"
+      ],
+      "evidence": "evidence-011-user-project-prod-20261113/manifest.json",
+      "history": "case-011-translation-dubbing-history-20261113.json"
+    },
+    {
+      "id": "ERYE210-016",
+      "definitionVersion": "v2",
+      "platform": "Windows Chrome",
+      "status": "Not Run",
+      "automated": true,
+      "script": "tests/editor/erye210-navigation.spec.ts",
+      "actual": "016 v2已优化为Windows Chrome图片水印前置限制与上传后恢复：无图片时上传可用、尺寸/透明度禁用；上传PNG后控件可写，120px/60%切页及重开保留，原视频/原声/字幕保持。仅修改用例与脚本，尚未执行；旧v1跨端Blocked保留历史。",
+      "definitionReport": "case-016-v2-windows-20261113.md",
+      "history": [
+        {
+          "definitionVersion": "v1",
+          "status": "Blocked",
+          "report": "results-016-020-prod-20261113.md",
+          "sourceBatch": "prod-016-020-20261113-01",
+          "reason": "缺macOS客户端测试环境，且没有同一具体操作“未发布/已发布但当前端不支持”的真实对照样本；不以五入口可达替代发布状态专项",
+          "record": {
+            "id": "ERYE210-016",
+            "status": "Blocked",
+            "reason": "缺macOS客户端测试环境，且没有同一具体操作“未发布/已发布但当前端不支持”的真实对照样本；不以五入口可达替代发布状态专项",
+            "automated": true,
+            "workspaceId": "afb7ecf1-b7ab-41c3-a6d3-d6fc042d7c70",
+            "annotations": [
+              {
+                "type": "blocked",
+                "description": "缺macOS客户端测试环境，且没有同一具体操作“未发布/已发布但当前端不支持”的真实对照样本；不以五入口可达替代发布状态专项"
+              },
+              {
+                "type": "skip",
+                "description": "缺macOS客户端测试环境，且没有同一具体操作“未发布/已发布但当前端不支持”的真实对照样本；不以五入口可达替代发布状态专项"
+              }
+            ],
+            "projects": {},
+            "checks": [],
+            "screenshot": "",
+            "finishedAt": "2026-11-13T09:10:00.781Z",
+            "actual": "Blocked：缺macOS客户端环境，且没有同一操作“未发布/已发布但当前端不支持”的真实对照样本；仅前置门禁，未以五入口可达代替能力发布状态验证。",
+            "sourceBatch": "prod-016-020-20261113-01",
+            "report": "results-016-020-prod-20261113.md",
+            "screenshots": [],
+            "automatedBusinessCoverage": false
+          }
+        }
+      ]
+    },
+    {
+      "id": "ERYE210-017",
+      "status": "Blocked",
+      "reason": "已有两句旧音频及文稿正常可读，但当前配音面板只有清空译文，没有可触发新生成/重试的实际控件；未建立真实生成失败场景，失败恢复及重试未覆盖，不伪造失败状态",
+      "automated": true,
+      "workspaceId": "afb7ecf1-b7ab-41c3-a6d3-d6fc042d7c70",
+      "annotations": [
+        {
+          "type": "blocked",
+          "description": "已有两句旧音频及文稿正常可读，但当前配音面板只有清空译文，没有可触发新生成/重试的实际控件；未建立真实生成失败场景，失败恢复及重试未覆盖，不伪造失败状态"
+        },
+        {
+          "type": "skip",
+          "description": "已有两句旧音频及文稿正常可读，但当前配音面板只有清空译文，没有可触发新生成/重试的实际控件；未建立真实生成失败场景，失败恢复及重试未覆盖，不伪造失败状态"
+        }
+      ],
+      "projects": {
+        "017": {
+          "cid": "75a19b3d-943f-4db3-98fa-1f2443ff713b",
+          "pid": "31aef44c-b439-408d-b60b-7f680d785fe6",
+          "name": "ERYE210-017-31aef44c"
+        }
+      },
+      "checks": [
+        {
+          "stage": "existing-voice-ready",
+          "revision": 1,
+          "dubbing": [
+            {
+              "volume": 1,
+              "end_sec": 5.3467573696145125,
+              "block_id": "voice_4a2826d7-da73-4ccd-8c23-050b76eb8476",
+              "language": "zh",
+              "voice_id": "0327fdb5da9e4fd782899a8058c8ae2b",
+              "start_sec": 4,
+              "dubbing_id": "dubbing_de78cfdcc444e051c066e36a",
+              "speaker_id": null,
+              "audio_state": "ready",
+              "source_text": "欢迎使用 CinLink。",
+              "audio_file_id": "file_cloud_t425zrk7vp7r5zsxft2twjps6o",
+              "playback_rate": 1,
+              "audio_clip_ids": [
+                "24d360f4-2bdb-4088-9c24-1462311ee77d"
+              ],
+              "subtitle_file_id": "file_cloud_fcgkqdmk2omtb6kbqnasxzpblc",
+              "translation_text": "欢迎使用 CinLink。",
+              "subtitle_block_ids": [
+                "voice_4a2826d7-da73-4ccd-8c23-050b76eb8476"
+              ]
+            },
+            {
+              "volume": 1,
+              "end_sec": 11.393197278911565,
+              "block_id": "voice_bb308a12-29a7-4457-a4e1-fd5e02575642",
+              "language": "zh",
+              "voice_id": "0327fdb5da9e4fd782899a8058c8ae2b",
+              "start_sec": 10,
+              "dubbing_id": "dubbing_cdd31c72591d3a9ff0498da8",
+              "speaker_id": null,
+              "audio_state": "ready",
+              "source_text": "这是导航测试。",
+              "audio_file_id": "file_cloud_b42mih23tjwh7thdqiyjjhohca",
+              "playback_rate": 1,
+              "audio_clip_ids": [
+                "239317f9-5452-405a-ac68-678bd7285e81"
+              ],
+              "subtitle_file_id": "file_cloud_fcgkqdmk2omtb6kbqnasxzpblc",
+              "translation_text": "这是导航测试。",
+              "subtitle_block_ids": [
+                "voice_bb308a12-29a7-4457-a4e1-fd5e02575642"
+              ]
+            }
+          ],
+          "buttons": [
+            {
+              "text": "",
+              "label": "清空译文",
+              "disabled": true
+            },
+            {
+              "text": "",
+              "label": "清空译文",
+              "disabled": true
+            }
+          ],
+          "generationEntryCount": 0,
+          "state": {
+            "name": "ERYE210-017-31aef44c",
+            "module": [
+              "配音"
+            ],
+            "playhead": "0",
+            "selected": [],
+            "media": [
+              {
+                "paused": true,
+                "duration": 20
+              }
+            ]
+          }
+        }
+      ],
+      "screenshot": "017\\ERYE210-017-skipped.png",
+      "finishedAt": "2026-11-13T09:10:13.621Z",
+      "actual": "Blocked：独立工程两句旧配音ready及文稿正常可读，五入口导航后完整内容保持；当前配音面板只有清空译文，没有可触发新生成/重试的实际控件。未建立真实生成失败场景，失败保留及修复后重试分支未覆盖。",
+      "sourceBatch": "prod-016-020-20261113-01",
+      "report": "results-016-020-prod-20261113.md",
+      "screenshots": [
+        "017-existing-voice-entry.png",
+        "ERYE210-017-skipped.png"
+      ]
+    },
+    {
+      "id": "ERYE210-019",
+      "definitionVersion": "v2",
+      "platform": "Windows Chrome",
+      "status": "Blocked",
+      "automated": true,
+      "script": "tests/editor/erye210-navigation.spec.ts",
+      "actual": "019 v2生产Chrome执行Blocked：22秒起独立音频A1单删对照通过；删除前核验S1/D1引用一致，但单删S1未出现关联拒绝，S1被删除后旧配音仍ready、配音稿引用随后变为独立文件。受限对象前置未成立，未建立混合工程、未执行同时删除S1/A1，不判整批通过或关联保护缺陷。附带发现14秒A1删除会裁掉原视频/原声同范围，已单列保留现场，未同步云效。",
+      "definitionReport": "case-019-v2-linked-delete-20261113.md",
+      "history": [
+        {
+          "definitionVersion": "v1",
+          "status": "Not Applicable",
+          "report": "results-016-020-prod-20261113.md",
+          "sourceBatch": "prod-016-020-20261113-01",
+          "reviewNote": "原探测只覆盖锁轨/冲突入口，范围不足，不能据此排除已有字幕配音关联的混合删除风险；保留原始记录，不沿用为新版结论。",
+          "record": {
+            "id": "ERYE210-019",
+            "status": "Not Applicable",
+            "reason": "",
+            "automated": true,
+            "workspaceId": "d56d3f9d-3fe8-4b59-be76-ffe1a152160f",
+            "annotations": [
+              {
+                "type": "not-applicable",
+                "description": "当前Chrome页面未发现受限轨道或关联同步冲突批次业务入口；按本例“无该业务入口则不适用”记Not Applicable，未伪造锁定标记或提交冲突批次，不宣称原子性通过"
+              },
+              {
+                "type": "skip",
+                "description": "当前Chrome页面未发现受限轨道或关联同步冲突批次业务入口；按本例“无该业务入口则不适用”记Not Applicable，未伪造锁定标记或提交冲突批次，不宣称原子性通过"
+              }
+            ],
+            "projects": {
+              "019": {
+                "cid": "547a9e26-1d86-46ed-836d-aa4e45eb5bb9",
+                "pid": "2d9c95a8-4d76-4aee-bb99-37f487346f98",
+                "name": "ERYE210-019-2d9c95a8"
+              }
+            },
+            "checks": [
+              {
+                "stage": "applicability",
+                "observations": [
+                  {
+                    "module": "媒体",
+                    "state": {
+                      "name": "ERYE210-019-2d9c95a8",
+                      "module": [
+                        "媒体"
+                      ],
+                      "playhead": "0",
+                      "selected": [],
+                      "media": [
+                        {
+                          "paused": true,
+                          "duration": 20
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "module": "文稿",
+                    "state": {
+                      "name": "ERYE210-019-2d9c95a8",
+                      "module": [
+                        "文稿"
+                      ],
+                      "playhead": "0",
+                      "selected": [],
+                      "media": [
+                        {
+                          "paused": true,
+                          "duration": 20
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "module": "字幕",
+                    "state": {
+                      "name": "ERYE210-019-2d9c95a8",
+                      "module": [
+                        "字幕"
+                      ],
+                      "playhead": "0",
+                      "selected": [],
+                      "media": [
+                        {
+                          "paused": true,
+                          "duration": 20
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "module": "配音",
+                    "state": {
+                      "name": "ERYE210-019-2d9c95a8",
+                      "module": [
+                        "配音"
+                      ],
+                      "playhead": "0",
+                      "selected": [],
+                      "media": [
+                        {
+                          "paused": true,
+                          "duration": 20
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "module": "水印",
+                    "state": {
+                      "name": "ERYE210-019-2d9c95a8",
+                      "module": [
+                        "水印"
+                      ],
+                      "playhead": "0",
+                      "selected": [],
+                      "media": [
+                        {
+                          "paused": true,
+                          "duration": 20
+                        }
+                      ]
+                    }
+                  }
+                ],
+                "menu": [],
+                "controls": [
+                  {
+                    "text": "",
+                    "label": "选择工具",
+                    "title": "选择片段（按 Shift 多选，按 Esc 取消选择）"
+                  },
+                  {
+                    "text": "",
+                    "label": "撤销",
+                    "title": "撤销"
+                  },
+                  {
+                    "text": "",
+                    "label": "重做",
+                    "title": "重做"
+                  },
+                  {
+                    "text": "",
+                    "label": "分割所选片段",
+                    "title": "分割所选片段"
+                  },
+                  {
+                    "text": "",
+                    "label": "视频批注",
+                    "title": "视频批注"
+                  },
+                  {
+                    "text": "",
+                    "label": "播放",
+                    "title": "播放"
+                  },
+                  {
+                    "text": "",
+                    "label": "跳转到开头",
+                    "title": "跳转到开头"
+                  },
+                  {
+                    "text": "‹",
+                    "label": "上一帧",
+                    "title": null
+                  },
+                  {
+                    "text": "›",
+                    "label": "下一帧",
+                    "title": null
+                  },
+                  {
+                    "text": "",
+                    "label": "缩小时间轴",
+                    "title": "缩小时间轴"
+                  },
+                  {
+                    "text": "",
+                    "label": "放大时间轴",
+                    "title": "放大时间轴"
+                  },
+                  {
+                    "text": "",
+                    "label": "原文字幕隐藏",
+                    "title": null
+                  },
+                  {
+                    "text": "",
+                    "label": "视频隐藏",
+                    "title": null
+                  },
+                  {
+                    "text": "",
+                    "label": "原声静音",
+                    "title": null
+                  }
+                ],
+                "restrictedControlCount": 0
+              }
+            ],
+            "screenshot": "019\\ERYE210-019-skipped.png",
+            "finishedAt": "2026-11-13T09:13:52.344Z",
+            "actual": "Not Applicable：已检查当前Chrome五入口、时间线及片段右键操作，未发现受限轨道/关联同步冲突批次的业务入口；按本例“无该业务入口则不适用”登记，未提交冲突批次，不宣称原子性通过。",
+            "sourceBatch": "prod-016-020-20261113-01",
+            "report": "results-016-020-prod-20261113.md",
+            "screenshots": [
+              "019-track-operations.png",
+              "ERYE210-019-skipped.png"
+            ]
+          }
+        }
+      ],
+      "reason": "单独删除S1未观察到真实关联配音拒绝；候选冲突前置未成立，不强制套用整批拒绝预期，也不因缺锁轨按钮判不适用",
+      "workspaceId": "c8f42994-a2a1-4879-8634-36a23f44bd00",
+      "annotations": [
+        {
+          "type": "blocked",
+          "description": "单独删除S1未观察到真实关联配音拒绝；候选冲突前置未成立，不强制套用整批拒绝预期，也不因缺锁轨按钮判不适用"
+        },
+        {
+          "type": "skip",
+          "description": "单独删除S1未观察到真实关联配音拒绝；候选冲突前置未成立，不强制套用整批拒绝预期，也不因缺锁轨按钮判不适用"
+        }
+      ],
+      "projects": {
+        "019-legal-control": {
+          "cid": "f46ce897-9bc2-4805-b542-652a3d690bcb",
+          "pid": "28eb05c5-ace5-4c2d-8cae-6558ab7b7aad",
+          "name": "ERYE210-019-legal-control-28eb05c5"
+        },
+        "019-conflict-control": {
+          "cid": "3cae1aa6-7e22-4293-91d7-136c20a70063",
+          "pid": "cd32c612-9a30-4069-92cb-d2bea7963894",
+          "name": "ERYE210-019-conflict-control-cd32c612"
+        }
+      },
+      "checks": [
+        {
+          "stage": "legal-control",
+          "project": {
+            "cid": "f46ce897-9bc2-4805-b542-652a3d690bcb",
+            "pid": "28eb05c5-ace5-4c2d-8cae-6558ab7b7aad",
+            "name": "ERYE210-019-legal-control-28eb05c5"
+          },
+          "a1Deleted": true,
+          "unrelatedContentPreserved": true
+        },
+        {
+          "stage": "live-association",
+          "expectedSubtitleFile": "file_cloud_fcgkqdmk2omtb6kbqnasxzpblc",
+          "expectedBlock": "voice_4a2826d7-da73-4ccd-8c23-050b76eb8476",
+          "currentD1File": "file_cloud_fcgkqdmk2omtb6kbqnasxzpblc",
+          "currentD1Block": "voice_4a2826d7-da73-4ccd-8c23-050b76eb8476",
+          "sameAssociation": true
+        }
+      ],
+      "screenshot": "019\\ERYE210-019-skipped.png",
+      "finishedAt": "2026-11-13T10:41:55.852Z",
+      "sourceBatch": "prod-019-v2-20261113-06",
+      "report": "results-019-v2-prod-20261113.md",
+      "screenshots": [
+        "019-v2-legal-control.png",
+        "019-v2-conflict-not-established.png"
+      ],
+      "liveAssociation": {
+        "project": {
+          "cid": "3cae1aa6-7e22-4293-91d7-136c20a70063",
+          "pid": "cd32c612-9a30-4069-92cb-d2bea7963894",
+          "name": "ERYE210-019-conflict-control-cd32c612"
+        },
+        "expectedSubtitleFile": "file_cloud_fcgkqdmk2omtb6kbqnasxzpblc",
+        "expectedBlock": "voice_4a2826d7-da73-4ccd-8c23-050b76eb8476",
+        "currentD1File": "file_cloud_fcgkqdmk2omtb6kbqnasxzpblc",
+        "currentD1Block": "voice_4a2826d7-da73-4ccd-8c23-050b76eb8476",
+        "sameAssociation": true
+      },
+      "finalObservation": {
+        "project": {
+          "cid": "3cae1aa6-7e22-4293-91d7-136c20a70063",
+          "pid": "cd32c612-9a30-4069-92cb-d2bea7963894",
+          "name": "ERYE210-019-conflict-control-cd32c612"
+        },
+        "revision": 3,
+        "alerts": [],
+        "subtitleEdits": [
+          {
+            "fileId": "file_cloud_fcgkqdmk2omtb6kbqnasxzpblc",
+            "diff": [
+              {
+                "text": "",
+                "end_sec": 6,
+                "identity": "voice_4a2826d7-da73-4ccd-8c23-050b76eb8476",
+                "start_sec": 4
+              }
+            ]
+          }
+        ],
+        "dubbing": [
+          {
+            "id": "dubbing_de78cfdcc444e051c066e36a",
+            "scriptFile": "file_cloud_4md3eff6s4mejqwarjnihstk3v",
+            "block": "voice_4a2826d7-da73-4ccd-8c23-050b76eb8476",
+            "audioFile": "file_cloud_t425zrk7vp7r5zsxft2twjps6o",
+            "state": "ready",
+            "source": "",
+            "text": ""
+          },
+          {
+            "id": "dubbing_cdd31c72591d3a9ff0498da8",
+            "scriptFile": "file_cloud_4md3eff6s4mejqwarjnihstk3v",
+            "block": "voice_bb308a12-29a7-4457-a4e1-fd5e02575642",
+            "audioFile": "file_cloud_b42mih23tjwh7thdqiyjjhohca",
+            "state": "ready",
+            "source": "",
+            "text": ""
+          }
+        ],
+        "video": [
+          {
+            "start": 0,
+            "sourceIn": 0,
+            "sourceOut": 20
+          }
+        ],
+        "independentAudio": [
+          {
+            "start": 22,
+            "fileId": "file_cloud_b42mih23tjwh7thdqiyjjhohca",
+            "sourceIn": 0,
+            "sourceOut": 1.3931972789115648
+          }
+        ]
+      },
+      "mixedDeleteExecuted": false,
+      "cloudWrites": 0,
+      "additionalDefects": [
+        {
+          "case": "ERYE210-019",
+          "scope": "additional_observation_independent_audio_delete",
+          "qualificationStatus": "Blocked",
+          "mixedDeleteExecuted": false,
+          "workitemId": "13b2ef77469fde31d9ca46f97a",
+          "key": "ERYE210-019-INDEPENDENT-AUDIO-DELETE-PROD-20261113",
+          "serialNumber": "FWXC-513",
+          "verifiedAt": "2026-11-13T18:47:48.2397752+08:00",
+          "verified": true,
+          "createdNow": true,
+          "url": "https://devops.aliyun.com/projex/project/1e401ac99539c3999e00e40006/bug#openWorkitemIdentifier=13b2ef77469fde31d9ca46f97a",
+          "screenshots": 1,
+          "attachments": [
+            {
+              "size": 532869,
+              "name": "019-v2-14s-audio-delete-side-effect.png",
+              "sha256": "2260d3af448ab8ada10f6ecaf0cab4ed4a5f121f9e8437e80eff6ec1cbdf1c53",
+              "id": "4db904de86278c489bb7de690d"
+            },
+            {
+              "size": 3385,
+              "name": "case-evidence.json",
+              "sha256": "2cc3081aa942f3ab06fee6c855d503b58d92539c99ef150a0c2c0c8e4763ee0a",
+              "id": "10f21c1e5a43276f6f9d446c3d"
+            },
+            {
+              "size": 10274419,
+              "name": "E196-A.mp4",
+              "sha256": "c453166c6396fe1c427c8a045ad2f84a8f5d4e4ff0f905b47d79114172829d15",
+              "id": "32efa9c82b4afff916e2394a24"
+            },
+            {
+              "size": 122924,
+              "name": "A1-independent.wav",
+              "sha256": "717f9c28eb41b30cd0cdd11d9e830e065771eeac995b3a435d848fe067037b34",
+              "id": "7c23b77541edfd29bd8c0bcfd0"
+            },
+            {
+              "size": 118,
+              "name": "voiceover-zh-preparation.srt",
+              "sha256": "777e6c8bcac2cbbf82eeac0c4716dfb7b3186c2c82075fc12353aa6b4d24087b",
+              "id": "b2521fd002b23e4639bf69d593"
+            }
+          ],
+          "status": "🤔AI提缺陷",
+          "assignedTo": "牛诗晴",
+          "sprint": "重构10-29",
+          "labels": [
+            "生产环境"
+          ],
+          "priority": "高",
+          "severity": "2-严重",
+          "attachmentCount": 5,
+          "localRecord": "docs/defects/ERYE210-019-independent-audio-delete-production-20261113.md",
+          "method": "official OpenAPI",
+          "historicalDeduplication": false,
+          "preconditionsPerDefect": 3
+        }
+      ]
+    },
+    {
+      "id": "ERYE210-050",
+      "status": "Not Run",
+      "actual": "未执行"
+    },
+    {
+      "id": "ERYE210-051",
+      "status": "Not Run",
+      "actual": "未执行"
+    },
+    {
+      "id": "ERYE210-052",
+      "status": "Not Run",
+      "actual": "未执行"
+    },
+    {
+      "id": "ERYE210-053",
+      "status": "Not Run",
+      "actual": "未执行"
+    },
+    {
+      "id": "ERYE210-054",
+      "status": "Not Run",
+      "actual": "未执行"
+    }
+  ]
+}

@@ -1,0 +1,317 @@
+{
+  "date": "2026-11-19",
+  "method": "official Yunxiao OpenAPI via tools/yunxiao",
+  "created": 2,
+  "merged_within_batch": true,
+  "historical_defects_modified": false,
+  "verified": true,
+  "rerun_performed": false,
+  "screenshots_uploaded": 13,
+  "attachments_verified": 19,
+  "defects": [
+    {
+      "id": "FWXC-702",
+      "workitem_id": "8a33feece92eb1599144ce85b9",
+      "url": "https://devops.aliyun.com/projex/project/1e401ac99539c3999e00e40006/bug#openWorkitemIdentifier=8a33feece92eb1599144ce85b9",
+      "title": "【生产环境】视频跨轨误改原声行，换轨后平移仍连带原声",
+      "key": "ERYE199-086-CROSS-VIDEO-ORIGINAL-AUDIO-COUPLING-PROD-20261119",
+      "status": "🤔AI提缺陷",
+      "assigned_to": "牛诗晴",
+      "sprint": "重构10-29",
+      "labels": [
+        "生产环境"
+      ],
+      "priority": "高",
+      "serious_level": "2-严重",
+      "verified": true,
+      "screenshots": 8,
+      "attachments": 11,
+      "synced_at": "2026-11-19T12:04:13.2042630+08:00",
+      "local_report": "docs/defects/ERYE199-086-cross-video-production-20261119.md",
+      "attachment_receipts": [
+        {
+          "size": 608562,
+          "name": "086-T1-cross-video-baseline-verified.png",
+          "id": "d37a36b89369d4a9a418811b2b",
+          "sha256": "cb35e45352126224091be7fc2a578ff9c165308b965559a2b37569057172bcc2"
+        },
+        {
+          "size": 603065,
+          "name": "086-T1-cross-video-cross-failure.png",
+          "id": "f9b9ffc327d8422a082d85d5c9",
+          "sha256": "46d198d02e9b4916a5ad274b8faba54099ab076e3a0dc5c87dbc4ef087164b35"
+        },
+        {
+          "size": 413704,
+          "name": "086-T1-cross-video-failure-after-reopen.png",
+          "id": "54cbf16e8dfc8331accac48497",
+          "sha256": "ee631543f78088a8a8006cc9d5308af1cd9d4a25b9f27cdfa61a1124ada4d9ce"
+        },
+        {
+          "size": 417281,
+          "name": "086-T2-cross-video-failure-after-reopen.png",
+          "id": "6952393828d95efa6c72a7c75d",
+          "sha256": "154dff230c446c5ffcd98b6b3510dcf82633f8c19832982f5aef443b7b76af18"
+        },
+        {
+          "size": 394059,
+          "name": "086-E-cross-video-failure-after-reopen.png",
+          "id": "e92a3fe1d5712365252152236b",
+          "sha256": "d3f5d2ecc5e7a1e2b22d7179cd52fde842d26ec337e8e427facc6d85c060d95a"
+        },
+        {
+          "size": 332477,
+          "name": "086-C-cross-video-failure-preview-supplement.png",
+          "id": "9843cea92ada3b21dfb2625f36",
+          "sha256": "fb9ebf1c062db93ce2af0f5041e945af068ab334c802c5e054221089d2206ec1"
+        },
+        {
+          "size": 298610,
+          "name": "086-H-cross-video-failure-after-reopen.png",
+          "id": "d7a9a8dea7eccff3c284225bb7",
+          "sha256": "3026c7744c1a25cb7f46240be9f759c58448a174af48dc1d574322194c23b345"
+        },
+        {
+          "size": 227273,
+          "name": "086-G-cross-video-failure-after-reopen.png",
+          "id": "6b6360dc20977022445a32b85b",
+          "sha256": "acec62b9afc929391c632ed4414f9c3e04842d9583a1b16e518d7993bc942fa4"
+        },
+        {
+          "size": 2197394,
+          "name": "F20-English-source-with-BGM.mp4",
+          "id": "c6f974b3fa52fed9f730a886ed",
+          "sha256": "b1fce3d9ba5094ca2d1acbe50b17aef903a6fcb353cbd19181ff3ae1a8f9a9a1"
+        },
+        {
+          "size": 19377434,
+          "name": "F60-English-source-with-BGM.mp4",
+          "id": "bf68844213623ce2cb7e049252",
+          "sha256": "9317265cfd79d73b572ce05704fc9218362aca9e9041cbc4340426676f416cc9"
+        },
+        {
+          "size": 373659,
+          "name": "evidence-summary.json",
+          "id": "db195655b347daee846e6538a7",
+          "sha256": "c4e8394886e62bd557082ec47621aadcfbb1d51ecd28f58c848df1ea2cd06564"
+        }
+      ],
+      "images": [
+        {
+          "name": "086-T1-cross-video-baseline-verified.png",
+          "id": "d37a36b89369d4a9a418811b2b",
+          "size": 608562,
+          "sha256": "cb35e45352126224091be7fc2a578ff9c165308b965559a2b37569057172bcc2",
+          "caption": "T1：跨轨前五轨基线，原声位于视频之后。",
+          "embedded": true
+        },
+        {
+          "name": "086-T1-cross-video-cross-failure.png",
+          "id": "f9b9ffc327d8422a082d85d5c9",
+          "size": 603065,
+          "sha256": "46d198d02e9b4916a5ad274b8faba54099ab076e3a0dc5c87dbc4ef087164b35",
+          "caption": "T1：跨轨后原声行也随视频换位。",
+          "embedded": true
+        },
+        {
+          "name": "086-T1-cross-video-failure-after-reopen.png",
+          "id": "54cbf16e8dfc8331accac48497",
+          "size": 413704,
+          "sha256": "ee631543f78088a8a8006cc9d5308af1cd9d4a25b9f27cdfa61a1124ada4d9ce",
+          "caption": "086-T1-cross-video：跨轨并右移1秒后，重开仍保留原声误联动；截图为最终状态。",
+          "embedded": true
+        },
+        {
+          "name": "086-T2-cross-video-failure-after-reopen.png",
+          "id": "6952393828d95efa6c72a7c75d",
+          "size": 417281,
+          "sha256": "154dff230c446c5ffcd98b6b3510dcf82633f8c19832982f5aef443b7b76af18",
+          "caption": "086-T2-cross-video：跨轨并右移1秒后，重开仍保留原声误联动；截图为最终状态。",
+          "embedded": true
+        },
+        {
+          "name": "086-E-cross-video-failure-after-reopen.png",
+          "id": "e92a3fe1d5712365252152236b",
+          "size": 394059,
+          "sha256": "d3f5d2ecc5e7a1e2b22d7179cd52fde842d26ec337e8e427facc6d85c060d95a",
+          "caption": "086-E-cross-video：跨轨并右移1秒后，重开仍保留原声误联动；截图为最终状态。",
+          "embedded": true
+        },
+        {
+          "name": "086-C-cross-video-failure-preview-supplement.png",
+          "id": "9843cea92ada3b21dfb2625f36",
+          "size": 332477,
+          "sha256": "fb9ebf1c062db93ce2af0f5041e945af068ab334c802c5e054221089d2206ec1",
+          "caption": "086-C-cross-video：跨轨并右移1秒后，重开仍保留原声误联动；截图为最终状态。",
+          "embedded": true
+        },
+        {
+          "name": "086-H-cross-video-failure-after-reopen.png",
+          "id": "d7a9a8dea7eccff3c284225bb7",
+          "size": 298610,
+          "sha256": "3026c7744c1a25cb7f46240be9f759c58448a174af48dc1d574322194c23b345",
+          "caption": "086-H-cross-video：跨轨并右移1秒后，重开仍保留原声误联动；截图为最终状态。",
+          "embedded": true
+        },
+        {
+          "name": "086-G-cross-video-failure-after-reopen.png",
+          "id": "6b6360dc20977022445a32b85b",
+          "size": 227273,
+          "sha256": "acec62b9afc929391c632ed4414f9c3e04842d9583a1b16e518d7993bc942fa4",
+          "caption": "086-G-cross-video：跨轨并右移1秒后，重开仍保留原声误联动；截图为最终状态。",
+          "embedded": true
+        }
+      ],
+      "description_sha256": "77a3eb8e5c77818cb5356be57c7aadc4e846723e1fa057c49236080725edc48c",
+      "case_ids": [
+        "ERYE199-086"
+      ],
+      "variant_keys": [
+        "086-T1-cross-video",
+        "086-T2-cross-video",
+        "086-E-cross-video",
+        "086-C-cross-video",
+        "086-H-cross-video",
+        "086-G-cross-video"
+      ]
+    },
+    {
+      "id": "FWXC-703",
+      "workitem_id": "4141c1deac59c5f123ee27bfb4",
+      "url": "https://devops.aliyun.com/projex/project/1e401ac99539c3999e00e40006/bug#openWorkitemIdentifier=4141c1deac59c5f123ee27bfb4",
+      "title": "【生产环境】仅分割独立音频却同时拆分未选中的视频、原声和BGM",
+      "key": "ERYE199-087-INDEPENDENT-AUDIO-SPLIT-CROSSTRACK-PROD-20261119",
+      "status": "🤔AI提缺陷",
+      "assigned_to": "牛诗晴",
+      "sprint": "重构10-29",
+      "labels": [
+        "生产环境"
+      ],
+      "priority": "高",
+      "serious_level": "2-严重",
+      "verified": true,
+      "screenshots": 5,
+      "attachments": 8,
+      "synced_at": "2026-11-19T12:04:32.2697349+08:00",
+      "local_report": "docs/defects/ERYE199-087-audio-split-production-20261119.md",
+      "attachment_receipts": [
+        {
+          "size": 619474,
+          "sha256": "a03e8909f285ed16eb2e189cd121a6b148ad366d17315fe59ed5dde315e6ff50",
+          "id": "f78bbf940c91466fa73b0d5ae9",
+          "name": "087-T1-split-D-placed.png"
+        },
+        {
+          "size": 626911,
+          "sha256": "ea96127c86cbe00d00a31632de11862b962c21f7936d02c3c1a0af1dbf5c000a",
+          "id": "20976dfd484ae22c983bcf596a",
+          "name": "087-T1-split-preview-12.png"
+        },
+        {
+          "size": 614589,
+          "sha256": "6b01233f7b6bf17a340a763388506f53d3a55f2b59db544ed5459153c65547ac",
+          "id": "a149bb067f5ff3228372f5699f",
+          "name": "087-T2-split-before-split-selected-D.png"
+        },
+        {
+          "size": 581041,
+          "sha256": "ace4c7ffb6190f9abe4924fb2bd811cf842499653c529faffadd7b3654f6cf00",
+          "id": "0d81249e3e4df9549ba64013be",
+          "name": "087-T1-split-failure-after-reopen.png"
+        },
+        {
+          "size": 584821,
+          "sha256": "c270226c1e9d53ac099aa7638cf0704d2503b6a485614363c509f816a00d047c",
+          "id": "2cf0730da65041fd2de1b01783",
+          "name": "087-T2-split-failure-after-reopen.png"
+        },
+        {
+          "size": 2197394,
+          "sha256": "b1fce3d9ba5094ca2d1acbe50b17aef903a6fcb353cbd19181ff3ae1a8f9a9a1",
+          "id": "e2b8a77b6e04fa65d3cf73eaf3",
+          "name": "F20-English-source-with-BGM.mp4"
+        },
+        {
+          "size": 1152078,
+          "sha256": "55c929b90cf6907492e7e842dd5ad14847b459f4771692823a8fb8e181b021e8",
+          "id": "1d03bcb50ec428f9678e456c84",
+          "name": "D-independent-audio-12s.wav"
+        },
+        {
+          "size": 172162,
+          "sha256": "f0d13c3c917a739cf79a81e8b9a9e9cd64e6535b9668102ec417be35f1ec876f",
+          "id": "5ba1fa93e5964e2617ce8c25c2",
+          "name": "evidence-summary.json"
+        }
+      ],
+      "images": [
+        {
+          "name": "087-T1-split-D-placed.png",
+          "id": "f78bbf940c91466fa73b0d5ae9",
+          "size": 619474,
+          "sha256": "a03e8909f285ed16eb2e189cd121a6b148ad366d17315fe59ed5dde315e6ff50",
+          "caption": "T1：D作为独立音频放入6～18秒，原五轨未分割。",
+          "embedded": true
+        },
+        {
+          "name": "087-T1-split-preview-12.png",
+          "id": "20976dfd484ae22c983bcf596a",
+          "size": 626911,
+          "sha256": "ea96127c86cbe00d00a31632de11862b962c21f7936d02c3c1a0af1dbf5c000a",
+          "caption": "T1：12秒处仅独立D有选中边框，分割前状态。",
+          "embedded": true
+        },
+        {
+          "name": "087-T2-split-before-split-selected-D.png",
+          "id": "a149bb067f5ff3228372f5699f",
+          "size": 614589,
+          "sha256": "6b01233f7b6bf17a340a763388506f53d3a55f2b59db544ed5459153c65547ac",
+          "caption": "T2：12秒处仅独立D选中，视频与原生BGM未选中。",
+          "embedded": true
+        },
+        {
+          "name": "087-T1-split-failure-after-reopen.png",
+          "id": "0d81249e3e4df9549ba64013be",
+          "size": 581041,
+          "sha256": "ace4c7ffb6190f9abe4924fb2bd811cf842499653c529faffadd7b3654f6cf00",
+          "caption": "087-T1-split：分割D后，视频、原声及原生BGM也被分割，重开仍保留。",
+          "embedded": true
+        },
+        {
+          "name": "087-T2-split-failure-after-reopen.png",
+          "id": "2cf0730da65041fd2de1b01783",
+          "size": 584821,
+          "sha256": "c270226c1e9d53ac099aa7638cf0704d2503b6a485614363c509f816a00d047c",
+          "caption": "087-T2-split：分割D后，视频、原声及原生BGM也被分割，重开仍保留。",
+          "embedded": true
+        }
+      ],
+      "description_sha256": "3dd4adea551278cbe1366e908bf41f6c10100235c86a9d23dfb1289e93cefd03",
+      "case_ids": [
+        "ERYE199-087"
+      ],
+      "variant_keys": [
+        "087-T1-split",
+        "087-T2-split"
+      ]
+    }
+  ],
+  "cases": {
+    "ERYE199-086": [
+      {
+        "id": "FWXC-702",
+        "workitem_id": "8a33feece92eb1599144ce85b9",
+        "url": "https://devops.aliyun.com/projex/project/1e401ac99539c3999e00e40006/bug#openWorkitemIdentifier=8a33feece92eb1599144ce85b9",
+        "verified": true
+      }
+    ],
+    "ERYE199-087": [
+      {
+        "id": "FWXC-703",
+        "workitem_id": "4141c1deac59c5f123ee27bfb4",
+        "url": "https://devops.aliyun.com/projex/project/1e401ac99539c3999e00e40006/bug#openWorkitemIdentifier=4141c1deac59c5f123ee27bfb4",
+        "verified": true
+      }
+    ]
+  }
+}

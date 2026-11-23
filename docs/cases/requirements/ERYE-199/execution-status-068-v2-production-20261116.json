@@ -1,0 +1,59 @@
+{
+  "date": "2026-11-16",
+  "stage": "Completed",
+  "environment": "production",
+  "counts": {
+    "Passed": 1
+  },
+  "cases": [
+    {
+      "id": "ERYE199-068",
+      "started": "2026-11-16T03:06:24.512Z",
+      "automation": "tools/editor/erye199/cases-051-068.mjs#068",
+      "status": "Passed",
+      "actual": "068 v2：空白工程标题和媒体操作引导显示，选择媒体按钮可见启用、无内容时导出禁用；刷新及收起再展开后同一空工程保持，未新增对象或任务。",
+      "fixture": {
+        "conversationId": "c65a8e1c-dc15-4009-9887-eaedf098038b",
+        "editorId": "971badb4-64e1-42ac-9157-a762d6187fb1",
+        "name": "ERYE199-068-2026-11-16T03-05-58-402Z"
+      },
+      "completed": "2026-11-16T03:08:58.947Z",
+      "definition_revision": 2,
+      "coverage": "仅空工程总空态、按钮可见/禁用状态及恢复；不点击选择媒体，不验证文件选择/导入或无入口的独立字幕/素材空态",
+      "execution_history": [
+        {
+          "id": "ERYE199-068",
+          "started": "2026-11-16T03:06:24.512Z",
+          "automation": "tools/editor/erye199/cases-051-068.mjs#068",
+          "status": "Blocked",
+          "actual": "Cannot capture a screenshot while the window is minimized.",
+          "errorType": "Error",
+          "category": "浏览器窗口最小化导致截图中断，非产品缺陷；已恢复窗口并继续原工程",
+          "captureError": "Cannot capture a screenshot while the window is minimized.",
+          "fixture": {
+            "conversationId": "c65a8e1c-dc15-4009-9887-eaedf098038b",
+            "editorId": "971badb4-64e1-42ac-9157-a762d6187fb1",
+            "name": "ERYE199-068-2026-11-16T03-05-58-402Z"
+          },
+          "completed": "2026-11-16T03:06:30.512Z"
+        }
+      ],
+      "date": "2026-11-16",
+      "environment": "production",
+      "automation_status": "AUTO",
+      "script": "tools/editor/erye199/cases-051-068.mjs#068",
+      "automation_command": "npm run test:editor:199 -- --base-url https://app.cinlink.ai --cases 068",
+      "latest_execution_report": "results-068-v2-empty-project-production-20261116.md",
+      "latest_execution_batch": "2026-11-16T03-05-58-402Z",
+      "workspace_id": "34d783a5-d5d5-4f99-94c9-7bca65689763",
+      "screenshots": [
+        "evidence-068-v2-empty-project-production-20261116/068-initial-empty.png",
+        "evidence-068-v2-empty-project-production-20261116/068-refreshed-empty.png",
+        "evidence-068-v2-empty-project-production-20261116/068-editor-collapsed.png",
+        "evidence-068-v2-empty-project-production-20261116/068-reopened-empty.png"
+      ],
+      "definition": "cases.md#erye199-068-current"
+    }
+  ],
+  "report": "results-068-v2-empty-project-production-20261116.md"
+}

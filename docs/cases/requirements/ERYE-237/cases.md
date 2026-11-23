@@ -7,17 +7,17 @@ case_set_version: "2026-11-09-layered-execution"
 
 # ERYE-237 图像编辑能力详细测试用例
 
-更新：2026-11-09。已在原144个编号上重整，P0 95 / P1 48 / P2 1及需求来源不变。每行只列一个主执行入口；UI对应的Agent配对移至[Agent分支](agent-checks.md)，内部精度、费用与契约移至[技术检查](technical-checks.md)。执行前读[简明执行规则](execution-guide.md)。历史原文见[覆盖清单归档](coverage-baseline-20261109.md)，不再按旧长步骤执行。
+更新：2026-11-13。当前有效143条，P0 94 / P1 48 / P2 1；原029及UI/Agent/Technical分支已按用户要求删除，编号不复用。每行只列一个主执行入口；UI对应的Agent配对移至[Agent分支](agent-checks.md)，内部精度、费用与契约移至[技术检查](technical-checks.md)。执行前读[简明执行规则](execution-guide.md)。历史原文见[覆盖清单归档](coverage-baseline-20261109.md)，不再按旧长步骤执行。
 
 依据[云效需求](https://devops.aliyun.com/projex/req/ERYE-237)的v1.1正文＋2026-10-15 v1.2修订，以及用户指定的[Figma“图片编辑器-最新”](https://www.figma.com/design/SqGzwtxqNjFZa9QIvUPAlc/Workspace-System---Design?node-id=1816-50610)。需求最后修改2026-10-19 10:42:09（Asia/Shanghai），2026-11-05读取；云效评论/附件均0条。Figma评论未取得，不编造评论结论。
 
-**144个需求覆盖编号：47个UI主入口 / 25个Agent主入口 / 72个技术主入口；全部PLAN，无完整AUTO。新版001～005主分支已执行：2 Passed / 3 Failed；其余258分支Not Run（含其余139个主入口）。[本轮报告](results-001-005-layered-prod-20261109.md)。**
+**143个有效需求覆盖编号：46个UI主入口 / 25个Agent主入口 / 72个技术主入口；全部PLAN，无完整AUTO。新版001～005主分支已执行：2 Passed / 3 Failed；其余255分支Not Run（含其余138个主入口）。[本轮报告](results-001-005-layered-prod-20261109.md)。**
 
-历史旧版正式结果：1 Passed / 12 Failed / 12 Blocked / 119 Not Run，见[014～032报告](results-014-032-prod-20261109.md)。旧结果仅供回归定位，不直接继承为新版分支结果；既有缺陷仍有效。
+历史旧版正式结果：1 Passed / 12 Failed / 12 Blocked / 119 Not Run，见[014～032报告](results-014-032-prod-20261109.md)。旧结果仅供回归定位，不直接继承为新版分支结果；其他既有缺陷沿用原状态；029已退役，不再作为当前缺陷跟进。
 
 用例主步骤、Agent配对和技术检查分别记录结果。参数矩阵逐行执行、逐行判定，缺一个矩阵参数只阻塞该参数行；整例覆盖完成需所有必测分支完成。P-UI不要求内部ID、provider日志或账本；P-TECH保留对应证据门禁。原始Requirement/Mockup/Inferred QA Risk来源及锚点未改，拟定规则仍须批准。
 
-本轮正式失败关联：014/018/032→[FWXC-379](https://devops.aliyun.com/projex/project/1e401ac99539c3999e00e40006/bug#openWorkitemIdentifier=208c359a4550c1e3d299e5dc5a)，017/029→[FWXC-380](https://devops.aliyun.com/projex/project/1e401ac99539c3999e00e40006/bug#openWorkitemIdentifier=f83f190cfe0ef713c9414db2ba)，030→[FWXC-381](https://devops.aliyun.com/projex/project/1e401ac99539c3999e00e40006/bug#openWorkitemIdentifier=95e907f84a3c8a2dd59d0352c5)；均已上传实测图片及补充证据、回读通过，状态保持Failed。分组不代表共同根因已确认。
+本轮正式失败关联：014/018/032→[FWXC-379](https://devops.aliyun.com/projex/project/1e401ac99539c3999e00e40006/bug#openWorkitemIdentifier=208c359a4550c1e3d299e5dc5a)，017→[FWXC-380](https://devops.aliyun.com/projex/project/1e401ac99539c3999e00e40006/bug#openWorkitemIdentifier=f83f190cfe0ef713c9414db2ba)，030→[FWXC-381](https://devops.aliyun.com/projex/project/1e401ac99539c3999e00e40006/bug#openWorkitemIdentifier=95e907f84a3c8a2dd59d0352c5)；均已上传实测图片及补充证据、回读通过，状态保持Failed。分组不代表共同根因已确认。
 
 005/Agent最新按用户纠正使用带背景原图重跑，仍Failed（计费输入校验失败，未生成蓝底）；见[原图R2报告](results-005-original-prod-20261109-r2.md)。不再使用上一轮去背景图失败解释作为当前原因。
 
@@ -26,7 +26,7 @@ case_set_version: "2026-11-09-layered-execution"
 | 分组 | 条数 | P0 | P1 | P2 | 编号 |
 |---|---|---|---|---|---|
 | 打开、身份、版本与视图 | 13 | 11 | 2 | 0 | ERYE237-001～ERYE237-013 |
-| 画笔、文字、形状与共享历史 | 19 | 13 | 6 | 0 | ERYE237-014～ERYE237-032 |
+| 画笔、文字、形状与共享历史 | 18 | 12 | 6 | 0 | ERYE237-014～ERYE237-032（不含已删除029） |
 | 图上批注、对象绑定和引用 | 18 | 9 | 9 | 0 | ERYE237-033～ERYE237-050 |
 | 内置Agent意图、多步处理与调用结果 | 12 | 8 | 4 | 0 | ERYE237-051～ERYE237-062 |
 | 去背景、AI区域擦除与比例 | 14 | 12 | 2 | 0 | ERYE237-063～ERYE237-076 |
@@ -73,7 +73,6 @@ case_set_version: "2026-11-09-layered-execution"
 | ERYE237-026 | P0 | P-AGENT；可编辑文字T1已在左上；干净本地历史 | <a id="erye237-026"></a>**[Agent] 手动与Agent共用撤销历史**<br>1. UI画红线S1<br>2. 发送“将当前可编辑文字T1移到右下，保留其他对象，不合成或生成”<br>3. UI撤销一次<br>4. 发送“撤销上一步本地编辑”<br>5. UI重做两次 | 按顺序先撤销T1移动再撤销S1；两次重做恢复S1和T1移动，不出现两个独立历史栈 | Requirement §3.2/§5.3/A13 | [PLAN] | — | editor_undo/editor_redo |
 | ERYE237-027 | P0 | P-UI；有真实完成版V1/V2；已确认内容撤销入口 | <a id="erye237-027"></a>**[UI] 新编辑截断重做但保留历史文件**<br>撤销V2到V1；新增本地笔迹；检查重做及历史V2 | 重做旧路径不可用；V2历史仍可查看；切换查看历史不冒充内容撤销 | Requirement §5.3/A13/A21 | [PLAN] | — | Requirement §5.3/A13/A21 |
 | ERYE237-028 | P0 | P-AGENT；同工程真实AI完成结果V2及可访问父版本V1；内容撤销入口已确认 | <a id="erye237-028"></a>**[Agent] 恢复已撤销的生成结果**<br>1. UI执行内容撤销回V1<br>2. 发送“恢复刚撤销的已完成结果V2，不要重新生成”<br>3. 核对实际画布与完成历史 | 回到原V2内容及文件，不产生第二个图片任务或新完成版本；V1/V2均保留。provider次数与费用由Technical另核 | Requirement §5.3/A13 | [PLAN] | — | Requirement §5.3/A13 |
-| ERYE237-029 | P0 | P-UI；1254×1254源版；红色8px线和蓝色36px“导出测试”；无AI意图 | <a id="erye237-029"></a>**[UI] 仅绘制内容提交后完整保留**<br>随画笔引用发送“仅将当前红线和蓝色导出测试文字合成到图片，保留原尺寸及其他内容，不要AI重绘”；完成后下载PNG | 结果保留红线及准确文字；仍为1254×1254；其他内容不变 | Requirement §3.2/§7/A02 | [PLAN] | — | 1816:52044；editor_submit_interaction:compose |
 | ERYE237-030 | P0 | P-UI；源版圈外有红线；新增蓝字“保留内容”；红圈明确设仅供AI参考并确认生效 | <a id="erye237-030"></a>**[UI] 参考圈指导局部修改**<br>引用该草稿发送“将红圈内标签改成蓝色，保留新增的保留内容文字，不烘焙红圈，圈外原图内容不变”；完成后导出 | 标签改蓝且新增文字保留；参考红圈不进入成片；圈外原红线不丢失 | Requirement §3.2/§5.2/A02/A04 | [PLAN] | — | Requirement §3.2/§5.2/A02/A04 |
 | ERYE237-031 | P1 | P-UI；一份AI融合完成版；另有已确认保留的源绘制草稿 | <a id="erye237-031"></a>**[UI] 融合结果与保留草稿分开编辑**<br>在融合版尝试选中文字；再明确返回保留的源草稿继续编辑 | 融合像素不伪称原文字对象；保留草稿能恢复可编辑对象及正确来源 | Requirement §3.2/A02 | [PLAN] | — | Requirement §3.2/A02 |
 | ERYE237-032 | P0 | P-AGENT；干净图片工程；归一化点Q=(0.25,0.25)，可用字体 | <a id="erye237-032"></a>**[Agent] Agent多步本地编辑一次撤销**<br>1. 发送“在当前图归一化(0.1,0.1)添加白色48源像素可编辑文字新品，再将同一文字移到(0.7,0.1)，加红色8源像素箭头从(0.7,0.2)指向(0.25,0.25)。仅本地编辑并确定性合成，保留原尺寸，不要AI生成。整组作为一次撤销单元”<br>2. 检查文字和箭头的真实结果<br>3. 撤销一次 | 只有一个文字，位置及箭头目标正确；一次撤销恢复编辑前基线，不留下部分修改 | Requirement §4.2/§6.1/A12 | [PLAN] | — | overlay.add_text/update/add_shape |
@@ -233,3 +232,5 @@ case_set_version: "2026-11-09-layered-execution"
 ## 结果记录
 
 按[执行规则](execution-guide.md)填写“原ID、分支、参数行、版本、状态、证据”。UI通过不能代表Agent或技术通过；缺技术权限不阻塞已具备前置的UI分支。旧报告不回写，新报告使用版本2026-11-09-layered-execution。
+
+029已按用户要求删除，原条目仅保留于[退役归档](retired-case-029-20261113.json)，不参与后续执行、回归或缺陷汇总。

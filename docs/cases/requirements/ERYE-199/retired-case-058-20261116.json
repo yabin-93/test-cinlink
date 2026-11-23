@@ -1,0 +1,42 @@
+{
+  "date": "2026-11-16",
+  "case_id": "ERYE199-058",
+  "status": "Retired",
+  "source": "用户明确要求删除ERYE199-058并同步文档及进度",
+  "exclude_from_execution": true,
+  "reuse_id": false,
+  "original_row": "| ERYE199-058 | P1 | 旧客户端打开新项目 | 查看只读/拒绝策略 | 写入 minWriterVersion/requiredCapabilities；旧端只读保留未知对象或拒绝；不清除效果/轨道/关键帧 | PE18 | [BLOCKED] | [Ego脚本](../../../../tools/editor/erye199/cases-051-068.mjs)（入口 `058`）；[运行说明](automation.md) | 本轮生产：Blocked；[实际步骤及截图](results-051-068-production-20261113.md#erye199-058)；未提供可运行的旧客户端与包含新能力/未知对象的受控版本样本，无法核验旧端只读或拒绝及未知对象保留；当前网页打开新工程不代替旧端兼容。 |",
+  "original_registry": "ERYE199-058:\n  status: BLOCKED\n  script: \"tools/editor/erye199/cases-051-068.mjs#058\"\n  execution_status: \"Blocked\"\n  execution_report: \"docs/cases/requirements/ERYE-199/results-051-068-production-20261113.md\"\n  execution_note: \"未提供可运行的旧客户端与包含新能力/未知对象的受控版本样本，无法核验旧端只读或拒绝及未知对象保留；当前网页打开新工程不代替旧端兼容。\"\n  execution_method: \"Ego Lite生产有头；原生操作；无computer-use\"\n  automation_command: \"npm run test:editor:199 -- --base-url https://app.cinlink.ai --cases 058\"\n",
+  "original_script": "  async '058'(ctx,a){await ctx.prepare(baseline(a));await ctx.shot('old-client-prerequisite');return outcome('Blocked','未提供可运行的旧客户端与包含新能力/未知对象的受控版本样本，无法核验旧端只读或拒绝及未知对象保留；当前网页打开新工程不代替旧端兼容。',{target_steps_executed:false});},\n",
+  "previous_execution": {
+    "id": "ERYE199-058",
+    "completed": "2026-11-13T12:45:28.470Z",
+    "fixture": {
+      "conversationId": "4614c63d-f6c5-4387-8926-98b694ff57d8",
+      "editorId": "6d434763-d8a7-4a0a-aded-45bd02f565c4",
+      "name": "ERYE199-058-2026-11-13T12-29-40-982Z"
+    },
+    "automation": "tools/editor/erye199/cases-051-068.mjs#058",
+    "status": "Blocked",
+    "actual": "未提供可运行的旧客户端与包含新能力/未知对象的受控版本样本，无法核验旧端只读或拒绝及未知对象保留；当前网页打开新工程不代替旧端兼容。",
+    "target_steps_executed": false,
+    "screenshots": [
+      "evidence-051-068-production-20261113/058-old-client-prerequisite.png"
+    ],
+    "latest_execution_report": "results-051-068-production-20261113.md",
+    "latest_execution_batch": "2026-11-13T12-29-40-982Z",
+    "workspace_id": "ad06a173-72fb-43cd-b477-3462d41cd2dd",
+    "automation_status": "BLOCKED",
+    "script": "tools/editor/erye199/cases-051-068.mjs#058",
+    "automation_command": "npm run test:editor:199 -- --base-url https://app.cinlink.ai --cases 058",
+    "execution_method": "Ego Lite有头页面/原生操作；工程接口仅准备回读；无computer-use"
+  },
+  "previous_counts": {
+    "Passed": 18,
+    "Failed": 7,
+    "Blocked": 2,
+    "Not Applicable": 31,
+    "Not Run": 6
+  },
+  "note": "删除有效定义及执行入口，不将旧Blocked改成Passed或Not Applicable；原实测报告与截图保留历史。"
+}

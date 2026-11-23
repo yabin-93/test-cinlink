@@ -1,0 +1,41 @@
+{
+  "date": "2026-11-16",
+  "environment": "production",
+  "counts": {
+    "Not Run": 3,
+    "In Progress": 1,
+    "Failed": 1
+  },
+  "cases": [
+    {
+      "id": "ICP-EC-01",
+      "status": "Not Run",
+      "actual": "尚未完成执行与业务验收。",
+      "conversationId": null
+    },
+    {
+      "id": "ICP-EC-02",
+      "status": "In Progress",
+      "actual": "尚未完成执行与业务验收。",
+      "conversationId": "1efb5685-b017-4572-8603-8ac9a3c1affb"
+    },
+    {
+      "id": "ICP-EC-03",
+      "status": "Not Run",
+      "actual": "尚未完成执行与业务验收。",
+      "conversationId": null
+    },
+    {
+      "id": "ICP-EC-04",
+      "status": "Not Run",
+      "actual": "尚未完成执行与业务验收。",
+      "conversationId": null
+    },
+    {
+      "id": "ICP-EC-05",
+      "status": "Failed",
+      "actual": "补齐产品正文和PNG Logo后，首轮生成视频报Tencent VOD video processing failed at the provider，无成片；后续4轮缺少可修改成片，未执行。",
+      "conversationId": "b36602f5-04b8-42f7-93cf-95d490f3f1c0"
+    }
+  ]
+}

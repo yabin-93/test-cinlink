@@ -1,0 +1,200 @@
+{
+  "migrated": true,
+  "requirement": "ERYE-199",
+  "currentStatus": "../../cases/requirements/ERYE-199/execution-status-multitrack-20261118.json",
+  "idMapping": [
+    {
+      "legacy": "ECMT-001",
+      "id": "ERYE199-069"
+    },
+    {
+      "legacy": "ECMT-002",
+      "id": "ERYE199-070"
+    },
+    {
+      "legacy": "ECMT-003",
+      "id": "ERYE199-071"
+    },
+    {
+      "legacy": "ECMT-004",
+      "id": "ERYE199-072"
+    },
+    {
+      "legacy": "ECMT-005",
+      "id": "ERYE199-073"
+    },
+    {
+      "legacy": "ECMT-006",
+      "id": "ERYE199-074"
+    },
+    {
+      "legacy": "ECMT-007",
+      "id": "ERYE199-075"
+    },
+    {
+      "legacy": "ECMT-008",
+      "id": "ERYE199-076"
+    },
+    {
+      "legacy": "ECMT-009",
+      "id": "ERYE199-077"
+    },
+    {
+      "legacy": "ECMT-010",
+      "id": "ERYE199-078"
+    },
+    {
+      "legacy": "ECMT-011",
+      "id": "ERYE199-079"
+    },
+    {
+      "legacy": "ECMT-012",
+      "id": "ERYE199-080"
+    },
+    {
+      "legacy": "ECMT-013",
+      "id": "ERYE199-081"
+    },
+    {
+      "legacy": "ECMT-014",
+      "id": "ERYE199-082"
+    },
+    {
+      "legacy": "ECMT-015",
+      "id": "ERYE199-083"
+    },
+    {
+      "legacy": "ECMT-016",
+      "id": "ERYE199-084"
+    },
+    {
+      "legacy": "ECMT-017",
+      "id": "ERYE199-085"
+    },
+    {
+      "legacy": "ECMT-018",
+      "id": "ERYE199-086"
+    },
+    {
+      "legacy": "ECMT-019",
+      "id": "ERYE199-087"
+    },
+    {
+      "legacy": "ECMT-020",
+      "id": "ERYE199-088"
+    },
+    {
+      "legacy": "ECMT-021",
+      "id": "ERYE199-089"
+    },
+    {
+      "legacy": "ECMT-022",
+      "id": "ERYE199-090"
+    },
+    {
+      "legacy": "ECMT-023",
+      "id": "ERYE199-091"
+    },
+    {
+      "legacy": "ECMT-024",
+      "id": "ERYE199-092"
+    },
+    {
+      "legacy": "ECMT-025",
+      "id": "ERYE199-093"
+    },
+    {
+      "legacy": "ECMT-026",
+      "id": "ERYE199-094"
+    },
+    {
+      "legacy": "ECMT-027",
+      "id": "ERYE199-095"
+    },
+    {
+      "legacy": "ECMT-028",
+      "id": "ERYE199-096"
+    },
+    {
+      "legacy": "ECMT-029",
+      "id": "ERYE199-097"
+    },
+    {
+      "legacy": "ECMT-030",
+      "id": "ERYE199-098"
+    },
+    {
+      "legacy": "ECMT-031",
+      "id": "ERYE199-099"
+    },
+    {
+      "legacy": "ECMT-032",
+      "id": "ERYE199-100"
+    },
+    {
+      "legacy": "ECMT-033",
+      "id": "ERYE199-101"
+    },
+    {
+      "legacy": "ECMT-034",
+      "id": "ERYE199-102"
+    },
+    {
+      "legacy": "ECMT-035",
+      "id": "ERYE199-103"
+    },
+    {
+      "legacy": "ECMT-036",
+      "id": "ERYE199-104"
+    },
+    {
+      "legacy": "ECMT-037",
+      "id": "ERYE199-105"
+    },
+    {
+      "legacy": "ECMT-038",
+      "id": "ERYE199-106"
+    },
+    {
+      "legacy": "ECMT-039",
+      "id": "ERYE199-107"
+    },
+    {
+      "legacy": "ECMT-040",
+      "id": "ERYE199-108"
+    },
+    {
+      "legacy": "ECMT-041",
+      "id": "ERYE199-109"
+    },
+    {
+      "legacy": "ECMT-042",
+      "id": "ERYE199-110"
+    },
+    {
+      "legacy": "ECMT-043",
+      "id": "ERYE199-111"
+    },
+    {
+      "legacy": "ECMT-044",
+      "id": "ERYE199-112"
+    },
+    {
+      "legacy": "ECMT-045",
+      "id": "ERYE199-113"
+    },
+    {
+      "legacy": "ECMT-046",
+      "id": "ERYE199-114"
+    },
+    {
+      "legacy": "ECMT-047",
+      "id": "ERYE199-115"
+    },
+    {
+      "legacy": "ECMT-048",
+      "id": "ERYE199-116"
+    }
+  ],
+  "note": "历史别名，不作为独立有效用例或执行统计来源"
+}

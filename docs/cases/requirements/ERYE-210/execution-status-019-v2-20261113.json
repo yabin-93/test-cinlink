@@ -1,0 +1,253 @@
+{
+  "requirement": "ERYE-210",
+  "date": "2026-11-13",
+  "environment": "production",
+  "browser": "headed Google Chrome",
+  "batch": "prod-019-v2-20261113-06",
+  "status": "CompletedWithPrerequisiteGap",
+  "counts": {
+    "Passed": 0,
+    "Failed": 0,
+    "Blocked": 1
+  },
+  "cases": [
+    {
+      "id": "ERYE210-019",
+      "status": "Blocked",
+      "reason": "单独删除S1未观察到真实关联配音拒绝；候选冲突前置未成立，不强制套用整批拒绝预期，也不因缺锁轨按钮判不适用",
+      "automated": true,
+      "workspaceId": "c8f42994-a2a1-4879-8634-36a23f44bd00",
+      "annotations": [
+        {
+          "type": "blocked",
+          "description": "单独删除S1未观察到真实关联配音拒绝；候选冲突前置未成立，不强制套用整批拒绝预期，也不因缺锁轨按钮判不适用"
+        },
+        {
+          "type": "skip",
+          "description": "单独删除S1未观察到真实关联配音拒绝；候选冲突前置未成立，不强制套用整批拒绝预期，也不因缺锁轨按钮判不适用"
+        }
+      ],
+      "projects": {
+        "019-legal-control": {
+          "cid": "f46ce897-9bc2-4805-b542-652a3d690bcb",
+          "pid": "28eb05c5-ace5-4c2d-8cae-6558ab7b7aad",
+          "name": "ERYE210-019-legal-control-28eb05c5"
+        },
+        "019-conflict-control": {
+          "cid": "3cae1aa6-7e22-4293-91d7-136c20a70063",
+          "pid": "cd32c612-9a30-4069-92cb-d2bea7963894",
+          "name": "ERYE210-019-conflict-control-cd32c612"
+        }
+      },
+      "checks": [
+        {
+          "stage": "legal-control",
+          "project": {
+            "cid": "f46ce897-9bc2-4805-b542-652a3d690bcb",
+            "pid": "28eb05c5-ace5-4c2d-8cae-6558ab7b7aad",
+            "name": "ERYE210-019-legal-control-28eb05c5"
+          },
+          "a1Deleted": true,
+          "unrelatedContentPreserved": true
+        },
+        {
+          "stage": "live-association",
+          "expectedSubtitleFile": "file_cloud_fcgkqdmk2omtb6kbqnasxzpblc",
+          "expectedBlock": "voice_4a2826d7-da73-4ccd-8c23-050b76eb8476",
+          "currentD1File": "file_cloud_fcgkqdmk2omtb6kbqnasxzpblc",
+          "currentD1Block": "voice_4a2826d7-da73-4ccd-8c23-050b76eb8476",
+          "sameAssociation": true
+        }
+      ],
+      "screenshot": "019\\ERYE210-019-skipped.png",
+      "finishedAt": "2026-11-13T10:41:55.852Z",
+      "definitionVersion": "v2",
+      "actual": "019 v2生产Chrome执行Blocked：22秒起独立音频A1单删对照通过；删除前核验S1/D1引用一致，但单删S1未出现关联拒绝，S1被删除后旧配音仍ready、配音稿引用随后变为独立文件。受限对象前置未成立，未建立混合工程、未执行同时删除S1/A1，不判整批通过或关联保护缺陷。附带发现14秒A1删除会裁掉原视频/原声同范围，已单列保留现场，未同步云效。",
+      "sourceBatch": "prod-019-v2-20261113-06",
+      "report": "results-019-v2-prod-20261113.md",
+      "screenshots": [
+        "019-v2-legal-control.png",
+        "019-v2-conflict-not-established.png"
+      ],
+      "liveAssociation": {
+        "project": {
+          "cid": "3cae1aa6-7e22-4293-91d7-136c20a70063",
+          "pid": "cd32c612-9a30-4069-92cb-d2bea7963894",
+          "name": "ERYE210-019-conflict-control-cd32c612"
+        },
+        "expectedSubtitleFile": "file_cloud_fcgkqdmk2omtb6kbqnasxzpblc",
+        "expectedBlock": "voice_4a2826d7-da73-4ccd-8c23-050b76eb8476",
+        "currentD1File": "file_cloud_fcgkqdmk2omtb6kbqnasxzpblc",
+        "currentD1Block": "voice_4a2826d7-da73-4ccd-8c23-050b76eb8476",
+        "sameAssociation": true
+      },
+      "finalObservation": {
+        "project": {
+          "cid": "3cae1aa6-7e22-4293-91d7-136c20a70063",
+          "pid": "cd32c612-9a30-4069-92cb-d2bea7963894",
+          "name": "ERYE210-019-conflict-control-cd32c612"
+        },
+        "revision": 3,
+        "alerts": [],
+        "subtitleEdits": [
+          {
+            "fileId": "file_cloud_fcgkqdmk2omtb6kbqnasxzpblc",
+            "diff": [
+              {
+                "text": "",
+                "end_sec": 6,
+                "identity": "voice_4a2826d7-da73-4ccd-8c23-050b76eb8476",
+                "start_sec": 4
+              }
+            ]
+          }
+        ],
+        "dubbing": [
+          {
+            "id": "dubbing_de78cfdcc444e051c066e36a",
+            "scriptFile": "file_cloud_4md3eff6s4mejqwarjnihstk3v",
+            "block": "voice_4a2826d7-da73-4ccd-8c23-050b76eb8476",
+            "audioFile": "file_cloud_t425zrk7vp7r5zsxft2twjps6o",
+            "state": "ready",
+            "source": "",
+            "text": ""
+          },
+          {
+            "id": "dubbing_cdd31c72591d3a9ff0498da8",
+            "scriptFile": "file_cloud_4md3eff6s4mejqwarjnihstk3v",
+            "block": "voice_bb308a12-29a7-4457-a4e1-fd5e02575642",
+            "audioFile": "file_cloud_b42mih23tjwh7thdqiyjjhohca",
+            "state": "ready",
+            "source": "",
+            "text": ""
+          }
+        ],
+        "video": [
+          {
+            "start": 0,
+            "sourceIn": 0,
+            "sourceOut": 20
+          }
+        ],
+        "independentAudio": [
+          {
+            "start": 22,
+            "fileId": "file_cloud_b42mih23tjwh7thdqiyjjhohca",
+            "sourceIn": 0,
+            "sourceOut": 1.3931972789115648
+          }
+        ]
+      },
+      "mixedDeleteExecuted": false,
+      "cloudWrites": 0,
+      "additionalDefects": [
+        {
+          "case": "ERYE210-019",
+          "scope": "additional_observation_independent_audio_delete",
+          "qualificationStatus": "Blocked",
+          "mixedDeleteExecuted": false,
+          "workitemId": "13b2ef77469fde31d9ca46f97a",
+          "key": "ERYE210-019-INDEPENDENT-AUDIO-DELETE-PROD-20261113",
+          "serialNumber": "FWXC-513",
+          "verifiedAt": "2026-11-13T18:47:48.2397752+08:00",
+          "verified": true,
+          "createdNow": true,
+          "url": "https://devops.aliyun.com/projex/project/1e401ac99539c3999e00e40006/bug#openWorkitemIdentifier=13b2ef77469fde31d9ca46f97a",
+          "screenshots": 1,
+          "attachments": [
+            {
+              "size": 532869,
+              "name": "019-v2-14s-audio-delete-side-effect.png",
+              "sha256": "2260d3af448ab8ada10f6ecaf0cab4ed4a5f121f9e8437e80eff6ec1cbdf1c53",
+              "id": "4db904de86278c489bb7de690d"
+            },
+            {
+              "size": 3385,
+              "name": "case-evidence.json",
+              "sha256": "2cc3081aa942f3ab06fee6c855d503b58d92539c99ef150a0c2c0c8e4763ee0a",
+              "id": "10f21c1e5a43276f6f9d446c3d"
+            },
+            {
+              "size": 10274419,
+              "name": "E196-A.mp4",
+              "sha256": "c453166c6396fe1c427c8a045ad2f84a8f5d4e4ff0f905b47d79114172829d15",
+              "id": "32efa9c82b4afff916e2394a24"
+            },
+            {
+              "size": 122924,
+              "name": "A1-independent.wav",
+              "sha256": "717f9c28eb41b30cd0cdd11d9e830e065771eeac995b3a435d848fe067037b34",
+              "id": "7c23b77541edfd29bd8c0bcfd0"
+            },
+            {
+              "size": 118,
+              "name": "voiceover-zh-preparation.srt",
+              "sha256": "777e6c8bcac2cbbf82eeac0c4716dfb7b3186c2c82075fc12353aa6b4d24087b",
+              "id": "b2521fd002b23e4639bf69d593"
+            }
+          ],
+          "status": "🤔AI提缺陷",
+          "assignedTo": "牛诗晴",
+          "sprint": "重构10-29",
+          "labels": [
+            "生产环境"
+          ],
+          "priority": "高",
+          "severity": "2-严重",
+          "attachmentCount": 5,
+          "localRecord": "docs/defects/ERYE210-019-independent-audio-delete-production-20261113.md",
+          "method": "official OpenAPI",
+          "historicalDeduplication": false,
+          "preconditionsPerDefect": 3
+        }
+      ]
+    }
+  ],
+  "attempts": [
+    {
+      "batch": "prod-019-v2-20261113-01",
+      "classification": "Fixture prerequisite missing",
+      "note": "普通字幕与真实配音稿文件分离，尚未建立S1，未执行删除。"
+    },
+    {
+      "batch": "prod-019-v2-20261113-02",
+      "classification": "Fixture error",
+      "note": "准备脚本音轨role误填bgm，UI不支持；已改background。未执行删除，不计产品失败。"
+    },
+    {
+      "batch": "prod-019-v2-20261113-03",
+      "classification": "Fixture error",
+      "note": "已有配音稿同时存在于隐藏和可见集合导致文件身份重复；已移除重复项。对照未成立，不计产品失败。"
+    },
+    {
+      "batch": "prod-019-v2-20261113-04",
+      "classification": "Additional business observation",
+      "note": "14秒独立音频Delete后，原视频和原声同区间也被裁切；原始Failed及截图保留，未执行混合分支。"
+    },
+    {
+      "batch": "prod-019-v2-20261113-05",
+      "classification": "Blocked qualification",
+      "note": "A1改放22秒后单删通过；单删S1未出现关联拒绝。为避免误认原文件与重建配音稿关联，新增删除前引用核验。"
+    },
+    {
+      "batch": "prod-019-v2-20261113-06",
+      "classification": "Final Blocked",
+      "note": "确认删除前关联一致；仍无关联拒绝，S1消失，旧配音保留且引用变为独立稿。混合删除前置未成立。"
+    }
+  ],
+  "additionalObservation": "14秒独立音频删除影响原视频/原声；非混合批次结果，待单独回归",
+  "cloudWrites": 0,
+  "cloudSync019Observation": {
+    "requirement": "ERYE-210",
+    "date": "2026-11-13",
+    "method": "official OpenAPI",
+    "createdThisRequest": 1,
+    "historicalDeduplication": false,
+    "executionBatch": "prod-019-v2-20261113-04",
+    "caseQualificationBatch": "prod-019-v2-20261113-06",
+    "scope": "additional_observation_only",
+    "verified": true,
+    "screenshots": 1,
+    "attachments": 5
+  }
+}

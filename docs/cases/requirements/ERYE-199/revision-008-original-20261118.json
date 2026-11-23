@@ -1,0 +1,33 @@
+{
+  "previousStatus": "Failed",
+  "previousActual": "视频/音频/图片的素材登记仍没有独立撤销入口；登记与放入分离、三种素材放入及放入撤销均通过。",
+  "previousExpected": "登记与放入是两个动作；三种素材均可放入；步骤可分别撤销",
+  "previousEvidenceReport": "results-failed-ten-rerun-production-20261116.md",
+  "screenshots": [
+    "evidence-failed-ten-rerun-production-20261116/008-video-registered.png",
+    "evidence-failed-ten-rerun-production-20261116/008-video-placed.png",
+    "evidence-failed-ten-rerun-production-20261116/008-audio-registered.png",
+    "evidence-failed-ten-rerun-production-20261116/008-audio-placed.png",
+    "evidence-failed-ten-rerun-production-20261116/008-image-registered.png",
+    "evidence-failed-ten-rerun-production-20261116/008-image-placed.png"
+  ],
+  "defect": {
+    "id": "FWXC-486",
+    "workitem_id": "1f7044b8c2c88b7d275ef4f643",
+    "url": "https://devops.aliyun.com/projex/project/1e401ac99539c3999e00e40006/bug#openWorkitemIdentifier=1f7044b8c2c88b7d275ef4f643",
+    "status": "🤔AI提缺陷",
+    "assigned_to": "牛诗晴",
+    "verified": true,
+    "screenshots": 4,
+    "attachments": 7,
+    "synced_at": "2026-11-13T16:17:30.8090483+08:00",
+    "local_report": "docs/defects/ERYE199-008-asset-registration-undo-production-20261113.md",
+    "latest_regression": {
+      "date": "2026-11-16",
+      "case_status": "Failed",
+      "reported_defect_reproduced": true,
+      "report": "results-failed-ten-rerun-production-20261116.md",
+      "cloud_status_changed": false
+    }
+  }
+}

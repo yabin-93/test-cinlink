@@ -1,5 +1,47 @@
 # ERYE-196 编辑器业务自动化
 
+<!-- ERYE210-RETIRE-FAILED-11-20261113 -->
+## ERYE-210退役原11条失败用例（2026-11-13）
+
+用户确认退役002/004/005/007/010/013/015/018/020/040/041，保留已通过的021、025～027、029～035 v2原编号，不重复新增。有效用例54→43：28P/0F/9B/0NA/6NR；有效脚本38个（32 AUTO、6 BLOCKED），另5 PLAN。退役编号不复用，并在测试注册前排除。
+
+原失败结果、截图、云效缺陷和回执均保留。当前0 Failed来自范围调整，不表示旧问题已修复；本次没有产品执行或云效写入。以下原54条/49入口及11 Failed统计均属历史时点。
+
+[退役清单与历史](../../docs/cases/requirements/ERYE-210/retired-failed-cases-20261113.md) · [当前43条进度](../../docs/cases/requirements/ERYE-210/execution-status-current.md)。
+<!-- /ERYE210-RETIRE-FAILED-11-20261113 -->
+
+<!-- ERYE210-V2-EXECUTION-20261113 -->
+## ERYE-210当前功能11条v2生产Chrome执行（2026-11-13）
+
+本批11 Passed / 0 Failed / 0 Blocked / 0 Not Applicable / 0 Not Run；54条当前28 Passed / 11 Failed / 9 Blocked / 0 Not Applicable / 6 Not Run。021、025～027、029～035新版已实跑，截图及脱敏核验数据归档；原v1历史、其他用例及FWXC-516/518等既有云效关联保持。新项目/独立工程、串行零自动重试，实际失败与脚本/前置错误分开记录；未重复提交受理未知任务。本次没有云效写入或代码推送。
+
+[逐例结果与截图](../../docs/cases/requirements/ERYE-210/results-021-035-v2-prod-20261113.md) · [当前进度](../../docs/cases/requirements/ERYE-210/execution-status-current.md)。
+<!-- /ERYE210-V2-EXECUTION-20261113 -->
+
+<!-- ERYE210-CURRENT-FEATURES-V2-20261113 -->
+## ERYE-210阻塞用例按现有功能优化（2026-11-13，未执行）
+
+021、025～027、029～035共11条改为v2，明确前置、完整输入、步骤及预期，并同步脚本；新定义Not Run，旧Blocked/截图归档。045～049缺真实旧入口/缓存/回退环境，继续Blocked；当前页面导航不能替代迁移验收。原跨账号、草稿冲突、跨词/无词级/双语配音风险单列保留，未声称新版覆盖。
+
+54条当前17P/11F/9B/0NA/17NR；49个入口43 AUTO、6 BLOCKED门禁，另5 PLAN。040/041仍Failed、FWXC-516/518等回执保持。此次只改定义/脚本/进度，未跑生产任务、未改云效。
+
+[逐条原因和v2用例](../../docs/cases/requirements/ERYE-210/case-021-035-v2-current-features-20261113.md) · [当前进度](../../docs/cases/requirements/ERYE-210/execution-status-current.md)。
+<!-- /ERYE210-CURRENT-FEATURES-V2-20261113 -->
+
+<!-- ERYE210-021-049-20261113 -->
+## ERYE210-021～049生产Chrome执行完成（2026-11-13）
+
+本批29条：**11 Passed / 2 Failed / 16 Blocked / 0 Not Applicable / 0 Not Run**。54条当前：**17 Passed / 11 Failed / 20 Blocked / 0 Not Applicable / 6 Not Run**；016 v2及050～054仍Not Run，001～020既有结果和云效回执保留。实际页面分支与11条前置门禁分列，局部通过不算整例通过。
+
+新增021～049脚本，当前49个入口（37 AUTO、12 BLOCKED门禁），其余5条PLAN。脚本/准备错误保留历史；037/039沿原已完成场景复核，无重复生成。失败截图与SHA256清单、步骤及结果已归档；没有云效写入或代码推送。
+
+[本轮报告](../../docs/cases/requirements/ERYE-210/results-021-049-prod-20261113.md) · [当前逐例进度](../../docs/cases/requirements/ERYE-210/execution-status-current.md)。
+<!-- /ERYE210-021-049-20261113 -->
+
+ERYE-199的001～020保留Ego Lite有头脚本。015已优化为v2，仅验轨道图标隐藏/显示、静音/启用及刷新恢复，已实跑Passed；使用`npm run test:editor:199 -- --base-url https://app.cinlink.ai --cases 015`，不验证solo或导出隔离。当前011/013/014及用户确认功能未实现先跳过的016/017/018/020为Not Applicable；019 v2仅验已实现四项静态变换及刷新/素材隔离，新工程实跑Passed；006仍Blocked；020本轮不适用。[最新状态和截图](../../docs/cases/requirements/ERYE-199/execution-status-current.md)及[配置与范围](erye199/README.md)保留旧版历史；真实执行会创建测试数据，不使用computer-use。
+
+ERYE-210 的001～010使用独立入口 `npm run test:editor:210`，运行配置、Chrome登录方式、素材前置及未覆盖分支见[ERYE-210自动化说明](../../docs/cases/requirements/ERYE-210/automation.md)。
+
 统一入口：[用例与脚本登记](../../docs/cases/requirements/ERYE-196/automation.md)。
 
 ```powershell
@@ -134,7 +176,7 @@ return await module.runB03({
 
 本轮唯一提示词：
 
-> 先只做一步：在当前工程“英文30S.mp4”中裁掉视频片段开头4秒，暂时不移动片段，也不调整字幕和旁白。
+> 只裁掉当前工程唯一视频片段的开头4秒。保留片段位置、字幕和旁白。
 
 发送前通过真实预览进度条取得原视频4秒参考帧，并恢复原播放头位置。使用实际指针/键盘和控件公布的步长定位，不仅修改DOM值；核对媒体实际时间、就绪状态及原始截图。浏览器允许像素读取时保存视频帧SHA256作裁后首帧对照，不使用AI生成图或改图替代证据。
 
@@ -143,3 +185,15 @@ return await module.runB03({
 终态后记录真实失败步骤、参数及截图，核对保存内容；确认没有用户草稿/后续修改后刷新同一标签页、通过原入口展开编辑器，验证实际工程、保存结果及无重复提交。结果和原始证据仅留本机批次目录，脱敏摘要与必要截图可归档到本需求的独立证据目录。
 
 补槽时记录原run及真实问题/选择值，在已有窗口填写后继续，只用`observe(ctx, 'B03')`及`finishB03(ctx)`收尾，不能再次调用`runB03`发送。排他启动标记在受理未知时也保留，须先回读原任务。无内容改动则不撤销；有改动且能确认仅本次成功写入、未夹入用户修改时只尝试一次页面撤销，恢复不全即停止，不覆盖JSON或连续撤销。此清理不替代B20/B21验收。
+
+
+ERYE-199本轮新增051～059、062～068共16条自动化入口，用户已删除060/061；运行 `npm run test:editor:199 -- --base-url https://app.cinlink.ai --cases 051-068` 会自动排除两条退役编号。021～049继续暂不接入，不使用此范围代跑。实际结果与分支见[051～068生产报告](../../docs/cases/requirements/ERYE-199/results-051-068-production-20261113.md)，脚本与命令见[说明](erye199/README.md)。
+
+
+2026-11-16：ERYE199-058已删除，`test:editor:199 -- --cases 051-068`当前自动排除058/060/061，现行15条；单独058不执行，原证据保留历史。[范围调整](../../docs/cases/requirements/ERYE-199/retired-case-058-20261116.md)。
+
+## ERYE-210 045～049（2026-11-16）
+
+当前功能5条接入默认生产有头Chrome配置，唯一注册`tests/editor/erye210-current-five.spec.ts`；运行`npm run test:editor:210 -- --grep 'ERYE210-04[5-9] '`。047/048先从原生翻译配音快捷入口完成独立目标语言工程，测试时只读取已有声音；本地位置登记由`CINLINK_ERYE210_DIRECT_FIXTURE_047/_048`指定。不要用手工字幕普通工程替代，也不要在捕获基线时重复创建或生成配音。
+
+`erye210-translation-shortcut.mjs`准备并观察原生翻译配音任务，`erye210-five-prepare.mjs`仅准备原片/英语字幕及水印；已有任务用原检查点观察，不重复提交。`archive-erye210-current-five.py`归档本轮脱敏证据并保护014完整结果；原始工程/鉴权/签名响应仅本机留存。当前实际1P/2F/2B、43条38P/2F/3B，详见[本轮报告](../../docs/cases/requirements/ERYE-210/results-045-049-current-functions-prod-20261116.md)和[自动化说明](../../docs/cases/requirements/ERYE-210/automation.md)。

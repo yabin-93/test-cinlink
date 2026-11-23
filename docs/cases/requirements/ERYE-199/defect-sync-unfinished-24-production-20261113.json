@@ -1,0 +1,158 @@
+{
+  "method": "official OpenAPI via tools/yunxiao",
+  "key": "ERYE199-UNFINISHED-24-PROD-20261113",
+  "created": 1,
+  "deduplication": false,
+  "defect": {
+    "id": "FWXC-525",
+    "workitem_id": "1bea8a02a752c39eb065fe77f6",
+    "url": "https://devops.aliyun.com/projex/project/1e401ac99539c3999e00e40006/bug#openWorkitemIdentifier=1bea8a02a752c39eb065fe77f6",
+    "title": "【生产环境】【ERYE-199】【功能未实现】编辑器高级能力未完成，影响原24条用例验收",
+    "status": "🤔AI提缺陷",
+    "assigned_to": "牛诗晴",
+    "verified": true,
+    "screenshots": 6,
+    "attachments": 7,
+    "synced_at": "2026-11-13T20:26:03.6375799+08:00",
+    "local_report": "docs/defects/ERYE199-unfinished-24-production-20261113.md",
+    "scope": "原24条未完成需求汇总；不代表当前6条v2执行失败",
+    "case_ids": [
+      "ERYE199-021",
+      "ERYE199-022",
+      "ERYE199-023",
+      "ERYE199-024",
+      "ERYE199-025",
+      "ERYE199-026",
+      "ERYE199-027",
+      "ERYE199-028",
+      "ERYE199-029",
+      "ERYE199-031",
+      "ERYE199-032",
+      "ERYE199-033",
+      "ERYE199-034",
+      "ERYE199-035",
+      "ERYE199-037",
+      "ERYE199-038",
+      "ERYE199-039",
+      "ERYE199-041",
+      "ERYE199-042",
+      "ERYE199-044",
+      "ERYE199-045",
+      "ERYE199-046",
+      "ERYE199-047",
+      "ERYE199-048"
+    ]
+  },
+  "images": [
+    {
+      "path": "021-agent-terminal.png",
+      "caption": "ERYE199-021：关键帧能力缺口；022依赖该前置，未独立执行后续目标。",
+      "sha256": "e66d92bc6b734f07d2d8239213978949f1647e5b2cf39b0619002048b8c08494"
+    },
+    {
+      "path": "023-agent-terminal.png",
+      "caption": "ERYE199-023：可编辑视频蒙版能力缺口；024依赖该前置。",
+      "sha256": "9be741ae9abf86cd99a94b7e539c5ee2329426306a1f81fbbc0e2fa51cf4fbde"
+    },
+    {
+      "path": "025-agent-terminal.png",
+      "caption": "ERYE199-025：工程内效果栈及排序能力缺口；026、047受此前置影响。",
+      "sha256": "3c8c365d7e82f1fd8aff35207599dced4f14bd04a944a869291abb70ca064b86"
+    },
+    {
+      "path": "028-agent-terminal.png",
+      "caption": "ERYE199-028：已支持全局字号，但段级／分轨／双语主副行独立样式未具备。",
+      "sha256": "353c1b754488ad2ebce1e61fcbe7cde825f89a38709de7464fcdea5b64314937"
+    },
+    {
+      "path": "042-agent-terminal.png",
+      "caption": "ERYE199-042：片段音量已支持，但轨级混音、声像、solo、音量关键帧及电平表未具备。",
+      "sha256": "831d8c2f33e84f0be190a282d6d772d7a8d2f76dfb001d3aa0304ce0a103ec52"
+    },
+    {
+      "path": "048-agent-terminal.png",
+      "caption": "ERYE199-048：当前未提供真实代理／预览质量切换及标识；普通全屏不等于代理。",
+      "sha256": "f2721130975ad68a1454fd60b9f0f1ed35af517b317a408573d427ac22450297"
+    }
+  ],
+  "attachment_receipts": [
+    {
+      "sha256": "e66d92bc6b734f07d2d8239213978949f1647e5b2cf39b0619002048b8c08494",
+      "size": 417628,
+      "name": "021-agent-terminal.png",
+      "id": "f41dca104a32f26eaa42a03ae1"
+    },
+    {
+      "sha256": "9be741ae9abf86cd99a94b7e539c5ee2329426306a1f81fbbc0e2fa51cf4fbde",
+      "size": 468551,
+      "name": "023-agent-terminal.png",
+      "id": "6875492e1d2d75214d92ac4691"
+    },
+    {
+      "sha256": "3c8c365d7e82f1fd8aff35207599dced4f14bd04a944a869291abb70ca064b86",
+      "size": 466993,
+      "name": "025-agent-terminal.png",
+      "id": "21a0bee943e119f8dc63d7a9a2"
+    },
+    {
+      "sha256": "353c1b754488ad2ebce1e61fcbe7cde825f89a38709de7464fcdea5b64314937",
+      "size": 427804,
+      "name": "028-agent-terminal.png",
+      "id": "00ce49f0b64accd819483024bd"
+    },
+    {
+      "sha256": "831d8c2f33e84f0be190a282d6d772d7a8d2f76dfb001d3aa0304ce0a103ec52",
+      "size": 720355,
+      "name": "042-agent-terminal.png",
+      "id": "5ad5b70803ae1a3626d925e944"
+    },
+    {
+      "sha256": "f2721130975ad68a1454fd60b9f0f1ed35af517b317a408573d427ac22450297",
+      "size": 414180,
+      "name": "048-agent-terminal.png",
+      "id": "4dca2391251524b5cd78f2c254"
+    },
+    {
+      "sha256": "b773e4fdd5e4b5f4e8ec5fdc2340130d32fa8bb92755fb105485523ed2da6980",
+      "size": 19042,
+      "name": "evidence-summary.json",
+      "id": "bd29f96b2be64fc929d8c1d0e5"
+    }
+  ],
+  "case_ids": [
+    "ERYE199-021",
+    "ERYE199-022",
+    "ERYE199-023",
+    "ERYE199-024",
+    "ERYE199-025",
+    "ERYE199-026",
+    "ERYE199-027",
+    "ERYE199-028",
+    "ERYE199-029",
+    "ERYE199-031",
+    "ERYE199-032",
+    "ERYE199-033",
+    "ERYE199-034",
+    "ERYE199-035",
+    "ERYE199-037",
+    "ERYE199-038",
+    "ERYE199-039",
+    "ERYE199-041",
+    "ERYE199-042",
+    "ERYE199-044",
+    "ERYE199-045",
+    "ERYE199-046",
+    "ERYE199-047",
+    "ERYE199-048"
+  ],
+  "new_execution": false,
+  "execution_status_unchanged": true,
+  "v2_pending_case_ids": [
+    "ERYE199-028",
+    "ERYE199-029",
+    "ERYE199-034",
+    "ERYE199-042",
+    "ERYE199-047",
+    "ERYE199-048"
+  ]
+}

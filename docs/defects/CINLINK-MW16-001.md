@@ -1,5 +1,11 @@
 # MW-16：B日文字幕串用A内容 · [FWXC-250](https://devops.aliyun.com/projex/project/1e401ac99539c3999e00e40006/bug#viewIdentifier=1dedc5afd44979211cad516f&openWorkitemIdentifier=443f3aba58a7c4f7faa88ca508)
 
+**最新复测（2026-11-11）**
+
+17:37已将FWXC-250由已修复改为✅AI通过，仅status写入一次，回读ID/名称成功，其他核对字段保持；无新增评论或附件。
+
+新项目FWXC-250复测-20261111、新会话17d1b1d6-c1dc-4722-9c45-84afbec8862a，两原片SHA与旧缺陷一致、双@顺序A→B，一次提交原提示词；230.324秒done，需求满足true，补槽/确认0。新下载A英文18条至60.460秒，B日文64条至167.900秒；六段独立语音参照交叉核对确认A对应医疗法、B对应BBC新闻，B90～110/149～169秒内容齐备，未串用A也未互换，来源专项回归Passed。参照为同哈希原片历史独立ASR，本轮没有重新转写；未逐字听审整片译文或测扣费，FIXME配置未变。[报告和截图](../design-cases/multi-workflow/fwxc250-retest-20261111.md)。以下保留原失败。
+
 **现象**
 
 双视频分别翻译后，A英文字幕对应A；标为B的日文字幕也翻译了A的医疗法演说，没有对应B的BBC新闻内容。

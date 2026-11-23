@@ -1,0 +1,79 @@
+{
+  "case": "ERYE199-064",
+  "method": "official OpenAPI via tools/yunxiao",
+  "key": "ERYE199-064-PROJECT-MEDIA-504-PROD-20261116",
+  "created": 1,
+  "deduplication": false,
+  "defect": {
+    "id": "FWXC-577",
+    "workitem_id": "c8a5ca57b2162f6850176c6ff1",
+    "url": "https://devops.aliyun.com/projex/project/1e401ac99539c3999e00e40006/bug#openWorkitemIdentifier=c8a5ca57b2162f6850176c6ff1",
+    "title": "【生产环境】【ERYE199-064】切换“媒体→工程”报504，工程素材列表为空",
+    "status": "🤔AI提缺陷",
+    "assigned_to": "牛诗晴",
+    "verified": true,
+    "screenshots": 3,
+    "attachments": 6,
+    "synced_at": "2026-11-16T11:35:31.7660637+08:00",
+    "local_report": "docs/defects/ERYE199-064-project-media-504-production-20261116.md"
+  },
+  "images": [
+    {
+      "path": "064-captions-at-two.png",
+      "caption": "切换前：字幕A/B列表正常，画面与播放头均在2秒。",
+      "sha256": "87ec067eb62c58dc8cd47d632762f6513239b93e751a6330f226a2b692758ee6"
+    },
+    {
+      "path": "064-media-project-504.png",
+      "caption": "失败现场：切到媒体→工程，报“执行服务未返回有效JSON（504）”，素材列表为空。",
+      "sha256": "1a3852f64cfe0214bf112be428b115ed9c8a9164f7d964cff42c8c2df5590c1b"
+    },
+    {
+      "path": "064-returned-captions.png",
+      "caption": "切回字幕：A/B列表及2秒位置保持，顶部504提示仍可见。",
+      "sha256": "14e752cd127dbf5f5f03b52fbf51375ef47b8d6dfa79e2b22b06346eee73825d"
+    }
+  ],
+  "attachment_receipts": [
+    {
+      "sha256": "87ec067eb62c58dc8cd47d632762f6513239b93e751a6330f226a2b692758ee6",
+      "id": "2c44bd130f43e4889ab22a9e1c",
+      "size": 251731,
+      "name": "064-captions-at-two.png"
+    },
+    {
+      "sha256": "1a3852f64cfe0214bf112be428b115ed9c8a9164f7d964cff42c8c2df5590c1b",
+      "id": "95ef5c51eb39f4870ce0b1afe7",
+      "size": 247500,
+      "name": "064-media-project-504.png"
+    },
+    {
+      "sha256": "14e752cd127dbf5f5f03b52fbf51375ef47b8d6dfa79e2b22b06346eee73825d",
+      "id": "6c29e9dcb27107bb87c21eade1",
+      "size": 257832,
+      "name": "064-returned-captions.png"
+    },
+    {
+      "sha256": "e432370eb6cda0797076d6091622f2f7e0acd94cef690f1679c1a01f2349aba9",
+      "id": "3fa312dfc82d18f09eea9ba3b1",
+      "size": 2975172,
+      "name": "ERYE199-video.mp4"
+    },
+    {
+      "sha256": "400520109dcfe73580281d5b9cfea4d4c666e1c5c4c73a37371e3fcdfc5a2009",
+      "id": "08da4bea3274b943bc1b6d89b8",
+      "size": 109,
+      "name": "source-en.srt"
+    },
+    {
+      "sha256": "56ddbc3844b0dd11183459d32dfae80280d189dd0b7c133dc7b6d65c8a3521cb",
+      "id": "ed367d121aeb2e335792c4e425",
+      "size": 1914,
+      "name": "evidence.json"
+    }
+  ],
+  "execution_status": "Failed",
+  "automation_status": "AUTO",
+  "rerun_performed": false,
+  "original_execution_date": "2026-11-13"
+}

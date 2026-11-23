@@ -1,0 +1,183 @@
+{
+  "date": "2026-11-16",
+  "method": "official Yunxiao OpenAPI",
+  "project": "cinlink-WEB",
+  "created": 2,
+  "historicalDeduplication": false,
+  "ownCheckpointRecoveryEnabled": true,
+  "screenshots": 6,
+  "attachments": 12,
+  "verified": true,
+  "cases": [
+    {
+      "caseId": "ERYE210-018",
+      "key": "ERYE210-018-VOICE-APPLY-CONCURRENT-WATERMARK-PROD-20261116",
+      "identifier": "FWXC-588",
+      "workitemId": "6b9e807ea6785e241aae941423",
+      "url": "https://devops.aliyun.com/projex/project/1e401ac99539c3999e00e40006/bug#openWorkitemIdentifier=6b9e807ea6785e241aae941423",
+      "subject": "【生产环境】【ERYE210-018】单句配音再生成期间编辑水印，生成完成后新声音未应用且页面报错",
+      "verified": true,
+      "verifiedAt": "2026-11-16T15:22:20.7454278+08:00",
+      "status": "🤔AI提缺陷",
+      "assignedTo": "牛诗晴",
+      "sprint": "重构10-29",
+      "labels": [
+        "生产环境"
+      ],
+      "priority": "高",
+      "seriousLevel": "2-严重",
+      "screenshots": 3,
+      "attachmentCount": 6,
+      "images": [
+        {
+          "name": "018-real-translated-ready.png",
+          "id": "090f552bb3ce0f2eeb2fc7981e",
+          "sha256": "e14a2468f011e9c184182030c631a466b0962740671d00809a4050874c1a54b6",
+          "size": 754800,
+          "embedded": true,
+          "caption": "操作前：本例新建原生翻译配音工程，中文文稿及原配音音轨已就绪。"
+        },
+        {
+          "name": "018-running-independent-watermark.png",
+          "id": "49b90f6641519b0a7b8f4f853b",
+          "sha256": "ef45825b4e4402a4c05b0ee3796131b10ca9a45eb00b6fe1a7d36d397170de6d",
+          "size": 742694,
+          "embedded": true,
+          "caption": "过程中：已捕获同一个单句任务真实运行；独立水印INDEPENDENT_018已输入并保存。"
+        },
+        {
+          "name": "018-original-task-apply-page-error.png",
+          "id": "3f4c0feb13535d5b20e1e8af70",
+          "sha256": "1229b1c65ef747042d08c9b4fee08430e2840379ebb48fba0717175d07e221ff",
+          "size": 765757,
+          "embedded": true,
+          "caption": "失败现场：原任务已完成，回到配音页聚焦第一句后显示红色错误；新文案和独立水印仍在，新声音未应用。"
+        }
+      ],
+      "attachments": [
+        {
+          "name": "018-real-translated-ready.png",
+          "size": 754800,
+          "id": "090f552bb3ce0f2eeb2fc7981e",
+          "sha256": "e14a2468f011e9c184182030c631a466b0962740671d00809a4050874c1a54b6"
+        },
+        {
+          "name": "018-running-independent-watermark.png",
+          "size": 742694,
+          "id": "49b90f6641519b0a7b8f4f853b",
+          "sha256": "ef45825b4e4402a4c05b0ee3796131b10ca9a45eb00b6fe1a7d36d397170de6d"
+        },
+        {
+          "name": "018-original-task-apply-page-error.png",
+          "size": 765757,
+          "id": "3f4c0feb13535d5b20e1e8af70",
+          "sha256": "1229b1c65ef747042d08c9b4fee08430e2840379ebb48fba0717175d07e221ff"
+        },
+        {
+          "name": "E196-A.mp4",
+          "size": 10274419,
+          "id": "c607519cdabd50a47ac49266ef",
+          "sha256": "c453166c6396fe1c427c8a045ad2f84a8f5d4e4ff0f905b47d79114172829d15"
+        },
+        {
+          "name": "E196-A-en.srt",
+          "size": 573,
+          "id": "218e6e6580926bc3930d677edb",
+          "sha256": "4d52152ac06ca6be6667e3be97f0f3e3e654d03d4b92f7c97cde5189dff371d4"
+        },
+        {
+          "name": "case-evidence.json",
+          "size": 4326,
+          "id": "d66dfde08c325e97adbfd3f27b",
+          "sha256": "5ea4b1fb7506205a4d7d5e1501e1510c3900c0bf93b1a5f9303f04abd8bff443"
+        }
+      ],
+      "descriptionSha256": "8242f46c6c6508b4d793fc823f14f5dd9ea900a7a949cbc1849d855308b5442c"
+    },
+    {
+      "caseId": "ERYE210-020",
+      "key": "ERYE210-020-VOICE-TEXT-UNDO-EMPTY-PROD-20261116",
+      "identifier": "FWXC-589",
+      "workitemId": "0dd1f5d0d3ba1d48a798f75a03",
+      "url": "https://devops.aliyun.com/projex/project/1e401ac99539c3999e00e40006/bug#openWorkitemIdentifier=0dd1f5d0d3ba1d48a798f75a03",
+      "subject": "【生产环境】【ERYE210-020】修改翻译配音稿后点击一次撤销，配音列表变为空且原文未恢复",
+      "verified": true,
+      "verifiedAt": "2026-11-16T15:22:42.9154418+08:00",
+      "status": "🤔AI提缺陷",
+      "assignedTo": "牛诗晴",
+      "sprint": "重构10-29",
+      "labels": [
+        "生产环境"
+      ],
+      "priority": "中",
+      "seriousLevel": "3-一般",
+      "screenshots": 3,
+      "attachmentCount": 6,
+      "images": [
+        {
+          "name": "020-real-translated-ready.png",
+          "id": "badb59840c9c1240c009d56b49",
+          "sha256": "b749fb12bb4e16807f29d9565f0ecf846160c8f763d35d354fb29342aaaf2a79",
+          "size": 751536,
+          "embedded": true,
+          "caption": "操作前：本例独立原生翻译配音工程已有真实中文稿和声音，第一句原文可见。"
+        },
+        {
+          "name": "020-edited-returned.png",
+          "id": "669e402e564f220098fe8a63e2",
+          "sha256": "950c98275da1d384269c356eb2a8a4e182946f6656734bb6c7b510aabf49fc1f",
+          "size": 752795,
+          "embedded": true,
+          "caption": "正常对照：第一句改为配音撤销验证020。并保存，切字幕返回配音后新文案仍在。"
+        },
+        {
+          "name": "ERYE210-020-failed.png",
+          "id": "fe1c22894e5b13c37bbe1b6a81",
+          "sha256": "3f685ac5d3eab5e3632ffea6c78856a910d11ca065960785882893ceef76685b",
+          "size": 731862,
+          "embedded": true,
+          "caption": "失败现场：同页点击一次撤销后，配音面板变为暂无配音/创建配音，时间线已有声音仍可见。"
+        }
+      ],
+      "attachments": [
+        {
+          "id": "badb59840c9c1240c009d56b49",
+          "sha256": "b749fb12bb4e16807f29d9565f0ecf846160c8f763d35d354fb29342aaaf2a79",
+          "name": "020-real-translated-ready.png",
+          "size": 751536
+        },
+        {
+          "id": "669e402e564f220098fe8a63e2",
+          "sha256": "950c98275da1d384269c356eb2a8a4e182946f6656734bb6c7b510aabf49fc1f",
+          "name": "020-edited-returned.png",
+          "size": 752795
+        },
+        {
+          "id": "fe1c22894e5b13c37bbe1b6a81",
+          "sha256": "3f685ac5d3eab5e3632ffea6c78856a910d11ca065960785882893ceef76685b",
+          "name": "ERYE210-020-failed.png",
+          "size": 731862
+        },
+        {
+          "id": "d2512ba3ea23e179f7534fa5e2",
+          "sha256": "c453166c6396fe1c427c8a045ad2f84a8f5d4e4ff0f905b47d79114172829d15",
+          "name": "E196-A.mp4",
+          "size": 10274419
+        },
+        {
+          "id": "f6bbc6dacf29cf54b140562b0e",
+          "sha256": "4d52152ac06ca6be6667e3be97f0f3e3e654d03d4b92f7c97cde5189dff371d4",
+          "name": "E196-A-en.srt",
+          "size": 573
+        },
+        {
+          "id": "7aa5b1340788a823bfcfc6c956",
+          "sha256": "bcfcbb776916650b27f123045a3021ab2011c41c100b62fcd02755428368754e",
+          "name": "case-evidence.json",
+          "size": 2236
+        }
+      ],
+      "descriptionSha256": "d205faea4758ce95bdb63ec16f4c4aa00117707a34c09db46e1ba58097be6961"
+    }
+  ]
+}

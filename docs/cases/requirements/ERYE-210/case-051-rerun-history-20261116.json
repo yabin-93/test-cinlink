@@ -1,0 +1,108 @@
+{
+  "date": "2026-11-16",
+  "reason": "用户明确音量线入口后要求重新执行051；保留原始失败和证据",
+  "previousResult": {
+    "id": "ERYE210-051",
+    "status": "Failed",
+    "reason": "Failed：在Captions明确请求将本工程唯一独立背景音轨降低6dB，Agent以缺少真实音轨/片段标识为由未安排执行，仅给出手工建议；目标音量仍100%，未达到约50.12%，原素材保持。已保存完整提示词、原回复和实际音量控件截图，未同步云效。",
+    "automated": true,
+    "workspaceId": "05178840-e82b-4c57-87fc-faad022722d5",
+    "caseVersion": "current-agent-background-20261113",
+    "annotations": [
+      {
+        "type": "case-version",
+        "description": "current-agent-background-20261113"
+      }
+    ],
+    "projects": {
+      "051": {
+        "cid": "044e1172-f9d6-4f43-b3c9-d435040c003a",
+        "pid": "76e423f8-d619-4df8-a8a6-d8681e7e37d0",
+        "name": "ERYE210-051-76e423f8"
+      }
+    },
+    "checks": [
+      {
+        "stage": "agent-background-volume",
+        "runId": "run_v2_bca2d05da32c46bf8d1da1a78be3758e",
+        "before": {
+          "role": "background",
+          "type": "audio",
+          "clips": [
+            {
+              "volume": 1,
+              "clip_id": "ebc64223-8932-4540-b935-beba1f52df2e",
+              "file_id": "file_cloud_t425zrk7vp7r5zsxft2twjps6o",
+              "playback_rate": 1,
+              "source_in_sec": 0,
+              "source_out_sec": 1.3467573696145125,
+              "timeline_start_sec": 0
+            }
+          ],
+          "muted": false,
+          "track_id": "5f80a127-2e73-457c-b6eb-2e4a1d4f8217",
+          "offset_sec": 0,
+          "linked_video_track_id": null
+        },
+        "after": {
+          "role": "background",
+          "type": "audio",
+          "clips": [
+            {
+              "volume": 1,
+              "clip_id": "ebc64223-8932-4540-b935-beba1f52df2e",
+              "file_id": "file_cloud_t425zrk7vp7r5zsxft2twjps6o",
+              "playback_rate": 1,
+              "source_in_sec": 0,
+              "source_out_sec": 1.3467573696145125,
+              "timeline_start_sec": 0
+            }
+          ],
+          "muted": false,
+          "track_id": "5f80a127-2e73-457c-b6eb-2e4a1d4f8217",
+          "offset_sec": 0,
+          "linked_video_track_id": null
+        },
+        "status": "done",
+        "view": {
+          "name": "ERYE210-051-76e423f8",
+          "module": [
+            "字幕"
+          ],
+          "playhead": "0",
+          "selected": [],
+          "media": [
+            {
+              "paused": true,
+              "duration": 20
+            }
+          ]
+        }
+      },
+      {
+        "stage": "explicit-volume-location",
+        "ariaValue": "100",
+        "project": {
+          "cid": "044e1172-f9d6-4f43-b3c9-d435040c003a",
+          "pid": "76e423f8-d619-4df8-a8a6-d8681e7e37d0",
+          "name": "ERYE210-051-76e423f8"
+        }
+      }
+    ],
+    "finishedAt": "2026-11-13T13:10:33.556Z",
+    "actual": "Failed：在Captions明确请求将本工程唯一独立背景音轨降低6dB，Agent以缺少真实音轨/片段标识为由未安排执行，仅给出手工建议；目标音量仍100%，未达到约50.12%，原素材保持。已保存完整提示词、原回复和实际音量控件截图，未同步云效。",
+    "report": "results-completion-nine-prod-20261113.md",
+    "evidence": "evidence-completion-nine-prod-20261113/manifest.json",
+    "sourceBatch": "prod-completion-nine-20261113-04",
+    "screenshots": [
+      "051-051-after-agent.png",
+      "051-051-prompt-captions.png",
+      "051-051-real-volume-control.png",
+      "051-ERYE210-051-failed.png",
+      "051-failure-volume100.png"
+    ],
+    "liveVolumeVerification": "evidence-completion-nine-prod-20261113/051-live-volume-verification.json"
+  },
+  "previousCase": "| ERYE210-051 | P0 | PA有独立背景音轨、线性音量1和8条英语字幕，无运行任务；停在Captions | 1. 保存并记录背景音轨、工程和字幕。<br>2. 在Captions一次发送完整指令，若补槽按唯一背景音轨及降低6dB填写。<br>3. 等原任务，检查页面不被抢占、目标音轨音量约0.501187、其他内容保持。<br>4. 明确选中对应背景音频片段，悬停音频轴上可上下拖拽的音量线，读取音量反馈；核验Agent结果时不手动拖动。 | Agent改明确音轨，与当前TAB无关；不把任务done当音量正确；只目标音量改变，真实控件可核对，不要求不存在的Audio一级TAB或结果快捷按钮。 | Source: Requirement + Inferred QA Risk；ERYE-210 N08、AC08；206 CP04；196 WAC06；用户确认优化/补齐 | [AUTO] | [tests/editor/erye210-completion.spec.ts](../../../../tests/editor/erye210-completion.spec.ts) | Failed；Failed：在Captions明确请求将本工程唯一独立背景音轨降低6dB，Agent以缺少真实音轨/片段标识为由未安排执行，仅给出手工建议；目标音量仍100%，未达到约50.12%，原素材保持。已保存完整提示词、原回复和实际音量控件截图，未同步云效。 [本轮结果](results-completion-nine-prod-20261113.md)；[完整步骤及边界](case-nine-optimized-supplement-20261113.md) |",
+  "previousRegistry": "ERYE210-051:\n  status: AUTO\n  script: \"tests/editor/erye210-completion.spec.ts\"\n  definition_version: \"current-completion-20261113\"\n  execution_status: \"Failed\"\n  execution_note: \"Failed：在Captions明确请求将本工程唯一独立背景音轨降低6dB，Agent以缺少真实音轨/片段标识为由未安排执行，仅给出手工建议；目标音量仍100%，未达到约50.12%，原素材保持。已保存完整提示词、原回复和实际音量控件截图，未同步云效。\"\n  execution_batch: \"prod-completion-nine-20261113-04\"\n  execution_report: \"docs/cases/requirements/ERYE-210/results-completion-nine-prod-20261113.md\"\n"
+}

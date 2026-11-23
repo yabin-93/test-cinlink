@@ -1,0 +1,132 @@
+{
+  "requirement": "ERYE-210",
+  "batch": "20261113-production-006-010",
+  "origin": "https://app.cinlink.ai",
+  "environment": "production",
+  "browser": "Google Chrome 157.0.8103.52",
+  "workspaceId": "2a7ae892-917b-4931-94f5-0e51bbcf8b4a",
+  "status": "Completed",
+  "counts": {
+    "Passed": 2,
+    "Failed": 2,
+    "Blocked": 1
+  },
+  "cases": [
+    {
+      "id": "ERYE210-006",
+      "status": "Passed",
+      "definition": "current",
+      "conversationId": "c9bc8525-1b47-48a9-8b87-837e513a0b56",
+      "projectId": "4e0a5049-20b4-4c3d-aeea-6007f77b5b00",
+      "projectIdB": null,
+      "actual": "Passed；从Captions通过当前真实Watermark一级→文字/图片二级控件定位，两子页切换正确；NAV006和logo-A.png保持；导航前后版本2及全部内容相同。仅覆盖实际两级入口，不宣称存在独立结果卡快捷入口。",
+      "steps": [
+        "在Captions核对本例工程及保存内容。",
+        "点击水印一级入口，再点击文字水印，核对NAV006；返回Captions后从水印→图片水印进入，核对logo-A.png。",
+        "在Text/Image间来回切换，核对选中子页及内容；回读全部工程和版本。"
+      ],
+      "screenshots": [
+        "ERYE210-006-before-captions.png",
+        "ERYE210-006-two-level-text.png",
+        "ERYE210-006-two-level-image.png"
+      ],
+      "report": "results-006-010-prod-20261113.md"
+    },
+    {
+      "id": "ERYE210-007",
+      "status": "Failed",
+      "definition": "current",
+      "conversationId": "185a0cb6-f968-4797-a009-6ea738990593",
+      "projectId": "66de4390-7f66-47a5-8de2-241cb4cce46c",
+      "projectIdB": null,
+      "actual": "Failed；同一工程Watermark/Image收起编辑器再重开变成Watermark/Text，刷新重开变成Captions；内容及版本1保持。无真实旧voice样本，旧映射/清除偏好分支未执行。",
+      "steps": [
+        "选Watermark/Image，截图保留选中状态。",
+        "点击“收起编辑区”，从会话普通“视频编辑器”入口重开同一PA；实际落文字水印，截图。",
+        "整页刷新，再打开同一PA；实际落Captions，截图。",
+        "回读内容及版本，均保持；没有改写缓存或伪造旧voice状态。"
+      ],
+      "screenshots": [
+        "ERYE210-007-watermark-image-before.png",
+        "ERYE210-007-reopen.png",
+        "ERYE210-007-refreshed.png"
+      ],
+      "report": "results-006-010-prod-20261113.md"
+    },
+    {
+      "id": "ERYE210-008",
+      "status": "Blocked",
+      "definition": "v1",
+      "conversationId": "2460a320-7975-4ef1-8f74-ebf551ed186d",
+      "projectId": "00ef8447-b12f-4849-b775-72711ed5c62e",
+      "projectIdB": null,
+      "actual": "Blocked（旧定义）；没有真实失效偏好/旧导航链接，用户确认“没有，记录前置缺口”；仅准备工程并核对正常打开，负向步骤未执行。随后按用户要求替换为面板收起/展开v2，新版Not Run。",
+      "steps": [
+        "创建独立PA，确认20秒视频和字幕正常显示，保存前置核对截图。",
+        "只读查找可用的真实旧状态/链接样本，并询问用户。",
+        "用户确认“没有，记录前置缺口”，停止该负向分支；没有构造产品未定义的缓存字段或链接。"
+      ],
+      "screenshots": [
+        "ERYE210-008-preflight.png"
+      ],
+      "report": "results-006-010-prod-20261113.md"
+    },
+    {
+      "id": "ERYE210-009",
+      "status": "Passed",
+      "definition": "current",
+      "conversationId": "3bbc9e8b-6052-41e4-b341-144ad79ceccb",
+      "projectId": "3fc1a2b6-60d1-48b8-93f6-4ffae9bde0ad",
+      "projectIdB": null,
+      "actual": "Passed；五入口及可见子页14个检查点均保持同一工程、12秒、暂停和原C1；版本1及内容不变，会话消息0→0，导航写请求0，页面积分前后及刷新回读均3045。未提交Agent写操作，不宣称Agent执行或服务端账本专项通过。",
+      "steps": [
+        "在暂停12秒状态选中C1，记录初始积分3,045。",
+        "依次切Media及Chat/Project、Scripts、Captions及Style/Subtitles、Voiceover、Watermark及Text/Image，再回Captions及Style/Subtitles，共14个检查点。",
+        "每点核对工程名称、播放头12秒、选中同一C1、保持暂停；不点击生成/应用。",
+        "回读工程及会话，版本1和内容相同、消息0条、导航写请求0；页面积分仍3,045。",
+        "完成页内状态核验后才刷新，再打开积分菜单，仍3,045；此刷新不作为播放头/选区保持的检查步骤。"
+      ],
+      "screenshots": [
+        "ERYE210-009-before-credits.png",
+        "ERYE210-009-字幕-14.png",
+        "ERYE210-009-after-credits.png",
+        "ERYE210-009-fresh-credits.png"
+      ],
+      "report": "results-006-010-prod-20261113.md"
+    },
+    {
+      "id": "ERYE210-010",
+      "status": "Failed",
+      "definition": "current",
+      "conversationId": "2c1ccdee-ec19-4384-a58c-2d7c36d39a47",
+      "projectId": "8ec812ce-fd19-4a9f-8b54-082837f465bb",
+      "projectIdB": "d2cc0d6b-3b5b-44c3-9242-e5de4426871b",
+      "actual": "Failed；U1/D1的PA=Captions、PB=Media在页内分别恢复正确，但刷新重开同一PB变成Captions；两工程版本1及内容不变。U2和D2无环境，跨账号/设备分支未执行。",
+      "steps": [
+        "在PA选择Captions；打开PB选择Media，截图。",
+        "通过真实工程选择器切回PA，恢复Captions；切回PB，恢复Media。",
+        "整页刷新，从普通视频编辑器入口打开同一PB；工程标题仍为PB，入口却变为Captions，截图。",
+        "回读PA/PB，均版本1且完整内容不变；跨账号和跨设备步骤未执行。"
+      ],
+      "screenshots": [
+        "ERYE210-010-PA-captions.png",
+        "ERYE210-010-PB-media.png",
+        "ERYE210-010-PA-restored.png",
+        "ERYE210-010-PB-restored.png",
+        "ERYE210-010-PB-after-refresh.png"
+      ],
+      "report": "results-006-010-prod-20261113.md"
+    }
+  ],
+  "definitionUpdate": {
+    "id": "ERYE210-008",
+    "newVersion": "v2",
+    "newStatus": "Not Run",
+    "oldStatus": "Blocked",
+    "reason": "用户要求用现有页面可执行场景替换无样本失效链接场景"
+  },
+  "cloudSync": {
+    "created": 0,
+    "note": "本批仅执行与登记，没有新同步云效"
+  }
+}

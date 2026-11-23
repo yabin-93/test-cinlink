@@ -1,0 +1,23 @@
+{
+  "date": "2026-11-16",
+  "restoredIds": [
+    "004",
+    "005",
+    "018",
+    "020",
+    "041"
+  ],
+  "priorActiveCount": 51,
+  "activeCount": 56,
+  "retiredCount": 0,
+  "caseVersion": "v4-restored-final-five-20261116",
+  "oldHistoryRetained": true,
+  "counts": {
+    "Passed": 3,
+    "Failed": 2,
+    "Blocked": 0,
+    "Not Applicable": 0,
+    "Not Run": 0
+  },
+  "cloudWrites": 0
+}

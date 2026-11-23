@@ -1,0 +1,507 @@
+{
+  "date": "2026-11-16",
+  "environment": "production",
+  "base_url": "https://app.cinlink.ai",
+  "task_space": 5,
+  "cases": [
+    {
+      "id": "ERYE199-011",
+      "status": "Passed",
+      "actual": "A及已有关联原声从0～10移至2～12秒；M源0～2秒/时间线8～10秒/30%不变，空档与原片映射、实际播放和刷新正确。",
+      "fixture": {
+        "conversationId": "90d0a878-adfc-414f-b06a-500c663ade24",
+        "editorId": "007fcb59-6b71-416b-9c6a-bfbda2035fa0",
+        "name": "ERYE199-011-nine-v2-20261116"
+      },
+      "workspace_id": "721f24d3-ccc9-4958-8b4b-a218e920e73c",
+      "definition_revision": 2,
+      "completed": "2026-11-16T06:52:21.538Z",
+      "automation_status": "AUTO",
+      "automation_integrated": true,
+      "script": "tools/editor/erye199/cases-current-v2.mjs#011",
+      "automation_command": "npm run test:editor:199 -- --base-url https://app.cinlink.ai --cases 011",
+      "screenshots": [
+        "evidence-nine-v2-production-20261116/011/v2-baseline.png",
+        "evidence-nine-v2-production-20261116/011/gap-at-1.png",
+        "evidence-nine-v2-production-20261116/011/source-at-3.png",
+        "evidence-nine-v2-production-20261116/011/source-at-9.png",
+        "evidence-nine-v2-production-20261116/011/reopened-source-at-3.png"
+      ],
+      "target_steps_executed": true
+    },
+    {
+      "id": "ERYE199-013",
+      "status": "Passed",
+      "actual": "视频/关联原声0.5倍速20秒，Fixed A1～3秒和Fixed B6～8秒未拉伸；2/7秒字幕及源画面正确、4/14秒空字幕，刷新保持。",
+      "fixture": {
+        "conversationId": "5ffbc5f2-aa5d-4a35-8053-feaa8a1b01e0",
+        "editorId": "023b79d0-9afc-44f5-8a7b-a67690ec6f6a",
+        "name": "ERYE199-013-nine-v2-20261116"
+      },
+      "workspace_id": "bdabebe7-1615-4b19-8b2f-14b8e95f4b27",
+      "definition_revision": 2,
+      "completed": "2026-11-16T06:55:49.497Z",
+      "automation_status": "AUTO",
+      "automation_integrated": true,
+      "script": "tools/editor/erye199/cases-current-v2.mjs#013",
+      "automation_command": "npm run test:editor:199 -- --base-url https://app.cinlink.ai --cases 013",
+      "screenshots": [
+        "evidence-nine-v2-production-20261116/013/v2-baseline.png",
+        "evidence-nine-v2-production-20261116/013/initial-at-2.png",
+        "evidence-nine-v2-production-20261116/013/initial-at-7.png",
+        "evidence-nine-v2-production-20261116/013/initial-at-4.png",
+        "evidence-nine-v2-production-20261116/013/initial-at-14.png",
+        "evidence-nine-v2-production-20261116/013/reopened-at-7.png",
+        "evidence-nine-v2-production-20261116/013/reopened-at-14.png"
+      ],
+      "target_steps_executed": true
+    },
+    {
+      "id": "ERYE199-017",
+      "status": "Failed",
+      "actual": "仅裁短A后，B和关联原声B被自动从5秒移到3秒，3～5秒空隙被闭合；4秒已播放B源1秒，7秒为B源4秒，刷新后仍错误。A/B源引用未串换，失败点是B被连带移动。",
+      "fixture": {
+        "conversationId": "0085322c-24f5-4d92-813b-85522622bdf6",
+        "editorId": "5dcd023f-ae45-4af2-b038-0d3df7b5229f",
+        "name": "ERYE199-017-nine-v2-20261116"
+      },
+      "workspace_id": "f64dcc1a-c34f-44b4-8040-b64a1750429a",
+      "definition_revision": 2,
+      "completed": "2026-11-16T06:57:54.041Z",
+      "automation_status": "AUTO",
+      "automation_integrated": true,
+      "script": "tools/editor/erye199/cases-current-v2.mjs#017",
+      "automation_command": "npm run test:editor:199 -- --base-url https://app.cinlink.ai --cases 017",
+      "screenshots": [
+        "evidence-nine-v2-production-20261116/017/v2-baseline.png",
+        "evidence-nine-v2-production-20261116/017/failure.png",
+        "evidence-nine-v2-production-20261116/017/failure-gap-at-4.png",
+        "evidence-nine-v2-production-20261116/017/failure-B-at-7.png",
+        "evidence-nine-v2-production-20261116/017/failure-refreshed.png"
+      ],
+      "target_steps_executed": true,
+      "defect": {
+        "id": "FWXC-590",
+        "workitem_id": "df4df4dc44a01c0fa27b75c627",
+        "url": "https://devops.aliyun.com/projex/project/1e401ac99539c3999e00e40006/bug#openWorkitemIdentifier=df4df4dc44a01c0fa27b75c627",
+        "title": "【生产环境】【ERYE199-017】仅裁短A时连带前移B及其原声，要求保留的空隙被闭合",
+        "case_id": "ERYE199-017",
+        "key": "ERYE199-017-V2-TRIM-MOVES-B-PROD-20261116",
+        "status": "🤔AI提缺陷",
+        "assigned_to": "牛诗晴",
+        "sprint": "重构10-29",
+        "labels": [
+          "生产环境"
+        ],
+        "priority": "高",
+        "serious_level": "2-严重",
+        "verified": true,
+        "screenshots": 3,
+        "attachments": 5,
+        "synced_at": "2026-11-16T15:33:42.1955037+08:00",
+        "local_report": "docs/defects/ERYE199-017-trim-moves-B-production-20261116.md",
+        "attachment_receipts": [
+          {
+            "name": "017-before.png",
+            "size": 216489,
+            "sha256": "62865125d89c96a6a03b6ac3433e2a572a9020f5b2f5db22715aee16ddc712f1",
+            "id": "e09d8a4f6e4cf9ee93e762989e"
+          },
+          {
+            "name": "017-gap-closed-at-4.png",
+            "size": 284987,
+            "sha256": "fbae396b6d8f8e26f82b49eb73effcbdfdded647c4306ac401b72a1926a85079",
+            "id": "1adc2b1803279b43040857245d"
+          },
+          {
+            "name": "017-error-after-refresh.png",
+            "size": 313937,
+            "sha256": "6aa9dd5052aadac922d0ebf751e4589b7f189925f8eae883a801d1d85fe2a2cd",
+            "id": "79fd8a9e68e26dffe094f89166"
+          },
+          {
+            "name": "V.mp4",
+            "size": 2975172,
+            "sha256": "e432370eb6cda0797076d6091622f2f7e0acd94cef690f1679c1a01f2349aba9",
+            "id": "47d55bdd83fc2d7e2918313665"
+          },
+          {
+            "name": "case-evidence.json",
+            "size": 10451,
+            "sha256": "9894c5cfb3b475c79fa064cea17a427e31db35e1d1d1874546ea73eb5ae5ff16",
+            "id": "e1e9e082d02e92ad27667b53d2"
+          }
+        ],
+        "images": [
+          {
+            "path": "017-before.png",
+            "caption": "操作前：同源独立A/B及其关联原声分别位于0～5、5～10秒，工程时长10秒。",
+            "sha256": "62865125d89c96a6a03b6ac3433e2a572a9020f5b2f5db22715aee16ddc712f1",
+            "id": "e09d8a4f6e4cf9ee93e762989e",
+            "size": 216489,
+            "embedded": true
+          },
+          {
+            "path": "017-gap-closed-at-4.png",
+            "caption": "失败现场：只裁A后，4秒已播放B源1秒，B和原声B实际位于3～8秒，工程被缩短为8秒。",
+            "sha256": "fbae396b6d8f8e26f82b49eb73effcbdfdded647c4306ac401b72a1926a85079",
+            "id": "1adc2b1803279b43040857245d",
+            "size": 284987,
+            "embedded": true
+          },
+          {
+            "path": "017-error-after-refresh.png",
+            "caption": "刷新后：B及其原声仍前移，4秒仍是B源1秒，3～5秒预期空隙未恢复。",
+            "sha256": "6aa9dd5052aadac922d0ebf751e4589b7f189925f8eae883a801d1d85fe2a2cd",
+            "id": "79fd8a9e68e26dffe094f89166",
+            "size": 313937,
+            "embedded": true
+          }
+        ],
+        "description_sha256": "c5ea1c379e8e30f84fb195beef20faea4181751f09d354943448af0e493b7287"
+      },
+      "current_failure_cloud_status": "Submitted and verified",
+      "latest_defect_sync_report": "defects-017-053-v2-production-20261116.md",
+      "defect_link_scope": "当前功能v2实测失败对应FWXC-590；原高级目标缺陷仅历史，未修改旧缺陷状态",
+      "original_requirement_gap_defect": {
+        "id": "FWXC-510",
+        "workitem_id": "6e20f45652f16e662cd22049e3",
+        "url": "https://devops.aliyun.com/projex/project/1e401ac99539c3999e00e40006/bug#openWorkitemIdentifier=6e20f45652f16e662cd22049e3",
+        "title": "【生产环境】【功能未实现】【ERYE199-017】共享子序列联动与独立副本无法建立",
+        "status": "🤔AI提缺陷",
+        "assigned_to": "牛诗晴",
+        "verified": true,
+        "screenshots": 1,
+        "attachments": 4,
+        "synced_at": "2026-11-13T18:29:25.4478493+08:00",
+        "local_report": "docs/defects/ERYE199-017-subsequence-shared-copy-unimplemented-production-20261113.md",
+        "screenshot_captions": [
+          {
+            "path": "017-failure.png",
+            "caption": "017依赖证据：截图来自同批016创建子序列被拒页面，017共享/副本目标步骤未执行。",
+            "sha256": "7b20d3bc00ec96406b5bc416e4e598c87e0416e00e4344912809d79663182807"
+          }
+        ],
+        "attachment_receipts": [
+          {
+            "sha256": "7b20d3bc00ec96406b5bc416e4e598c87e0416e00e4344912809d79663182807",
+            "name": "017-failure.png",
+            "size": 454394,
+            "id": "38e678dc23bed88438e3ab5f3c"
+          },
+          {
+            "sha256": "7552f7f49b2203cfd19398c34d5a6c195bb5b4b156e6c6c150e1ed411ee7f866",
+            "name": "evidence.json",
+            "size": 14303,
+            "id": "5c8c841908791873258f8ef39b"
+          },
+          {
+            "sha256": "e432370eb6cda0797076d6091622f2f7e0acd94cef690f1679c1a01f2349aba9",
+            "name": "ERYE199-video.mp4",
+            "size": 2975172,
+            "id": "00080383372d8da2c99926668d"
+          },
+          {
+            "sha256": "400520109dcfe73580281d5b9cfea4d4c666e1c5c4c73a37371e3fcdfc5a2009",
+            "name": "source-en.srt",
+            "size": 109,
+            "id": "35d17d4a29600f2b23e5fc9f20"
+          }
+        ]
+      }
+    },
+    {
+      "id": "ERYE199-020",
+      "status": "Passed",
+      "actual": "播放头5秒提交静态50%后，1/5/9秒均同一作用范围，跨4～6秒无额外动画；源/背景/原声未改、刷新保持。",
+      "fixture": {
+        "conversationId": "45efeac1-7d60-4054-bdcc-b40835881e8a",
+        "editorId": "84255065-4a4f-4524-8e6c-acfb0ee4e446",
+        "name": "ERYE199-020-nine-v2-20261116"
+      },
+      "workspace_id": "1b2cd34f-015f-4fb1-9041-bd56e79d302b",
+      "definition_revision": 2,
+      "completed": "2026-11-16T07:02:19.398Z",
+      "automation_status": "AUTO",
+      "automation_integrated": true,
+      "script": "tools/editor/erye199/cases-current-v2.mjs#020",
+      "automation_command": "npm run test:editor:199 -- --base-url https://app.cinlink.ai --cases 020",
+      "screenshots": [
+        "evidence-nine-v2-production-20261116/020/v2-baseline.png",
+        "evidence-nine-v2-production-20261116/020/initial-opacity-at-1.png",
+        "evidence-nine-v2-production-20261116/020/initial-opacity-at-5.png",
+        "evidence-nine-v2-production-20261116/020/initial-opacity-at-9.png",
+        "evidence-nine-v2-production-20261116/020/reopened-opacity-at-5.png",
+        "evidence-nine-v2-production-20261116/020/cross-submit-time-playback.png"
+      ],
+      "target_steps_executed": true
+    },
+    {
+      "id": "ERYE199-045",
+      "status": "Passed",
+      "actual": "页面仅将M2（3～7秒）从50%调至15%，M1/M3仍50%、独立对白100%，源范围与片段边界未改；实际混音采样、刷新保持及恢复50%通过。",
+      "fixture": {
+        "conversationId": "88b0103c-9c2c-4a25-a3bf-eebcb05aa33b",
+        "editorId": "e705e8f2-f728-4895-b6a0-cc5311f61c86",
+        "name": "ERYE199-045-nine-v2-20261116"
+      },
+      "workspace_id": "1220287d-dc09-4876-a490-fbc07398c23b",
+      "definition_revision": 2,
+      "completed": "2026-11-16T07:21:01.551Z",
+      "automation_status": "PLAN",
+      "automation_integrated": false,
+      "script": "",
+      "automation_command": "",
+      "screenshots": [
+        "evidence-nine-v2-production-20261116/045/manual-baseline.png",
+        "evidence-nine-v2-production-20261116/045/middle-lowered-15.png",
+        "evidence-nine-v2-production-20261116/045/after-music-1.png",
+        "evidence-nine-v2-production-20261116/045/after-dialogue-music-5.png",
+        "evidence-nine-v2-production-20261116/045/after-music-9.png",
+        "evidence-nine-v2-production-20261116/045/middle-15-refreshed.png",
+        "evidence-nine-v2-production-20261116/045/middle-restored-50-refreshed.png"
+      ],
+      "target_steps_executed": true
+    },
+    {
+      "id": "ERYE199-051",
+      "status": "Blocked",
+      "actual": "工程下拉加载完成后没有“工程管理／导入媒体新建工程”入口；PA已准备，B导入及PA/PB隔离未执行，按新版明确前置记Blocked。",
+      "fixture": {
+        "conversationId": "dd64a502-6776-4b56-a0ad-517a539257d6",
+        "editorId": "d03b1bb3-cc8e-40aa-93b3-2576e2e52a5e",
+        "name": "ERYE199-051-nine-v2-20261116"
+      },
+      "workspace_id": "97ad2219-3ccc-4ee7-a35b-fc4ada15133a",
+      "definition_revision": 2,
+      "completed": "2026-11-16T07:06:43.003Z",
+      "automation_status": "AUTO",
+      "automation_integrated": true,
+      "script": "tools/editor/erye199/cases-current-v2.mjs#051",
+      "automation_command": "npm run test:editor:199 -- --base-url https://app.cinlink.ai --cases 051",
+      "screenshots": [
+        "evidence-nine-v2-production-20261116/051/v2-baseline.png",
+        "evidence-nine-v2-production-20261116/051/project-dropdown-loaded.png"
+      ],
+      "target_steps_executed": false
+    },
+    {
+      "id": "ERYE199-052",
+      "status": "Passed",
+      "actual": "同名same.mp4的A/B为不同源引用；B独立新轨0～10秒、原声静音，显示B/隐藏后A的画面对照及刷新保持，A未被同名导入重绑定。",
+      "fixture": {
+        "conversationId": "7e52560a-fcc2-4d6c-b7f4-2ab83722bfa4",
+        "editorId": "3693ed5a-f855-4664-bc00-db9b6cb5a9d0",
+        "name": "ERYE199-052-nine-v2-20261116"
+      },
+      "workspace_id": "e0255787-ec66-41db-a388-dd3be22781bd",
+      "definition_revision": 2,
+      "completed": "2026-11-16T07:08:32.515Z",
+      "automation_status": "AUTO",
+      "automation_integrated": true,
+      "script": "tools/editor/erye199/cases-current-v2.mjs#052",
+      "automation_command": "npm run test:editor:199 -- --base-url https://app.cinlink.ai --cases 052",
+      "screenshots": [
+        "evidence-nine-v2-production-20261116/052/v2-baseline.png",
+        "evidence-nine-v2-production-20261116/052/same-name-B-registered.png",
+        "evidence-nine-v2-production-20261116/052/same-name-B-placed.png",
+        "evidence-nine-v2-production-20261116/052/initial-same-name-B-visible.png",
+        "evidence-nine-v2-production-20261116/052/initial-B-hidden-A-visible.png",
+        "evidence-nine-v2-production-20261116/052/reopened-same-name-B-visible.png",
+        "evidence-nine-v2-production-20261116/052/reopened-B-hidden-A-visible.png"
+      ],
+      "target_steps_executed": true
+    },
+    {
+      "id": "ERYE199-053",
+      "status": "Failed",
+      "actual": "空SRT登记后放入字幕轨，未给出无有效字幕提示并持久化一条bindings为空的字幕轨；非法时码SRT被“Subtitle block has no timing”正确拒绝。原A/B字幕保留，后续RECOVER053编辑和刷新通过；整例因空SRT分支Failed。",
+      "fixture": {
+        "conversationId": "6ea151c6-f7fd-4d9c-a733-b942544cf0d5",
+        "editorId": "208baf88-772e-45b0-9cab-bba430908980",
+        "name": "ERYE199-053-nine-v2-20261116"
+      },
+      "workspace_id": "d889faa2-3d40-4f68-bf15-f1fd32a72d51",
+      "definition_revision": 2,
+      "completed": "2026-11-16T07:13:45.090Z",
+      "automation_status": "AUTO",
+      "automation_integrated": true,
+      "script": "tools/editor/erye199/cases-current-v2.mjs#053",
+      "automation_command": "npm run test:editor:199 -- --base-url https://app.cinlink.ai --cases 053",
+      "screenshots": [
+        "evidence-nine-v2-production-20261116/053/v2-baseline.png",
+        "evidence-nine-v2-production-20261116/053/empty.srt-no-valid-cues.png",
+        "evidence-nine-v2-production-20261116/053/broken-explicit-subtitle-drop.png",
+        "evidence-nine-v2-production-20261116/053/broken.srt-rejected.png",
+        "evidence-nine-v2-production-20261116/053/recovery-refreshed.png",
+        "evidence-nine-v2-production-20261116/053/original-B-preserved.png",
+        "evidence-nine-v2-production-20261116/053/failure.png"
+      ],
+      "target_steps_executed": true,
+      "defect": {
+        "id": "FWXC-591",
+        "workitem_id": "cf695e0a8ad4e178279e339726",
+        "url": "https://devops.aliyun.com/projex/project/1e401ac99539c3999e00e40006/bug#openWorkitemIdentifier=cf695e0a8ad4e178279e339726",
+        "title": "【生产环境】【ERYE199-053】导入空SRT未提示无有效字幕，新增空字幕轨并持久化",
+        "case_id": "ERYE199-053",
+        "key": "ERYE199-053-V2-EMPTY-SRT-PERSISTED-PROD-20261116",
+        "status": "🤔AI提缺陷",
+        "assigned_to": "牛诗晴",
+        "sprint": "重构10-29",
+        "labels": [
+          "生产环境"
+        ],
+        "priority": "中",
+        "serious_level": "3-一般",
+        "verified": true,
+        "screenshots": 3,
+        "attachments": 8,
+        "synced_at": "2026-11-16T15:34:00.4771867+08:00",
+        "local_report": "docs/defects/ERYE199-053-empty-srt-track-production-20261116.md",
+        "attachment_receipts": [
+          {
+            "sha256": "bf6d4749fd789a81894b1fa9f37de456c1a9c21eb2d1bbb618c31a559b47b282",
+            "name": "053-before.png",
+            "id": "1a732babde2623c2f84919eaab",
+            "size": 238232
+          },
+          {
+            "sha256": "7be00c11689ef9126b5ec16df8c15a8054753bfffe494d6134c55f7b0b323af9",
+            "name": "053-empty-srt-added-empty-track.png",
+            "id": "ba5a6654132999467b13be217b",
+            "size": 234880
+          },
+          {
+            "sha256": "f88567ce0f8d7883396f943f483ca7c96f68ad1876bf50bf86a52e3d1160a208",
+            "name": "053-empty-track-after-refresh.png",
+            "id": "6a3eb805c1703fa8c3bf4e5d0d",
+            "size": 246793
+          },
+          {
+            "sha256": "e432370eb6cda0797076d6091622f2f7e0acd94cef690f1679c1a01f2349aba9",
+            "name": "V.mp4",
+            "id": "c8c848a661c03331b48a88a6c7",
+            "size": 2975172
+          },
+          {
+            "sha256": "bbd823436b7d0711c1d61417d0cff46eba82a93d124a847d4f4fa2f1e99a14b7",
+            "name": "case-evidence.json",
+            "id": "fe945698590e58ab0d8a1b3b6a",
+            "size": 15923
+          },
+          {
+            "sha256": "704e6445957f3288d86572e78ef2bc5a6d88027c305710f03d5b81e32e58db32",
+            "name": "fixed.srt",
+            "id": "944d8445925432cf9c7331ec52",
+            "size": 88
+          },
+          {
+            "sha256": "890db992086a16c4dfef1c54c30ef6c701e64ce016b05e8cc93c2811505f6764",
+            "name": "broken.srt",
+            "id": "469450bf2c828766d428e5a9f6",
+            "size": 28
+          },
+          {
+            "sha256": "7919ac8107d1e79754dd273eed740ec19f6a8b766222150bdee46c0dbf4a4ed7",
+            "name": "empty-srt-preparation.txt",
+            "id": "3a73cf26185f48b94f7f7c6954",
+            "size": 629
+          }
+        ],
+        "images": [
+          {
+            "path": "053-before.png",
+            "caption": "操作前：原Fixed A1～3秒、Fixed B6～8秒及视频/原声均已保存，只有一条合法字幕轨。",
+            "sha256": "bf6d4749fd789a81894b1fa9f37de456c1a9c21eb2d1bbb618c31a559b47b282",
+            "id": "1a732babde2623c2f84919eaab",
+            "size": 238232,
+            "embedded": true
+          },
+          {
+            "path": "053-empty-srt-added-empty-track.png",
+            "caption": "失败现场：空SRT登记并放入工程后，时间线上新增空字幕轨，页面未提示没有有效字幕。",
+            "sha256": "7be00c11689ef9126b5ec16df8c15a8054753bfffe494d6134c55f7b0b323af9",
+            "id": "ba5a6654132999467b13be217b",
+            "size": 234880,
+            "embedded": true
+          },
+          {
+            "path": "053-empty-track-after-refresh.png",
+            "caption": "刷新及编辑恢复对照：原A可改为RECOVER053并保存，Fixed B保持；新增的无字幕内容轨仍持久存在。",
+            "sha256": "f88567ce0f8d7883396f943f483ca7c96f68ad1876bf50bf86a52e3d1160a208",
+            "id": "6a3eb805c1703fa8c3bf4e5d0d",
+            "size": 246793,
+            "embedded": true
+          }
+        ],
+        "description_sha256": "60ca2c30e689bad09f4f56bdef43be3b3de94317657a161e28a047a368f8af5b"
+      },
+      "current_failure_cloud_status": "Submitted and verified",
+      "latest_defect_sync_report": "defects-017-053-v2-production-20261116.md",
+      "defect_link_scope": "当前功能v2实测失败对应FWXC-591；原高级目标缺陷仅历史，未修改旧缺陷状态"
+    },
+    {
+      "id": "ERYE199-055",
+      "status": "Passed",
+      "actual": "一次相对降6dB后约50.12%，切面板/两次刷新/离开重开仍约50%而非重复降为25%；原片/原声/位置与源范围保持。",
+      "fixture": {
+        "conversationId": "aef1b7f1-a91d-46a0-a0ba-82d63fc2171b",
+        "editorId": "28e5707e-7f82-41c4-bbe3-894435de085e",
+        "name": "ERYE199-055-nine-v2-20261116"
+      },
+      "workspace_id": "2e39c06e-4526-4ab1-bff3-89af5e46b113",
+      "definition_revision": 2,
+      "completed": "2026-11-16T07:04:31.583Z",
+      "automation_status": "AUTO",
+      "automation_integrated": true,
+      "script": "tools/editor/erye199/cases-current-v2.mjs#055",
+      "automation_command": "npm run test:editor:199 -- --base-url https://app.cinlink.ai --cases 055",
+      "screenshots": [
+        "evidence-nine-v2-production-20261116/055/v2-baseline.png",
+        "evidence-nine-v2-production-20261116/055/gain-after-once.png",
+        "evidence-nine-v2-production-20261116/055/gain-refresh-1.png",
+        "evidence-nine-v2-production-20261116/055/gain-refresh-2.png",
+        "evidence-nine-v2-production-20261116/055/gain-reopen.png"
+      ],
+      "target_steps_executed": true
+    }
+  ],
+  "counts": {
+    "Passed": 6,
+    "Failed": 2,
+    "Blocked": 1,
+    "Not Applicable": 0,
+    "Not Run": 0
+  },
+  "active_counts": {
+    "Passed": 31,
+    "Failed": 8,
+    "Blocked": 2,
+    "Not Applicable": 22,
+    "Not Run": 0
+  },
+  "report": "results-nine-v2-production-20261116.md",
+  "new_projects": 9,
+  "new_conversations": 9,
+  "new_editors": 9,
+  "agent_target_requests": 5,
+  "clarification_forms": 0,
+  "cloud_write_performed": false,
+  "subsequent_cloud_sync": {
+    "created": 2,
+    "case_ids": [
+      "ERYE199-017",
+      "ERYE199-053"
+    ],
+    "defects": [
+      "FWXC-590",
+      "FWXC-591"
+    ],
+    "screenshots": 6,
+    "attachments": 13,
+    "verified": true,
+    "report": "defects-017-053-v2-production-20261116.md",
+    "rerun_performed": false,
+    "date": "2026-11-16"
+  }
+}

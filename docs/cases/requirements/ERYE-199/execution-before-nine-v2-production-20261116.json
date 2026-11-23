@@ -1,0 +1,1284 @@
+{
+  "counts": {
+    "Passed": 25,
+    "Failed": 6,
+    "Blocked": 1,
+    "Not Applicable": 22,
+    "Not Run": 9
+  },
+  "cases": [
+    {
+      "id": "ERYE199-011",
+      "execution_history": [
+        {
+          "id": "ERYE199-011",
+          "started": "2026-11-13T08:30:19.669Z",
+          "automation": "tools/editor/erye199/cases-011-015.mjs#011",
+          "status": "Blocked",
+          "actual": "同步锁前置未建立：应用明确不支持独立背景音轨同步锁；没有插片或验证推移，不以原声关联替代。",
+          "errorType": "Blocked",
+          "fixture": {
+            "conversationId": "04042153-f7f2-4d53-aa23-6fc9ab11d320",
+            "editorId": "b092736a-79ba-4668-b717-2e7ef2b70c6e",
+            "name": "ERYE199-011-2026-11-13T08-29-39-866Z"
+          },
+          "completed": "2026-11-13T08:31:08.269Z",
+          "batch": "erye199-auto-2026-11-13T08-29-39-866Z",
+          "automation_status": "BLOCKED",
+          "script": "tools/editor/erye199/cases-011-015.mjs#011",
+          "automation_command": "npm run test:editor:199 -- --base-url https://app.cinlink.ai --cases 011",
+          "latest_execution_report": "results-011-015-production-20261113.md",
+          "latest_execution_batch": "erye199-auto-2026-11-13T08-29-39-866Z",
+          "workspace_id": "096c314a-eb12-4e17-9856-8645af450376",
+          "conversation_id": "04042153-f7f2-4d53-aa23-6fc9ab11d320",
+          "editor_id": "b092736a-79ba-4668-b717-2e7ef2b70c6e",
+          "screenshots": [
+            "evidence-011-015-production-20261113/011-agent-terminal.png",
+            "evidence-011-015-production-20261113/011-before-submit.png",
+            "evidence-011-015-production-20261113/011-failure.png",
+            "evidence-011-015-production-20261113/011-同步锁-agent-terminal.png",
+            "evidence-011-015-production-20261113/011-同步锁-before-submit.png",
+            "evidence-011-015-production-20261113/011-同步锁-before.png"
+          ],
+          "phases": [
+            {
+              "phase": "同步锁",
+              "prompt": "只编辑当前工程“ERYE199-011-2026-11-13T08-29-39-866Z”（工程ID：b092736a-79ba-4668-b717-2e7ef2b70c6e），不新建工程、不生成替代视频。仅为独立背景音频轨道8385be41-61f5-4fd6-811d-df6d021bec7a开启“同步锁”，使其在视频中间插入片段时跟随推移；保持背景音频轨道72d19ac9-2e34-449b-9789-965a1b210159同步锁关闭且位置不动。不要把同步锁替换成编辑锁、静音或原声关联。先只设置同步锁，不插入片段。这是测试前置准备；如当前接口或页面不支持，请明确说明并保留工程，不用其他操作替代，不添加假字段。",
+              "run_id": "run_v2_224a3c9141114b038750365dc8f375b8",
+              "status": "done",
+              "text": "当前工具目录没有独立背景音轨“同步锁”的操作或字段，所提供的页面能力列表也未包含该控制。因此，无法为轨道 8385be41-61f5-4fd6-811d-df6d021bec7a 开启同步锁，也无法核验轨道 72d19ac9-2e34-449b-9789-965a1b210159 当前是否关闭同步锁。\n\n本次不安排任何修改：不新建工程、不生成替代视频、不插入片段、不移动轨道，也不以编辑锁、静音或原声关联替代。\n\n现有的视频分析、视频摘要、赘词与停顿清理、精彩片段剪辑、视频音频降噪工作流均不能设置同步锁，本次均不调用。需提供正式的轨道同步锁控制能力后，才能在指定工程内完成这项测试准备。",
+              "intent_fully_satisfied": false,
+              "before_revision": 1,
+              "after_revision": 1,
+              "content_unchanged": true
+            }
+          ],
+          "automation_attempts": [
+            {
+              "id": "ERYE199-011",
+              "started": "2026-11-13T08:25:28.301Z",
+              "automation": "tools/editor/erye199/cases-011-015.mjs#011",
+              "status": "Blocked",
+              "actual": "page.waitForFunction timed out after 30000ms on page p1; last URL was \"https://app.cinlink.ai/c/5a47a44f-db0e-4e33-b6f0-dd438fb3fa1e\"; last title was \"CinLink | Everything You Need To Create And Remake Content\".",
+              "errorType": "Error",
+              "category": "执行异常，需核对页面/脚本；不直接认定产品缺陷",
+              "fixture": {
+                "conversationId": "5a47a44f-db0e-4e33-b6f0-dd438fb3fa1e",
+                "editorId": "c9af2de8-f8b4-46d6-90b8-15d5458bfe9d",
+                "name": "ERYE199-011-2026-11-13T08-24-43-271Z"
+              },
+              "completed": "2026-11-13T08:26:01.644Z",
+              "batch": "erye199-auto-2026-11-13T08-24-43-271Z"
+            },
+            {
+              "id": "ERYE199-011",
+              "started": "2026-11-13T08:30:19.669Z",
+              "automation": "tools/editor/erye199/cases-011-015.mjs#011",
+              "status": "Blocked",
+              "actual": "同步锁前置未建立；原工程保持，见实际任务回复和截图，后续目标步骤未冒充通过",
+              "errorType": "Blocked",
+              "fixture": {
+                "conversationId": "04042153-f7f2-4d53-aa23-6fc9ab11d320",
+                "editorId": "b092736a-79ba-4668-b717-2e7ef2b70c6e",
+                "name": "ERYE199-011-2026-11-13T08-29-39-866Z"
+              },
+              "completed": "2026-11-13T08:31:08.269Z",
+              "batch": "erye199-auto-2026-11-13T08-29-39-866Z"
+            }
+          ]
+        },
+        {
+          "archived_on": "2026-11-16",
+          "reason": "31条定义复核前",
+          "id": "ERYE199-011",
+          "started": "2026-11-13T08:30:19.669Z",
+          "automation": "tools/editor/erye199/cases-011-015.mjs#011",
+          "status": "Not Applicable",
+          "actual": "同步锁本版本不做，后续版本再测",
+          "errorType": "Blocked",
+          "fixture": {
+            "conversationId": "04042153-f7f2-4d53-aa23-6fc9ab11d320",
+            "editorId": "b092736a-79ba-4668-b717-2e7ef2b70c6e",
+            "name": "ERYE199-011-2026-11-13T08-29-39-866Z"
+          },
+          "completed": "2026-11-13T08:31:08.269Z",
+          "batch": "erye199-auto-2026-11-13T08-29-39-866Z",
+          "automation_status": "PLAN",
+          "script": "tools/editor/erye199/cases-011-015.mjs#011",
+          "automation_command": "npm run test:editor:199 -- --base-url https://app.cinlink.ai --cases 011",
+          "latest_execution_report": "results-011-015-production-20261113.md",
+          "latest_execution_batch": "erye199-auto-2026-11-13T08-29-39-866Z",
+          "workspace_id": "096c314a-eb12-4e17-9856-8645af450376",
+          "conversation_id": "04042153-f7f2-4d53-aa23-6fc9ab11d320",
+          "editor_id": "b092736a-79ba-4668-b717-2e7ef2b70c6e",
+          "screenshots": [],
+          "phases": [
+            {
+              "phase": "同步锁",
+              "prompt": "只编辑当前工程“ERYE199-011-2026-11-13T08-29-39-866Z”（工程ID：b092736a-79ba-4668-b717-2e7ef2b70c6e），不新建工程、不生成替代视频。仅为独立背景音频轨道8385be41-61f5-4fd6-811d-df6d021bec7a开启“同步锁”，使其在视频中间插入片段时跟随推移；保持背景音频轨道72d19ac9-2e34-449b-9789-965a1b210159同步锁关闭且位置不动。不要把同步锁替换成编辑锁、静音或原声关联。先只设置同步锁，不插入片段。这是测试前置准备；如当前接口或页面不支持，请明确说明并保留工程，不用其他操作替代，不添加假字段。",
+              "run_id": "run_v2_224a3c9141114b038750365dc8f375b8",
+              "status": "done",
+              "text": "当前工具目录没有独立背景音轨“同步锁”的操作或字段，所提供的页面能力列表也未包含该控制。因此，无法为轨道 8385be41-61f5-4fd6-811d-df6d021bec7a 开启同步锁，也无法核验轨道 72d19ac9-2e34-449b-9789-965a1b210159 当前是否关闭同步锁。\n\n本次不安排任何修改：不新建工程、不生成替代视频、不插入片段、不移动轨道，也不以编辑锁、静音或原声关联替代。\n\n现有的视频分析、视频摘要、赘词与停顿清理、精彩片段剪辑、视频音频降噪工作流均不能设置同步锁，本次均不调用。需提供正式的轨道同步锁控制能力后，才能在指定工程内完成这项测试准备。",
+              "intent_fully_satisfied": false,
+              "before_revision": 1,
+              "after_revision": 1,
+              "content_unchanged": true
+            }
+          ],
+          "release_scope": "deferred-current-version",
+          "scope_source": "用户2026-11-13确认当前版本范围",
+          "scope_report": "results-version-scope-012-rerun-production-20261113.md",
+          "executed_in_latest_scope_batch": false,
+          "historical_execution_status": "Blocked",
+          "historical_execution_report": "results-011-015-production-20261113.md",
+          "historical_screenshots": [
+            "evidence-011-015-production-20261113/011-agent-terminal.png",
+            "evidence-011-015-production-20261113/011-before-submit.png",
+            "evidence-011-015-production-20261113/011-failure.png",
+            "evidence-011-015-production-20261113/011-同步锁-agent-terminal.png",
+            "evidence-011-015-production-20261113/011-同步锁-before-submit.png",
+            "evidence-011-015-production-20261113/011-同步锁-before.png"
+          ]
+        }
+      ],
+      "historical_execution_status": "Blocked",
+      "historical_execution_report": "results-011-015-production-20261113.md",
+      "historical_screenshots": [
+        "evidence-011-015-production-20261113/011-agent-terminal.png",
+        "evidence-011-015-production-20261113/011-before-submit.png",
+        "evidence-011-015-production-20261113/011-failure.png",
+        "evidence-011-015-production-20261113/011-同步锁-agent-terminal.png",
+        "evidence-011-015-production-20261113/011-同步锁-before-submit.png",
+        "evidence-011-015-production-20261113/011-同步锁-before.png"
+      ],
+      "status": "Not Run",
+      "actual": "当前功能v2定义已更新；本轮未执行、未发送Agent、未生成新截图；原高级目标继续延期。",
+      "definition_revision": 2,
+      "title": "关联音视频整体移动与独立配乐隔离",
+      "definition": {
+        "id": "011",
+        "title": "关联音视频整体移动与独立配乐隔离",
+        "priority": "P1",
+        "source": "PE02；Requirement + Inferred QA Risk",
+        "basis": "012已实测页面移动保留间隙，005/034已实测原声关联；本例检查移动时关联轨与独立轨的区别。",
+        "deferred": "真正的轨道同步锁、插入时自动推移及锁定策略；普通关联移动不等于同步锁。",
+        "pre": [
+          "生产环境新建独立工程，画布640×360/30fps；视频A及其真实关联原声均为源/时间线0～10秒、1倍速。",
+          "另放入独立音乐M，源0～2秒、时间线8～10秒、音量30%；M未关联视频A，记录A视频/关联原声/M的真实轨道和片段标识。",
+          "保存并确认0～10秒可播放，页面选中A；本例无字幕、无其他视频。"
+        ],
+        "prompt": "只编辑当前工程“{工程名}”（工程ID：{工程ID}）。将视频A（轨道{视频轨ID}、片段{A片段ID}）及它已有的关联原声整体向右移动2秒，从时间线0～10秒改为2～12秒；保持二者源0～10秒、1倍速和原文件引用。独立音乐M（轨道{音乐轨ID}、片段{音乐片段ID}）保持时间线8～10秒、源0～2秒、30%音量。不要移动M，不开启同步锁，不新增/删除片段，不生成视频。请执行当前已支持的关联音视频移动。",
+        "steps": [
+          "记录A/原声0～10秒、M8～10秒基线与三条轨道；一次提交上述完整指令。",
+          "沿原任务等待，遇补槽填A及已有关联原声、右移2秒、M保持8秒；不要另发相同任务。",
+          "在1秒查看视频空档，在3秒核对为A源1秒；确认A和关联原声均2～12秒，M仍8～10秒。",
+          "刷新同一工程，再核对三者起止时间、原片/音乐引用和音量。"
+        ],
+        "expected": [
+          "A及关联原声只移动2秒，源范围和速度不变；前方0～2秒是视频空档，3秒画面对应该源1秒。",
+          "M的源范围、8秒起点及30%音量不变，不因A移动自动推移；刷新保持，片段不重复、不生成替代文件。"
+        ],
+        "distinct": "区别005单片段裁剪、012同轨普通移动/删除：本例含已关联原声和不关联音乐对照。"
+      },
+      "definition_updated": "2026-11-16",
+      "automation_status": "PLAN",
+      "automation_integrated": false,
+      "script": "",
+      "automation_command": "",
+      "execution_method": "待执行；045保持人工页面用例；其他新版接入后再执行",
+      "executed_in_latest_scope_batch": false,
+      "target_steps_executed": false,
+      "scope_report": "revision-na31-current-capabilities-20261116.md",
+      "latest_definition_report": "revision-na31-current-capabilities-20261116.md",
+      "historical_execution_record_archive": "revision-na31-original-definitions-20261116.json",
+      "historical_script": "tools/editor/erye199/cases-011-015.mjs#011",
+      "deferred_original_scope": "真正的轨道同步锁、插入时自动推移及锁定策略；普通关联移动不等于同步锁。",
+      "release_scope": "current-function-v2-pending",
+      "defect_link_scope": "原高级需求缺口/旧定义关联，不代表新定义已失败；本次未修改云效"
+    },
+    {
+      "id": "ERYE199-013",
+      "execution_history": [
+        {
+          "id": "ERYE199-013",
+          "started": "2026-11-13T08:27:00.617Z",
+          "automation": "tools/editor/erye199/cases-011-015.mjs#013",
+          "status": "Blocked",
+          "actual": "应用明确不支持现有视频片段与字幕的真实source-bound源时间绑定；原片/字幕/原声及版本未变，联动目标步骤未执行。",
+          "errorType": "Blocked",
+          "fixture": {
+            "conversationId": "be232138-500d-4691-bf53-2fd96b9f9d0d",
+            "editorId": "02454d58-1328-4b72-b705-85e43ec99726",
+            "name": "ERYE199-013-2026-11-13T08-24-43-271Z"
+          },
+          "completed": "2026-11-13T08:28:06.217Z",
+          "batch": "erye199-auto-2026-11-13T08-24-43-271Z",
+          "automation_status": "BLOCKED",
+          "script": "tools/editor/erye199/cases-011-015.mjs#013",
+          "automation_command": "npm run test:editor:199 -- --base-url https://app.cinlink.ai --cases 013",
+          "latest_execution_report": "results-011-015-production-20261113.md",
+          "latest_execution_batch": "erye199-auto-2026-11-13T08-24-43-271Z",
+          "workspace_id": "150e5e0f-8057-4a03-90ae-a5850916d87a",
+          "conversation_id": "be232138-500d-4691-bf53-2fd96b9f9d0d",
+          "editor_id": "02454d58-1328-4b72-b705-85e43ec99726",
+          "screenshots": [
+            "evidence-011-015-production-20261113/013-agent-terminal.png",
+            "evidence-011-015-production-20261113/013-before-submit.png",
+            "evidence-011-015-production-20261113/013-failure.png",
+            "evidence-011-015-production-20261113/013-源绑定字幕-agent-terminal.png",
+            "evidence-011-015-production-20261113/013-源绑定字幕-before-submit.png",
+            "evidence-011-015-production-20261113/013-源绑定字幕-before.png"
+          ],
+          "phases": [
+            {
+              "phase": "源绑定字幕",
+              "prompt": "只编辑当前工程“ERYE199-013-2026-11-13T08-24-43-271Z”（工程ID：02454d58-1328-4b72-b705-85e43ec99726），不新建工程、不生成替代视频。为现有视频片段e453b981-9c49-409f-9280-4bd5082197db（轨道3c10f39f-d1ab-457d-a1e6-dad3696d2755，原片文件file_cloud_tr5tonp5hfsyofxcplvjf6skis）及字幕文件file_cloud_vi74nj4kgiqhyobktpehnxq6ig建立真实source-bound源时间绑定；字幕A源1～3秒、字幕B源6～8秒。保留原声轨f6ea09f5-a5cd-46e3-a4df-87306919c5c9与视频关联。字幕必须能随该片段的裁剪/分割/变速映射，不把普通固定时间字幕称为源绑定字幕；先只准备关联，不裁剪、不分割、不变速。这是测试前置准备；如当前接口或页面不支持，请明确说明并保留工程，不用其他操作替代，不添加假字段。",
+              "run_id": "run_v2_432a84666fab46ebac84de3c27b83d3a",
+              "status": "done",
+              "text": "当前提供的接口没有可为该现有片段建立真实 source-bound 字幕源时间绑定的已声明操作；页面公布的能力也未包含此操作。普通字幕文件绑定或固定时间修改，不能等同于您要求的、随片段裁剪／分割／变速映射的源绑定。\n\n因此，本次不会写入字幕A源1～3秒、字幕B源6～8秒的伪绑定，也不会改动工程 02454d58-1328-4b72-b705-85e43ec99726、现有片段、字幕或原声轨关联；不新建工程、不生成替代视频、不执行裁剪、分割或变速。\n\n继续这项准备需要接口明确支持将现有字幕块、视频片段实例及源时间区间关联，并提供后续剪辑映射能力；补传素材不能解决当前接口缺口。",
+              "intent_fully_satisfied": false,
+              "before_revision": 1,
+              "after_revision": 1,
+              "content_unchanged": true
+            }
+          ],
+          "automation_attempts": [
+            {
+              "id": "ERYE199-013",
+              "started": "2026-11-13T08:27:00.617Z",
+              "automation": "tools/editor/erye199/cases-011-015.mjs#013",
+              "status": "Blocked",
+              "actual": "源绑定字幕前置未建立；原工程保持，见实际任务回复和截图，后续目标步骤未冒充通过",
+              "errorType": "Blocked",
+              "fixture": {
+                "conversationId": "be232138-500d-4691-bf53-2fd96b9f9d0d",
+                "editorId": "02454d58-1328-4b72-b705-85e43ec99726",
+                "name": "ERYE199-013-2026-11-13T08-24-43-271Z"
+              },
+              "completed": "2026-11-13T08:28:06.217Z",
+              "batch": "erye199-auto-2026-11-13T08-24-43-271Z"
+            }
+          ]
+        },
+        {
+          "archived_on": "2026-11-16",
+          "reason": "31条定义复核前",
+          "id": "ERYE199-013",
+          "started": "2026-11-13T08:27:00.617Z",
+          "automation": "tools/editor/erye199/cases-011-015.mjs#013",
+          "status": "Not Applicable",
+          "actual": "源绑定字幕及关联联动本版本不做，后续版本再测",
+          "errorType": "Blocked",
+          "fixture": {
+            "conversationId": "be232138-500d-4691-bf53-2fd96b9f9d0d",
+            "editorId": "02454d58-1328-4b72-b705-85e43ec99726",
+            "name": "ERYE199-013-2026-11-13T08-24-43-271Z"
+          },
+          "completed": "2026-11-13T08:28:06.217Z",
+          "batch": "erye199-auto-2026-11-13T08-24-43-271Z",
+          "automation_status": "PLAN",
+          "script": "tools/editor/erye199/cases-011-015.mjs#013",
+          "automation_command": "npm run test:editor:199 -- --base-url https://app.cinlink.ai --cases 013",
+          "latest_execution_report": "results-011-015-production-20261113.md",
+          "latest_execution_batch": "erye199-auto-2026-11-13T08-24-43-271Z",
+          "workspace_id": "150e5e0f-8057-4a03-90ae-a5850916d87a",
+          "conversation_id": "be232138-500d-4691-bf53-2fd96b9f9d0d",
+          "editor_id": "02454d58-1328-4b72-b705-85e43ec99726",
+          "screenshots": [],
+          "phases": [
+            {
+              "phase": "源绑定字幕",
+              "prompt": "只编辑当前工程“ERYE199-013-2026-11-13T08-24-43-271Z”（工程ID：02454d58-1328-4b72-b705-85e43ec99726），不新建工程、不生成替代视频。为现有视频片段e453b981-9c49-409f-9280-4bd5082197db（轨道3c10f39f-d1ab-457d-a1e6-dad3696d2755，原片文件file_cloud_tr5tonp5hfsyofxcplvjf6skis）及字幕文件file_cloud_vi74nj4kgiqhyobktpehnxq6ig建立真实source-bound源时间绑定；字幕A源1～3秒、字幕B源6～8秒。保留原声轨f6ea09f5-a5cd-46e3-a4df-87306919c5c9与视频关联。字幕必须能随该片段的裁剪/分割/变速映射，不把普通固定时间字幕称为源绑定字幕；先只准备关联，不裁剪、不分割、不变速。这是测试前置准备；如当前接口或页面不支持，请明确说明并保留工程，不用其他操作替代，不添加假字段。",
+              "run_id": "run_v2_432a84666fab46ebac84de3c27b83d3a",
+              "status": "done",
+              "text": "当前提供的接口没有可为该现有片段建立真实 source-bound 字幕源时间绑定的已声明操作；页面公布的能力也未包含此操作。普通字幕文件绑定或固定时间修改，不能等同于您要求的、随片段裁剪／分割／变速映射的源绑定。\n\n因此，本次不会写入字幕A源1～3秒、字幕B源6～8秒的伪绑定，也不会改动工程 02454d58-1328-4b72-b705-85e43ec99726、现有片段、字幕或原声轨关联；不新建工程、不生成替代视频、不执行裁剪、分割或变速。\n\n继续这项准备需要接口明确支持将现有字幕块、视频片段实例及源时间区间关联，并提供后续剪辑映射能力；补传素材不能解决当前接口缺口。",
+              "intent_fully_satisfied": false,
+              "before_revision": 1,
+              "after_revision": 1,
+              "content_unchanged": true
+            }
+          ],
+          "release_scope": "deferred-current-version",
+          "scope_source": "用户2026-11-13确认当前版本范围",
+          "scope_report": "results-version-scope-012-rerun-production-20261113.md",
+          "executed_in_latest_scope_batch": false,
+          "historical_execution_status": "Blocked",
+          "historical_execution_report": "results-011-015-production-20261113.md",
+          "historical_screenshots": [
+            "evidence-011-015-production-20261113/013-agent-terminal.png",
+            "evidence-011-015-production-20261113/013-before-submit.png",
+            "evidence-011-015-production-20261113/013-failure.png",
+            "evidence-011-015-production-20261113/013-源绑定字幕-agent-terminal.png",
+            "evidence-011-015-production-20261113/013-源绑定字幕-before-submit.png",
+            "evidence-011-015-production-20261113/013-源绑定字幕-before.png"
+          ]
+        }
+      ],
+      "historical_execution_status": "Blocked",
+      "historical_execution_report": "results-011-015-production-20261113.md",
+      "historical_screenshots": [
+        "evidence-011-015-production-20261113/013-agent-terminal.png",
+        "evidence-011-015-production-20261113/013-before-submit.png",
+        "evidence-011-015-production-20261113/013-failure.png",
+        "evidence-011-015-production-20261113/013-源绑定字幕-agent-terminal.png",
+        "evidence-011-015-production-20261113/013-源绑定字幕-before-submit.png",
+        "evidence-011-015-production-20261113/013-源绑定字幕-before.png"
+      ],
+      "status": "Not Run",
+      "actual": "当前功能v2定义已更新；本轮未执行、未发送Agent、未生成新截图；原高级目标继续延期。",
+      "definition_revision": 2,
+      "title": "固定时间字幕在视频慢放后的时间与内容隔离",
+      "definition": {
+        "id": "013",
+        "title": "固定时间字幕在视频慢放后的时间与内容隔离",
+        "priority": "P1",
+        "source": "PE02；Requirement + Inferred QA Risk",
+        "basis": "固定SRT、字幕编辑及工程内变速已分别实测；这里明确验证固定时间字幕，不声称建立source-bound。",
+        "deferred": "source-bound源时间绑定、跨分割字幕映射/切分与显式解除绑定。",
+        "pre": [
+          "新建独立640×360/30fps工程，A及关联原声源/时间线0～10秒、1倍速，原片有帧内时间标记。",
+          "通过当前SRT导入/工程准备入口准备固定字幕：1～3秒Fixed A、6～8秒Fixed B，20px白字，仅这两条固定字幕，无其他字幕。",
+          "保存并确认2秒Fixed A、7秒Fixed B；记录视频/原声及字幕原文、时码和源引用。"
+        ],
+        "prompt": "只编辑当前工程“{工程名}”（工程ID：{工程ID}）唯一视频A（轨道{视频轨ID}、片段{A片段ID}）及已有的关联原声，把二者工程内速度设为0.5倍；保持同一原片、源0～10秒和时间线起点0，视频及原声时长应为20秒。现有字幕是固定时间SRT，请保留Fixed A的1～3秒、Fixed B的6～8秒、原文和20px样式，不建立源绑定，不拉伸或重生成字幕，不生成替代视频。",
+        "steps": [
+          "保存原1倍速工程和两条固定字幕；一次提交0.5倍速指令。",
+          "完成后确认视频/原声为20秒；2秒显示Fixed A并对应原片1秒，7秒显示Fixed B并对应原片3.5秒。",
+          "定位4秒和14秒，确认固定字幕空档，不因慢放把Fixed B延长到12～16秒。",
+          "刷新，逐条核对字幕原文/1～3和6～8时码、20px样式与0.5倍速保存结果。"
+        ],
+        "expected": [
+          "视频和原声按0.5倍速，字幕仍为原固定时间；内容、顺序、样式不改，不把固定字幕误按源时间缩放。",
+          "2/7秒分别出现A/B，4/14秒无字幕；刷新后源引用、字幕时码与20秒视频/原声保持。"
+        ],
+        "distinct": "区别034无字幕变速、028双语字号：本例验证固定字幕与视频变速的组合隔离。"
+      },
+      "definition_updated": "2026-11-16",
+      "automation_status": "PLAN",
+      "automation_integrated": false,
+      "script": "",
+      "automation_command": "",
+      "execution_method": "待执行；045保持人工页面用例；其他新版接入后再执行",
+      "executed_in_latest_scope_batch": false,
+      "target_steps_executed": false,
+      "scope_report": "revision-na31-current-capabilities-20261116.md",
+      "latest_definition_report": "revision-na31-current-capabilities-20261116.md",
+      "historical_execution_record_archive": "revision-na31-original-definitions-20261116.json",
+      "historical_script": "tools/editor/erye199/cases-011-015.mjs#013",
+      "deferred_original_scope": "source-bound源时间绑定、跨分割字幕映射/切分与显式解除绑定。",
+      "release_scope": "current-function-v2-pending",
+      "defect_link_scope": "原高级需求缺口/旧定义关联，不代表新定义已失败；本次未修改云效"
+    },
+    {
+      "id": "ERYE199-017",
+      "execution_history": [
+        {
+          "id": "ERYE199-017",
+          "started": "2026-11-13T09:01:22.056Z",
+          "automation": "tools/editor/erye199/cases-016-020.mjs#017",
+          "status": "Blocked",
+          "actual": "依赖016同批子序列创建能力缺口；未能建立两个共享父实例，文字同步、独立副本与撤销引用步骤未执行。",
+          "errorType": "Blocked",
+          "fixture": null,
+          "completed": "2026-11-13T09:01:22.243Z",
+          "automation_status": "BLOCKED",
+          "script": "tools/editor/erye199/cases-016-020.mjs#017",
+          "automation_command": "npm run test:editor:199 -- --base-url https://app.cinlink.ai --cases 017",
+          "latest_execution_report": "results-015-020-production-20261113.md",
+          "latest_execution_batch": "erye199-auto-2026-11-13T09-00-00-686Z",
+          "workspace_id": "b1f6f4fe-0bbd-46fb-bb97-be77feb63ecb",
+          "conversation_id": null,
+          "editor_id": null,
+          "screenshots": [
+            "evidence-015-020-production-20261113/017-failure.png"
+          ],
+          "phases": [],
+          "dependency": {
+            "target": "共享子序列与独立副本",
+            "gate": {
+              "source_case": "ERYE199-016",
+              "fixture": {
+                "conversationId": "01535bb2-001d-4c23-9bf1-32409ad7619d",
+                "editorId": "8f0662fe-8db6-49e3-a742-aa5550f0eaed",
+                "name": "ERYE199-016-2026-11-13T09-00-00-686Z"
+              },
+              "child_name": "E199_CHILD_28e2c15b",
+              "run_id": "run_v2_9f0a95077ba548c59dc8e2f853bfd1e9",
+              "status": "done",
+              "text": "当前提供的工具和编辑器操作不支持创建真实嵌套子序列、父子序列引用实例，以及进入子序列／返回父序列的导航入口。因此，无法按要求创建“E199_CHILD_28e2c15b”，也不能提供已创建的子序列标识或入口。\n\n本次不安排任何修改：指定工程“ERYE199-016-2026-11-13T09-00-00-686Z”（8f0662fe-8db6-49e3-a742-aa5550f0eaed）中的视频、关联原声、字幕和未选中的图片实例均不会被本次操作改变；不新建工程、不生成替代视频，也不添加假字段。\n\n现有工作流支持去除口头禅与停顿、精选片段剪辑、添加水印、转写并烧录字幕、整段视频拼接，但均不能实现真实父子序列关系，本次不会调用它们作为替代。后续需要具备真实子序列创建、引用和导航能力的编辑接口才能执行此请求。",
+              "content_unchanged": true,
+              "prepared": false
+            },
+            "target_steps_executed": false
+          }
+        },
+        {
+          "archived_on": "2026-11-16",
+          "reason": "31条定义复核前",
+          "id": "ERYE199-017",
+          "started": "2026-11-13T09:01:22.056Z",
+          "automation": "tools/editor/erye199/cases-016-020.mjs#017",
+          "status": "Not Applicable",
+          "actual": "当前暂跳过，功能实现后再测。依赖016同批子序列创建能力缺口；未能建立两个共享父实例，文字同步、独立副本与撤销引用步骤未执行。",
+          "errorType": "Blocked",
+          "fixture": null,
+          "completed": "2026-11-13T09:01:22.243Z",
+          "automation_status": "PLAN",
+          "script": "tools/editor/erye199/cases-016-020.mjs#017",
+          "automation_command": "npm run test:editor:199 -- --base-url https://app.cinlink.ai --cases 017",
+          "latest_execution_report": "results-015-020-production-20261113.md",
+          "latest_execution_batch": "erye199-auto-2026-11-13T09-00-00-686Z",
+          "workspace_id": "b1f6f4fe-0bbd-46fb-bb97-be77feb63ecb",
+          "conversation_id": null,
+          "editor_id": null,
+          "screenshots": [
+            "evidence-015-020-production-20261113/017-failure.png"
+          ],
+          "phases": [],
+          "dependency": {
+            "target": "共享子序列与独立副本",
+            "gate": {
+              "source_case": "ERYE199-016",
+              "fixture": {
+                "conversationId": "01535bb2-001d-4c23-9bf1-32409ad7619d",
+                "editorId": "8f0662fe-8db6-49e3-a742-aa5550f0eaed",
+                "name": "ERYE199-016-2026-11-13T09-00-00-686Z"
+              },
+              "child_name": "E199_CHILD_28e2c15b",
+              "run_id": "run_v2_9f0a95077ba548c59dc8e2f853bfd1e9",
+              "status": "done",
+              "text": "当前提供的工具和编辑器操作不支持创建真实嵌套子序列、父子序列引用实例，以及进入子序列／返回父序列的导航入口。因此，无法按要求创建“E199_CHILD_28e2c15b”，也不能提供已创建的子序列标识或入口。\n\n本次不安排任何修改：指定工程“ERYE199-016-2026-11-13T09-00-00-686Z”（8f0662fe-8db6-49e3-a742-aa5550f0eaed）中的视频、关联原声、字幕和未选中的图片实例均不会被本次操作改变；不新建工程、不生成替代视频，也不添加假字段。\n\n现有工作流支持去除口头禅与停顿、精选片段剪辑、添加水印、转写并烧录字幕、整段视频拼接，但均不能实现真实父子序列关系，本次不会调用它们作为替代。后续需要具备真实子序列创建、引用和导航能力的编辑接口才能执行此请求。",
+              "content_unchanged": true,
+              "prepared": false
+            },
+            "target_steps_executed": false
+          },
+          "release_scope": "deferred-current-version",
+          "scope_source": "用户2026-11-13要求016～018不支持的先跳过",
+          "scope_report": "scope-skip-016-018-20261113.md",
+          "executed_in_latest_scope_batch": false,
+          "historical_execution_status": "Blocked",
+          "historical_execution_report": "results-015-020-production-20261113.md",
+          "defect": {
+            "id": "FWXC-510",
+            "workitem_id": "6e20f45652f16e662cd22049e3",
+            "url": "https://devops.aliyun.com/projex/project/1e401ac99539c3999e00e40006/bug#openWorkitemIdentifier=6e20f45652f16e662cd22049e3",
+            "title": "【生产环境】【功能未实现】【ERYE199-017】共享子序列联动与独立副本无法建立",
+            "status": "🤔AI提缺陷",
+            "assigned_to": "牛诗晴",
+            "verified": true,
+            "screenshots": 1,
+            "attachments": 4,
+            "synced_at": "2026-11-13T18:29:25.4478493+08:00",
+            "local_report": "docs/defects/ERYE199-017-subsequence-shared-copy-unimplemented-production-20261113.md",
+            "screenshot_captions": [
+              {
+                "path": "017-failure.png",
+                "caption": "017依赖证据：截图来自同批016创建子序列被拒页面，017共享/副本目标步骤未执行。",
+                "sha256": "7b20d3bc00ec96406b5bc416e4e598c87e0416e00e4344912809d79663182807"
+              }
+            ],
+            "attachment_receipts": [
+              {
+                "sha256": "7b20d3bc00ec96406b5bc416e4e598c87e0416e00e4344912809d79663182807",
+                "name": "017-failure.png",
+                "size": 454394,
+                "id": "38e678dc23bed88438e3ab5f3c"
+              },
+              {
+                "sha256": "7552f7f49b2203cfd19398c34d5a6c195bb5b4b156e6c6c150e1ed411ee7f866",
+                "name": "evidence.json",
+                "size": 14303,
+                "id": "5c8c841908791873258f8ef39b"
+              },
+              {
+                "sha256": "e432370eb6cda0797076d6091622f2f7e0acd94cef690f1679c1a01f2349aba9",
+                "name": "ERYE199-video.mp4",
+                "size": 2975172,
+                "id": "00080383372d8da2c99926668d"
+              },
+              {
+                "sha256": "400520109dcfe73580281d5b9cfea4d4c666e1c5c4c73a37371e3fcdfc5a2009",
+                "name": "source-en.srt",
+                "size": 109,
+                "id": "35d17d4a29600f2b23e5fc9f20"
+              }
+            ]
+          },
+          "latest_defect_sync_report": "defects-unimplemented-016-018-020-production-20261113.md"
+        }
+      ],
+      "historical_execution_status": "Blocked",
+      "historical_execution_report": "results-015-020-production-20261113.md",
+      "defect": {
+        "id": "FWXC-510",
+        "workitem_id": "6e20f45652f16e662cd22049e3",
+        "url": "https://devops.aliyun.com/projex/project/1e401ac99539c3999e00e40006/bug#openWorkitemIdentifier=6e20f45652f16e662cd22049e3",
+        "title": "【生产环境】【功能未实现】【ERYE199-017】共享子序列联动与独立副本无法建立",
+        "status": "🤔AI提缺陷",
+        "assigned_to": "牛诗晴",
+        "verified": true,
+        "screenshots": 1,
+        "attachments": 4,
+        "synced_at": "2026-11-13T18:29:25.4478493+08:00",
+        "local_report": "docs/defects/ERYE199-017-subsequence-shared-copy-unimplemented-production-20261113.md",
+        "screenshot_captions": [
+          {
+            "path": "017-failure.png",
+            "caption": "017依赖证据：截图来自同批016创建子序列被拒页面，017共享/副本目标步骤未执行。",
+            "sha256": "7b20d3bc00ec96406b5bc416e4e598c87e0416e00e4344912809d79663182807"
+          }
+        ],
+        "attachment_receipts": [
+          {
+            "sha256": "7b20d3bc00ec96406b5bc416e4e598c87e0416e00e4344912809d79663182807",
+            "name": "017-failure.png",
+            "size": 454394,
+            "id": "38e678dc23bed88438e3ab5f3c"
+          },
+          {
+            "sha256": "7552f7f49b2203cfd19398c34d5a6c195bb5b4b156e6c6c150e1ed411ee7f866",
+            "name": "evidence.json",
+            "size": 14303,
+            "id": "5c8c841908791873258f8ef39b"
+          },
+          {
+            "sha256": "e432370eb6cda0797076d6091622f2f7e0acd94cef690f1679c1a01f2349aba9",
+            "name": "ERYE199-video.mp4",
+            "size": 2975172,
+            "id": "00080383372d8da2c99926668d"
+          },
+          {
+            "sha256": "400520109dcfe73580281d5b9cfea4d4c666e1c5c4c73a37371e3fcdfc5a2009",
+            "name": "source-en.srt",
+            "size": 109,
+            "id": "35d17d4a29600f2b23e5fc9f20"
+          }
+        ]
+      },
+      "latest_defect_sync_report": "defects-unimplemented-016-018-020-production-20261113.md",
+      "status": "Not Run",
+      "actual": "当前功能v2定义已更新；本轮未执行、未发送Agent、未生成新截图；原高级目标继续延期。",
+      "definition_revision": 2,
+      "title": "同源普通实例裁剪隔离与间隙保留",
+      "definition": {
+        "id": "017",
+        "title": "同源普通实例裁剪隔离与间隙保留",
+        "priority": "P1",
+        "source": "PE03；Requirement + Inferred QA Risk",
+        "basis": "009已验证同源独立片段，005已验证裁剪及原声关联；本例检查仅A裁尾不改B。",
+        "deferred": "子序列共享引用、父实例同步、独立子序列副本及引用撤销；两个普通片段不是子序列。",
+        "pre": [
+          "新工程同一视频轨放入两个独立片段A/B，引用同一10秒原片：A源0～5秒放0～5秒，B源0～5秒放5～10秒。",
+          "为A/B准备已有的对应关联原声片段，分别0～5和5～10秒；记录视频A、视频B及两个原声片段的不同标识。",
+          "均1倍速，保存并核对2秒和7秒原片画面；无字幕、图片或其他音轨。"
+        ],
+        "prompt": "只编辑当前工程“{工程名}”（工程ID：{工程ID}）。仅将视频实例A（轨道{视频轨ID}、片段{A片段ID}）及对应关联原声A（片段{原声A片段ID}）的源结束从5秒裁为3秒，保留源开始0和时间线起点0，A应为0～3秒。实例B（片段{B片段ID}）及关联原声B（片段{原声B片段ID}）仍为源0～5秒、时间线5～10秒、1倍速。不要移动B或闭合3～5秒空隙，不改写共同原文件，不新建子序列或生成视频。",
+        "steps": [
+          "记录两个独立实例及原声范围，选中A，一次发送只裁A尾部的完整指令。",
+          "完成后核对A/原声A为0～3秒，B/原声B仍5～10秒；3～5秒留空。",
+          "定位2秒、4秒、7秒：分别为A源2秒、视频空档、B源2秒；确认B没有继承A的新结束时间。",
+          "刷新同一工程，复核片段身份、各自源范围及间隙，原文件引用不变。"
+        ],
+        "expected": [
+          "只改变A及其关联原声的结束范围；B仍保留完整5秒独立实例，源范围和位置未串改。",
+          "不自动闭合间隙、不缩短B、不覆盖共用原片；刷新后A3秒+B5秒及中间2秒空隙保持。"
+        ],
+        "distinct": "区别009同源不透明度隔离、005单实例裁头：本例是同源两实例裁尾及原声/间隙隔离。"
+      },
+      "definition_updated": "2026-11-16",
+      "automation_status": "PLAN",
+      "automation_integrated": false,
+      "script": "",
+      "automation_command": "",
+      "execution_method": "待执行；045保持人工页面用例；其他新版接入后再执行",
+      "executed_in_latest_scope_batch": false,
+      "target_steps_executed": false,
+      "scope_report": "revision-na31-current-capabilities-20261116.md",
+      "latest_definition_report": "revision-na31-current-capabilities-20261116.md",
+      "historical_execution_record_archive": "revision-na31-original-definitions-20261116.json",
+      "historical_script": "tools/editor/erye199/cases-016-020.mjs#017",
+      "deferred_original_scope": "子序列共享引用、父实例同步、独立子序列副本及引用撤销；两个普通片段不是子序列。",
+      "release_scope": "current-function-v2-pending",
+      "defect_link_scope": "原高级需求缺口/旧定义关联，不代表新定义已失败；本次未修改云效"
+    },
+    {
+      "id": "ERYE199-020",
+      "execution_history": [
+        {
+          "id": "ERYE199-020",
+          "started": "2026-11-13T09:03:11.796Z",
+          "automation": "tools/editor/erye199/cases-016-020.mjs#020",
+          "status": "Blocked",
+          "actual": "应用明确不支持真实可编辑属性关键帧；静态参数未作为替代，保存内容不变；保持/线性/贝塞尔、空间路径/时间缓动未执行。",
+          "errorType": "Blocked",
+          "fixture": {
+            "conversationId": "bae2a0f6-2a8d-43ad-b1da-7a74f60c7a21",
+            "editorId": "97691da2-6eb5-4fd6-8cf6-16578348551f",
+            "name": "ERYE199-020-2026-11-13T09-00-00-686Z"
+          },
+          "completed": "2026-11-13T09:04:21.546Z",
+          "automation_status": "BLOCKED",
+          "script": "tools/editor/erye199/cases-016-020.mjs#020",
+          "automation_command": "npm run test:editor:199 -- --base-url https://app.cinlink.ai --cases 020",
+          "latest_execution_report": "results-015-020-production-20261113.md",
+          "latest_execution_batch": "erye199-auto-2026-11-13T09-00-00-686Z",
+          "workspace_id": "b1f6f4fe-0bbd-46fb-bb97-be77feb63ecb",
+          "conversation_id": "bae2a0f6-2a8d-43ad-b1da-7a74f60c7a21",
+          "editor_id": "97691da2-6eb5-4fd6-8cf6-16578348551f",
+          "screenshots": [
+            "evidence-015-020-production-20261113/020-selected-baseline.png",
+            "evidence-015-020-production-20261113/020-create-keyframes-result.png",
+            "evidence-015-020-production-20261113/020-failure.png"
+          ],
+          "phases": [
+            {
+              "phase": "create-keyframes",
+              "prompt": "只编辑当前工程“ERYE199-020-2026-11-13T09-00-00-686Z”（工程ID：97691da2-6eb5-4fd6-8cf6-16578348551f），不新建工程、不生成替代视频。仅给视频轨ce577048-84e2-461f-ba2b-9813f627d0a3的片段bc28495c-1790-43c8-9f82-64ac76cd1a76添加真实可继续编辑的关键帧，时间均为源1秒和8秒：位置中心(320,180)→(420,220)像素；等比缩放100%→75%；旋转0→30度；不透明度100%→50%；模糊0→10像素；羽化0→10像素；从左到右擦除进度0%→100%。先建立各属性关键帧和对应属性，暂不切换插值；请逐项说明实际支持项。关键帧成功后才验证保持/线性/贝塞尔、位置空间路径和独立时间缓动。如不支持真实关键帧，明确说明，保留原工程；不以静态参数、淡入淡出、字幕/水印或生成成片替代，不添加假字段。源范围0～10秒、速度、原声与文件引用不变。",
+              "run_id": "run_v2_f47014ccb4f64a9d86e8e4b83a163523",
+              "status": "done",
+              "text": "本次提供的工具不支持在指定片段上建立真实、可继续编辑的属性关键帧，因此不能完成这项测试。本次不安排任何工程写入，不新建工程、不生成替代视频，也不以静态参数或淡入淡出替代。\n\n目标工程：ERYE199-020-2026-11-13T09-00-00-686Z（97691da2-6eb5-4fd6-8cf6-16578348551f）。\n\n逐项支持情况（均针对源时间1秒、8秒的两个关键帧）：\n1. 位置中心：(320,180)→(420,220)像素——工具支持静态中心位置设置，但没有位置关键帧接口，不能建立这两个时间点。\n2. 等比缩放：100%→75%——支持静态等比缩放，但没有缩放关键帧接口；其100%定义为按画布完整适配后的尺寸。\n3. 旋转：0→30度——支持静态旋转，但没有旋转关键帧接口。\n4. 不透明度：100%→50%——支持静态不透明度，但没有不透明度关键帧接口。\n5. 模糊：0→10像素——未提供该片段的可编辑模糊属性或关键帧接口。\n6. 羽化：0→10像素——未提供该片段的可编辑羽化属性或关键帧接口。\n7. 从左到右擦除：0%→100%——未提供片段擦除进度属性或关键帧接口。视频拼接的擦除转场不等同于此功能，不会用它替代。\n\n由于无法建立上述关键帧，“关键帧成功后”的条件未满足，因此不会切换或验证保持、线性、贝塞尔插值，也不会验证位置空间路径或独立时间缓动。\n\n本次不会更改源范围0～10秒、速度、原声、文件引用或其他实例；这不是一次已完成的关键帧编辑。\n\n现有的常规视频编辑、口头禅与停顿清理、高光剪辑、添加水印、AI视频生成这五类工作流也不能满足本次要求，仅说明能力边界，不作为替代方案。继续此测试需要提供针对现有工程片段的真实属性关键帧读写接口，以及相应插值、空间路径和时间缓动能力；无需补传视频或再次确认。",
+              "intent_fully_satisfied": false
+            }
+          ],
+          "dependency": null
+        },
+        {
+          "archived_on": "2026-11-16",
+          "reason": "31条定义复核前",
+          "id": "ERYE199-020",
+          "started": "2026-11-13T09:03:11.796Z",
+          "automation": "tools/editor/erye199/cases-016-020.mjs#020",
+          "status": "Not Applicable",
+          "actual": "真实可编辑属性关键帧当前不支持，按用户确认本轮不适用，功能实现后再测；历史Blocked保留，插值/空间路径/时间缓动未执行。",
+          "errorType": "Blocked",
+          "fixture": {
+            "conversationId": "bae2a0f6-2a8d-43ad-b1da-7a74f60c7a21",
+            "editorId": "97691da2-6eb5-4fd6-8cf6-16578348551f",
+            "name": "ERYE199-020-2026-11-13T09-00-00-686Z"
+          },
+          "completed": "2026-11-13T09:04:21.546Z",
+          "automation_status": "PLAN",
+          "script": "tools/editor/erye199/cases-016-020.mjs#020",
+          "automation_command": "npm run test:editor:199 -- --base-url https://app.cinlink.ai --cases 020",
+          "latest_execution_report": "results-015-020-production-20261113.md",
+          "latest_execution_batch": "erye199-auto-2026-11-13T09-00-00-686Z",
+          "workspace_id": "b1f6f4fe-0bbd-46fb-bb97-be77feb63ecb",
+          "conversation_id": "bae2a0f6-2a8d-43ad-b1da-7a74f60c7a21",
+          "editor_id": "97691da2-6eb5-4fd6-8cf6-16578348551f",
+          "screenshots": [
+            "evidence-015-020-production-20261113/020-selected-baseline.png",
+            "evidence-015-020-production-20261113/020-create-keyframes-result.png",
+            "evidence-015-020-production-20261113/020-failure.png"
+          ],
+          "phases": [
+            {
+              "phase": "create-keyframes",
+              "prompt": "只编辑当前工程“ERYE199-020-2026-11-13T09-00-00-686Z”（工程ID：97691da2-6eb5-4fd6-8cf6-16578348551f），不新建工程、不生成替代视频。仅给视频轨ce577048-84e2-461f-ba2b-9813f627d0a3的片段bc28495c-1790-43c8-9f82-64ac76cd1a76添加真实可继续编辑的关键帧，时间均为源1秒和8秒：位置中心(320,180)→(420,220)像素；等比缩放100%→75%；旋转0→30度；不透明度100%→50%；模糊0→10像素；羽化0→10像素；从左到右擦除进度0%→100%。先建立各属性关键帧和对应属性，暂不切换插值；请逐项说明实际支持项。关键帧成功后才验证保持/线性/贝塞尔、位置空间路径和独立时间缓动。如不支持真实关键帧，明确说明，保留原工程；不以静态参数、淡入淡出、字幕/水印或生成成片替代，不添加假字段。源范围0～10秒、速度、原声与文件引用不变。",
+              "run_id": "run_v2_f47014ccb4f64a9d86e8e4b83a163523",
+              "status": "done",
+              "text": "本次提供的工具不支持在指定片段上建立真实、可继续编辑的属性关键帧，因此不能完成这项测试。本次不安排任何工程写入，不新建工程、不生成替代视频，也不以静态参数或淡入淡出替代。\n\n目标工程：ERYE199-020-2026-11-13T09-00-00-686Z（97691da2-6eb5-4fd6-8cf6-16578348551f）。\n\n逐项支持情况（均针对源时间1秒、8秒的两个关键帧）：\n1. 位置中心：(320,180)→(420,220)像素——工具支持静态中心位置设置，但没有位置关键帧接口，不能建立这两个时间点。\n2. 等比缩放：100%→75%——支持静态等比缩放，但没有缩放关键帧接口；其100%定义为按画布完整适配后的尺寸。\n3. 旋转：0→30度——支持静态旋转，但没有旋转关键帧接口。\n4. 不透明度：100%→50%——支持静态不透明度，但没有不透明度关键帧接口。\n5. 模糊：0→10像素——未提供该片段的可编辑模糊属性或关键帧接口。\n6. 羽化：0→10像素——未提供该片段的可编辑羽化属性或关键帧接口。\n7. 从左到右擦除：0%→100%——未提供片段擦除进度属性或关键帧接口。视频拼接的擦除转场不等同于此功能，不会用它替代。\n\n由于无法建立上述关键帧，“关键帧成功后”的条件未满足，因此不会切换或验证保持、线性、贝塞尔插值，也不会验证位置空间路径或独立时间缓动。\n\n本次不会更改源范围0～10秒、速度、原声、文件引用或其他实例；这不是一次已完成的关键帧编辑。\n\n现有的常规视频编辑、口头禅与停顿清理、高光剪辑、添加水印、AI视频生成这五类工作流也不能满足本次要求，仅说明能力边界，不作为替代方案。继续此测试需要提供针对现有工程片段的真实属性关键帧读写接口，以及相应插值、空间路径和时间缓动能力；无需补传视频或再次确认。",
+              "intent_fully_satisfied": false
+            }
+          ],
+          "dependency": null,
+          "release_scope": "deferred-current-version",
+          "scope_source": "用户2026-11-13确认016/017/018/020为功能未实现并要求同步云效",
+          "scope_report": "defects-unimplemented-016-018-020-production-20261113.md",
+          "historical_execution_status": "Blocked",
+          "historical_execution_report": "results-015-020-production-20261113.md",
+          "defect": {
+            "id": "FWXC-512",
+            "workitem_id": "7eaf8489cf64876a50f0135e11",
+            "url": "https://devops.aliyun.com/projex/project/1e401ac99539c3999e00e40006/bug#openWorkitemIdentifier=7eaf8489cf64876a50f0135e11",
+            "title": "【生产环境】【功能未实现】【ERYE199-020】无法创建可编辑属性关键帧，插值及路径缓动无法验证",
+            "status": "🤔AI提缺陷",
+            "assigned_to": "牛诗晴",
+            "verified": true,
+            "screenshots": 2,
+            "attachments": 4,
+            "synced_at": "2026-11-13T18:29:36.6305784+08:00",
+            "local_report": "docs/defects/ERYE199-020-editable-keyframes-unimplemented-production-20261113.md",
+            "screenshot_captions": [
+              {
+                "path": "020-selected-baseline.png",
+                "caption": "020实际新工程基线，原视频及关联原声0～10秒，视频已选中。",
+                "sha256": "641229a1bbe8704d0e5c56a4ce006922b0ade8be2aef89e0d34e5dbb58572464"
+              },
+              {
+                "path": "020-failure.png",
+                "caption": "020原任务明确说明各属性关键帧不支持；后续插值/空间路径/时间缓动未执行。",
+                "sha256": "22142f008a2d4fa94f4758179d34f165927d28ac51e2cb55854eec40222713ae"
+              }
+            ],
+            "attachment_receipts": [
+              {
+                "sha256": "641229a1bbe8704d0e5c56a4ce006922b0ade8be2aef89e0d34e5dbb58572464",
+                "name": "020-selected-baseline.png",
+                "size": 309022,
+                "id": "f915f0a125a435de071a5619a8"
+              },
+              {
+                "sha256": "22142f008a2d4fa94f4758179d34f165927d28ac51e2cb55854eec40222713ae",
+                "name": "020-failure.png",
+                "size": 460837,
+                "id": "f43f98a0425bd6a7433e6e6e5e"
+              },
+              {
+                "sha256": "36771ba9d5e9ab1b01777c668769f39e231081ee1022bdbd61b7ea1041d99b75",
+                "name": "evidence.json",
+                "size": 9828,
+                "id": "42d1be8190dcf581070972e0e1"
+              },
+              {
+                "sha256": "e432370eb6cda0797076d6091622f2f7e0acd94cef690f1679c1a01f2349aba9",
+                "name": "ERYE199-video.mp4",
+                "size": 2975172,
+                "id": "9dbee16ee3b1c491a5dc3a14a6"
+              }
+            ]
+          },
+          "latest_defect_sync_report": "defects-unimplemented-016-018-020-production-20261113.md"
+        }
+      ],
+      "historical_execution_status": "Blocked",
+      "historical_execution_report": "results-015-020-production-20261113.md",
+      "defect": {
+        "id": "FWXC-512",
+        "workitem_id": "7eaf8489cf64876a50f0135e11",
+        "url": "https://devops.aliyun.com/projex/project/1e401ac99539c3999e00e40006/bug#openWorkitemIdentifier=7eaf8489cf64876a50f0135e11",
+        "title": "【生产环境】【功能未实现】【ERYE199-020】无法创建可编辑属性关键帧，插值及路径缓动无法验证",
+        "status": "🤔AI提缺陷",
+        "assigned_to": "牛诗晴",
+        "verified": true,
+        "screenshots": 2,
+        "attachments": 4,
+        "synced_at": "2026-11-13T18:29:36.6305784+08:00",
+        "local_report": "docs/defects/ERYE199-020-editable-keyframes-unimplemented-production-20261113.md",
+        "screenshot_captions": [
+          {
+            "path": "020-selected-baseline.png",
+            "caption": "020实际新工程基线，原视频及关联原声0～10秒，视频已选中。",
+            "sha256": "641229a1bbe8704d0e5c56a4ce006922b0ade8be2aef89e0d34e5dbb58572464"
+          },
+          {
+            "path": "020-failure.png",
+            "caption": "020原任务明确说明各属性关键帧不支持；后续插值/空间路径/时间缓动未执行。",
+            "sha256": "22142f008a2d4fa94f4758179d34f165927d28ac51e2cb55854eec40222713ae"
+          }
+        ],
+        "attachment_receipts": [
+          {
+            "sha256": "641229a1bbe8704d0e5c56a4ce006922b0ade8be2aef89e0d34e5dbb58572464",
+            "name": "020-selected-baseline.png",
+            "size": 309022,
+            "id": "f915f0a125a435de071a5619a8"
+          },
+          {
+            "sha256": "22142f008a2d4fa94f4758179d34f165927d28ac51e2cb55854eec40222713ae",
+            "name": "020-failure.png",
+            "size": 460837,
+            "id": "f43f98a0425bd6a7433e6e6e5e"
+          },
+          {
+            "sha256": "36771ba9d5e9ab1b01777c668769f39e231081ee1022bdbd61b7ea1041d99b75",
+            "name": "evidence.json",
+            "size": 9828,
+            "id": "42d1be8190dcf581070972e0e1"
+          },
+          {
+            "sha256": "e432370eb6cda0797076d6091622f2f7e0acd94cef690f1679c1a01f2349aba9",
+            "name": "ERYE199-video.mp4",
+            "size": 2975172,
+            "id": "9dbee16ee3b1c491a5dc3a14a6"
+          }
+        ]
+      },
+      "latest_defect_sync_report": "defects-unimplemented-016-018-020-production-20261113.md",
+      "status": "Not Run",
+      "actual": "当前功能v2定义已更新；本轮未执行、未发送Agent、未生成新截图；原高级目标继续延期。",
+      "definition_revision": 2,
+      "title": "非零播放位置设置静态参数后整段一致",
+      "definition": {
+        "id": "020",
+        "title": "非零播放位置设置静态参数后整段一致",
+        "priority": "P0",
+        "source": "PE05；Requirement + Inferred QA Risk",
+        "basis": "019已实测静态不透明度；006已验证不同预览尺寸下静态变换。",
+        "deferred": "真实关键帧、保持/线性/贝塞尔插值、空间路径与时间缓动；静态设置不计为关键帧通过。",
+        "pre": [
+          "新工程画布640×360，前景A和不同背景B均源/时间线0～10秒、1倍速；A不透明度100%，B100%。",
+          "A原声启用、B原声静音；无字幕/水印/关键帧/淡入淡出，A/B位置和尺寸相同。",
+          "保存后在1、5、9秒记录100%前景基线，播放头停5秒并选中A。"
+        ],
+        "prompt": "只编辑当前工程“{工程名}”（工程ID：{工程ID}）前景A（轨道{前景轨ID}、片段{A片段ID}），将不透明度设为50%，作用于A整个0～10秒片段。这是整段静态值，当前播放头5秒不代表从5秒开始生效；不要创建关键帧、渐入渐出或新片段。背景B（轨道{背景轨ID}）、所有源范围/位置/速度和原声音轨保持不变，不生成视频。",
+        "steps": [
+          "在5秒选A，一次提交整段50%静态不透明度请求。",
+          "完成后分别定位1、5、9秒，对照原前景/背景确认均为相同50%混合，不出现5秒前后突变。",
+          "实际从4秒播放至6秒，确认经过提交时播放位置时没有额外渐变或跳变。",
+          "刷新再查1/5/9秒；核对A仍整段50%，B、原声和片段数量/范围不改。"
+        ],
+        "expected": [
+          "A全片统一50%，不会只在5秒后或仅当前帧生效；没有生成动画、分段或额外素材。",
+          "刷新/跨5秒播放保持相同静态作用范围，背景和声音不受影响。"
+        ],
+        "distinct": "区别006坐标单位、019组合参数：本例专测非零播放头设置静态值的时间作用范围。"
+      },
+      "definition_updated": "2026-11-16",
+      "automation_status": "PLAN",
+      "automation_integrated": false,
+      "script": "",
+      "automation_command": "",
+      "execution_method": "待执行；045保持人工页面用例；其他新版接入后再执行",
+      "executed_in_latest_scope_batch": false,
+      "target_steps_executed": false,
+      "scope_report": "revision-na31-current-capabilities-20261116.md",
+      "latest_definition_report": "revision-na31-current-capabilities-20261116.md",
+      "historical_execution_record_archive": "revision-na31-original-definitions-20261116.json",
+      "historical_script": "tools/editor/erye199/cases-016-020.mjs#020",
+      "deferred_original_scope": "真实关键帧、保持/线性/贝塞尔插值、空间路径与时间缓动；静态设置不计为关键帧通过。",
+      "release_scope": "current-function-v2-pending",
+      "defect_link_scope": "原高级需求缺口/旧定义关联，不代表新定义已失败；本次未修改云效"
+    },
+    {
+      "id": "ERYE199-045",
+      "requirement_gap_defect": {
+        "id": "FWXC-525",
+        "url": "https://devops.aliyun.com/projex/project/1e401ac99539c3999e00e40006/bug#openWorkitemIdentifier=1bea8a02a752c39eb065fe77f6",
+        "scope": "原需求能力缺口汇总，不作为v2执行失败",
+        "report": "defects-unfinished-24-production-20261113.md",
+        "verified": true
+      },
+      "execution_history": [
+        {
+          "archived_on": "2026-11-16",
+          "reason": "31条定义复核前",
+          "id": "ERYE199-045",
+          "status": "Not Applicable",
+          "actual": "对白和独立音乐已准备；当前无侧链自动压低、可见可编辑包络/手动点保护，导出也无LUFS归一化及dBTP限幅配置。未执行固定音量或混音文件替代，原工程未改。",
+          "source_case": "045",
+          "run_id": "run_v2_14227a1cc5d0408da6e43bbb25f27b58",
+          "fixture": {
+            "conversationId": "a513d3c8-6430-409f-ab75-558fdc98ecad",
+            "editorId": "50896804-d823-41a7-beb1-5d094bb95723",
+            "name": "ERYE199-045-manual-2026-11-13T10-37-48-153Z"
+          },
+          "target_steps_executed": false,
+          "automation_integrated": false,
+          "automation_status": "PLAN",
+          "script": "",
+          "execution_method": "Ego Lite browser operation; no automation integration",
+          "latest_execution_report": "results-021-049-manual-production-20261113.md",
+          "latest_execution_batch": "erye199-manual-021-050-2026-11-13T10-37-48-153Z",
+          "workspace_id": "71793016-cbbf-4e48-be10-b4ce958f33b5",
+          "screenshots": [
+            "evidence-021-049-manual-production-20261113/045-agent-terminal.png",
+            "evidence-021-049-manual-production-20261113/045-baseline.png",
+            "evidence-021-049-manual-production-20261113/045-before-submit.png"
+          ],
+          "scope_revision_report": "revision-na-current-capabilities-20261113.md",
+          "current_scope_note": "核心功能或依赖缺失，当前延期，不执行替代功能；恢复条件见修订说明。",
+          "requirement_gap_defect": {
+            "id": "FWXC-525",
+            "url": "https://devops.aliyun.com/projex/project/1e401ac99539c3999e00e40006/bug#openWorkitemIdentifier=1bea8a02a752c39eb065fe77f6",
+            "scope": "原需求能力缺口汇总，不作为v2执行失败",
+            "report": "defects-unfinished-24-production-20261113.md",
+            "verified": true
+          }
+        }
+      ],
+      "status": "Not Run",
+      "actual": "当前功能v2定义已更新；本轮未执行、未发送Agent、未生成新截图；原高级目标继续延期。",
+      "definition_revision": 2,
+      "title": "手动分段压低配乐及对白/前后段隔离",
+      "definition": {
+        "id": "045",
+        "title": "手动分段压低配乐及对白/前后段隔离",
+        "priority": "P1",
+        "source": "PE12；Requirement + Inferred QA Risk",
+        "basis": "042已实测原生音量线、对白与音乐独立增益及刷新；使用三个已准备的普通音乐片段。",
+        "deferred": "自动侧链压低、可编辑包络/手动点保护、LUFS归一化和dBTP限幅；固定片段音量不是自动压低或包络。",
+        "pre": [
+          "新建10秒工程，保留V画面并静音V原声；独立对白D源0～4秒放时间线3～7秒、音量100%。",
+          "同一13秒音乐源准备三个相邻独立片段：M1源/时间线0～3秒、M2为3～7秒、M3为7～10秒；三者初始均50%，不使用交叉淡化。",
+          "保存并记录三段音乐和对白的源引用、边界、音量；试听1/5/9秒作为基线。"
+        ],
+        "prompt": "不涉及，使用页面音量线手动拖动。",
+        "steps": [
+          "在M2（3～7秒）片段的音量线上真实拖到15%，读取页面百分比；M1/M3保持50%，D保持100%。",
+          "播放1秒、5秒、9秒对应区间，确认只有对白所在中段的配乐减弱，前后配乐不变，D未静音或换源。",
+          "刷新重开，核对M1/M2/M3为50%/15%/50%、D100%，各片段边界及顺序保持。",
+          "仅把M2恢复50%再刷新，复查三段音乐均50%、D100%，没有重生成音频或移动边界。"
+        ],
+        "expected": [
+          "只有M2被调低并独立保存，前后段和对白不串改；中段配乐相对基线减弱，恢复后对应声音恢复。",
+          "分段百分比/源范围/时间位置刷新保持，不产生自动包络或额外混音文件。"
+        ],
+        "distinct": "区别042两个整段音轨调音：本例用同一音乐的三段和只位于中段的对白检查时间分段隔离。"
+      },
+      "definition_updated": "2026-11-16",
+      "automation_status": "PLAN",
+      "automation_integrated": false,
+      "script": "",
+      "automation_command": "",
+      "execution_method": "待执行；045保持人工页面用例；其他新版接入后再执行",
+      "executed_in_latest_scope_batch": false,
+      "target_steps_executed": false,
+      "scope_report": "revision-na31-current-capabilities-20261116.md",
+      "latest_definition_report": "revision-na31-current-capabilities-20261116.md",
+      "historical_execution_report": "results-021-049-manual-production-20261113.md",
+      "historical_execution_record_archive": "revision-na31-original-definitions-20261116.json",
+      "historical_script": "",
+      "deferred_original_scope": "自动侧链压低、可编辑包络/手动点保护、LUFS归一化和dBTP限幅；固定片段音量不是自动压低或包络。",
+      "release_scope": "current-function-v2-pending",
+      "defect_link_scope": "原高级需求缺口/旧定义关联，不代表新定义已失败；本次未修改云效"
+    },
+    {
+      "id": "ERYE199-051",
+      "execution_history": [
+        {
+          "archived_on": "2026-11-16",
+          "reason": "31条定义复核前",
+          "id": "ERYE199-051",
+          "completed": "2026-11-13T12:37:21.536Z",
+          "fixture": {
+            "conversationId": "f4d7be06-973c-4b8c-820d-0f9180b63911",
+            "editorId": "0236c288-1aaf-4df0-8d4f-316b8b117f17",
+            "name": "ERYE199-051-2026-11-13T12-29-40-982Z"
+          },
+          "automation": "tools/editor/erye199/cases-051-068.mjs#051",
+          "status": "Not Applicable",
+          "actual": "本轮已检查页面导入accept并提交能力核对；Premiere解析与四级还原报告未声明，未导入PR样本。页面支持CinLink自身工程文档不能代替Premiere导入。",
+          "capability": "Premiere import unavailable",
+          "run_id": "run_v2_b9aebc6cc935454c86431e889673b4a1",
+          "target_steps_executed": false,
+          "screenshots": [
+            "evidence-051-068-production-20261113/051-media-import-controls.png",
+            "evidence-051-068-production-20261113/051-capability-confirmed.png"
+          ],
+          "latest_execution_report": "results-051-068-production-20261113.md",
+          "latest_execution_batch": "2026-11-13T12-29-40-982Z",
+          "workspace_id": "ad06a173-72fb-43cd-b477-3462d41cd2dd",
+          "automation_status": "AUTO",
+          "script": "tools/editor/erye199/cases-051-068.mjs#051",
+          "automation_command": "npm run test:editor:199 -- --base-url https://app.cinlink.ai --cases 051",
+          "execution_method": "Ego Lite有头页面/原生操作；工程接口仅准备回读；无computer-use"
+        }
+      ],
+      "status": "Not Run",
+      "actual": "当前功能v2定义已更新；本轮未执行、未发送Agent、未生成新截图；原高级目标继续延期。",
+      "definition_revision": 2,
+      "title": "导入受支持媒体新建工程并隔离旧工程",
+      "definition": {
+        "id": "051",
+        "title": "导入受支持媒体新建工程并隔离旧工程",
+        "priority": "P1",
+        "source": "PE16；Requirement + Inferred QA Risk",
+        "basis": "媒体新建工程入口见当前EditorProjectPicker/EditorPanel；媒体导入已由008实测。具体入口是否已发布仍需执行前核对，源代码存在不等于生产通过。",
+        "deferred": "Premiere .prproj解析、四级还原报告及效果/关键帧映射；媒体新建工程不等于工程文档解析。",
+        "pre": [
+          "生产新建测试项目，先准备已有工程PA，仅有10秒视频A/原声；保存名称、2秒画面及时间线基线。",
+          "另备受支持MP4视频B，640×360/30fps/10秒/48kHz，颜色和帧内标记明显不同于A；不得把已渲染PA输出当B。",
+          "执行前确认编辑器工程下拉的工程管理中存在“导入媒体新建工程”；看不到则记前置Blocked，不用聊天加文件的accept冒充该入口。"
+        ],
+        "prompt": "不涉及，页面导入媒体新建工程。",
+        "steps": [
+          "从工程名下拉→工程管理→导入媒体新建工程选择本地B.mp4，等待新工程加载。",
+          "记录新工程PB名称/身份，确认它与PA不同，2秒预览为B独立参考帧，时间线时长10秒且有B原声。",
+          "刷新重开PB，确认仍为B；从工程列表切回PA，核对A的原画面/时间线/原声和保存内容未被覆盖。",
+          "再次选PB，确认两个工程均可分别打开，导入只产生本次明确的新工程，不修改A原文件。"
+        ],
+        "expected": [
+          "受支持视频创建独立PB并可保存重开，画面/音频均来自B；PA和A原片保持原状。",
+          "导入失败应有可理解提示且PA仍可用；不得仅因Composer允许选择json/cinlink而声称工程导入成功。"
+        ],
+        "distinct": "区别001已有工程四对象加载、008素材登记/放入：本例验证从导入入口产生独立新工程及旧工程隔离。"
+      },
+      "definition_updated": "2026-11-16",
+      "automation_status": "PLAN",
+      "automation_integrated": false,
+      "script": "",
+      "automation_command": "",
+      "execution_method": "待执行；045保持人工页面用例；其他新版接入后再执行",
+      "executed_in_latest_scope_batch": false,
+      "target_steps_executed": false,
+      "scope_report": "revision-na31-current-capabilities-20261116.md",
+      "latest_definition_report": "revision-na31-current-capabilities-20261116.md",
+      "historical_execution_report": "results-051-068-production-20261113.md",
+      "historical_execution_record_archive": "revision-na31-original-definitions-20261116.json",
+      "historical_script": "tools/editor/erye199/cases-051-068.mjs#051",
+      "deferred_original_scope": "Premiere .prproj解析、四级还原报告及效果/关键帧映射；媒体新建工程不等于工程文档解析。",
+      "release_scope": "current-function-v2-pending",
+      "defect_link_scope": "原高级需求缺口/旧定义关联，不代表新定义已失败；本次未修改云效"
+    },
+    {
+      "id": "ERYE199-052",
+      "execution_history": [
+        {
+          "archived_on": "2026-11-16",
+          "reason": "31条定义复核前",
+          "id": "ERYE199-052",
+          "completed": "2026-11-13T12:37:21.737Z",
+          "fixture": {
+            "conversationId": "f4d7be06-973c-4b8c-820d-0f9180b63911",
+            "editorId": "0236c288-1aaf-4df0-8d4f-316b8b117f17",
+            "name": "ERYE199-051-2026-11-13T12-29-40-982Z"
+          },
+          "automation": "tools/editor/erye199/cases-051-068.mjs#052",
+          "status": "Not Applicable",
+          "actual": "依赖051的Premiere工程导入能力缺口；离线素材重连及字体/LUT分别诊断未执行，不把普通媒体上传/替换当作依赖重连。",
+          "source_case": "051",
+          "target_steps_executed": false,
+          "screenshots": [
+            "evidence-051-068-production-20261113/051-capability-confirmed.png"
+          ],
+          "latest_execution_report": "results-051-068-production-20261113.md",
+          "latest_execution_batch": "2026-11-13T12-29-40-982Z",
+          "workspace_id": "ad06a173-72fb-43cd-b477-3462d41cd2dd",
+          "automation_status": "AUTO",
+          "script": "tools/editor/erye199/cases-051-068.mjs#052",
+          "automation_command": "npm run test:editor:199 -- --base-url https://app.cinlink.ai --cases 052",
+          "execution_method": "Ego Lite有头页面/原生操作；工程接口仅准备回读；无computer-use"
+        }
+      ],
+      "status": "Not Run",
+      "actual": "当前功能v2定义已更新；本轮未执行、未发送Agent、未生成新截图；原高级目标继续延期。",
+      "definition_revision": 2,
+      "title": "同名不同内容素材导入后的引用隔离",
+      "definition": {
+        "id": "052",
+        "title": "同名不同内容素材导入后的引用隔离",
+        "priority": "P1",
+        "source": "PE16；Requirement + Inferred QA Risk",
+        "basis": "当前媒体登记/预览/放入和隐藏/显示已由008/015实测；本例只核验正常导入身份，不要求离线重连。",
+        "deferred": "离线素材按指纹/时长/尺寸重连、缺失字体/LUT诊断；普通上传不算依赖重连通过。",
+        "pre": [
+          "在两个本地目录分别准备同名same.mp4，A与B均10秒640×360/30fps但颜色/帧内标记明显不同，记录各自文件哈希和2秒参考帧。",
+          "新工程PA只有A及关联原声0～10秒、1倍速，保存；A原声启用。",
+          "当前页面可通过媒体→导入素材登记B并将素材放入新视频轨，图片/字幕无关对象不准备。"
+        ],
+        "prompt": "不涉及，原生素材导入和轨道显示操作。",
+        "steps": [
+          "在PA通过媒体→导入素材选择另一个目录的B/same.mp4；核对导入后A画面/时间线不变。",
+          "通过不同缩略图/预览确认B，将B明确放入新视频轨0～10秒并静音B原声；不要拖到A轨测试覆盖。",
+          "定位2秒检查B参考画面；隐藏B检查底层仍为A参考画面，再显示B。",
+          "刷新重开，重复B显示/隐藏对照，确认两个同名素材各自引用、源范围及音轨状态保持。"
+        ],
+        "expected": [
+          "同名不同内容不被按文件名合并或替换；导入B不会让A实例自动变为B。",
+          "各自预览与独立参考帧匹配，刷新后仍可区分；不产生所谓重连成功报告，也不把正常导入当离线恢复。"
+        ],
+        "distinct": "区别008普通不同名登记：本例专测同名冲突及已放入实例不被重绑定。"
+      },
+      "definition_updated": "2026-11-16",
+      "automation_status": "PLAN",
+      "automation_integrated": false,
+      "script": "",
+      "automation_command": "",
+      "execution_method": "待执行；045保持人工页面用例；其他新版接入后再执行",
+      "executed_in_latest_scope_batch": false,
+      "target_steps_executed": false,
+      "scope_report": "revision-na31-current-capabilities-20261116.md",
+      "latest_definition_report": "revision-na31-current-capabilities-20261116.md",
+      "historical_execution_report": "results-051-068-production-20261113.md",
+      "historical_execution_record_archive": "revision-na31-original-definitions-20261116.json",
+      "historical_script": "tools/editor/erye199/cases-051-068.mjs#052",
+      "deferred_original_scope": "离线素材按指纹/时长/尺寸重连、缺失字体/LUT诊断；普通上传不算依赖重连通过。",
+      "release_scope": "current-function-v2-pending",
+      "defect_link_scope": "原高级需求缺口/旧定义关联，不代表新定义已失败；本次未修改云效"
+    },
+    {
+      "id": "ERYE199-053",
+      "execution_history": [
+        {
+          "archived_on": "2026-11-16",
+          "reason": "31条定义复核前",
+          "id": "ERYE199-053",
+          "completed": "2026-11-13T12:37:21.937Z",
+          "fixture": {
+            "conversationId": "f4d7be06-973c-4b8c-820d-0f9180b63911",
+            "editorId": "0236c288-1aaf-4df0-8d4f-316b8b117f17",
+            "name": "ERYE199-051-2026-11-13T12-29-40-982Z"
+          },
+          "automation": "tools/editor/erye199/cases-051-068.mjs#053",
+          "status": "Not Applicable",
+          "actual": "依赖051的Premiere导入前置，未运行脚本、URL、解压或XML异常样本；没有安全防护通过结论。",
+          "source_case": "051",
+          "target_steps_executed": false,
+          "screenshots": [
+            "evidence-051-068-production-20261113/051-capability-confirmed.png"
+          ],
+          "latest_execution_report": "results-051-068-production-20261113.md",
+          "latest_execution_batch": "2026-11-13T12-29-40-982Z",
+          "workspace_id": "ad06a173-72fb-43cd-b477-3462d41cd2dd",
+          "automation_status": "AUTO",
+          "script": "tools/editor/erye199/cases-051-068.mjs#053",
+          "automation_command": "npm run test:editor:199 -- --base-url https://app.cinlink.ai --cases 053",
+          "execution_method": "Ego Lite有头页面/原生操作；工程接口仅准备回读；无computer-use"
+        }
+      ],
+      "status": "Not Run",
+      "actual": "当前功能v2定义已更新；本轮未执行、未发送Agent、未生成新截图；原高级目标继续延期。",
+      "definition_revision": 2,
+      "title": "异常SRT原生导入失败保护与编辑恢复",
+      "definition": {
+        "id": "053",
+        "title": "异常SRT原生导入失败保护与编辑恢复",
+        "priority": "P1",
+        "source": "PE16；Inferred QA Risk",
+        "basis": "当前原生编辑器明确接受.srt，字幕列表/文字编辑已实测；不从聊天加文件accept推断工程解析能力。",
+        "deferred": "Premiere工程脚本/外链防护、解压限额、XML深度及外部实体；SRT输入验证不计为这些安全项通过。",
+        "pre": [
+          "新工程已有10秒V/原声及两条合法字幕A1～3秒、B6～8秒，保存并记录文字/时码/样式。",
+          "准备本地empty.srt（0字节）及broken.srt（内容为三行：1、not-a-timestamp、BAD053）；均不含脚本、URL、压缩内容或外部引用。",
+          "确认媒体→导入素材可选择.srt；本例不准备或运行恶意工程文件，不依赖.prproj样本。"
+        ],
+        "prompt": "不涉及，原生SRT导入及原字幕文字编辑。",
+        "steps": [
+          "通过媒体→导入素材选择empty.srt，保存提示及原字幕列表；如果选择阶段即拒绝，记录该真实拒绝，不绕过入口。",
+          "选择broken.srt，等待格式处理，检查可理解的错误/无有效字幕提示；不得反复提交同一文件。",
+          "刷新同一工程，核对原A/B文字、时间、样式、原片及原声仍与基线一致，不能被空文件或BAD053覆盖。",
+          "将原A文字改为RECOVER053并正常结束编辑，刷新后确认新文保存，原时码与B不变，证明失败后编辑仍可用。"
+        ],
+        "expected": [
+          "空文件和非法时间行不能冒充成功有效字幕；有可理解的拒绝/无有效字幕反馈，原工程不被清空或部分覆盖。",
+          "重新打开仍保有原A/B及媒体；后续合法文字编辑能保存，无持续加载或崩溃。"
+        ],
+        "distinct": "区别029有效混合文字、059网络故障：本例只测坏SRT输入及原数据保护。"
+      },
+      "definition_updated": "2026-11-16",
+      "automation_status": "PLAN",
+      "automation_integrated": false,
+      "script": "",
+      "automation_command": "",
+      "execution_method": "待执行；045保持人工页面用例；其他新版接入后再执行",
+      "executed_in_latest_scope_batch": false,
+      "target_steps_executed": false,
+      "scope_report": "revision-na31-current-capabilities-20261116.md",
+      "latest_definition_report": "revision-na31-current-capabilities-20261116.md",
+      "historical_execution_report": "results-051-068-production-20261113.md",
+      "historical_execution_record_archive": "revision-na31-original-definitions-20261116.json",
+      "historical_script": "tools/editor/erye199/cases-051-068.mjs#053",
+      "deferred_original_scope": "Premiere工程脚本/外链防护、解压限额、XML深度及外部实体；SRT输入验证不计为这些安全项通过。",
+      "release_scope": "current-function-v2-pending",
+      "defect_link_scope": "原高级需求缺口/旧定义关联，不代表新定义已失败；本次未修改云效"
+    },
+    {
+      "id": "ERYE199-055",
+      "execution_history": [
+        {
+          "archived_on": "2026-11-16",
+          "reason": "31条定义复核前",
+          "id": "ERYE199-055",
+          "completed": "2026-11-13T12:44:04.828Z",
+          "fixture": {
+            "conversationId": "e5105f05-68a2-44cd-b6e8-bc6b80dc8e6f",
+            "editorId": "ae712876-97f6-4291-adbc-997ab8b8f99c",
+            "name": "ERYE199-055-2026-11-13T12-29-40-982Z"
+          },
+          "automation": "tools/editor/erye199/cases-051-068.mjs#055",
+          "status": "Not Applicable",
+          "actual": "原条目要求控制同一commandId/payload及expectedRevision，属于内部协议验收；当前页面无同一编辑请求的受控重放入口。本轮不按拟定字段验收，也不把两次独立发送当作同一请求重放。",
+          "target_steps_executed": false,
+          "coverage": "同一请求幂等/版本冲突分支未覆盖",
+          "screenshots": [
+            "evidence-051-068-production-20261113/055-request-replay-prerequisite.png"
+          ],
+          "latest_execution_report": "results-051-068-production-20261113.md",
+          "latest_execution_batch": "2026-11-13T12-29-40-982Z",
+          "workspace_id": "ad06a173-72fb-43cd-b477-3462d41cd2dd",
+          "automation_status": "AUTO",
+          "script": "tools/editor/erye199/cases-051-068.mjs#055",
+          "automation_command": "npm run test:editor:199 -- --base-url https://app.cinlink.ai --cases 055",
+          "execution_method": "Ego Lite有头页面/原生操作；工程接口仅准备回读；无computer-use"
+        }
+      ],
+      "status": "Not Run",
+      "actual": "当前功能v2定义已更新；本轮未执行、未发送Agent、未生成新截图；原高级目标继续延期。",
+      "definition_revision": 2,
+      "title": "相对编辑完成后导航和刷新不重复应用",
+      "definition": {
+        "id": "055",
+        "title": "相对编辑完成后导航和刷新不重复应用",
+        "priority": "P0",
+        "source": "PE17；Requirement + Inferred QA Risk",
+        "basis": "ERYE210-051已真实验证Agent降低背景音量6dB；当前保存/刷新和入口切换已实测。",
+        "deferred": "受控同commandId重放、不同payload冲突及expectedRevision内部协议；完成后刷新不等于验证服务端幂等协议。",
+        "pre": [
+          "新工程只有10秒V及关联原声，另有唯一独立背景音轨M，源/时间线0～10秒、音量100%；记录M真实轨道/片段标识。",
+          "保存并确认M来源明确，原声音量及字幕无未保存修改，无在途Agent任务。",
+          "后续只发送一次相对降低6dB请求；页面运行中发送位置是停止，不在任务中重发。"
+        ],
+        "prompt": "只编辑当前工程“{工程名}”（工程ID：{工程ID}）唯一独立背景音轨M（轨道{音乐轨ID}、片段{音乐片段ID}），在当前100%音量基础上降低6dB一次，线性音量约为50.12%，保持原片/关联原声、M源范围及时间线位置不变。不要将同一降低动作应用多次，不导出、不生成替代音频，也不要修改其他轨道。",
+        "steps": [
+          "保存100%基线，一次发送完整指令；等待同一run完成，补槽按唯一M及降低6dB填写后继续。",
+          "只悬停音量线读取反馈，不手动拖动：确认约50%，记录原请求和完成结果。",
+          "切到字幕/水印再回媒体，然后刷新同一标签两次；每次读取M音量和源/位置。",
+          "从项目会话重新打开同一工程，确认仍约50%，没有变成约25%，会话没有自动新增相同编辑请求或新处理任务。"
+        ],
+        "expected": [
+          "相对编辑只应用一次，导航/刷新/重开不再次降低，不把原请求完成结果当新请求提交。",
+          "M约50%保持，原声音量、原片和所有时间范围不变；不要求页面暴露commandId/payload/expectedRevision。"
+        ],
+        "distinct": "区别049导出任务重复提交、057崩溃及059断网：本例只测正常完成的相对编辑被刷新重放的风险。"
+      },
+      "definition_updated": "2026-11-16",
+      "automation_status": "PLAN",
+      "automation_integrated": false,
+      "script": "",
+      "automation_command": "",
+      "execution_method": "待执行；045保持人工页面用例；其他新版接入后再执行",
+      "executed_in_latest_scope_batch": false,
+      "target_steps_executed": false,
+      "scope_report": "revision-na31-current-capabilities-20261116.md",
+      "latest_definition_report": "revision-na31-current-capabilities-20261116.md",
+      "historical_execution_report": "results-051-068-production-20261113.md",
+      "historical_execution_record_archive": "revision-na31-original-definitions-20261116.json",
+      "historical_script": "tools/editor/erye199/cases-051-068.mjs#055",
+      "deferred_original_scope": "受控同commandId重放、不同payload冲突及expectedRevision内部协议；完成后刷新不等于验证服务端幂等协议。",
+      "release_scope": "current-function-v2-pending",
+      "defect_link_scope": "原高级需求缺口/旧定义关联，不代表新定义已失败；本次未修改云效"
+    }
+  ],
+  "latest_execution_report": "results-failed-ten-rerun-production-20261116.md",
+  "scope": {
+    "source": "用户2026-11-16按现有功能优化31条不适用；本轮仅修订",
+    "deferred": [
+      "014",
+      "016",
+      "018",
+      "021",
+      "022",
+      "023",
+      "024",
+      "025",
+      "026",
+      "027",
+      "031",
+      "032",
+      "033",
+      "035",
+      "037",
+      "038",
+      "039",
+      "041",
+      "044",
+      "046",
+      "056",
+      "063"
+    ],
+    "pending_revised": [
+      "011",
+      "013",
+      "017",
+      "020",
+      "045",
+      "051",
+      "052",
+      "053",
+      "055"
+    ],
+    "report": "revision-na31-current-capabilities-20261116.md",
+    "old_probe_execution_disabled": true
+  }
+}

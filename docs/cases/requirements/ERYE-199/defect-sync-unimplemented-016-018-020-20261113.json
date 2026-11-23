@@ -1,0 +1,210 @@
+{
+  "date": "2026-11-13",
+  "method": "official OpenAPI via tools/yunxiao",
+  "created": 4,
+  "deduplication": false,
+  "screenshots_uploaded": 6,
+  "attachments_verified": 17,
+  "cases": {
+    "ERYE199-016": {
+      "id": "FWXC-509",
+      "workitem_id": "5ceb3b7e12534e1bd3b98d8e28",
+      "url": "https://devops.aliyun.com/projex/project/1e401ac99539c3999e00e40006/bug#openWorkitemIdentifier=5ceb3b7e12534e1bd3b98d8e28",
+      "title": "【生产环境】【功能未实现】【ERYE199-016】真实子序列创建及进入/返回不可用",
+      "status": "🤔AI提缺陷",
+      "assigned_to": "牛诗晴",
+      "verified": true,
+      "screenshots": 2,
+      "attachments": 5,
+      "synced_at": "2026-11-13T18:29:19.8232533+08:00",
+      "local_report": "docs/defects/ERYE199-016-subsequence-create-unimplemented-production-20261113.md",
+      "screenshot_captions": [
+        {
+          "path": "016-selected-baseline.png",
+          "caption": "016实际多轨选区基线：仅选视频、关联原声和两条字幕，对照图片不选。",
+          "sha256": "c7fcadc565a59befeb5562d2dc16f253a6691facdd97371e44a0ef67a55cb060"
+        },
+        {
+          "path": "016-failure.png",
+          "caption": "016原任务终态：明确不支持真实子序列和父子引用，工程保留未改。",
+          "sha256": "7b20d3bc00ec96406b5bc416e4e598c87e0416e00e4344912809d79663182807"
+        }
+      ],
+      "attachment_receipts": [
+        {
+          "sha256": "c7fcadc565a59befeb5562d2dc16f253a6691facdd97371e44a0ef67a55cb060",
+          "name": "016-selected-baseline.png",
+          "size": 304590,
+          "id": "e1a91a787011b84a0747555215"
+        },
+        {
+          "sha256": "7b20d3bc00ec96406b5bc416e4e598c87e0416e00e4344912809d79663182807",
+          "name": "016-failure.png",
+          "size": 454394,
+          "id": "989c95b7ec829de4516bb8ce85"
+        },
+        {
+          "sha256": "54d1c55760f97f7008d0c4b0a3856196a916440960c73db1098820917d5c52ae",
+          "name": "evidence.json",
+          "size": 12826,
+          "id": "87077c114102c2dd124e70fd76"
+        },
+        {
+          "sha256": "e432370eb6cda0797076d6091622f2f7e0acd94cef690f1679c1a01f2349aba9",
+          "name": "ERYE199-video.mp4",
+          "size": 2975172,
+          "id": "aa6dcffcfb2fe65abfb294ec6b"
+        },
+        {
+          "sha256": "400520109dcfe73580281d5b9cfea4d4c666e1c5c4c73a37371e3fcdfc5a2009",
+          "name": "source-en.srt",
+          "size": 109,
+          "id": "978b61f4f197cfbbaed004ead0"
+        }
+      ]
+    },
+    "ERYE199-017": {
+      "id": "FWXC-510",
+      "workitem_id": "6e20f45652f16e662cd22049e3",
+      "url": "https://devops.aliyun.com/projex/project/1e401ac99539c3999e00e40006/bug#openWorkitemIdentifier=6e20f45652f16e662cd22049e3",
+      "title": "【生产环境】【功能未实现】【ERYE199-017】共享子序列联动与独立副本无法建立",
+      "status": "🤔AI提缺陷",
+      "assigned_to": "牛诗晴",
+      "verified": true,
+      "screenshots": 1,
+      "attachments": 4,
+      "synced_at": "2026-11-13T18:29:25.4478493+08:00",
+      "local_report": "docs/defects/ERYE199-017-subsequence-shared-copy-unimplemented-production-20261113.md",
+      "screenshot_captions": [
+        {
+          "path": "017-failure.png",
+          "caption": "017依赖证据：截图来自同批016创建子序列被拒页面，017共享/副本目标步骤未执行。",
+          "sha256": "7b20d3bc00ec96406b5bc416e4e598c87e0416e00e4344912809d79663182807"
+        }
+      ],
+      "attachment_receipts": [
+        {
+          "sha256": "7b20d3bc00ec96406b5bc416e4e598c87e0416e00e4344912809d79663182807",
+          "name": "017-failure.png",
+          "size": 454394,
+          "id": "38e678dc23bed88438e3ab5f3c"
+        },
+        {
+          "sha256": "7552f7f49b2203cfd19398c34d5a6c195bb5b4b156e6c6c150e1ed411ee7f866",
+          "name": "evidence.json",
+          "size": 14303,
+          "id": "5c8c841908791873258f8ef39b"
+        },
+        {
+          "sha256": "e432370eb6cda0797076d6091622f2f7e0acd94cef690f1679c1a01f2349aba9",
+          "name": "ERYE199-video.mp4",
+          "size": 2975172,
+          "id": "00080383372d8da2c99926668d"
+        },
+        {
+          "sha256": "400520109dcfe73580281d5b9cfea4d4c666e1c5c4c73a37371e3fcdfc5a2009",
+          "name": "source-en.srt",
+          "size": 109,
+          "id": "35d17d4a29600f2b23e5fc9f20"
+        }
+      ]
+    },
+    "ERYE199-018": {
+      "id": "FWXC-511",
+      "workitem_id": "13a898129511a8a2adf1019ddd",
+      "url": "https://devops.aliyun.com/projex/project/1e401ac99539c3999e00e40006/bug#openWorkitemIdentifier=13a898129511a8a2adf1019ddd",
+      "title": "【生产环境】【功能未实现】【ERYE199-018】父子序列范围与嵌套引用校验缺少可操作前置",
+      "status": "🤔AI提缺陷",
+      "assigned_to": "牛诗晴",
+      "verified": true,
+      "screenshots": 1,
+      "attachments": 4,
+      "synced_at": "2026-11-13T18:29:30.9927545+08:00",
+      "local_report": "docs/defects/ERYE199-018-subsequence-range-nesting-unimplemented-production-20261113.md",
+      "screenshot_captions": [
+        {
+          "path": "018-failure.png",
+          "caption": "018依赖证据：同批016创建子序列失败页面，范围/循环/深度目标步骤均未执行。",
+          "sha256": "7b20d3bc00ec96406b5bc416e4e598c87e0416e00e4344912809d79663182807"
+        }
+      ],
+      "attachment_receipts": [
+        {
+          "sha256": "7b20d3bc00ec96406b5bc416e4e598c87e0416e00e4344912809d79663182807",
+          "name": "018-failure.png",
+          "size": 454394,
+          "id": "f12b2a41908e1e49ad14945f03"
+        },
+        {
+          "sha256": "6f97939da57b66897aeff1f67f2c53a260a1844dd13d1ae7e732c42fa8582d5c",
+          "name": "evidence.json",
+          "size": 14306,
+          "id": "dc07af675c29a73f8d9f727bdc"
+        },
+        {
+          "sha256": "e432370eb6cda0797076d6091622f2f7e0acd94cef690f1679c1a01f2349aba9",
+          "name": "ERYE199-video.mp4",
+          "size": 2975172,
+          "id": "bdb1aa213d9adfd46fcf8ae824"
+        },
+        {
+          "sha256": "400520109dcfe73580281d5b9cfea4d4c666e1c5c4c73a37371e3fcdfc5a2009",
+          "name": "source-en.srt",
+          "size": 109,
+          "id": "4b1ed8c83ac9aac7362ebd3180"
+        }
+      ]
+    },
+    "ERYE199-020": {
+      "id": "FWXC-512",
+      "workitem_id": "7eaf8489cf64876a50f0135e11",
+      "url": "https://devops.aliyun.com/projex/project/1e401ac99539c3999e00e40006/bug#openWorkitemIdentifier=7eaf8489cf64876a50f0135e11",
+      "title": "【生产环境】【功能未实现】【ERYE199-020】无法创建可编辑属性关键帧，插值及路径缓动无法验证",
+      "status": "🤔AI提缺陷",
+      "assigned_to": "牛诗晴",
+      "verified": true,
+      "screenshots": 2,
+      "attachments": 4,
+      "synced_at": "2026-11-13T18:29:36.6305784+08:00",
+      "local_report": "docs/defects/ERYE199-020-editable-keyframes-unimplemented-production-20261113.md",
+      "screenshot_captions": [
+        {
+          "path": "020-selected-baseline.png",
+          "caption": "020实际新工程基线，原视频及关联原声0～10秒，视频已选中。",
+          "sha256": "641229a1bbe8704d0e5c56a4ce006922b0ade8be2aef89e0d34e5dbb58572464"
+        },
+        {
+          "path": "020-failure.png",
+          "caption": "020原任务明确说明各属性关键帧不支持；后续插值/空间路径/时间缓动未执行。",
+          "sha256": "22142f008a2d4fa94f4758179d34f165927d28ac51e2cb55854eec40222713ae"
+        }
+      ],
+      "attachment_receipts": [
+        {
+          "sha256": "641229a1bbe8704d0e5c56a4ce006922b0ade8be2aef89e0d34e5dbb58572464",
+          "name": "020-selected-baseline.png",
+          "size": 309022,
+          "id": "f915f0a125a435de071a5619a8"
+        },
+        {
+          "sha256": "22142f008a2d4fa94f4758179d34f165927d28ac51e2cb55854eec40222713ae",
+          "name": "020-failure.png",
+          "size": 460837,
+          "id": "f43f98a0425bd6a7433e6e6e5e"
+        },
+        {
+          "sha256": "36771ba9d5e9ab1b01777c668769f39e231081ee1022bdbd61b7ea1041d99b75",
+          "name": "evidence.json",
+          "size": 9828,
+          "id": "42d1be8190dcf581070972e0e1"
+        },
+        {
+          "sha256": "e432370eb6cda0797076d6091622f2f7e0acd94cef690f1679c1a01f2349aba9",
+          "name": "ERYE199-video.mp4",
+          "size": 2975172,
+          "id": "9dbee16ee3b1c491a5dc3a14a6"
+        }
+      ]
+    }
+  }
+}

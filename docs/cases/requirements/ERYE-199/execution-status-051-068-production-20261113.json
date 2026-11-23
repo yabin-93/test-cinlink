@@ -1,0 +1,505 @@
+{
+  "date": "2026-11-13",
+  "environment": "production",
+  "task_space": 11,
+  "workspace_id": "ad06a173-72fb-43cd-b477-3462d41cd2dd",
+  "batch": "2026-11-13T12-29-40-982Z",
+  "stage": "Completed",
+  "counts": {
+    "Not Applicable": 6,
+    "Passed": 7,
+    "Blocked": 2,
+    "Failed": 1
+  },
+  "retired": [
+    "ERYE199-060",
+    "ERYE199-061"
+  ],
+  "cases": [
+    {
+      "id": "ERYE199-051",
+      "completed": "2026-11-13T12:37:21.536Z",
+      "fixture": {
+        "conversationId": "f4d7be06-973c-4b8c-820d-0f9180b63911",
+        "editorId": "0236c288-1aaf-4df0-8d4f-316b8b117f17",
+        "name": "ERYE199-051-2026-11-13T12-29-40-982Z"
+      },
+      "automation": "tools/editor/erye199/cases-051-068.mjs#051",
+      "status": "Not Applicable",
+      "actual": "本轮已检查页面导入accept并提交能力核对；Premiere解析与四级还原报告未声明，未导入PR样本。页面支持CinLink自身工程文档不能代替Premiere导入。",
+      "capability": "Premiere import unavailable",
+      "run_id": "run_v2_b9aebc6cc935454c86431e889673b4a1",
+      "target_steps_executed": false,
+      "screenshots": [
+        "evidence-051-068-production-20261113/051-media-import-controls.png",
+        "evidence-051-068-production-20261113/051-capability-confirmed.png"
+      ],
+      "latest_execution_report": "results-051-068-production-20261113.md",
+      "latest_execution_batch": "2026-11-13T12-29-40-982Z",
+      "workspace_id": "ad06a173-72fb-43cd-b477-3462d41cd2dd",
+      "automation_status": "AUTO",
+      "script": "tools/editor/erye199/cases-051-068.mjs#051",
+      "automation_command": "npm run test:editor:199 -- --base-url https://app.cinlink.ai --cases 051",
+      "execution_method": "Ego Lite有头页面/原生操作；工程接口仅准备回读；无computer-use"
+    },
+    {
+      "id": "ERYE199-052",
+      "completed": "2026-11-13T12:37:21.737Z",
+      "fixture": {
+        "conversationId": "f4d7be06-973c-4b8c-820d-0f9180b63911",
+        "editorId": "0236c288-1aaf-4df0-8d4f-316b8b117f17",
+        "name": "ERYE199-051-2026-11-13T12-29-40-982Z"
+      },
+      "automation": "tools/editor/erye199/cases-051-068.mjs#052",
+      "status": "Not Applicable",
+      "actual": "依赖051的Premiere工程导入能力缺口；离线素材重连及字体/LUT分别诊断未执行，不把普通媒体上传/替换当作依赖重连。",
+      "source_case": "051",
+      "target_steps_executed": false,
+      "screenshots": [
+        "evidence-051-068-production-20261113/051-capability-confirmed.png"
+      ],
+      "latest_execution_report": "results-051-068-production-20261113.md",
+      "latest_execution_batch": "2026-11-13T12-29-40-982Z",
+      "workspace_id": "ad06a173-72fb-43cd-b477-3462d41cd2dd",
+      "automation_status": "AUTO",
+      "script": "tools/editor/erye199/cases-051-068.mjs#052",
+      "automation_command": "npm run test:editor:199 -- --base-url https://app.cinlink.ai --cases 052",
+      "execution_method": "Ego Lite有头页面/原生操作；工程接口仅准备回读；无computer-use"
+    },
+    {
+      "id": "ERYE199-053",
+      "completed": "2026-11-13T12:37:21.937Z",
+      "fixture": {
+        "conversationId": "f4d7be06-973c-4b8c-820d-0f9180b63911",
+        "editorId": "0236c288-1aaf-4df0-8d4f-316b8b117f17",
+        "name": "ERYE199-051-2026-11-13T12-29-40-982Z"
+      },
+      "automation": "tools/editor/erye199/cases-051-068.mjs#053",
+      "status": "Not Applicable",
+      "actual": "依赖051的Premiere导入前置，未运行脚本、URL、解压或XML异常样本；没有安全防护通过结论。",
+      "source_case": "051",
+      "target_steps_executed": false,
+      "screenshots": [
+        "evidence-051-068-production-20261113/051-capability-confirmed.png"
+      ],
+      "latest_execution_report": "results-051-068-production-20261113.md",
+      "latest_execution_batch": "2026-11-13T12-29-40-982Z",
+      "workspace_id": "ad06a173-72fb-43cd-b477-3462d41cd2dd",
+      "automation_status": "AUTO",
+      "script": "tools/editor/erye199/cases-051-068.mjs#053",
+      "automation_command": "npm run test:editor:199 -- --base-url https://app.cinlink.ai --cases 053",
+      "execution_method": "Ego Lite有头页面/原生操作；工程接口仅准备回读；无computer-use"
+    },
+    {
+      "id": "ERYE199-054",
+      "completed": "2026-11-13T12:43:57.132Z",
+      "fixture": {
+        "conversationId": "3efe589c-2a24-47a7-840f-902ac266818b",
+        "editorId": "414beede-23b0-45e5-b6fe-89b03d56fb3e",
+        "name": "ERYE199-054-2026-11-13T12-29-40-982Z"
+      },
+      "automation": "tools/editor/erye199/cases-051-068.mjs#054",
+      "status": "Passed",
+      "actual": "补齐页面选择与真实目标后，Agent一次改位置/透明度；一次撤销恢复二者并保留手动静音，一次重做恢复；非法组合拒绝无部分写入，刷新保持。",
+      "coverage": "未验证内部historyGroupId或服务执行中故障回滚",
+      "execution_history": [
+        {
+          "id": "ERYE199-054",
+          "completed": "2026-11-13T12:38:44.388Z",
+          "fixture": {
+            "conversationId": "3efe589c-2a24-47a7-840f-902ac266818b",
+            "editorId": "414beede-23b0-45e5-b6fe-89b03d56fb3e",
+            "name": "ERYE199-054-2026-11-13T12-29-40-982Z"
+          },
+          "automation": "tools/editor/erye199/cases-051-068.mjs#054",
+          "status": "Failed",
+          "actual": "Expected values to be strictly equal:\n\n320 !== 400\n",
+          "errorType": "AssertionError"
+        }
+      ],
+      "continued_evidence_dir": "054-continue",
+      "screenshots": [
+        "evidence-051-068-production-20261113/054-continue-selected-target.png",
+        "evidence-051-068-production-20261113/054-continue-one-undo.png",
+        "evidence-051-068-production-20261113/054-continue-reopened.png"
+      ],
+      "latest_execution_report": "results-051-068-production-20261113.md",
+      "latest_execution_batch": "2026-11-13T12-29-40-982Z",
+      "workspace_id": "ad06a173-72fb-43cd-b477-3462d41cd2dd",
+      "automation_status": "AUTO",
+      "script": "tools/editor/erye199/cases-051-068.mjs#054",
+      "automation_command": "npm run test:editor:199 -- --base-url https://app.cinlink.ai --cases 054",
+      "execution_method": "Ego Lite有头页面/原生操作；工程接口仅准备回读；无computer-use"
+    },
+    {
+      "id": "ERYE199-055",
+      "completed": "2026-11-13T12:44:04.828Z",
+      "fixture": {
+        "conversationId": "e5105f05-68a2-44cd-b6e8-bc6b80dc8e6f",
+        "editorId": "ae712876-97f6-4291-adbc-997ab8b8f99c",
+        "name": "ERYE199-055-2026-11-13T12-29-40-982Z"
+      },
+      "automation": "tools/editor/erye199/cases-051-068.mjs#055",
+      "status": "Not Applicable",
+      "actual": "原条目要求控制同一commandId/payload及expectedRevision，属于内部协议验收；当前页面无同一编辑请求的受控重放入口。本轮不按拟定字段验收，也不把两次独立发送当作同一请求重放。",
+      "target_steps_executed": false,
+      "coverage": "同一请求幂等/版本冲突分支未覆盖",
+      "screenshots": [
+        "evidence-051-068-production-20261113/055-request-replay-prerequisite.png"
+      ],
+      "latest_execution_report": "results-051-068-production-20261113.md",
+      "latest_execution_batch": "2026-11-13T12-29-40-982Z",
+      "workspace_id": "ad06a173-72fb-43cd-b477-3462d41cd2dd",
+      "automation_status": "AUTO",
+      "script": "tools/editor/erye199/cases-051-068.mjs#055",
+      "automation_command": "npm run test:editor:199 -- --base-url https://app.cinlink.ai --cases 055",
+      "execution_method": "Ego Lite有头页面/原生操作；工程接口仅准备回读；无computer-use"
+    },
+    {
+      "id": "ERYE199-056",
+      "completed": "2026-11-13T12:45:12.844Z",
+      "fixture": {
+        "conversationId": "8e2bad3b-bc82-41ca-914e-b7a59dd5c0dc",
+        "editorId": "990b1c69-a031-490c-af15-985c6e5d866a",
+        "name": "ERYE199-056-2026-11-13T12-29-40-982Z"
+      },
+      "automation": "tools/editor/erye199/cases-051-068.mjs#056",
+      "status": "Not Applicable",
+      "actual": "当前未提供工程可编辑效果注册表及完整元数据，未执行界面/规划器同源或缺后端失败分支；工程保持。",
+      "target_steps_executed": false,
+      "screenshots": [
+        "evidence-051-068-production-20261113/056-agent-terminal.png"
+      ],
+      "latest_execution_report": "results-051-068-production-20261113.md",
+      "latest_execution_batch": "2026-11-13T12-29-40-982Z",
+      "workspace_id": "ad06a173-72fb-43cd-b477-3462d41cd2dd",
+      "automation_status": "AUTO",
+      "script": "tools/editor/erye199/cases-051-068.mjs#056",
+      "automation_command": "npm run test:editor:199 -- --base-url https://app.cinlink.ai --cases 056",
+      "execution_method": "Ego Lite有头页面/原生操作；工程接口仅准备回读；无computer-use"
+    },
+    {
+      "id": "ERYE199-057",
+      "fixture": {
+        "conversationId": "74e06146-3183-4b92-ad8d-dd1c1bfbba22",
+        "editorId": "b72399a0-d973-4037-93bd-6032b57846c8",
+        "name": "ERYE199-057-crash-2026-11-13T12-29-40-982Z"
+      },
+      "status": "Passed",
+      "actual": "独立测试页在真实保存请求发送前暂停，已捕获Inspector.targetCrashed及Target crashed；用户接管后授权继续，重开原工程内容/版本保持且可播放，未落库修改未重放。仅覆盖页面崩溃、未发送保存分支，未覆盖落库后回执丢失或整机崩溃。",
+      "coverage": "业务级页面崩溃恢复；不检查拟定commandId/status字段",
+      "automation": "tools/editor/erye199/cases-051-068.mjs#057",
+      "completed": "2026-11-13T13:02:08.707Z",
+      "execution_history": [
+        {
+          "id": "ERYE199-057",
+          "completed": "2026-11-13T12:45:20.583Z",
+          "fixture": {
+            "conversationId": "78689168-90b9-4236-97b4-ab16c76ddf3e",
+            "editorId": "e7eb5180-b958-42bb-ad49-d0c93ee5238c",
+            "name": "ERYE199-057-2026-11-13T12-29-40-982Z"
+          },
+          "automation": "tools/editor/erye199/cases-051-068.mjs#057",
+          "status": "Blocked",
+          "actual": "缺少保存提交点可控的崩溃/重启测试环境及原请求状态确认入口；未使共享浏览器进程崩溃，普通刷新不作为崩溃恢复通过。",
+          "target_steps_executed": false
+        },
+        {
+          "status": "Pending verification",
+          "actual": "第一次崩溃尝试仅有命令超时；后补Inspector事件确认，接管中断保留后续原现场恢复。"
+        }
+      ],
+      "evidence_dir": "057-crash-confirmed",
+      "crash_confirmed": true,
+      "screenshots": [
+        "evidence-051-068-production-20261113/057-crash-confirmed-save-paused.png",
+        "evidence-051-068-production-20261113/057-crash-confirmed-reopened.png",
+        "evidence-051-068-production-20261113/057-crash-confirmed-recovered-playback.png"
+      ],
+      "latest_execution_report": "results-051-068-production-20261113.md",
+      "latest_execution_batch": "2026-11-13T12-29-40-982Z",
+      "workspace_id": "ad06a173-72fb-43cd-b477-3462d41cd2dd",
+      "automation_status": "AUTO",
+      "script": "tools/editor/erye199/cases-051-068.mjs#057",
+      "automation_command": "npm run test:editor:199 -- --base-url https://app.cinlink.ai --cases 057",
+      "execution_method": "Ego Lite有头页面/原生操作；工程接口仅准备回读；无computer-use"
+    },
+    {
+      "id": "ERYE199-058",
+      "completed": "2026-11-13T12:45:28.470Z",
+      "fixture": {
+        "conversationId": "4614c63d-f6c5-4387-8926-98b694ff57d8",
+        "editorId": "6d434763-d8a7-4a0a-aded-45bd02f565c4",
+        "name": "ERYE199-058-2026-11-13T12-29-40-982Z"
+      },
+      "automation": "tools/editor/erye199/cases-051-068.mjs#058",
+      "status": "Blocked",
+      "actual": "未提供可运行的旧客户端与包含新能力/未知对象的受控版本样本，无法核验旧端只读或拒绝及未知对象保留；当前网页打开新工程不代替旧端兼容。",
+      "target_steps_executed": false,
+      "screenshots": [
+        "evidence-051-068-production-20261113/058-old-client-prerequisite.png"
+      ],
+      "latest_execution_report": "results-051-068-production-20261113.md",
+      "latest_execution_batch": "2026-11-13T12-29-40-982Z",
+      "workspace_id": "ad06a173-72fb-43cd-b477-3462d41cd2dd",
+      "automation_status": "BLOCKED",
+      "script": "tools/editor/erye199/cases-051-068.mjs#058",
+      "automation_command": "npm run test:editor:199 -- --base-url https://app.cinlink.ai --cases 058",
+      "execution_method": "Ego Lite有头页面/原生操作；工程接口仅准备回读；无computer-use"
+    },
+    {
+      "id": "ERYE199-059",
+      "completed": "2026-11-13T12:47:40.186Z",
+      "fixture": {
+        "conversationId": "81e12903-025e-4633-8eff-fbab1b5bd4a7",
+        "editorId": "f2bf098a-8f2e-48a1-abc5-61a6a0e833fc",
+        "name": "ERYE199-059-2026-11-13T12-29-40-982Z"
+      },
+      "automation": "tools/editor/erye199/cases-051-068.mjs#059",
+      "status": "Passed",
+      "actual": "真实断网后提示执行请求结果未知并保留原始提交和静音草稿；恢复网络点击“重试原始提交”成功，刷新保持。首次脚本未识别同义提示/按钮已修正，不是产品失败；未覆盖磁盘满。",
+      "execution_history": [
+        {
+          "id": "ERYE199-059",
+          "completed": "2026-11-13T12:46:39.085Z",
+          "fixture": {
+            "conversationId": "81e12903-025e-4633-8eff-fbab1b5bd4a7",
+            "editorId": "f2bf098a-8f2e-48a1-abc5-61a6a0e833fc",
+            "name": "ERYE199-059-2026-11-13T12-29-40-982Z"
+          },
+          "automation": "tools/editor/erye199/cases-051-068.mjs#059",
+          "status": "Failed",
+          "actual": "断网保存未显示失败或未保存状态",
+          "errorType": "AssertionError",
+          "category": "执行断言未包含当前页面同义提示及按钮，非确认产品失败"
+        }
+      ],
+      "screenshots": [
+        "evidence-051-068-production-20261113/059-offline-save-failure.png",
+        "evidence-051-068-production-20261113/059-original-retry-success.png",
+        "evidence-051-068-production-20261113/059-reopened-recovered.png"
+      ],
+      "latest_execution_report": "results-051-068-production-20261113.md",
+      "latest_execution_batch": "2026-11-13T12-29-40-982Z",
+      "workspace_id": "ad06a173-72fb-43cd-b477-3462d41cd2dd",
+      "automation_status": "AUTO",
+      "script": "tools/editor/erye199/cases-051-068.mjs#059",
+      "automation_command": "npm run test:editor:199 -- --base-url https://app.cinlink.ai --cases 059",
+      "execution_method": "Ego Lite有头页面/原生操作；工程接口仅准备回读；无computer-use"
+    },
+    {
+      "id": "ERYE199-062",
+      "completed": "2026-11-13T12:49:15.881Z",
+      "fixture": {
+        "conversationId": "4cee90b1-51f3-4ce7-b5cb-7b3f8bf32784",
+        "editorId": "e051e2d0-7342-42a7-81ea-f752cb6ccbc4",
+        "name": "ERYE199-062-2026-11-13T12-29-40-982Z"
+      },
+      "automation": "tools/editor/erye199/cases-051-068.mjs#062",
+      "status": "Passed",
+      "actual": "带烧录字幕的测试视频从收起状态重新展开，现行五入口、预览、时间轴和导出均显示，工程内容保持；按用户确认最新页面验收，不要求旧Speech布局。",
+      "screenshots": [
+        "evidence-051-068-production-20261113/062-captioned-editor-open.png",
+        "evidence-051-068-production-20261113/062-editor-collapsed.png",
+        "evidence-051-068-production-20261113/062-editor-reopened.png"
+      ],
+      "latest_execution_report": "results-051-068-production-20261113.md",
+      "latest_execution_batch": "2026-11-13T12-29-40-982Z",
+      "workspace_id": "ad06a173-72fb-43cd-b477-3462d41cd2dd",
+      "automation_status": "AUTO",
+      "script": "tools/editor/erye199/cases-051-068.mjs#062",
+      "automation_command": "npm run test:editor:199 -- --base-url https://app.cinlink.ai --cases 062",
+      "execution_method": "Ego Lite有头页面/原生操作；工程接口仅准备回读；无computer-use"
+    },
+    {
+      "id": "ERYE199-063",
+      "completed": "2026-11-13T12:49:32.224Z",
+      "fixture": {
+        "conversationId": "cfabfb07-8d71-4e95-83b5-94ae7701dc6d",
+        "editorId": "b291b984-242a-4be0-b72b-021b435148d6",
+        "name": "ERYE199-063-2026-11-13T12-29-40-982Z"
+      },
+      "automation": "tools/editor/erye199/cases-051-068.mjs#063",
+      "status": "Not Applicable",
+      "actual": "当前已确认设计为Media/Scripts/Captions/Voiceover/Watermark五入口，无旧Speech入口；默认Speech属于旧稿，不据此判产品失败。本次记录实际首次进入字幕面板，未将其等同Speech通过。",
+      "target_steps_executed": false,
+      "acceptance_scope": "用户确认最新Figma主页面优先",
+      "screenshots": [
+        "evidence-051-068-production-20261113/063-default-current-design.png"
+      ],
+      "latest_execution_report": "results-051-068-production-20261113.md",
+      "latest_execution_batch": "2026-11-13T12-29-40-982Z",
+      "workspace_id": "ad06a173-72fb-43cd-b477-3462d41cd2dd",
+      "automation_status": "AUTO",
+      "script": "tools/editor/erye199/cases-051-068.mjs#063",
+      "automation_command": "npm run test:editor:199 -- --base-url https://app.cinlink.ai --cases 063",
+      "execution_method": "Ego Lite有头页面/原生操作；工程接口仅准备回读；无computer-use"
+    },
+    {
+      "id": "ERYE199-064",
+      "completed": "2026-11-13T12:51:53.492Z",
+      "fixture": {
+        "conversationId": "e6404cad-9ff7-44a7-83c1-ae3f42c41aa9",
+        "editorId": "fe2c0a1e-8fd2-486f-af2a-b0dd82da21cc",
+        "name": "ERYE199-064-2026-11-13T12-29-40-982Z"
+      },
+      "automation": "tools/editor/erye199/cases-051-068.mjs#064",
+      "status": "Failed",
+      "actual": "字幕列表A/B及2秒进度显示正常；切到媒体→工程后提示“执行服务未返回有效JSON（504）”，素材列表为空；切回字幕仍在2秒。工程素材业务结果未达到，保留失败截图，未盲目重试。",
+      "execution_history": [
+        {
+          "id": "ERYE199-064",
+          "completed": "2026-11-13T12:49:44.767Z",
+          "fixture": {
+            "conversationId": "e6404cad-9ff7-44a7-83c1-ae3f42c41aa9",
+            "editorId": "fe2c0a1e-8fd2-486f-af2a-b0dd82da21cc",
+            "name": "ERYE199-064-2026-11-13T12-29-40-982Z"
+          },
+          "automation": "tools/editor/erye199/cases-051-068.mjs#064",
+          "status": "Blocked",
+          "actual": "page.click timed out after 3005ms: Locator [aria-label=\"编辑器功能\"] button:text-is(\"媒体\") matched 0 elements",
+          "errorType": "ElementResolutionError",
+          "category": "首个选择器问题已修复；随后实际观察到素材请求504"
+        }
+      ],
+      "screenshots": [
+        "evidence-051-068-production-20261113/064-captions-at-two.png",
+        "evidence-051-068-production-20261113/064-media-project-504.png",
+        "evidence-051-068-production-20261113/064-returned-captions.png"
+      ],
+      "latest_execution_report": "results-051-068-production-20261113.md",
+      "latest_execution_batch": "2026-11-13T12-29-40-982Z",
+      "workspace_id": "ad06a173-72fb-43cd-b477-3462d41cd2dd",
+      "automation_status": "AUTO",
+      "script": "tools/editor/erye199/cases-051-068.mjs#064",
+      "automation_command": "npm run test:editor:199 -- --base-url https://app.cinlink.ai --cases 064",
+      "execution_method": "Ego Lite有头页面/原生操作；工程接口仅准备回读；无computer-use"
+    },
+    {
+      "id": "ERYE199-065",
+      "completed": "2026-11-13T12:52:04.680Z",
+      "fixture": {
+        "conversationId": "d9943ee7-f68c-4801-b09d-8ade60fdccf5",
+        "editorId": "4d047514-6f9b-4f47-8de2-0fa6e5cecde2",
+        "name": "ERYE199-065-2026-11-13T12-29-40-982Z"
+      },
+      "automation": "tools/editor/erye199/cases-051-068.mjs#065",
+      "status": "Passed",
+      "actual": "真实播放、暂停及时间轴播放头拖动到约7秒，画面媒体时间和页面进度一致且停住；工程内容未改。",
+      "screenshots": [
+        "evidence-051-068-production-20261113/065-paused.png",
+        "evidence-051-068-production-20261113/065-dragged-to-seven.png"
+      ],
+      "latest_execution_report": "results-051-068-production-20261113.md",
+      "latest_execution_batch": "2026-11-13T12-29-40-982Z",
+      "workspace_id": "ad06a173-72fb-43cd-b477-3462d41cd2dd",
+      "automation_status": "AUTO",
+      "script": "tools/editor/erye199/cases-051-068.mjs#065",
+      "automation_command": "npm run test:editor:199 -- --base-url https://app.cinlink.ai --cases 065",
+      "execution_method": "Ego Lite有头页面/原生操作；工程接口仅准备回读；无computer-use"
+    },
+    {
+      "id": "ERYE199-066",
+      "completed": "2026-11-13T12:54:56.716Z",
+      "fixture": {
+        "conversationId": "6529718f-f852-44d1-adf2-fb2d0abcade4",
+        "editorId": "e2e1ce48-431a-445d-a4ab-19f9409f0c6a",
+        "name": "ERYE199-066-2026-11-13T12-29-40-982Z"
+      },
+      "automation": "tools/editor/erye199/cases-051-068.mjs#066",
+      "status": "Passed",
+      "actual": "60秒多片段时间线放大后刻度/片段像素宽度变化，真实横向滚动有效，5秒播放位置及工程内容保持。",
+      "execution_history": [
+        {
+          "id": "ERYE199-066",
+          "completed": "2026-11-13T12:52:16.269Z",
+          "fixture": {
+            "conversationId": "6529718f-f852-44d1-adf2-fb2d0abcade4",
+            "editorId": "e2e1ce48-431a-445d-a4ab-19f9409f0c6a",
+            "name": "ERYE199-066-2026-11-13T12-29-40-982Z"
+          },
+          "automation": "tools/editor/erye199/cases-051-068.mjs#066",
+          "status": "Blocked",
+          "actual": "预览定位偏差过大，需检查实际控件，不能写入期望时间",
+          "errorType": "Blocked",
+          "category": "定位动作校正次数不足，非确认产品问题"
+        }
+      ],
+      "screenshots": [
+        "evidence-051-068-production-20261113/066-zoomed-timeline.png",
+        "evidence-051-068-production-20261113/066-horizontally-scrolled.png"
+      ],
+      "latest_execution_report": "results-051-068-production-20261113.md",
+      "latest_execution_batch": "2026-11-13T12-29-40-982Z",
+      "workspace_id": "ad06a173-72fb-43cd-b477-3462d41cd2dd",
+      "automation_status": "AUTO",
+      "script": "tools/editor/erye199/cases-051-068.mjs#066",
+      "automation_command": "npm run test:editor:199 -- --base-url https://app.cinlink.ai --cases 066",
+      "execution_method": "Ego Lite有头页面/原生操作；工程接口仅准备回读；无computer-use"
+    },
+    {
+      "id": "ERYE199-067",
+      "completed": "2026-11-13T12:55:04.567Z",
+      "fixture": {
+        "conversationId": "64621e64-8f99-46fa-b5b8-1364f3c5a969",
+        "editorId": "67779a2b-fb18-48d4-8943-935303ff0d1b",
+        "name": "ERYE199-067-2026-11-13T12-29-40-982Z"
+      },
+      "automation": "tools/editor/erye199/cases-051-068.mjs#067",
+      "status": "Passed",
+      "actual": "按最新布局收起/展开字幕功能面板，预览宽度自适应且恢复，当前字幕面板、2秒进度及暂停状态保持；不将项目列表栏当旧Speech功能栏。",
+      "execution_history": [
+        {
+          "id": "ERYE199-067",
+          "completed": "2026-11-13T12:52:35.588Z",
+          "fixture": {
+            "conversationId": "64621e64-8f99-46fa-b5b8-1364f3c5a969",
+            "editorId": "67779a2b-fb18-48d4-8943-935303ff0d1b",
+            "name": "ERYE199-067-2026-11-13T12-29-40-982Z"
+          },
+          "automation": "tools/editor/erye199/cases-051-068.mjs#067",
+          "status": "Blocked",
+          "actual": "page.waitForFunction timed out after 8000ms on page p1; last URL was \"https://app.cinlink.ai/c/64621e64-8f99-46fa-b5b8-1364f3c5a969\"; last title was \"CinLink | Everything You Need To Create And Remake Content\".",
+          "errorType": "Error",
+          "category": "收起面板保留隐藏DOM，原脚本错误地等待DOM删除，非确认产品问题"
+        }
+      ],
+      "screenshots": [
+        "evidence-051-068-production-20261113/067-panel-expanded.png",
+        "evidence-051-068-production-20261113/067-panel-collapsed.png",
+        "evidence-051-068-production-20261113/067-panel-restored.png"
+      ],
+      "latest_execution_report": "results-051-068-production-20261113.md",
+      "latest_execution_batch": "2026-11-13T12-29-40-982Z",
+      "workspace_id": "ad06a173-72fb-43cd-b477-3462d41cd2dd",
+      "automation_status": "AUTO",
+      "script": "tools/editor/erye199/cases-051-068.mjs#067",
+      "automation_command": "npm run test:editor:199 -- --base-url https://app.cinlink.ai --cases 067",
+      "execution_method": "Ego Lite有头页面/原生操作；工程接口仅准备回读；无computer-use"
+    },
+    {
+      "id": "ERYE199-068",
+      "completed": "2026-11-13T12:52:48.593Z",
+      "fixture": {
+        "conversationId": "0c6dbe4a-6afa-4730-b083-f1ff9958b9c0",
+        "editorId": "db1e6049-e86a-4592-a131-46dc83ba4f3d",
+        "name": "ERYE199-068-2026-11-13T12-29-40-982Z"
+      },
+      "automation": "tools/editor/erye199/cases-051-068.mjs#068",
+      "status": "Blocked",
+      "actual": "空工程只有选择媒体引导，尚未出现字幕/媒体导航；素材空态已观察，但两页空态目标无法进入，不把入口未展开视为两页都通过。",
+      "coverage": "已覆盖空工程总引导；字幕/素材页独立空态未覆盖",
+      "screenshots": [
+        "evidence-051-068-production-20261113/068-empty-editor.png"
+      ],
+      "latest_execution_report": "results-051-068-production-20261113.md",
+      "latest_execution_batch": "2026-11-13T12-29-40-982Z",
+      "workspace_id": "ad06a173-72fb-43cd-b477-3462d41cd2dd",
+      "automation_status": "BLOCKED",
+      "script": "tools/editor/erye199/cases-051-068.mjs#068",
+      "automation_command": "npm run test:editor:199 -- --base-url https://app.cinlink.ai --cases 068",
+      "execution_method": "Ego Lite有头页面/原生操作；工程接口仅准备回读；无computer-use"
+    }
+  ],
+  "scope_note": "实际16条；6条Not Applicable未执行完整目标；058/068为前置缺口；057仅页面崩溃的未发送保存分支。"
+}

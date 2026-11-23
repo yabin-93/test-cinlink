@@ -1,0 +1,795 @@
+{
+  "date": "2026-11-13",
+  "reason": "用户要求按现有功能优化16条阻塞用例；历史结果不回写为通过",
+  "oldDefinitions": {
+    "ERYE210-021": "| ERYE210-021 | P0 | P；PA C1和W_TEXT已保存；字段可输入 | 1. 独立场景对C1原文和W_TEXT输入未提交新文。<br>2. 每次切其他入口再返回。<br>3. 放弃该字段草稿。 | 切页不无提示丢失文字，必要时提供保存/放弃选择；回到正确对象，放弃只处理当前未保存内容；其他草稿和已保存内容不被误改。 | Source: Requirement；ERYE-210 v1.1第二节；AC10 | [AUTO] | `tests/editor/erye210-fields.spec.ts` | 业务验收；验证字幕及水印文字草稿独立保留；Functional；Major；Blocked；[本轮结果](results-021-049-prod-20261113.md) |",
+    "ERYE210-025": "| ERYE210-025 | P0 | P；PA有未发送Agent文本和未应用清理候选 | 1. 切五入口并返回。<br>2. 再切目标PB。<br>3. 查看输入/候选绑定并明确取消。 | 切页不会自动发送输入或应用未选候选；切工程时不把原稿/候选当成PB内容，用户可明确处理未保存项。 | Source: Requirement；ERYE-210 v1.1第二节；AC10 | [AUTO] | `tests/editor/erye210-fields.spec.ts` | 业务验收；验证未发送Agent输入及候选不随切页执行；Functional；Critical；Blocked；[本轮结果](results-021-049-prod-20261113.md) |",
+    "ERYE210-026": "| ERYE210-026 | P0 | P；PA有C1未提交草稿，T2可改云端C1；本地恢复可用 | 1. 刷新/异常重开查看草稿。<br>2. 在另一独立场景T2保存新文后重开。<br>3. 比较并选择重新应用或放弃。 | 按已确认页面恢复规则保留/提示未保存内容；另一页新保存内容不被旧草稿无提示覆盖；用户能明确选择保留或放弃。 | Source: Requirement；ERYE-210 v1.1第二节；AC10；206 AC25 | [AUTO] | `tests/editor/erye210-fields.spec.ts` | 业务验收；验证刷新异常重开恢复原字段且冲突不覆盖；Data Persistence；Critical；Blocked；[本轮结果](results-021-049-prod-20261113.md) |",
+    "ERYE210-027": "| ERYE210-027 | P0 | P；PA/PB均有同名C1或水印字段；U1/U2、两对象可区分 | 1. PA输入草稿A、PB输入草稿B并切换。<br>2. 切账号及重开。<br>3. 分别回原字段。 | 不同工程/账户/对象的未保存文字不串用或泄漏，返回时对应正确输入。 | Source: Requirement；ERYE-210 v1.1第二节；AC10 | [AUTO] | `tests/editor/erye210-fields.spec.ts` | 业务验收；验证不同工程同名字段草稿不串；Data Persistence；Critical；Blocked；[本轮结果](results-021-049-prod-20261113.md) |",
+    "ERYE210-029": "| ERYE210-029 | P0 | P；PCLEAN含已核验候选/停顿金标；分析已完成 | 1. 试听候选，取消一项并恢复一项。<br>2. 查看最终所选区间及预计缩短量。<br>3. 不应用时检查原内容。 | 选择/恢复及试听可理解，范围与金标一致；未应用不改时间线/字幕/配音，不把候选操作当内容历史。 | Source: Requirement；ERYE-210 N04；AC05 | [AUTO] | `tests/editor/erye210-capabilities.spec.ts` | 业务验收；验证试听选择恢复候选及应用预览；Functional；Major；Blocked；[本轮结果](results-021-049-prod-20261113.md) |",
+    "ERYE210-030": "| ERYE210-030 | P0 | P；PCLEAN含可靠源/原译文/配音时间映射，锁定范围无冲突 | 1. 选明确候选并点击应用清理。<br>2. 核对画面、原声、关联字幕/配音和缩短量。<br>3. 撤销一次并核源文件。 | 一组一次提交；实际缩短与选区一致，关联同步无已删对白；一次撤销恢复整组；不删原素材。 | Source: Requirement；ERYE-210 N04；AC05；196 WAC04/08 | [BLOCKED] | `tests/editor/erye210-capabilities.spec.ts` | 业务验收；验证一次清理一次提交并整组撤销；Functional；Major；Blocked；[本轮结果](results-021-049-prod-20261113.md) |",
+    "ERYE210-031": "| ERYE210-031 | P0 | P；CWORD有独立人工词句和声音金标；在本轮清理业务范围内明确删除9～10秒；未确认边界规则仅记录相应分支 | 1. 明确删除源9～10秒并应用。<br>2. 对照人工金标逐句看字幕、听声音并核对时长。<br>3. 重开原结果，再撤销本次修改。 | 目标1秒正确删除，保留词句和画面/声音对应，无丢重、残留或漂移；原结果恢复不再删一次，撤销能恢复原内容。 | Source: Requirement；ERYE-210 v1.1第三节；NAV-R04；N04 | [BLOCKED] | `tests/editor/erye210-capabilities.spec.ts` | 业务验收；清理后词句音画与人工金标对应；Boundary；Major；Blocked；[本轮结果](results-021-049-prod-20261113.md) |",
+    "ERYE210-032": "| ERYE210-032 | P0 | P；CWORD包含跨删除边界词语及独立声音金标；该清理能力实际可用；语义边界结果已由人工确认 | 1. 明确删除9～10秒。<br>2. 对照实际音频边界、字幕文字和可读时段。 | 已删讲话不残留、保留讲话不漏词/重复，字幕对应实际声音；无法确定时先提示/澄清；不以词中点或固定半开区间归属算法作为通过条件。 | Source: Requirement；ERYE-210 v1.1第三节；NAV-R04 | [BLOCKED] | `tests/editor/erye210-capabilities.spec.ts` | 业务验收；删除边界词句与实际声音对应；Boundary；Major；Blocked；[本轮结果](results-021-049-prod-20261113.md) |",
+    "ERYE210-033": "| ERYE210-033 | P0 | P；CNOWORD：8～12秒字幕中申请删9～10秒；实际输入没有可用逐词结果 | 1. 选择该清理候选并应用。<br>2. 查看定位错误和原工程。<br>3. 用户明确拆分文字/时码后重新选择应用。 | 正确完成声字同步，或明确说明需先拆分/确认后再继续；不能猜错文字却报成功或留下半成品。 | Source: Requirement；ERYE-210 v1.1第三节；NAV-R04 | [BLOCKED] | `tests/editor/erye210-capabilities.spec.ts` | 业务验收；无法确定词句时明确处理不误删；Negative；Major；Blocked；[本轮结果](results-021-049-prod-20261113.md) |",
+    "ERYE210-034": "| ERYE210-034 | P0 | P；CNOWORD两字幕8～9、10～12秒，无逐字时间；待删9～10为空隙 | 1. 明确删除源9～10秒。<br>2. 比对两cue及音画映射。 | 删除无对白的9～10秒后，后字幕及声音前移1秒且文字保持完整；没有实际能力时记适用范围，不造字段阻塞。 | Source: Requirement；ERYE-210 v1.1第三节；NAV-R04 | [BLOCKED] | `tests/editor/erye210-capabilities.spec.ts` | 业务验收；验证仅在字幕边界剪切不要求猜文字；Boundary；Major；Blocked；[本轮结果](results-021-049-prod-20261113.md) |",
+    "ERYE210-035": "| ERYE210-035 | P0 | P；CWORD含两语言及配音，独立听审发现其中一个关联无法明确对齐的测试输入 | 1. 分别应用删除9～10秒。<br>2. 比对两语言、音频、视频及历史。 | 两种语言和配音必须与最终实际声音/画面相符；不能只改一语或残留已删声音；不能可靠完成时明确反馈并保留原内容。 | Source: Requirement；ERYE-210 v1.1第三节；NAV-R04 | [BLOCKED] | `tests/editor/erye210-capabilities.spec.ts` | 业务验收；清理后两语言与配音同步或明确失败；Negative；Critical；Blocked；[本轮结果](results-021-049-prod-20261113.md) |",
+    "ERYE210-045": "| ERYE210-045 | P0 | P；旧视图media/资产/工程文件各独立缓存；PA已保存 | 1. 用新版分别打开。<br>2. 重复刷新。<br>3. 核对旧缓存备份与工程内容。 | 旧入口可进入正确Media且业务内容不变；打开/刷新不会重新生成或多出工程。 | Source: Requirement；ERYE-210 N10；AC11；Figma主页面 | [BLOCKED] | `tests/editor/erye210-capabilities.spec.ts` | 业务验收；验证旧media与工程文件映射Media；Functional；Major；Blocked；[本轮结果](results-021-049-prod-20261113.md) |",
+    "ERYE210-046": "| ERYE210-046 | P0 | P；旧cleanup及shorten视图；实际页面已确认Scripts承接清理与精简入口 | 1. 分别打开旧清理/精简链接。<br>2. 检查对应操作/候选与项目。 | 在已确认Scripts一级入口下定位对应清理/精简功能；不存在的子入口明确降级不借待定剪辑偏好稿代替。 | Source: Requirement；ERYE-210 N03/10；AC11 | [BLOCKED] | `tests/editor/erye210-capabilities.spec.ts` | 业务验收；验证旧cleanupshorten映射Scripts对应功能；Functional；Major；Blocked；[本轮结果](results-021-049-prod-20261113.md) |",
+    "ERYE210-047": "| ERYE210-047 | P0 | P；旧voice有清理、音量、配音及无子页四种记录；实际页面已确认混音入口 | 1. 分别打开四类旧视图。<br>2. 核对清理/混音/配音定位及默认。 | 按语义映射：清理Scripts、配音Voiceover、音量去已冻结混音入口；无子页voice默认Voiceover；不能重新生成或增工程。 | Source: Requirement；ERYE-210 N10；AC11 | [BLOCKED] | `tests/editor/erye210-capabilities.spec.ts` | 业务验收；验证旧voice按具体语义区分而非一律映配音；Functional；Major；Blocked；[本轮结果](results-021-049-prod-20261113.md) |",
+    "ERYE210-048": "| ERYE210-048 | P0 | P；旧translate来源分别是字幕翻译与配音语音子页 | 1. 从两类旧链接打开。<br>2. 回读目标/内容。 | 字幕翻译进Captions，明确配音翻译进Voiceover；不因同叫translate改错通道或触发新任务。 | Source: Requirement；ERYE-210 N10；AC11 | [BLOCKED] | `tests/editor/erye210-capabilities.spec.ts` | 业务验收；验证旧字幕翻译与配音翻译入口区分；Functional；Major；Blocked；[本轮结果](results-021-049-prod-20261113.md) |",
+    "ERYE210-049": "| ERYE210-049 | P0 | P；PA旧watermark text/image缓存；有历史任务；可回退视图版本 | 1. 分别迁移并重开两次。<br>2. 回退视图开关，再恢复新版。<br>3. 比对媒体/任务/历史。 | 旧水印入口能定位Text/Image正确内容，重复打开及真实版本切换后不丢媒体/历史/任务或多出工程。 | Source: Requirement；ERYE-210 N10；AC11 | [BLOCKED] | `tests/editor/erye210-capabilities.spec.ts` | 业务验收；验证旧watermark子页恢复及重复迁移回退；Functional；Major；Blocked；[本轮结果](results-021-049-prod-20261113.md) |"
+  },
+  "oldExecution": [
+    {
+      "id": "ERYE210-021",
+      "status": "Blocked",
+      "actual": "字幕CAPTION_021和水印WATERMARK_021切页分别保留、不串字段；当前字段失焦保存，未确认字段取消/放弃入口，取消草稿分支未执行。初次Esc假设已排除。",
+      "reason": "两字段切页保留及隔离已完成；当前未发现已确认的字段取消/放弃入口，取消当前草稿且保留其他草稿分支未执行，不将Esc假设当产品失败",
+      "automated": true,
+      "workspaceId": "cd699fd3-93f3-4b4d-bddc-1bfac63fc290",
+      "annotations": [
+        {
+          "type": "coverage",
+          "description": "字幕和水印切页分别保留已输入文案；当前字段失焦保存，不把已保存内容称为未保存草稿。Esc没有已确认的取消契约。"
+        },
+        {
+          "type": "blocked",
+          "description": "两字段切页保留及隔离已完成；当前未发现已确认的字段取消/放弃入口，取消当前草稿且保留其他草稿分支未执行，不将Esc假设当产品失败"
+        },
+        {
+          "type": "skip",
+          "description": "两字段切页保留及隔离已完成；当前未发现已确认的字段取消/放弃入口，取消当前草稿且保留其他草稿分支未执行，不将Esc假设当产品失败",
+          "location": {
+            "file": "tools\\editor\\erye210-runner.ts",
+            "line": 60,
+            "column": 91
+          }
+        }
+      ],
+      "projects": {
+        "021": {
+          "cid": "ae470ebd-bb5b-435e-b34f-7653701eda28",
+          "pid": "6c1088e4-fdfb-4635-8869-e92c7d2e240d",
+          "name": "ERYE210-021-6c1088e4"
+        }
+      },
+      "checks": [
+        {
+          "stage": "field-isolation",
+          "oldMark": "NAV006",
+          "beforeRevision": 1,
+          "revision": 2,
+          "cancelButtons": [],
+          "inspector": "字幕\n样式\n每条字幕字符数\n60\n00:00.16 – 00:03.60\nCAPTION_021\n添加字幕行\n00:03.66 – 00:06.90\nrequest to strike down the entirety of our nation's\n添加字幕行\n00:06.92 – 00:07.68\nhealthcare law.\n添加字幕行\n00:08.60 – 00:11.50\nRegardless of people's opinions of the Affordable Care Act,\n添加字幕行\n00:11.98 – 00:15.18\nwe know there's no single issue that matters more to\n添加字幕行\n00:15.24 – 00:17.08\nhardworking families than healthcare.\n添加字幕行\n00:17.96 – 00:18.96\nIt's a personal issue.\n添加字幕行\n00:19.38 – 00:19.82\nIt affects\n添加字幕行"
+        }
+      ],
+      "finishedAt": "2026-11-13T11:01:55.510Z",
+      "executionBatch": "prod-021-027-20261113-02",
+      "report": "results-021-049-prod-20261113.md",
+      "targetExecuted": true,
+      "automationGateOnly": false,
+      "screenshots": [
+        "021-021-field-isolation.png",
+        "021-ERYE210-021-blocked.png"
+      ],
+      "steps": [
+        "在新水印工程编辑第一条字幕为CAPTION_021。",
+        "切水印编辑文字WATERMARK_021；反复切回两页确认分别保留。",
+        "检查当前可见取消/放弃入口；无已确认入口，不把Esc认定为取消。"
+      ]
+    },
+    {
+      "id": "ERYE210-025",
+      "status": "Blocked",
+      "actual": "未发送Agent输入在五入口浏览后保留，无新增消息/自动发送，PA/PB内容未改；复制清理分析已过期，未应用有效候选的取消分支未完成。",
+      "reason": "未发送输入与PA/PB内容隔离分支已执行；复制的旧清理结果提示需重新分析，当前候选不具备可应用前置，未应用候选取消分支未覆盖",
+      "automated": true,
+      "workspaceId": "1a175c85-e9c5-41aa-9ff9-7606d48b4b55",
+      "annotations": [
+        {
+          "type": "blocked",
+          "description": "未发送输入与PA/PB内容隔离分支已执行；复制的旧清理结果提示需重新分析，当前候选不具备可应用前置，未应用候选取消分支未覆盖"
+        },
+        {
+          "type": "skip",
+          "description": "未发送输入与PA/PB内容隔离分支已执行；复制的旧清理结果提示需重新分析，当前候选不具备可应用前置，未应用候选取消分支未覆盖",
+          "location": {
+            "file": "tools\\editor\\erye210-runner.ts",
+            "line": 60,
+            "column": 91
+          }
+        }
+      ],
+      "projects": {
+        "025": {
+          "cid": "1ab0dc6c-f302-4f29-94d3-4a84f436ab24",
+          "pid": "e3aae84e-e04b-4f94-91a1-5bc7a446eee5",
+          "name": "ERYE210-025-e3aae84e"
+        },
+        "025-PB": {
+          "cid": "1ab0dc6c-f302-4f29-94d3-4a84f436ab24",
+          "pid": "6bca655d-f59f-4e45-9fc4-530432b4b710",
+          "name": "ERYE210-025-PB-6bca655d"
+        }
+      },
+      "checks": [
+        {
+          "pbPanel": "去除口水词 · 文稿\n正在加载文稿…",
+          "agentSubmitted": false,
+          "appliedCleanup": false,
+          "paRevision": 1,
+          "pbRevision": 1
+        }
+      ],
+      "finishedAt": "2026-11-13T11:02:54.276Z",
+      "executionBatch": "prod-021-027-20261113-02",
+      "report": "results-021-049-prod-20261113.md",
+      "targetExecuted": true,
+      "automationGateOnly": false,
+      "screenshots": [
+        "025-025-PB-candidates.png",
+        "025-ERYE210-025-blocked.png"
+      ],
+      "steps": [
+        "清理副本中填写未发送Agent输入，依次浏览五入口。",
+        "同会话新建PB并切文稿，核候选不来自PA；清空输入。",
+        "回读两工程和消息数量，未提交分析或应用。"
+      ]
+    },
+    {
+      "id": "ERYE210-026",
+      "status": "Blocked",
+      "actual": "本地输入后刷新观察已保存截图；第二标签未进入已登录工作台，未执行双标签云端冲突及重新应用/放弃恢复分支。不把页面不可操作记产品冲突失败。",
+      "reason": "刷新观察已记录；第二标签未能进入已登录工作台，双标签冲突及恢复分支未执行",
+      "automated": true,
+      "workspaceId": "1a175c85-e9c5-41aa-9ff9-7606d48b4b55",
+      "annotations": [
+        {
+          "type": "blocked",
+          "description": "刷新观察已记录；第二标签未能进入已登录工作台，双标签冲突及恢复分支未执行"
+        },
+        {
+          "type": "skip",
+          "description": "刷新观察已记录；第二标签未能进入已登录工作台，双标签冲突及恢复分支未执行",
+          "location": {
+            "file": "tools\\editor\\erye210-runner.ts",
+            "line": 60,
+            "column": 91
+          }
+        }
+      ],
+      "projects": {
+        "026": {
+          "cid": "3c67a1ab-2950-4c33-ad18-4fb092d74a26",
+          "pid": "b5ef9819-9805-4bac-b5b4-ccc82f9e9e4a",
+          "name": "ERYE210-026-b5ef9819"
+        },
+        "026-conflict": {
+          "cid": "506f7b3c-99eb-4570-87ac-63618be8e161",
+          "pid": "5a9fb21c-416a-44a5-bcdb-e24b722bd750",
+          "name": "ERYE210-026-conflict-5a9fb21c"
+        }
+      },
+      "checks": [
+        {
+          "stage": "refresh-observed",
+          "text": "字幕\n样式\n每条字幕字符数\n60\n00:00.16 – 00:03.60\nEfforts to sabotage our healthcare by filing a formal\n添加字幕行\n00:03.66 – 00:06.90\nrequest to strike down the entirety of our nation's\n添加字幕行\n00:06.92 – 00:07.68\nhealthcare law.\n添加字幕行\n00:08.60 – 00:11.50\nRegardless of people's opinions of the Affordable Care Act,\n添加字幕行\n00:11.98 – 00:15.18\nwe know there's no single issue that matters more to\n添加字幕行\n00:15.24 – 00:17.08\nhardworking families than healthcare.\n添加字幕行\n00:17.96 – 00:18.96\nIt's a personal issue.\n添加字幕行\n00:19.38 – 00:19.82\nIt affects\n添加字幕行"
+        }
+      ],
+      "finishedAt": "2026-11-13T11:03:31.716Z",
+      "executionBatch": "prod-021-027-20261113-02",
+      "report": "results-021-049-prod-20261113.md",
+      "targetExecuted": true,
+      "automationGateOnly": false,
+      "screenshots": [
+        "026-026-after-refresh.png",
+        "026-ERYE210-026-blocked.png"
+      ],
+      "steps": [
+        "输入LOCAL_DRAFT_026后刷新并保存观察。",
+        "独立冲突副本中保留本地输入，打开第二标签尝试同会话。",
+        "第二标签未进入工作台，停止后续远端保存/冲突恢复。"
+      ]
+    },
+    {
+      "id": "ERYE210-027",
+      "status": "Blocked",
+      "actual": "同一会话PA/PB分别保存PA_DRAFT_027、PB_DRAFT_027，交替选择均正确；缺第二账号，跨账号和真正未保存草稿隔离未执行。",
+      "reason": "U1同设备PA/PB实际字段隔离已执行；用户此前确认无第二账号，U2账号隔离及未保存草稿跨账号分支未执行",
+      "automated": true,
+      "workspaceId": "fce33faa-5258-4302-b079-6f5c8760d7f4",
+      "annotations": [
+        {
+          "type": "blocked",
+          "description": "U1同设备PA/PB实际字段隔离已执行；用户此前确认无第二账号，U2账号隔离及未保存草稿跨账号分支未执行"
+        },
+        {
+          "type": "skip",
+          "description": "U1同设备PA/PB实际字段隔离已执行；用户此前确认无第二账号，U2账号隔离及未保存草稿跨账号分支未执行",
+          "location": {
+            "file": "tools\\editor\\erye210-runner.ts",
+            "line": 60,
+            "column": 91
+          }
+        }
+      ],
+      "projects": {
+        "027-PA": {
+          "cid": "3bd16685-534a-484c-9b18-d456296a6d62",
+          "pid": "d9d1d3c3-bec9-4b51-8495-a19a3b9ca130",
+          "name": "ERYE210-027-PA-d9d1d3c3"
+        },
+        "027-PB": {
+          "cid": "3bd16685-534a-484c-9b18-d456296a6d62",
+          "pid": "ad00adc4-b5a9-4481-87b0-3e98c8c297bb",
+          "name": "ERYE210-027-PB-ad00adc4"
+        }
+      },
+      "checks": [
+        {
+          "pa": {
+            "text": "PA_DRAFT_027",
+            "color": "#FF00FF",
+            "opacity": 0.75,
+            "font_name": "Arial",
+            "font_size": 28,
+            "placement": {
+              "mode": "preset",
+              "preset": "top-right",
+              "position": null,
+              "margin_px": 24
+            },
+            "font_weight": 600,
+            "watermark_id": "ac95b3a6-8634-426e-ba39-7d0d40f5f884"
+          },
+          "pb": {
+            "text": "PB_DRAFT_027",
+            "color": "#FF00FF",
+            "opacity": 0.75,
+            "font_name": "Arial",
+            "font_size": 28,
+            "placement": {
+              "mode": "preset",
+              "preset": "top-right",
+              "position": null,
+              "margin_px": 24
+            },
+            "font_weight": 600,
+            "watermark_id": "ac95b3a6-8634-426e-ba39-7d0d40f5f884"
+          },
+          "saveMode": "字段失焦保存"
+        }
+      ],
+      "finishedAt": "2026-11-13T10:59:32.221Z",
+      "executionBatch": "prod-021-027-20261113-01",
+      "report": "results-021-049-prod-20261113.md",
+      "targetExecuted": true,
+      "automationGateOnly": false,
+      "screenshots": [
+        "027-027-project-field-isolation.png",
+        "027-ERYE210-027-blocked.png"
+      ],
+      "steps": [
+        "同会话独立PA/PB分别编辑水印为PA_DRAFT_027和PB_DRAFT_027。",
+        "交替选择两工程核各自文案。",
+        "第二账号无环境，跨账号分支停止。"
+      ]
+    },
+    {
+      "id": "ERYE210-029",
+      "status": "Blocked",
+      "actual": "新工程通过真实重新分析建立可用候选；停顿选项取消/恢复、候选定位已操作，不应用时轨道保持；缺独立听审候选区间及缩短量金标，试听/预期范围全分支未完成。",
+      "reason": "已真实分析并执行候选取消/恢复、停顿定位，未应用时内容保持；缺独立听审的候选区间/缩短量金标，未将运行时识别结果作为自身预期，整例未判通过",
+      "automated": true,
+      "workspaceId": "55c4a7da-cab1-4b0f-b4f4-94e8436fbb2f",
+      "annotations": [
+        {
+          "type": "blocked",
+          "description": "已真实分析并执行候选取消/恢复、停顿定位，未应用时内容保持；缺独立听审的候选区间/缩短量金标，未将运行时识别结果作为自身预期，整例未判通过"
+        },
+        {
+          "type": "skip",
+          "description": "已真实分析并执行候选取消/恢复、停顿定位，未应用时内容保持；缺独立听审的候选区间/缩短量金标，未将运行时识别结果作为自身预期，整例未判通过",
+          "location": {
+            "file": "tools\\editor\\erye210-runner.ts",
+            "line": 60,
+            "column": 91
+          }
+        }
+      ],
+      "projects": {
+        "029": {
+          "cid": "f1c5bc8d-abf6-457d-a308-0c580441ccfa",
+          "pid": "b71fc88f-a220-4b5c-a368-326bdf02e328",
+          "name": "ERYE210-029-b71fc88f"
+        }
+      },
+      "checks": [
+        {
+          "stage": "analysis-ready",
+          "submissions": [],
+          "text": "去除口水词 · 文稿\n2 检测到口水词\n0\n个口水词\n2\n个停顿\n最短停顿时长\ns\n移除\n说话人 1\n\nEfforts to sabotage our healthcare by filing a formal request to strike down the entirety of our nation's healthcare law.[0.9s]Regardless of people's opinions of the Affordable Care Act, we know there's no single issue that matters more to hardworking families than healthcare.[0.9s]It's a personal issue. It affects e-"
+        },
+        {
+          "stage": "candidate-selection-only",
+          "text": "去除口水词 · 文稿\n2 检测到口水词\n0\n个口水词\n2\n个停顿\n最短停顿时长\ns\n移除\n说话人 1\n\nEfforts to sabotage our healthcare by filing a formal request to strike down the entirety of our nation's healthcare law.[0.9s]Regardless of people's opinions of the Affordable Care Act, we know there's no single issue that matters more to hardworking families than healthcare.[0.9s]It's a personal issue. It affects e-\n\n取消标记",
+          "state": {
+            "name": "ERYE210-029-b71fc88f",
+            "module": [
+              "文稿"
+            ],
+            "playhead": "7.68",
+            "selected": [],
+            "media": [
+              {
+                "paused": true,
+                "duration": 20
+              }
+            ]
+          },
+          "mediaUnchanged": true
+        }
+      ],
+      "finishedAt": "2026-11-13T11:06:17.454Z",
+      "executionBatch": "prod-022-028-049-20261113-03",
+      "report": "results-021-049-prod-20261113.md",
+      "targetExecuted": true,
+      "automationGateOnly": false,
+      "screenshots": [
+        "029-029-pause-selected.png",
+        "029-029-unselected.png",
+        "029-analysis-ready.png",
+        "029-ERYE210-029-blocked.png"
+      ],
+      "steps": [
+        "清理副本提示过期后点击一次重新分析。",
+        "展开口水词/停顿，取消停顿项再恢复，定位一个停顿。",
+        "不应用，回读轨道并记录缺独立金标。"
+      ]
+    },
+    {
+      "id": "ERYE210-030",
+      "status": "Blocked",
+      "actual": "缺少同一原片可靠的原文/译文/配音时间映射及独立审核的清理范围，现有两句导航配音不对应20秒原片全部对白；整组同步、缩短和一次撤销未执行",
+      "reason": "缺少同一原片可靠的原文/译文/配音时间映射及独立审核的清理范围，现有两句导航配音不对应20秒原片全部对白；整组同步、缩短和一次撤销未执行",
+      "automated": true,
+      "workspaceId": "55c4a7da-cab1-4b0f-b4f4-94e8436fbb2f",
+      "annotations": [
+        {
+          "type": "blocked",
+          "description": "缺少同一原片可靠的原文/译文/配音时间映射及独立审核的清理范围，现有两句导航配音不对应20秒原片全部对白；整组同步、缩短和一次撤销未执行"
+        },
+        {
+          "type": "skip",
+          "description": "缺少同一原片可靠的原文/译文/配音时间映射及独立审核的清理范围，现有两句导航配音不对应20秒原片全部对白；整组同步、缩短和一次撤销未执行",
+          "location": {
+            "file": "tools\\editor\\erye210-runner.ts",
+            "line": 60,
+            "column": 91
+          }
+        }
+      ],
+      "projects": {},
+      "checks": [
+        {
+          "stage": "prerequisite-audit",
+          "executedTarget": false,
+          "reason": "缺少同一原片可靠的原文/译文/配音时间映射及独立审核的清理范围，现有两句导航配音不对应20秒原片全部对白；整组同步、缩短和一次撤销未执行"
+        }
+      ],
+      "finishedAt": "2026-11-13T11:06:17.475Z",
+      "executionBatch": "prod-022-028-049-20261113-03",
+      "report": "results-021-049-prod-20261113.md",
+      "targetExecuted": false,
+      "automationGateOnly": true,
+      "screenshots": [],
+      "steps": [
+        "核对本轮已登记的真实前置数据；缺口已明确，未执行目标业务步骤。"
+      ]
+    },
+    {
+      "id": "ERYE210-031",
+      "status": "Blocked",
+      "actual": "缺少独立人工词句与声音金标CWORD及明确9～10秒可删业务候选，不能以ASR输出自证字幕/声音正确",
+      "reason": "缺少独立人工词句与声音金标CWORD及明确9～10秒可删业务候选，不能以ASR输出自证字幕/声音正确",
+      "automated": true,
+      "workspaceId": "55c4a7da-cab1-4b0f-b4f4-94e8436fbb2f",
+      "annotations": [
+        {
+          "type": "blocked",
+          "description": "缺少独立人工词句与声音金标CWORD及明确9～10秒可删业务候选，不能以ASR输出自证字幕/声音正确"
+        },
+        {
+          "type": "skip",
+          "description": "缺少独立人工词句与声音金标CWORD及明确9～10秒可删业务候选，不能以ASR输出自证字幕/声音正确",
+          "location": {
+            "file": "tools\\editor\\erye210-runner.ts",
+            "line": 60,
+            "column": 91
+          }
+        }
+      ],
+      "projects": {},
+      "checks": [
+        {
+          "stage": "prerequisite-audit",
+          "executedTarget": false,
+          "reason": "缺少独立人工词句与声音金标CWORD及明确9～10秒可删业务候选，不能以ASR输出自证字幕/声音正确"
+        }
+      ],
+      "finishedAt": "2026-11-13T11:06:17.492Z",
+      "executionBatch": "prod-022-028-049-20261113-03",
+      "report": "results-021-049-prod-20261113.md",
+      "targetExecuted": false,
+      "automationGateOnly": true,
+      "screenshots": [],
+      "steps": [
+        "核对本轮已登记的真实前置数据；缺口已明确，未执行目标业务步骤。"
+      ]
+    },
+    {
+      "id": "ERYE210-032",
+      "status": "Blocked",
+      "actual": "缺少人工确认的9～10秒跨边界词语/声音金标及语义边界结果，未猜测词中点或边界归属",
+      "reason": "缺少人工确认的9～10秒跨边界词语/声音金标及语义边界结果，未猜测词中点或边界归属",
+      "automated": true,
+      "workspaceId": "55c4a7da-cab1-4b0f-b4f4-94e8436fbb2f",
+      "annotations": [
+        {
+          "type": "blocked",
+          "description": "缺少人工确认的9～10秒跨边界词语/声音金标及语义边界结果，未猜测词中点或边界归属"
+        },
+        {
+          "type": "skip",
+          "description": "缺少人工确认的9～10秒跨边界词语/声音金标及语义边界结果，未猜测词中点或边界归属",
+          "location": {
+            "file": "tools\\editor\\erye210-runner.ts",
+            "line": 60,
+            "column": 91
+          }
+        }
+      ],
+      "projects": {},
+      "checks": [
+        {
+          "stage": "prerequisite-audit",
+          "executedTarget": false,
+          "reason": "缺少人工确认的9～10秒跨边界词语/声音金标及语义边界结果，未猜测词中点或边界归属"
+        }
+      ],
+      "finishedAt": "2026-11-13T11:06:17.506Z",
+      "executionBatch": "prod-022-028-049-20261113-03",
+      "report": "results-021-049-prod-20261113.md",
+      "targetExecuted": false,
+      "automationGateOnly": true,
+      "screenshots": [],
+      "steps": [
+        "核对本轮已登记的真实前置数据；缺口已明确，未执行目标业务步骤。"
+      ]
+    },
+    {
+      "id": "ERYE210-033",
+      "status": "Blocked",
+      "actual": "缺少真实无逐词结果、8～12秒跨9～10秒清理候选及人工拆分后的可回归输入；未伪造分析字段触发拒绝",
+      "reason": "缺少真实无逐词结果、8～12秒跨9～10秒清理候选及人工拆分后的可回归输入；未伪造分析字段触发拒绝",
+      "automated": true,
+      "workspaceId": "55c4a7da-cab1-4b0f-b4f4-94e8436fbb2f",
+      "annotations": [
+        {
+          "type": "blocked",
+          "description": "缺少真实无逐词结果、8～12秒跨9～10秒清理候选及人工拆分后的可回归输入；未伪造分析字段触发拒绝"
+        },
+        {
+          "type": "skip",
+          "description": "缺少真实无逐词结果、8～12秒跨9～10秒清理候选及人工拆分后的可回归输入；未伪造分析字段触发拒绝",
+          "location": {
+            "file": "tools\\editor\\erye210-runner.ts",
+            "line": 60,
+            "column": 91
+          }
+        }
+      ],
+      "projects": {},
+      "checks": [
+        {
+          "stage": "prerequisite-audit",
+          "executedTarget": false,
+          "reason": "缺少真实无逐词结果、8～12秒跨9～10秒清理候选及人工拆分后的可回归输入；未伪造分析字段触发拒绝"
+        }
+      ],
+      "finishedAt": "2026-11-13T11:06:17.539Z",
+      "executionBatch": "prod-022-028-049-20261113-03",
+      "report": "results-021-049-prod-20261113.md",
+      "targetExecuted": false,
+      "automationGateOnly": true,
+      "screenshots": [],
+      "steps": [
+        "核对本轮已登记的真实前置数据；缺口已明确，未执行目标业务步骤。"
+      ]
+    },
+    {
+      "id": "ERYE210-034",
+      "status": "Blocked",
+      "actual": "缺少实际9～10秒无对白且字幕8～9/10～12秒的CNOWORD音视频；现有原片9～10秒是讲话，不能伪造为空隙",
+      "reason": "缺少实际9～10秒无对白且字幕8～9/10～12秒的CNOWORD音视频；现有原片9～10秒是讲话，不能伪造为空隙",
+      "automated": true,
+      "workspaceId": "55c4a7da-cab1-4b0f-b4f4-94e8436fbb2f",
+      "annotations": [
+        {
+          "type": "blocked",
+          "description": "缺少实际9～10秒无对白且字幕8～9/10～12秒的CNOWORD音视频；现有原片9～10秒是讲话，不能伪造为空隙"
+        },
+        {
+          "type": "skip",
+          "description": "缺少实际9～10秒无对白且字幕8～9/10～12秒的CNOWORD音视频；现有原片9～10秒是讲话，不能伪造为空隙",
+          "location": {
+            "file": "tools\\editor\\erye210-runner.ts",
+            "line": 60,
+            "column": 91
+          }
+        }
+      ],
+      "projects": {},
+      "checks": [
+        {
+          "stage": "prerequisite-audit",
+          "executedTarget": false,
+          "reason": "缺少实际9～10秒无对白且字幕8～9/10～12秒的CNOWORD音视频；现有原片9～10秒是讲话，不能伪造为空隙"
+        }
+      ],
+      "finishedAt": "2026-11-13T11:06:17.559Z",
+      "executionBatch": "prod-022-028-049-20261113-03",
+      "report": "results-021-049-prod-20261113.md",
+      "targetExecuted": false,
+      "automationGateOnly": true,
+      "screenshots": [],
+      "steps": [
+        "核对本轮已登记的真实前置数据；缺口已明确，未执行目标业务步骤。"
+      ]
+    },
+    {
+      "id": "ERYE210-035",
+      "status": "Blocked",
+      "actual": "缺少两语言及配音中一个关联确实无法对齐、经独立听审确认的真实CWORD输入，不人为破坏引用冒充业务失败",
+      "reason": "缺少两语言及配音中一个关联确实无法对齐、经独立听审确认的真实CWORD输入，不人为破坏引用冒充业务失败",
+      "automated": true,
+      "workspaceId": "55c4a7da-cab1-4b0f-b4f4-94e8436fbb2f",
+      "annotations": [
+        {
+          "type": "blocked",
+          "description": "缺少两语言及配音中一个关联确实无法对齐、经独立听审确认的真实CWORD输入，不人为破坏引用冒充业务失败"
+        },
+        {
+          "type": "skip",
+          "description": "缺少两语言及配音中一个关联确实无法对齐、经独立听审确认的真实CWORD输入，不人为破坏引用冒充业务失败",
+          "location": {
+            "file": "tools\\editor\\erye210-runner.ts",
+            "line": 60,
+            "column": 91
+          }
+        }
+      ],
+      "projects": {},
+      "checks": [
+        {
+          "stage": "prerequisite-audit",
+          "executedTarget": false,
+          "reason": "缺少两语言及配音中一个关联确实无法对齐、经独立听审确认的真实CWORD输入，不人为破坏引用冒充业务失败"
+        }
+      ],
+      "finishedAt": "2026-11-13T11:06:17.574Z",
+      "executionBatch": "prod-022-028-049-20261113-03",
+      "report": "results-021-049-prod-20261113.md",
+      "targetExecuted": false,
+      "automationGateOnly": true,
+      "screenshots": [],
+      "steps": [
+        "核对本轮已登记的真实前置数据；缺口已明确，未执行目标业务步骤。"
+      ]
+    },
+    {
+      "id": "ERYE210-045",
+      "status": "Blocked",
+      "actual": "没有真实旧media/资产/工程文件独立缓存或可打开旧入口样本，当前新页面不能证明迁移；未伪造缓存键",
+      "reason": "没有真实旧media/资产/工程文件独立缓存或可打开旧入口样本，当前新页面不能证明迁移；未伪造缓存键",
+      "automated": true,
+      "workspaceId": "52a242f6-e836-46c8-87cc-713463fd565a",
+      "annotations": [
+        {
+          "type": "blocked",
+          "description": "没有真实旧media/资产/工程文件独立缓存或可打开旧入口样本，当前新页面不能证明迁移；未伪造缓存键"
+        },
+        {
+          "type": "skip",
+          "description": "没有真实旧media/资产/工程文件独立缓存或可打开旧入口样本，当前新页面不能证明迁移；未伪造缓存键",
+          "location": {
+            "file": "tools\\editor\\erye210-runner.ts",
+            "line": 60,
+            "column": 91
+          }
+        }
+      ],
+      "projects": {},
+      "checks": [
+        {
+          "stage": "legacy-prerequisite-audit",
+          "executedTarget": false,
+          "reason": "没有真实旧media/资产/工程文件独立缓存或可打开旧入口样本，当前新页面不能证明迁移；未伪造缓存键"
+        }
+      ],
+      "finishedAt": "2026-11-13T11:10:13.640Z",
+      "executionBatch": "prod-022-028-049-20261113-03",
+      "report": "results-021-049-prod-20261113.md",
+      "targetExecuted": false,
+      "automationGateOnly": true,
+      "screenshots": [],
+      "steps": [
+        "核对本轮已登记的真实前置数据；缺口已明确，未执行目标业务步骤。"
+      ]
+    },
+    {
+      "id": "ERYE210-046",
+      "status": "Blocked",
+      "actual": "没有真实旧cleanup/shorten链接或旧记录，未用猜测URL或待定剪辑偏好稿替代历史入口",
+      "reason": "没有真实旧cleanup/shorten链接或旧记录，未用猜测URL或待定剪辑偏好稿替代历史入口",
+      "automated": true,
+      "workspaceId": "52a242f6-e836-46c8-87cc-713463fd565a",
+      "annotations": [
+        {
+          "type": "blocked",
+          "description": "没有真实旧cleanup/shorten链接或旧记录，未用猜测URL或待定剪辑偏好稿替代历史入口"
+        },
+        {
+          "type": "skip",
+          "description": "没有真实旧cleanup/shorten链接或旧记录，未用猜测URL或待定剪辑偏好稿替代历史入口",
+          "location": {
+            "file": "tools\\editor\\erye210-runner.ts",
+            "line": 60,
+            "column": 91
+          }
+        }
+      ],
+      "projects": {},
+      "checks": [
+        {
+          "stage": "legacy-prerequisite-audit",
+          "executedTarget": false,
+          "reason": "没有真实旧cleanup/shorten链接或旧记录，未用猜测URL或待定剪辑偏好稿替代历史入口"
+        }
+      ],
+      "finishedAt": "2026-11-13T11:10:13.666Z",
+      "executionBatch": "prod-022-028-049-20261113-03",
+      "report": "results-021-049-prod-20261113.md",
+      "targetExecuted": false,
+      "automationGateOnly": true,
+      "screenshots": [],
+      "steps": [
+        "核对本轮已登记的真实前置数据；缺口已明确，未执行目标业务步骤。"
+      ]
+    },
+    {
+      "id": "ERYE210-047",
+      "status": "Blocked",
+      "actual": "没有旧voice清理/音量/配音/无子页四类真实记录及已确认混音迁移目标，未把新导航等同旧数据迁移",
+      "reason": "没有旧voice清理/音量/配音/无子页四类真实记录及已确认混音迁移目标，未把新导航等同旧数据迁移",
+      "automated": true,
+      "workspaceId": "52a242f6-e836-46c8-87cc-713463fd565a",
+      "annotations": [
+        {
+          "type": "blocked",
+          "description": "没有旧voice清理/音量/配音/无子页四类真实记录及已确认混音迁移目标，未把新导航等同旧数据迁移"
+        },
+        {
+          "type": "skip",
+          "description": "没有旧voice清理/音量/配音/无子页四类真实记录及已确认混音迁移目标，未把新导航等同旧数据迁移",
+          "location": {
+            "file": "tools\\editor\\erye210-runner.ts",
+            "line": 60,
+            "column": 91
+          }
+        }
+      ],
+      "projects": {},
+      "checks": [
+        {
+          "stage": "legacy-prerequisite-audit",
+          "executedTarget": false,
+          "reason": "没有旧voice清理/音量/配音/无子页四类真实记录及已确认混音迁移目标，未把新导航等同旧数据迁移"
+        }
+      ],
+      "finishedAt": "2026-11-13T11:10:13.684Z",
+      "executionBatch": "prod-022-028-049-20261113-03",
+      "report": "results-021-049-prod-20261113.md",
+      "targetExecuted": false,
+      "automationGateOnly": true,
+      "screenshots": [],
+      "steps": [
+        "核对本轮已登记的真实前置数据；缺口已明确，未执行目标业务步骤。"
+      ]
+    },
+    {
+      "id": "ERYE210-048",
+      "status": "Blocked",
+      "actual": "没有旧translate字幕翻译及语音翻译两类真实入口样本，无法核验语义映射和历史内容保持",
+      "reason": "没有旧translate字幕翻译及语音翻译两类真实入口样本，无法核验语义映射和历史内容保持",
+      "automated": true,
+      "workspaceId": "52a242f6-e836-46c8-87cc-713463fd565a",
+      "annotations": [
+        {
+          "type": "blocked",
+          "description": "没有旧translate字幕翻译及语音翻译两类真实入口样本，无法核验语义映射和历史内容保持"
+        },
+        {
+          "type": "skip",
+          "description": "没有旧translate字幕翻译及语音翻译两类真实入口样本，无法核验语义映射和历史内容保持",
+          "location": {
+            "file": "tools\\editor\\erye210-runner.ts",
+            "line": 60,
+            "column": 91
+          }
+        }
+      ],
+      "projects": {},
+      "checks": [
+        {
+          "stage": "legacy-prerequisite-audit",
+          "executedTarget": false,
+          "reason": "没有旧translate字幕翻译及语音翻译两类真实入口样本，无法核验语义映射和历史内容保持"
+        }
+      ],
+      "finishedAt": "2026-11-13T11:10:13.702Z",
+      "executionBatch": "prod-022-028-049-20261113-03",
+      "report": "results-021-049-prod-20261113.md",
+      "targetExecuted": false,
+      "automationGateOnly": true,
+      "screenshots": [],
+      "steps": [
+        "核对本轮已登记的真实前置数据；缺口已明确，未执行目标业务步骤。"
+      ]
+    },
+    {
+      "id": "ERYE210-049",
+      "status": "Blocked",
+      "actual": "没有真实旧watermark text/image缓存及可操作的版本回退开关，无法执行重复迁移和回退；未伪造localStorage或版本参数",
+      "reason": "没有真实旧watermark text/image缓存及可操作的版本回退开关，无法执行重复迁移和回退；未伪造localStorage或版本参数",
+      "automated": true,
+      "workspaceId": "52a242f6-e836-46c8-87cc-713463fd565a",
+      "annotations": [
+        {
+          "type": "blocked",
+          "description": "没有真实旧watermark text/image缓存及可操作的版本回退开关，无法执行重复迁移和回退；未伪造localStorage或版本参数"
+        },
+        {
+          "type": "skip",
+          "description": "没有真实旧watermark text/image缓存及可操作的版本回退开关，无法执行重复迁移和回退；未伪造localStorage或版本参数",
+          "location": {
+            "file": "tools\\editor\\erye210-runner.ts",
+            "line": 60,
+            "column": 91
+          }
+        }
+      ],
+      "projects": {},
+      "checks": [
+        {
+          "stage": "legacy-prerequisite-audit",
+          "executedTarget": false,
+          "reason": "没有真实旧watermark text/image缓存及可操作的版本回退开关，无法执行重复迁移和回退；未伪造localStorage或版本参数"
+        }
+      ],
+      "finishedAt": "2026-11-13T11:10:13.720Z",
+      "executionBatch": "prod-022-028-049-20261113-03",
+      "report": "results-021-049-prod-20261113.md",
+      "targetExecuted": false,
+      "automationGateOnly": true,
+      "screenshots": [],
+      "steps": [
+        "核对本轮已登记的真实前置数据；缺口已明确，未执行目标业务步骤。"
+      ]
+    }
+  ],
+  "sourceHashes": {
+    "erye210-fields.spec.ts": "2f387794002abeeb93cacb7f28db14d9b0f0bd2408fa2618bcfb9078ae9da229",
+    "erye210-capabilities.spec.ts": "048fb9a1b405df399c7dcb3fd9e1bc58e7d1bd161bc1846425db274c7011aed6"
+  }
+}

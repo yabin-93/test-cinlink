@@ -26,7 +26,7 @@ export const b03Spec = Object.freeze({
   projectId: b01Spec.projectId,
   projectName: b01Spec.projectName,
   trimHeadSeconds: 4,
-  prompt: '先只做一步：在当前工程“英文30S.mp4”中裁掉视频片段开头4秒，暂时不移动片段，也不调整字幕和旁白。',
+  prompt: '只裁掉当前工程唯一视频片段的开头4秒。保留片段位置、字幕和旁白。',
 });
 
 export const b04Spec = Object.freeze({
@@ -424,7 +424,6 @@ export async function runB03(ctx, { expectedRevision, target = {}, timeoutMs = 6
   assert(Number.isInteger(expectedRevision), '先核对当前已保存版本，再传expectedRevision');
   const spec = { ...b03Spec, projectId: target.projectId || b03Spec.projectId,
     conversationId: target.conversationId || b03Spec.conversationId, projectName: target.projectName || b03Spec.projectName };
-  spec.prompt = b03Spec.prompt.replace('“英文30S.mp4”', `“${spec.projectName}”`);
   await ctx.fs.mkdir(ctx.report, { recursive: true });
   const guard = await ctx.fs.open(ctx.path.join(ctx.report, 'B03-started.lock'), 'wx');
   await guard.writeFile(new Date().toISOString()); await guard.close();

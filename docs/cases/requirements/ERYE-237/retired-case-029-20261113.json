@@ -1,0 +1,34 @@
+{
+  "date": "2026-11-13",
+  "status": "Retired",
+  "case_id": "ERYE237-029",
+  "reason": "用户确认FWXC-532涉及的默认尺寸变化不属于缺陷，要求后续不再提并删除对应用例。",
+  "default_behavior": "该单源1254×1254、输出1264×1264尺寸变化",
+  "exclude_from_execution": true,
+  "exclude_from_defect_followup": true,
+  "reuse_id": false,
+  "branches_removed": [
+    "UI",
+    "Agent",
+    "Technical"
+  ],
+  "original_rows": {
+    "cases.md": [
+      "| ERYE237-029 | P0 | P-UI；1254×1254源版；红色8px线和蓝色36px“导出测试”；无AI意图 | <a id=\"erye237-029\"></a>**[UI] 仅绘制内容提交后完整保留**<br>随画笔引用发送“仅将当前红线和蓝色导出测试文字合成到图片，保留原尺寸及其他内容，不要AI重绘”；完成后下载PNG | 结果保留红线及准确文字；仍为1254×1254；其他内容不变 | Requirement §3.2/§7/A02 | [PLAN] | — | 1816:52044；editor_submit_interaction:compose |"
+    ],
+    "agent-checks.md": [
+      "| `ERYE237-029/Agent` | 1. 仅将当前红线和蓝色“导出测试”文字确定性合成到图片，保留原尺寸及其他内容，不要AI重绘。 | [主用例可见结果](cases.md#erye237-029)；重开/文件及任务是否真实发生 |"
+    ],
+    "technical-checks.md": [
+      "| `ERYE237-029/Technical` | 原专项数据：P；B-IMG；BO；只有content文字/形状，无AI意图；TD-PORTRAIT可用1254²源图，登记实际源导出宽高及SHA；使用本例草稿。技术责任（仅核内部、精度、文件、调用及费用部分）：生成可打开的新版本且含content；跳过provider_running，无图像生成费；画笔结果不是只返回回复或截图占位；未要求调整尺寸时输出须与实际源W/H一致，1254²→1024²记尺寸失败；语义文字正确不能抵消缩图；内部provider/费用无证据不得宣称通过 | [完整原断言](coverage-baseline-20261109.md#erye237-029) |"
+    ]
+  },
+  "original_registry": "ERYE237-029:\n  status: PLAN\n  script: \"\"\n  execution_status: Failed\n  execution_scope: production_web_headed_partial_branches\n  execution_date: 2026-11-09\n  execution_report: docs/cases/requirements/ERYE-237/results-014-032-prod-20261109.md\n  execution_record_role: historical_before_layered_reorganization\n  execution_record_version: \"2026-11-09-ui-evidence-baseline\"\n  current_case_version: \"2026-11-09-layered-execution\"\n  execution_branches:\n    UI:\n      execution_status: Not Run\n      specification: docs/cases/requirements/ERYE-237/cases.md\n    Agent:\n      execution_status: Not Run\n      specification: docs/cases/requirements/ERYE-237/agent-checks.md\n    Technical:\n      execution_status: Not Run\n      specification: docs/cases/requirements/ERYE-237/technical-checks.md\n",
+  "cloud_reference": {
+    "id": "FWXC-532",
+    "workitem_id": "7e143c9a5cc63993c7bc10143f",
+    "observed_status": "已关闭",
+    "cloud_writes": 0
+  },
+  "note": "云效已关闭，本次仅只读核对；旧实测和截图保留历史，不再列入当前有效用例或缺陷待办。"
+}

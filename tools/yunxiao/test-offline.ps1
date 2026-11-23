@@ -65,6 +65,7 @@ $upload = {
     $entry = @{ id = 'offline-file-' + ($remote.files.Count + 1); fileName = $file.name; size = $file.size }
     $remote.files += $entry
     if ($remote.fault -eq 'upload-timeout') { $remote.fault = ''; throw '模拟上传成功但响应丢失' }
+    if ($remote.fault -eq 'upload-name') { return @{ id = $entry.id; name = $entry.fileName; size = $entry.size } }
     return $entry
 }
 Reset-Fake
@@ -80,6 +81,9 @@ Assert-Test (-not $again.createdNow -and $again.verified -and $remote.uploads.Co
     @($remote.calls.ToArray()[$callsBefore..($remote.calls.Count-1)] | Where-Object { $_ -match '^(POST|PUT)' }).Count -eq 0) '已完成检查点重跑只回读，不创建上传或覆盖'
 $changed = New-TestPlan 'OFFLINE-SUCCESS'; $changed.fingerprint = 'changed'
 Expect-Failure { Invoke-YunxiaoDefectSync $changed -Execute -Request $request -Upload $upload } '不同计划不能覆盖同key检查点'
+Reset-Fake 'upload-name'; $nameReceipt = New-TestPlan 'OFFLINE-UPLOAD-NAME'
+$nameDone = Invoke-YunxiaoDefectSync $nameReceipt -Execute -Request $request -Upload $upload
+Assert-Test ($nameDone.verified -and $nameDone.attachments.Count -eq 2 -and $remote.uploads.Count -eq 2) '上传回执name与列表fileName不同时按持久附件ID名称字节数核验并正常嵌图'
 Reset-Fake 'create-timeout'; $recovery = New-TestPlan 'OFFLINE-CREATE-RECOVERY'
 Expect-Failure { Invoke-YunxiaoDefectSync $recovery -Execute -Request $request -Upload $upload } '创建结果未知时中止，未自动重试'
 $recovered = Invoke-YunxiaoDefectSync $recovery -Execute -Request $request -Upload $upload

@@ -1,0 +1,732 @@
+{
+  "requirement": "ERYE-210",
+  "date": "2026-11-13",
+  "environment": "production",
+  "browser": "headed Google Chrome",
+  "caseVersion": "v2-current-features-20261113",
+  "counts": {
+    "Passed": 11
+  },
+  "cases": [
+    {
+      "id": "ERYE210-021",
+      "status": "Passed",
+      "reason": "",
+      "automated": true,
+      "workspaceId": "f7edcce3-9cc2-40e5-a54a-2583c15c672e",
+      "caseVersion": "v2-current-features-20261113",
+      "annotations": [],
+      "projects": {
+        "021": {
+          "cid": "0140be40-53c2-472e-acb5-d3686f9e0940",
+          "pid": "978a414e-1b17-44aa-b4d1-c0ee1c4cadd8",
+          "name": "ERYE210-021-978a414e"
+        }
+      },
+      "checks": [
+        {
+          "stage": "v2-manual-restore",
+          "caption": "Efforts to sabotage our healthcare by filing a formal",
+          "watermark": "WATERMARK_021",
+          "scope": "已保存字段手工还原；无Esc/草稿放弃契约"
+        }
+      ],
+      "finishedAt": "2026-11-13T12:05:26.892Z",
+      "executionBatch": "prod-021-035-v2-20261113-01",
+      "executed": true,
+      "screenshots": [
+        "021-ERYE210-021-passed.png"
+      ],
+      "supplementaryEvidence": [
+        "021-021-final-subtitle-readback.json"
+      ],
+      "actual": "C1改CAPTION_021、水印改WATERMARK_021，切页分别保留；手工还原C1后水印不变，刷新重开仍正确，原视频/原声保持。按已保存字段操作，不以Esc或取消草稿作为条件。",
+      "report": "results-021-035-v2-prod-20261113.md"
+    },
+    {
+      "id": "ERYE210-025",
+      "status": "Passed",
+      "reason": "",
+      "automated": true,
+      "workspaceId": "f7edcce3-9cc2-40e5-a54a-2583c15c672e",
+      "caseVersion": "v2-current-features-20261113",
+      "annotations": [],
+      "projects": {
+        "025": {
+          "cid": "d56d3cf3-9e71-45de-aac3-263ebe6a4806",
+          "pid": "76d652e1-4724-48e0-96ed-5530b19ffe68",
+          "name": "ERYE210-025-76d652e1"
+        },
+        "025-PB": {
+          "cid": "d56d3cf3-9e71-45de-aac3-263ebe6a4806",
+          "pid": "d3b8f880-17db-4ae6-ba4d-737112a8d1d0",
+          "name": "ERYE210-025-PB-d3b8f880"
+        }
+      },
+      "checks": [
+        {
+          "stage": "v2-unsent-cleared",
+          "text": "仅保留未发送输入025，不执行任何处理。",
+          "agentSubmitted": false,
+          "scope": "输入属于同一会话；切工程保留不是将文本写入工程"
+        }
+      ],
+      "finishedAt": "2026-11-13T12:05:46.607Z",
+      "executionBatch": "prod-021-035-v2-20261113-01",
+      "executed": true,
+      "screenshots": [
+        "025-ERYE210-025-passed.png"
+      ],
+      "supplementaryEvidence": [],
+      "actual": "未发送输入“仅保留未发送输入025，不执行任何处理。”在五入口和同会话PB切换后保留；清空后为空，消息不增加，PA/PB内容和版本均未变。",
+      "report": "results-021-035-v2-prod-20261113.md"
+    },
+    {
+      "id": "ERYE210-026",
+      "status": "Passed",
+      "reason": "",
+      "automated": true,
+      "workspaceId": "f7edcce3-9cc2-40e5-a54a-2583c15c672e",
+      "caseVersion": "v2-current-features-20261113",
+      "annotations": [],
+      "projects": {
+        "026": {
+          "cid": "232faec3-bc88-423a-9117-ec167fed66b2",
+          "pid": "997df06a-e17c-4d32-b21f-527d82fd0181",
+          "name": "ERYE210-026-997df06a"
+        }
+      },
+      "checks": [
+        {
+          "stage": "v2-saved-refresh",
+          "sameProject": "997df06a-e17c-4d32-b21f-527d82fd0181",
+          "savedRevision": 2,
+          "scope": "不含未提交草稿恢复或双标签冲突"
+        }
+      ],
+      "finishedAt": "2026-11-13T12:06:03.052Z",
+      "executionBatch": "prod-021-035-v2-20261113-01",
+      "executed": true,
+      "screenshots": [
+        "026-ERYE210-026-passed.png"
+      ],
+      "supplementaryEvidence": [],
+      "actual": "C1“已保存字幕026”明确保存，切页及刷新重开仍正确；同一工程、C2和其余字幕、音视频、消息保持，重开未新增内容版本。",
+      "report": "results-021-035-v2-prod-20261113.md"
+    },
+    {
+      "id": "ERYE210-027",
+      "status": "Passed",
+      "reason": "",
+      "automated": true,
+      "workspaceId": "f7edcce3-9cc2-40e5-a54a-2583c15c672e",
+      "caseVersion": "v2-current-features-20261113",
+      "annotations": [],
+      "projects": {
+        "027-PA": {
+          "cid": "fdd34e10-de7f-4151-88ff-0003742b834f",
+          "pid": "500b983a-17c9-491f-b55c-d0c4313bd37f",
+          "name": "ERYE210-027-PA-500b983a"
+        },
+        "027-PB": {
+          "cid": "fdd34e10-de7f-4151-88ff-0003742b834f",
+          "pid": "8a3a5bb8-f3bc-404d-82ad-c2a174852387",
+          "name": "ERYE210-027-PB-8a3a5bb8"
+        }
+      },
+      "checks": [
+        {
+          "stage": "v2-project-isolation",
+          "pa": {
+            "text": "PA_UPDATED_027",
+            "color": "#FF00FF",
+            "opacity": 0.75,
+            "font_name": "Arial",
+            "font_size": 28,
+            "placement": {
+              "mode": "preset",
+              "preset": "top-right",
+              "position": null,
+              "margin_px": 24
+            },
+            "font_weight": 600,
+            "watermark_id": "ac95b3a6-8634-426e-ba39-7d0d40f5f884"
+          },
+          "pb": {
+            "text": "PB_TEXT_027",
+            "color": "#FF00FF",
+            "opacity": 0.75,
+            "font_name": "Arial",
+            "font_size": 28,
+            "placement": {
+              "mode": "preset",
+              "preset": "top-right",
+              "position": null,
+              "margin_px": 24
+            },
+            "font_weight": 600,
+            "watermark_id": "ac95b3a6-8634-426e-ba39-7d0d40f5f884"
+          },
+          "scope": "仅同账号同设备；跨账号单独保留待环境"
+        }
+      ],
+      "finishedAt": "2026-11-13T12:06:28.946Z",
+      "executionBatch": "prod-021-035-v2-20261113-01",
+      "executed": true,
+      "screenshots": [
+        "027-ERYE210-027-passed.png"
+      ],
+      "supplementaryEvidence": [],
+      "actual": "PA_TEXT_027与PB_TEXT_027分别保存，修改PA为PA_UPDATED_027后PB仍原文；PB刷新重开保持，未串改另一工程。仅验证同账号同设备。",
+      "report": "results-021-035-v2-prod-20261113.md"
+    },
+    {
+      "id": "ERYE210-029",
+      "status": "Passed",
+      "reason": "",
+      "automated": true,
+      "workspaceId": "f7edcce3-9cc2-40e5-a54a-2583c15c672e",
+      "caseVersion": "v2-current-features-20261113",
+      "annotations": [],
+      "projects": {
+        "029": {
+          "cid": "a74ad2fa-5976-4570-a0e8-a5204599a0e4",
+          "pid": "668dd00a-4aa6-4c07-b603-6654fd404671",
+          "name": "ERYE210-029-668dd00a"
+        }
+      },
+      "checks": [
+        {
+          "stage": "analysis-ready",
+          "submissions": [],
+          "text": "去除口水词 · 文稿\n2 检测到口水词\n0\n个口水词\n2\n个停顿\n最短停顿时长\ns\n移除\n说话人 1\n\nEfforts to sabotage our healthcare by filing a formal request to strike down the entirety of our nation's healthcare law.[0.9s]Regardless of people's opinions of the Affordable Care Act, we know there's no single issue that matters more to hardworking families than healthcare.[0.9s]It's a personal issue. It affects"
+        },
+        {
+          "stage": "v2-selection-only",
+          "initial": 2,
+          "restored": 2,
+          "mediaUnchanged": true
+        }
+      ],
+      "finishedAt": "2026-11-13T11:59:37.445Z",
+      "executionBatch": "prod-021-035-v2-20261113-01",
+      "executed": true,
+      "screenshots": [
+        "029-029-pause-located.png",
+        "029-029-pauses-off.png",
+        "029-analysis-ready.png",
+        "029-ERYE210-029-passed.png"
+      ],
+      "supplementaryEvidence": [],
+      "actual": "真实分析后2个高亮停顿：取消停顿类别变0，切页返回重新勾选恢复2，点击可定位；未点移除前视频/原声/字幕保持。",
+      "report": "results-021-035-v2-prod-20261113.md"
+    },
+    {
+      "id": "ERYE210-030",
+      "status": "Passed",
+      "reason": "",
+      "automated": true,
+      "workspaceId": "f7edcce3-9cc2-40e5-a54a-2583c15c672e",
+      "caseVersion": "v2-current-features-20261113",
+      "annotations": [],
+      "projects": {
+        "030": {
+          "cid": "f5aa0253-d49a-49ef-a855-335c6d613343",
+          "pid": "039b27d7-68ce-4deb-8f18-04c6148dd539",
+          "name": "ERYE210-030-039b27d7"
+        }
+      },
+      "checks": [
+        {
+          "stage": "analysis-ready",
+          "submissions": [],
+          "text": "去除口水词 · 文稿\n2 检测到口水词\n0\n个口水词\n2\n个停顿\n最短停顿时长\ns\n移除\n说话人 1\n\nefforts to sabotage our healthcare by filing a formal request to strike down the entirety of our nation's healthcare law.[0.9s]Regardless of people's opinions of the Affordable Care Act, we know there's no single issue that matters more to hardworking families than healthcare.[0.9s]It's a personal issue. It affects"
+        },
+        {
+          "stage": "v2-before-apply",
+          "selected": [
+            {
+              "text": "[0.9s]",
+              "title": null
+            },
+            {
+              "text": "[0.9s]",
+              "title": null
+            }
+          ],
+          "scope": "按页面当前停顿组验证应用；不判定ASR候选是否为真实口水词"
+        },
+        {
+          "stage": "v2-group-undo",
+          "beforeSeconds": 20,
+          "afterSeconds": 18.695896,
+          "restoredSeconds": 20
+        }
+      ],
+      "finishedAt": "2026-11-13T12:00:31.127Z",
+      "executionBatch": "prod-021-035-v2-20261113-01",
+      "executed": true,
+      "screenshots": [
+        "030-analysis-ready.png",
+        "030-ERYE210-030-passed.png",
+        "030-v2-after-apply.png",
+        "030-v2-before-apply.png"
+      ],
+      "supplementaryEvidence": [],
+      "actual": "一次移除本轮两个停顿，视频与原声由20秒同步缩短为18.695896秒；一次撤销恢复应用前完整轨道和20秒，无新素材替换。",
+      "report": "results-021-035-v2-prod-20261113.md"
+    },
+    {
+      "id": "ERYE210-031",
+      "status": "Passed",
+      "reason": "",
+      "automated": true,
+      "workspaceId": "f7edcce3-9cc2-40e5-a54a-2583c15c672e",
+      "caseVersion": "v2-current-features-20261113",
+      "annotations": [],
+      "projects": {
+        "031": {
+          "cid": "67df2e43-db43-4572-be25-ae4f22b7c2ed",
+          "pid": "259b51c1-f745-46fc-9db3-ce9893a6146e",
+          "name": "ERYE210-031-259b51c1"
+        }
+      },
+      "checks": [
+        {
+          "stage": "analysis-ready",
+          "submissions": [],
+          "text": "去除口水词 · 文稿\n2 检测到口水词\n0\n个口水词\n2\n个停顿\n最短停顿时长\ns\n移除\n说话人 1\n\nefforts to sabotage our healthcare by filing a formal request to strike down the entirety of our nation's healthcare law.[0.9s]Regardless of people's opinions of the Affordable Care Act, we know there's no single issue that matters more to hardworking families than healthcare.[0.9s]It's a personal issue. It affects e-"
+        },
+        {
+          "stage": "v2-before-apply",
+          "selected": [
+            {
+              "text": "[0.9s]",
+              "title": null
+            },
+            {
+              "text": "[0.9s]",
+              "title": null
+            }
+          ],
+          "scope": "按页面当前停顿组验证应用；不判定ASR候选是否为真实口水词"
+        },
+        {
+          "stage": "v2-reopened-twice",
+          "seconds": 18.695896,
+          "repeatedApply": false
+        }
+      ],
+      "finishedAt": "2026-11-13T12:01:38.739Z",
+      "executionBatch": "prod-021-035-v2-20261113-01",
+      "executed": true,
+      "screenshots": [
+        "031-analysis-ready.png",
+        "031-ERYE210-031-passed.png",
+        "031-v2-after-apply.png",
+        "031-v2-before-apply.png"
+      ],
+      "supplementaryEvidence": [],
+      "actual": "清理结果保存后，两次刷新重开保持同一片段、时长、字幕和保存版本，未再次裁剪或重复应用。",
+      "report": "results-021-035-v2-prod-20261113.md"
+    },
+    {
+      "id": "ERYE210-032",
+      "status": "Passed",
+      "reason": "",
+      "automated": true,
+      "workspaceId": "f7edcce3-9cc2-40e5-a54a-2583c15c672e",
+      "caseVersion": "v2-current-features-20261113",
+      "annotations": [],
+      "projects": {
+        "032": {
+          "cid": "b25f8b96-bdba-4e7b-93f5-c8edb3c6407c",
+          "pid": "07eb7f3d-aaa2-4391-904a-9fb46c08fcb2",
+          "name": "ERYE210-032-07eb7f3d"
+        }
+      },
+      "checks": [
+        {
+          "stage": "analysis-ready",
+          "submissions": [],
+          "text": "去除口水词 · 文稿\n2 检测到口水词\n0\n个口水词\n2\n个停顿\n最短停顿时长\ns\n移除\n说话人 1\n\nefforts to sabotage our healthcare by filing a formal request to strike down the entirety of our nation's healthcare law.[0.9s]Regardless of people's opinions of the Affordable Care Act, we know there's no single issue that matters more to hardworking families than healthcare.[0.9s]It's a personal issue. It affects"
+        },
+        {
+          "stage": "v2-before-apply",
+          "selected": [
+            {
+              "text": "[0.9s]",
+              "title": null
+            },
+            {
+              "text": "[0.9s]",
+              "title": null
+            }
+          ],
+          "scope": "按页面当前停顿组验证应用；不判定ASR候选是否为真实口水词"
+        },
+        {
+          "stage": "v2-retained-cues",
+          "checks": [
+            {
+              "text": "Efforts to sabotage our healthcare by filing a formal",
+              "expected": [
+                0.16,
+                3.6
+              ],
+              "actual": [
+                0.16,
+                3.6
+              ]
+            },
+            {
+              "text": "request to strike down the entirety of our nation's",
+              "expected": [
+                3.66,
+                6.9
+              ],
+              "actual": [
+                3.66,
+                6.9
+              ]
+            },
+            {
+              "text": "healthcare law.",
+              "expected": [
+                6.92,
+                7.68
+              ],
+              "actual": [
+                6.92,
+                7.68
+              ]
+            },
+            {
+              "text": "Regardless of people's opinions of the Affordable Care Act,",
+              "expected": [
+                7.92,
+                10.82
+              ],
+              "actual": [
+                7.92,
+                10.82
+              ]
+            },
+            {
+              "text": "we know there's no single issue that matters more to",
+              "expected": [
+                11.3,
+                14.5
+              ],
+              "actual": [
+                11.3,
+                14.5
+              ]
+            },
+            {
+              "text": "hardworking families than healthcare.",
+              "expected": [
+                14.56,
+                16.4
+              ],
+              "actual": [
+                14.56,
+                16.4
+              ]
+            },
+            {
+              "text": "It's a personal issue.",
+              "expected": [
+                16.66,
+                17.66
+              ],
+              "actual": [
+                16.66,
+                17.66
+              ]
+            },
+            {
+              "text": "It affects",
+              "expected": [
+                18.08,
+                18.52
+              ],
+              "actual": [
+                18.08,
+                18.52
+              ]
+            }
+          ],
+          "scope": "核已有SRT文字与保留画面时段；不覆盖跨词语义边界听审"
+        }
+      ],
+      "finishedAt": "2026-11-13T12:02:22.377Z",
+      "executionBatch": "prod-021-035-v2-20261113-01",
+      "executed": true,
+      "screenshots": [
+        "032-analysis-ready.png",
+        "032-ERYE210-032-passed.png",
+        "032-v2-after-apply.png",
+        "032-v2-before-apply.png"
+      ],
+      "supplementaryEvidence": [],
+      "actual": "原8条SRT文字和顺序全部保持；逐条起止与保留视频新位置一致，例如第4条8.60～11.50→7.92～10.82，第7条17.96～18.96→16.66～17.66，未侵入字幕对应源区间。",
+      "report": "results-021-035-v2-prod-20261113.md"
+    },
+    {
+      "id": "ERYE210-033",
+      "status": "Passed",
+      "reason": "",
+      "automated": true,
+      "workspaceId": "f7edcce3-9cc2-40e5-a54a-2583c15c672e",
+      "caseVersion": "v2-current-features-20261113",
+      "annotations": [],
+      "projects": {
+        "033": {
+          "cid": "38a2ab70-16e8-454c-95c1-9b67a7008762",
+          "pid": "a6e0ff83-3c9b-448b-98f3-7249f858e607",
+          "name": "ERYE210-033-a6e0ff83"
+        }
+      },
+      "checks": [
+        {
+          "stage": "analysis-ready",
+          "submissions": [],
+          "text": "去除口水词 · 文稿\n2 检测到口水词\n0\n个口水词\n2\n个停顿\n最短停顿时长\ns\n移除\n说话人 1\n\nEfforts to sabotage our healthcare by filing a formal request to strike down the entirety of our nation's healthcare law.[0.9s]Regardless of people's opinions of the Affordable Care Act, we know there's no single issue that matters more to hardworking families than healthcare.[0.9s]It's a personal issue. It affects e-"
+        },
+        {
+          "stage": "v2-invalid-threshold",
+          "invalid": "",
+          "min": 0.2,
+          "max": 10,
+          "retained": "0.8"
+        },
+        {
+          "stage": "v2-invalid-threshold",
+          "invalid": "abc",
+          "min": 0.2,
+          "max": 10,
+          "retained": "0.8"
+        },
+        {
+          "stage": "v2-invalid-threshold",
+          "invalid": "0.1",
+          "min": 0.2,
+          "max": 10,
+          "retained": "0.8"
+        },
+        {
+          "stage": "v2-invalid-threshold",
+          "invalid": "11",
+          "min": 0.2,
+          "max": 10,
+          "retained": "0.8"
+        }
+      ],
+      "finishedAt": "2026-11-13T12:03:14.981Z",
+      "executionBatch": "prod-021-035-v2-20261113-01",
+      "executed": true,
+      "screenshots": [
+        "033-analysis-ready.png",
+        "033-ERYE210-033-passed.png"
+      ],
+      "supplementaryEvidence": [],
+      "actual": "清空、abc、低于实际最小值和高于最大值的阈值均恢复0.8，候选和内容不变；合法1.2可用，再恢复0.8后候选恢复，未点击移除。",
+      "report": "results-021-035-v2-prod-20261113.md"
+    },
+    {
+      "id": "ERYE210-034",
+      "status": "Passed",
+      "reason": "",
+      "automated": true,
+      "workspaceId": "f7edcce3-9cc2-40e5-a54a-2583c15c672e",
+      "caseVersion": "v2-current-features-20261113",
+      "annotations": [],
+      "projects": {
+        "034": {
+          "cid": "eb81e62e-66db-4173-9419-dcd635881971",
+          "pid": "9e62c89a-d140-4d96-8942-51e677993f1f",
+          "name": "ERYE210-034-9e62c89a"
+        }
+      },
+      "checks": [
+        {
+          "stage": "analysis-ready",
+          "submissions": [],
+          "text": "去除口水词 · 文稿\n2 检测到口水词\n0\n个口水词\n2\n个停顿\n最短停顿时长\ns\n移除\n说话人 1\n\nEfforts to sabotage our healthcare by filing a formal request to strike down the entirety of our nation's healthcare law.[0.9s]Regardless of people's opinions of the Affordable Care Act, we know there's no single issue that matters more to hardworking families than healthcare.[0.9s]It's a personal issue. It affects"
+        },
+        {
+          "stage": "v2-before-apply",
+          "selected": [
+            {
+              "text": "[0.9s]",
+              "title": null
+            },
+            {
+              "text": "[0.9s]",
+              "title": null
+            }
+          ],
+          "scope": "按页面当前停顿组验证应用；不判定ASR候选是否为真实口水词"
+        },
+        {
+          "stage": "v2-edit-after-cleanup",
+          "seconds": 18.695896,
+          "originalTitle": "0.16–3.60 秒"
+        }
+      ],
+      "finishedAt": "2026-11-13T12:04:08.076Z",
+      "executionBatch": "prod-021-035-v2-20261113-01",
+      "executed": true,
+      "screenshots": [
+        "034-analysis-ready.png",
+        "034-ERYE210-034-passed.png",
+        "034-v2-after-apply.png",
+        "034-v2-before-apply.png"
+      ],
+      "supplementaryEvidence": [],
+      "actual": "清理后首条字幕改“清理后字幕034”，保存及刷新重开保持；该字幕时码、其余字幕及清理后的音视频范围/时长均未变。",
+      "report": "results-021-035-v2-prod-20261113.md"
+    },
+    {
+      "id": "ERYE210-035",
+      "status": "Passed",
+      "reason": "",
+      "automated": true,
+      "workspaceId": "f7edcce3-9cc2-40e5-a54a-2583c15c672e",
+      "caseVersion": "v2-current-features-20261113",
+      "annotations": [],
+      "projects": {
+        "035-PA": {
+          "cid": "71a93c36-3ebc-42f0-bebc-227cc2f7f892",
+          "pid": "cf87d9b0-fdbd-404b-b7f7-24bea2b6c775",
+          "name": "ERYE210-035-PA-cf87d9b0"
+        },
+        "035-PB": {
+          "cid": "71a93c36-3ebc-42f0-bebc-227cc2f7f892",
+          "pid": "1b0e2fa7-73fc-4651-a175-d35b81318210",
+          "name": "ERYE210-035-PB-1b0e2fa7"
+        }
+      },
+      "checks": [
+        {
+          "stage": "analysis-ready",
+          "submissions": [],
+          "text": "去除口水词 · 文稿\n2 检测到口水词\n0\n个口水词\n2\n个停顿\n最短停顿时长\ns\n移除\n说话人 1\n\nefforts to sabotage our healthcare by filing a formal request to strike down the entirety of our nation's healthcare law.[0.9s]Regardless of people's opinions of the Affordable Care Act, we know there's no single issue that matters more to hardworking families than healthcare.[0.9s]It's a personal issue. It affects e-"
+        },
+        {
+          "stage": "v2-before-apply",
+          "selected": [
+            {
+              "text": "[0.9s]",
+              "title": null
+            },
+            {
+              "text": "[0.9s]",
+              "title": null
+            }
+          ],
+          "scope": "按页面当前停顿组验证应用；不判定ASR候选是否为真实口水词"
+        },
+        {
+          "stage": "v2-same-source-isolation",
+          "paSeconds": 18.695896,
+          "pbSeconds": 20,
+          "sharedSource": true
+        }
+      ],
+      "finishedAt": "2026-11-13T12:05:09.085Z",
+      "executionBatch": "prod-021-035-v2-20261113-01",
+      "executed": true,
+      "screenshots": [
+        "035-analysis-ready.png",
+        "035-ERYE210-035-passed.png",
+        "035-v2-after-apply.png",
+        "035-v2-before-apply.png"
+      ],
+      "supplementaryEvidence": [],
+      "actual": "PA应用停顿清理后变短，同素材PB仍为原20秒和原8条字幕；PB切换、刷新及完整保存内容核验保持，未串用PA结果。",
+      "report": "results-021-035-v2-prod-20261113.md"
+    }
+  ],
+  "attemptHistory": [
+    {
+      "id": "ERYE210-021",
+      "batch": "prod-021-035-v2-20261113-01",
+      "rawStatus": "Passed",
+      "selected": true,
+      "reason": ""
+    },
+    {
+      "id": "ERYE210-025",
+      "batch": "prod-021-035-v2-20261113-01",
+      "rawStatus": "Passed",
+      "selected": true,
+      "reason": ""
+    },
+    {
+      "id": "ERYE210-026",
+      "batch": "prod-021-035-v2-20261113-01",
+      "rawStatus": "Passed",
+      "selected": true,
+      "reason": ""
+    },
+    {
+      "id": "ERYE210-027",
+      "batch": "prod-021-035-v2-20261113-01",
+      "rawStatus": "Passed",
+      "selected": true,
+      "reason": ""
+    },
+    {
+      "id": "ERYE210-029",
+      "batch": "prod-021-035-v2-20261113-01",
+      "rawStatus": "Passed",
+      "selected": true,
+      "reason": ""
+    },
+    {
+      "id": "ERYE210-030",
+      "batch": "prod-021-035-v2-20261113-01",
+      "rawStatus": "Passed",
+      "selected": true,
+      "reason": ""
+    },
+    {
+      "id": "ERYE210-031",
+      "batch": "prod-021-035-v2-20261113-01",
+      "rawStatus": "Passed",
+      "selected": true,
+      "reason": ""
+    },
+    {
+      "id": "ERYE210-032",
+      "batch": "prod-021-035-v2-20261113-01",
+      "rawStatus": "Passed",
+      "selected": true,
+      "reason": ""
+    },
+    {
+      "id": "ERYE210-033",
+      "batch": "prod-021-035-v2-20261113-01",
+      "rawStatus": "Passed",
+      "selected": true,
+      "reason": ""
+    },
+    {
+      "id": "ERYE210-034",
+      "batch": "prod-021-035-v2-20261113-01",
+      "rawStatus": "Passed",
+      "selected": true,
+      "reason": ""
+    },
+    {
+      "id": "ERYE210-035",
+      "batch": "prod-021-035-v2-20261113-01",
+      "rawStatus": "Passed",
+      "selected": true,
+      "reason": ""
+    }
+  ],
+  "cloudWrites": false
+}

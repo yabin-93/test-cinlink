@@ -23,6 +23,7 @@
     "playwright.multi-material-ui.config.ts",
     "playwright.sso.config.ts",
     "playwright.footage.config.ts",
-    "playwright.editor.config.ts"
+    "playwright.editor.config.ts",
+    "playwright.erye210.config.ts"
   ]
 }

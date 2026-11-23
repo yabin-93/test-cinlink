@@ -1,0 +1,368 @@
+{
+  "date": "2026-11-18",
+  "requirement": "ERYE-199",
+  "caseVersion": "v1-existing-feature-gaps-r5-r6-20261118",
+  "definition": "cases.md#erye199-editor-existing-feature-gaps",
+  "scope": "追加定义；先不执行",
+  "executionStarted": false,
+  "counts": {
+    "Not Run": 32
+  },
+  "automationCounts": {
+    "PLAN": 32
+  },
+  "cases": [
+    {
+      "id": "ERYE199-117",
+      "priority": "P1",
+      "status": "Not Run",
+      "automation": "PLAN",
+      "script": null,
+      "definition": "cases.md#erye199-editor-existing-feature-gaps",
+      "caseVersion": "v1-existing-feature-gaps-r5-r6-20261118",
+      "actual": null,
+      "evidence": []
+    },
+    {
+      "id": "ERYE199-118",
+      "priority": "P1",
+      "status": "Not Run",
+      "automation": "PLAN",
+      "script": null,
+      "definition": "cases.md#erye199-editor-existing-feature-gaps",
+      "caseVersion": "v1-existing-feature-gaps-r5-r6-20261118",
+      "actual": null,
+      "evidence": []
+    },
+    {
+      "id": "ERYE199-119",
+      "priority": "P0",
+      "status": "Not Run",
+      "automation": "PLAN",
+      "script": null,
+      "definition": "cases.md#erye199-editor-existing-feature-gaps",
+      "caseVersion": "v1-existing-feature-gaps-r5-r6-20261118",
+      "actual": null,
+      "evidence": []
+    },
+    {
+      "id": "ERYE199-120",
+      "priority": "P0",
+      "status": "Not Run",
+      "automation": "PLAN",
+      "script": null,
+      "definition": "cases.md#erye199-editor-existing-feature-gaps",
+      "caseVersion": "v1-existing-feature-gaps-r5-r6-20261118",
+      "actual": null,
+      "evidence": []
+    },
+    {
+      "id": "ERYE199-121",
+      "priority": "P0",
+      "status": "Not Run",
+      "automation": "PLAN",
+      "script": null,
+      "definition": "cases.md#erye199-editor-existing-feature-gaps",
+      "caseVersion": "v1-existing-feature-gaps-r5-r6-20261118",
+      "actual": null,
+      "evidence": []
+    },
+    {
+      "id": "ERYE199-122",
+      "priority": "P0",
+      "status": "Not Run",
+      "automation": "PLAN",
+      "script": null,
+      "definition": "cases.md#erye199-editor-existing-feature-gaps",
+      "caseVersion": "v1-existing-feature-gaps-r5-r6-20261118",
+      "actual": null,
+      "evidence": []
+    },
+    {
+      "id": "ERYE199-123",
+      "priority": "P1",
+      "status": "Not Run",
+      "automation": "PLAN",
+      "script": null,
+      "definition": "cases.md#erye199-editor-existing-feature-gaps",
+      "caseVersion": "v1-existing-feature-gaps-r5-r6-20261118",
+      "actual": null,
+      "evidence": []
+    },
+    {
+      "id": "ERYE199-124",
+      "priority": "P0",
+      "status": "Not Run",
+      "automation": "PLAN",
+      "script": null,
+      "definition": "cases.md#erye199-editor-existing-feature-gaps",
+      "caseVersion": "v1-existing-feature-gaps-r5-r6-20261118",
+      "actual": null,
+      "evidence": []
+    },
+    {
+      "id": "ERYE199-125",
+      "priority": "P0",
+      "status": "Not Run",
+      "automation": "PLAN",
+      "script": null,
+      "definition": "cases.md#erye199-editor-existing-feature-gaps",
+      "caseVersion": "v1-existing-feature-gaps-r5-r6-20261118",
+      "actual": null,
+      "evidence": []
+    },
+    {
+      "id": "ERYE199-126",
+      "priority": "P0",
+      "status": "Not Run",
+      "automation": "PLAN",
+      "script": null,
+      "definition": "cases.md#erye199-editor-existing-feature-gaps",
+      "caseVersion": "v1-existing-feature-gaps-r5-r6-20261118",
+      "actual": null,
+      "evidence": []
+    },
+    {
+      "id": "ERYE199-127",
+      "priority": "P1",
+      "status": "Not Run",
+      "automation": "PLAN",
+      "script": null,
+      "definition": "cases.md#erye199-editor-existing-feature-gaps",
+      "caseVersion": "v1-existing-feature-gaps-r5-r6-20261118",
+      "actual": null,
+      "evidence": []
+    },
+    {
+      "id": "ERYE199-128",
+      "priority": "P1",
+      "status": "Not Run",
+      "automation": "PLAN",
+      "script": null,
+      "definition": "cases.md#erye199-editor-existing-feature-gaps",
+      "caseVersion": "v1-existing-feature-gaps-r5-r6-20261118",
+      "actual": null,
+      "evidence": []
+    },
+    {
+      "id": "ERYE199-129",
+      "priority": "P1",
+      "status": "Not Run",
+      "automation": "PLAN",
+      "script": null,
+      "definition": "cases.md#erye199-editor-existing-feature-gaps",
+      "caseVersion": "v1-existing-feature-gaps-r5-r6-20261118",
+      "actual": null,
+      "evidence": []
+    },
+    {
+      "id": "ERYE199-130",
+      "priority": "P1",
+      "status": "Not Run",
+      "automation": "PLAN",
+      "script": null,
+      "definition": "cases.md#erye199-editor-existing-feature-gaps",
+      "caseVersion": "v1-existing-feature-gaps-r5-r6-20261118",
+      "actual": null,
+      "evidence": []
+    },
+    {
+      "id": "ERYE199-131",
+      "priority": "P1",
+      "status": "Not Run",
+      "automation": "PLAN",
+      "script": null,
+      "definition": "cases.md#erye199-editor-existing-feature-gaps",
+      "caseVersion": "v1-existing-feature-gaps-r5-r6-20261118",
+      "actual": null,
+      "evidence": []
+    },
+    {
+      "id": "ERYE199-132",
+      "priority": "P0",
+      "status": "Not Run",
+      "automation": "PLAN",
+      "script": null,
+      "definition": "cases.md#erye199-editor-existing-feature-gaps",
+      "caseVersion": "v1-existing-feature-gaps-r5-r6-20261118",
+      "actual": null,
+      "evidence": []
+    },
+    {
+      "id": "ERYE199-133",
+      "priority": "P0",
+      "status": "Not Run",
+      "automation": "PLAN",
+      "script": null,
+      "definition": "cases.md#erye199-editor-existing-feature-gaps",
+      "caseVersion": "v1-existing-feature-gaps-r5-r6-20261118",
+      "actual": null,
+      "evidence": []
+    },
+    {
+      "id": "ERYE199-134",
+      "priority": "P0",
+      "status": "Not Run",
+      "automation": "PLAN",
+      "script": null,
+      "definition": "cases.md#erye199-editor-existing-feature-gaps",
+      "caseVersion": "v1-existing-feature-gaps-r5-r6-20261118",
+      "actual": null,
+      "evidence": []
+    },
+    {
+      "id": "ERYE199-135",
+      "priority": "P0",
+      "status": "Not Run",
+      "automation": "PLAN",
+      "script": null,
+      "definition": "cases.md#erye199-editor-existing-feature-gaps",
+      "caseVersion": "v1-existing-feature-gaps-r5-r6-20261118",
+      "actual": null,
+      "evidence": []
+    },
+    {
+      "id": "ERYE199-136",
+      "priority": "P0",
+      "status": "Not Run",
+      "automation": "PLAN",
+      "script": null,
+      "definition": "cases.md#erye199-editor-existing-feature-gaps",
+      "caseVersion": "v1-existing-feature-gaps-r5-r6-20261118",
+      "actual": null,
+      "evidence": []
+    },
+    {
+      "id": "ERYE199-137",
+      "priority": "P1",
+      "status": "Not Run",
+      "automation": "PLAN",
+      "script": null,
+      "definition": "cases.md#erye199-editor-existing-feature-gaps",
+      "caseVersion": "v1-existing-feature-gaps-r5-r6-20261118",
+      "actual": null,
+      "evidence": []
+    },
+    {
+      "id": "ERYE199-138",
+      "priority": "P0",
+      "status": "Not Run",
+      "automation": "PLAN",
+      "script": null,
+      "definition": "cases.md#erye199-editor-existing-feature-gaps",
+      "caseVersion": "v1-existing-feature-gaps-r5-r6-20261118",
+      "actual": null,
+      "evidence": []
+    },
+    {
+      "id": "ERYE199-139",
+      "priority": "P0",
+      "status": "Not Run",
+      "automation": "PLAN",
+      "script": null,
+      "definition": "cases.md#erye199-editor-existing-feature-gaps",
+      "caseVersion": "v1-existing-feature-gaps-r5-r6-20261118",
+      "actual": null,
+      "evidence": []
+    },
+    {
+      "id": "ERYE199-140",
+      "priority": "P1",
+      "status": "Not Run",
+      "automation": "PLAN",
+      "script": null,
+      "definition": "cases.md#erye199-editor-existing-feature-gaps",
+      "caseVersion": "v1-existing-feature-gaps-r5-r6-20261118",
+      "actual": null,
+      "evidence": []
+    },
+    {
+      "id": "ERYE199-141",
+      "priority": "P0",
+      "status": "Not Run",
+      "automation": "PLAN",
+      "script": null,
+      "definition": "cases.md#erye199-editor-existing-feature-gaps",
+      "caseVersion": "v1-existing-feature-gaps-r5-r6-20261118",
+      "actual": null,
+      "evidence": []
+    },
+    {
+      "id": "ERYE199-142",
+      "priority": "P1",
+      "status": "Not Run",
+      "automation": "PLAN",
+      "script": null,
+      "definition": "cases.md#erye199-editor-existing-feature-gaps",
+      "caseVersion": "v1-existing-feature-gaps-r5-r6-20261118",
+      "actual": null,
+      "evidence": []
+    },
+    {
+      "id": "ERYE199-143",
+      "priority": "P1",
+      "status": "Not Run",
+      "automation": "PLAN",
+      "script": null,
+      "definition": "cases.md#erye199-editor-existing-feature-gaps",
+      "caseVersion": "v1-existing-feature-gaps-r5-r6-20261118",
+      "actual": null,
+      "evidence": []
+    },
+    {
+      "id": "ERYE199-144",
+      "priority": "P1",
+      "status": "Not Run",
+      "automation": "PLAN",
+      "script": null,
+      "definition": "cases.md#erye199-editor-existing-feature-gaps",
+      "caseVersion": "v1-existing-feature-gaps-r5-r6-20261118",
+      "actual": null,
+      "evidence": []
+    },
+    {
+      "id": "ERYE199-145",
+      "priority": "P1",
+      "status": "Not Run",
+      "automation": "PLAN",
+      "script": null,
+      "definition": "cases.md#erye199-editor-existing-feature-gaps",
+      "caseVersion": "v1-existing-feature-gaps-r5-r6-20261118",
+      "actual": null,
+      "evidence": []
+    },
+    {
+      "id": "ERYE199-146",
+      "priority": "P0",
+      "status": "Not Run",
+      "automation": "PLAN",
+      "script": null,
+      "definition": "cases.md#erye199-editor-existing-feature-gaps",
+      "caseVersion": "v1-existing-feature-gaps-r5-r6-20261118",
+      "actual": null,
+      "evidence": []
+    },
+    {
+      "id": "ERYE199-147",
+      "priority": "P0",
+      "status": "Not Run",
+      "automation": "PLAN",
+      "script": null,
+      "definition": "cases.md#erye199-editor-existing-feature-gaps",
+      "caseVersion": "v1-existing-feature-gaps-r5-r6-20261118",
+      "actual": null,
+      "evidence": []
+    },
+    {
+      "id": "ERYE199-148",
+      "priority": "P0",
+      "status": "Not Run",
+      "automation": "PLAN",
+      "script": null,
+      "definition": "cases.md#erye199-editor-existing-feature-gaps",
+      "caseVersion": "v1-existing-feature-gaps-r5-r6-20261118",
+      "actual": null,
+      "evidence": []
+    }
+  ]
+}

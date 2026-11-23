@@ -1,0 +1,131 @@
+{
+  "date": "2026-11-18",
+  "method": "official Yunxiao OpenAPI via tools/yunxiao",
+  "deduplication": false,
+  "own_checkpoint_recovery": true,
+  "created": 1,
+  "native_screenshots_uploaded": 3,
+  "comparison_frames_uploaded": 2,
+  "images_uploaded": 5,
+  "attachments_verified": 8,
+  "verified": true,
+  "rerun_performed": false,
+  "cases": {
+    "ERYE199-071": {
+      "id": "FWXC-693",
+      "workitem_id": "ff5598f33938a383abd2f7590c",
+      "url": "https://devops.aliyun.com/projex/project/1e401ac99539c3999e00e40006/bug#openWorkitemIdentifier=ff5598f33938a383abd2f7590c",
+      "title": "【生产环境】翻译配音选择“译文”后编辑器仍显示双语，与生成成片不一致",
+      "case_id": "ERYE199-071",
+      "key": "ERYE199-071-TRANSLATION-ONLY-PREVIEW-BILINGUAL-PROD-20261118",
+      "status": "🤔AI提缺陷",
+      "assigned_to": "牛诗晴",
+      "sprint": "重构10-29",
+      "labels": [
+        "生产环境"
+      ],
+      "priority": "中",
+      "serious_level": "3-一般",
+      "verified": true,
+      "screenshots": 3,
+      "comparison_frames": 2,
+      "images_uploaded": 5,
+      "attachments": 8,
+      "synced_at": "2026-11-18T18:46:08.1036913+08:00",
+      "local_report": "docs/defects/ERYE199-071-translation-only-preview-bilingual-production-20261118.md",
+      "attachment_receipts": [
+        {
+          "id": "c4eeb94c9bca0f3b6905eda862",
+          "size": 373565,
+          "name": "071-before-submit-translation-only.png",
+          "sha256": "802a5957e6534b3fb47acc72e9e3a06a2eab4474b1da343026a8710e96416c7d"
+        },
+        {
+          "id": "ace1835be5766bdb8af9b95e63",
+          "size": 1009427,
+          "name": "071-preview-2-bilingual.png",
+          "sha256": "372b54a1b33659c673c42f7977b3cf079cb29a66976bb6232d34c34aa98490f2"
+        },
+        {
+          "id": "08c5a954c6b4c516ea8dd46aa4",
+          "size": 1023465,
+          "name": "071-preview-10-bilingual.png",
+          "sha256": "e62ba9e7ba4fa73b05e41d31b48ff3558cf249ce58261022c999a4387662d6f8"
+        },
+        {
+          "id": "3b45ab7c8aaaeb902149dcc6b7",
+          "size": 746684,
+          "name": "071-product-frame-2-chinese-only.png",
+          "sha256": "8e0747bd0e7deb246d3afb70c26bf0c57de97ece16d7aa09352f85dcd5f49950"
+        },
+        {
+          "id": "11c6922ddaea54d187fd725dc0",
+          "size": 726942,
+          "name": "071-source-frame-2-no-captions.png",
+          "sha256": "0caec33bf94ec654195cc9cc47876b9dbcb4f850d062bdf70991c37250d266db"
+        },
+        {
+          "id": "1b48c96d03a4a462e5e2a0fc9f",
+          "size": 2197394,
+          "name": "F20-English-source-with-BGM.mp4",
+          "sha256": "b1fce3d9ba5094ca2d1acbe50b17aef903a6fcb353cbd19181ff3ae1a8f9a9a1"
+        },
+        {
+          "id": "5fb3a1b1b267522d3cc1984cbe",
+          "size": 8043753,
+          "name": "071-actual-product.mp4",
+          "sha256": "461c5199315aff19afb99f901be8983a7b9f64d5056345a0f793edac6e1ef7fb"
+        },
+        {
+          "id": "b02c56f56af3b309c51590f440",
+          "size": 3383,
+          "name": "071-evidence-summary.json",
+          "sha256": "d13b9986215570a08519c237a32980c058bb3404153f695d6ad74bfa72fb7844"
+        }
+      ],
+      "images": [
+        {
+          "name": "071-before-submit-translation-only.png",
+          "id": "c4eeb94c9bca0f3b6905eda862",
+          "sha256": "802a5957e6534b3fb47acc72e9e3a06a2eab4474b1da343026a8710e96416c7d",
+          "size": 373565,
+          "caption": "页面实测截图：提交前字幕显示模式为“译文”，目标简体中文。",
+          "embedded": true
+        },
+        {
+          "name": "071-preview-2-bilingual.png",
+          "id": "ace1835be5766bdb8af9b95e63",
+          "sha256": "372b54a1b33659c673c42f7977b3cf079cb29a66976bb6232d34c34aa98490f2",
+          "size": 1009427,
+          "caption": "页面失败原图：约2.1秒编辑器同时显示中文及额外英文。",
+          "embedded": true
+        },
+        {
+          "name": "071-preview-10-bilingual.png",
+          "id": "08c5a954c6b4c516ea8dd46aa4",
+          "sha256": "e62ba9e7ba4fa73b05e41d31b48ff3558cf249ce58261022c999a4387662d6f8",
+          "size": 1023465,
+          "caption": "页面失败原图：10秒处仍显示中英双语。",
+          "embedded": true
+        },
+        {
+          "name": "071-product-frame-2-chinese-only.png",
+          "id": "3b45ab7c8aaaeb902149dcc6b7",
+          "sha256": "8e0747bd0e7deb246d3afb70c26bf0c57de97ece16d7aa09352f85dcd5f49950",
+          "size": 746684,
+          "caption": "辅助对照图（实际下载成片抽帧）：同一时间点只有中文，不是页面截图。",
+          "embedded": true
+        },
+        {
+          "name": "071-source-frame-2-no-captions.png",
+          "id": "11c6922ddaea54d187fd725dc0",
+          "sha256": "0caec33bf94ec654195cc9cc47876b9dbcb4f850d062bdf70991c37250d266db",
+          "size": 726942,
+          "caption": "辅助对照图（源视频抽帧）：原片无烧录英文，不是页面截图。",
+          "embedded": true
+        }
+      ],
+      "description_sha256": "52284635a93463fee1102c2a9e309d9ad796412f90f13933f6cf9940bc262580"
+    }
+  }
+}

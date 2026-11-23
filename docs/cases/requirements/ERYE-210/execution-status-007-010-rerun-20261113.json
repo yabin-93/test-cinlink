@@ -1,0 +1,270 @@
+{
+  "requirement": "ERYE-210",
+  "batch": "prod-007-010-rerun-20261113-03",
+  "environment": "production",
+  "status": "Completed",
+  "counts": {
+    "Passed": 0,
+    "Failed": 2,
+    "Blocked": 0
+  },
+  "cases": [
+    {
+      "id": "ERYE210-007",
+      "status": "Failed",
+      "reason": "",
+      "automated": true,
+      "annotations": [
+        {
+          "type": "coverage",
+          "description": "旧voice迁移及清除两种记忆分支未覆盖：没有真实旧版状态，不伪造存储字段。"
+        }
+      ],
+      "projects": {
+        "007": {
+          "cid": "bc5b573b-f459-4dad-9414-689a64898b82",
+          "pid": "65f2ca7e-e9f3-43c0-99d0-6cd8b3c23317",
+          "name": "ERYE210-007-65f2ca7e"
+        }
+      },
+      "checks": [
+        {
+          "beforeClose": {
+            "name": "ERYE210-007-65f2ca7e",
+            "module": [
+              "水印"
+            ],
+            "playhead": "0",
+            "selected": [],
+            "media": [
+              {
+                "paused": true,
+                "duration": null
+              }
+            ]
+          },
+          "imagePressed": "true",
+          "revision": 1
+        },
+        {
+          "reopen": {
+            "name": "ERYE210-007-65f2ca7e",
+            "module": [
+              "水印"
+            ],
+            "playhead": "0",
+            "selected": [],
+            "media": [
+              {
+                "paused": true,
+                "duration": 20
+              }
+            ]
+          },
+          "imagePressed": "false"
+        },
+        {
+          "refreshed": {
+            "name": "ERYE210-007-65f2ca7e",
+            "module": [
+              "字幕"
+            ],
+            "playhead": "0",
+            "selected": [],
+            "media": [
+              {
+                "paused": true,
+                "duration": 20
+              }
+            ]
+          }
+        },
+        {
+          "stage": "final",
+          "beforeRevision": 1,
+          "afterRevision": 1,
+          "savedContentUnchanged": true
+        }
+      ],
+      "finishedAt": "2026-11-13T08:10:43.995Z",
+      "screenshots": [
+        "007-before-image.png",
+        "007-refreshed.png",
+        "007-reopen.png",
+        "ERYE210-007-failed.png"
+      ],
+      "definition": "current",
+      "batch": "prod-007-010-rerun-20261113-03",
+      "environment": "production",
+      "conversationId": "bc5b573b-f459-4dad-9414-689a64898b82",
+      "projectId": "65f2ca7e-e9f3-43c0-99d0-6cd8b3c23317",
+      "actual": "Failed；同一工程已选Watermark/Image，收起重开后实际水印，图片子页选中值false；刷新重开后实际字幕。等待页面就绪及恢复断言超时后仍未恢复Watermark/Image；全部保存内容及版本1→1保持。旧voice迁移及清除偏好分支无真实样本，未覆盖。",
+      "report": "results-007-010-rerun-prod-20261113.md",
+      "coverage": [
+        {
+          "type": "coverage",
+          "description": "旧voice迁移及清除两种记忆分支未覆盖：没有真实旧版状态，不伪造存储字段。"
+        }
+      ],
+      "defect": {
+        "serialNumber": "FWXC-488",
+        "workitemId": "015794cee8eba6c88c1078ec6b",
+        "url": "https://devops.aliyun.com/projex/project/1e401ac99539c3999e00e40006/bug#openWorkitemIdentifier=015794cee8eba6c88c1078ec6b",
+        "verifiedAt": "2026-11-13T16:20:09.7889984+08:00",
+        "screenshots": 3,
+        "status": "🤔AI提缺陷",
+        "localRecord": "docs/defects/ERYE210-007-view-memory-production-20261113.md",
+        "attachmentCount": 6
+      }
+    },
+    {
+      "id": "ERYE210-010",
+      "status": "Failed",
+      "reason": "",
+      "automated": true,
+      "annotations": [
+        {
+          "type": "coverage",
+          "description": "仅U1/D1双工程分支；U2账号及D2独立设备无环境，未执行，不以第二标签替代第二设备。"
+        }
+      ],
+      "projects": {
+        "010-PA": {
+          "cid": "23f1ee0b-7c06-48f5-bd4b-233efc07505b",
+          "pid": "3d182b89-eb08-47f3-ba5c-7d901126a54c",
+          "name": "ERYE210-010-PA-3d182b89"
+        },
+        "010-PB": {
+          "cid": "23f1ee0b-7c06-48f5-bd4b-233efc07505b",
+          "pid": "e63b022a-06c2-42a5-8556-116b7cb1824d",
+          "name": "ERYE210-010-PB-e63b022a"
+        }
+      },
+      "checks": [
+        {
+          "projectSwitch": "PA",
+          "state": {
+            "name": "ERYE210-010-PA-3d182b89",
+            "module": [
+              "字幕"
+            ],
+            "playhead": "0",
+            "selected": [],
+            "media": [
+              {
+                "paused": true,
+                "duration": null
+              }
+            ]
+          }
+        },
+        {
+          "projectSwitch": "PB",
+          "state": {
+            "name": "ERYE210-010-PB-e63b022a",
+            "module": [
+              "媒体"
+            ],
+            "playhead": "0",
+            "selected": [],
+            "media": [
+              {
+                "paused": true,
+                "duration": null
+              }
+            ]
+          }
+        },
+        {
+          "beforeRefresh": {
+            "name": "ERYE210-010-PB-e63b022a",
+            "module": [
+              "媒体"
+            ],
+            "playhead": "0",
+            "selected": [],
+            "media": [
+              {
+                "paused": true,
+                "duration": null
+              }
+            ]
+          }
+        },
+        {
+          "afterRefresh": {
+            "name": "ERYE210-010-PB-e63b022a",
+            "module": [
+              "字幕"
+            ],
+            "playhead": "0",
+            "selected": [],
+            "media": [
+              {
+                "paused": true,
+                "duration": 20
+              }
+            ]
+          }
+        },
+        {
+          "stage": "final",
+          "projectA": {
+            "beforeRevision": 1,
+            "afterRevision": 1,
+            "savedContentUnchanged": true
+          },
+          "projectB": {
+            "beforeRevision": 1,
+            "afterRevision": 1,
+            "savedContentUnchanged": true
+          }
+        }
+      ],
+      "finishedAt": "2026-11-13T08:11:37.045Z",
+      "screenshots": [
+        "010-PA-captions.png",
+        "010-PA-restored.png",
+        "010-PB-after-refresh.png",
+        "010-PB-media.png",
+        "010-PB-restored.png",
+        "ERYE210-010-failed.png"
+      ],
+      "definition": "current",
+      "batch": "prod-007-010-rerun-20261113-03",
+      "environment": "production",
+      "conversationId": "23f1ee0b-7c06-48f5-bd4b-233efc07505b",
+      "projectId": "3d182b89-eb08-47f3-ba5c-7d901126a54c",
+      "actual": "Failed；U1/D1中PA=Captions、PB=Media，页内双工程分别恢复正确；刷新打开同一PB后实际字幕，等待恢复后仍未回Media。PA/PB全部保存内容和版本均1→1保持。U2/D2无环境，跨账号/设备分支未覆盖。",
+      "report": "results-007-010-rerun-prod-20261113.md",
+      "coverage": [
+        {
+          "type": "coverage",
+          "description": "仅U1/D1双工程分支；U2账号及D2独立设备无环境，未执行，不以第二标签替代第二设备。"
+        }
+      ],
+      "projectIdB": "e63b022a-06c2-42a5-8556-116b7cb1824d",
+      "defect": {
+        "serialNumber": "FWXC-489",
+        "workitemId": "8f1fd31451866906c2a5208cd2",
+        "url": "https://devops.aliyun.com/projex/project/1e401ac99539c3999e00e40006/bug#openWorkitemIdentifier=8f1fd31451866906c2a5208cd2",
+        "verifiedAt": "2026-11-13T16:20:31.6389415+08:00",
+        "screenshots": 3,
+        "status": "🤔AI提缺陷",
+        "localRecord": "docs/defects/ERYE210-010-project-view-memory-production-20261113.md",
+        "attachmentCount": 6
+      }
+    }
+  ],
+  "cloudSync007010": {
+    "date": "2026-11-13",
+    "created": 2,
+    "screenshots": 6,
+    "attachments": 12,
+    "verified": true,
+    "defects": [
+      "FWXC-488",
+      "FWXC-489"
+    ]
+  }
+}

@@ -1,0 +1,355 @@
+{
+  "date": "2026-11-16",
+  "environment": "production",
+  "base_url": "https://app.cinlink.ai",
+  "workspace_id": "bacbb8d4-c466-4555-8aa2-69f549254198",
+  "task_space": 2,
+  "task_space_finished": true,
+  "cases": [
+    {
+      "id": "ERYE199-028",
+      "status": "Passed",
+      "actual": "双语Source A/译文甲、Source B/译文乙全局字号20→24→20生效并刷新保持；2/7秒匹配、4秒空档；原文/时间/原声引用及其他工程内容保持。",
+      "fixture": {
+        "conversationId": "f9fa3db0-1403-45a3-b1e6-adbcf008a4bf",
+        "editorId": "ae53b0d6-054d-4e3f-82c7-80e7d868192c",
+        "name": "ERYE199-028-current-six-20261116"
+      },
+      "completed": "2026-11-16T03:42:19.259Z",
+      "automation_status": "PLAN",
+      "automation_integrated": false,
+      "screenshots": [
+        "evidence-current-six-v2-production-20261116/028-baseline-two.png",
+        "evidence-current-six-v2-production-20261116/028-baseline-seven.png",
+        "evidence-current-six-v2-production-20261116/028-font24-time-2.png",
+        "evidence-current-six-v2-production-20261116/028-font24-time-7.png",
+        "evidence-current-six-v2-production-20261116/028-font24-time-4.png",
+        "evidence-current-six-v2-production-20261116/028-font24-refreshed.png",
+        "evidence-current-six-v2-production-20261116/028-font20-refreshed.png"
+      ],
+      "definition_revision": 2,
+      "latest_execution_report": "results-current-six-v2-production-20261116.md",
+      "latest_execution_batch": "erye199-current-six-20261116",
+      "workspace_id": "bacbb8d4-c466-4555-8aa2-69f549254198",
+      "script": "",
+      "execution_method": "Ego Lite生产有头页面操作；API仅准备及回读；无computer-use",
+      "target_steps_executed": true,
+      "clarifications": []
+    },
+    {
+      "id": "ERYE199-029",
+      "status": "Failed",
+      "actual": "Arial/20px下混合中英数字、Emoji及长姓名页面显示/换行正常，刷新保留；点击原生导出后提示“编辑器执行数据不符合正式 v2 协议，请保留当前工程并核对服务返回。”，未产生可下载MP4，导出与页面一致性未完成。",
+      "fixture": {
+        "conversationId": "f0b89427-d01e-4b93-aefe-4ce8102ff73a",
+        "editorId": "2614ae89-2f1d-483b-b3cb-abfa95b9562a",
+        "name": "ERYE199-029-current-six-20261116"
+      },
+      "completed": "2026-11-16T03:44:23.905Z",
+      "automation_status": "PLAN",
+      "automation_integrated": false,
+      "failed_step": "原生MP4导出",
+      "uncovered": [
+        "MP4文字/空档一致性"
+      ],
+      "screenshots": [
+        "evidence-current-six-v2-production-20261116/029-refreshed-font.png",
+        "evidence-current-six-v2-production-20261116/029-loaded-preview-2.png",
+        "evidence-current-six-v2-production-20261116/029-loaded-preview-7.png",
+        "evidence-current-six-v2-production-20261116/029-loaded-preview-4.5.png",
+        "evidence-current-six-v2-production-20261116/029-failure-export-protocol.png"
+      ],
+      "definition_revision": 2,
+      "latest_execution_report": "results-current-six-v2-production-20261116.md",
+      "latest_execution_batch": "erye199-current-six-20261116",
+      "workspace_id": "bacbb8d4-c466-4555-8aa2-69f549254198",
+      "script": "",
+      "execution_method": "Ego Lite生产有头页面操作；API仅准备及回读；无computer-use",
+      "target_steps_executed": true,
+      "clarifications": [],
+      "defect": {
+        "id": "FWXC-578",
+        "workitem_id": "8997db131fa05bc3a8e6e62ffe",
+        "url": "https://devops.aliyun.com/projex/project/1e401ac99539c3999e00e40006/bug#openWorkitemIdentifier=8997db131fa05bc3a8e6e62ffe",
+        "title": "【生产环境】【ERYE199-029/047/048】编辑器原生导出报协议错误，未交付可下载结果",
+        "status": "🤔AI提缺陷",
+        "assigned_to": "牛诗晴",
+        "verified": true,
+        "screenshots": 3,
+        "attachments": 7,
+        "synced_at": "2026-11-16T12:48:27.6006010+08:00",
+        "local_report": "docs/defects/ERYE199-029-047-048-native-export-protocol-production-20261116.md",
+        "shared": true,
+        "shared_case_ids": [
+          "ERYE199-029",
+          "ERYE199-047",
+          "ERYE199-048"
+        ],
+        "count_scope": "本缺陷共3张截图和7个附件，由3条用例共享；创建计1条。"
+      },
+      "latest_defect_sync_report": "defects-029-047-048-native-export-production-20261116.md"
+    },
+    {
+      "id": "ERYE199-034",
+      "status": "Passed",
+      "actual": "三个独立新工程分别以0.25/0.3178/4倍执行，时长40/31.466331/2.5秒；5/5/1秒对应源约1.25/1.589/4秒，相邻源帧范围内；实际播放与刷新保持，视频及关联原声同倍率、同源范围，无字幕或替代片段。",
+      "fixture": {
+        "conversationId": "2c50708b-b21d-4e4e-9e3d-bf051e9347f7",
+        "editorId": "3b879063-a14c-4f42-91fc-9c6c4825163f",
+        "name": "ERYE199-034-025-current-six-20261116"
+      },
+      "completed": "2026-11-16T03:53:09.001Z",
+      "automation_status": "PLAN",
+      "automation_integrated": false,
+      "subscenarios": [
+        {
+          "id": "034-025",
+          "fixture": {
+            "conversationId": "2c50708b-b21d-4e4e-9e3d-bf051e9347f7",
+            "editorId": "3b879063-a14c-4f42-91fc-9c6c4825163f",
+            "name": "ERYE199-034-025-current-six-20261116"
+          },
+          "state": {
+            "time": 5.85,
+            "duration": 40,
+            "videos": [
+              {
+                "time": 1.467521,
+                "rate": 0.25,
+                "ready": 4
+              }
+            ]
+          },
+          "run_id": "run_v2_a1e61636688b4af2bd92ff5ceedcdb15"
+        },
+        {
+          "id": "034-03178",
+          "fixture": {
+            "conversationId": "70ab06d7-f4d3-4cd2-a9cc-6e739296beb8",
+            "editorId": "d9598a3b-89aa-40c7-8084-301915ff714f",
+            "name": "ERYE199-034-03178-current-six-20261116"
+          },
+          "state": {
+            "time": 5.78,
+            "duration": 31.46633102580239,
+            "videos": [
+              {
+                "time": 1.846867,
+                "rate": 0.3178,
+                "ready": 4
+              }
+            ]
+          },
+          "run_id": "run_v2_2cf0528ddfe34b449dd41f222f34f7c6"
+        },
+        {
+          "id": "034-4",
+          "fixture": {
+            "conversationId": "a5ebad4e-41c4-4fb9-b477-606206c0ba3e",
+            "editorId": "c6eb3505-30db-433a-9ad2-ac7cba84395f",
+            "name": "ERYE199-034-4-current-six-20261116"
+          },
+          "state": {
+            "time": 1.86,
+            "duration": 2.5,
+            "videos": [
+              {
+                "time": 7.450038,
+                "rate": 4,
+                "ready": 4
+              }
+            ]
+          },
+          "run_id": "run_v2_2ed851d0ea0f47b3810767bbda900bcf"
+        }
+      ],
+      "clarifications": [],
+      "screenshots": [
+        "evidence-current-six-v2-production-20261116/034-025-rate025-time5.png",
+        "evidence-current-six-v2-production-20261116/034-025-rate025-refreshed.png",
+        "evidence-current-six-v2-production-20261116/034-025-playback-checked.png",
+        "evidence-current-six-v2-production-20261116/034-03178-rate03178-time5.png",
+        "evidence-current-six-v2-production-20261116/034-03178-rate03178-refreshed.png",
+        "evidence-current-six-v2-production-20261116/034-03178-playback-checked.png",
+        "evidence-current-six-v2-production-20261116/034-4-rate4-time1.png",
+        "evidence-current-six-v2-production-20261116/034-4-rate4-refreshed.png",
+        "evidence-current-six-v2-production-20261116/034-4-playback-checked.png"
+      ],
+      "definition_revision": 2,
+      "latest_execution_report": "results-current-six-v2-production-20261116.md",
+      "latest_execution_batch": "erye199-current-six-20261116",
+      "workspace_id": "bacbb8d4-c466-4555-8aa2-69f549254198",
+      "script": "",
+      "execution_method": "Ego Lite生产有头页面操作；API仅准备及回读；无computer-use",
+      "target_steps_executed": true
+    },
+    {
+      "id": "ERYE199-042",
+      "status": "Passed",
+      "actual": "对白D100→58→0→58%、音乐M30→15→30%原生拖动及刷新保存通过，双片段互不串改。实际混合预览录音核验：D/M约0.581/0.300→对白约0→0.579/0.149，额外V原声静音；源/范围/时长保持。",
+      "fixture": {
+        "conversationId": "735e93f9-032e-4cd3-8d95-ff6f6ea4e166",
+        "editorId": "84133cd2-7a71-42e6-b27e-325aef37b8ec",
+        "name": "ERYE199-042-current-six-20261116"
+      },
+      "completed": "2026-11-16T03:54:26.899Z",
+      "automation_status": "PLAN",
+      "automation_integrated": false,
+      "audio_evidence": "mixed-output-analysis.json",
+      "precondition_note": "已明确静音V自动补齐的关联原声，仅对白D和音乐M发声；早期未满足此前置的操作不计结果。",
+      "screenshots": [
+        "evidence-current-six-v2-production-20261116/042-valid-baseline.png",
+        "evidence-current-six-v2-production-20261116/042-valid-D58-attempt.png",
+        "evidence-current-six-v2-production-20261116/042-valid-D0-M30.png",
+        "evidence-current-six-v2-production-20261116/042-valid-D58-M15.png",
+        "evidence-current-six-v2-production-20261116/042-valid-D58-M15-refreshed.png",
+        "evidence-current-six-v2-production-20261116/042-final-refreshed.png"
+      ],
+      "definition_revision": 2,
+      "latest_execution_report": "results-current-six-v2-production-20261116.md",
+      "latest_execution_batch": "erye199-current-six-20261116",
+      "workspace_id": "bacbb8d4-c466-4555-8aa2-69f549254198",
+      "script": "",
+      "execution_method": "Ego Lite生产有头页面操作；API仅准备及回读；无computer-use",
+      "target_steps_executed": true,
+      "clarifications": []
+    },
+    {
+      "id": "ERYE199-047",
+      "status": "Failed",
+      "actual": "四类对象已准备，2秒I+A、4秒I无字幕、7秒B无I、9秒仅V的页面预览及刷新可核对；原生导出提示“编辑器执行数据不符合正式 v2 协议，请保留当前工程并核对服务返回。”，未在结果区取得可下载MP4，四时间点正式文件及音频一致性未完成。",
+      "fixture": {
+        "conversationId": "85fe277c-2515-4beb-83e0-27e1803ab951",
+        "editorId": "d5866640-1eac-44bf-99df-04de830cfa2f",
+        "name": "ERYE199-047-current-six-20261116"
+      },
+      "completed": "2026-11-16T03:54:48.557Z",
+      "automation_status": "PLAN",
+      "automation_integrated": false,
+      "failed_step": "原生MP4导出",
+      "uncovered": [
+        "MP4四点画面/原声一致性"
+      ],
+      "screenshots": [
+        "evidence-current-six-v2-production-20261116/047-preview-2.png",
+        "evidence-current-six-v2-production-20261116/047-preview-4.png",
+        "evidence-current-six-v2-production-20261116/047-preview-7.png",
+        "evidence-current-six-v2-production-20261116/047-preview-9.png",
+        "evidence-current-six-v2-production-20261116/047-refreshed.png",
+        "evidence-current-six-v2-production-20261116/047-failure-export-protocol.png"
+      ],
+      "definition_revision": 2,
+      "latest_execution_report": "results-current-six-v2-production-20261116.md",
+      "latest_execution_batch": "erye199-current-six-20261116",
+      "workspace_id": "bacbb8d4-c466-4555-8aa2-69f549254198",
+      "script": "",
+      "execution_method": "Ego Lite生产有头页面操作；API仅准备及回读；无computer-use",
+      "target_steps_executed": true,
+      "clarifications": [],
+      "defect": {
+        "id": "FWXC-578",
+        "workitem_id": "8997db131fa05bc3a8e6e62ffe",
+        "url": "https://devops.aliyun.com/projex/project/1e401ac99539c3999e00e40006/bug#openWorkitemIdentifier=8997db131fa05bc3a8e6e62ffe",
+        "title": "【生产环境】【ERYE199-029/047/048】编辑器原生导出报协议错误，未交付可下载结果",
+        "status": "🤔AI提缺陷",
+        "assigned_to": "牛诗晴",
+        "verified": true,
+        "screenshots": 3,
+        "attachments": 7,
+        "synced_at": "2026-11-16T12:48:27.6006010+08:00",
+        "local_report": "docs/defects/ERYE199-029-047-048-native-export-protocol-production-20261116.md",
+        "shared": true,
+        "shared_case_ids": [
+          "ERYE199-029",
+          "ERYE199-047",
+          "ERYE199-048"
+        ],
+        "count_scope": "本缺陷共3张截图和7个附件，由3条用例共享；创建计1条。"
+      },
+      "latest_defect_sync_report": "defects-029-047-048-native-export-production-20261116.md"
+    },
+    {
+      "id": "ERYE199-048",
+      "status": "Failed",
+      "actual": "2秒进入真实全屏，播放到8.16秒暂停并退出后仍8.16秒，刷新后原片及10秒时间线保持；原生导出提示“编辑器执行数据不符合正式 v2 协议，请保留当前工程并核对服务返回。”，未取得可下载结果，MP4实际640×360/时长/2秒8秒画面及原声未完成核验。",
+      "fixture": {
+        "conversationId": "58ae8192-e775-4f1b-b7df-f0da05a18ecc",
+        "editorId": "079f63a8-ca46-432c-b680-bb9a39ea7934",
+        "name": "ERYE199-048-current-six-20261116"
+      },
+      "completed": "2026-11-16T03:56:28.455Z",
+      "automation_status": "PLAN",
+      "automation_integrated": false,
+      "failed_step": "原生MP4导出",
+      "partial_checks": [
+        "全屏进入/退出及进度保持",
+        "刷新后原片和时间线保持"
+      ],
+      "uncovered": [
+        "正式MP4分辨率/时长/画面及原声"
+      ],
+      "screenshots": [
+        "evidence-current-six-v2-production-20261116/048-normal-two.png",
+        "evidence-current-six-v2-production-20261116/048-fullscreen-two.png",
+        "evidence-current-six-v2-production-20261116/048-fullscreen-paused-eight.png",
+        "evidence-current-six-v2-production-20261116/048-normal-after-fullscreen.png",
+        "evidence-current-six-v2-production-20261116/048-refreshed-eight.png",
+        "evidence-current-six-v2-production-20261116/048-failure-export-protocol.png"
+      ],
+      "definition_revision": 2,
+      "latest_execution_report": "results-current-six-v2-production-20261116.md",
+      "latest_execution_batch": "erye199-current-six-20261116",
+      "workspace_id": "bacbb8d4-c466-4555-8aa2-69f549254198",
+      "script": "",
+      "execution_method": "Ego Lite生产有头页面操作；API仅准备及回读；无computer-use",
+      "target_steps_executed": true,
+      "clarifications": [],
+      "defect": {
+        "id": "FWXC-578",
+        "workitem_id": "8997db131fa05bc3a8e6e62ffe",
+        "url": "https://devops.aliyun.com/projex/project/1e401ac99539c3999e00e40006/bug#openWorkitemIdentifier=8997db131fa05bc3a8e6e62ffe",
+        "title": "【生产环境】【ERYE199-029/047/048】编辑器原生导出报协议错误，未交付可下载结果",
+        "status": "🤔AI提缺陷",
+        "assigned_to": "牛诗晴",
+        "verified": true,
+        "screenshots": 3,
+        "attachments": 7,
+        "synced_at": "2026-11-16T12:48:27.6006010+08:00",
+        "local_report": "docs/defects/ERYE199-029-047-048-native-export-protocol-production-20261116.md",
+        "shared": true,
+        "shared_case_ids": [
+          "ERYE199-029",
+          "ERYE199-047",
+          "ERYE199-048"
+        ],
+        "count_scope": "本缺陷共3张截图和7个附件，由3条用例共享；创建计1条。"
+      },
+      "latest_defect_sync_report": "defects-029-047-048-native-export-production-20261116.md"
+    }
+  ],
+  "counts": {
+    "Passed": 3,
+    "Failed": 3
+  },
+  "automation_integrated": false,
+  "cloud_writes": 1,
+  "original_requirements_gap": "FWXC-525不代表本轮v2失败已提交",
+  "execution_cloud_writes": 0,
+  "defect_sync_created": 1,
+  "latest_defect_sync": {
+    "created": 1,
+    "case_ids": [
+      "ERYE199-029",
+      "ERYE199-047",
+      "ERYE199-048"
+    ],
+    "id": "FWXC-578",
+    "screenshots": 3,
+    "attachments": 7,
+    "verified": true,
+    "report": "defects-029-047-048-native-export-production-20261116.md",
+    "synced_at": "2026-11-16T12:48:27.6006010+08:00",
+    "rerun_performed": false,
+    "shared": true
+  }
+}

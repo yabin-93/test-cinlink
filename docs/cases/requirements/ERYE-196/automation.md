@@ -1,5 +1,7 @@
 # ERYE-196 已执行脚本与自动化入口
 
+本轮执行中（2026-11-11）：[134条逐例最新执行进度](execution-status-20261111.md)，[结构化结果](execution-status-20261111.json)。下方原执行结论保留为历史，不代表本轮已重跑。
+
 最新[基础补齐33项](editor-ui-fill-gaps-20261106.md)使用[ui-fill-gap-basics.mjs](../../../../tools/editor/ui-fill-gap-basics.mjs)，复用当前有头窗口和显式target/新报告目录，逐项guard/保存/刷新/页面撤销。图片/BGM/字幕及音频文件来自报告中明确夹具，不默认开浏览器或并发；图片选择开始一步按交互式文件选择留证，定位错误及任务负向验收复核分开记录。单句生成内部多次保存按本轮真实128/129/130内容逐次匹配撤销；本机历史仅读，不写IndexedDB或API旧JSON。33项为本轮执行分支，不是新增33条独立固定Playwright，也不增加正式需求编号。原24项及4对话固定脚本保持；未默认运行复杂/对话。
 
 页面扩展单项见[最新覆盖及实测](editor-ui-expanded-20261106.md)，操作模块为[ui-expanded-basics.mjs](../../../../tools/editor/ui-expanded-basics.mjs)，基于[ui-basics.mjs](../../../../tools/editor/ui-basics.mjs)已有窗口驱动。`begin`必须传实际选中的工程/会话ID、名称及新报告目录，逐项核对版本与内容；`timeInputChecks`、`basicStyles`、`captionChecks`、`mediaChecks`、`viewChecks`、`styleBoundaries`、`addCaptionAndEditCheck`、`watermarkChecks`、`exportVideoTaskCheck`按单项串行调用，不默认开新浏览器，不并发、不自动重试、不直接写工程JSON。已有批次不可直接复用目录或覆盖证据。视频导出模块只核对任务/产物，真实下载与解码另验；SRT当前缺页面入口。结果归档模块[汇总脚本](../../../../tools/editor/summarize-expanded-ui.mjs)仅处理本地原始证据与明确的验收复核，校验恢复、刷新和截图哈希后生成脱敏清单，不写云效。这些是浏览器内操作模块，不计新增40条独立Playwright测试；原对话固定脚本数量保持。
@@ -8,7 +10,7 @@ B01缺陷已于2026-11-06同步为[FWXC-349](../../../defects/CINLINK-ERYE196-RE
 
 更新：2026-11-06。历史有头执行、固定自动化和业务通过分别统计，不互相替代。
 
-页面字幕结束拖动失败UI-05已于2026-11-06提交[FWXC-356](../../../defects/CINLINK-ERYE196-SUBTITLE-END-DRAG-001.md)，真实截图嵌入正文、脱敏JSON及附件/字段回读通过；本次不重跑，页面专项10P/1F和固定对话脚本条数保持。
+页面字幕结束拖动失败UI-05已于2026-11-06提交[FWXC-356](../../../defects/CINLINK-ERYE196-SUBTITLE-END-DRAG-001.md)，历史真实截图嵌入正文、脱敏JSON及附件/字段回读通过；2026-11-11按用户要求在新项目`FWXC-356复测-20261111`复测通过，详见[复测报告](results-FWXC-356-rerun-20261111.md)。原缺陷历史状态与云效正文保留，不自动关闭。
 
 **当前优先级已改为编辑页直接操作**。[本轮11项](editor-ui-basics-20261106.md)10通过/1未通过，使用[ui-basics.mjs](../../../../tools/editor/ui-basics.mjs)通用驱动，通过原窗口真实控件执行；没有发送对话或新开浏览器。B20/B21/B22页面入口回填Passed后，原24项为3P/4F/17NR，原4项固定对话脚本及对话失败保持。通用UI驱动不是新增11条独立固定Playwright用例，原134条统计保持；下述B04等批次结果按其当时范围保留。
 

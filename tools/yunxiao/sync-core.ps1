@@ -129,6 +129,15 @@ function Invoke-YunxiaoDefectSync {
                 if ($state.verified -or $state.uploadAttempts[$file.name]) { throw '截图缺失或上次上传结果不确定；不会重复上传，请先核对附件。' }
                 $state.uploadAttempts[$file.name] = $true; Write-YunxiaoJson $checkpoint $state
                 $attached = & $Upload "$uri/attachments" $file
+                # Upload receipts may use "name" while the attachment-list API uses "fileName".
+                # Verify the actual persisted attachment by ID/name/bytes before embedding it.
+                if (-not $attached.id) { throw '上传回执缺少附件ID；保留检查点，先核对云效附件。' }
+                $uploadId = $attached.id
+                $persisted = @(& $Request GET "$uri/attachments" $null | Where-Object {
+                    $_.id -eq $uploadId -and $_.fileName -ceq $file.name -and $_.size -eq $file.size
+                })
+                if ($persisted.Count -ne 1) { throw '上传后附件列表未唯一匹配ID/名称/字节数；保留检查点，不自动重传。' }
+                $attached = $persisted[0]
             }
             if (-not $attached.id -or $attached.size -ne $file.size -or $attached.fileName -cne $file.name) { throw '附件名称/ID/字节数不符，已停止。' }
             $state.attachments = @($state.attachments | Where-Object name -cne $file.name) + @(@{ name = $file.name; id = $attached.id; size = $file.size; sha256 = $file.sha256 })

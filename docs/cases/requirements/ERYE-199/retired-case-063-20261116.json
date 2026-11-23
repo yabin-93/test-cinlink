@@ -1,0 +1,246 @@
+{
+  "date": "2026-11-16",
+  "case_id": "ERYE199-063",
+  "status": "Retired",
+  "source": "用户明确删除063；旧默认Speech页不符合最新确认五入口设计",
+  "exclude_from_execution": true,
+  "reuse_id": false,
+  "original_row": "| ERYE199-063 | P1 | 当前不适用：最新确认设计只有五入口，旧Speech默认页已不作为本轮验收条件。恢复前置：仅在后续产品明确新的默认TAB规则或恢复Speech入口后恢复；当前五入口已由062/064/067及ERYE210-001等覆盖。 | 恢复后执行：按新确认默认规则以无历史的新浏览器上下文打开编辑器；观察选中项与对应内容；重开复核。；[原因/恢复条件/步骤/预期](#erye199-063-current-v2) | 默认页与最新已确认规则一致；现阶段不为压低不适用数量重复五入口导航用例。 | 03/DC-03-002；用户确认最新Figma优先 | [AUTO] | [Ego脚本](../../../../tools/editor/erye199/cases-051-068.mjs)（入口 `063`）；[运行说明](automation.md) | Not Applicable；核心能力或设计范围仍未满足，本轮未执行；[原因/恢复条件/步骤/预期](#erye199-063-current-v2) |\n",
+  "original_details": "<a id=\"erye199-063-current-v2\"></a>\n\n### ERYE199-063：旧默认Speech页设计不适用（保留不适用）\n\n- 原因：最新确认设计只有五入口，旧Speech默认页已不作为本轮验收条件。\n\n- 恢复前置：仅在后续产品明确新的默认TAB规则或恢复Speech入口后恢复；当前五入口已由062/064/067及ERYE210-001等覆盖。\n\n- 恢复后操作：按新确认默认规则以无历史的新浏览器上下文打开编辑器；观察选中项与对应内容；重开复核。\n\n- 预期：默认页与最新已确认规则一致；现阶段不为压低不适用数量重复五入口导航用例。\n",
+  "original_registry": "ERYE199-063:\n  status: AUTO\n  script: \"tools/editor/erye199/cases-051-068.mjs#063\"\n  execution_status: \"Not Applicable\"\n  execution_report: \"docs/cases/requirements/ERYE-199/results-051-068-production-20261113.md\"\n  execution_note: \"本轮仅定义复核；最新确认设计只有五入口，旧Speech默认页已不作为本轮验收条件。 恢复步骤见修订报告。\"\n  execution_method: \"Ego Lite生产有头；原生操作；无computer-use\"\n  automation_command: \"npm run test:editor:199 -- --base-url https://app.cinlink.ai --cases 063\"\n  definition_report: \"docs/cases/requirements/ERYE-199/revision-na31-current-capabilities-20261116.md\"\n  restore_preconditions: \"仅在后续产品明确新的默认TAB规则或恢复Speech入口后恢复；当前五入口已由062/064/067及ERYE210-001等覆盖。\"\n\n",
+  "original_script": "  async '063'(ctx,a){await subtitleFixture(ctx,a);const state=await previewState(ctx);await ctx.write('default-panel',state);await ctx.shot('default-current-design');return outcome('Not Applicable','当前已确认设计为Media/Scripts/Captions/Voiceover/Watermark五入口，无旧Speech入口；默认Speech属于旧稿，不据此判产品失败。本次记录实际首次进入字幕面板，未将其等同Speech通过。',{target_steps_executed:false,acceptance_scope:'用户确认最新Figma主页面优先'});},\n",
+  "previous_execution": {
+    "id": "ERYE199-063",
+    "completed": "2026-11-13T12:49:32.224Z",
+    "fixture": {
+      "conversationId": "cfabfb07-8d71-4e95-83b5-94ae7701dc6d",
+      "editorId": "b291b984-242a-4be0-b72b-021b435148d6",
+      "name": "ERYE199-063-2026-11-13T12-29-40-982Z"
+    },
+    "automation": "tools/editor/erye199/cases-051-068.mjs#063",
+    "status": "Not Applicable",
+    "actual": "2026-11-16定义复核，未重跑。最新确认设计只有五入口，旧Speech默认页已不作为本轮验收条件。恢复条件及完整步骤见revision-na31-current-capabilities-20261116.md",
+    "target_steps_executed": false,
+    "acceptance_scope": "用户确认最新Figma主页面优先",
+    "screenshots": [
+      "evidence-051-068-production-20261113/063-default-current-design.png"
+    ],
+    "latest_execution_report": "results-051-068-production-20261113.md",
+    "latest_execution_batch": "2026-11-13T12-29-40-982Z",
+    "workspace_id": "ad06a173-72fb-43cd-b477-3462d41cd2dd",
+    "automation_status": "AUTO",
+    "script": "tools/editor/erye199/cases-051-068.mjs#063",
+    "automation_command": "npm run test:editor:199 -- --base-url https://app.cinlink.ai --cases 063",
+    "execution_method": "Ego Lite有头页面/原生操作；工程接口仅准备回读；无computer-use",
+    "execution_history": [
+      {
+        "archived_on": "2026-11-16",
+        "reason": "31条定义复核前",
+        "id": "ERYE199-063",
+        "completed": "2026-11-13T12:49:32.224Z",
+        "fixture": {
+          "conversationId": "cfabfb07-8d71-4e95-83b5-94ae7701dc6d",
+          "editorId": "b291b984-242a-4be0-b72b-021b435148d6",
+          "name": "ERYE199-063-2026-11-13T12-29-40-982Z"
+        },
+        "automation": "tools/editor/erye199/cases-051-068.mjs#063",
+        "status": "Not Applicable",
+        "actual": "当前已确认设计为Media/Scripts/Captions/Voiceover/Watermark五入口，无旧Speech入口；默认Speech属于旧稿，不据此判产品失败。本次记录实际首次进入字幕面板，未将其等同Speech通过。",
+        "target_steps_executed": false,
+        "acceptance_scope": "用户确认最新Figma主页面优先",
+        "screenshots": [
+          "evidence-051-068-production-20261113/063-default-current-design.png"
+        ],
+        "latest_execution_report": "results-051-068-production-20261113.md",
+        "latest_execution_batch": "2026-11-13T12-29-40-982Z",
+        "workspace_id": "ad06a173-72fb-43cd-b477-3462d41cd2dd",
+        "automation_status": "AUTO",
+        "script": "tools/editor/erye199/cases-051-068.mjs#063",
+        "automation_command": "npm run test:editor:199 -- --base-url https://app.cinlink.ai --cases 063",
+        "execution_method": "Ego Lite有头页面/原生操作；工程接口仅准备回读；无computer-use"
+      }
+    ],
+    "latest_definition_report": "revision-na31-current-capabilities-20261116.md",
+    "definition_updated": "2026-11-16",
+    "executed_in_latest_scope_batch": false,
+    "scope_report": "revision-na31-current-capabilities-20261116.md",
+    "title": "旧默认Speech页设计不适用",
+    "release_scope": "deferred-current-version",
+    "deferred_reason": "最新确认设计只有五入口，旧Speech默认页已不作为本轮验收条件。",
+    "restore_preconditions": "仅在后续产品明确新的默认TAB规则或恢复Speech入口后恢复；当前五入口已由062/064/067及ERYE210-001等覆盖。",
+    "restore_steps": "按新确认默认规则以无历史的新浏览器上下文打开编辑器；观察选中项与对应内容；重开复核。",
+    "restore_expected": "默认页与最新已确认规则一致；现阶段不为压低不适用数量重复五入口导航用例。"
+  },
+  "previous_counts": {
+    "Passed": 31,
+    "Failed": 8,
+    "Blocked": 2,
+    "Not Applicable": 22,
+    "Not Run": 0
+  },
+  "scope_before": {
+    "current_release_scope": {
+      "source": "用户2026-11-16按现有功能优化31条不适用；本轮仅修订",
+      "deferred": [
+        "014",
+        "016",
+        "018",
+        "021",
+        "022",
+        "023",
+        "024",
+        "025",
+        "026",
+        "027",
+        "031",
+        "032",
+        "033",
+        "035",
+        "037",
+        "038",
+        "039",
+        "041",
+        "044",
+        "046",
+        "056",
+        "063"
+      ],
+      "pending_revised": [],
+      "report": "revision-na31-current-capabilities-20261116.md",
+      "old_probe_execution_disabled": true,
+      "revised_implemented": [
+        "011",
+        "013",
+        "017",
+        "020",
+        "051",
+        "052",
+        "053",
+        "055"
+      ],
+      "manual_only": [
+        "045"
+      ],
+      "latest_execution_report": "results-nine-v2-production-20261116.md"
+    },
+    "current_051_068_scope": {
+      "case_ids": [
+        "ERYE199-051",
+        "ERYE199-052",
+        "ERYE199-053",
+        "ERYE199-054",
+        "ERYE199-055",
+        "ERYE199-056",
+        "ERYE199-057",
+        "ERYE199-059",
+        "ERYE199-062",
+        "ERYE199-063",
+        "ERYE199-064",
+        "ERYE199-065",
+        "ERYE199-066",
+        "ERYE199-067",
+        "ERYE199-068"
+      ],
+      "automation_integrated": true,
+      "retired": [
+        "ERYE199-058",
+        "ERYE199-060",
+        "ERYE199-061"
+      ],
+      "report": "results-051-068-production-20261113.md",
+      "counts": {
+        "Passed": 11,
+        "Failed": 1,
+        "Blocked": 1,
+        "Not Applicable": 2,
+        "Not Run": 0
+      },
+      "historical_counts": {
+        "Not Applicable": 6,
+        "Passed": 7,
+        "Blocked": 2,
+        "Failed": 1
+      },
+      "latest_revision_report": "revision-na31-current-capabilities-20261116.md",
+      "definition_revisions": {
+        "068": 2,
+        "051": 2,
+        "052": 2,
+        "053": 2,
+        "055": 2
+      },
+      "original_case_ids": [
+        "ERYE199-051",
+        "ERYE199-052",
+        "ERYE199-053",
+        "ERYE199-054",
+        "ERYE199-055",
+        "ERYE199-056",
+        "ERYE199-057",
+        "ERYE199-058",
+        "ERYE199-059",
+        "ERYE199-062",
+        "ERYE199-063",
+        "ERYE199-064",
+        "ERYE199-065",
+        "ERYE199-066",
+        "ERYE199-067",
+        "ERYE199-068"
+      ],
+      "latest_scope_report": "revision-na31-current-capabilities-20261116.md",
+      "latest_regression_report": "results-failed-ten-rerun-production-20261116.md",
+      "pending_definition_case_ids": [],
+      "automation_scope_note": "051/052/053/055新版已接入并实际执行；056/063保留延期门禁；051当前入口缺失实测Blocked。",
+      "latest_execution_report": "results-nine-v2-production-20261116.md"
+    },
+    "current_capability_revision": {
+      "report": "revision-na31-current-capabilities-20261116.md",
+      "revised_case_ids": [
+        "ERYE199-011",
+        "ERYE199-013",
+        "ERYE199-017",
+        "ERYE199-020",
+        "ERYE199-045",
+        "ERYE199-051",
+        "ERYE199-052",
+        "ERYE199-053",
+        "ERYE199-055"
+      ],
+      "deferred_case_ids": [
+        "ERYE199-014",
+        "ERYE199-016",
+        "ERYE199-018",
+        "ERYE199-021",
+        "ERYE199-022",
+        "ERYE199-023",
+        "ERYE199-024",
+        "ERYE199-025",
+        "ERYE199-026",
+        "ERYE199-027",
+        "ERYE199-031",
+        "ERYE199-032",
+        "ERYE199-033",
+        "ERYE199-035",
+        "ERYE199-037",
+        "ERYE199-038",
+        "ERYE199-039",
+        "ERYE199-041",
+        "ERYE199-044",
+        "ERYE199-046",
+        "ERYE199-056",
+        "ERYE199-063"
+      ],
+      "execution_performed": true,
+      "counts": {
+        "Passed": 6,
+        "Failed": 2,
+        "Blocked": 1,
+        "Not Applicable": 0,
+        "Not Run": 0
+      },
+      "original_advanced_scope_preserved": true,
+      "archive": "revision-na31-original-definitions-20261116.json",
+      "latest_execution_report": "results-nine-v2-production-20261116.md"
+    }
+  }
+}

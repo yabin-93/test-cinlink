@@ -1,5 +1,11 @@
 # CINLINK-MW06-001 · [FWXC-253](https://devops.aliyun.com/projex/project/1e401ac99539c3999e00e40006/bug#viewIdentifier=1dedc5afd44979211cad516f&openWorkitemIdentifier=2fad2ef9c90b10b44c456b0bf4)
 
+**最新复测（2026-11-11）**
+
+17:26已将云效FWXC-253从已修复改为✅AI通过，仅status一次写入、回读ID/名称通过，其他核对字段保持；无评论或附件新增。
+
+新项目`FWXC-253复测-20261111`、新会话`9b69046e-557a-4f59-bd4d-607f16a2f75a`，同哈希原片及原提示词一次提交，补槽/确认0次，349.024秒done。中文SRT、英文SRT、中文总结三份均实际下载；两SRT各18条、逐条时间轴一致（0.160～60.460秒），总结主题对应原片，原缺交付问题未复现，回归Passed。页面明确提示源片实际英文；`intent_fully_satisfied=false`如实保留，不把本次当真正中文源正向回归。未验证英文中间中文字幕与交付中文为同一文件，未逐字听审全部译文/核验扣费。[复测报告与截图](../design-cases/multi-workflow/fwxc253-retest-20261111.md)。以下保留原失败现场。
+
 **现象**
 
 一次请求明确要求交付中文字幕SRT、英文SRT和中文要点总结三份文件。任务显示Completed/done，实际仅有中文字幕SRT和总结，未单独交付英文SRT。

@@ -1,0 +1,632 @@
+{
+  "date": "2026-11-17",
+  "testDate": "2026-11-16",
+  "method": "official Yunxiao OpenAPI via tools/yunxiao",
+  "created": 7,
+  "deduplication": false,
+  "mergeWithinCurrentBatch": true,
+  "ownCheckpointRecovery": true,
+  "screenshotsUploaded": 15,
+  "attachmentsVerified": 45,
+  "verified": true,
+  "rerunPerformed": false,
+  "report": "defect-sync-production-20261117.md",
+  "cases": [
+    {
+      "id": "FWXC-625",
+      "workitemId": "c87a29cd1d5996c0fa46eb4adf",
+      "key": "ICP-EC02-BATCH-PLANNING-TIMEOUT-PROD-20261117",
+      "case": "ICP-EC-02",
+      "coveredRounds": [
+        1
+      ],
+      "title": "【生产环境】【电商Case02】10款女装批量制作在规划阶段1200秒超时，未交付图片或视频",
+      "url": "https://devops.aliyun.com/projex/project/1e401ac99539c3999e00e40006/bug#openWorkitemIdentifier=c87a29cd1d5996c0fa46eb4adf",
+      "status": "🤔AI提缺陷",
+      "assignedTo": "牛诗晴",
+      "sprint": "重构10-29",
+      "labels": [
+        "生产环境"
+      ],
+      "priority": "高",
+      "seriousLevel": "2-严重",
+      "verified": true,
+      "syncedAt": "2026-11-17T10:11:24.8074487+08:00",
+      "screenshots": 1,
+      "attachments": 5,
+      "images": [
+        {
+          "name": "failed-planning-response-timeout.png",
+          "attachmentId": "4332eae46ad1311d591be517e9",
+          "bytes": 168228,
+          "sha256": "7e9b60c98457e450f082d14da1945826137c9161d01f87ac761dee9688f1c2f2",
+          "embedded": true,
+          "caption": "Case02第1轮：页面明确显示规划响应1200秒超时、任务失败。"
+        }
+      ],
+      "attachmentReceipts": [
+        {
+          "id": "4332eae46ad1311d591be517e9",
+          "size": 168228,
+          "sha256": "7e9b60c98457e450f082d14da1945826137c9161d01f87ac761dee9688f1c2f2",
+          "name": "failed-planning-response-timeout.png"
+        },
+        {
+          "id": "2f906fabb95aff05e07023d2fc",
+          "size": 3892,
+          "sha256": "209b449659c046929a53d5c48bc31f60a6f43571433380a1015ef94b4776fa05",
+          "name": "case-evidence.json"
+        },
+        {
+          "id": "1ac2d81f1802f485464cbd79e4",
+          "size": 14870,
+          "sha256": "b03967318a16cc7d29a5c13f198ca00bad687b987127b3c6c709d5da6dee02d3",
+          "name": "material-index.json"
+        },
+        {
+          "id": "b6132db82a8d7ae94394d0c72b",
+          "size": 2949,
+          "sha256": "8170349302ba220e81350553fac4bc0ebca93bc3e1c0cff5e6729ecc188182ff",
+          "name": "prompt-sequence.md"
+        },
+        {
+          "id": "9ed9ee9dd81afa4c0258bea460",
+          "size": 2715,
+          "sha256": "ed693e8809f73c3c502532f5cd12251c83c0782f596bfe00696d5c1068447e83",
+          "name": "sku-table.txt"
+        }
+      ],
+      "descriptionSha256": "43e170316d86a09a6e647890967d38b0615347fc885b08eb1a9b24ae3c86460e",
+      "localReport": "docs/defects/icp-ec02-batch-planning-timeout-prod-20261117.md"
+    },
+    {
+      "id": "FWXC-626",
+      "workitemId": "ddeb25492d57ba95d8e4dc2d2d",
+      "key": "ICP-EC02-SKU10-MODEL-REFERENCE-INVALID-PROD-20261117",
+      "case": "ICP-EC-02",
+      "coveredRounds": [
+        5
+      ],
+      "title": "【生产环境】【电商Case02】SKU10上身图生成报model_reference_file_id参数校验错误，图片及视频未交付",
+      "url": "https://devops.aliyun.com/projex/project/1e401ac99539c3999e00e40006/bug#openWorkitemIdentifier=ddeb25492d57ba95d8e4dc2d2d",
+      "status": "🤔AI提缺陷",
+      "assignedTo": "牛诗晴",
+      "sprint": "重构10-29",
+      "labels": [
+        "生产环境"
+      ],
+      "priority": "高",
+      "seriousLevel": "2-严重",
+      "verified": true,
+      "syncedAt": "2026-11-17T10:11:31.3082892+08:00",
+      "screenshots": 1,
+      "attachments": 6,
+      "images": [
+        {
+          "name": "failed-step-4-sku10-model-reference-batch.png",
+          "attachmentId": "7d99e2b170fee74726bb2dd58a",
+          "bytes": 175202,
+          "sha256": "b9b8f891d8045b3804ea8298f820e82c17b964d6517dc9ea07f4070bd102f434",
+          "embedded": true,
+          "caption": "Case02第5轮：生成图片节点显示实际参数校验错误及整轮失败。"
+        }
+      ],
+      "attachmentReceipts": [
+        {
+          "id": "7d99e2b170fee74726bb2dd58a",
+          "size": 175202,
+          "sha256": "b9b8f891d8045b3804ea8298f820e82c17b964d6517dc9ea07f4070bd102f434",
+          "name": "failed-step-4-sku10-model-reference-batch.png"
+        },
+        {
+          "id": "ae5031441a5211d5b86f43c877",
+          "size": 5844,
+          "sha256": "9cbaa3dd151e9e066c3348b1a815fb723d6eb10fbfe9e763f3dc0b454aa1a683",
+          "name": "case-evidence.json"
+        },
+        {
+          "id": "791258b9b7870965855bf36e72",
+          "size": 16087,
+          "sha256": "b2c8b476428357f8e5b80e7316a815244607be219d82b6d38ab2a2e51db9dfd4",
+          "name": "material-index.json"
+        },
+        {
+          "id": "b25e750d26a3d40cbae30eb5cb",
+          "size": 2949,
+          "sha256": "8170349302ba220e81350553fac4bc0ebca93bc3e1c0cff5e6729ecc188182ff",
+          "name": "prompt-sequence.md"
+        },
+        {
+          "id": "d5d05b74463395effe7838c5ef",
+          "size": 2715,
+          "sha256": "ed693e8809f73c3c502532f5cd12251c83c0782f596bfe00696d5c1068447e83",
+          "name": "sku-table.txt"
+        },
+        {
+          "id": "839d0c32885bb1f284c5a871e3",
+          "size": 185376,
+          "sha256": "a711509411aa68d129d3cc0cd0f81aba80fe844c4492ed83f8bde673d3236ca1",
+          "name": "SKU10-front-only.mp4"
+        }
+      ],
+      "descriptionSha256": "70d6cce43d1f843b3d8780b20fa0ceac856273e9cf6d69bedd4a404491907a82",
+      "localReport": "docs/defects/icp-ec02-sku10-model-reference-invalid-prod-20261117.md"
+    },
+    {
+      "id": "FWXC-627",
+      "workitemId": "734bcbf473a246b0fe65b85187",
+      "key": "ICP-EC03-VERTICAL-CROP-SUBTITLE-LAYOUT-PROD-20261117",
+      "case": "ICP-EC-03",
+      "coveredRounds": [
+        1,
+        2
+      ],
+      "title": "【生产环境】【电商Case03】横版转竖版裁掉产品及原字幕，Reels局部修复后仍有主体缺失",
+      "url": "https://devops.aliyun.com/projex/project/1e401ac99539c3999e00e40006/bug#openWorkitemIdentifier=734bcbf473a246b0fe65b85187",
+      "status": "🤔AI提缺陷",
+      "assignedTo": "牛诗晴",
+      "sprint": "重构10-29",
+      "labels": [
+        "生产环境"
+      ],
+      "priority": "高",
+      "seriousLevel": "2-严重",
+      "verified": true,
+      "syncedAt": "2026-11-17T10:11:38.8515235+08:00",
+      "screenshots": 3,
+      "attachments": 7,
+      "images": [
+        {
+          "name": "failed-initial-reels-cropped.png",
+          "attachmentId": "a7902f52a1e5d5ff1d3e49470b",
+          "bytes": 627680,
+          "sha256": "6129015331fdfa17da55f50ef838a3bf718e36049ccb96872d2943e6bbc475d3",
+          "embedded": true,
+          "caption": "Case03第1轮Reels审阅画面：产品及画面内原字幕被裁。"
+        },
+        {
+          "name": "failed-initial-tiktok-cropped.png",
+          "attachmentId": "602d82457342e7b21ffabca3bf",
+          "bytes": 568030,
+          "sha256": "8f1a2f0842faf521cccad0c78fdcc906dedc8a9fc57f86332d98d14b32258da2",
+          "embedded": true,
+          "caption": "Case03第1轮TikTok审阅画面：产品裁切、原字幕与新增字幕同屏。"
+        },
+        {
+          "name": "failed-step-1-reels-riding-still-cropped.png",
+          "attachmentId": "464bf9cd404a9a499ec56bd5ec",
+          "bytes": 617686,
+          "sha256": "f4145ff6a5f4f93381b9303df2ceb2596c9a8c0a61f91a4280026eb7e3b96b4e",
+          "embedded": true,
+          "caption": "Case03第2轮修正版约8.04秒：骑行主体仍靠边并被裁。"
+        }
+      ],
+      "attachmentReceipts": [
+        {
+          "id": "a7902f52a1e5d5ff1d3e49470b",
+          "size": 627680,
+          "sha256": "6129015331fdfa17da55f50ef838a3bf718e36049ccb96872d2943e6bbc475d3",
+          "name": "failed-initial-reels-cropped.png"
+        },
+        {
+          "id": "602d82457342e7b21ffabca3bf",
+          "size": 568030,
+          "sha256": "8f1a2f0842faf521cccad0c78fdcc906dedc8a9fc57f86332d98d14b32258da2",
+          "name": "failed-initial-tiktok-cropped.png"
+        },
+        {
+          "id": "464bf9cd404a9a499ec56bd5ec",
+          "size": 617686,
+          "sha256": "f4145ff6a5f4f93381b9303df2ceb2596c9a8c0a61f91a4280026eb7e3b96b4e",
+          "name": "failed-step-1-reels-riding-still-cropped.png"
+        },
+        {
+          "id": "6c250e85d1966cca75ad3042dd",
+          "size": 4641,
+          "sha256": "7cf8d2189db740c01ee2abfc18d1a12a7d73efab09eaefaa0bfe2bd3c411af49",
+          "name": "case-evidence.json"
+        },
+        {
+          "id": "9021b917d901c8c6bcbc11ab94",
+          "size": 2570,
+          "sha256": "ae1e71e381e1823bb2f8481f6a97cac73b4e17f28203bc67bab8c36e29903bfd",
+          "name": "material-index.json"
+        },
+        {
+          "id": "d7a6dcbce6895bbaeb38ddcc2e",
+          "size": 3524,
+          "sha256": "81d12b14dacb704c2916f4b0b9619fd8171e104408346eac6ea29f57c44a99d9",
+          "name": "prompt-sequence.md"
+        },
+        {
+          "id": "62174d8a3b9eb104fce3be2b29",
+          "size": 765,
+          "sha256": "78851784b0d6940edf8f73a05d891cc545d9eb898fee326a172553c0321f1ca6",
+          "name": "ado-product-facts.txt"
+        }
+      ],
+      "descriptionSha256": "6c4e674de29dddc23ad3f0dfbeb96939db7fb8de0c8d677d9a0cb51027aaab85",
+      "localReport": "docs/defects/icp-ec03-vertical-crop-subtitle-layout-prod-20261117.md"
+    },
+    {
+      "id": "FWXC-628",
+      "workitemId": "25f4dfa4e583d270cbf389c7c9",
+      "key": "ICP-EC03-TIKTOK-MISSING-CTA-PROD-20261117",
+      "case": "ICP-EC-03",
+      "coveredRounds": [
+        1
+      ],
+      "title": "【生产环境】【电商Case03】TikTok成片结尾只有品牌标识，未添加要求的Shop Now CTA",
+      "url": "https://devops.aliyun.com/projex/project/1e401ac99539c3999e00e40006/bug#openWorkitemIdentifier=25f4dfa4e583d270cbf389c7c9",
+      "status": "🤔AI提缺陷",
+      "assignedTo": "牛诗晴",
+      "sprint": "重构10-29",
+      "labels": [
+        "生产环境"
+      ],
+      "priority": "中",
+      "seriousLevel": "3-一般",
+      "verified": true,
+      "syncedAt": "2026-11-17T10:11:44.4283038+08:00",
+      "screenshots": 1,
+      "attachments": 5,
+      "images": [
+        {
+          "name": "failed-initial-tiktok-missing-CTA.png",
+          "attachmentId": "2603376a3f0ea710c946354ea1",
+          "bytes": 392349,
+          "sha256": "c69d7620faa577c1dbb134531664a2a57ba92bfe8e9204d430753dd50cd453af",
+          "embedded": true,
+          "caption": "Case03第1轮TikTok实际结尾17.36秒：品牌标识可见，未显示CTA。"
+        }
+      ],
+      "attachmentReceipts": [
+        {
+          "id": "2603376a3f0ea710c946354ea1",
+          "size": 392349,
+          "sha256": "c69d7620faa577c1dbb134531664a2a57ba92bfe8e9204d430753dd50cd453af",
+          "name": "failed-initial-tiktok-missing-CTA.png"
+        },
+        {
+          "id": "69a035d560ddf2135c50522ceb",
+          "size": 3055,
+          "sha256": "b46ff71beba7a4a1d725673662f95d9374eff055f06309e7636459b0eb42e319",
+          "name": "case-evidence.json"
+        },
+        {
+          "id": "6dd16fc30f33f1769449396b33",
+          "size": 2570,
+          "sha256": "ae1e71e381e1823bb2f8481f6a97cac73b4e17f28203bc67bab8c36e29903bfd",
+          "name": "material-index.json"
+        },
+        {
+          "id": "c23822eae97e4c02d93c1c26b0",
+          "size": 3524,
+          "sha256": "81d12b14dacb704c2916f4b0b9619fd8171e104408346eac6ea29f57c44a99d9",
+          "name": "prompt-sequence.md"
+        },
+        {
+          "id": "085bd776c49e5081821d8c60fb",
+          "size": 765,
+          "sha256": "78851784b0d6940edf8f73a05d891cc545d9eb898fee326a172553c0321f1ca6",
+          "name": "ado-product-facts.txt"
+        }
+      ],
+      "descriptionSha256": "c04498af7bb00a4b4a8315015793aa8f7f5566fd6060c2053703f963c6eeed0f",
+      "localReport": "docs/defects/icp-ec03-tiktok-missing-cta-prod-20261117.md"
+    },
+    {
+      "id": "FWXC-629",
+      "workitemId": "8014ebc4b36863fc090d9a5ad8",
+      "key": "ICP-EC03-TIKTOK-REVISION-REFERENCE-CONFLICT-PROD-20261117",
+      "case": "ICP-EC-03",
+      "coveredRounds": [
+        4,
+        5
+      ],
+      "title": "【生产环境】【电商Case03】连续修改TikTok时工程或素材引用冲突，15秒改版和安全区修正版未交付",
+      "url": "https://devops.aliyun.com/projex/project/1e401ac99539c3999e00e40006/bug#openWorkitemIdentifier=8014ebc4b36863fc090d9a5ad8",
+      "status": "🤔AI提缺陷",
+      "assignedTo": "牛诗晴",
+      "sprint": "重构10-29",
+      "labels": [
+        "生产环境"
+      ],
+      "priority": "高",
+      "seriousLevel": "2-严重",
+      "verified": true,
+      "syncedAt": "2026-11-17T10:11:51.9831760+08:00",
+      "screenshots": 3,
+      "attachments": 7,
+      "images": [
+        {
+          "name": "failed-step-3-tiktok-revision-mismatch.png",
+          "attachmentId": "5f570331f71826c8d53d8b0dce",
+          "bytes": 1014080,
+          "sha256": "73f2a974305e875e50eb57a921935664e725243fcccbec4fe71c700d43628852",
+          "embedded": true,
+          "caption": "Case03第4轮：高光工程/修订不匹配错误，无15秒成片。"
+        },
+        {
+          "name": "failed-step-4-tiktok-safe-area.png",
+          "attachmentId": "245127ad8b707a182582a132e4",
+          "bytes": 551980,
+          "sha256": "b07f936f27c210fe554af2a2f42018d67d41ecf53e53b52878de37aa52ee5e6b",
+          "embedded": true,
+          "caption": "Case03第5轮：B修改节点失败，页面明确未提供TikTok安全区修正版。"
+        },
+        {
+          "name": "failed-step-4-reference-conflict-detail.png",
+          "attachmentId": "5cb62576f7c41b3ce6657b4cd1",
+          "bytes": 555085,
+          "sha256": "a3455a974cf9db481316d8e30220dad94fc1041f2ec6dbc4d478d1b523bd808f",
+          "embedded": true,
+          "caption": "Case03第5轮B失败节点展开原图；具体引用冲突原文见随附case-evidence.json。"
+        }
+      ],
+      "attachmentReceipts": [
+        {
+          "id": "5f570331f71826c8d53d8b0dce",
+          "size": 1014080,
+          "sha256": "73f2a974305e875e50eb57a921935664e725243fcccbec4fe71c700d43628852",
+          "name": "failed-step-3-tiktok-revision-mismatch.png"
+        },
+        {
+          "id": "245127ad8b707a182582a132e4",
+          "size": 551980,
+          "sha256": "b07f936f27c210fe554af2a2f42018d67d41ecf53e53b52878de37aa52ee5e6b",
+          "name": "failed-step-4-tiktok-safe-area.png"
+        },
+        {
+          "id": "5cb62576f7c41b3ce6657b4cd1",
+          "size": 555085,
+          "sha256": "a3455a974cf9db481316d8e30220dad94fc1041f2ec6dbc4d478d1b523bd808f",
+          "name": "failed-step-4-reference-conflict-detail.png"
+        },
+        {
+          "id": "2de394bfa18a83e2bc8c6b97bb",
+          "size": 9483,
+          "sha256": "08ad26042a087012df8eb190c5caef292dad4fe765a5306f574b69ea516a6176",
+          "name": "case-evidence.json"
+        },
+        {
+          "id": "febc594915052730dfb1724bff",
+          "size": 2570,
+          "sha256": "ae1e71e381e1823bb2f8481f6a97cac73b4e17f28203bc67bab8c36e29903bfd",
+          "name": "material-index.json"
+        },
+        {
+          "id": "9a7ed412f5154ff253b95d2ded",
+          "size": 3524,
+          "sha256": "81d12b14dacb704c2916f4b0b9619fd8171e104408346eac6ea29f57c44a99d9",
+          "name": "prompt-sequence.md"
+        },
+        {
+          "id": "f55e535cec806fde17779e0432",
+          "size": 765,
+          "sha256": "78851784b0d6940edf8f73a05d891cc545d9eb898fee326a172553c0321f1ca6",
+          "name": "ado-product-facts.txt"
+        }
+      ],
+      "descriptionSha256": "1cebc9e412af7eb5758a1dcf072203d5b91f72b316ccdb9922933704530fc86d",
+      "localReport": "docs/defects/icp-ec03-tiktok-revision-reference-conflict-prod-20261117.md"
+    },
+    {
+      "id": "FWXC-630",
+      "workitemId": "d4c5033724b50514e1eee69c3c",
+      "key": "ICP-EC04-SPANISH-ONSCREEN-TEXT-NOT-REPLACED-PROD-20261117",
+      "case": "ICP-EC-04",
+      "coveredRounds": [
+        1,
+        3,
+        5
+      ],
+      "title": "【生产环境】【电商Case04】西语广告残留英文卖点和CTA，后续文字修改仅返回分析未生成修正版",
+      "url": "https://devops.aliyun.com/projex/project/1e401ac99539c3999e00e40006/bug#openWorkitemIdentifier=d4c5033724b50514e1eee69c3c",
+      "status": "🤔AI提缺陷",
+      "assignedTo": "牛诗晴",
+      "sprint": "重构10-29",
+      "labels": [
+        "生产环境"
+      ],
+      "priority": "高",
+      "seriousLevel": "2-严重",
+      "verified": true,
+      "syncedAt": "2026-11-17T10:12:02.9512687+08:00",
+      "screenshots": 5,
+      "attachments": 10,
+      "images": [
+        {
+          "name": "failed-step-0-english-text-not-localized.png",
+          "attachmentId": "1f6560eb92cd6984ae22c1ebe1",
+          "bytes": 160709,
+          "sha256": "3dc257a960957bc5c6ef08c169dc13741990620c490a32a81f151a4aa4c0e387",
+          "embedded": true,
+          "caption": "Case04第1轮完成页：已交付西语版，页面提示画面英文替换未完成。"
+        },
+        {
+          "name": "failed-step-0-english-selling-title-remains.png",
+          "attachmentId": "e982b8620edc80dada481ec124",
+          "bytes": 480877,
+          "sha256": "6d771234dae4894d8ac63a5060198ac8d6a924a8d65f0eef906cb395df5d4c39",
+          "embedded": true,
+          "caption": "Case04第1轮加载完成后的3.5秒预览：英文卖点和原英文字幕仍在，局部英西字幕重叠。"
+        },
+        {
+          "name": "failed-step-0-english-CTA-remains.png",
+          "attachmentId": "aaa8f1d589e332f3514eb8b252",
+          "bytes": 423905,
+          "sha256": "d2462b67ea9511ce858f739574cec7773853d263197b144670eff75ba0cd35cd",
+          "embedded": true,
+          "caption": "Case04第1轮加载完成后的31.5秒预览：结尾仍显示Shop Now。"
+        },
+        {
+          "name": "failed-step-2-CTA-analysis-only.png",
+          "attachmentId": "e59e26433e778a31c240aa1117",
+          "bytes": 206341,
+          "sha256": "5f40c72231f397ed11ec0fc7461c7169c732cd2943c6e53e58f9095b45b83e54",
+          "embedded": true,
+          "caption": "Case04第3轮：Descubre más修改任务只交付video-analysis.md。"
+        },
+        {
+          "name": "failed-step-4-text-replacement-analysis-only.png",
+          "attachmentId": "58e9047fcbe4d858696d5c3d87",
+          "bytes": 250884,
+          "sha256": "8429e7f3ef5c3e63d163b1a464411bd7eda82b44a2a03c3031028ea57fe835cd",
+          "embedded": true,
+          "caption": "Case04第5轮：应用明确未执行替换/遮盖、没有修改后视频。"
+        }
+      ],
+      "attachmentReceipts": [
+        {
+          "id": "1f6560eb92cd6984ae22c1ebe1",
+          "size": 160709,
+          "sha256": "3dc257a960957bc5c6ef08c169dc13741990620c490a32a81f151a4aa4c0e387",
+          "name": "failed-step-0-english-text-not-localized.png"
+        },
+        {
+          "id": "e982b8620edc80dada481ec124",
+          "size": 480877,
+          "sha256": "6d771234dae4894d8ac63a5060198ac8d6a924a8d65f0eef906cb395df5d4c39",
+          "name": "failed-step-0-english-selling-title-remains.png"
+        },
+        {
+          "id": "aaa8f1d589e332f3514eb8b252",
+          "size": 423905,
+          "sha256": "d2462b67ea9511ce858f739574cec7773853d263197b144670eff75ba0cd35cd",
+          "name": "failed-step-0-english-CTA-remains.png"
+        },
+        {
+          "id": "e59e26433e778a31c240aa1117",
+          "size": 206341,
+          "sha256": "5f40c72231f397ed11ec0fc7461c7169c732cd2943c6e53e58f9095b45b83e54",
+          "name": "failed-step-2-CTA-analysis-only.png"
+        },
+        {
+          "id": "58e9047fcbe4d858696d5c3d87",
+          "size": 250884,
+          "sha256": "8429e7f3ef5c3e63d163b1a464411bd7eda82b44a2a03c3031028ea57fe835cd",
+          "name": "failed-step-4-text-replacement-analysis-only.png"
+        },
+        {
+          "id": "93f4b6ef99d0ab51e607bea6d3",
+          "size": 9419,
+          "sha256": "ef427c6bbef98653ba057f2ac19306b59c7865e1113dc44fefc06141a44243a7",
+          "name": "case-evidence.json"
+        },
+        {
+          "id": "7f0a4e8a04203397a7e4ceb7f5",
+          "size": 8571,
+          "sha256": "f00fb33dfd0513fbb1ac6456c92b47eb73e642d9bca62b8a17f4e54145b092de",
+          "name": "material-index.json"
+        },
+        {
+          "id": "5ec0f94bd4ebe260c48c9d4676",
+          "size": 4018,
+          "sha256": "49779e1c7b163ad439517a1aa55a77c8c9d10d6b4caa987195c75feae2de825e",
+          "name": "prompt-sequence.md"
+        },
+        {
+          "id": "9248b009e3d47ecea67b514e0e",
+          "size": 765,
+          "sha256": "78851784b0d6940edf8f73a05d891cc545d9eb898fee326a172553c0321f1ca6",
+          "name": "ado-product-facts.txt"
+        },
+        {
+          "id": "3ff9a99a95815b93998992f742",
+          "size": 3942423,
+          "sha256": "4b1e8f64f7a33ae45bca7e174e9fd68fdbd65b23da908d8fb3e752226f5ec865",
+          "name": "english-ad-35s.mp4"
+        }
+      ],
+      "descriptionSha256": "5aee1e477640680ca7e93ccf27b7db1efd359cd65a7a72899f4a99751ed6a471",
+      "localReport": "docs/defects/icp-ec04-spanish-onscreen-text-not-replaced-prod-20261117.md"
+    },
+    {
+      "id": "FWXC-631",
+      "workitemId": "fc2731f00849917dfea1868f89",
+      "key": "ICP-EC05-AMAZON-AD-PROVIDER-FAILED-PROD-20261117",
+      "case": "ICP-EC-05",
+      "coveredRounds": [
+        1
+      ],
+      "title": "【生产环境】【电商Case05】根据吸尘器图片制作20秒广告时供应商视频处理失败，未交付成片",
+      "url": "https://devops.aliyun.com/projex/project/1e401ac99539c3999e00e40006/bug#openWorkitemIdentifier=fc2731f00849917dfea1868f89",
+      "status": "🤔AI提缺陷",
+      "assignedTo": "牛诗晴",
+      "sprint": "重构10-29",
+      "labels": [
+        "生产环境"
+      ],
+      "priority": "高",
+      "seriousLevel": "2-严重",
+      "verified": true,
+      "syncedAt": "2026-11-17T10:12:08.5588626+08:00",
+      "screenshots": 1,
+      "attachments": 5,
+      "images": [
+        {
+          "name": "failed-step-0-tencent-vod-provider.png",
+          "attachmentId": "0d8b0948f4fce2011444dcec29",
+          "bytes": 210771,
+          "sha256": "4b2b6a9c557aba3c354f8f1e8d31762508ad6cba3bf5e7a012e3f4fc2046dded",
+          "embedded": true,
+          "caption": "Case05第1轮：图片排序成功，生成视频显示Tencent VOD供应商处理失败。"
+        }
+      ],
+      "attachmentReceipts": [
+        {
+          "id": "0d8b0948f4fce2011444dcec29",
+          "size": 210771,
+          "sha256": "4b2b6a9c557aba3c354f8f1e8d31762508ad6cba3bf5e7a012e3f4fc2046dded",
+          "name": "failed-step-0-tencent-vod-provider.png"
+        },
+        {
+          "id": "f2930eef209f817457b5ec6e8f",
+          "size": 3434,
+          "sha256": "1a40f7f494d1b4042b4e05fec8f38938f6cb379736836fd0e04e9e9ce62de56d",
+          "name": "case-evidence.json"
+        },
+        {
+          "id": "402329ff2dbc6eaf31cc976e4a",
+          "size": 4643,
+          "sha256": "4db850ee59c3377d8f736d0d9bb0f4c8145b02d1fe43b1cb3c28647b5a699e01",
+          "name": "material-index.json"
+        },
+        {
+          "id": "98b34fe33ae435bc8c6463ecb9",
+          "size": 2513,
+          "sha256": "f2a19d9ba3842ec70446c30a0f2bb2851072264d832e8b21354c681241ad2c68",
+          "name": "prompt-sequence.md"
+        },
+        {
+          "id": "98d04ab7f3f69fb4be4d1748c4",
+          "size": 454,
+          "sha256": "a72725703bd8bad3787c4c72fb0cc0e6cd49c18544b07af4ba33a9721889cd16",
+          "name": "vacuum-product-facts.txt"
+        }
+      ],
+      "descriptionSha256": "0fce6c1f3ff773bf18ab53875087deb1838f6441c6ac3724268abd3422abba8d",
+      "localReport": "docs/defects/icp-ec05-amazon-ad-provider-failed-prod-20261117.md"
+    }
+  ],
+  "notSubmittedAsDefects": [
+    "Case01缺A及其依赖修改存在源素材/首稿缺口，不能全归因产品缺陷。",
+    "Case02/05第2～4轮6条缺前置未提交。",
+    "4轮假设错误未触发，未计缺陷。",
+    "Case05独立末轮已通过，首次补槽网络失败已恢复，不另报稳定缺陷。"
+  ],
+  "executionCountsUnchanged": {
+    "cases": {
+      "Failed": 5
+    },
+    "submitted": 19,
+    "notRunForPrerequisites": 6,
+    "businessCounts": {
+      "Failed": 12,
+      "Blocked": 1,
+      "Passed": 2,
+      "Not Applicable": 4
+    }
+  }
+}

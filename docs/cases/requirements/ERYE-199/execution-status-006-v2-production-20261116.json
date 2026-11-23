@@ -1,0 +1,47 @@
+{
+  "date": "2026-11-16",
+  "case": {
+    "id": "ERYE199-006",
+    "definition_revision": 2,
+    "fixture": {
+      "conversationId": "c06f02e6-4751-4349-a88d-ab6d683bfa84",
+      "editorId": "0f453b23-11ca-469b-a5f5-6c44d2c5b0d6",
+      "name": "ERYE199-006-v2-current-transform-20261116"
+    },
+    "completed": "2026-11-16T04:58:19.483Z",
+    "automation_status": "AUTO",
+    "script": "tools/editor/erye199/cases.mjs#006",
+    "status": "Passed",
+    "actual": "006 v2：中心序列像素(400,200)、50%等比缩放、顺时针30度在普通预览/全屏/刷新后均正确；实际播放正常，原片/源范围/10秒时间线/关联原声未改。独立蒙版、局部锚点及输入局部坐标跳过。",
+    "skipped_capabilities": [
+      "独立可编辑蒙版及其输入局部坐标",
+      "独立局部锚点及其坐标变换"
+    ],
+    "automation_command": "npm run test:editor:199 -- --base-url https://app.cinlink.ai --cases 006",
+    "execution_method": "Ego Lite生产有头；原自动化入口实跑；API仅准备/回读；无computer-use",
+    "latest_execution_report": "results-006-v2-current-transform-production-20261116.md",
+    "latest_execution_batch": "erye199-006-v2-20261116",
+    "workspace_id": "bfe54e5e-a9b0-4c88-99b9-ce353d786b4a",
+    "conversation_id": "c06f02e6-4751-4349-a88d-ab6d683bfa84",
+    "editor_id": "0f453b23-11ca-469b-a5f5-6c44d2c5b0d6",
+    "run_id": "run_v2_54dc746c4adc47bfa86e0a93931619b9",
+    "target_steps_executed": true,
+    "screenshots": [
+      "evidence-006-v2-current-transform-production-20261116/006-baseline.png",
+      "evidence-006-v2-current-transform-production-20261116/006-before-submit.png",
+      "evidence-006-v2-current-transform-production-20261116/006-agent-terminal.png",
+      "evidence-006-v2-current-transform-production-20261116/006-normal-verified.png",
+      "evidence-006-v2-current-transform-production-20261116/006-fullscreen-verified.png",
+      "evidence-006-v2-current-transform-production-20261116/006-refreshed-verified.png",
+      "evidence-006-v2-current-transform-production-20261116/006-playback-verified.png"
+    ],
+    "failure_screenshots": [],
+    "clarifications": []
+  },
+  "counts": {
+    "Passed": 1
+  },
+  "task_space": 3,
+  "task_space_finished": true,
+  "cloud_writes": 0
+}
