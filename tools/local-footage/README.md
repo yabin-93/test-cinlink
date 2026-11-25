@@ -1,15 +1,36 @@
+当前设计62条，连续编号LF-01～62；固定AUTO3/PLAN59。LF-29保留V2，LF-30采用V3.2范围精简，其余补充用例保持原设计。历史编号见[对照表](../../docs/design-cases/multi-workflow/local-footage-id-map-20261124.md)。
+
 # 本地素材查找专项运行
+
+## 文档写入范围
+
+用例正文仅维护设计与脚本映射，不添加执行结果、报告链接或日期流水。每例完成更新独立执行报告、状态表/JSON及进度；固定脚本状态与有头运行分开。旧临时记录脚本若会回写用例正文，不得继续直接使用。
+
+## LF-29～62执行范围
+
+[原正文共同准备R](../../docs/design-cases/multi-workflow/local-footage-p0-cases.md)适用于当前LF-29～62；LF-30采用V3.2，其余用例保持原设计。旧修订说明和报告沿用旧编号，查阅前核对映射。优先复用集合正确的项目，查询前逐文件确认分析，必要状态例外按正文。
+
+用户2026-11-24最新确认：LF-29～62只执行各用例正文，不额外设计、生成或执行扩散用例；本范围优先于通用“两条扩散”规则。正文原有步骤、参数组、多轮及必要前置/恢复检查仍按原要求执行。已执行的扩散结果和证据仅作历史额外测试保留，不计入本组必执行项，不影响原用例独立判定；不因取消后续扩散改写已观察事实。
+
+
+## 项目创建与分析条件
+
+无素材时不允许启动分析；项目创建不以已完成分析为前提。有素材但未分析与真正0素材是不同状态，不能用“已分析0个”推断项目无素材；也不据此推定无素材项目必须允许创建。 LF-30仅验证有素材但未分析时创建项目并跳过分析；按用户最新要求不再包含空素材准备、分析拦截及空素材查询。
+
+## 执行前逐文件确认分析
+
+用户2026-11-24明确要求执行查找前先分析素材。对普通查找用例，核对当前项目素材集合，进入实际分析详情逐文件确认目标素材及分析完成/可检索状态，并保存证据；不能只依据工作台汇总数字或历史缓存标记。未分析则通过真实UI先完成分析，已受理分析回读原批次，不重复提交。分析失败、时长读取失败或缺目录授权时，先处理准备步骤，暂停依赖的查找。专门验证未分析、部分就绪、失败恢复或不支持格式的用例，保留原始设计状态，不预先全量分析破坏测试前置。
 
 `npm run test:footage` 仅执行LF-01～03，有头、一个窗口、单worker、零自动重试，不并入默认预发/卡片套件。结果写入带时间戳的独立 `reports/local-footage-*`。
 
-前提：有效登录态、指定目录原视频、Chrome、Python/OpenCV、ffmpeg；当前机器均已具备。脚本会真实创建项目、上传/关联素材、分析并查询，可能消耗积分。首次原生文件夹选择需操作员选择脚本输出的临时夹具目录，后续自动继续；不伪造File System Access句柄或业务响应。
+固定脚本前提：有效登录态、指定目录原视频、Chrome、Python/OpenCV、ffmpeg，须按实际机器核对，不从历史运行推定就绪。脚本会真实创建项目、上传/关联素材、分析并查询，可能消耗积分。首次原生文件夹选择需操作员选择脚本输出的临时夹具目录，后续自动继续；不伪造File System Access句柄或业务响应。
 
-若本轮已通过产品UI上传四个原片，可设置 `CINLINK_FOOTAGE_SOURCE_PROJECT` 为该项目ID，LF-01直接使用它，LF-02/03新建单素材项目并关联相同原片；逐项验证文件集合及云端回读哈希。不要未经检查直接填入历史项目ID。
+若本轮已通过产品UI上传四个原片，可设置 `CINLINK_FOOTAGE_SOURCE_PROJECT` 为该项目ID，LF-01直接使用它，LF-02、LF-03新建单素材项目并关联相同原片；逐项验证文件集合及云端回读哈希。不要未经检查直接填入历史项目ID。
 
 可选配置：`CINLINK_FOOTAGE_REPORT_DIR`指定本轮全新报告目录；`CINLINK_FOOTAGE_MEDIA_ROOT`改变原片根目录（哈希须匹配登记）；`CINLINK_FOOTAGE_CHROME`指定已安装Chrome路径。`CINLINK_FOOTAGE_CDP_ENDPOINT`只接受本机地址，可复用一个已经登录的测试窗口，脚本结束后保留它供检查。
 
 修正断言或核验原结果时，设置 `CINLINK_FOOTAGE_RESUME_AUDIT_DIR` 指向已有逐例JSON目录，再指定新报告目录。脚本核对用例、提示词、原片哈希、原分析就绪证据后回读原run、下载和播放，**不重新提交任务**。必须保留原JSON、项目和会话，不能把回读称为新的服务端复测。
 
-用例与素材：[当前28条正文](../../docs/design-cases/multi-workflow/local-footage-p0-cases.md) · [新增F5/F6素材](../../docs/design-cases/multi-workflow/local-footage-p0-cases.md#lf-real-media)；[最新逐例执行状态](../../docs/design-cases/multi-workflow/local-footage-execution-status.md)。当前28条已执行，15 Failed/13 Passed（各例限定范围），新增11条本批7 Passed/4 Failed；自动化仍仅LF01～03，PLAN不等于未执行。旧[2026-11-04执行记录](../../docs/design-cases/multi-workflow/local-footage-results-20261104.md)保留作历史。
+用例与素材：[当前62条正文](../../docs/design-cases/multi-workflow/local-footage-p0-cases.md) · [最新逐例状态](../../docs/design-cases/multi-workflow/local-footage-execution-status.md) · [2026-11-24全量预发报告](../../docs/design-cases/multi-workflow/local-footage-results-staging-20261124.md)。本轮28条有头实际执行，27 Passed、1 Failed；固定脚本仍仅LF-01～03，其新版项目创建/入口需要适配，本轮未使用或验证固定脚本，原批次另25条PLAN；当前共59条PLAN。原片与设计从正文查阅；执行历史从独立状态表和报告查阅。
 
-当前Mac原片目录：`/Users/edy/Pictures/测试素材/单音频轨道/素材查找/`，已增至6片。旧LF01～17按各例F1～F4集合准备，不能整目录上传而改变范围；新增G56仅放F5 `7MB.mp4`与F6 `9s.mp4`，本轮预发项目3a1225cf-106d-4b61-86e8-e98158a18507已创建、上传2片并分析2/2。[本批报告](../../docs/design-cases/multi-workflow/local-footage-results-staging-18-35-20261110.md)。
+当前Mac原片目录：`/Users/edy/Pictures/测试素材/单音频轨道/素材查找/`，已增至6片。旧LF-01～17按各例F1～F4集合准备，不能整目录上传而改变范围；新增G56仅放F5 `7MB.mp4`与F6 `9s.mp4`，2026-11-24本轮预发项目eae9c93e-e9ac-471c-884c-24cf60399d22已创建、上传2片并分析2/2。[本批报告](../../docs/design-cases/multi-workflow/local-footage-results-staging-20261124.md)。

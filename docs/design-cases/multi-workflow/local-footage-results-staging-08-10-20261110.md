@@ -1,3 +1,5 @@
+> 编号说明：本文为调整前记录，使用旧LF编号；当前范围及编号请查[新旧编号对照](local-footage-id-map-20261124.md)。
+
 # LF-08～10预发执行记录（2026-11-10）
 
 > 本页为此前执行/口径修订记录；已按优化版真实重跑，当前结果见[最新报告](local-footage-results-optimized-staging-20261110.md)和[状态总表](local-footage-execution-status.md)，不删除本页历史证据。

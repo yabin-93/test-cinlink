@@ -63,3 +63,6 @@ LF-02：查询仙人掌，返回开头兔子片段，未含目标。
 LF-03：查询蓝衣男孩和仙人掌，返回开头兔子片段，未含目标。
 
 ![LF-03-boy-wrong-segment.png](https://devops.aliyun.com/projex/api/workitem/file/url?fileIdentifier=6309e07ae61a99eace6d5b65aa)
+
+
+2026-11-23T20:48:40.467406+08:00 本轮生产/yabinc18回归：原入口已移除，入口替代澄清尚未答复，严格原验收Blocked；两个独立当前入口扩散均实际Failed（HTTP404，无候选产物）。FWXC-275仍已修复，官方GET回读，不因扩散失败替代原验收写AI未通过。详见 [FWXC-275本轮报告](FWXC-275-retest-20261123-production.md)；完整会话、素材基线、未改动截图及结果见 reports/fixed-regression-production-20261123-161635/execution/275/final-result.json。旧脚本实现状态不追改。

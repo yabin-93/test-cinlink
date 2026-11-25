@@ -4,13 +4,13 @@ source: https://devops.aliyun.com/projex/req/ERYE-196
 status: designing
 automation_tag: "@ERYE-196"
 case_prefix: ERYE196
-updated: "2026-11-18"
+updated: "2026-11-25"
 comment_id: "23563211"
-execution_status: "71 Passed; 76 Failed; 8 Blocked; 3 Not Applicable; 0 Not Run; current revisions; histories retained"
+execution_status: "72 Passed; 75 Failed; 8 Blocked; 3 Not Applicable; 7 Not Run; current per-case records, historical reports retained"
 execution_report: results-016-047-chrome-prod-20261113.md
 latest_retest_report: results-001-rerun-20261105.md
 acceptance_001: "用户2026-11-05确认按可观察业务结果验收，不验证字段映射或服务端历史实现"
-latest_execution_report: "results-135-158-nl-chrome-prod-20261118.md"
+latest_execution_report: "results-011-165-chrome-prod-20261125.md"
 acceptance_002: "2026-11-13新版页面字幕列表核验Chrome生产Passed，刷新前后各143条一致；旧范围分页专项保留历史"
 acceptance_003: "用户2026-11-05明确按页面业务结果验收：跨标签页改文后的列表更新及刷新一致性，不验证游标或开发实现"
 acceptance_004: "2026-11-13用户要求需求明确存在而未实现则Failed；当前§03对象引用及移除明确，依据既有实测重新判定Failed，不是本次重跑"
@@ -30,7 +30,7 @@ latest_002_execution_report: results-002-chrome-prod-20261113.md
 
 latest_006_010_execution: "2026-11-13 Chrome production: 4 Passed, 1 Failed; script integration paused by user"
 
-latest_010_defect: "FWXC-490; production split failure; 3 screenshots and 1 audit attachment verified"
+latest_010_defect: "FWXC-768; selected-target location failure/no clarification; explicit follow-up split passed; production 2026-11-25; 3 screenshots and 1 audit verified"
 
 latest_016_047_execution: "Chrome production 2026-11-13: 15 Passed, 9 Failed, 7 Blocked, 1 Not Applicable; fixed scripts PLAN with empty path, integration paused"
 
@@ -184,10 +184,10 @@ latest_120_134_defect_sync_report: "docs/defects/ERYE196-NL-120-134-sync-prod-20
 latest_120_134_defect_sync_status: "9/9 groups; 12/12 failed cases; 5 new/4 associated"
 
 # 2026-11-18新增设计范围；已有执行汇总仅对应001～134。
-designed_case_count: 158
-latest_case_addition: "2026-11-18-editor-nl-135-158-v1"
-latest_case_addition_document: "supplement-135-158-natural-language-20261118.md"
-latest_case_addition_status: "24/24 execution records; {\"Failed\": 17, \"Passed\": 6, \"Blocked\": 1}; PLAN / empty scripts"
+designed_case_count: 165
+latest_case_addition: "2026-11-25-editor-nl-159-165"
+latest_case_addition_document: "coverage-supplement-159-165-20261125.md"
+latest_case_addition_status: "159-165: 7 Not Run; PLAN / empty scripts; design only"
 previous_execution_summary_scope: "001-134; 65 Passed/59 Failed/7 Blocked/3 Not Applicable before addition; reports retained"
 
 latest_135_158_execution_report: "results-135-158-nl-chrome-prod-20261118.md"
@@ -197,3 +197,22 @@ latest_135_158_execution_status: "24/24; {\"Failed\": 17, \"Passed\": 6, \"Block
 latest_135_158_defect_sync_report: "docs/defects/ERYE196-NL-135-158-sync-prod-20261118.md"
 
 latest_135_158_defect_sync_status: "9/9 groups; 17/17 failed cases; 3 new/6 associated"
+
+# 新增设计与历史实测分开，旧158条实际结论保持。
+latest_design_supplement: "2026-11-25-editor-nl-159-165"
+latest_design_supplement_document: "coverage-supplement-159-165-20261125.md"
+latest_design_supplement_status: "159-165: 7 Not Run; PLAN / empty scripts; no product execution"
+pending_005_006_groups: "005/B,005/C,006/B: Not Run; original executions retained"
+pending_coverage_plan: "pending-coverage-plan-20261125.md"
+
+previous_case_addition_135_158: "2026-11-18-editor-nl-135-158-v1; supplement-135-158-natural-language-20261118.md; 17 Failed / 6 Passed / 1 Blocked; original records retained"
+
+# ERYE196-001010-RUN-20261125
+latest_001_010_execution_report_20261125: "results-001-010-chrome-prod-20261125.md"
+latest_001_010_execution_status_20261125: "10/10; {'Passed': 7, 'Failed': 3}"
+# 当前逐条汇总见execution-status.json；本轮后71 Passed / 76 Failed / 8 Blocked / 3 Not Applicable / 7 Not Run，与全局摘要一致。
+# /ERYE196-001010-RUN-20261125
+
+previous_latest_execution_report_before_20261125_batch: "results-135-158-nl-chrome-prod-20261118.md"
+
+previous_latest_010_defect_before_20261125: "FWXC-490; production split failure; 3 screenshots and 1 audit attachment verified"

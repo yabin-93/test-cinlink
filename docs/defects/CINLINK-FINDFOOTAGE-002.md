@@ -52,3 +52,6 @@
 机器人命中，同时返回留声机与飞机两个无关片段。
 
 ![LF-01-search-unrelated-results.png](https://devops.aliyun.com/projex/api/workitem/file/url?fileIdentifier=7335a4240d3cf2ca15c53921eb)
+
+
+2026-11-23T20:48:40.467406+08:00 本轮生产/yabinc18回归：原入口已移除，入口替代澄清尚未答复，严格原验收Blocked；两个独立当前入口扩散均实际Failed（HTTP404，无候选产物）。FWXC-274仍已修复，官方GET回读，不因扩散失败替代原验收写AI未通过。详见 [FWXC-274本轮报告](FWXC-274-retest-20261123-production.md)；完整会话、素材基线、未改动截图及结果见 reports/fixed-regression-production-20261123-161635/execution/274/final-result.json。旧脚本实现状态不追改。

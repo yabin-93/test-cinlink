@@ -1,0 +1,3638 @@
+{
+  "updated": "2026-11-24",
+  "counts": {
+    "Passed": 35,
+    "Failed": 3,
+    "Blocked": 2,
+    "Not Applicable": 3,
+    "Not Run": 23
+  },
+  "cases": [
+    {
+      "id": "LF-01",
+      "status": "Passed",
+      "environment": "staging",
+      "automation": "AUTO",
+      "note": "执行通过：正式P4四原片上传与缓存分析完成，含无音轨F3；返回唯一12秒机器人候选，原片90.083～102.083秒。已实际播放并下载，黄色机器人、深色板面及桌子可见，无留声机/飞机混入；助手文字对黑板/桌子保留不确定说明。",
+      "report": "local-footage-results-staging-20261124.md",
+      "history": [
+        {
+          "status": "Failed",
+          "environment": "production",
+          "note": "机器人混入留声机/飞机",
+          "report": "local-footage-results-prod-20261110.md"
+        }
+      ],
+      "executed": "2026-11-24",
+      "execution_method": "ego-browser headed",
+      "conversation_id": "939da8b9-5479-4caa-825e-980656fb91fe",
+      "execution_script_status": "既有AUTO脚本，2026-11-24新版入口待适配；本轮未使用或验证固定脚本",
+      "design_revision_20261124": {
+        "historical_result_unchanged": true,
+        "scope_notes": [
+          "首次分析冷缓存分支未由本轮缓存结果覆盖"
+        ]
+      }
+    },
+    {
+      "id": "LF-02",
+      "status": "Passed",
+      "environment": "staging",
+      "automation": "AUTO",
+      "note": "执行通过：P1仅F1且分析完成，唯一候选9秒（原片0.083～9.083秒）。实际播放并检查8.3秒画面，绿色盆栽仙人掌、橙色兔子和蓝衣深裤男孩均可见，无其他源混入；助手对颜色/身份的文字不确定未替代实图验收。",
+      "report": "local-footage-results-staging-20261124.md",
+      "history": [
+        {
+          "status": "Failed",
+          "environment": "production",
+          "note": "两秒兔子片段缺仙人掌/男孩",
+          "report": "local-footage-results-prod-20261110.md"
+        }
+      ],
+      "executed": "2026-11-24",
+      "execution_method": "ego-browser headed",
+      "conversation_id": "2506ecd4-62bd-4390-b161-5c648870a49c",
+      "execution_script_status": "既有AUTO脚本，2026-11-24新版入口待适配；本轮未使用或验证固定脚本"
+    },
+    {
+      "id": "LF-03",
+      "status": "Passed",
+      "environment": "staging",
+      "automation": "AUTO",
+      "note": "执行通过：P2仅F2且分析完成，返回唯一9秒候选（原片0.083～9.083秒）。实际播放并核对8.3秒画面，蓝色上衣、深色裤子的卡通男孩和绿色盆栽仙人掌同时可见，来源为F2，无其他原片混入。",
+      "report": "local-footage-results-staging-20261124.md",
+      "history": [
+        {
+          "status": "Failed",
+          "environment": "production",
+          "note": "两秒兔子片段缺蓝衣男孩/仙人掌",
+          "report": "local-footage-results-prod-20261110.md"
+        }
+      ],
+      "executed": "2026-11-24",
+      "execution_method": "ego-browser headed",
+      "conversation_id": "9b194257-a4c3-4b61-b316-bef6b475d92a",
+      "execution_script_status": "既有AUTO脚本，2026-11-24新版入口待适配；本轮未使用或验证固定脚本"
+    },
+    {
+      "id": "LF-04",
+      "status": "Passed",
+      "environment": "staging",
+      "automation": "PLAN",
+      "note": "执行通过：P3仅无音轨F3，上传和缓存分析完成；唯一候选12秒、原片30.083～42.083秒，实际播放看见穿紫衣女孩与绿色乌龟，无转写或有声视频前置错误。",
+      "report": "local-footage-results-staging-20261124.md",
+      "defect": {
+        "key": "FWXC-389",
+        "url": "https://devops.aliyun.com/projex/project/1e401ac99539c3999e00e40006/bug#openWorkitemIdentifier=ef24914cd54923896d77ba80c2",
+        "relation": "已提交"
+      },
+      "history": [
+        {
+          "status": "Failed",
+          "environment": "staging",
+          "note": "女孩与乌龟目标漏检",
+          "report": "local-footage-results-staging-04-07-20261110.md"
+        }
+      ],
+      "executed": "2026-11-24",
+      "execution_method": "ego-browser headed",
+      "conversation_id": "1623dc85-00b6-462f-b989-965b967a76f6",
+      "execution_script_status": "PLAN；本轮有头实际执行，未接固定脚本"
+    },
+    {
+      "id": "LF-05",
+      "status": "Passed",
+      "environment": "staging",
+      "automation": "PLAN",
+      "note": "执行通过：已分析P4的独立空会话查询仅返回F4机器人候选，原片90.083～102.083秒；实际播放12秒视频，机器人、深色板面及桌子可见，未混入望远镜、留声机或其他源。",
+      "report": "local-footage-results-staging-20261124.md",
+      "defect": {
+        "key": "FWXC-390",
+        "url": "https://devops.aliyun.com/projex/project/1e401ac99539c3999e00e40006/bug#openWorkitemIdentifier=673e49a905e5a52e8ebff0e073",
+        "relation": "已提交"
+      },
+      "history": [
+        {
+          "status": "Failed",
+          "environment": "staging",
+          "note": "机器人混入留声机/飞机",
+          "report": "local-footage-results-staging-04-07-20261110.md"
+        }
+      ],
+      "executed": "2026-11-24",
+      "execution_method": "ego-browser headed",
+      "conversation_id": "af23e4ca-654e-4571-b691-7fbd0cb61ef9",
+      "execution_script_status": "PLAN；本轮有头实际执行，未接固定脚本"
+    },
+    {
+      "id": "LF-06",
+      "status": "Passed",
+      "environment": "staging",
+      "automation": "PLAN",
+      "note": "执行通过：同会话两轮分别命中F4首镜头0.083～14.833秒飞机和尾镜头285.083～300.000秒卫星。两候选均实际播放，飞机浅蓝背景、卫星星空及月亮圆体与源片金标相符；尾段未超300秒，未漏最后镜头，前轮历史保留。",
+      "report": "local-footage-results-staging-20261124.md",
+      "defect": {
+        "key": "FWXC-390",
+        "url": "https://devops.aliyun.com/projex/project/1e401ac99539c3999e00e40006/bug#openWorkitemIdentifier=673e49a905e5a52e8ebff0e073",
+        "relation": "已提交"
+      },
+      "history": [
+        {
+          "status": "Failed",
+          "environment": "staging",
+          "note": "飞机/卫星两轮混入无关候选",
+          "report": "local-footage-results-staging-04-07-20261110.md"
+        }
+      ],
+      "executed": "2026-11-24",
+      "execution_method": "ego-browser headed",
+      "conversation_id": "9e9dcaf9-7662-4421-94cc-036bb2e21248",
+      "execution_script_status": "PLAN；本轮有头实际执行，未接固定脚本"
+    },
+    {
+      "id": "LF-07",
+      "status": "Passed",
+      "environment": "staging",
+      "automation": "PLAN",
+      "note": "执行通过：P4四文件独立会话只返回F4火车候选，原片30.083～42.083秒、12秒1280×720。实际播放为绿色蒸汽火车与铁轨，无F1～F3或长颈鹿候选混入。",
+      "report": "local-footage-results-staging-20261124.md",
+      "defect": {
+        "key": "FWXC-390",
+        "url": "https://devops.aliyun.com/projex/project/1e401ac99539c3999e00e40006/bug#openWorkitemIdentifier=673e49a905e5a52e8ebff0e073",
+        "relation": "已提交"
+      },
+      "history": [
+        {
+          "status": "Failed",
+          "environment": "staging",
+          "note": "火车混入长颈鹿",
+          "report": "local-footage-results-staging-04-07-20261110.md"
+        }
+      ],
+      "executed": "2026-11-24",
+      "execution_method": "ego-browser headed",
+      "conversation_id": "81a81239-4de7-4eb2-891a-9d40ef1040c2",
+      "execution_script_status": "PLAN；本轮有头实际执行，未接固定脚本"
+    },
+    {
+      "id": "LF-08",
+      "status": "Passed",
+      "environment": "staging",
+      "automation": "PLAN",
+      "note": "执行通过：分别交付F1/F2/F3三个60秒原片，均实际播放并下载；三份下载字节数及SHA-256与原片逐一精确一致，没有漏F2、错误合并、重复冒充或F4混入。实际候选画面含仙人掌与兔子。",
+      "report": "local-footage-results-staging-20261124.md",
+      "defect": {
+        "key": "FWXC-395",
+        "url": "https://devops.aliyun.com/projex/project/1e401ac99539c3999e00e40006/bug#openWorkitemIdentifier=bea27b77acf70304e5b948f1b8",
+        "verified": true
+      },
+      "history": [
+        {
+          "status": "Failed",
+          "environment": "staging",
+          "note": "58秒，漏F2/误入F4；本轮F4哈希确认",
+          "report": "local-footage-results-optimized-staging-20261110.md"
+        }
+      ],
+      "executed": "2026-11-24",
+      "execution_method": "ego-browser headed",
+      "conversation_id": "a54a4c30-5389-4f02-8f28-c646408fb445",
+      "execution_script_status": "PLAN；本轮有头实际执行，未接固定脚本"
+    },
+    {
+      "id": "LF-09",
+      "status": "Passed",
+      "environment": "staging",
+      "automation": "PLAN",
+      "note": "执行通过：已分析P4中不存在真实足球比赛目标，28秒完成后页面明确显示“素材搜索：未找到匹配片段”，0候选、无伪匹配或服务错误；未将仅有done判为成功。",
+      "report": "local-footage-results-staging-20261124.md",
+      "history": [
+        {
+          "status": "Passed",
+          "environment": "staging",
+          "note": "47秒明确无匹配、0新增候选（UI）",
+          "report": "local-footage-results-staging-08-10-20261110.md"
+        }
+      ],
+      "executed": "2026-11-24",
+      "execution_method": "ego-browser headed",
+      "conversation_id": "e7e50f73-084e-4c40-890e-885ea44a5c38",
+      "execution_script_status": "PLAN；本轮有头实际执行，未接固定脚本"
+    },
+    {
+      "id": "LF-10",
+      "status": "Passed",
+      "environment": "staging",
+      "automation": "PLAN",
+      "note": "执行通过（页面必填范围）：输入为空及三个空格时发送按钮均禁用；恢复空值后前后消息仍为原四条，没有新增用户消息/run/候选。",
+      "report": "local-footage-results-staging-20261124.md",
+      "history": [
+        {
+          "status": "Passed",
+          "environment": "staging",
+          "note": "空值/空格禁用发送；网络未抓取（UI）",
+          "report": "local-footage-results-staging-08-10-20261110.md"
+        }
+      ],
+      "executed": "2026-11-24",
+      "execution_method": "ego-browser headed",
+      "conversation_id": "939da8b9-5479-4caa-825e-980656fb91fe",
+      "execution_script_status": "PLAN；本轮有头实际执行，未接固定脚本",
+      "design_revision_20261124": {
+        "historical_result_unchanged": true,
+        "scope_notes": [
+          "新增仅换行/制表符/全角空格参数组未执行"
+        ],
+        "new_scope_status": "Not Run"
+      }
+    },
+    {
+      "id": "LF-11",
+      "status": "Passed",
+      "environment": "staging",
+      "automation": "PLAN",
+      "note": "执行通过：仅F4的Q项目返回并实际播放机器人正向候选；仅F1～F3的P123项目相同查询明确无匹配、0候选，没有泄漏Q的F4文件名、缩略图或片段。两真实项目素材集合分别精确1个和3个，均完成缓存分析，未通过@或导入F4改变P123范围。",
+      "report": "local-footage-results-staging-20261124.md",
+      "history": [
+        {
+          "status": "Passed",
+          "environment": "staging",
+          "note": "Q命中机器人，P123明确无匹配（UI隔离）",
+          "report": "local-footage-results-staging-11-20261110.md"
+        }
+      ],
+      "executed": "2026-11-24",
+      "execution_method": "ego-browser headed",
+      "conversation_id": "816c926f-d5c4-4884-ab03-4d962eddc187",
+      "execution_script_status": "PLAN；本轮有头实际执行，未接固定脚本"
+    },
+    {
+      "id": "LF-12",
+      "status": "Passed",
+      "environment": "staging",
+      "automation": "PLAN",
+      "note": "执行通过：复用本轮P4已分析库，A会话机器人结果保留；同项目新B会话不上传、不重新分析、不@即命中唯一F4火车。返回A后机器人仍可实际播放，B保留自身火车候选及后续只读信息，未串改或覆盖A历史。",
+      "report": "local-footage-results-staging-20261124.md",
+      "defect": {
+        "key": "FWXC-390",
+        "url": "https://devops.aliyun.com/projex/project/1e401ac99539c3999e00e40006/bug#openWorkitemIdentifier=673e49a905e5a52e8ebff0e073",
+        "relation": "与已提交问题现象一致，根因未确认"
+      },
+      "history": [
+        {
+          "status": "Failed",
+          "environment": "staging",
+          "note": "39秒，火车正确但混入长颈鹿；A历史保留",
+          "report": "local-footage-results-optimized-staging-20261110.md"
+        }
+      ],
+      "executed": "2026-11-24",
+      "execution_method": "ego-browser headed",
+      "conversation_id": "A=939da8b9-5479-4caa-825e-980656fb91fe；B=81a81239-4de7-4eb2-891a-9d40ef1040c2",
+      "execution_script_status": "PLAN；本轮有头实际执行，未接固定脚本"
+    },
+    {
+      "id": "LF-13",
+      "status": "Passed",
+      "environment": "staging",
+      "automation": "PLAN",
+      "note": "执行通过：同一会话机器人→瀑布连续两轮，第二轮唯一F4瀑布候选15秒、原片270.083～285.083秒；实际播放看见岩壁、瀑布和水潭，第一轮机器人视频及文字历史仍保留。",
+      "report": "local-footage-results-staging-20261124.md",
+      "history": [
+        {
+          "status": "Passed",
+          "environment": "staging",
+          "note": "44/35秒，机器人→瀑布切换及历史保留通过（UI范围）",
+          "report": "local-footage-results-optimized-staging-20261110.md"
+        }
+      ],
+      "executed": "2026-11-24",
+      "execution_method": "ego-browser headed",
+      "conversation_id": "939da8b9-5479-4caa-825e-980656fb91fe",
+      "execution_script_status": "PLAN；本轮有头实际执行，未接固定脚本"
+    },
+    {
+      "id": "LF-14",
+      "status": "Passed",
+      "environment": "staging",
+      "automation": "PLAN",
+      "note": "执行通过（当前候选与会话引用范围）：复用本轮LF07火车查询，候选可实际播放；追加只读引用后准确读出同一match文件名、12秒时长及绿色火车/铁轨画面，未混用完整300秒原片，未新增生成视频或修改工程。",
+      "report": "local-footage-results-staging-20261124.md",
+      "defect": {
+        "key": "FWXC-390",
+        "url": "https://devops.aliyun.com/projex/project/1e401ac99539c3999e00e40006/bug#openWorkitemIdentifier=673e49a905e5a52e8ebff0e073",
+        "relation": "与已提交问题现象一致，根因未确认"
+      },
+      "history": [
+        {
+          "status": "Failed",
+          "environment": "staging",
+          "note": "火车可预览但混入长颈鹿；后续引用未完成确认",
+          "report": "local-footage-results-staging-14-20261110.md"
+        }
+      ],
+      "executed": "2026-11-24",
+      "execution_method": "ego-browser headed",
+      "conversation_id": "81a81239-4de7-4eb2-891a-9d40ef1040c2",
+      "execution_script_status": "PLAN；本轮有头实际执行，未接固定脚本",
+      "design_revision_20261124": {
+        "historical_result_unchanged": true,
+        "scope_notes": [
+          "新版只读引用原指令未重跑；历史原文见原报告"
+        ],
+        "new_scope_status": "Not Run"
+      }
+    },
+    {
+      "id": "LF-15",
+      "status": "Passed",
+      "environment": "staging",
+      "automation": "PLAN",
+      "note": "执行通过（当前页面范围）：刷新同一会话后，原查询、唯一机器人候选、来源文件及90.083～102.083秒区间保持；再次实际播放成功，12秒1280×720。刷新前后仅同一原run，未新增用户查询或分析。",
+      "report": "local-footage-results-staging-20261124.md",
+      "history": [
+        {
+          "status": "Passed",
+          "environment": "staging",
+          "note": "刷新后历史/候选保留，机器人可播放；网络及手动暂存未覆盖",
+          "report": "local-footage-results-staging-15-20261110.md"
+        }
+      ],
+      "executed": "2026-11-24",
+      "execution_method": "ego-browser headed",
+      "conversation_id": "939da8b9-5479-4caa-825e-980656fb91fe",
+      "execution_script_status": "PLAN；本轮有头实际执行，未接固定脚本",
+      "design_revision_20261124": {
+        "historical_result_unchanged": true,
+        "scope_notes": [
+          "未全面观察后台网络调用次数"
+        ]
+      }
+    },
+    {
+      "id": "LF-16",
+      "status": "Passed",
+      "environment": "staging",
+      "automation": "PLAN",
+      "note": "执行通过（客户端提交异常及恢复）：只在本测试页阻断真实turns提交后，页面显示“发送待确认”，保留原消息、提供“核对并重试原消息”，未伪装done或无匹配；服务端会话当时0消息。解除全部阻断后点击该入口一次，最终仅1条用户消息/1个run，返回并实际播放正确12秒机器人候选，输入恢复正常。",
+      "report": "local-footage-results-staging-20261124.md",
+      "history": [
+        {
+          "status": "Passed",
+          "environment": "staging",
+          "note": "客户端提交被阻断后明确失败，解除后重试200/43秒完成、机器人可播放；规则已清理",
+          "report": "local-footage-results-staging-16-20261110.md"
+        }
+      ],
+      "executed": "2026-11-24",
+      "execution_method": "ego-browser headed",
+      "conversation_id": "d4e80be7-f12e-4db7-9d9a-d0239a820f35",
+      "execution_script_status": "PLAN；本轮有头实际执行，未接固定脚本",
+      "design_revision_20261124": {
+        "historical_result_unchanged": true,
+        "scope_notes": [
+          "本例仅提交前客户端异常；已受理后异常归新增44/45"
+        ]
+      }
+    },
+    {
+      "id": "LF-17",
+      "status": "Passed",
+      "environment": "staging",
+      "automation": "PLAN",
+      "note": "执行通过：仅F2项目按目标旁白返回11.600～14.460秒候选，实际播放并下载约2.874秒视频。候选解码音频与未改原片11.600秒起音频相关度0.9981，确认取自用户此前听审含目标原句的同哈希原音区间，未用视觉命中或助手转述代替声音核验。",
+      "report": "local-footage-results-staging-20261124.md",
+      "preparation_project": "055b5131-5f11-4e5b-80c6-9d6a40ab3834",
+      "defect": {
+        "key": "FWXC-398",
+        "url": "https://devops.aliyun.com/projex/project/1e401ac99539c3999e00e40006/bug#openWorkitemIdentifier=f5f458852040ec3afba11cac2b",
+        "verified": true
+      },
+      "history": [
+        {
+          "status": "Failed",
+          "environment": "staging",
+          "note": "人工确认目标原句存在，单F2分析1/1，98秒明确无匹配；能力范围待确认",
+          "report": "local-footage-results-staging-17-20261110.md"
+        }
+      ],
+      "executed": "2026-11-24",
+      "execution_method": "ego-browser headed",
+      "conversation_id": "5805c29f-f280-4232-bd47-c2d96486e6c0",
+      "execution_script_status": "PLAN；本轮有头实际执行，未接固定脚本",
+      "design_revision_20261124": {
+        "historical_result_unchanged": true,
+        "scope_notes": [
+          "复用既有人审与同哈希音频对齐，非本轮新增逐字听审"
+        ]
+      }
+    },
+    {
+      "id": "LF-18",
+      "status": "Passed",
+      "environment": "staging",
+      "planned_environment": "staging",
+      "automation": "PLAN",
+      "priority": "P0",
+      "note": "执行通过（既定名称与原片交付验收）：完整文件名分别返回7MB.mp4和9s.mp4，均实际播放，女士/旗帜与男子/木桌/电脑不互换；两份下载字节数及SHA-256与原片精确一致，没有按7MB处理体积或将9s裁成9秒。另有项目归属误报，独立发现LF-NAME-PROJECT-WARNING。",
+      "report": "local-footage-results-staging-20261124.md",
+      "fixtures": [
+        "F5",
+        "F6"
+      ],
+      "chain_reuse": null,
+      "conversation_id": "1a0c3823-e928-4a82-b50b-e35eac0173bf",
+      "executed": "2026-11-24",
+      "history": [
+        {
+          "status": "Passed",
+          "environment": "staging",
+          "note": "两组各36秒，F5/F6名称及播放画面正确，下载哈希均与原片一致。",
+          "report": "local-footage-results-staging-18-35-20261110.md",
+          "executed": "2026-11-10"
+        }
+      ],
+      "execution_method": "ego-browser headed",
+      "execution_script_status": "PLAN；本轮有头实际执行，未接固定脚本",
+      "yunxiao_sync_20261124": {
+        "number": "FWXC-524",
+        "url": "https://devops.aliyun.com/projex/project/1e401ac99539c3999e00e40006/bug#openWorkitemIdentifier=70fcb61a331c0448bc3ebfb875",
+        "action": "associate",
+        "verified": true,
+        "scope": "independent_project_warning",
+        "case_status_unchanged": true
+      }
+    },
+    {
+      "id": "LF-20",
+      "status": "Passed",
+      "environment": "staging",
+      "planned_environment": "staging",
+      "automation": "PLAN",
+      "priority": "P0",
+      "note": "执行通过（部分名称匹配与候选交付）：空会话省略扩展名7MB一次返回唯一F5，实际播放为旗帜前黑外套蓝上衣女士，未触发体积处理或生成，无须补充完整名称。项目归属误报同样出现，关联独立发现LF-NAME-PROJECT-WARNING。",
+      "report": "local-footage-results-staging-20261124.md",
+      "fixtures": [
+        "F5",
+        "F6"
+      ],
+      "chain_reuse": null,
+      "conversation_id": "61aa4ca6-d80f-4e96-80c8-a6521d6e508a",
+      "executed": "2026-11-24",
+      "history": [
+        {
+          "status": "Passed",
+          "environment": "staging",
+          "note": "正式空会话部分名称7MB一次命中F5，播放为女士及旗帜，无须澄清，无生成。另一次有历史上下文的28秒探测不计正式结论。",
+          "report": "local-footage-results-staging-18-35-20261110.md",
+          "executed": "2026-11-10"
+        }
+      ],
+      "execution_method": "ego-browser headed",
+      "execution_script_status": "PLAN；本轮有头实际执行，未接固定脚本",
+      "yunxiao_sync_20261124": {
+        "number": "FWXC-524",
+        "url": "https://devops.aliyun.com/projex/project/1e401ac99539c3999e00e40006/bug#openWorkitemIdentifier=70fcb61a331c0448bc3ebfb875",
+        "action": "associate",
+        "verified": true,
+        "scope": "independent_project_warning",
+        "case_status_unchanged": true
+      },
+      "design_revision_20261124": {
+        "historical_result_unchanged": true,
+        "scope_notes": [
+          "直达与澄清后成功分开记录"
+        ]
+      }
+    },
+    {
+      "id": "LF-21",
+      "status": "Passed",
+      "environment": "staging",
+      "planned_environment": "staging",
+      "automation": "PLAN",
+      "priority": "P0",
+      "note": "执行通过（双文件分别交付）：同轮分别返回F5/F6两份原始视频，均已实际播放，女士旗帜与男子木桌电脑对应正确；没有漏项、重复冒充、合并或新成片。名称查询的项目归属误报在本轮复现，归入同一独立发现。",
+      "report": "local-footage-results-staging-20261124.md",
+      "fixtures": [
+        "F5",
+        "F6"
+      ],
+      "chain_reuse": null,
+      "conversation_id": "6e0d2712-1104-4204-b4b0-b0e1d6d96159",
+      "executed": "2026-11-24",
+      "history": [
+        {
+          "status": "Passed",
+          "environment": "staging",
+          "note": "两原片分别返回，各自播放为女士及男子，未漏项、误合并或混入其他素材。",
+          "report": "local-footage-results-staging-18-35-20261110.md",
+          "executed": "2026-11-10"
+        }
+      ],
+      "execution_method": "ego-browser headed",
+      "execution_script_status": "PLAN；本轮有头实际执行，未接固定脚本",
+      "yunxiao_sync_20261124": {
+        "number": "FWXC-524",
+        "url": "https://devops.aliyun.com/projex/project/1e401ac99539c3999e00e40006/bug#openWorkitemIdentifier=70fcb61a331c0448bc3ebfb875",
+        "action": "associate",
+        "verified": true,
+        "scope": "independent_project_warning",
+        "case_status_unchanged": true
+      }
+    },
+    {
+      "id": "LF-22",
+      "status": "Passed",
+      "environment": "staging",
+      "planned_environment": "staging",
+      "automation": "PLAN",
+      "priority": "P0",
+      "note": "执行通过：不存在的完整名称查询19秒结束，页面明确显示未找到匹配片段，0新增候选；前轮7MB历史保留但未被当作本轮命中，没有用其他视频替代或生成。",
+      "report": "local-footage-results-staging-20261124.md",
+      "fixtures": [
+        "F5",
+        "F6"
+      ],
+      "chain_reuse": null,
+      "conversation_id": "1a0c3823-e928-4a82-b50b-e35eac0173bf",
+      "executed": "2026-11-24",
+      "history": [
+        {
+          "status": "Failed",
+          "environment": "staging",
+          "note": "终态已完成，但仅回复将核对、若不存在将告知，未给出文件不存在/未找到的实际结论；无新增候选，前轮F5保留。",
+          "report": "local-footage-results-staging-18-35-20261110.md",
+          "executed": "2026-11-10"
+        }
+      ],
+      "execution_method": "ego-browser headed",
+      "execution_script_status": "PLAN；本轮有头实际执行，未接固定脚本"
+    },
+    {
+      "id": "LF-28",
+      "status": "Passed",
+      "environment": "staging",
+      "planned_environment": "staging",
+      "automation": "PLAN",
+      "priority": "P0",
+      "note": "执行通过（既定三轮链路验收）：同一会话三轮依次交付正确F5、明确无匹配、正确F6；中间未新增伪候选，最后一轮未锁死，两个原片和三轮历史均保留，无重新上传/分析或重复查询。项目归属误报随两次正向出现，另记独立发现。",
+      "report": "local-footage-results-staging-20261124.md",
+      "fixtures": [
+        "F5",
+        "F6"
+      ],
+      "chain_reuse": "LF18 parameter groups plus LF22 in one S-name; no duplicate query",
+      "conversation_id": "1a0c3823-e928-4a82-b50b-e35eac0173bf",
+      "executed": "2026-11-24",
+      "history": [
+        {
+          "status": "Failed",
+          "environment": "staging",
+          "note": "36/43/36秒三轮完成，F5到F6切换及历史保留正常，但中间不存在名称仅回复将核对，未给无匹配结论；复用LF18及LF22证据。",
+          "report": "local-footage-results-staging-18-35-20261110.md",
+          "executed": "2026-11-10"
+        }
+      ],
+      "execution_method": "ego-browser headed",
+      "execution_script_status": "PLAN；本轮有头实际执行，未接固定脚本",
+      "yunxiao_sync_20261124": {
+        "number": "FWXC-524",
+        "url": "https://devops.aliyun.com/projex/project/1e401ac99539c3999e00e40006/bug#openWorkitemIdentifier=70fcb61a331c0448bc3ebfb875",
+        "action": "associate",
+        "verified": true,
+        "scope": "independent_project_warning",
+        "case_status_unchanged": true
+      }
+    },
+    {
+      "id": "LF-30",
+      "status": "Passed",
+      "environment": "staging",
+      "planned_environment": "staging",
+      "automation": "PLAN",
+      "priority": "P0",
+      "note": "执行通过：空会话仅按画面描述查找，未输入文件名，唯一候选为F5；实际播放为旗帜前穿黑外套、蓝上衣的女士，未混入F6男子。",
+      "report": "local-footage-results-staging-20261124.md",
+      "fixtures": [
+        "F5",
+        "F6"
+      ],
+      "conversation_id": "c8a7e146-0926-400a-803d-449aa1531622",
+      "executed": "2026-11-24",
+      "history": [
+        {
+          "status": "Passed",
+          "environment": "staging",
+          "note": "不使用文件名，唯一候选7MB.mp4，实际播放为黑外套蓝上衣女士及旗帜，未混入男子。",
+          "report": "local-footage-results-staging-18-35-20261110.md",
+          "executed": "2026-11-10"
+        }
+      ],
+      "execution_method": "ego-browser headed",
+      "execution_script_status": "PLAN；本轮有头实际执行，未接固定脚本"
+    },
+    {
+      "id": "LF-31",
+      "status": "Passed",
+      "environment": "staging",
+      "planned_environment": "staging",
+      "automation": "PLAN",
+      "priority": "P0",
+      "note": "执行通过：未输入文件名，空会话内容查询唯一返回F6，实际播放可见黑框眼镜、深色T恤男子坐在木桌前，右侧有电脑；没有混入F5女士。",
+      "report": "local-footage-results-staging-20261124.md",
+      "fixtures": [
+        "F5",
+        "F6"
+      ],
+      "conversation_id": "e0742011-fd56-486d-87a9-21255f132994",
+      "executed": "2026-11-24",
+      "history": [
+        {
+          "status": "Passed",
+          "environment": "staging",
+          "note": "不使用文件名，唯一候选9s.mp4，播放确认为黑框眼镜男子、木桌与电脑，无女士混入。",
+          "report": "local-footage-results-staging-18-35-20261110.md",
+          "executed": "2026-11-10"
+        }
+      ],
+      "execution_method": "ego-browser headed",
+      "execution_script_status": "PLAN；本轮有头实际执行，未接固定脚本"
+    },
+    {
+      "id": "LF-32",
+      "status": "Passed",
+      "environment": "staging",
+      "planned_environment": "staging",
+      "automation": "PLAN",
+      "priority": "P0",
+      "note": "执行通过：G56两片没有宇航员月球场景，38秒完成后明确显示素材搜索未找到匹配片段，0候选；未拿女士/男子谈话冒充，没有模型429或服务异常。",
+      "report": "local-footage-results-staging-20261124.md",
+      "fixtures": [
+        "F5",
+        "F6"
+      ],
+      "conversation_id": "c1b3b80b-da97-4554-b645-9321e60be39c",
+      "executed": "2026-11-24",
+      "history": [
+        {
+          "status": "Passed",
+          "environment": "staging",
+          "note": "已由用户完整预览确认目标不存在；终态显示素材搜索未找到匹配片段，0候选，无生成。",
+          "report": "local-footage-results-staging-18-35-20261110.md",
+          "executed": "2026-11-10"
+        }
+      ],
+      "execution_method": "ego-browser headed",
+      "execution_script_status": "PLAN；本轮有头实际执行，未接固定脚本"
+    },
+    {
+      "id": "LF-33",
+      "status": "Passed",
+      "environment": "staging",
+      "planned_environment": "staging",
+      "automation": "PLAN",
+      "priority": "P1",
+      "note": "执行通过：明确要求两人在同一画面，22秒完成后显示无匹配，0候选；没有把分别出现女士和男子的F5/F6两片当作同框命中，也没有自动拼接/生成。",
+      "report": "local-footage-results-staging-20261124.md",
+      "fixtures": [
+        "F5",
+        "F6"
+      ],
+      "conversation_id": "486d96d8-8c38-4f1c-8504-081b28ee2932",
+      "executed": "2026-11-24",
+      "history": [
+        {
+          "status": "Failed",
+          "environment": "staging",
+          "note": "明确要求女士及男子同一画面，却返回7MB.mp4与9s.mp4两个独立候选；逐一播放只有各自人物，未说明不满足同框条件。根因未确认。",
+          "report": "local-footage-results-staging-18-35-20261110.md",
+          "executed": "2026-11-10"
+        }
+      ],
+      "execution_method": "ego-browser headed",
+      "execution_script_status": "PLAN；本轮有头实际执行，未接固定脚本"
+    },
+    {
+      "id": "LF-34",
+      "status": "Failed",
+      "environment": "staging",
+      "planned_environment": "staging",
+      "automation": "PLAN",
+      "priority": "P1",
+      "note": "Failed：已在同会话完成F6男子正向查询后，第二轮排除男子、查找女士请求实际受理，但run失败，页面报RuntimeError: model HTTP 429 / rate_limit_error / request is limited；没有交付本轮女士候选。前轮男子历史保留，不把它误计为本轮命中，也不把服务错误当正常无匹配。",
+      "report": "local-footage-results-staging-20261124.md",
+      "fixtures": [
+        "F5",
+        "F6"
+      ],
+      "conversation_id": "e0742011-fd56-486d-87a9-21255f132994",
+      "executed": "2026-11-24",
+      "history": [
+        {
+          "status": "Passed",
+          "environment": "staging",
+          "note": "复用LF31前轮F6，排除男子后唯一返回F5，实际播放女士正确，男子历史仍保留；之后项目分析仍2/2，无删除或生成任务。",
+          "report": "local-footage-results-staging-18-35-20261110.md",
+          "executed": "2026-11-10"
+        }
+      ],
+      "execution_method": "ego-browser headed",
+      "execution_script_status": "PLAN；本轮有头实际执行，未接固定脚本",
+      "yunxiao_sync_20261124": {
+        "number": "FWXC-745",
+        "url": "https://devops.aliyun.com/projex/project/1e401ac99539c3999e00e40006/bug#openWorkitemIdentifier=c7efa4b01dcd3245c7471cd75c",
+        "action": "new",
+        "verified": true,
+        "scope": "case_failure",
+        "case_status_unchanged": true
+      },
+      "design_revision_20261124": {
+        "historical_result_unchanged": true,
+        "scope_notes": [
+          "429服务失败，排除语义未完成，历史Failed保持"
+        ]
+      }
+    },
+    {
+      "id": "LF-35",
+      "status": "Passed",
+      "environment": "staging",
+      "planned_environment": "staging",
+      "automation": "PLAN",
+      "priority": "P1",
+      "note": "执行通过（候选选择收敛）：首轮列出F6男子、F5女士两个候选供选择，分别实际播放；补充男子的唯一描述后明确选中候选1即9s.mp4，未继续将F5作为最终选择，也未生成或处理视频。最终再次播放所选男子原片成功。首轮项目归属提示误报另记独立发现。",
+      "report": "local-footage-results-staging-20261124.md",
+      "fixtures": [
+        "F5",
+        "F6"
+      ],
+      "conversation_id": "5f773d7d-5dc7-4d4d-92a2-4e13dd6bf606",
+      "executed": "2026-11-24",
+      "history": [
+        {
+          "status": "Failed",
+          "environment": "staging",
+          "note": "首轮仅列F5；补充选择男子后，本轮新返回F6及不符合条件的F5，均实际播放核验，回复仍称暂不能选、将重新检索，未收敛到明确男子选择。不是仅因旧历史保留而失败。",
+          "report": "local-footage-results-staging-18-35-20261110.md",
+          "executed": "2026-11-10"
+        }
+      ],
+      "execution_method": "ego-browser headed",
+      "execution_script_status": "PLAN；本轮有头实际执行，未接固定脚本",
+      "yunxiao_sync_20261124": {
+        "number": "FWXC-524",
+        "url": "https://devops.aliyun.com/projex/project/1e401ac99539c3999e00e40006/bug#openWorkitemIdentifier=70fcb61a331c0448bc3ebfb875",
+        "action": "associate",
+        "verified": true,
+        "scope": "independent_project_warning",
+        "case_status_unchanged": true
+      }
+    },
+    {
+      "id": "LF-36",
+      "title": "命中后的项目归属说明",
+      "status": "Failed",
+      "environment": "staging",
+      "planned_environment": "staging",
+      "automation": "PLAN",
+      "script": null,
+      "priority": "P0",
+      "note": "V2原提示词返回正确7MB.mp4完整原片，实际播放、下载SHA与源一致；当前“查找素材”项目含同一源且发送前已确认逐文件分析完成，回复仍误报项目ID不一致、无法确认归属，归属说明失败。",
+      "report": "local-footage-results-36-40-v2-staging-20261124-145413.md",
+      "fixtures": [
+        "F5",
+        "F6"
+      ],
+      "category": "一般补强",
+      "created": "2026-11-24",
+      "precondition_gate": null,
+      "execution_script_status": "PLAN；V2本轮有头执行，未接固定脚本",
+      "history": [
+        {
+          "status": "Not Run",
+          "note": "2026-11-24新增设计，未执行；命中后的项目归属说明",
+          "report": null,
+          "environment": null
+        },
+        {
+          "status": "Failed",
+          "note": "当前G56精确包含F5/F6，按原指令返回且实际播放正确7MB.mp4，下载SHA与原片一致；回复仍称项目ID不一致、无法确认属于当前项目，独立说明验收失败。",
+          "report": "local-footage-results-36-50-staging-20261124.md",
+          "environment": "staging",
+          "executed": "2026-11-24",
+          "conversation_id": "f599d563-4ba0-4561-9a6b-90fe9525e877"
+        },
+        {
+          "status": "Failed",
+          "note": "本轮原提示词返回未找到匹配片段、0预览；G56当前membership仍含7MB.mp4/9s.mp4且页面分析2/2。未交付正确原片，Failed；旧批次命中后归属误报记录保留，不因该文案未出现判修复。",
+          "report": "local-footage-LF36-rerun-135743-staging-20261124.md",
+          "environment": "staging",
+          "conversation_id": "67bf79f9-b5fb-4ca9-846d-14ac788274a0",
+          "executed": "2026-11-24"
+        },
+        {
+          "status": "Failed",
+          "note": "本轮发送前逐文件确认7MB.mp4与9s.mp4已有分析五阶段（含检索准备）完成，G56真实包含两原片；原提示词仍返回未找到匹配片段、0原片预览，Failed。",
+          "report": "local-footage-LF36-analyzed-rerun-140936-staging-20261124.md",
+          "environment": "staging",
+          "conversation_id": "bb3d6c6d-f08d-470c-b9ce-791da6822c02",
+          "executed": "2026-11-24"
+        },
+        {
+          "status": "Passed",
+          "note": "按用户指定“查找素材”新项目（6文件）执行，发送前逐文件确认分析完成；原提示词正确交付7MB.mp4、实际播放及下载SHA一致，Passed。历史额外扩散结果保留于报告，不纳入LF-36～73必执行范围。",
+          "report": "local-footage-LF36-user-project-143056-staging-20261124.md",
+          "environment": "staging",
+          "conversation_id": "c1192924-2e15-4f96-bf26-dabf4a116756",
+          "executed": "2026-11-24",
+          "design_revision": {
+            "id": "LF3673-V2-20261124",
+            "date": "2026-11-24",
+            "execution_status": "Not Run",
+            "scope": "body only; no additional diffusion",
+            "previous_execution_preserved": true,
+            "summary": "精简前置/步骤/预期；逐文件先分析；条件与必要参数组明确"
+          }
+        }
+      ],
+      "executed": "2026-11-24",
+      "execution_method": "ego-browser headed",
+      "evidence": [
+        "/Users/edy/Documents/cinlink-test/test-cinlink/reports/local-footage-36-40-v2-20261124-145413/LF36-analysis-5.png",
+        "/Users/edy/Documents/cinlink-test/test-cinlink/reports/local-footage-36-40-v2-20261124-145413/LF36-analysis-6.png",
+        "/Users/edy/Documents/cinlink-test/test-cinlink/reports/local-footage-36-40-v2-20261124-145413/LF36-analysis.json",
+        "/Users/edy/Documents/cinlink-test/test-cinlink/reports/local-footage-36-40-v2-20261124-145413/LF36-membership.json",
+        "/Users/edy/Documents/cinlink-test/test-cinlink/reports/local-footage-36-40-v2-20261124-145413/LF36-final-state.json",
+        "/Users/edy/Documents/cinlink-test/test-cinlink/reports/local-footage-36-40-v2-20261124-145413/LF36-final-conversation.json",
+        "/Users/edy/Documents/cinlink-test/test-cinlink/reports/local-footage-36-40-v2-20261124-145413/LF36-result.png",
+        "/Users/edy/Documents/cinlink-test/test-cinlink/reports/local-footage-36-40-v2-20261124-145413/LF36-preview.png",
+        "/Users/edy/Documents/cinlink-test/test-cinlink/reports/local-footage-36-40-v2-20261124-145413/LF36-source-verification.json"
+      ],
+      "conversation_id": "4ed7dfc9-073f-4757-a3a4-a5c9b6de48a1",
+      "analysis_precondition_recheck": {
+        "timing": "before this query",
+        "project": "查找素材",
+        "project_id": "fa7a542e-cbe5-4e49-9b45-a001d37ca08d",
+        "files": 6,
+        "status": "five completed stages per file including retrieval preparation",
+        "cached_analysis": true
+      },
+      "historical_extra_tests": [
+        {
+          "kind": "additional diffusion",
+          "results": {
+            "E1": "Failed",
+            "E2": "Failed"
+          },
+          "report": "local-footage-LF36-user-project-143056-staging-20261124.md",
+          "excluded_from_required_scope": true,
+          "scope_changed": "2026-11-24"
+        }
+      ],
+      "design_revision": {
+        "id": "LF3673-V2-20261124",
+        "date": "2026-11-24",
+        "execution_status": "Failed",
+        "scope": "body only; no additional diffusion",
+        "previous_execution_preserved": true,
+        "summary": "精简前置/步骤/预期；逐文件先分析；条件与必要参数组明确",
+        "execution_report": "local-footage-results-36-40-v2-staging-20261124-145413.md",
+        "executed": "2026-11-24"
+      },
+      "execution_phases": [
+        {
+          "name": "素材/分析前置",
+          "status": "Passed",
+          "detail": "逐文件核对五阶段完成，F5/F6在完整6成员清单中"
+        },
+        {
+          "name": "原片交付和播放",
+          "status": "Passed",
+          "detail": "7815126字节、完整60.495778秒，源SHA精确一致"
+        },
+        {
+          "name": "项目归属说明",
+          "status": "Failed",
+          "detail": "合法成员被误报无法确认归属"
+        }
+      ],
+      "yunxiao_sync_latest": {
+        "date": "2026-11-24",
+        "number": "FWXC-524",
+        "url": "https://devops.aliyun.com/projex/project/1e401ac99539c3999e00e40006/bug#openWorkitemIdentifier=70fcb61a331c0448bc3ebfb875",
+        "action": "associate",
+        "comment_id": "24509985",
+        "verified": true,
+        "images": 2,
+        "audit_attachments": 1,
+        "status_unchanged": "待确认",
+        "type_unchanged": "优化",
+        "scope": "LF-36 V2失败补充，非严格原缺陷修复回归"
+      }
+    },
+    {
+      "id": "LF-37",
+      "title": "未分析素材时创建项目",
+      "status": "Passed",
+      "environment": "staging",
+      "planned_environment": "staging",
+      "automation": "PLAN",
+      "script": null,
+      "priority": "P1",
+      "note": "V3.2仅保留未分析创建项目：依据V3.1 A组既有实测Passed重评，真实1素材创建、跳过分析后0/1；本次未重跑。原空素材B组移出范围，旧Blocked及未覆盖事实保留，不补算通过。",
+      "report": "local-footage-LF37-v32-scope-20261124.md",
+      "fixtures": [
+        "F5"
+      ],
+      "category": "一般补强",
+      "created": "2026-11-24",
+      "precondition_gate": "单合法媒体，本次未启动分析；不要求真实空素材项目",
+      "execution_script_status": "PLAN；复用V3.1有头实测证据重评，未新增执行或固定脚本",
+      "history": [
+        {
+          "status": "Not Run",
+          "note": "2026-11-24新增设计，未执行；空项目检索；前置条件：实际空项目入口",
+          "report": null,
+          "environment": null
+        },
+        {
+          "status": "Blocked",
+          "note": "空目录选择后创建仍禁用。另通过仅含TXT的文件夹创建项目，页面显示0可分析媒体，但真实membership含1个document，未将其冒充0素材空项目。精确空项目入口前置仍未满足，正式检索未发。",
+          "report": "local-footage-results-36-50-staging-20261124.md",
+          "environment": "staging",
+          "conversation_id": null,
+          "executed": "2026-11-24",
+          "design_revision": {
+            "id": "LF3673-V2-20261124",
+            "date": "2026-11-24",
+            "execution_status": "Not Run",
+            "scope": "body only; no additional diffusion",
+            "previous_execution_preserved": true,
+            "summary": "精简前置/步骤/预期；逐文件先分析；条件与必要参数组明确"
+          }
+        },
+        {
+          "id": "LF-37",
+          "title": "未分析项目创建与空素材校验",
+          "status": "Blocked",
+          "environment": "staging",
+          "planned_environment": "staging",
+          "automation": "PLAN",
+          "script": null,
+          "priority": "P1",
+          "note": "当前创建项目入口在仅填名称、选择真实0文件空目录后，创建按钮均禁用；页面仍显示未添加文件夹，未创建0素材项目。未用TXT项目冒充空库，正式检索未发送，空项目前置阻塞。",
+          "report": "local-footage-results-36-40-v2-staging-20261124-145413.md",
+          "fixtures": [],
+          "category": "一般补强",
+          "created": "2026-11-24",
+          "precondition_gate": "A组未分析项目创建；B组真实0素材状态，仅阻塞缺失的B组",
+          "execution_script_status": "PLAN；V2本轮有头执行，未接固定脚本",
+          "executed": "2026-11-24",
+          "execution_method": "ego-browser headed",
+          "evidence": [
+            "/Users/edy/Documents/cinlink-test/test-cinlink/reports/local-footage-36-40-v2-20261124-145413/LF37-create-entry.png",
+            "/Users/edy/Documents/cinlink-test/test-cinlink/reports/local-footage-36-40-v2-20261124-145413/LF37-create-entry.txt",
+            "/Users/edy/Documents/cinlink-test/test-cinlink/reports/local-footage-36-40-v2-20261124-145413/LF37-no-folder-state.json",
+            "/Users/edy/Documents/cinlink-test/test-cinlink/reports/local-footage-36-40-v2-20261124-145413/LF37-empty-directory-state.json",
+            "/Users/edy/Documents/cinlink-test/test-cinlink/reports/local-footage-36-40-v2-20261124-145413/LF37-empty-directory.png",
+            "/Users/edy/Documents/cinlink-test/test-cinlink/reports/local-footage-36-40-v2-20261124-145413/LF37-empty-directory.txt"
+          ],
+          "design_revision": {
+            "id": "LF37-V3.1-20261124",
+            "date": "2026-11-24",
+            "execution_status": "Not Run",
+            "scope": "body only; no additional diffusion",
+            "change": "无素材时不允许启动分析；项目创建不以已完成分析为前提。有素材但未分析与真正0素材是不同状态，不能用“已分析0个”推断项目无素材；也不据此推定无素材项目必须允许创建。",
+            "previous_execution_preserved": true
+          },
+          "execution_phases": [
+            {
+              "name": "真实0素材项目准备",
+              "status": "Blocked",
+              "detail": "仅名称和真实空目录均无法启用创建"
+            },
+            {
+              "name": "空库正式查询",
+              "status": "Not Run",
+              "detail": "依赖真实空项目，不发送"
+            }
+          ]
+        },
+        {
+          "id": "LF-37",
+          "title": "未分析项目创建与空素材校验",
+          "status": "Blocked",
+          "environment": "staging",
+          "planned_environment": "staging",
+          "automation": "PLAN",
+          "script": null,
+          "priority": "P1",
+          "note": "V3.1：A组Passed；真实单素材项目未分析即创建成功，跳过后工作台0/1。B组真实空目录未被接纳、创建禁用，无法取得0素材项目；仅B组无素材分析拦截及空素材查询阻塞，查询未发。无确认产品失败。",
+          "report": "local-footage-LF37-v31-staging-20261124.md",
+          "fixtures": [
+            "F5"
+          ],
+          "category": "一般补强",
+          "created": "2026-11-24",
+          "precondition_gate": "A组未分析项目创建；B组真实0素材状态，仅阻塞缺失的B组",
+          "execution_script_status": "PLAN；V3.1本轮ego有头执行，未接固定脚本",
+          "executed": "2026-11-24",
+          "execution_method": "ego-browser headed",
+          "evidence": [
+            "/Users/edy/Documents/cinlink-test/test-cinlink/reports/local-footage-LF37-v31-staging-20261124/A-folder-selected.png",
+            "/Users/edy/Documents/cinlink-test/test-cinlink/reports/local-footage-LF37-v31-staging-20261124/A-created-unanalysed.png",
+            "/Users/edy/Documents/cinlink-test/test-cinlink/reports/local-footage-LF37-v31-staging-20261124/A-workspace-stable.png",
+            "/Users/edy/Documents/cinlink-test/test-cinlink/reports/local-footage-LF37-v31-staging-20261124/A-members.json",
+            "/Users/edy/Documents/cinlink-test/test-cinlink/reports/local-footage-LF37-v31-staging-20261124/B-empty-folder.json",
+            "/Users/edy/Documents/cinlink-test/test-cinlink/reports/local-footage-LF37-v31-staging-20261124/B-empty-folder.png",
+            "/Users/edy/Documents/cinlink-test/test-cinlink/reports/local-footage-LF37-v31-staging-20261124/B-empty-folder-state.json",
+            "/Users/edy/Documents/cinlink-test/test-cinlink/reports/local-footage-LF37-v31-staging-20261124/checkpoint.json"
+          ],
+          "design_revision": {
+            "id": "LF37-V3.1-20261124",
+            "date": "2026-11-24",
+            "execution_status": "Blocked",
+            "scope": "body only; no additional diffusion",
+            "change": "无素材时不允许启动分析；项目创建不以已完成分析为前提。有素材但未分析与真正0素材是不同状态，不能用“已分析0个”推断项目无素材；也不据此推定无素材项目必须允许创建。",
+            "previous_execution_preserved": true,
+            "execution_report": "local-footage-LF37-v31-staging-20261124.md",
+            "executed": "2026-11-24",
+            "phase_summary": "A Passed; B precondition Blocked; no confirmed failure"
+          },
+          "execution_phases": [
+            {
+              "name": "A组未分析创建项目",
+              "status": "Passed",
+              "detail": "真实UI创建1素材项目，跳过分析后0/1；无分析提交"
+            },
+            {
+              "name": "B组真实0素材前置",
+              "status": "Blocked",
+              "detail": "空目录返回未添加文件夹，创建禁用；不要求空项目可创建"
+            },
+            {
+              "name": "B组无素材分析拦截",
+              "status": "Blocked",
+              "detail": "缺真实0素材状态，未验该分析入口"
+            },
+            {
+              "name": "B组空素材查询",
+              "status": "Not Run",
+              "detail": "缺B组前置，正式查询未发送"
+            }
+          ],
+          "project_id": "c4eaa5f6-a43e-40a2-8b12-75e99a3d1e81",
+          "conversation_id": null
+        }
+      ],
+      "executed": "2026-11-24",
+      "execution_method": "ego-browser headed",
+      "evidence": [
+        "/Users/edy/Documents/cinlink-test/test-cinlink/reports/local-footage-LF37-v31-staging-20261124/A-folder-selected.png",
+        "/Users/edy/Documents/cinlink-test/test-cinlink/reports/local-footage-LF37-v31-staging-20261124/A-created-unanalysed.png",
+        "/Users/edy/Documents/cinlink-test/test-cinlink/reports/local-footage-LF37-v31-staging-20261124/A-workspace-stable.png",
+        "/Users/edy/Documents/cinlink-test/test-cinlink/reports/local-footage-LF37-v31-staging-20261124/A-members.json",
+        "/Users/edy/Documents/cinlink-test/test-cinlink/reports/local-footage-LF37-v31-staging-20261124/B-empty-folder.json",
+        "/Users/edy/Documents/cinlink-test/test-cinlink/reports/local-footage-LF37-v31-staging-20261124/B-empty-folder.png",
+        "/Users/edy/Documents/cinlink-test/test-cinlink/reports/local-footage-LF37-v31-staging-20261124/B-empty-folder-state.json",
+        "/Users/edy/Documents/cinlink-test/test-cinlink/reports/local-footage-LF37-v31-staging-20261124/checkpoint.json"
+      ],
+      "design_revision": {
+        "id": "LF37-V3.2-20261124",
+        "date": "2026-11-24",
+        "execution_status": "Passed",
+        "scope": "unanalysed single-media project creation only; no additional diffusion",
+        "change": "用户明确移除阻塞的空素材分支；只保留原A组已实测步骤",
+        "previous_execution_preserved": true,
+        "assessment_method": "scope reassessment from V3.1 A evidence; no new execution",
+        "assessment_report": "local-footage-LF37-v32-scope-20261124.md",
+        "evidence_report": "local-footage-LF37-v31-staging-20261124.md"
+      },
+      "execution_phases": [
+        {
+          "name": "未分析创建项目并跳过分析",
+          "status": "Passed",
+          "detail": "依据V3.1 A组真实1素材创建和工作台0/1证据；范围重评，非新重跑"
+        }
+      ],
+      "design_revision_history": [
+        {
+          "id": "LF3673-V2-20261124",
+          "date": "2026-11-24",
+          "execution_status": "Blocked",
+          "scope": "body only; no additional diffusion",
+          "previous_execution_preserved": true,
+          "summary": "精简前置/步骤/预期；逐文件先分析；条件与必要参数组明确",
+          "execution_report": "local-footage-results-36-40-v2-staging-20261124-145413.md",
+          "executed": "2026-11-24"
+        },
+        {
+          "id": "LF3773-V3-20261124",
+          "date": "2026-11-24",
+          "execution_status": "Not Run",
+          "scope": "body only; no additional diffusion",
+          "change": "前置/步骤/预期压缩，完整提示词与参数组保留",
+          "previous_execution_preserved": true
+        },
+        {
+          "id": "LF37-V3.1-20261124",
+          "date": "2026-11-24",
+          "execution_status": "Blocked",
+          "scope": "body only; no additional diffusion",
+          "change": "无素材时不允许启动分析；项目创建不以已完成分析为前提。有素材但未分析与真正0素材是不同状态，不能用“已分析0个”推断项目无素材；也不据此推定无素材项目必须允许创建。",
+          "previous_execution_preserved": true,
+          "execution_report": "local-footage-LF37-v31-staging-20261124.md",
+          "executed": "2026-11-24",
+          "phase_summary": "A Passed; B precondition Blocked; no confirmed failure"
+        }
+      ],
+      "project_id": "c4eaa5f6-a43e-40a2-8b12-75e99a3d1e81",
+      "conversation_id": null
+    },
+    {
+      "id": "LF-38",
+      "title": "部分素材分析就绪的范围说明",
+      "status": "Blocked",
+      "environment": "staging",
+      "planned_environment": "staging",
+      "automation": "PLAN",
+      "script": null,
+      "priority": "P0",
+      "note": "V3：F5已分析命中、播放及原片哈希通过；F6未就绪查询提示先分析更多视频，0新增候选。补F6分析时重试读取后仍无时长、确认禁用，0分析受理；第三查询未发，仅就绪后分支阻塞。第一轮归属误报单独关联LF36既有观察。",
+      "report": "local-footage-LF38-v3-staging-20261124.md",
+      "fixtures": [
+        "F5",
+        "F6"
+      ],
+      "category": "一般补强",
+      "created": "2026-11-24",
+      "precondition_gate": "真实部分就绪状态；不得伪造业务响应",
+      "execution_script_status": "PLAN；V3本轮有头执行，未接固定脚本",
+      "history": [
+        {
+          "status": "Not Run",
+          "note": "2026-11-24新增设计，未执行；部分素材分析就绪的范围说明；前置条件：真实部分就绪状态；不得伪造业务响应",
+          "report": null,
+          "environment": null
+        },
+        {
+          "status": "Blocked",
+          "note": "已用F5原片与F6仅重新封装副本建立部分就绪项目：仅分析F5，F6明确排除。女士查询交付正确F5；男子未就绪查询0新候选并提示先分析更多视频，前两分支通过。后续页面只提供已完成结果，未找到重新纳入被排除文件的分析入口；一次自然语言准备仅完成素材列表读取，未建立F6分析，补跑分支阻塞。",
+          "report": "local-footage-results-36-50-staging-20261124.md",
+          "environment": "staging",
+          "conversation_id": "06895f2d-d4c4-4df8-9747-2bf58258df6d",
+          "executed": "2026-11-24",
+          "design_revision": {
+            "id": "LF3673-V2-20261124",
+            "date": "2026-11-24",
+            "execution_status": "Not Run",
+            "scope": "body only; no additional diffusion",
+            "previous_execution_preserved": true,
+            "summary": "精简前置/步骤/预期；逐文件先分析；条件与必要参数组明确"
+          }
+        },
+        {
+          "id": "LF-38",
+          "title": "部分素材分析就绪的范围说明",
+          "status": "Blocked",
+          "environment": "staging",
+          "planned_environment": "staging",
+          "automation": "PLAN",
+          "script": null,
+          "priority": "P0",
+          "note": "部分就绪项目当前含F5与F6流复制副本9s-fresh.mp4；已完成分析批次仅含F5。女士查询返回正确F5原片并实际播放，男子未就绪查询0新增候选且提示先分析更多视频。随后打开真实分析准备页，仅保留F6待分析并重试读取一次，仍无法读取时长、确认禁用，未受理新分析；就绪后补查阶段阻塞。",
+          "report": "local-footage-results-36-40-v2-staging-20261124-145413.md",
+          "fixtures": [
+            "F5",
+            "F6"
+          ],
+          "category": "一般补强",
+          "created": "2026-11-24",
+          "precondition_gate": "真实部分就绪状态；不得伪造业务响应",
+          "execution_script_status": "PLAN；V2本轮有头执行，未接固定脚本",
+          "executed": "2026-11-24",
+          "execution_method": "ego-browser headed",
+          "evidence": [
+            "/Users/edy/Documents/cinlink-test/test-cinlink/reports/local-footage-36-40-v2-20261124-145413/LF38-membership-before.json",
+            "/Users/edy/Documents/cinlink-test/test-cinlink/reports/local-footage-36-40-v2-20261124-145413/LF38-analysis-before.txt",
+            "/Users/edy/Documents/cinlink-test/test-cinlink/reports/local-footage-36-40-v2-20261124-145413/LF38-analysis-before.png",
+            "/Users/edy/Documents/cinlink-test/test-cinlink/reports/local-footage-36-40-v2-20261124-145413/LF38-analysis-batch-before.json",
+            "/Users/edy/Documents/cinlink-test/test-cinlink/reports/local-footage-36-40-v2-20261124-145413/LF38-woman-final-state.json",
+            "/Users/edy/Documents/cinlink-test/test-cinlink/reports/local-footage-36-40-v2-20261124-145413/LF38-woman-result.png",
+            "/Users/edy/Documents/cinlink-test/test-cinlink/reports/local-footage-36-40-v2-20261124-145413/LF38-woman-preview.png",
+            "/Users/edy/Documents/cinlink-test/test-cinlink/reports/local-footage-36-40-v2-20261124-145413/LF38-woman-source-verification.json",
+            "/Users/edy/Documents/cinlink-test/test-cinlink/reports/local-footage-36-40-v2-20261124-145413/LF38-man-unready-final-state.json",
+            "/Users/edy/Documents/cinlink-test/test-cinlink/reports/local-footage-36-40-v2-20261124-145413/LF38-man-unready-result.png",
+            "/Users/edy/Documents/cinlink-test/test-cinlink/reports/local-footage-36-40-v2-20261124-145413/LF38-prepare-analysis-entry.png",
+            "/Users/edy/Documents/cinlink-test/test-cinlink/reports/local-footage-36-40-v2-20261124-145413/LF38-analysis-prepare-budget.txt",
+            "/Users/edy/Documents/cinlink-test/test-cinlink/reports/local-footage-36-40-v2-20261124-145413/LF38-F6-analysis-prepare.txt",
+            "/Users/edy/Documents/cinlink-test/test-cinlink/reports/local-footage-36-40-v2-20261124-145413/LF38-F6-analysis-prepare.png"
+          ],
+          "conversation_id": "b191d449-272e-4cf0-b77d-ad640ee2a96c",
+          "design_revision": {
+            "id": "LF3773-V3-20261124",
+            "date": "2026-11-24",
+            "execution_status": "Not Run",
+            "scope": "body only; no additional diffusion",
+            "change": "前置/步骤/预期压缩，完整提示词与参数组保留",
+            "previous_execution_preserved": true
+          },
+          "execution_phases": [
+            {
+              "name": "部分就绪前置回读",
+              "status": "Passed",
+              "detail": "真实2成员、完成批次只含F5且索引ready"
+            },
+            {
+              "name": "已分析F5查询",
+              "status": "Passed",
+              "detail": "实际播放正确原片并下载SHA一致，归属说明偏差归LF36"
+            },
+            {
+              "name": "F6未就绪查询",
+              "status": "Passed",
+              "detail": "0新增候选，未用前轮F5代替，提示先分析更多视频"
+            },
+            {
+              "name": "补齐F6分析并再次查询",
+              "status": "Blocked",
+              "detail": "F6时长读取失败，确认并继续禁用，新分析未受理、第三轮未发送"
+            }
+          ]
+        }
+      ],
+      "executed": "2026-11-24",
+      "execution_method": "ego-browser headed",
+      "evidence": [
+        "/Users/edy/Documents/cinlink-test/test-cinlink/reports/local-footage-LF38-v3-staging-20261124/members-before.json",
+        "/Users/edy/Documents/cinlink-test/test-cinlink/reports/local-footage-LF38-v3-staging-20261124/analysis-before.png",
+        "/Users/edy/Documents/cinlink-test/test-cinlink/reports/local-footage-LF38-v3-staging-20261124/woman-preview.png",
+        "/Users/edy/Documents/cinlink-test/test-cinlink/reports/local-footage-LF38-v3-staging-20261124/woman-source-verification.json",
+        "/Users/edy/Documents/cinlink-test/test-cinlink/reports/local-footage-LF38-v3-staging-20261124/woman-final-state.json",
+        "/Users/edy/Documents/cinlink-test/test-cinlink/reports/local-footage-LF38-v3-staging-20261124/man-unready-result.png",
+        "/Users/edy/Documents/cinlink-test/test-cinlink/reports/local-footage-LF38-v3-staging-20261124/man-unready-final-state.json",
+        "/Users/edy/Documents/cinlink-test/test-cinlink/reports/local-footage-LF38-v3-staging-20261124/prepare-F6-final.png",
+        "/Users/edy/Documents/cinlink-test/test-cinlink/reports/local-footage-LF38-v3-staging-20261124/prepare-F6-final.txt",
+        "/Users/edy/Documents/cinlink-test/test-cinlink/reports/local-footage-LF38-v3-staging-20261124/final-state.json",
+        "/Users/edy/Documents/cinlink-test/test-cinlink/reports/local-footage-LF38-v3-staging-20261124/checkpoint.json"
+      ],
+      "conversation_id": "b8a4b7ff-1db2-404c-b03b-32c45483064f",
+      "design_revision": {
+        "id": "LF3773-V3-20261124",
+        "date": "2026-11-24",
+        "execution_status": "Blocked",
+        "scope": "body only; no additional diffusion",
+        "change": "前置/步骤/预期压缩，完整提示词与参数组保留",
+        "previous_execution_preserved": true,
+        "execution_report": "local-footage-LF38-v3-staging-20261124.md",
+        "executed": "2026-11-24"
+      },
+      "execution_phases": [
+        {
+          "name": "已分析F5查询/播放/原片核验",
+          "status": "Passed",
+          "detail": "唯一正确F5；真实播放，下载SHA精确一致"
+        },
+        {
+          "name": "F6未就绪反馈",
+          "status": "Passed",
+          "detail": "页面提示先分析更多视频；0新增候选，不用F5替代"
+        },
+        {
+          "name": "补F6分析",
+          "status": "Blocked",
+          "detail": "重试读取一次仍缺时长、确认禁用，未受理分析"
+        },
+        {
+          "name": "就绪后重复查询F6",
+          "status": "Not Run",
+          "detail": "依赖补分析，未发送"
+        }
+      ],
+      "design_revision_history": [
+        {
+          "id": "LF3673-V2-20261124",
+          "date": "2026-11-24",
+          "execution_status": "Blocked",
+          "scope": "body only; no additional diffusion",
+          "previous_execution_preserved": true,
+          "summary": "精简前置/步骤/预期；逐文件先分析；条件与必要参数组明确",
+          "execution_report": "local-footage-results-36-40-v2-staging-20261124-145413.md",
+          "executed": "2026-11-24"
+        }
+      ],
+      "project_id": "82d3cff9-3b82-48e4-92a1-7a6e0d5b9b8b",
+      "yunxiao_sync_latest": {
+        "date": "2026-11-24",
+        "action": "associate",
+        "number": "FWXC-524",
+        "workitem_id": "70fcb61a331c0448bc3ebfb875",
+        "url": "https://devops.aliyun.com/projex/project/1e401ac99539c3999e00e40006/bug#openWorkitemIdentifier=70fcb61a331c0448bc3ebfb875",
+        "comment_id": "24511776",
+        "verified": true,
+        "images": 2,
+        "attachments": 3,
+        "status_preserved": "待确认",
+        "type_preserved": "优化",
+        "scope": "confirmed project ownership warning only; duration precondition not submitted",
+        "receipt": "reports/yunxiao/LF38-V3-20261124/result.json"
+      }
+    },
+    {
+      "id": "LF-39",
+      "title": "同项目新增素材的增量检索",
+      "status": "Not Applicable",
+      "environment": "staging",
+      "planned_environment": "staging",
+      "automation": "PLAN",
+      "script": null,
+      "priority": "P0",
+      "note": "V3.1本轮已实际复核适用性：当前不支持同项目增量导入，按条件跳过业务步骤；0新查询/分析/素材变更，非完整业务重跑。旧对照保留历史。",
+      "report": "local-footage-results-39-40-v31-recheck-staging-20261124.md",
+      "fixtures": [
+        "F5",
+        "F6"
+      ],
+      "category": "一般补强",
+      "created": "2026-11-24",
+      "precondition_gate": "仅在应用支持同项目增量导入时适用；当前不要求补跑",
+      "execution_script_status": "PLAN；本轮仅有头适用性检查，未接固定脚本",
+      "history": [
+        {
+          "status": "Not Run",
+          "note": "2026-11-24新增设计，未执行；同项目新增素材的增量检索",
+          "report": null,
+          "environment": null
+        },
+        {
+          "status": "Blocked",
+          "note": "已建只含F5的专用项目并完成男子查询无匹配对照。项目更多操作只有重命名/归档，分析结果页无增量导入；添加素材仅形成待发附件，项目membership仍仅F5，已清理附件。未取得真实同项目增量入口，新增后分支未发。",
+          "report": "local-footage-results-36-50-staging-20261124.md",
+          "environment": "staging",
+          "conversation_id": "9340be8d-f9b5-4f1f-bdfb-8ad0853e9c39",
+          "executed": "2026-11-24",
+          "design_revision": {
+            "id": "LF3673-V2-20261124",
+            "date": "2026-11-24",
+            "execution_status": "Not Run",
+            "scope": "body only; no additional diffusion",
+            "previous_execution_preserved": true,
+            "summary": "精简前置/步骤/预期；逐文件先分析；条件与必要参数组明确"
+          }
+        },
+        {
+          "id": "LF-39",
+          "title": "同项目新增素材的增量检索",
+          "status": "Blocked",
+          "environment": "staging",
+          "planned_environment": "staging",
+          "automation": "PLAN",
+          "script": null,
+          "priority": "P0",
+          "note": "仅F5项目已逐文件确认分析完成，新增前男子查询明确无匹配、0候选。当前项目操作菜单仅重命名/归档，分析结果页仅原F5及返回工作台，未提供可用的同项目增量导入入口；复核成员仍只有F5，未把聊天附件或其他项目素材当入库。加入F6及同/新会话补查阶段阻塞。",
+          "report": "local-footage-results-36-40-v2-staging-20261124-145413.md",
+          "fixtures": [
+            "F5",
+            "F6"
+          ],
+          "category": "一般补强",
+          "created": "2026-11-24",
+          "precondition_gate": null,
+          "execution_script_status": "PLAN；V2本轮有头执行，未接固定脚本",
+          "executed": "2026-11-24",
+          "execution_method": "ego-browser headed",
+          "evidence": [
+            "/Users/edy/Documents/cinlink-test/test-cinlink/reports/local-footage-36-40-v2-20261124-145413/LF39-membership-before.json",
+            "/Users/edy/Documents/cinlink-test/test-cinlink/reports/local-footage-36-40-v2-20261124-145413/LF39-analysis-before.txt",
+            "/Users/edy/Documents/cinlink-test/test-cinlink/reports/local-footage-36-40-v2-20261124-145413/LF39-analysis-before.png",
+            "/Users/edy/Documents/cinlink-test/test-cinlink/reports/local-footage-36-40-v2-20261124-145413/LF39-before-final-state.json",
+            "/Users/edy/Documents/cinlink-test/test-cinlink/reports/local-footage-36-40-v2-20261124-145413/LF39-before-result.png",
+            "/Users/edy/Documents/cinlink-test/test-cinlink/reports/local-footage-36-40-v2-20261124-145413/LF39-project-menu.json",
+            "/Users/edy/Documents/cinlink-test/test-cinlink/reports/local-footage-36-40-v2-20261124-145413/LF39-project-menu.png",
+            "/Users/edy/Documents/cinlink-test/test-cinlink/reports/local-footage-36-40-v2-20261124-145413/LF39-current-analysis-actions.json",
+            "/Users/edy/Documents/cinlink-test/test-cinlink/reports/local-footage-36-40-v2-20261124-145413/LF39-current-analysis-actions.png",
+            "/Users/edy/Documents/cinlink-test/test-cinlink/reports/local-footage-36-40-v2-20261124-145413/LF39-membership-after-check.json"
+          ],
+          "conversation_id": "14d20803-b8ec-40e0-9d47-90b4325d6c00",
+          "design_revision": {
+            "id": "LF3773-V3-20261124",
+            "date": "2026-11-24",
+            "execution_status": "Not Run",
+            "scope": "body only; no additional diffusion",
+            "change": "前置/步骤/预期压缩，完整提示词与参数组保留",
+            "previous_execution_preserved": true
+          },
+          "execution_phases": [
+            {
+              "name": "仅F5并分析完成",
+              "status": "Passed",
+              "detail": "成员清单1文件，分析五阶段完成"
+            },
+            {
+              "name": "新增前查F6",
+              "status": "Passed",
+              "detail": "明确未找到匹配，0新增候选"
+            },
+            {
+              "name": "同项目新增并分析F6",
+              "status": "Blocked",
+              "detail": "当前项目菜单/分析页无增量入口，成员未改变"
+            },
+            {
+              "name": "新增后同会话及新会话复核",
+              "status": "Not Run",
+              "detail": "依赖新增与F6分析，不发送"
+            }
+          ]
+        },
+        {
+          "id": "LF-39",
+          "title": "同项目新增素材的增量检索",
+          "status": "Blocked",
+          "environment": "staging",
+          "planned_environment": "staging",
+          "automation": "PLAN",
+          "script": null,
+          "priority": "P0",
+          "note": "V3已执行：新增前男子查询无匹配、0候选Passed；项目菜单及分析结果页未见同项目增量导入入口，加入/分析F6及同、新会话补查Blocked/Not Run。",
+          "report": "local-footage-LF39-v3-staging-20261124.md",
+          "fixtures": [
+            "F5",
+            "F6"
+          ],
+          "category": "一般补强",
+          "created": "2026-11-24",
+          "precondition_gate": null,
+          "execution_script_status": "PLAN；V3本轮有头执行，未接固定脚本",
+          "executed": "2026-11-24",
+          "execution_method": "ego-browser headed",
+          "evidence": [
+            "/Users/edy/Documents/cinlink-test/test-cinlink/reports/local-footage-LF39-40-v3-staging-20261124/LF39-members-before.json",
+            "/Users/edy/Documents/cinlink-test/test-cinlink/reports/local-footage-LF39-40-v3-staging-20261124/LF39-analysis.png",
+            "/Users/edy/Documents/cinlink-test/test-cinlink/reports/local-footage-LF39-40-v3-staging-20261124/LF39-before-final-state.json",
+            "/Users/edy/Documents/cinlink-test/test-cinlink/reports/local-footage-LF39-40-v3-staging-20261124/LF39-before-result.png",
+            "/Users/edy/Documents/cinlink-test/test-cinlink/reports/local-footage-LF39-40-v3-staging-20261124/LF39-project-menu.png",
+            "/Users/edy/Documents/cinlink-test/test-cinlink/reports/local-footage-LF39-40-v3-staging-20261124/LF39-project-menu.txt",
+            "/Users/edy/Documents/cinlink-test/test-cinlink/reports/local-footage-LF39-40-v3-staging-20261124/LF39-analysis-actions.png",
+            "/Users/edy/Documents/cinlink-test/test-cinlink/reports/local-footage-LF39-40-v3-staging-20261124/LF39-analysis-actions.json",
+            "/Users/edy/Documents/cinlink-test/test-cinlink/reports/local-footage-LF39-40-v3-staging-20261124/LF39-members-after-check.json"
+          ],
+          "conversation_id": "c2b6df97-8797-49ce-8a6d-97d4be294897",
+          "design_revision": {
+            "id": "LF3773-V3-20261124",
+            "date": "2026-11-24",
+            "execution_status": "Blocked",
+            "scope": "body only; no additional diffusion",
+            "change": "前置/步骤/预期压缩，完整提示词与参数组保留",
+            "previous_execution_preserved": true,
+            "execution_report": "local-footage-LF39-v3-staging-20261124.md",
+            "executed": "2026-11-24"
+          },
+          "execution_phases": [
+            {
+              "name": "仅F5且分析就绪",
+              "status": "Passed"
+            },
+            {
+              "name": "新增前查F6",
+              "status": "Passed",
+              "detail": "页面未找到匹配，0视频候选"
+            },
+            {
+              "name": "同项目新增并分析F6",
+              "status": "Blocked",
+              "detail": "项目菜单仅重命名/归档，分析结果页无增量导入入口；成员仍仅F5"
+            },
+            {
+              "name": "新增后同会话/新会话查F6",
+              "status": "Not Run",
+              "detail": "依赖真实新增及分析，未发送"
+            }
+          ],
+          "project_id": "581f528c-f163-415d-8c16-77c3d554c316"
+        },
+        {
+          "id": "LF-39",
+          "title": "同项目新增素材的增量检索",
+          "status": "Not Applicable",
+          "environment": "staging",
+          "planned_environment": "staging",
+          "automation": "PLAN",
+          "script": null,
+          "priority": "P0",
+          "note": "V3.1能力范围重评：用户确认当前无同项目增量导入入口，本例整体不适用，不再作为阻塞或缺陷；已执行对照及旧Blocked留历史。未重跑。",
+          "report": "local-footage-revision-39-40-capability-20261124.md",
+          "fixtures": [
+            "F5",
+            "F6"
+          ],
+          "category": "一般补强",
+          "created": "2026-11-24",
+          "precondition_gate": "仅在应用支持同项目增量导入时适用；当前不要求补跑",
+          "execution_script_status": "PLAN；当前能力范围不适用；原V3有头实测保留，未新增执行",
+          "executed": "2026-11-24",
+          "execution_method": "ego-browser headed",
+          "evidence": [
+            "/Users/edy/Documents/cinlink-test/test-cinlink/reports/local-footage-LF39-40-v3-staging-20261124/LF39-members-before.json",
+            "/Users/edy/Documents/cinlink-test/test-cinlink/reports/local-footage-LF39-40-v3-staging-20261124/LF39-analysis.png",
+            "/Users/edy/Documents/cinlink-test/test-cinlink/reports/local-footage-LF39-40-v3-staging-20261124/LF39-before-final-state.json",
+            "/Users/edy/Documents/cinlink-test/test-cinlink/reports/local-footage-LF39-40-v3-staging-20261124/LF39-before-result.png",
+            "/Users/edy/Documents/cinlink-test/test-cinlink/reports/local-footage-LF39-40-v3-staging-20261124/LF39-project-menu.png",
+            "/Users/edy/Documents/cinlink-test/test-cinlink/reports/local-footage-LF39-40-v3-staging-20261124/LF39-project-menu.txt",
+            "/Users/edy/Documents/cinlink-test/test-cinlink/reports/local-footage-LF39-40-v3-staging-20261124/LF39-analysis-actions.png",
+            "/Users/edy/Documents/cinlink-test/test-cinlink/reports/local-footage-LF39-40-v3-staging-20261124/LF39-analysis-actions.json",
+            "/Users/edy/Documents/cinlink-test/test-cinlink/reports/local-footage-LF39-40-v3-staging-20261124/LF39-members-after-check.json"
+          ],
+          "conversation_id": "c2b6df97-8797-49ce-8a6d-97d4be294897",
+          "design_revision": {
+            "id": "LF39-V3.1-20261124",
+            "date": "2026-11-24",
+            "execution_status": "Not Applicable",
+            "scope": "conditional on supported project material management capability; no additional diffusion",
+            "previous_execution_preserved": true,
+            "change": "用户确认当前无同项目增量导入入口；当前不适用而非入口待查阻塞",
+            "assessment_report": "local-footage-revision-39-40-capability-20261124.md",
+            "new_execution": false
+          },
+          "execution_phases": [
+            {
+              "name": "仅F5且分析就绪",
+              "status": "Passed"
+            },
+            {
+              "name": "新增前查F6",
+              "status": "Passed",
+              "detail": "页面未找到匹配，0视频候选"
+            },
+            {
+              "name": "同项目新增并分析F6",
+              "status": "Not Applicable",
+              "detail": "用户确认当前不支持同项目增量导入，移出当前必执行范围；原实测见history"
+            },
+            {
+              "name": "新增后同会话/新会话查F6",
+              "status": "Not Applicable",
+              "detail": "用户确认当前不支持同项目增量导入，移出当前必执行范围；原实测见history"
+            }
+          ],
+          "project_id": "581f528c-f163-415d-8c16-77c3d554c316"
+        }
+      ],
+      "executed": "2026-11-24",
+      "execution_method": "ego-browser headed applicability check",
+      "evidence": [
+        "/Users/edy/Documents/cinlink-test/test-cinlink/reports/local-footage-LF39-40-v31-recheck-staging-20261124/LF39-menu.png",
+        "/Users/edy/Documents/cinlink-test/test-cinlink/reports/local-footage-LF39-40-v31-recheck-staging-20261124/LF39-menu.txt",
+        "/Users/edy/Documents/cinlink-test/test-cinlink/reports/local-footage-LF39-40-v31-recheck-staging-20261124/LF39-analysis.png",
+        "/Users/edy/Documents/cinlink-test/test-cinlink/reports/local-footage-LF39-40-v31-recheck-staging-20261124/LF39-analysis.txt",
+        "/Users/edy/Documents/cinlink-test/test-cinlink/reports/local-footage-LF39-40-v31-recheck-staging-20261124/LF39-actions.json",
+        "/Users/edy/Documents/cinlink-test/test-cinlink/reports/local-footage-LF39-40-v31-recheck-staging-20261124/LF39-members.json",
+        "/Users/edy/Documents/cinlink-test/test-cinlink/reports/local-footage-LF39-40-v31-recheck-staging-20261124/LF39-result.json"
+      ],
+      "conversation_id": null,
+      "design_revision": {
+        "id": "LF39-V3.1-20261124",
+        "date": "2026-11-24",
+        "execution_status": "Not Applicable",
+        "scope": "conditional on supported project material management capability; no additional diffusion",
+        "previous_execution_preserved": true,
+        "change": "用户确认当前无同项目增量导入入口；当前不适用而非入口待查阻塞",
+        "assessment_report": "local-footage-revision-39-40-capability-20261124.md",
+        "new_execution": true,
+        "execution_report": "local-footage-results-39-40-v31-recheck-staging-20261124.md",
+        "executed": "2026-11-24",
+        "execution_scope": "browser applicability check only; no business steps or queries"
+      },
+      "execution_phases": [
+        {
+          "name": "当前能力适用性检查",
+          "status": "Not Applicable",
+          "detail": "用户已确认不支持同项目增量导入；真实项目菜单和分析页复核后跳过业务步骤"
+        }
+      ],
+      "design_revision_history": [
+        {
+          "id": "LF3673-V2-20261124",
+          "date": "2026-11-24",
+          "execution_status": "Blocked",
+          "scope": "body only; no additional diffusion",
+          "previous_execution_preserved": true,
+          "summary": "精简前置/步骤/预期；逐文件先分析；条件与必要参数组明确",
+          "execution_report": "local-footage-results-36-40-v2-staging-20261124-145413.md",
+          "executed": "2026-11-24"
+        },
+        {
+          "id": "LF3773-V3-20261124",
+          "date": "2026-11-24",
+          "execution_status": "Blocked",
+          "scope": "body only; no additional diffusion",
+          "change": "前置/步骤/预期压缩，完整提示词与参数组保留",
+          "previous_execution_preserved": true,
+          "execution_report": "local-footage-LF39-v3-staging-20261124.md",
+          "executed": "2026-11-24"
+        }
+      ],
+      "project_id": "581f528c-f163-415d-8c16-77c3d554c316"
+    },
+    {
+      "id": "LF-40",
+      "title": "移除项目素材后的新查询",
+      "status": "Not Applicable",
+      "environment": "staging",
+      "planned_environment": "staging",
+      "automation": "PLAN",
+      "script": null,
+      "priority": "P0",
+      "note": "V3.1本轮已实际复核适用性：当前不支持移除当前项目素材，按条件跳过业务步骤；0新查询/分析/素材变更，非完整业务重跑。旧对照保留历史。",
+      "report": "local-footage-results-39-40-v31-recheck-staging-20261124.md",
+      "fixtures": [
+        "F5",
+        "F6"
+      ],
+      "category": "一般补强",
+      "created": "2026-11-24",
+      "precondition_gate": "仅在应用支持移除当前项目素材时适用；当前不要求补跑",
+      "execution_script_status": "PLAN；本轮仅有头适用性检查，未接固定脚本",
+      "history": [
+        {
+          "status": "Not Run",
+          "note": "2026-11-24新增设计，未执行；移除项目素材后的新查询；前置条件：实际项目移除入口",
+          "report": null,
+          "environment": null
+        },
+        {
+          "status": "Blocked",
+          "note": "已检查本轮专用项目的项目操作菜单及分析结果页，未找到移除当前项目素材入口；分析确认里的排除仅改变本次分析范围，不等同移除项目membership，因此未执行删除或移除后的检索。",
+          "report": "local-footage-results-36-50-staging-20261124.md",
+          "environment": "staging",
+          "conversation_id": null,
+          "executed": "2026-11-24",
+          "design_revision": {
+            "id": "LF3673-V2-20261124",
+            "date": "2026-11-24",
+            "execution_status": "Not Run",
+            "scope": "body only; no additional diffusion",
+            "previous_execution_preserved": true,
+            "summary": "精简前置/步骤/预期；逐文件先分析；条件与必要参数组明确"
+          }
+        },
+        {
+          "id": "LF-40",
+          "title": "移除项目素材后的新查询",
+          "status": "Blocked",
+          "environment": "staging",
+          "planned_environment": "staging",
+          "automation": "PLAN",
+          "script": null,
+          "priority": "P0",
+          "note": "专用G56项目真实含F5/F6、两项分析已完成；移除前按原指令交付正确9s.mp4，实际播放且下载SHA与原片一致。当前项目菜单仅重命名/归档，分析页无移除当前项目素材入口，成员复核仍2文件；未执行移除，移除后查询未发，依赖步骤阻塞。",
+          "report": "local-footage-results-36-40-v2-staging-20261124-145413.md",
+          "fixtures": [
+            "F5",
+            "F6"
+          ],
+          "category": "一般补强",
+          "created": "2026-11-24",
+          "precondition_gate": "实际项目移除入口",
+          "execution_script_status": "PLAN；V2本轮有头执行，未接固定脚本",
+          "executed": "2026-11-24",
+          "execution_method": "ego-browser headed",
+          "evidence": [
+            "/Users/edy/Documents/cinlink-test/test-cinlink/reports/local-footage-36-40-v2-20261124-145413/LF40-membership-before.json",
+            "/Users/edy/Documents/cinlink-test/test-cinlink/reports/local-footage-36-40-v2-20261124-145413/LF40-F5-analysis.txt",
+            "/Users/edy/Documents/cinlink-test/test-cinlink/reports/local-footage-36-40-v2-20261124-145413/LF40-F6-analysis.txt",
+            "/Users/edy/Documents/cinlink-test/test-cinlink/reports/local-footage-36-40-v2-20261124-145413/LF40-F6-analysis.png",
+            "/Users/edy/Documents/cinlink-test/test-cinlink/reports/local-footage-36-40-v2-20261124-145413/LF40-before-final-state.json",
+            "/Users/edy/Documents/cinlink-test/test-cinlink/reports/local-footage-36-40-v2-20261124-145413/LF40-before-result.png",
+            "/Users/edy/Documents/cinlink-test/test-cinlink/reports/local-footage-36-40-v2-20261124-145413/LF40-before-preview.png",
+            "/Users/edy/Documents/cinlink-test/test-cinlink/reports/local-footage-36-40-v2-20261124-145413/LF40-before-source-verification.json",
+            "/Users/edy/Documents/cinlink-test/test-cinlink/reports/local-footage-36-40-v2-20261124-145413/LF40-project-menu.json",
+            "/Users/edy/Documents/cinlink-test/test-cinlink/reports/local-footage-36-40-v2-20261124-145413/LF40-project-menu.png",
+            "/Users/edy/Documents/cinlink-test/test-cinlink/reports/local-footage-36-40-v2-20261124-145413/LF40-analysis-actions.json",
+            "/Users/edy/Documents/cinlink-test/test-cinlink/reports/local-footage-36-40-v2-20261124-145413/LF40-analysis-actions.png",
+            "/Users/edy/Documents/cinlink-test/test-cinlink/reports/local-footage-36-40-v2-20261124-145413/LF40-membership-after-check.json"
+          ],
+          "design_revision": {
+            "id": "LF3773-V3-20261124",
+            "date": "2026-11-24",
+            "execution_status": "Not Run",
+            "scope": "body only; no additional diffusion",
+            "change": "前置/步骤/预期压缩，完整提示词与参数组保留",
+            "previous_execution_preserved": true
+          },
+          "conversation_id": "a335290e-7329-4ff5-8ccf-437150897072",
+          "execution_phases": [
+            {
+              "name": "F5/F6成员与分析前置",
+              "status": "Passed",
+              "detail": "真实2成员，逐文件分析完成"
+            },
+            {
+              "name": "移除前F6正向",
+              "status": "Passed",
+              "detail": "9.45秒原片实际播放，9259791字节、源SHA一致"
+            },
+            {
+              "name": "仅移除当前项目F6",
+              "status": "Blocked",
+              "detail": "检查的项目菜单/分析页未提供移除入口，未删任何源"
+            },
+            {
+              "name": "移除后新会话查找",
+              "status": "Not Run",
+              "detail": "依赖真实移除，未发送"
+            }
+          ]
+        },
+        {
+          "id": "LF-40",
+          "title": "移除项目素材后的新查询",
+          "status": "Blocked",
+          "environment": "staging",
+          "planned_environment": "staging",
+          "automation": "PLAN",
+          "script": null,
+          "priority": "P0",
+          "note": "V3已执行：移除前F6正确原片查询/播放/哈希Passed；项目菜单及分析页未见移除当前项目素材入口，未移除，移除后新会话查询Not Run。归属误报单独保留观察。",
+          "report": "local-footage-LF40-v3-staging-20261124.md",
+          "fixtures": [
+            "F5",
+            "F6"
+          ],
+          "category": "一般补强",
+          "created": "2026-11-24",
+          "precondition_gate": "实际项目移除入口",
+          "execution_script_status": "PLAN；V3本轮有头执行，未接固定脚本",
+          "executed": "2026-11-24",
+          "execution_method": "ego-browser headed",
+          "evidence": [
+            "/Users/edy/Documents/cinlink-test/test-cinlink/reports/local-footage-LF39-40-v3-staging-20261124/LF40-members-before.json",
+            "/Users/edy/Documents/cinlink-test/test-cinlink/reports/local-footage-LF39-40-v3-staging-20261124/LF40-F5-analysis.png",
+            "/Users/edy/Documents/cinlink-test/test-cinlink/reports/local-footage-LF39-40-v3-staging-20261124/LF40-F6-analysis.png",
+            "/Users/edy/Documents/cinlink-test/test-cinlink/reports/local-footage-LF39-40-v3-staging-20261124/LF40-before-final2-state.json",
+            "/Users/edy/Documents/cinlink-test/test-cinlink/reports/local-footage-LF39-40-v3-staging-20261124/LF40-before-result.png",
+            "/Users/edy/Documents/cinlink-test/test-cinlink/reports/local-footage-LF39-40-v3-staging-20261124/LF40-before-preview.png",
+            "/Users/edy/Documents/cinlink-test/test-cinlink/reports/local-footage-LF39-40-v3-staging-20261124/LF40-source-verification.json",
+            "/Users/edy/Documents/cinlink-test/test-cinlink/reports/local-footage-LF39-40-v3-staging-20261124/LF40-project-menu.png",
+            "/Users/edy/Documents/cinlink-test/test-cinlink/reports/local-footage-LF39-40-v3-staging-20261124/LF40-project-menu.txt",
+            "/Users/edy/Documents/cinlink-test/test-cinlink/reports/local-footage-LF39-40-v3-staging-20261124/LF40-analysis-actions.png",
+            "/Users/edy/Documents/cinlink-test/test-cinlink/reports/local-footage-LF39-40-v3-staging-20261124/LF40-analysis-actions.json",
+            "/Users/edy/Documents/cinlink-test/test-cinlink/reports/local-footage-LF39-40-v3-staging-20261124/LF40-members-after-check.json"
+          ],
+          "design_revision": {
+            "id": "LF3773-V3-20261124",
+            "date": "2026-11-24",
+            "execution_status": "Blocked",
+            "scope": "body only; no additional diffusion",
+            "change": "前置/步骤/预期压缩，完整提示词与参数组保留",
+            "previous_execution_preserved": true,
+            "execution_report": "local-footage-LF40-v3-staging-20261124.md",
+            "executed": "2026-11-24"
+          },
+          "conversation_id": "562c0833-be75-48d1-a156-4a117087bdf9",
+          "execution_phases": [
+            {
+              "name": "F5/F6分析就绪",
+              "status": "Passed",
+              "detail": "真实2成员，逐文件五阶段已完成"
+            },
+            {
+              "name": "移除前F6原片对照",
+              "status": "Passed",
+              "detail": "返回正确9s.mp4，实际播放、SHA精确一致"
+            },
+            {
+              "name": "移除当前项目F6",
+              "status": "Blocked",
+              "detail": "当前菜单仅重命名/归档，分析页无移除入口；未删除任何素材"
+            },
+            {
+              "name": "移除后新会话查询",
+              "status": "Not Run",
+              "detail": "依赖真实移除，不发送"
+            }
+          ],
+          "project_id": "eae9c93e-e9ac-471c-884c-24cf60399d22"
+        },
+        {
+          "id": "LF-40",
+          "title": "移除项目素材后的新查询",
+          "status": "Not Applicable",
+          "environment": "staging",
+          "planned_environment": "staging",
+          "automation": "PLAN",
+          "script": null,
+          "priority": "P0",
+          "note": "V3.1能力范围重评：用户确认当前无移除当前项目素材入口，本例整体不适用，不再作为阻塞或缺陷；已执行对照及旧Blocked留历史。未重跑。",
+          "report": "local-footage-revision-39-40-capability-20261124.md",
+          "fixtures": [
+            "F5",
+            "F6"
+          ],
+          "category": "一般补强",
+          "created": "2026-11-24",
+          "precondition_gate": "仅在应用支持移除当前项目素材时适用；当前不要求补跑",
+          "execution_script_status": "PLAN；当前能力范围不适用；原V3有头实测保留，未新增执行",
+          "executed": "2026-11-24",
+          "execution_method": "ego-browser headed",
+          "evidence": [
+            "/Users/edy/Documents/cinlink-test/test-cinlink/reports/local-footage-LF39-40-v3-staging-20261124/LF40-members-before.json",
+            "/Users/edy/Documents/cinlink-test/test-cinlink/reports/local-footage-LF39-40-v3-staging-20261124/LF40-F5-analysis.png",
+            "/Users/edy/Documents/cinlink-test/test-cinlink/reports/local-footage-LF39-40-v3-staging-20261124/LF40-F6-analysis.png",
+            "/Users/edy/Documents/cinlink-test/test-cinlink/reports/local-footage-LF39-40-v3-staging-20261124/LF40-before-final2-state.json",
+            "/Users/edy/Documents/cinlink-test/test-cinlink/reports/local-footage-LF39-40-v3-staging-20261124/LF40-before-result.png",
+            "/Users/edy/Documents/cinlink-test/test-cinlink/reports/local-footage-LF39-40-v3-staging-20261124/LF40-before-preview.png",
+            "/Users/edy/Documents/cinlink-test/test-cinlink/reports/local-footage-LF39-40-v3-staging-20261124/LF40-source-verification.json",
+            "/Users/edy/Documents/cinlink-test/test-cinlink/reports/local-footage-LF39-40-v3-staging-20261124/LF40-project-menu.png",
+            "/Users/edy/Documents/cinlink-test/test-cinlink/reports/local-footage-LF39-40-v3-staging-20261124/LF40-project-menu.txt",
+            "/Users/edy/Documents/cinlink-test/test-cinlink/reports/local-footage-LF39-40-v3-staging-20261124/LF40-analysis-actions.png",
+            "/Users/edy/Documents/cinlink-test/test-cinlink/reports/local-footage-LF39-40-v3-staging-20261124/LF40-analysis-actions.json",
+            "/Users/edy/Documents/cinlink-test/test-cinlink/reports/local-footage-LF39-40-v3-staging-20261124/LF40-members-after-check.json"
+          ],
+          "design_revision": {
+            "id": "LF40-V3.1-20261124",
+            "date": "2026-11-24",
+            "execution_status": "Not Applicable",
+            "scope": "conditional on supported project material management capability; no additional diffusion",
+            "previous_execution_preserved": true,
+            "change": "用户确认当前无移除当前项目素材入口；当前不适用而非入口待查阻塞",
+            "assessment_report": "local-footage-revision-39-40-capability-20261124.md",
+            "new_execution": false
+          },
+          "conversation_id": "562c0833-be75-48d1-a156-4a117087bdf9",
+          "execution_phases": [
+            {
+              "name": "F5/F6分析就绪",
+              "status": "Passed",
+              "detail": "真实2成员，逐文件五阶段已完成"
+            },
+            {
+              "name": "移除前F6原片对照",
+              "status": "Passed",
+              "detail": "返回正确9s.mp4，实际播放、SHA精确一致"
+            },
+            {
+              "name": "移除当前项目F6",
+              "status": "Not Applicable",
+              "detail": "用户确认当前不支持移除当前项目素材，移出当前必执行范围；原实测见history"
+            },
+            {
+              "name": "移除后新会话查询",
+              "status": "Not Applicable",
+              "detail": "用户确认当前不支持移除当前项目素材，移出当前必执行范围；原实测见history"
+            }
+          ],
+          "project_id": "eae9c93e-e9ac-471c-884c-24cf60399d22"
+        }
+      ],
+      "executed": "2026-11-24",
+      "execution_method": "ego-browser headed applicability check",
+      "evidence": [
+        "/Users/edy/Documents/cinlink-test/test-cinlink/reports/local-footage-LF39-40-v31-recheck-staging-20261124/LF40-menu.png",
+        "/Users/edy/Documents/cinlink-test/test-cinlink/reports/local-footage-LF39-40-v31-recheck-staging-20261124/LF40-menu.txt",
+        "/Users/edy/Documents/cinlink-test/test-cinlink/reports/local-footage-LF39-40-v31-recheck-staging-20261124/LF40-analysis.png",
+        "/Users/edy/Documents/cinlink-test/test-cinlink/reports/local-footage-LF39-40-v31-recheck-staging-20261124/LF40-analysis.txt",
+        "/Users/edy/Documents/cinlink-test/test-cinlink/reports/local-footage-LF39-40-v31-recheck-staging-20261124/LF40-actions.json",
+        "/Users/edy/Documents/cinlink-test/test-cinlink/reports/local-footage-LF39-40-v31-recheck-staging-20261124/LF40-members.json",
+        "/Users/edy/Documents/cinlink-test/test-cinlink/reports/local-footage-LF39-40-v31-recheck-staging-20261124/LF40-result.json"
+      ],
+      "design_revision": {
+        "id": "LF40-V3.1-20261124",
+        "date": "2026-11-24",
+        "execution_status": "Not Applicable",
+        "scope": "conditional on supported project material management capability; no additional diffusion",
+        "previous_execution_preserved": true,
+        "change": "用户确认当前无移除当前项目素材入口；当前不适用而非入口待查阻塞",
+        "assessment_report": "local-footage-revision-39-40-capability-20261124.md",
+        "new_execution": true,
+        "execution_report": "local-footage-results-39-40-v31-recheck-staging-20261124.md",
+        "executed": "2026-11-24",
+        "execution_scope": "browser applicability check only; no business steps or queries"
+      },
+      "conversation_id": null,
+      "execution_phases": [
+        {
+          "name": "当前能力适用性检查",
+          "status": "Not Applicable",
+          "detail": "用户已确认不支持移除当前项目素材；真实项目菜单和分析页复核后跳过业务步骤"
+        }
+      ],
+      "design_revision_history": [
+        {
+          "id": "LF3673-V2-20261124",
+          "date": "2026-11-24",
+          "execution_status": "Blocked",
+          "scope": "body only; no additional diffusion",
+          "previous_execution_preserved": true,
+          "summary": "精简前置/步骤/预期；逐文件先分析；条件与必要参数组明确",
+          "execution_report": "local-footage-results-36-40-v2-staging-20261124-145413.md",
+          "executed": "2026-11-24"
+        },
+        {
+          "id": "LF3773-V3-20261124",
+          "date": "2026-11-24",
+          "execution_status": "Blocked",
+          "scope": "body only; no additional diffusion",
+          "change": "前置/步骤/预期压缩，完整提示词与参数组保留",
+          "previous_execution_preserved": true,
+          "execution_report": "local-footage-LF40-v3-staging-20261124.md",
+          "executed": "2026-11-24"
+        }
+      ],
+      "project_id": "eae9c93e-e9ac-471c-884c-24cf60399d22"
+    },
+    {
+      "id": "LF-41",
+      "title": "同名不同内容的检索消歧",
+      "status": "Passed",
+      "environment": "staging",
+      "planned_environment": "staging",
+      "automation": "PLAN",
+      "script": null,
+      "priority": "P0",
+      "note": "同一项目通过两个子目录导入同名访谈.mp4，未被合并。名称+女士描述命中正确F5；仅按名时列出两个可区分候选供选择。两候选均实际播放、下载，SHA分别精确对应F6/F5。",
+      "report": "local-footage-results-36-50-staging-20261124.md",
+      "fixtures": [
+        "F5-copy",
+        "F6-copy"
+      ],
+      "category": "一般补强",
+      "created": "2026-11-24",
+      "precondition_gate": "同名导入策略",
+      "execution_script_status": "PLAN；本轮有头执行，未接固定脚本",
+      "history": [
+        {
+          "status": "Not Run",
+          "note": "2026-11-24新增设计，未执行；同名不同内容的检索消歧；前置条件：同名导入策略",
+          "report": null,
+          "environment": null
+        }
+      ],
+      "executed": "2026-11-24",
+      "execution_method": "ego-browser headed",
+      "evidence": [
+        "DUP-uploaded.png",
+        "DUP-analysis-ready.png",
+        "LF-41-specific-final-state.json",
+        "LF-41-specific-preview-1.png",
+        "LF-41-ambiguous-final-state.json",
+        "LF-41-ambiguous-preview-1.png",
+        "LF-41-ambiguous-preview-2.png",
+        "LF-41-ambiguous-original-hashes.json"
+      ],
+      "conversation_id": "4dfc9301-54b1-450a-be23-6c191c4930bb",
+      "design_revision": {
+        "id": "LF3773-V3-20261124",
+        "date": "2026-11-24",
+        "execution_status": "Not Run",
+        "scope": "body only; no additional diffusion",
+        "change": "前置/步骤/预期压缩，完整提示词与参数组保留",
+        "previous_execution_preserved": true
+      },
+      "design_revision_history": [
+        {
+          "id": "LF3673-V2-20261124",
+          "date": "2026-11-24",
+          "execution_status": "Not Run",
+          "scope": "body only; no additional diffusion",
+          "previous_execution_preserved": true,
+          "summary": "精简前置/步骤/预期；逐文件先分析；条件与必要参数组明确"
+        }
+      ]
+    },
+    {
+      "id": "LF-42",
+      "title": "跨账号素材检索权限隔离",
+      "status": "Blocked",
+      "environment": "staging",
+      "planned_environment": "staging",
+      "automation": "PLAN",
+      "script": null,
+      "priority": "P0",
+      "note": "用户确认暂无U2；U1当前项目正向可独立核验，跨账号访问/下载分支缺少不同账号，目标权限请求未发，不以同账号跨项目替代。",
+      "report": "local-footage-results-36-50-staging-20261124.md",
+      "fixtures": [
+        "F5",
+        "F6"
+      ],
+      "category": "一般补强",
+      "created": "2026-11-24",
+      "precondition_gate": "U1/U2真实独立获准账号",
+      "execution_script_status": "PLAN；本轮有头执行，未接固定脚本",
+      "history": [
+        {
+          "status": "Not Run",
+          "note": "2026-11-24新增设计，未执行；跨账号素材检索权限隔离；前置条件：U1/U2真实独立获准账号",
+          "report": null,
+          "environment": null
+        }
+      ],
+      "executed": "2026-11-24",
+      "execution_method": "ego-browser headed",
+      "evidence": [
+        "LF-42-user-precondition.json"
+      ],
+      "design_revision": {
+        "id": "LF3773-V3-20261124",
+        "date": "2026-11-24",
+        "execution_status": "Not Run",
+        "scope": "body only; no additional diffusion",
+        "change": "前置/步骤/预期压缩，完整提示词与参数组保留",
+        "previous_execution_preserved": true
+      },
+      "design_revision_history": [
+        {
+          "id": "LF3673-V2-20261124",
+          "date": "2026-11-24",
+          "execution_status": "Not Run",
+          "scope": "body only; no additional diffusion",
+          "previous_execution_preserved": true,
+          "summary": "精简前置/步骤/预期；逐文件先分析；条件与必要参数组明确"
+        }
+      ]
+    },
+    {
+      "id": "LF-43",
+      "title": "同一源中多次出现目标",
+      "status": "Passed",
+      "environment": "staging",
+      "planned_environment": "staging",
+      "automation": "PLAN",
+      "script": null,
+      "priority": "P1",
+      "note": "保留原无音轨夹具上传失败后，改用画面逐帧相同、加静音AAC的对照副本完成分析。原指令触发上传澄清，已按要求补同一已分析源并继续原run；最终分别列出0～6秒和12～17.999903秒机器人位置，明确排除6～12秒飞机，符合两处金标。线上实际源下载SHA与该副本一致，完整解码成功。",
+      "report": "local-footage-results-36-50-staging-20261124.md",
+      "fixtures": [
+        "M-REPEAT"
+      ],
+      "category": "一般补强",
+      "created": "2026-11-24",
+      "precondition_gate": "多位置定位范围确认",
+      "execution_script_status": "PLAN；本轮有头执行，未接固定脚本",
+      "history": [
+        {
+          "status": "Not Run",
+          "note": "2026-11-24新增设计，未执行；同一源中多次出现目标；前置条件：多位置定位范围确认",
+          "report": null,
+          "environment": null
+        }
+      ],
+      "executed": "2026-11-24",
+      "execution_method": "ego-browser headed",
+      "evidence": [
+        "LF-43-before-authorization-resume-result.json",
+        "LF-43-after-user-authorization.png",
+        "LF-43-after-reauth-files.json",
+        "LF-43-transport-variant.json",
+        "REPEAT2-uploaded.png",
+        "REPEAT2-budget.png",
+        "REPEAT2-analysis-ready.png",
+        "LF-43-multi-position-final-state.json",
+        "LF-43-clarification-file-filled.png",
+        "LF-43-clarification-upload.json",
+        "LF-43-after-clarification-final-state.json",
+        "LF-43-after-clarification-result.png",
+        "LF-43-source-readback.json",
+        "LF-43-position-content-audit.json",
+        "LF-43-source-readback-1s.png",
+        "LF-43-source-readback-7s.png",
+        "LF-43-source-readback-13s.png"
+      ],
+      "conversation_id": "454dda91-448a-4b8b-a015-4142131bc06b",
+      "design_revision": {
+        "id": "LF3773-V3-20261124",
+        "date": "2026-11-24",
+        "execution_status": "Not Run",
+        "scope": "body only; no additional diffusion",
+        "change": "前置/步骤/预期压缩，完整提示词与参数组保留",
+        "previous_execution_preserved": true
+      },
+      "design_revision_history": [
+        {
+          "id": "LF3673-V2-20261124",
+          "date": "2026-11-24",
+          "execution_status": "Not Run",
+          "scope": "body only; no additional diffusion",
+          "previous_execution_preserved": true,
+          "summary": "精简前置/步骤/预期；逐文件先分析；条件与必要参数组明确"
+        }
+      ]
+    },
+    {
+      "id": "LF-44",
+      "title": "请求受理后的断流恢复",
+      "status": "Passed",
+      "environment": "staging",
+      "planned_environment": "staging",
+      "automation": "PLAN",
+      "script": null,
+      "priority": "P1",
+      "note": "本测试页短暂离线并恢复、重开同一会话后，原请求完成，唯一用户轮次/同一原run保留；12秒F4机器人候选实际播放成功，未重新发送。回读服务器消息创建时间04:17:03.149早于断流04:17:03.711。",
+      "report": "local-footage-results-36-50-staging-20261124.md",
+      "fixtures": [
+        "F4"
+      ],
+      "category": "一般补强",
+      "created": "2026-11-24",
+      "precondition_gate": "测试页临时网络控制；已确认受理",
+      "execution_script_status": "PLAN；本轮有头执行，未接固定脚本",
+      "history": [
+        {
+          "status": "Not Run",
+          "note": "2026-11-24新增设计，未执行；请求受理后的断流恢复；前置条件：测试页临时网络控制；已确认受理",
+          "report": null,
+          "environment": null
+        }
+      ],
+      "executed": "2026-11-24",
+      "execution_method": "ego-browser headed",
+      "evidence": [
+        "LF-44-submit.json",
+        "LF-44-accepted-state.json",
+        "LF-44-network-control.json",
+        "LF-44-network-control-reconciled.json",
+        "LF-44-offline-after-accepted.png",
+        "LF-44-final-state.json",
+        "LF-44-A-final-conversation.json",
+        "LF-44-recovered-preview-1.png"
+      ],
+      "conversation_id": "ee97783d-9639-4597-8765-57ed796d09ca",
+      "design_revision": {
+        "id": "LF3773-V3-20261124",
+        "date": "2026-11-24",
+        "execution_status": "Not Run",
+        "scope": "body only; no additional diffusion",
+        "change": "前置/步骤/预期压缩，完整提示词与参数组保留",
+        "previous_execution_preserved": true
+      },
+      "design_revision_history": [
+        {
+          "id": "LF3673-V2-20261124",
+          "date": "2026-11-24",
+          "execution_status": "Not Run",
+          "scope": "body only; no additional diffusion",
+          "previous_execution_preserved": true,
+          "summary": "精简前置/步骤/预期；逐文件先分析；条件与必要参数组明确"
+        }
+      ]
+    },
+    {
+      "id": "LF-45",
+      "title": "模型限流或超时后的业务恢复",
+      "status": "Passed",
+      "environment": "staging",
+      "planned_environment": "staging",
+      "automation": "PLAN",
+      "script": null,
+      "priority": "P1",
+      "note": "复用本日LF-34真实模型429失败作为前置，确认failed后仅点击一次页面重试。原run由resuming转done，同会话原有男子历史保留，本轮返回正确女士F5并实际播放，下载SHA与7MB.mp4原片一致；没有新增用户轮次或重复生成。",
+      "report": "local-footage-results-36-50-staging-20261124.md",
+      "fixtures": [
+        "F5",
+        "F6"
+      ],
+      "category": "一般补强",
+      "created": "2026-11-24",
+      "precondition_gate": "自然异常或获准故障夹具",
+      "execution_script_status": "PLAN；本轮有头执行，未接固定脚本",
+      "history": [
+        {
+          "status": "Not Run",
+          "note": "2026-11-24新增设计，未执行；模型限流或超时后的业务恢复；前置条件：自然异常或获准故障夹具",
+          "report": null,
+          "environment": null
+        }
+      ],
+      "executed": "2026-11-24",
+      "execution_method": "ego-browser headed",
+      "evidence": [
+        "LF-45-before-recovery-state.json",
+        "LF-45-existing-429.png",
+        "LF-45-recovery-click.json",
+        "LF-45-recovery-initial-state.json",
+        "LF-45-final-state.json",
+        "LF-45-recovery-result.png",
+        "LF-45-recovered-preview-1.png",
+        "LF-45-recovered-hash.json",
+        "LF-45-verified-state.json"
+      ],
+      "conversation_id": "e0742011-fd56-486d-87a9-21255f132994",
+      "design_revision": {
+        "id": "LF3773-V3-20261124",
+        "date": "2026-11-24",
+        "execution_status": "Not Run",
+        "scope": "body only; no additional diffusion",
+        "change": "前置/步骤/预期压缩，完整提示词与参数组保留",
+        "previous_execution_preserved": true
+      },
+      "design_revision_history": [
+        {
+          "id": "LF3673-V2-20261124",
+          "date": "2026-11-24",
+          "execution_status": "Not Run",
+          "scope": "body only; no additional diffusion",
+          "previous_execution_preserved": true,
+          "summary": "精简前置/步骤/预期；逐文件先分析；条件与必要参数组明确"
+        }
+      ]
+    },
+    {
+      "id": "LF-46",
+      "title": "自然语言同义描述命中",
+      "status": "Failed",
+      "environment": "staging",
+      "planned_environment": "staging",
+      "automation": "PLAN",
+      "script": null,
+      "priority": "P1",
+      "note": "两种原始同义表达结果不一致：A仅文字声称找到并引用外部stock地址，0当前项目可播放候选；B实际调用项目内search_materials并返回F6三个片段，均实际播放为眼镜男子/木桌/电脑，B通过，整体A未达本例素材命中目标。",
+      "report": "local-footage-results-36-50-staging-20261124.md",
+      "fixtures": [
+        "F5",
+        "F6"
+      ],
+      "category": "一般补强",
+      "created": "2026-11-24",
+      "precondition_gate": null,
+      "execution_script_status": "PLAN；本轮有头执行，未接固定脚本",
+      "history": [
+        {
+          "status": "Not Run",
+          "note": "2026-11-24新增设计，未执行；自然语言同义描述命中",
+          "report": null,
+          "environment": null
+        }
+      ],
+      "executed": "2026-11-24",
+      "execution_method": "ego-browser headed",
+      "evidence": [
+        "LF-46-A-final-state.json",
+        "LF-46-A-final-conversation.json",
+        "LF-46-A-result.png",
+        "LF-46-B-final-state.json",
+        "LF-46-B-final-conversation.json",
+        "LF-46-B-result.png",
+        "LF-46-B-preview-1.png",
+        "LF-46-B-preview-2.png",
+        "LF-46-B-preview-3.png",
+        "LF-46-B-verified-state.json"
+      ],
+      "conversation_id": "19663836-f7d7-4879-918f-4ddb1bea3a77",
+      "design_revision": {
+        "id": "LF3773-V3-20261124",
+        "date": "2026-11-24",
+        "execution_status": "Not Run",
+        "scope": "body only; no additional diffusion",
+        "change": "前置/步骤/预期压缩，完整提示词与参数组保留",
+        "previous_execution_preserved": true
+      },
+      "design_revision_history": [
+        {
+          "id": "LF3673-V2-20261124",
+          "date": "2026-11-24",
+          "execution_status": "Not Run",
+          "scope": "body only; no additional diffusion",
+          "previous_execution_preserved": true,
+          "summary": "精简前置/步骤/预期；逐文件先分析；条件与必要参数组明确"
+        }
+      ]
+    },
+    {
+      "id": "LF-47",
+      "title": "正常快速发送的防重复提交",
+      "status": "Passed",
+      "environment": "staging",
+      "planned_environment": "staging",
+      "automation": "PLAN",
+      "script": null,
+      "priority": "P1",
+      "note": "仅通过正常发送控件尝试双击，首击后控件切换为停止，第二次发送定位被阻断，未强行点击停止或绕过控件。最终只有1条用户消息/1个原run，完成并实际播放正确12秒火车候选，无重复提交。",
+      "report": "local-footage-results-36-50-staging-20261124.md",
+      "fixtures": [
+        "F4"
+      ],
+      "category": "一般补强",
+      "created": "2026-11-24",
+      "precondition_gate": null,
+      "execution_script_status": "PLAN；本轮有头执行，未接固定脚本",
+      "history": [
+        {
+          "status": "Not Run",
+          "note": "2026-11-24新增设计，未执行；正常快速发送的防重复提交",
+          "report": null,
+          "environment": null
+        }
+      ],
+      "executed": "2026-11-24",
+      "execution_method": "ego-browser headed",
+      "evidence": [
+        "LF-47-doubleclick-attempt.json",
+        "LF-47-initial-state.json",
+        "LF-47-final-state.json",
+        "LF-47-result.png",
+        "LF-47-preview-1.png",
+        "LF-47-verified-state.json"
+      ],
+      "conversation_id": "950b0111-cc50-4fc0-ad88-387ac659de76",
+      "design_revision": {
+        "id": "LF3773-V3-20261124",
+        "date": "2026-11-24",
+        "execution_status": "Not Run",
+        "scope": "body only; no additional diffusion",
+        "change": "前置/步骤/预期压缩，完整提示词与参数组保留",
+        "previous_execution_preserved": true
+      },
+      "design_revision_history": [
+        {
+          "id": "LF3673-V2-20261124",
+          "date": "2026-11-24",
+          "execution_status": "Not Run",
+          "scope": "body only; no additional diffusion",
+          "previous_execution_preserved": true,
+          "summary": "精简前置/步骤/预期；逐文件先分析；条件与必要参数组明确"
+        }
+      ]
+    },
+    {
+      "id": "LF-48",
+      "title": "静音音轨视频的分析和视觉检索",
+      "status": "Passed",
+      "environment": "staging",
+      "planned_environment": "staging",
+      "automation": "PLAN",
+      "script": null,
+      "priority": "P1",
+      "note": "静音AAC音轨视频已真实上传并完成分析。视觉查询返回正确6秒黄色机器人候选且实际播放；下载候选音频解码全为零。随后按旁白火车查询明确无匹配、0新增候选，没有把视觉历史当语音命中或虚构台词。",
+      "report": "local-footage-results-36-50-staging-20261124.md",
+      "fixtures": [
+        "M-SILENT"
+      ],
+      "category": "特殊素材",
+      "created": "2026-11-24",
+      "precondition_gate": null,
+      "execution_script_status": "PLAN；本轮有头执行，未接固定脚本",
+      "history": [
+        {
+          "status": "Not Run",
+          "note": "2026-11-24新增设计，未执行；静音音轨视频的分析和视觉检索",
+          "report": null,
+          "environment": null
+        }
+      ],
+      "executed": "2026-11-24",
+      "execution_method": "ego-browser headed",
+      "evidence": [
+        "fixture-audit.json",
+        "fixture-content-verification.json",
+        "M-SILENT-audio-check.txt",
+        "SILENT-uploaded.png",
+        "SILENT-budget.png",
+        "SILENT-analysis-ready.png",
+        "LF-48-visual-final-state.json",
+        "LF-48-visual-preview-1.png",
+        "LF-48-visual-result.mp4",
+        "LF-48-returned-audio-audit.json",
+        "LF-48-speech-negative-final-state.json",
+        "LF-48-speech-negative-result.png"
+      ],
+      "conversation_id": "97c4906a-0347-4ba8-afbc-1a9620ddeb3f",
+      "design_revision": {
+        "id": "LF3773-V3-20261124",
+        "date": "2026-11-24",
+        "execution_status": "Not Run",
+        "scope": "body only; no additional diffusion",
+        "change": "前置/步骤/预期压缩，完整提示词与参数组保留",
+        "previous_execution_preserved": true
+      },
+      "design_revision_history": [
+        {
+          "id": "LF3673-V2-20261124",
+          "date": "2026-11-24",
+          "execution_status": "Not Run",
+          "scope": "body only; no additional diffusion",
+          "previous_execution_preserved": true,
+          "summary": "精简前置/步骤/预期；逐文件先分析；条件与必要参数组明确"
+        }
+      ]
+    },
+    {
+      "id": "LF-49",
+      "title": "多音轨和独立声道查找",
+      "status": "Passed",
+      "environment": "staging",
+      "planned_environment": "staging",
+      "automation": "PLAN",
+      "script": null,
+      "priority": "P1",
+      "note": "默认音轨的机器人句定位1.100～2.660秒并实际播放；单音轨立体声左侧机器人、右侧火车分别定位1.040～2.680及6.540～8.140秒，均播放且下载PCM与对应源对齐。双音轨第二条非默认轨的火车查询无结果，未计为全音轨通过。",
+      "report": "local-footage-results-36-50-staging-20261124.md",
+      "fixtures": [
+        "M-A2",
+        "M-LR"
+      ],
+      "category": "特殊素材",
+      "created": "2026-11-24",
+      "precondition_gate": "需制作并人工确认两句，选轨能力待确认",
+      "execution_script_status": "PLAN；本轮有头执行，未接固定脚本",
+      "history": [
+        {
+          "status": "Not Run",
+          "note": "2026-11-24新增设计，未执行；多音轨和独立声道查找；前置条件：需制作并人工确认两句，选轨能力待确认",
+          "report": null,
+          "environment": null
+        }
+      ],
+      "executed": "2026-11-24",
+      "execution_method": "ego-browser headed",
+      "evidence": [
+        "LF-49-50-source-stream-audit.json",
+        "LF-49-A2-parameter.json",
+        "A2-analysis-ready.png",
+        "LF-49-A2-robot-final-state.json",
+        "LF-49-A2-robot-audio-audit.json",
+        "LF-49-A2-train-final-state.json",
+        "LR-analysis-ready.png",
+        "LF-49-LR-robot-final-state.json",
+        "LF-49-LR-robot-audio-audit.json",
+        "LF-49-LR-train-final-state.json",
+        "LF-49-LR-train-audio-audit.json",
+        "LF-49-LR-verified-state.json"
+      ],
+      "conversation_id": "0d564a79-9a9b-417d-8d91-6ef3e02adc9e",
+      "design_revision": {
+        "id": "LF3773-V3-20261124",
+        "date": "2026-11-24",
+        "execution_status": "Not Run",
+        "scope": "body only; no additional diffusion",
+        "change": "前置/步骤/预期压缩，完整提示词与参数组保留",
+        "previous_execution_preserved": true
+      },
+      "design_revision_history": [
+        {
+          "id": "LF3673-V2-20261124",
+          "date": "2026-11-24",
+          "execution_status": "Not Run",
+          "scope": "body only; no additional diffusion",
+          "previous_execution_preserved": true,
+          "summary": "精简前置/步骤/预期；逐文件先分析；条件与必要参数组明确"
+        }
+      ]
+    },
+    {
+      "id": "LF-50",
+      "title": "纯音频素材的分析和查找",
+      "status": "Not Applicable",
+      "environment": "staging",
+      "planned_environment": "staging",
+      "automation": "PLAN",
+      "script": null,
+      "priority": "P1",
+      "note": "纯WAV已通过真实文件夹入口导入新项目，membership确认为audio、576078字节；分析页明确0个媒体/没有找到可分析的图片或视频，开始分析禁用。按用例条件跳过分析，纯音频查找分支不适用，未发送无法建立前置的查找。返回既有LR视频项目，原火车片段仍实际播放，源membership不变。",
+      "report": "local-footage-results-36-50-staging-20261124.md",
+      "fixtures": [
+        "M-AUDIO"
+      ],
+      "category": "特殊素材",
+      "created": "2026-11-24",
+      "precondition_gate": "素材库音频支持范围；音频金标",
+      "execution_script_status": "PLAN；本轮有头执行，未接固定脚本",
+      "history": [
+        {
+          "status": "Not Run",
+          "note": "2026-11-24新增设计，未执行；纯音频素材的分析和查找；前置条件：素材库音频支持范围；音频金标",
+          "report": null,
+          "environment": null
+        }
+      ],
+      "executed": "2026-11-24",
+      "execution_method": "ego-browser headed",
+      "evidence": [
+        "LF-49-50-source-stream-audit.json",
+        "LF-50-pure-audio-analysis-entry.png",
+        "LF-50-audio-entry-state.json",
+        "LF-50-audio-membership.json",
+        "LF-50-audio-skipped-workbench.png",
+        "LF-50-normal-project-control-preview-1.png",
+        "LF-50-normal-project-control.json"
+      ],
+      "design_revision": {
+        "id": "LF3773-V3-20261124",
+        "date": "2026-11-24",
+        "execution_status": "Not Run",
+        "scope": "body only; no additional diffusion",
+        "change": "前置/步骤/预期压缩，完整提示词与参数组保留",
+        "previous_execution_preserved": true
+      },
+      "design_revision_history": [
+        {
+          "id": "LF3673-V2-20261124",
+          "date": "2026-11-24",
+          "execution_status": "Not Run",
+          "scope": "body only; no additional diffusion",
+          "previous_execution_preserved": true,
+          "summary": "精简前置/步骤/预期；逐文件先分析；条件与必要参数组明确"
+        }
+      ]
+    },
+    {
+      "id": "LF-51",
+      "title": "声画描述冲突的通道区分",
+      "status": "Not Run",
+      "environment": null,
+      "planned_environment": "staging",
+      "automation": "PLAN",
+      "script": null,
+      "priority": "P0",
+      "note": "2026-11-24新增设计，未执行；声画描述冲突的通道区分",
+      "report": null,
+      "fixtures": [
+        "M-AV"
+      ],
+      "category": "特殊素材",
+      "created": "2026-11-24",
+      "precondition_gate": null,
+      "execution_script_status": "PLAN；尚未接入固定脚本",
+      "design_revision": {
+        "id": "LF3773-V3-20261124",
+        "date": "2026-11-24",
+        "execution_status": "Not Run",
+        "scope": "body only; no additional diffusion",
+        "change": "前置/步骤/预期压缩，完整提示词与参数组保留",
+        "previous_execution_preserved": true
+      },
+      "design_revision_history": [
+        {
+          "id": "LF3673-V2-20261124",
+          "date": "2026-11-24",
+          "execution_status": "Not Run",
+          "scope": "body only; no additional diffusion",
+          "previous_execution_preserved": true,
+          "summary": "精简前置/步骤/预期；逐文件先分析；条件与必要参数组明确"
+        }
+      ]
+    },
+    {
+      "id": "LF-52",
+      "title": "极短视频和瞬时首尾目标",
+      "status": "Not Run",
+      "environment": null,
+      "planned_environment": "staging",
+      "automation": "PLAN",
+      "script": null,
+      "priority": "P1",
+      "note": "2026-11-24新增设计，未执行；极短视频和瞬时首尾目标；前置条件：支持时长范围；逐帧金标",
+      "report": null,
+      "fixtures": [
+        "M-SHORT",
+        "M-FLASH"
+      ],
+      "category": "特殊素材",
+      "created": "2026-11-24",
+      "precondition_gate": "支持时长范围；逐帧金标",
+      "execution_script_status": "PLAN；尚未接入固定脚本",
+      "design_revision": {
+        "id": "LF3773-V3-20261124",
+        "date": "2026-11-24",
+        "execution_status": "Not Run",
+        "scope": "body only; no additional diffusion",
+        "change": "前置/步骤/预期压缩，完整提示词与参数组保留",
+        "previous_execution_preserved": true
+      },
+      "design_revision_history": [
+        {
+          "id": "LF3673-V2-20261124",
+          "date": "2026-11-24",
+          "execution_status": "Not Run",
+          "scope": "body only; no additional diffusion",
+          "previous_execution_preserved": true,
+          "summary": "精简前置/步骤/预期；逐文件先分析；条件与必要参数组明确"
+        }
+      ]
+    },
+    {
+      "id": "LF-53",
+      "title": "竖屏及旋转元数据的视觉查找",
+      "status": "Not Run",
+      "environment": null,
+      "planned_environment": "staging",
+      "automation": "PLAN",
+      "script": null,
+      "priority": "P1",
+      "note": "2026-11-24新增设计，未执行；竖屏及旋转元数据的视觉查找；前置条件：需准备方向明确的副本金标",
+      "report": null,
+      "fixtures": [
+        "M-PORTRAIT",
+        "M-ROTATE"
+      ],
+      "category": "特殊素材",
+      "created": "2026-11-24",
+      "precondition_gate": "需准备方向明确的副本金标",
+      "execution_script_status": "PLAN；尚未接入固定脚本",
+      "design_revision": {
+        "id": "LF3773-V3-20261124",
+        "date": "2026-11-24",
+        "execution_status": "Not Run",
+        "scope": "body only; no additional diffusion",
+        "change": "前置/步骤/预期压缩，完整提示词与参数组保留",
+        "previous_execution_preserved": true
+      },
+      "design_revision_history": [
+        {
+          "id": "LF3673-V2-20261124",
+          "date": "2026-11-24",
+          "execution_status": "Not Run",
+          "scope": "body only; no additional diffusion",
+          "previous_execution_preserved": true,
+          "summary": "精简前置/步骤/预期；逐文件先分析；条件与必要参数组明确"
+        }
+      ]
+    },
+    {
+      "id": "LF-54",
+      "title": "可变帧率和非零起始时间定位",
+      "status": "Not Run",
+      "environment": null,
+      "planned_environment": "staging",
+      "automation": "PLAN",
+      "script": null,
+      "priority": "P1",
+      "note": "2026-11-24新增设计，未执行；可变帧率和非零起始时间定位；前置条件：合法时间基样本与播放金标",
+      "report": null,
+      "fixtures": [
+        "M-VFR",
+        "M-START"
+      ],
+      "category": "特殊素材",
+      "created": "2026-11-24",
+      "precondition_gate": "合法时间基样本与播放金标",
+      "execution_script_status": "PLAN；尚未接入固定脚本",
+      "design_revision": {
+        "id": "LF3773-V3-20261124",
+        "date": "2026-11-24",
+        "execution_status": "Not Run",
+        "scope": "body only; no additional diffusion",
+        "change": "前置/步骤/预期压缩，完整提示词与参数组保留",
+        "previous_execution_preserved": true
+      },
+      "design_revision_history": [
+        {
+          "id": "LF3673-V2-20261124",
+          "date": "2026-11-24",
+          "execution_status": "Not Run",
+          "scope": "body only; no additional diffusion",
+          "previous_execution_preserved": true,
+          "summary": "精简前置/步骤/预期；逐文件先分析；条件与必要参数组明确"
+        }
+      ]
+    },
+    {
+      "id": "LF-55",
+      "title": "特殊封装及编码的分析预览",
+      "status": "Not Run",
+      "environment": null,
+      "planned_environment": "staging",
+      "automation": "PLAN",
+      "script": null,
+      "priority": "P1",
+      "note": "2026-11-24新增设计，未执行；特殊封装及编码的分析预览；前置条件：先确认支持容器、编码与代理流程",
+      "report": null,
+      "fixtures": [
+        "M-CODEC"
+      ],
+      "category": "特殊素材",
+      "created": "2026-11-24",
+      "precondition_gate": "先确认支持容器、编码与代理流程",
+      "execution_script_status": "PLAN；尚未接入固定脚本",
+      "design_revision": {
+        "id": "LF3773-V3-20261124",
+        "date": "2026-11-24",
+        "execution_status": "Not Run",
+        "scope": "body only; no additional diffusion",
+        "change": "前置/步骤/预期压缩，完整提示词与参数组保留",
+        "previous_execution_preserved": true
+      },
+      "design_revision_history": [
+        {
+          "id": "LF3673-V2-20261124",
+          "date": "2026-11-24",
+          "execution_status": "Not Run",
+          "scope": "body only; no additional diffusion",
+          "previous_execution_preserved": true,
+          "summary": "精简前置/步骤/预期；逐文件先分析；条件与必要参数组明确"
+        }
+      ]
+    },
+    {
+      "id": "LF-56",
+      "title": "黑屏有声与低清模糊画面",
+      "status": "Not Run",
+      "environment": null,
+      "planned_environment": "staging",
+      "automation": "PLAN",
+      "script": null,
+      "priority": "P1",
+      "note": "2026-11-24新增设计，未执行；黑屏有声与低清模糊画面；前置条件：完整声画金标",
+      "report": null,
+      "fixtures": [
+        "M-BLACK",
+        "M-LOW"
+      ],
+      "category": "特殊素材",
+      "created": "2026-11-24",
+      "precondition_gate": "完整声画金标",
+      "execution_script_status": "PLAN；尚未接入固定脚本",
+      "design_revision": {
+        "id": "LF3773-V3-20261124",
+        "date": "2026-11-24",
+        "execution_status": "Not Run",
+        "scope": "body only; no additional diffusion",
+        "change": "前置/步骤/预期压缩，完整提示词与参数组保留",
+        "previous_execution_preserved": true
+      },
+      "design_revision_history": [
+        {
+          "id": "LF3673-V2-20261124",
+          "date": "2026-11-24",
+          "execution_status": "Not Run",
+          "scope": "body only; no additional diffusion",
+          "previous_execution_preserved": true,
+          "summary": "精简前置/步骤/预期；逐文件先分析；条件与必要参数组明确"
+        }
+      ]
+    },
+    {
+      "id": "LF-57",
+      "title": "特殊文件名完整名称查找",
+      "status": "Not Run",
+      "environment": null,
+      "planned_environment": "staging",
+      "automation": "PLAN",
+      "script": null,
+      "priority": "P1",
+      "note": "2026-11-24新增设计，未执行；特殊文件名完整名称查找",
+      "report": null,
+      "fixtures": [
+        "F5-copy"
+      ],
+      "category": "特殊素材",
+      "created": "2026-11-24",
+      "precondition_gate": null,
+      "execution_script_status": "PLAN；尚未接入固定脚本",
+      "design_revision": {
+        "id": "LF3773-V3-20261124",
+        "date": "2026-11-24",
+        "execution_status": "Not Run",
+        "scope": "body only; no additional diffusion",
+        "change": "前置/步骤/预期压缩，完整提示词与参数组保留",
+        "previous_execution_preserved": true
+      },
+      "design_revision_history": [
+        {
+          "id": "LF3673-V2-20261124",
+          "date": "2026-11-24",
+          "execution_status": "Not Run",
+          "scope": "body only; no additional diffusion",
+          "previous_execution_preserved": true,
+          "summary": "精简前置/步骤/预期；逐文件先分析；条件与必要参数组明确"
+        }
+      ]
+    },
+    {
+      "id": "LF-58",
+      "title": "损坏文件混入正常批次的隔离",
+      "status": "Not Run",
+      "environment": null,
+      "planned_environment": "staging",
+      "automation": "PLAN",
+      "script": null,
+      "priority": "P0",
+      "note": "2026-11-24新增设计，未执行；损坏文件混入正常批次的隔离",
+      "report": null,
+      "fixtures": [
+        "F6",
+        "M-BAD"
+      ],
+      "category": "特殊素材",
+      "created": "2026-11-24",
+      "precondition_gate": null,
+      "execution_script_status": "PLAN；尚未接入固定脚本",
+      "design_revision": {
+        "id": "LF3773-V3-20261124",
+        "date": "2026-11-24",
+        "execution_status": "Not Run",
+        "scope": "body only; no additional diffusion",
+        "change": "前置/步骤/预期压缩，完整提示词与参数组保留",
+        "previous_execution_preserved": true
+      },
+      "design_revision_history": [
+        {
+          "id": "LF3673-V2-20261124",
+          "date": "2026-11-24",
+          "execution_status": "Not Run",
+          "scope": "body only; no additional diffusion",
+          "previous_execution_preserved": true,
+          "summary": "精简前置/步骤/预期；逐文件先分析；条件与必要参数组明确"
+        }
+      ]
+    },
+    {
+      "id": "LF-59",
+      "title": "语音多语言及相近话题的查找",
+      "status": "Not Run",
+      "environment": null,
+      "planned_environment": "staging",
+      "automation": "PLAN",
+      "script": null,
+      "priority": "P1",
+      "note": "2026-11-24新增设计，未执行；语音多语言及相近话题的查找；前置条件：听审金标及支持语言/语义范围",
+      "report": null,
+      "fixtures": [
+        "M-SPEECH"
+      ],
+      "category": "特殊素材",
+      "created": "2026-11-24",
+      "precondition_gate": "听审金标及支持语言/语义范围",
+      "execution_script_status": "PLAN；尚未接入固定脚本",
+      "design_revision": {
+        "id": "LF3773-V3-20261124",
+        "date": "2026-11-24",
+        "execution_status": "Not Run",
+        "scope": "body only; no additional diffusion",
+        "change": "前置/步骤/预期压缩，完整提示词与参数组保留",
+        "previous_execution_preserved": true
+      },
+      "design_revision_history": [
+        {
+          "id": "LF3673-V2-20261124",
+          "date": "2026-11-24",
+          "execution_status": "Not Run",
+          "scope": "body only; no additional diffusion",
+          "previous_execution_preserved": true,
+          "summary": "精简前置/步骤/预期；逐文件先分析；条件与必要参数组明确"
+        }
+      ]
+    },
+    {
+      "id": "LF-60",
+      "title": "仅画面可读文字的OCR查找",
+      "status": "Not Run",
+      "environment": null,
+      "planned_environment": "staging",
+      "automation": "PLAN",
+      "script": null,
+      "priority": "P1",
+      "note": "2026-11-24新增设计，未执行；仅画面可读文字的OCR查找；前置条件：确认OCR能力；人工读审金标",
+      "report": null,
+      "fixtures": [
+        "M-OCR"
+      ],
+      "category": "特殊素材",
+      "created": "2026-11-24",
+      "precondition_gate": "确认OCR能力；人工读审金标",
+      "execution_script_status": "PLAN；尚未接入固定脚本",
+      "design_revision": {
+        "id": "LF3773-V3-20261124",
+        "date": "2026-11-24",
+        "execution_status": "Not Run",
+        "scope": "body only; no additional diffusion",
+        "change": "前置/步骤/预期压缩，完整提示词与参数组保留",
+        "previous_execution_preserved": true
+      },
+      "design_revision_history": [
+        {
+          "id": "LF3673-V2-20261124",
+          "date": "2026-11-24",
+          "execution_status": "Not Run",
+          "scope": "body only; no additional diffusion",
+          "previous_execution_preserved": true,
+          "summary": "精简前置/步骤/预期；逐文件先分析；条件与必要参数组明确"
+        }
+      ]
+    },
+    {
+      "id": "LF-61",
+      "title": "较多素材及候选续取完整性",
+      "status": "Not Run",
+      "environment": null,
+      "planned_environment": "staging",
+      "automation": "PLAN",
+      "script": null,
+      "priority": "P1",
+      "note": "2026-11-24新增设计，未执行；较多素材及候选续取完整性；前置条件：允许库规模与结果限制确认",
+      "report": null,
+      "fixtures": [
+        "M-SCALE"
+      ],
+      "category": "特殊素材",
+      "created": "2026-11-24",
+      "precondition_gate": "允许库规模与结果限制确认",
+      "execution_script_status": "PLAN；尚未接入固定脚本",
+      "design_revision": {
+        "id": "LF3773-V3-20261124",
+        "date": "2026-11-24",
+        "execution_status": "Not Run",
+        "scope": "body only; no additional diffusion",
+        "change": "前置/步骤/预期压缩，完整提示词与参数组保留",
+        "previous_execution_preserved": true
+      },
+      "design_revision_history": [
+        {
+          "id": "LF3673-V2-20261124",
+          "date": "2026-11-24",
+          "execution_status": "Not Run",
+          "scope": "body only; no additional diffusion",
+          "previous_execution_preserved": true,
+          "summary": "精简前置/步骤/预期；逐文件先分析；条件与必要参数组明确"
+        }
+      ]
+    },
+    {
+      "id": "LF-62",
+      "title": "支持范围内时长体积和分辨率边界",
+      "status": "Not Run",
+      "environment": null,
+      "planned_environment": "staging",
+      "automation": "PLAN",
+      "script": null,
+      "priority": "P1",
+      "note": "2026-11-24新增设计，未执行；支持范围内时长体积和分辨率边界；前置条件：实际媒体上限和可控样本",
+      "report": null,
+      "fixtures": [
+        "M-BOUND"
+      ],
+      "category": "特殊素材",
+      "created": "2026-11-24",
+      "precondition_gate": "实际媒体上限和可控样本",
+      "execution_script_status": "PLAN；尚未接入固定脚本",
+      "design_revision": {
+        "id": "LF3773-V3-20261124",
+        "date": "2026-11-24",
+        "execution_status": "Not Run",
+        "scope": "body only; no additional diffusion",
+        "change": "前置/步骤/预期压缩，完整提示词与参数组保留",
+        "previous_execution_preserved": true
+      },
+      "design_revision_history": [
+        {
+          "id": "LF3673-V2-20261124",
+          "date": "2026-11-24",
+          "execution_status": "Not Run",
+          "scope": "body only; no additional diffusion",
+          "previous_execution_preserved": true,
+          "summary": "精简前置/步骤/预期；逐文件先分析；条件与必要参数组明确"
+        }
+      ]
+    },
+    {
+      "id": "LF-63",
+      "title": "支持浏览器中的结果恢复一致性",
+      "status": "Not Run",
+      "environment": null,
+      "planned_environment": "staging",
+      "automation": "PLAN",
+      "script": null,
+      "priority": "P1",
+      "note": "2026-11-24新增设计，未执行；支持浏览器中的结果恢复一致性；前置条件：第二个受支持浏览器的同账号登录",
+      "report": null,
+      "fixtures": [
+        "F5"
+      ],
+      "category": "特殊素材",
+      "created": "2026-11-24",
+      "precondition_gate": "第二个受支持浏览器的同账号登录",
+      "execution_script_status": "PLAN；尚未接入固定脚本",
+      "design_revision": {
+        "id": "LF3773-V3-20261124",
+        "date": "2026-11-24",
+        "execution_status": "Not Run",
+        "scope": "body only; no additional diffusion",
+        "change": "前置/步骤/预期压缩，完整提示词与参数组保留",
+        "previous_execution_preserved": true
+      },
+      "design_revision_history": [
+        {
+          "id": "LF3673-V2-20261124",
+          "date": "2026-11-24",
+          "execution_status": "Not Run",
+          "scope": "body only; no additional diffusion",
+          "previous_execution_preserved": true,
+          "summary": "精简前置/步骤/预期；逐文件先分析；条件与必要参数组明确"
+        }
+      ]
+    },
+    {
+      "id": "LF-64",
+      "title": "长视频导入与首次分析完整性",
+      "status": "Not Run",
+      "environment": null,
+      "planned_environment": "staging",
+      "automation": "PLAN",
+      "script": null,
+      "priority": "P0",
+      "note": "2026-11-24新增设计，未执行；长视频导入与首次分析完整性",
+      "report": null,
+      "fixtures": [
+        "F7"
+      ],
+      "category": "长视频",
+      "created": "2026-11-24",
+      "precondition_gate": null,
+      "execution_script_status": "PLAN；尚未接入固定脚本",
+      "design_revision": {
+        "id": "LF3773-V3-20261124",
+        "date": "2026-11-24",
+        "execution_status": "Not Run",
+        "scope": "body only; no additional diffusion",
+        "change": "前置/步骤/预期压缩，完整提示词与参数组保留",
+        "previous_execution_preserved": true
+      },
+      "design_revision_history": [
+        {
+          "id": "LF3673-V2-20261124",
+          "date": "2026-11-24",
+          "execution_status": "Not Run",
+          "scope": "body only; no additional diffusion",
+          "previous_execution_preserved": true,
+          "summary": "精简前置/步骤/预期；逐文件先分析；条件与必要参数组明确"
+        }
+      ]
+    },
+    {
+      "id": "LF-65",
+      "title": "长视频完整名称和原源身份",
+      "status": "Not Run",
+      "environment": null,
+      "planned_environment": "staging",
+      "automation": "PLAN",
+      "script": null,
+      "priority": "P0",
+      "note": "2026-11-24新增设计，未执行；长视频完整名称和原源身份",
+      "report": null,
+      "fixtures": [
+        "F7"
+      ],
+      "category": "长视频",
+      "created": "2026-11-24",
+      "precondition_gate": null,
+      "execution_script_status": "PLAN；尚未接入固定脚本",
+      "design_revision": {
+        "id": "LF3773-V3-20261124",
+        "date": "2026-11-24",
+        "execution_status": "Not Run",
+        "scope": "body only; no additional diffusion",
+        "change": "前置/步骤/预期压缩，完整提示词与参数组保留",
+        "previous_execution_preserved": true
+      },
+      "design_revision_history": [
+        {
+          "id": "LF3673-V2-20261124",
+          "date": "2026-11-24",
+          "execution_status": "Not Run",
+          "scope": "body only; no additional diffusion",
+          "previous_execution_preserved": true,
+          "summary": "精简前置/步骤/预期；逐文件先分析；条件与必要参数组明确"
+        }
+      ]
+    },
+    {
+      "id": "LF-66",
+      "title": "长视频开头内容定位",
+      "status": "Not Run",
+      "environment": null,
+      "planned_environment": "staging",
+      "automation": "PLAN",
+      "script": null,
+      "priority": "P0",
+      "note": "2026-11-24新增设计，未执行；长视频开头内容定位；前置条件：开场独立声画确认",
+      "report": null,
+      "fixtures": [
+        "F7"
+      ],
+      "category": "长视频",
+      "created": "2026-11-24",
+      "precondition_gate": "开场独立声画确认",
+      "execution_script_status": "PLAN；尚未接入固定脚本",
+      "design_revision": {
+        "id": "LF3773-V3-20261124",
+        "date": "2026-11-24",
+        "execution_status": "Not Run",
+        "scope": "body only; no additional diffusion",
+        "change": "前置/步骤/预期压缩，完整提示词与参数组保留",
+        "previous_execution_preserved": true
+      },
+      "design_revision_history": [
+        {
+          "id": "LF3673-V2-20261124",
+          "date": "2026-11-24",
+          "execution_status": "Not Run",
+          "scope": "body only; no additional diffusion",
+          "previous_execution_preserved": true,
+          "summary": "精简前置/步骤/预期；逐文件先分析；条件与必要参数组明确"
+        }
+      ]
+    },
+    {
+      "id": "LF-67",
+      "title": "长视频中后段话题语义定位",
+      "status": "Not Run",
+      "environment": null,
+      "planned_environment": "staging",
+      "automation": "PLAN",
+      "script": null,
+      "priority": "P0",
+      "note": "2026-11-24新增设计，未执行；长视频中后段话题语义定位；前置条件：独立听审话题区间；元数据不作金标",
+      "report": null,
+      "fixtures": [
+        "F7"
+      ],
+      "category": "长视频",
+      "created": "2026-11-24",
+      "precondition_gate": "独立听审话题区间；元数据不作金标",
+      "execution_script_status": "PLAN；尚未接入固定脚本",
+      "design_revision": {
+        "id": "LF3773-V3-20261124",
+        "date": "2026-11-24",
+        "execution_status": "Not Run",
+        "scope": "body only; no additional diffusion",
+        "change": "前置/步骤/预期压缩，完整提示词与参数组保留",
+        "previous_execution_preserved": true
+      },
+      "design_revision_history": [
+        {
+          "id": "LF3673-V2-20261124",
+          "date": "2026-11-24",
+          "execution_status": "Not Run",
+          "scope": "body only; no additional diffusion",
+          "previous_execution_preserved": true,
+          "summary": "精简前置/步骤/预期；逐文件先分析；条件与必要参数组明确"
+        }
+      ]
+    },
+    {
+      "id": "LF-68",
+      "title": "长视频接近结束的位置检索",
+      "status": "Not Run",
+      "environment": null,
+      "planned_environment": "staging",
+      "automation": "PLAN",
+      "script": null,
+      "priority": "P0",
+      "note": "2026-11-24新增设计，未执行；长视频接近结束的位置检索；前置条件：尾部独立听审金标",
+      "report": null,
+      "fixtures": [
+        "F7"
+      ],
+      "category": "长视频",
+      "created": "2026-11-24",
+      "precondition_gate": "尾部独立听审金标",
+      "execution_script_status": "PLAN；尚未接入固定脚本",
+      "design_revision": {
+        "id": "LF3773-V3-20261124",
+        "date": "2026-11-24",
+        "execution_status": "Not Run",
+        "scope": "body only; no additional diffusion",
+        "change": "前置/步骤/预期压缩，完整提示词与参数组保留",
+        "previous_execution_preserved": true
+      },
+      "design_revision_history": [
+        {
+          "id": "LF3673-V2-20261124",
+          "date": "2026-11-24",
+          "execution_status": "Not Run",
+          "scope": "body only; no additional diffusion",
+          "previous_execution_preserved": true,
+          "summary": "精简前置/步骤/预期；逐文件先分析；条件与必要参数组明确"
+        }
+      ]
+    },
+    {
+      "id": "LF-69",
+      "title": "长视频一次请求分别定位远隔内容",
+      "status": "Not Run",
+      "environment": null,
+      "planned_environment": "staging",
+      "automation": "PLAN",
+      "script": null,
+      "priority": "P1",
+      "note": "2026-11-24新增设计，未执行；长视频一次请求分别定位远隔内容；前置条件：开场和结尾两处金标",
+      "report": null,
+      "fixtures": [
+        "F7"
+      ],
+      "category": "长视频",
+      "created": "2026-11-24",
+      "precondition_gate": "开场和结尾两处金标",
+      "execution_script_status": "PLAN；尚未接入固定脚本",
+      "design_revision": {
+        "id": "LF3773-V3-20261124",
+        "date": "2026-11-24",
+        "execution_status": "Not Run",
+        "scope": "body only; no additional diffusion",
+        "change": "前置/步骤/预期压缩，完整提示词与参数组保留",
+        "previous_execution_preserved": true
+      },
+      "design_revision_history": [
+        {
+          "id": "LF3673-V2-20261124",
+          "date": "2026-11-24",
+          "execution_status": "Not Run",
+          "scope": "body only; no additional diffusion",
+          "previous_execution_preserved": true,
+          "summary": "精简前置/步骤/预期；逐文件先分析；条件与必要参数组明确"
+        }
+      ]
+    },
+    {
+      "id": "LF-70",
+      "title": "长视频同会话跨位置连续查询",
+      "status": "Not Run",
+      "environment": null,
+      "planned_environment": "staging",
+      "automation": "PLAN",
+      "script": null,
+      "priority": "P1",
+      "note": "2026-11-24新增设计，未执行；长视频同会话跨位置连续查询；前置条件：三处金标与同会话链要求",
+      "report": null,
+      "fixtures": [
+        "F7"
+      ],
+      "category": "长视频",
+      "created": "2026-11-24",
+      "precondition_gate": "三处金标与同会话链要求",
+      "execution_script_status": "PLAN；尚未接入固定脚本",
+      "design_revision": {
+        "id": "LF3773-V3-20261124",
+        "date": "2026-11-24",
+        "execution_status": "Not Run",
+        "scope": "body only; no additional diffusion",
+        "change": "前置/步骤/预期压缩，完整提示词与参数组保留",
+        "previous_execution_preserved": true
+      },
+      "design_revision_history": [
+        {
+          "id": "LF3673-V2-20261124",
+          "date": "2026-11-24",
+          "execution_status": "Not Run",
+          "scope": "body only; no additional diffusion",
+          "previous_execution_preserved": true,
+          "summary": "精简前置/步骤/预期；逐文件先分析；条件与必要参数组明确"
+        }
+      ]
+    },
+    {
+      "id": "LF-71",
+      "title": "长视频不存在目标的反向查询",
+      "status": "Not Run",
+      "environment": null,
+      "planned_environment": "staging",
+      "automation": "PLAN",
+      "script": null,
+      "priority": "P1",
+      "note": "2026-11-24新增设计，未执行；长视频不存在目标的反向查询；前置条件：全片反向画面确认",
+      "report": null,
+      "fixtures": [
+        "F7"
+      ],
+      "category": "长视频",
+      "created": "2026-11-24",
+      "precondition_gate": "全片反向画面确认",
+      "execution_script_status": "PLAN；尚未接入固定脚本",
+      "design_revision": {
+        "id": "LF3773-V3-20261124",
+        "date": "2026-11-24",
+        "execution_status": "Not Run",
+        "scope": "body only; no additional diffusion",
+        "change": "前置/步骤/预期压缩，完整提示词与参数组保留",
+        "previous_execution_preserved": true
+      },
+      "design_revision_history": [
+        {
+          "id": "LF3673-V2-20261124",
+          "date": "2026-11-24",
+          "execution_status": "Not Run",
+          "scope": "body only; no additional diffusion",
+          "previous_execution_preserved": true,
+          "summary": "精简前置/步骤/预期；逐文件先分析；条件与必要参数组明确"
+        }
+      ]
+    },
+    {
+      "id": "LF-72",
+      "title": "长视频分析受理后刷新及续查",
+      "status": "Not Run",
+      "environment": null,
+      "planned_environment": "staging",
+      "automation": "PLAN",
+      "script": null,
+      "priority": "P1",
+      "note": "2026-11-24新增设计，未执行；长视频分析受理后刷新及续查；前置条件：已受理且进行中的真实长视频分析任务",
+      "report": null,
+      "fixtures": [
+        "F7"
+      ],
+      "category": "长视频",
+      "created": "2026-11-24",
+      "precondition_gate": "已受理且进行中的真实长视频分析任务",
+      "execution_script_status": "PLAN；尚未接入固定脚本",
+      "design_revision": {
+        "id": "LF3773-V3-20261124",
+        "date": "2026-11-24",
+        "execution_status": "Not Run",
+        "scope": "body only; no additional diffusion",
+        "change": "前置/步骤/预期压缩，完整提示词与参数组保留",
+        "previous_execution_preserved": true
+      },
+      "design_revision_history": [
+        {
+          "id": "LF3673-V2-20261124",
+          "date": "2026-11-24",
+          "execution_status": "Not Run",
+          "scope": "body only; no additional diffusion",
+          "previous_execution_preserved": true,
+          "summary": "精简前置/步骤/预期；逐文件先分析；条件与必要参数组明确"
+        }
+      ]
+    },
+    {
+      "id": "LF-73",
+      "title": "长短相似人物素材混库查找",
+      "status": "Not Run",
+      "environment": null,
+      "planned_environment": "staging",
+      "automation": "PLAN",
+      "script": null,
+      "priority": "P0",
+      "note": "2026-11-24新增设计，未执行；长短相似人物素材混库查找",
+      "report": null,
+      "fixtures": [
+        "F7",
+        "F5",
+        "F6"
+      ],
+      "category": "长视频",
+      "created": "2026-11-24",
+      "precondition_gate": null,
+      "execution_script_status": "PLAN；尚未接入固定脚本",
+      "design_revision": {
+        "id": "LF3773-V3-20261124",
+        "date": "2026-11-24",
+        "execution_status": "Not Run",
+        "scope": "body only; no additional diffusion",
+        "change": "前置/步骤/预期压缩，完整提示词与参数组保留",
+        "previous_execution_preserved": true
+      },
+      "design_revision_history": [
+        {
+          "id": "LF3673-V2-20261124",
+          "date": "2026-11-24",
+          "execution_status": "Not Run",
+          "scope": "body only; no additional diffusion",
+          "previous_execution_preserved": true,
+          "summary": "精简前置/步骤/预期；逐文件先分析；条件与必要参数组明确"
+        }
+      ]
+    }
+  ],
+  "automation_counts": {
+    "AUTO": 3,
+    "PLAN": 63
+  },
+  "priority_counts": {
+    "P0": 39,
+    "P1": 27
+  },
+  "retired_cases": [
+    {
+      "id": "LF-19",
+      "status": "Not Run",
+      "environment": null,
+      "planned_environment": "staging",
+      "automation": "PLAN",
+      "priority": "P0",
+      "note": "正向：F6完整文件名；仅整理，待授权执行",
+      "report": null,
+      "fixtures": [
+        "F5",
+        "F6"
+      ],
+      "chain_reuse": null,
+      "retired": true,
+      "retirement_reason": "合并到LF18，两份素材按完整名称验证"
+    },
+    {
+      "id": "LF-23",
+      "status": "Not Run",
+      "environment": null,
+      "planned_environment": "staging",
+      "automation": "PLAN",
+      "priority": "P0",
+      "note": "反向：扩展名不一致；仅整理，待授权执行",
+      "report": null,
+      "fixtures": [
+        "F5",
+        "F6"
+      ],
+      "chain_reuse": null,
+      "retired": true,
+      "retirement_reason": "扩展名细分移出核心，基本无匹配由LF22覆盖"
+    },
+    {
+      "id": "LF-24",
+      "status": "Not Run",
+      "environment": null,
+      "planned_environment": "staging",
+      "automation": "PLAN",
+      "priority": "P0",
+      "note": "反向：文件名与内容指代冲突；仅整理，待授权执行",
+      "report": null,
+      "fixtures": [
+        "F5",
+        "F6"
+      ],
+      "chain_reuse": null,
+      "retired": true,
+      "retirement_reason": "名称/内容冲突移出本轮核心"
+    },
+    {
+      "id": "LF-25",
+      "status": "Not Run",
+      "environment": null,
+      "planned_environment": "staging",
+      "automation": "PLAN",
+      "priority": "P0",
+      "note": "反向：明确排除一个已存在素材；仅整理，待授权执行",
+      "report": null,
+      "fixtures": [
+        "F5",
+        "F6"
+      ],
+      "chain_reuse": null,
+      "retired": true,
+      "retirement_reason": "名称排除细分移出核心，内容否定由LF34覆盖"
+    },
+    {
+      "id": "LF-26",
+      "status": "Not Run",
+      "environment": null,
+      "planned_environment": "staging",
+      "automation": "PLAN",
+      "priority": "P0",
+      "note": "反向：宽泛名称匹配存在歧义；仅整理，待授权执行",
+      "report": null,
+      "fixtures": [
+        "F5",
+        "F6"
+      ],
+      "chain_reuse": null,
+      "retired": true,
+      "retirement_reason": "名称宽泛歧义细分移出核心，内容澄清由LF35覆盖"
+    },
+    {
+      "id": "LF-27",
+      "status": "Not Run",
+      "environment": null,
+      "planned_environment": "staging",
+      "automation": "PLAN",
+      "priority": "P0",
+      "note": "反向：同账号跨项目名称不存在；仅整理，待授权执行",
+      "report": null,
+      "fixtures": [
+        "F5",
+        "F6"
+      ],
+      "chain_reuse": null,
+      "retired": true,
+      "retirement_reason": "名称跨项目细分移出核心，项目隔离已有LF11"
+    },
+    {
+      "id": "LF-29",
+      "status": "Not Run",
+      "environment": null,
+      "planned_environment": "staging",
+      "automation": "PLAN",
+      "priority": "P0",
+      "note": "串联：真实内容查找后按名称切换；仅整理，待授权执行",
+      "report": null,
+      "fixtures": [
+        "F5",
+        "F6"
+      ],
+      "chain_reuse": null,
+      "retired": true,
+      "retirement_reason": "混合内容/名称长链移出核心，实际画面由LF30/31覆盖"
+    }
+  ],
+  "catalog_count": 66,
+  "latest_execution_scope": {
+    "date": "2026-11-24",
+    "cases": 2,
+    "selected_cases": 2,
+    "case_range": "LF-39～40",
+    "revision": "V3.1",
+    "counts": {
+      "Not Applicable": 2
+    },
+    "report": "local-footage-results-39-40-v31-recheck-staging-20261124.md",
+    "additional_diffusion": false,
+    "execution_kind": "browser applicability check only",
+    "query_submissions": 0
+  },
+  "design_expansion": {
+    "date": "2026-11-24",
+    "added": 38,
+    "range": "LF-36～73",
+    "status": "Not Run",
+    "automation": "PLAN",
+    "groups": {
+      "一般补强": 12,
+      "特殊素材": 16,
+      "长视频": 10
+    }
+  },
+  "previous_execution_scope": {
+    "date": "2026-11-24",
+    "cases": 2,
+    "selected_cases": 2,
+    "case_range": "LF-39～40",
+    "revision": "LF3773-V3-20261124",
+    "counts": {
+      "Blocked": 2
+    },
+    "report": "local-footage-results-39-40-v3-staging-20261124.md",
+    "additional_diffusion": false
+  },
+  "execution_scope_policy": {
+    "date": "2026-11-24",
+    "range": "LF-36～73",
+    "additional_diffusion_required": false,
+    "additional_diffusion_execution": false,
+    "body_steps_and_parameter_groups": "preserved",
+    "historical_extra_tests": "retained; excluded from required scope"
+  },
+  "current_design_revision": {
+    "id": "LF3773-V3-20261124",
+    "range": "LF-37～73",
+    "cases": 37,
+    "execution_status": "Not Run",
+    "additional_diffusion": false,
+    "latest_actual_execution_counts_unchanged": true,
+    "case_revision_overrides": {
+      "LF-37": "LF37-V3.2-20261124",
+      "LF-39": "LF39-V3.1-20261124",
+      "LF-40": "LF40-V3.1-20261124"
+    }
+  },
+  "design_revision_history": [
+    {
+      "id": "LF3673-V2-20261124",
+      "range": "LF-36～73",
+      "cases": 38,
+      "execution_status": "Partial",
+      "additional_diffusion": false,
+      "latest_actual_execution_counts_unchanged": false,
+      "execution_counts": {
+        "Failed": 1,
+        "Blocked": 4,
+        "Not Run": 33
+      },
+      "execution_tracking_updated": "2026-11-24"
+    }
+  ],
+  "business_clarifications": [
+    {
+      "date": "2026-11-24",
+      "user_text": "无素材时不允许分析，无分析可以新建项目",
+      "rule": "无素材时不允许启动分析；项目创建不以已完成分析为前提。有素材但未分析与真正0素材是不同状态，不能用“已分析0个”推断项目无素材；也不据此推定无素材项目必须允许创建。",
+      "case": "LF-37"
+    },
+    {
+      "date": "2026-11-24",
+      "user_text": "阻塞部分不需要验证了，直接优化了",
+      "case": "LF-37",
+      "rule": "删除本例空素材B组，仅验证有素材未分析可创建；原未覆盖事实留历史，不另补跑"
+    },
+    {
+      "date": "2026-11-24",
+      "user_text": "没有同项目增量导入入口，也没有素材移除入口",
+      "cases": [
+        "LF-39",
+        "LF-40"
+      ],
+      "rule": "当前能力不支持；用例当前不适用，不再寻找入口补跑或作为缺陷"
+    }
+  ],
+  "latest_scope_reassessment": {
+    "date": "2026-11-24",
+    "cases": [
+      "LF-39",
+      "LF-40"
+    ],
+    "statuses": {
+      "Not Applicable": 2
+    },
+    "report": "local-footage-revision-39-40-capability-20261124.md",
+    "new_execution": false,
+    "reason": "user confirmed unsupported capabilities"
+  }
+}

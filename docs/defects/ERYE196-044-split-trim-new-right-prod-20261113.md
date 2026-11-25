@@ -53,3 +53,6 @@
 ERYE196-044 2026-11-13真实场景证据：044-outcome.png
 
 ![044-outcome.png](https://devops.aliyun.com/projex/api/workitem/file/url?fileIdentifier=5c554dc68cdb0759e9288aeb18)
+
+
+2026-11-25 10点官方回读：FWXC-576当前已修复，本次持续监控首次登记新轮；仅浏览器连接前置Blocked、未实测，历史结果保留。当前独立记录：[FWXC-576-retest-20261125-1002-monitor.md](FWXC-576-retest-20261125-1002-monitor.md)。

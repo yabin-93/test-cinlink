@@ -1,3 +1,5 @@
+> 编号说明：本文为调整前记录，使用旧LF编号；当前范围及编号请查[新旧编号对照](local-footage-id-map-20261124.md)。
+
 # 本地素材查找 LF-01～03 执行记录
 
 日期：2026-11-04，Asia/Shanghai。用例：[P0正文](local-footage-p0-cases.md)；导航：[统一入口](../../cases/README.md#工作流与上下文专项)。

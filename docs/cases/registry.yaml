@@ -440,68 +440,112 @@ ERYE196-001:
   status: PLAN
   script: ""
   execution_status: Passed
-  execution_report: docs/cases/requirements/ERYE-196/results-001-005-chrome-prod-20261113.md
+  execution_report: docs/cases/requirements/ERYE-196/results-001-010-chrome-prod-20261125.md
+  previous_execution_status_before_20261125: Passed
+  previous_execution_report_before_20261125: docs/cases/requirements/ERYE-196/results-001-005-chrome-prod-20261113.md
+  execution_scope: chrome_cua_prod_20261125
 ERYE196-002:
   status: PLAN
   script: ""
   execution_status: Passed
-  execution_scope: page_subtitle_list
-  execution_report: docs/cases/requirements/ERYE-196/results-002-chrome-prod-20261113.md
+  execution_scope: chrome_cua_prod_20261125
+  execution_report: docs/cases/requirements/ERYE-196/results-001-010-chrome-prod-20261125.md
+  previous_execution_status_before_20261125: Passed
+  previous_execution_report_before_20261125: docs/cases/requirements/ERYE-196/results-002-chrome-prod-20261113.md
 ERYE196-003:
   status: PLAN
   script: ""
   execution_status: Passed
-  execution_scope: chrome_native_ui_business
-  execution_report: docs/cases/requirements/ERYE-196/results-003-rerun-chrome-prod-20261113-r2.md
+  execution_scope: chrome_cua_prod_20261125
+  execution_report: docs/cases/requirements/ERYE-196/results-001-010-chrome-prod-20261125.md
+  previous_execution_status_before_20261125: Passed
+  previous_execution_report_before_20261125: docs/cases/requirements/ERYE-196/results-003-rerun-chrome-prod-20261113-r2.md
 ERYE196-004:
   status: PLAN
   script: ""
   execution_status: Failed
-  execution_scope: requirement_review_of_existing_observation
-  execution_report: docs/cases/requirements/ERYE-196/acceptance-004-review-20261113.md
+  execution_scope: chrome_cua_prod_20261125
+  execution_report: docs/cases/requirements/ERYE-196/results-001-010-chrome-prod-20261125.md
+  previous_execution_status_before_20261125: Failed
+  previous_execution_report_before_20261125: docs/cases/requirements/ERYE-196/acceptance-004-review-20261113.md
 ERYE196-005:
   status: PLAN
   script: ""
   execution_status: Passed
-  execution_scope: page_business_or_observed_api
-  execution_report: docs/cases/requirements/ERYE-196/results-001-005-chrome-prod-20261113.md
+  execution_scope: chrome_cua_prod_20261125
+  execution_report: docs/cases/requirements/ERYE-196/results-001-010-chrome-prod-20261125.md
+  pending_design_extension_revision: "2026-11-25-duplicate-caption-targets"
+  pending_design_extension_document: "docs/cases/requirements/ERYE-196/coverage-supplement-159-165-20261125.md"
+  pending_design_extensions:
+    - group: "B"
+      description: "同文不同时间唯一定位"
+      execution_status: "Passed"
+    - group: "C"
+      description: "同文同时间原译文通道隔离"
+      execution_status: "Passed"
+  previous_execution_status_before_20261125: Passed
+  previous_execution_report_before_20261125: docs/cases/requirements/ERYE-196/results-001-005-chrome-prod-20261113.md
 ERYE196-006:
   status: PLAN
   script: ""
   # Local CUA draft retained; integration paused by latest user request.
   execution_status: Passed
-  execution_report: docs/cases/requirements/ERYE-196/results-006-010-chrome-prod-20261113.md
-  execution_scope: resumed_real_cua_assertions_and_restore
+  execution_report: docs/cases/requirements/ERYE-196/results-001-010-chrome-prod-20261125.md
+  execution_scope: chrome_cua_prod_20261125
+  pending_design_extension_revision: "2026-11-25-duplicate-caption-targets"
+  pending_design_extension_document: "docs/cases/requirements/ERYE-196/coverage-supplement-159-165-20261125.md"
+  pending_design_extensions:
+    - group: "B"
+      description: "同文多候选澄清后定位"
+      execution_status: "Passed"
+  previous_execution_status_before_20261125: Passed
+  previous_execution_report_before_20261125: docs/cases/requirements/ERYE-196/results-006-010-chrome-prod-20261113.md
 ERYE196-007:
   status: PLAN
   script: ""
   execution_status: Passed
-  execution_report: docs/cases/requirements/ERYE-196/results-006-010-chrome-prod-20261113.md
-  execution_scope: chrome_cua_business
+  execution_report: docs/cases/requirements/ERYE-196/results-001-010-chrome-prod-20261125.md
+  execution_scope: chrome_cua_prod_20261125
+  previous_execution_status_before_20261125: Passed
+  previous_execution_report_before_20261125: docs/cases/requirements/ERYE-196/results-006-010-chrome-prod-20261113.md
 ERYE196-008:
   status: PLAN
   script: ""
-  execution_status: Passed
-  execution_report: docs/cases/requirements/ERYE-196/results-006-010-chrome-prod-20261113.md
-  execution_scope: chrome_cua_business
+  execution_status: Failed
+  execution_report: docs/cases/requirements/ERYE-196/results-001-010-chrome-prod-20261125.md
+  execution_scope: chrome_cua_prod_20261125
+  previous_execution_status_before_20261125: Passed
+  previous_execution_report_before_20261125: docs/cases/requirements/ERYE-196/results-006-010-chrome-prod-20261113.md
+  defect_id: "FWXC-767"
+  defect_url: "https://devops.aliyun.com/projex/project/1e401ac99539c3999e00e40006/bug#openWorkitemIdentifier=b62eed2930df8ed174cbd57362"
+  defect_sync_report: "docs/defects/ERYE196-008-result-location-missing-prod-20261125.md"
+  defect_evidence_review: "20261125 result-location missing only; isolation passed; 2 JPEG + 1 audit verified"
 ERYE196-009:
   status: PLAN
   script: ""
   execution_status: Passed
-  execution_report: docs/cases/requirements/ERYE-196/results-006-010-chrome-prod-20261113.md
-  execution_scope: observed_get_invalid_resource
+  execution_report: docs/cases/requirements/ERYE-196/results-001-010-chrome-prod-20261125.md
+  execution_scope: chrome_cua_prod_20261125
+  previous_execution_status_before_20261125: Passed
+  previous_execution_report_before_20261125: docs/cases/requirements/ERYE-196/results-006-010-chrome-prod-20261113.md
 ERYE196-010:
   status: PLAN
   script: ""
   execution_status: Failed
-  execution_report: docs/cases/requirements/ERYE-196/results-006-010-chrome-prod-20261113.md
-  execution_scope: chrome_cua_business
+  execution_report: docs/cases/requirements/ERYE-196/results-001-010-chrome-prod-20261125.md
+  execution_scope: chrome_cua_prod_20261125
+  previous_execution_status_before_20261125: Failed
+  previous_execution_report_before_20261125: docs/cases/requirements/ERYE-196/results-006-010-chrome-prod-20261113.md
+  defect_id: "FWXC-768"
+  defect_url: "https://devops.aliyun.com/projex/project/1e401ac99539c3999e00e40006/bug#openWorkitemIdentifier=3b9e443447949f49a9b452a9a3"
+  defect_sync_report: "docs/defects/ERYE196-010-selected-split-location-prod-20261125.md"
+  defect_evidence_review: "20261125 selected-target location/no clarification; explicit follow-up split and media passed; 3 JPEG + 1 audit verified"
 ERYE196-011:
   status: PLAN
   script: ""
-  execution_status: Failed
-  execution_report: docs/cases/requirements/ERYE-196/results-011-015-chrome-prod-20261113.md
-  execution_scope: chrome_cua_business
+  execution_status: Passed
+  execution_report: docs/cases/requirements/ERYE-196/results-011-165-chrome-prod-20261125.md
+  execution_scope: chrome_cua_prod_011_165_20261125
 ERYE196-012:
   status: PLAN
   script: ""
@@ -2751,6 +2795,83 @@ ERYE196-158:
 
   execution_date: "2026-11-18"
   execution_record_role: "actual_natural_language_execution"
+ERYE196-159:
+  status: PLAN
+  script: ""
+  execution_status: "Not Run"
+  execution_scope: "editor_natural_language_only"
+  case_revision: "2026-11-25-editor-nl-159-165"
+  revision_date: "2026-11-25"
+  revision_document: "docs/cases/requirements/ERYE-196/coverage-supplement-159-165-20261125.md"
+  revision_execution_status: "Not Run"
+  execution_record_role: "design_only_not_executed"
+
+ERYE196-160:
+  status: PLAN
+  script: ""
+  execution_status: "Not Run"
+  execution_scope: "editor_natural_language_only"
+  case_revision: "2026-11-25-editor-nl-159-165"
+  revision_date: "2026-11-25"
+  revision_document: "docs/cases/requirements/ERYE-196/coverage-supplement-159-165-20261125.md"
+  revision_execution_status: "Not Run"
+  execution_record_role: "design_only_not_executed"
+
+ERYE196-161:
+  status: PLAN
+  script: ""
+  execution_status: "Not Run"
+  execution_scope: "editor_natural_language_only"
+  case_revision: "2026-11-25-editor-nl-159-165"
+  revision_date: "2026-11-25"
+  revision_document: "docs/cases/requirements/ERYE-196/coverage-supplement-159-165-20261125.md"
+  revision_execution_status: "Not Run"
+  execution_record_role: "design_only_not_executed"
+
+ERYE196-162:
+  status: PLAN
+  script: ""
+  execution_status: "Not Run"
+  execution_scope: "editor_natural_language_only"
+  case_revision: "2026-11-25-editor-nl-159-165"
+  revision_date: "2026-11-25"
+  revision_document: "docs/cases/requirements/ERYE-196/coverage-supplement-159-165-20261125.md"
+  revision_execution_status: "Not Run"
+  execution_record_role: "design_only_not_executed"
+
+ERYE196-163:
+  status: PLAN
+  script: ""
+  execution_status: "Not Run"
+  execution_scope: "editor_natural_language_only"
+  case_revision: "2026-11-25-editor-nl-159-165"
+  revision_date: "2026-11-25"
+  revision_document: "docs/cases/requirements/ERYE-196/coverage-supplement-159-165-20261125.md"
+  revision_execution_status: "Not Run"
+  execution_record_role: "design_only_not_executed"
+
+ERYE196-164:
+  status: PLAN
+  script: ""
+  execution_status: "Not Run"
+  execution_scope: "editor_natural_language_only"
+  case_revision: "2026-11-25-editor-nl-159-165"
+  revision_date: "2026-11-25"
+  revision_document: "docs/cases/requirements/ERYE-196/coverage-supplement-159-165-20261125.md"
+  revision_execution_status: "Not Run"
+  execution_record_role: "design_only_not_executed"
+
+ERYE196-165:
+  status: PLAN
+  script: ""
+  execution_status: "Not Run"
+  execution_scope: "editor_natural_language_only"
+  case_revision: "2026-11-25-editor-nl-159-165"
+  revision_date: "2026-11-25"
+  revision_document: "docs/cases/requirements/ERYE-196/coverage-supplement-159-165-20261125.md"
+  revision_execution_status: "Not Run"
+  execution_record_role: "design_only_not_executed"
+
 ERYE206-001:
   status: PLAN
   script: ""
@@ -3126,13 +3247,14 @@ ERYE237-001:
   current_case_version: "2026-11-09-layered-execution"
   execution_branches:
     UI:
-      execution_status: Passed
+      execution_status: "Passed"
       specification: docs/cases/requirements/ERYE-237/cases.md
-      execution_date: 2026-11-13
-      execution_environment: production
-      execution_method: ego-browser automated script
-      execution_scope: current primary branch only
-      execution_report: docs/cases/requirements/ERYE-237/results-001-010-automation-prod-20261113.md
+      execution_date: "2026-11-25"
+      execution_environment: "production"
+      execution_method: "ego-browser headed;TaskSpace61"
+      execution_scope: "上传图已完成UI处理并返回产物；新提示词图已实际生成并建独立工程。经工程入口分别打开登记基线，名称/尺寸/画布RGBA及历史正确，纯打开未新增处理或完成版。"
+      execution_report: "docs/cases/requirements/ERYE-237/results-current-ego-prod-20261125.md"
+      execution_evidence: "reports/erye237-current-ego-prod-20261125/"
     Agent:
       execution_status: Not Run
       specification: docs/cases/requirements/ERYE-237/agent-checks.md
@@ -3198,13 +3320,14 @@ ERYE237-004:
   current_case_version: "2026-11-09-layered-execution"
   execution_branches:
     UI:
-      execution_status: Passed
+      execution_status: "Passed"
       specification: docs/cases/requirements/ERYE-237/cases.md
-      execution_date: 2026-11-13
-      execution_environment: production
-      execution_method: ego-browser automated script
-      execution_scope: current primary branch only
-      execution_report: docs/cases/requirements/ERYE-237/results-001-010-automation-prod-20261113.md
+      execution_date: "2026-11-25"
+      execution_environment: "production"
+      execution_method: "ego-browser headed;TaskSpace61"
+      execution_scope: "已建立同工程三版后，实际依次打开V1灰底、V2蓝底、V3绿底并停留V3；每版画布匹配各自独立PNG，旧版完整可读，查看未新增版本。与005收尾版本检查共享同组真实操作证据。"
+      execution_report: "docs/cases/requirements/ERYE-237/results-current-ego-prod-20261125.md"
+      execution_evidence: "reports/erye237-current-ego-prod-20261125/"
     Agent:
       execution_status: Not Run
       specification: docs/cases/requirements/ERYE-237/agent-checks.md
@@ -3224,13 +3347,14 @@ ERYE237-005:
   current_case_version: "2026-11-09-layered-execution"
   execution_branches:
     Agent:
-      execution_status: Failed
+      execution_status: "Passed"
       specification: docs/cases/requirements/ERYE-237/cases.md
-      execution_date: 2026-11-13
-      execution_environment: production
-      execution_method: ego-browser automated script
-      execution_scope: current primary branch only
-      execution_report: docs/cases/requirements/ERYE-237/results-001-010-automation-prod-20261113.md
+      execution_date: "2026-11-25"
+      execution_environment: "production"
+      execution_method: "ego-browser headed;TaskSpace61"
+      execution_scope: "灰底原版→蓝底→以蓝底继续绿底，两次原任务done/applied；两份实际1024²PNG人物/红衣/双耳机保留；同工程3版及原源保存，V1/V2/V3实际画布与独立文件RGBA一致。"
+      execution_report: "docs/cases/requirements/ERYE-237/results-current-ego-prod-20261125.md"
+      execution_evidence: "reports/erye237-current-ego-prod-20261125/"
     Technical:
       execution_status: Not Run
       specification: docs/cases/requirements/ERYE-237/technical-checks.md
@@ -3240,13 +3364,14 @@ ERYE237-006:
   current_case_version: "2026-11-09-layered-execution"
   execution_branches:
     Agent:
-      execution_status: Passed
+      execution_status: "Failed"
       specification: docs/cases/requirements/ERYE-237/cases.md
-      execution_date: 2026-11-13
-      execution_environment: production
-      execution_method: ego-browser headed; script integration paused
-      execution_scope: current primary business branch only
-      execution_report: docs/cases/requirements/ERYE-237/results-006-010-ego-prod-20261113-r2.md
+      execution_date: "2026-11-25"
+      execution_environment: "production"
+      execution_method: "ego-browser headed;TaskSpace61"
+      execution_scope: "原V1灰底实际选中后仅发一次48px白字分支指令；任务报Editor did not confirm the action，48px分支测试已写入V1草稿，但未完成合成/未新增完成版；原蓝/绿历史保持。未点击重试；底层确认回执未单独取得。"
+      execution_report: "docs/cases/requirements/ERYE-237/results-current-ego-prod-20261125.md"
+      execution_evidence: "reports/erye237-current-ego-prod-20261125/"
     Technical:
       execution_status: Not Run
       specification: docs/cases/requirements/ERYE-237/technical-checks.md
@@ -3288,13 +3413,14 @@ ERYE237-008:
   current_case_version: "2026-11-09-layered-execution"
   execution_branches:
     UI:
-      execution_status: Passed
+      execution_status: "Passed"
       specification: docs/cases/requirements/ERYE-237/cases.md
-      execution_date: 2026-11-13
-      execution_environment: production
-      execution_method: ego-browser headed; script integration paused
-      execution_scope: current primary business branch only
-      execution_report: docs/cases/requirements/ERYE-237/results-006-010-ego-prod-20261113-r2.md
+      execution_date: "2026-11-25"
+      execution_environment: "production"
+      execution_method: "ego-browser headed;TaskSpace61"
+      execution_scope: "红线/文字/矩形两次收起展开均可分别选择，六次选择边界准确且各不同；原T1追加已恢复后再次重开仍可编辑，3对象ID及原位置保持，待发画笔引用仅1份。"
+      execution_report: "docs/cases/requirements/ERYE-237/results-current-ego-prod-20261125.md"
+      execution_evidence: "reports/erye237-current-ego-prod-20261125/"
     Agent:
       execution_status: Not Run
       specification: docs/cases/requirements/ERYE-237/agent-checks.md
@@ -3307,13 +3433,14 @@ ERYE237-009:
   current_case_version: "2026-11-09-layered-execution"
   execution_branches:
     UI:
-      execution_status: Passed
+      execution_status: "Passed"
       specification: docs/cases/requirements/ERYE-237/cases.md
-      execution_date: 2026-11-13
-      execution_environment: production
-      execution_method: ego-browser headed; script integration paused
-      execution_scope: current primary business branch only
-      execution_report: docs/cases/requirements/ERYE-237/results-006-010-ego-prod-20261113-r2.md
+      execution_date: "2026-11-25"
+      execution_environment: "production"
+      execution_method: "ego-browser headed;TaskSpace61"
+      execution_scope: "25/50/100/150/200%和适应窗口六档均实际核验；显示尺寸准确，源RGBA及两项历史保持；未新增生成。"
+      execution_report: "docs/cases/requirements/ERYE-237/results-current-ego-prod-20261125.md"
+      execution_evidence: "reports/erye237-current-ego-prod-20261125/"
     Agent:
       execution_status: Not Run
       specification: docs/cases/requirements/ERYE-237/agent-checks.md
@@ -3326,14 +3453,14 @@ ERYE237-010:
   current_case_version: "2026-11-09-layered-execution"
   execution_branches:
     UI:
-      execution_status: Passed
+      execution_status: "Passed"
       specification: docs/cases/requirements/ERYE-237/cases.md
-      execution_date: 2026-11-17
-      execution_environment: production
-      execution_method: ego-browser headed;actual UI;read-only API observations
-      execution_scope: v10 revised cases and canonical UI targets;fixed automation remains PLAN
-      execution_report: docs/cases/requirements/ERYE-237/results-annotation-v10-ego-prod-20261117.md
-      execution_evidence: reports/erye237-annotation-v10-ego-prod-20261117/
+      execution_date: "2026-11-25"
+      execution_environment: "production"
+      execution_method: "ego-browser headed;TaskSpace61"
+      execution_scope: "登记Q=(.50,.55)，25%/200%/适应窗口及返回100%均定位同一正文/锚点/引用；确认tool-view可平移后在无遮挡画布实际左100上50拖动，Q随图移动源坐标不变；图外灰区未新增批注，源像素/历史保持。先前拖到浮层无画布作用的操作不计平移证据。"
+      execution_report: "docs/cases/requirements/ERYE-237/results-current-ego-prod-20261125.md"
+      execution_evidence: "reports/erye237-current-ego-prod-20261125/"
     Agent:
       execution_status: Not Run
       specification: docs/cases/requirements/ERYE-237/agent-checks.md
@@ -3362,13 +3489,14 @@ ERYE237-012:
   current_case_version: "2026-11-09-layered-execution"
   execution_branches:
     UI:
-      execution_status: Passed
+      execution_status: "Passed"
       specification: docs/cases/requirements/ERYE-237/cases.md
-      execution_date: 2026-11-13
-      execution_environment: production
-      execution_method: ego-browser headed
-      execution_scope: "actual rerun of user-confirmed return dialog entry; continue/discard and source/history verified"
-      execution_report: docs/cases/requirements/ERYE-237/results-012-ego-prod-20261113-r2.md
+      execution_date: "2026-11-25"
+      execution_environment: "production"
+      execution_method: "ego-browser headed;TaskSpace61"
+      execution_scope: "编辑中返回先继续，原对象/来源/唯一引用保留；再明确放弃后实际切I2并回I1，已放弃草稿不恢复，原源和完成历史保持。与083/084共享实际确认分支取证。"
+      execution_report: "docs/cases/requirements/ERYE-237/results-current-ego-prod-20261125.md"
+      execution_evidence: "reports/erye237-current-ego-prod-20261125/"
     Agent:
       execution_status: Not Run
       specification: docs/cases/requirements/ERYE-237/agent-checks.md
@@ -3381,13 +3509,14 @@ ERYE237-013:
   current_case_version: "2026-11-09-layered-execution"
   execution_branches:
     UI:
-      execution_status: Passed
+      execution_status: "Passed"
       specification: docs/cases/requirements/ERYE-237/cases.md
-      execution_date: 2026-11-13
-      execution_environment: production
-      execution_method: ego-browser headed
-      execution_scope: current primary business branch only
-      execution_report: docs/cases/requirements/ERYE-237/results-011-015-ego-prod-20261113.md
+      execution_date: "2026-11-25"
+      execution_environment: "production"
+      execution_method: "ego-browser headed;TaskSpace61"
+      execution_scope: "列表实际从I2商品图绘制态切I1人像，未弹退出确认，但I2草稿持久化保留；切回I2自动恢复同一笔像素且可再次选中，未静默丢失或串到I1。最后仅明确放弃自有测试笔迹，完成历史保持。"
+      execution_report: "docs/cases/requirements/ERYE-237/results-current-ego-prod-20261125.md"
+      execution_evidence: "reports/erye237-current-ego-prod-20261125/"
     Agent:
       execution_status: Not Run
       specification: docs/cases/requirements/ERYE-237/agent-checks.md
@@ -3406,13 +3535,14 @@ ERYE237-014:
   current_case_version: "2026-11-09-layered-execution"
   execution_branches:
     UI:
-      execution_status: Passed
+      execution_status: "Passed"
       specification: docs/cases/requirements/ERYE-237/cases.md
-      execution_date: 2026-11-13
-      execution_environment: production
-      execution_method: ego-browser headed
-      execution_scope: current primary business branch only
-      execution_report: docs/cases/requirements/ERYE-237/results-011-015-ego-prod-20261113.md
+      execution_date: "2026-11-25"
+      execution_environment: "production"
+      execution_method: "ego-browser headed;TaskSpace61"
+      execution_scope: "进入画笔显示完整子工具栏及唯一画笔引用，未落笔时源图和两项完成历史保持，无新图片任务。"
+      execution_report: "docs/cases/requirements/ERYE-237/results-current-ego-prod-20261125.md"
+      execution_evidence: "reports/erye237-current-ego-prod-20261125/"
     Agent:
       execution_status: Not Run
       specification: docs/cases/requirements/ERYE-237/agent-checks.md
@@ -3431,13 +3561,14 @@ ERYE237-015:
   current_case_version: "2026-11-09-layered-execution"
   execution_branches:
     UI:
-      execution_status: Passed
+      execution_status: "Passed"
       specification: docs/cases/requirements/ERYE-237/cases.md
-      execution_date: 2026-11-13
-      execution_environment: production
-      execution_method: ego-browser headed
-      execution_scope: current primary business branch only
-      execution_report: docs/cases/requirements/ERYE-237/results-011-015-ego-prod-20261113.md
+      execution_date: "2026-11-25"
+      execution_environment: "production"
+      execution_method: "ego-browser headed;TaskSpace61"
+      execution_scope: "A初始空画笔点击发送明确要求先添加修改；B绘制后撤销至空发送禁用、未派发点击。两组均无新图片任务/版本，两历史保持。"
+      execution_report: "docs/cases/requirements/ERYE-237/results-current-ego-prod-20261125.md"
+      execution_evidence: "reports/erye237-current-ego-prod-20261125/"
     Agent:
       execution_status: Not Run
       specification: docs/cases/requirements/ERYE-237/agent-checks.md
@@ -3456,13 +3587,14 @@ ERYE237-016:
   current_case_version: "2026-11-09-layered-execution"
   execution_branches:
     UI:
-      execution_status: Passed
+      execution_status: "Passed"
       specification: docs/cases/requirements/ERYE-237/cases.md
-      execution_date: 2026-11-13
-      execution_environment: production
-      execution_method: ego-browser headed
-      execution_scope: current primary branch; per-parameter coverage in report
-      execution_report: docs/cases/requirements/ERYE-237/results-016-020-ego-prod-20261113.md
+      execution_date: "2026-11-25"
+      execution_environment: "production"
+      execution_method: "ego-browser headed;TaskSpace61"
+      execution_scope: "8px红色连续折线一次手势绘制；一次撤销恢复原基线RGBA，一次重做完整恢复笔迹RGBA，未逐点撤销。"
+      execution_report: "docs/cases/requirements/ERYE-237/results-current-ego-prod-20261125.md"
+      execution_evidence: "reports/erye237-current-ego-prod-20261125/"
     Agent:
       execution_status: Not Run
       specification: docs/cases/requirements/ERYE-237/agent-checks.md
@@ -3481,13 +3613,14 @@ ERYE237-017:
   current_case_version: "2026-11-09-layered-execution"
   execution_branches:
     UI:
-      execution_status: Passed
+      execution_status: "Passed"
       specification: docs/cases/requirements/ERYE-237/cases.md
-      execution_date: 2026-11-13
-      execution_environment: production
-      execution_method: ego-browser headed
-      execution_scope: current primary branch; per-parameter coverage in report
-      execution_report: docs/cases/requirements/ERYE-237/results-016-020-ego-prod-20261113.md
+      execution_date: "2026-11-25"
+      execution_environment: "production"
+      execution_method: "ego-browser headed;TaskSpace61"
+      execution_scope: "实际选择手柄移动并缩放T1新品，只有T1几何变化；删除H1后单次撤销完整恢复，S1保持。点击底图ACME固有文字无编辑对象/文字输入；清理本例后原图RGBA和2完成历史保持。S1实际18px，本条无固定笔宽门禁。"
+      execution_report: "docs/cases/requirements/ERYE-237/results-current-ego-prod-20261125.md"
+      execution_evidence: "reports/erye237-current-ego-prod-20261125/"
     Agent:
       execution_status: Not Run
       specification: docs/cases/requirements/ERYE-237/agent-checks.md
@@ -3506,15 +3639,15 @@ ERYE237-018:
   current_case_version: "2026-11-09-layered-execution"
   execution_branches:
     UI:
-      execution_status: Passed
+      execution_status: "Passed"
       specification: docs/cases/requirements/ERYE-237/cases.md
-      execution_date: 2026-11-18
-      execution_environment: production
-      execution_method: ego-browser headed;actual UI;read-only API observations
-      execution_scope: 2026-11-18 optimized current case;UI default size and Agent parameters separate;fixed automation remains PLAN
-      execution_report: docs/cases/requirements/ERYE-237/results-018019028029031-ego-prod-20261118.md
+      execution_date: "2026-11-25"
+      execution_environment: "production"
+      execution_method: "ego-browser headed;TaskSpace61"
+      execution_scope: "白色默认字号新品 Hello 2026创建后收起重开，选中原对象追加已恢复；再次重开可编辑同一对象，全文/位置/默认显示字号/颜色保持，无生成。"
+      execution_report: "docs/cases/requirements/ERYE-237/results-current-ego-prod-20261125.md"
       execution_revision: 2026-11-18-ui-default-text-size
-      execution_evidence: reports/erye237-018019028029031-ego-prod-20261118/
+      execution_evidence: "reports/erye237-current-ego-prod-20261125/"
     Agent:
       execution_status: Not Run
       specification: docs/cases/requirements/ERYE-237/agent-checks.md
@@ -3559,13 +3692,14 @@ ERYE237-020:
   current_case_version: "2026-11-09-layered-execution"
   execution_branches:
     UI:
-      execution_status: Failed
+      execution_status: "Failed"
       specification: docs/cases/requirements/ERYE-237/cases.md
-      execution_date: 2026-11-13
-      execution_environment: production
-      execution_method: ego-browser headed
-      execution_scope: current primary branch; per-parameter coverage in report
-      execution_report: docs/cases/requirements/ERYE-237/results-016-020-ego-prod-20261113.md
+      execution_date: "2026-11-25"
+      execution_environment: "production"
+      execution_method: "ego-browser headed;TaskSpace61"
+      execution_scope: "六类形状均创建、收起重开及逐一选中；合法红/绿样式修改仅改变工具默认色，六对象仍蓝且画布不变，当前UI未见应用到所选入口。每行撤销作用于上一绘制，已重做恢复后测下一行；稳定回读6对象与原矩阵逐字一致，未把重做保存前5对象快照当最终态。自有草稿已清理。"
+      execution_report: "docs/cases/requirements/ERYE-237/results-current-ego-prod-20261125.md"
+      execution_evidence: "reports/erye237-current-ego-prod-20261125/"
     Agent:
       execution_status: Not Run
       specification: docs/cases/requirements/ERYE-237/agent-checks.md
@@ -3609,16 +3743,17 @@ ERYE237-022:
   revision_document: docs/cases/requirements/ERYE-237/revision-022-ui-scope-20261116.md
   execution_branches:
     UI:
-      execution_status: Passed
+      execution_status: "Passed"
       specification: docs/cases/requirements/ERYE-237/cases.md
       execution_revision: 2026-11-16-ui-content-sampling-v3
-      execution_date: 2026-11-16
-      execution_environment: production
-      execution_method: ego-browser headed
-      execution_scope: current UI base/content sampling and actual stroke reuse
-      execution_report: docs/cases/requirements/ERYE-237/results-022-ui-ego-prod-20261116.md
+      execution_date: "2026-11-25"
+      execution_environment: "production"
+      execution_method: "ego-browser headed;TaskSpace61"
+      execution_scope: "100%下Q0真实点击映射源像素(355,662)，独立PNG为RGB209/199/194，吸管回读及新8px笔实色一致，撤销恢复源RGBA。Q1在红色content描边内部取到255/0/0，另一处新8px验证笔实色同为红，源/完成历史保持，未生成。"
+      execution_report: "docs/cases/requirements/ERYE-237/results-current-ego-prod-20261125.md"
       revision_report: docs/cases/requirements/ERYE-237/revision-022-ui-scope-20261116.md
       previous_execution_report: docs/cases/requirements/ERYE-237/results-four-rerun-ego-prod-20261116.md
+      execution_evidence: "reports/erye237-current-ego-prod-20261125/"
     Agent:
       execution_status: Not Run
       specification: docs/cases/requirements/ERYE-237/agent-checks.md
@@ -3671,13 +3806,14 @@ ERYE237-024:
   current_case_version: "2026-11-09-layered-execution"
   execution_branches:
     UI:
-      execution_status: Passed
+      execution_status: "Passed"
       specification: docs/cases/requirements/ERYE-237/cases.md
-      execution_date: 2026-11-13
-      execution_environment: production
-      execution_method: ego-browser headed
-      execution_scope: current primary branch; per-parameter coverage in report
-      execution_report: docs/cases/requirements/ERYE-237/results-021-050-ego-prod-20261113.md
+      execution_date: "2026-11-25"
+      execution_environment: "production"
+      execution_method: "ego-browser headed;TaskSpace61"
+      execution_scope: "画笔内橡皮同一纵向手势穿过红色S1中段和底图ACME三角线条，S1局部擦开，底图线条区域像素哈希与原源一致；单次撤销恢复整条S1原RGBA，未使用AI擦除。"
+      execution_report: "docs/cases/requirements/ERYE-237/results-current-ego-prod-20261125.md"
+      execution_evidence: "reports/erye237-current-ego-prod-20261125/"
     Agent:
       execution_status: Not Run
       specification: docs/cases/requirements/ERYE-237/agent-checks.md
@@ -3696,13 +3832,14 @@ ERYE237-025:
   current_case_version: "2026-11-09-layered-execution"
   execution_branches:
     UI:
-      execution_status: Passed
+      execution_status: "Passed"
       specification: docs/cases/requirements/ERYE-237/cases.md
-      execution_date: 2026-11-13
-      execution_environment: production
-      execution_method: ego-browser headed
-      execution_scope: current primary branch; per-parameter coverage in report
-      execution_report: docs/cases/requirements/ERYE-237/results-021-050-ego-prod-20261113.md
+      execution_date: "2026-11-25"
+      execution_environment: "production"
+      execution_method: "ego-browser headed;TaskSpace61"
+      execution_scope: "画笔内橡皮分别擦过T1字形和H1描边，每次对应对象整体移除；两次分别撤销按原像素恢复H1及T1。两对象移除后画布RGBA等于独立原源，底图固有ACME文字未被擦除。"
+      execution_report: "docs/cases/requirements/ERYE-237/results-current-ego-prod-20261125.md"
+      execution_evidence: "reports/erye237-current-ego-prod-20261125/"
     Agent:
       execution_status: Not Run
       specification: docs/cases/requirements/ERYE-237/agent-checks.md
@@ -3815,17 +3952,17 @@ ERYE237-029:
   current_case_version: "2026-11-09-layered-execution"
   execution_branches:
     UI:
-      execution_status: Passed
+      execution_status: "Failed"
       specification: docs/cases/requirements/ERYE-237/cases.md
-      execution_date: 2026-11-18
-      execution_environment: production
-      execution_method: ego-browser headed;actual UI;read-only API observations
-      execution_scope: 2026-11-18 optimized current case;UI default size and Agent parameters separate;fixed automation remains PLAN
-      execution_report: docs/cases/requirements/ERYE-237/results-018019028029031-ego-prod-20261118.md
+      execution_date: "2026-11-25"
+      execution_environment: "production"
+      execution_method: "ego-browser headed;TaskSpace61"
+      execution_scope: "单次原请求Agent终态Failed：EDITOR_ACTION_NOT_APPLIED且无result_files；随后未重发却迟到落库融合版c570f394，任务失败与实际完成不一致。独立UI下载真实PNG1254平方，RGBA与提交前含红8px线和蓝色导出测试文字的整幅画布逐像素完全一致，内容合成本身通过；交付终态/文件结果失败。原图/完成历史保留，无重复生成；签名链接读取超时另记取证问题，UI下载成功。"
+      execution_report: "docs/cases/requirements/ERYE-237/results-current-ego-prod-20261125.md"
       cloud_defects:
         - https://devops.aliyun.com/projex/project/1e401ac99539c3999e00e40006/bug#openWorkitemIdentifier=7e143c9a5cc63993c7bc10143f
       execution_revision: 2026-11-18-ui-default-text-size
-      execution_evidence: reports/erye237-018019028029031-ego-prod-20261118/
+      execution_evidence: "reports/erye237-current-ego-prod-20261125/"
     Agent:
       execution_status: Not Run
       specification: docs/cases/requirements/ERYE-237/agent-checks.md
@@ -3873,17 +4010,17 @@ ERYE237-031:
   revision_document: docs/cases/requirements/ERYE-237/review-031-draft-lifecycle-20261116.md
   execution_branches:
     UI:
-      execution_status: Passed
+      execution_status: "Passed"
       specification: docs/cases/requirements/ERYE-237/cases.md
-      execution_date: 2026-11-18
-      execution_environment: production
-      execution_method: ego-browser headed;actual UI;read-only API observations
+      execution_date: "2026-11-25"
+      execution_environment: "production"
+      execution_method: "ego-browser headed;TaskSpace61"
       execution_revision: 2026-11-18-ui-default-text-size
-      execution_scope: 2026-11-18 optimized current case;UI default size and Agent parameters separate;fixed automation remains PLAN
-      execution_report: docs/cases/requirements/ERYE-237/results-018019028029031-ego-prod-20261118.md
+      execution_scope: "真实融合版的蓝字像素点击无旧编辑对象。原V1创建白色当前默认8px的031源草稿，续编同一ID追加已恢复，明确继续分支保留可编辑正文；再次返回明确放弃后重入不恢复旧D，原源RGBA及3完成版本保持。"
+      execution_report: "docs/cases/requirements/ERYE-237/results-current-ego-prod-20261125.md"
       previous_execution_report: docs/cases/requirements/ERYE-237/results-four-rerun-ego-prod-20261116.md
       assessment_report: docs/cases/requirements/ERYE-237/review-031-draft-lifecycle-20261116.md
-      execution_evidence: reports/erye237-018019028029031-ego-prod-20261118/
+      execution_evidence: "reports/erye237-current-ego-prod-20261125/"
     Agent:
       execution_status: Not Run
       specification: docs/cases/requirements/ERYE-237/agent-checks.md
@@ -3926,13 +4063,14 @@ ERYE237-033:
   current_case_version: "2026-11-09-layered-execution"
   execution_branches:
     UI:
-      execution_status: Passed
+      execution_status: "Passed"
       specification: docs/cases/requirements/ERYE-237/cases.md
-      execution_date: 2026-11-13
-      execution_environment: production
-      execution_method: ego-browser headed
-      execution_scope: current primary branch; per-parameter coverage in report
-      execution_report: docs/cases/requirements/ERYE-237/results-021-050-ego-prod-20261113.md
+      execution_date: "2026-11-25"
+      execution_environment: "production"
+      execution_method: "ego-browser headed;TaskSpace61"
+      execution_scope: "图内Q创建唯一批注及准确正文；点击图外灰区未新增批注或引用，源图保持；未发送生成。"
+      execution_report: "docs/cases/requirements/ERYE-237/results-current-ego-prod-20261125.md"
+      execution_evidence: "reports/erye237-current-ego-prod-20261125/"
     Agent:
       execution_status: Not Run
       specification: docs/cases/requirements/ERYE-237/agent-checks.md
@@ -3945,26 +4083,28 @@ ERYE237-034:
   current_case_version: "2026-11-09-layered-execution"
   execution_branches:
     Technical:
-      execution_status: Passed
+      execution_status: "Blocked"
       specification: docs/cases/requirements/ERYE-237/cases.md
-      execution_date: 2026-11-13
-      execution_environment: production
-      execution_method: ego-browser headed
-      execution_scope: current primary branch; per-parameter coverage in report
-      execution_report: docs/cases/requirements/ERYE-237/results-021-050-ego-prod-20261113.md
+      execution_date: "2026-11-25"
+      execution_environment: "production"
+      execution_method: "ego-browser headed;TaskSpace61"
+      execution_scope: "缺F-candidate-delay隔离延迟及释放控制；自然识别耗时不能代替可控迟到响应，正式故障步骤未执行；其他UI继续。"
+      execution_report: "docs/cases/requirements/ERYE-237/results-current-ego-prod-20261125.md"
+      execution_evidence: "reports/erye237-current-ego-prod-20261125/"
 ERYE237-035:
   status: PLAN
   script: ""
   current_case_version: "2026-11-09-layered-execution"
   execution_branches:
     Technical:
-      execution_status: Passed
+      execution_status: "Blocked"
       specification: docs/cases/requirements/ERYE-237/cases.md
-      execution_date: 2026-11-13
-      execution_environment: production
-      execution_method: ego-browser headed
-      execution_scope: current primary branch; per-parameter coverage in report
-      execution_report: docs/cases/requirements/ERYE-237/results-021-050-ego-prod-20261113.md
+      execution_date: "2026-11-25"
+      execution_environment: "production"
+      execution_method: "ego-browser headed;TaskSpace61"
+      execution_scope: "缺F-candidate-fail定向识别失败控制；未识别到物体与识别接口失败不同，不能冒称故障分支通过；自定义输入可用仅作观察。"
+      execution_report: "docs/cases/requirements/ERYE-237/results-current-ego-prod-20261125.md"
+      execution_evidence: "reports/erye237-current-ego-prod-20261125/"
 ERYE237-036:
   status: PLAN
   script: ""
@@ -4050,13 +4190,14 @@ ERYE237-040:
   current_case_version: "2026-11-09-layered-execution"
   execution_branches:
     UI:
-      execution_status: Passed
+      execution_status: "Passed"
       specification: docs/cases/requirements/ERYE-237/cases.md
-      execution_date: 2026-11-13
-      execution_environment: production
-      execution_method: ego-browser headed
-      execution_scope: current primary branch; per-parameter coverage in report
-      execution_report: docs/cases/requirements/ERYE-237/results-021-050-ego-prod-20261113.md
+      execution_date: "2026-11-25"
+      execution_environment: "production"
+      execution_method: "ego-browser headed;TaskSpace61"
+      execution_scope: "第一条重复添加仍1份；修改同一批注名称及正文后重添更新原引用。另建同名不同锚点第二条后恰2份，逐条重开各自全文正确，未按同名合并或串用。"
+      execution_report: "docs/cases/requirements/ERYE-237/results-current-ego-prod-20261125.md"
+      execution_evidence: "reports/erye237-current-ego-prod-20261125/"
     Agent:
       execution_status: Not Run
       specification: docs/cases/requirements/ERYE-237/agent-checks.md
@@ -4069,15 +4210,16 @@ ERYE237-041:
   current_case_version: "2026-11-09-layered-execution"
   execution_branches:
     UI:
-      execution_status: Failed
+      execution_status: "Passed"
       specification: docs/cases/requirements/ERYE-237/cases.md
-      execution_date: 2026-11-13
-      execution_environment: production
-      execution_method: ego-browser headed
-      execution_scope: current primary branch; per-parameter coverage in report
-      execution_report: docs/cases/requirements/ERYE-237/results-021-050-ego-prod-20261113.md
+      execution_date: "2026-11-25"
+      execution_environment: "production"
+      execution_method: "ego-browser headed;TaskSpace61"
+      execution_scope: "使用引用按钮已声明的Delete移除操作（聚焦引用后按Delete，非空输入框退格），待发引用归零；原画布批注及完整正文/锚点保留，重开正确。"
+      execution_report: "docs/cases/requirements/ERYE-237/results-current-ego-prod-20261125.md"
       cloud_defects:
         - https://devops.aliyun.com/projex/project/1e401ac99539c3999e00e40006/bug#openWorkitemIdentifier=d9fa2f0da6109604f51c56d673
+      execution_evidence: "reports/erye237-current-ego-prod-20261125/"
     Agent:
       execution_status: Not Run
       specification: docs/cases/requirements/ERYE-237/agent-checks.md
@@ -4090,13 +4232,14 @@ ERYE237-042:
   current_case_version: "2026-11-09-layered-execution"
   execution_branches:
     UI:
-      execution_status: Passed
+      execution_status: "Passed"
       specification: docs/cases/requirements/ERYE-237/cases.md
-      execution_date: 2026-11-13
-      execution_environment: production
-      execution_method: ego-browser headed
-      execution_scope: current primary branch; per-parameter coverage in report
-      execution_report: docs/cases/requirements/ERYE-237/results-021-050-ego-prod-20261113.md
+      execution_date: "2026-11-25"
+      execution_environment: "production"
+      execution_method: "ego-browser headed;TaskSpace61"
+      execution_scope: "两批注均引用后，通过第一条浮层右上垃圾桶删除，第一条标记及引用一起消失；第二条名称/全文/锚点和唯一引用保持。"
+      execution_report: "docs/cases/requirements/ERYE-237/results-current-ego-prod-20261125.md"
+      execution_evidence: "reports/erye237-current-ego-prod-20261125/"
     Agent:
       execution_status: Not Run
       specification: docs/cases/requirements/ERYE-237/agent-checks.md
@@ -4502,17 +4645,17 @@ ERYE237-057:
       classification: preserved historical scope; not covered by current annotation UI
   execution_branches:
     UI:
-      execution_status: Passed
+      execution_status: "Passed"
       execution_revision: "2026-11-17-annotation-five-ui-dedup-v10"
       specification: docs/cases/requirements/ERYE-237/cases.md
       revision_document: docs/cases/requirements/ERYE-237/revision-007-028-057-068-069-annotation-20261117.md
-      execution_scope: v10 revised cases and canonical UI targets;fixed automation remains PLAN
+      execution_scope: "按固定G1/G2，仅全选非空G1并退格一次清空，立即停止删除；两引用各自重开全文/锚点保持，再输入G2仍各一份，源像素/历史无改动，未发送。"
 
-      execution_date: 2026-11-17
-      execution_environment: production
-      execution_method: ego-browser headed;actual UI;read-only API observations
-      execution_report: docs/cases/requirements/ERYE-237/results-annotation-v10-ego-prod-20261117.md
-      execution_evidence: reports/erye237-annotation-v10-ego-prod-20261117/
+      execution_date: "2026-11-25"
+      execution_environment: "production"
+      execution_method: "ego-browser headed;TaskSpace61"
+      execution_report: "docs/cases/requirements/ERYE-237/results-current-ego-prod-20261125.md"
+      execution_evidence: "reports/erye237-current-ego-prod-20261125/"
 ERYE237-058:
   status: PLAN
   script: ""
@@ -4947,14 +5090,15 @@ ERYE237-078:
   current_case_version: "2026-11-09-layered-execution"
   execution_branches:
     UI:
-      execution_status: Passed
+      execution_status: "Passed"
       specification: docs/cases/requirements/ERYE-237/cases.md
-      execution_date: 2026-11-17
-      execution_environment: production
-      execution_method: ego-browser headed
-      execution_scope: user scope page and actual artifacts; no parameter validation
-      execution_report: docs/cases/requirements/ERYE-237/results-071-090-ego-prod-20261117.md
+      execution_date: "2026-11-25"
+      execution_environment: "production"
+      execution_method: "ego-browser headed;TaskSpace61"
+      execution_scope: "真实透明完成PNG导出JPEG，设置明确白色填充；实际1254²JPEG解码及主体核验通过，原透明区域采样全白，导出前后原PNG字节SHA一致；无自定义蓝色填充入口，该可选分支NA。随后额外工程回读遇401，未宣称该回读通过。"
+      execution_report: "docs/cases/requirements/ERYE-237/results-current-ego-prod-20261125.md"
       previous_execution_record: reports/erye237-071-090-ego-prod-20261117/ERYE237-078-previous-branch.txt
+      execution_evidence: "reports/erye237-current-ego-prod-20261125/"
     Agent:
       execution_status: Not Run
       specification: docs/cases/requirements/ERYE-237/agent-checks.md
@@ -4967,16 +5111,17 @@ ERYE237-079:
   current_case_version: "2026-11-09-layered-execution"
   execution_branches:
     UI:
-      execution_status: Failed
+      execution_status: "Failed"
       specification: docs/cases/requirements/ERYE-237/cases.md
-      execution_date: 2026-11-17
-      execution_environment: production
-      execution_method: ego-browser headed
-      execution_scope: user scope page and actual artifacts; no parameter validation
-      execution_report: docs/cases/requirements/ERYE-237/results-071-090-ego-prod-20261117.md
+      execution_date: "2026-11-25"
+      execution_environment: "production"
+      execution_method: "ego-browser headed;TaskSpace61"
+      execution_scope: "当前导出弹窗只有格式选择，未提供文件名和输出尺寸入口，无法设置商品图-验收及800×800，未伪造字段或另行缩放文件。需求支持指定尺寸及通用导出容器，按功能缺失记Failed。"
+      execution_report: "docs/cases/requirements/ERYE-237/results-current-ego-prod-20261125.md"
       previous_execution_record: reports/erye237-071-090-ego-prod-20261117/ERYE237-079-previous-branch.txt
       cloud_defects:
         - https://devops.aliyun.com/projex/project/1e401ac99539c3999e00e40006/bug#openWorkitemIdentifier=2954c0536a3818f183cae0848a
+      execution_evidence: "reports/erye237-current-ego-prod-20261125/"
     Agent:
       execution_status: Not Run
       specification: docs/cases/requirements/ERYE-237/agent-checks.md
@@ -5030,14 +5175,15 @@ ERYE237-082:
   revision_document: docs/cases/requirements/ERYE-237/revision-074-082-real-scope-20261116.md
   execution_branches:
     UI:
-      execution_status: Passed
+      execution_status: "Passed"
       specification: docs/cases/requirements/ERYE-237/cases.md
-      execution_date: 2026-11-17
-      execution_environment: production
-      execution_method: ego-browser headed
-      execution_scope: user scope page and actual artifacts; no parameter validation
-      execution_report: docs/cases/requirements/ERYE-237/results-071-090-ego-prod-20261117.md
+      execution_date: "2026-11-25"
+      execution_environment: "production"
+      execution_method: "ego-browser headed;TaskSpace61"
+      execution_scope: "导出仅提供PNG/JPEG，TIFF不可选；两格式各一次实际下载并完整解码，签名/编码/扩展名正确且均1254²，源工程完整回读前后不变；仅当前格式与文件范围。"
+      execution_report: "docs/cases/requirements/ERYE-237/results-current-ego-prod-20261125.md"
       previous_execution_record: reports/erye237-071-090-ego-prod-20261117/ERYE237-082-previous-branch.txt
+      execution_evidence: "reports/erye237-current-ego-prod-20261125/"
     Technical:
       execution_status: Not Run
       previous_execution_status: Blocked
@@ -5055,14 +5201,15 @@ ERYE237-083:
   current_case_version: "2026-11-09-layered-execution"
   execution_branches:
     UI:
-      execution_status: Passed
+      execution_status: "Passed"
       specification: docs/cases/requirements/ERYE-237/cases.md
-      execution_date: 2026-11-17
-      execution_environment: production
-      execution_method: ego-browser headed
-      execution_scope: user scope page and actual artifacts; no parameter validation
-      execution_report: docs/cases/requirements/ERYE-237/results-071-090-ego-prod-20261117.md
+      execution_date: "2026-11-25"
+      execution_environment: "production"
+      execution_method: "ego-browser headed;TaskSpace61"
+      execution_scope: "编辑中返回的继续编辑及X关闭两分支均留在原I1编辑状态，3个草稿对象及已追加文字保留，画笔引用保持1份，来源不变。"
+      execution_report: "docs/cases/requirements/ERYE-237/results-current-ego-prod-20261125.md"
       previous_execution_record: reports/erye237-071-090-ego-prod-20261117/ERYE237-083-previous-branch.txt
+      execution_evidence: "reports/erye237-current-ego-prod-20261125/"
     Agent:
       execution_status: Not Run
       specification: docs/cases/requirements/ERYE-237/agent-checks.md
@@ -5075,14 +5222,15 @@ ERYE237-084:
   current_case_version: "2026-11-09-layered-execution"
   execution_branches:
     UI:
-      execution_status: Passed
+      execution_status: "Passed"
       specification: docs/cases/requirements/ERYE-237/cases.md
-      execution_date: 2026-11-17
-      execution_environment: production
-      execution_method: ego-browser headed
-      execution_scope: user scope page and actual artifacts; no parameter validation
-      execution_report: docs/cases/requirements/ERYE-237/results-071-090-ego-prod-20261117.md
+      execution_date: "2026-11-25"
+      execution_environment: "production"
+      execution_method: "ego-browser headed;TaskSpace61"
+      execution_scope: "明确放弃仅清本轮3个未发草稿及引用，切其他工程再重开原图未恢复旧草稿，原图RGBA、完成历史及已发消息保持。"
+      execution_report: "docs/cases/requirements/ERYE-237/results-current-ego-prod-20261125.md"
       previous_execution_record: reports/erye237-071-090-ego-prod-20261117/ERYE237-084-previous-branch.txt
+      execution_evidence: "reports/erye237-current-ego-prod-20261125/"
     Agent:
       execution_status: Not Run
       specification: docs/cases/requirements/ERYE-237/agent-checks.md
@@ -5095,14 +5243,15 @@ ERYE237-085:
   current_case_version: "2026-11-09-layered-execution"
   execution_branches:
     UI:
-      execution_status: Passed
+      execution_status: "Passed"
       specification: docs/cases/requirements/ERYE-237/cases.md
-      execution_date: 2026-11-17
-      execution_environment: production
-      execution_method: ego-browser headed
-      execution_scope: user scope page and actual artifacts; no parameter validation
-      execution_report: docs/cases/requirements/ERYE-237/results-071-090-ego-prod-20261117.md
+      execution_date: "2026-11-25"
+      execution_environment: "production"
+      execution_method: "ego-browser headed;TaskSpace61"
+      execution_scope: "自定义左耳/添加银色耳钉及引用已保存，收起再展开全文/名称/锚点保持；实际切另一图片未询问但未丢草稿，返回原图同一批注及唯一引用仍在，未授权放弃亦未静默丢失。"
+      execution_report: "docs/cases/requirements/ERYE-237/results-current-ego-prod-20261125.md"
       previous_execution_record: reports/erye237-071-090-ego-prod-20261117/ERYE237-085-previous-branch.txt
+      execution_evidence: "reports/erye237-current-ego-prod-20261125/"
     Agent:
       execution_status: Not Run
       specification: docs/cases/requirements/ERYE-237/agent-checks.md
@@ -5240,16 +5389,16 @@ ERYE237-091:
   historical_execution_report: docs/cases/requirements/ERYE-237/results-revised-eleven-plus-six-ego-prod-20261117.md
   execution_branches:
     UI:
-      execution_status: Passed
+      execution_status: "Passed"
       execution_revision: 2026-11-17-annotation-ui-dedup-v5
       specification: docs/cases/requirements/ERYE-237/cases.md
-      execution_scope: current unique annotation UI branch; actual browser input/click; no generation or technical fault simulation
+      execution_scope: "无识别候选时先自定义对象名；同一有效标签下空正文添加禁用，填合法正文后仅新增一条引用；未发送。"
       revision_document: docs/cases/requirements/ERYE-237/revision-fourteen-image-annotation-20261117.md
-      execution_date: 2026-11-17
-      execution_environment: production
-      execution_method: ego-browser headed; actual annotation UI
-      execution_report: docs/cases/requirements/ERYE-237/results-091-096-103-annotation-ui-ego-prod-20261117.md
-      execution_evidence: reports/erye237-091-096-103-ui-ego-prod-20261117/
+      execution_date: "2026-11-25"
+      execution_environment: "production"
+      execution_method: "ego-browser headed;TaskSpace61"
+      execution_report: "docs/cases/requirements/ERYE-237/results-current-ego-prod-20261125.md"
+      execution_evidence: "reports/erye237-current-ego-prod-20261125/"
       execution_summary: "右下空正文批注已命名；添加入口禁用、待发引用0。输入完整有效正文后正常添加恰1条，引用重开正文和右下锚点正确；未发送、原图像素保持。"
 ERYE237-092:
   status: PLAN
@@ -5320,16 +5469,16 @@ ERYE237-096:
   historical_execution_report: docs/cases/requirements/ERYE-237/results-revised-eleven-plus-six-ego-prod-20261117.md
   execution_branches:
     UI:
-      execution_status: Passed
+      execution_status: "Passed"
       execution_revision: 2026-11-17-annotation-ui-dedup-v5
       specification: docs/cases/requirements/ERYE-237/cases.md
-      execution_scope: current unique annotation UI branch; actual browser input/click; no generation or technical fault simulation
+      execution_scope: "有效对象名准备后，完整中文含换行输入后立即添加；引用重开逐字一致，首尾/换行不丢失，仅一条引用；未发送。"
       revision_document: docs/cases/requirements/ERYE-237/revision-fourteen-image-annotation-20261117.md
-      execution_date: 2026-11-17
-      execution_environment: production
-      execution_method: ego-browser headed; actual annotation UI
-      execution_report: docs/cases/requirements/ERYE-237/results-091-096-103-annotation-ui-ego-prod-20261117.md
-      execution_evidence: reports/erye237-091-096-103-ui-ego-prod-20261117/
+      execution_date: "2026-11-25"
+      execution_environment: "production"
+      execution_method: "ego-browser headed;TaskSpace61"
+      execution_report: "docs/cases/requirements/ERYE-237/results-current-ego-prod-20261125.md"
+      execution_evidence: "reports/erye237-current-ego-prod-20261125/"
       execution_summary: "在已命名右下批注中以完成态键盘输入两段固定中文，随后直接点击添加，未额外失焦；唯一引用重开后逐字、换行和末句标点完整，仍原锚点；未发送。"
 ERYE237-097:
   status: PLAN
@@ -5447,16 +5596,16 @@ ERYE237-103:
   historical_execution_report: docs/cases/requirements/ERYE-237/results-revised-eleven-plus-six-ego-prod-20261117.md
   execution_branches:
     UI:
-      execution_status: Passed
+      execution_status: "Passed"
       execution_revision: 2026-11-17-annotation-ui-dedup-v5
       specification: docs/cases/requirements/ERYE-237/cases.md
-      execution_scope: current unique annotation UI branch; actual browser input/click; no generation or technical fault simulation
+      execution_scope: "两处未发送批注依次输入狗/球要求，左侧替换完整正文后切右再切左，右侧原文与左侧最新全文/名称均保持，编号总数仍2；未新增或发送。"
       revision_document: docs/cases/requirements/ERYE-237/revision-fourteen-image-annotation-20261117.md
-      execution_date: 2026-11-17
-      execution_environment: production
-      execution_method: ego-browser headed; actual annotation UI
-      execution_report: docs/cases/requirements/ERYE-237/results-091-096-103-annotation-ui-ego-prod-20261117.md
-      execution_evidence: reports/erye237-091-096-103-ui-ego-prod-20261117/
+      execution_date: "2026-11-25"
+      execution_environment: "production"
+      execution_method: "ego-browser headed;TaskSpace61"
+      execution_report: "docs/cases/requirements/ERYE-237/results-current-ego-prod-20261125.md"
+      execution_evidence: "reports/erye237-current-ego-prod-20261125/"
       execution_summary: "两处独立批注均未引用；修改左侧正文后直接点击右侧编号，右侧名称/红球正文保持；再回左侧完整新正文及名称保留，左右锚点不变、总数始终2，无串写或新引用；未发送。"
 ERYE237-104:
   status: PLAN
@@ -5596,16 +5745,16 @@ ERYE237-111:
   previous_case_record: docs/cases/requirements/ERYE-237/archive-110-144-before-annotation-20261117.md
   execution_branches:
     UI:
-      execution_status: Passed
+      execution_status: "Passed"
       execution_revision: 2026-11-17-contiguous-renumber-v8
       specification: docs/cases/requirements/ERYE-237/cases.md
-      execution_scope: annotation UI actual browser actions; actual artifact for 110; no backend/fault/billing gates
+      execution_scope: "A旧标记删除后旧引用同步消失，在原位新建C并引用；仅新C与原B两份，分别重开正文/名称正确，旧内容未复活；实际编号按页面记录，不要求重用策略。"
       revision_document: docs/cases/requirements/ERYE-237/revision-110-144-image-annotation-20261117.md
-      execution_date: 2026-11-17
-      execution_environment: production
-      execution_method: ego-browser headed; serial UI execution
-      execution_report: docs/cases/requirements/ERYE-237/results-110-122-ego-prod-20261117.md
-      execution_evidence: reports/erye237-110-122-ego-prod-20261117/
+      execution_date: "2026-11-25"
+      execution_environment: "production"
+      execution_method: "ego-browser headed;TaskSpace61"
+      execution_report: "docs/cases/requirements/ERYE-237/results-current-ego-prod-20261125.md"
+      execution_evidence: "reports/erye237-current-ego-prod-20261125/"
       execution_summary: "最终按原图V1补核：A1删除后同点新建C3；仅B2/C3两引用，逐一打开的名称、全文与锚点正确，旧A不复活。110后自动选成品时的初轮记录保留，结论采用sourceV1复核。"
 ERYE237-112:
   status: PLAN
@@ -5619,16 +5768,16 @@ ERYE237-112:
   previous_case_record: docs/cases/requirements/ERYE-237/archive-110-144-before-annotation-20261117.md
   execution_branches:
     UI:
-      execution_status: Passed
+      execution_status: "Passed"
       execution_revision: 2026-11-17-contiguous-renumber-v8
       specification: docs/cases/requirements/ERYE-237/cases.md
-      execution_scope: annotation UI actual browser actions; actual artifact for 110; no backend/fault/billing gates
+      execution_scope: "浮层正文、设置展开收起、添加操作均仅保留原1条批注；垃圾桶后0条，未穿透新建，源图保持。"
       revision_document: docs/cases/requirements/ERYE-237/revision-110-144-image-annotation-20261117.md
-      execution_date: 2026-11-17
-      execution_environment: production
-      execution_method: ego-browser headed; serial UI execution
-      execution_report: docs/cases/requirements/ERYE-237/results-110-122-ego-prod-20261117.md
-      execution_evidence: reports/erye237-110-122-ego-prod-20261117/
+      execution_date: "2026-11-25"
+      execution_environment: "production"
+      execution_method: "ego-browser headed;TaskSpace61"
+      execution_report: "docs/cases/requirements/ERYE-237/results-current-ego-prod-20261125.md"
+      execution_evidence: "reports/erye237-current-ego-prod-20261125/"
       execution_summary: "原图V1补核：正文、对象设置开关及添加后均唯一标记；垃圾桶删除后0标记/0待发，未点击穿透。初轮成品基线证据保留，结论采用sourceV1复核。"
 ERYE237-113:
   status: PLAN
@@ -5642,16 +5791,16 @@ ERYE237-113:
   previous_case_record: docs/cases/requirements/ERYE-237/archive-110-144-before-annotation-20261117.md
   execution_branches:
     UI:
-      execution_status: Passed
+      execution_status: "Passed"
       execution_revision: 2026-11-17-contiguous-renumber-v8
       specification: docs/cases/requirements/ERYE-237/cases.md
-      execution_scope: annotation UI actual browser actions; actual artifact for 110; no backend/fault/billing gates
+      execution_scope: "四角(.02,.02)/(.98,.02)/(.02,.98)/(.98,.98)独立实际输入、自定义名、添加、引用重开及垃圾桶清理均可达，各角正文/锚点正确；首次重开读取早于浮层就绪，等待后全文正确，不计产品失败；未发送。"
       revision_document: docs/cases/requirements/ERYE-237/revision-110-144-image-annotation-20261117.md
-      execution_date: 2026-11-17
-      execution_environment: production
-      execution_method: ego-browser headed; serial UI execution
-      execution_report: docs/cases/requirements/ERYE-237/results-110-122-ego-prod-20261117.md
-      execution_evidence: reports/erye237-110-122-ego-prod-20261117/
+      execution_date: "2026-11-25"
+      execution_environment: "production"
+      execution_method: "ego-browser headed;TaskSpace61"
+      execution_report: "docs/cases/requirements/ERYE-237/results-current-ego-prod-20261125.md"
+      execution_evidence: "reports/erye237-current-ego-prod-20261125/"
       execution_summary: "最终按原图V1四角逐行补核：正文、名称修改、添加、引用重开及垃圾桶均可操作；每角正文和定位正确，清理后0标记/0引用。原成品基线初轮证据保留，结论采用sourceV1完整四行。"
 ERYE237-114:
   status: PLAN
@@ -5665,16 +5814,16 @@ ERYE237-114:
   previous_case_record: docs/cases/requirements/ERYE-237/archive-110-144-before-annotation-20261117.md
   execution_branches:
     UI:
-      execution_status: Passed
+      execution_status: "Passed"
       execution_revision: 2026-11-17-contiguous-renumber-v8
       specification: docs/cases/requirements/ERYE-237/cases.md
-      execution_scope: annotation UI actual browser actions; actual artifact for 110; no backend/fault/billing gates
+      execution_scope: "TD-ANN35八段原文经正文滚动，仅选择第4段并通过键盘输入替换；添加后重开全文逐段一致，其他七段及首尾换行完整保留，未发送。"
       revision_document: docs/cases/requirements/ERYE-237/revision-110-144-image-annotation-20261117.md
-      execution_date: 2026-11-17
-      execution_environment: production
-      execution_method: ego-browser headed; serial UI execution
-      execution_report: docs/cases/requirements/ERYE-237/results-110-122-ego-prod-20261117.md
-      execution_evidence: reports/erye237-110-122-ego-prod-20261117/
+      execution_date: "2026-11-25"
+      execution_environment: "production"
+      execution_method: "ego-browser headed;TaskSpace61"
+      execution_report: "docs/cases/requirements/ERYE-237/results-current-ego-prod-20261125.md"
+      execution_evidence: "reports/erye237-current-ego-prod-20261125/"
       execution_summary: "原图独立输入8段，正文滚动后仅选第4段并键入替换；核验首尾、引用及重开正文，其他七段和换行全文保持。"
 ERYE237-115:
   status: PLAN
@@ -5688,16 +5837,16 @@ ERYE237-115:
   previous_case_record: docs/cases/requirements/ERYE-237/archive-110-144-before-annotation-20261117.md
   execution_branches:
     UI:
-      execution_status: Passed
+      execution_status: "Passed"
       execution_revision: 2026-11-17-contiguous-renumber-v8
       specification: docs/cases/requirements/ERYE-237/cases.md
-      execution_scope: annotation UI actual browser actions; actual artifact for 110; no backend/fault/billing gates
+      execution_scope: "同一已引用批注清空时添加禁用，恢复合法正文并更新后仅一份引用，重开为完整新正文，无拼接或重复；未发送。"
       revision_document: docs/cases/requirements/ERYE-237/revision-110-144-image-annotation-20261117.md
-      execution_date: 2026-11-17
-      execution_environment: production
-      execution_method: ego-browser headed; serial UI execution
-      execution_report: docs/cases/requirements/ERYE-237/results-110-122-ego-prod-20261117.md
-      execution_evidence: reports/erye237-110-122-ego-prod-20261117/
+      execution_date: "2026-11-25"
+      execution_environment: "production"
+      execution_method: "ego-browser headed;TaskSpace61"
+      execution_report: "docs/cases/requirements/ERYE-237/results-current-ego-prod-20261125.md"
+      execution_evidence: "reports/erye237-current-ego-prod-20261125/"
       execution_summary: "已有引用正文清空后添加入口禁用；原引用显示名称加空正文。重新填合法新正文并明确添加后唯一引用恢复为新全文，重开一致，无拼接或重复，未发送。"
 ERYE237-116:
   status: PLAN
@@ -5711,16 +5860,16 @@ ERYE237-116:
   previous_case_record: docs/cases/requirements/ERYE-237/archive-110-144-before-annotation-20261117.md
   execution_branches:
     UI:
-      execution_status: Passed
+      execution_status: "Passed"
       execution_revision: 2026-11-17-contiguous-renumber-v8
       specification: docs/cases/requirements/ERYE-237/cases.md
-      execution_scope: annotation UI actual browser actions; actual artifact for 110; no backend/fault/billing gates
+      execution_scope: "仅展开再收起对象设置未选择候选；名称、正文、锚点及批注身份保持，添加仍为原批注；未发送。"
       revision_document: docs/cases/requirements/ERYE-237/revision-110-144-image-annotation-20261117.md
-      execution_date: 2026-11-17
-      execution_environment: production
-      execution_method: ego-browser headed; serial UI execution
-      execution_report: docs/cases/requirements/ERYE-237/results-110-122-ego-prod-20261117.md
-      execution_evidence: reports/erye237-110-122-ego-prod-20261117/
+      execution_date: "2026-11-25"
+      execution_environment: "production"
+      execution_method: "ego-browser headed;TaskSpace61"
+      execution_report: "docs/cases/requirements/ERYE-237/results-current-ego-prod-20261125.md"
+      execution_evidence: "reports/erye237-current-ego-prod-20261125/"
       execution_summary: "上衣锚点(.47,.28)已实际识别红色T恤/女性；仅展开、收起候选，不点选。重开并添加后名称仍红色T恤、正文及锚点保持，引用正确。"
 ERYE237-117:
   status: PLAN
@@ -5734,16 +5883,16 @@ ERYE237-117:
   previous_case_record: docs/cases/requirements/ERYE-237/archive-110-144-before-annotation-20261117.md
   execution_branches:
     UI:
-      execution_status: Passed
+      execution_status: "Passed"
       execution_revision: 2026-11-17-contiguous-renumber-v8
       specification: docs/cases/requirements/ERYE-237/cases.md
-      execution_scope: annotation UI actual browser actions; actual artifact for 110; no backend/fault/billing gates
+      execution_scope: "右侧A已引用，左侧B始终未引用；通过B垃圾桶删除后，仅剩原A一份引用，重开名称/正文/原锚点一致，未误清或错指。"
       revision_document: docs/cases/requirements/ERYE-237/revision-110-144-image-annotation-20261117.md
-      execution_date: 2026-11-17
-      execution_environment: production
-      execution_method: ego-browser headed; serial UI execution
-      execution_report: docs/cases/requirements/ERYE-237/results-110-122-ego-prod-20261117.md
-      execution_evidence: reports/erye237-110-122-ego-prod-20261117/
+      execution_date: "2026-11-25"
+      execution_environment: "production"
+      execution_method: "ego-browser headed;TaskSpace61"
+      execution_report: "docs/cases/requirements/ERYE-237/results-current-ego-prod-20261125.md"
+      execution_evidence: "reports/erye237-current-ego-prod-20261125/"
       execution_summary: "A1已引用、B2从未引用；从B浮层垃圾桶删除后仅A1和其唯一引用保留。重新打开A，名称、正文仅记录A及右下原锚点一致。"
 ERYE237-118:
   status: PLAN
@@ -5757,16 +5906,16 @@ ERYE237-118:
   previous_case_record: docs/cases/requirements/ERYE-237/archive-110-144-before-annotation-20261117.md
   execution_branches:
     UI:
-      execution_status: Passed
+      execution_status: "Passed"
       execution_revision: 2026-11-17-contiguous-renumber-v8
       specification: docs/cases/requirements/ERYE-237/cases.md
-      execution_scope: annotation UI actual browser actions; actual artifact for 110; no backend/fault/billing gates
+      execution_scope: "正文区域普通滚轮上下各三次，正文完整、缩放档及图像内锚点/数量保持，未新增笔迹或选区；未发送。"
       revision_document: docs/cases/requirements/ERYE-237/revision-110-144-image-annotation-20261117.md
-      execution_date: 2026-11-17
-      execution_environment: production
-      execution_method: ego-browser headed; serial UI execution
-      execution_report: docs/cases/requirements/ERYE-237/results-110-122-ego-prod-20261117.md
-      execution_evidence: reports/erye237-110-122-ego-prod-20261117/
+      execution_date: "2026-11-25"
+      execution_environment: "production"
+      execution_method: "ego-browser headed;TaskSpace61"
+      execution_report: "docs/cases/requirements/ERYE-237/results-current-ego-prod-20261125.md"
+      execution_evidence: "reports/erye237-current-ego-prod-20261125/"
       execution_summary: "独立8段批注中普通滚轮上下各三次；前后画布像素、缩放、唯一标记位置与正文全文完全一致，未绘制或切换工具，重开内容保持。"
 ERYE237-119:
   status: PLAN
@@ -5780,16 +5929,16 @@ ERYE237-119:
   previous_case_record: docs/cases/requirements/ERYE-237/archive-110-144-before-annotation-20261117.md
   execution_branches:
     UI:
-      execution_status: Passed
+      execution_status: "Passed"
       execution_revision: 2026-11-17-contiguous-renumber-v8
       specification: docs/cases/requirements/ERYE-237/cases.md
-      execution_scope: annotation UI actual browser actions; actual artifact for 110; no backend/fault/billing gates
+      execution_scope: "尖括号、HTML样式字面字符串、引号和&完整保存显示，未解析为新增b元素；引用重开全文一致，未发送。"
       revision_document: docs/cases/requirements/ERYE-237/revision-110-144-image-annotation-20261117.md
-      execution_date: 2026-11-17
-      execution_environment: production
-      execution_method: ego-browser headed; serial UI execution
-      execution_report: docs/cases/requirements/ERYE-237/results-110-122-ego-prod-20261117.md
-      execution_evidence: reports/erye237-110-122-ego-prod-20261117/
+      execution_date: "2026-11-25"
+      execution_environment: "production"
+      execution_method: "ego-browser headed;TaskSpace61"
+      execution_report: "docs/cases/requirements/ERYE-237/results-current-ego-prod-20261125.md"
+      execution_evidence: "reports/erye237-current-ego-prod-20261125/"
       execution_summary: "无害尖括号、b标签字符串、双引号及&在批注和引用重开中逐字一致；引用DOM无新增b元素，未解析为HTML或可见转义实体，未发送。"
 ERYE237-120:
   status: PLAN
@@ -5803,16 +5952,16 @@ ERYE237-120:
   previous_case_record: docs/cases/requirements/ERYE-237/archive-110-144-before-annotation-20261117.md
   execution_branches:
     UI:
-      execution_status: Passed
+      execution_status: "Passed"
       execution_revision: 2026-11-17-contiguous-renumber-v8
       specification: docs/cases/requirements/ERYE-237/cases.md
-      execution_scope: annotation UI actual browser actions; actual artifact for 110; no backend/fault/billing gates
+      execution_scope: "当前编辑器原已达允许最大宽度872，先建立较宽聊天列基线再实际拖动使其变窄；5条指定长名称引用均可逐条打开自身名称/正文及位置，输入框和发送入口可达；未发送，分栏恢复。"
       revision_document: docs/cases/requirements/ERYE-237/revision-110-144-image-annotation-20261117.md
-      execution_date: 2026-11-17
-      execution_environment: production
-      execution_method: ego-browser headed; serial UI execution
-      execution_report: docs/cases/requirements/ERYE-237/results-110-122-ego-prod-20261117.md
-      execution_evidence: reports/erye237-110-122-ego-prod-20261117/
+      execution_date: "2026-11-25"
+      execution_environment: "production"
+      execution_method: "ego-browser headed;TaskSpace61"
+      execution_report: "docs/cases/requirements/ERYE-237/results-current-ego-prod-20261125.md"
+      execution_evidence: "reports/erye237-current-ego-prod-20261125/"
       execution_summary: "同源5条长标签引用均添加成功；通过真实分隔条由596窄至页面允许的336聊天宽度（原宽336），五条逐一可打开且名称/正文正确，主输入与发送可达，原分栏已恢复；未发送。"
 ERYE237-121:
   status: PLAN
@@ -5826,16 +5975,16 @@ ERYE237-121:
   previous_case_record: docs/cases/requirements/ERYE-237/archive-110-144-before-annotation-20261117.md
   execution_branches:
     UI:
-      execution_status: Passed
+      execution_status: "Passed"
       execution_revision: 2026-11-17-contiguous-renumber-v8
       specification: docs/cases/requirements/ERYE-237/cases.md
-      execution_scope: annotation UI actual browser actions; actual artifact for 110; no backend/fault/billing gates
+      execution_scope: "依次创建左下A、右下B、右上C，按C→A→B添加，逐引用重开正文/名称及原锚点正确；实际显示顺序留档，源像素/历史保持，未发送。"
       revision_document: docs/cases/requirements/ERYE-237/revision-110-144-image-annotation-20261117.md
-      execution_date: 2026-11-17
-      execution_environment: production
-      execution_method: ego-browser headed; serial UI execution
-      execution_report: docs/cases/requirements/ERYE-237/results-110-122-ego-prod-20261117.md
-      execution_evidence: reports/erye237-110-122-ego-prod-20261117/
+      execution_date: "2026-11-25"
+      execution_environment: "production"
+      execution_method: "ego-browser headed;TaskSpace61"
+      execution_report: "docs/cases/requirements/ERYE-237/results-current-ego-prod-20261125.md"
+      execution_evidence: "reports/erye237-current-ego-prod-20261125/"
       execution_summary: "按A1左下/B2右下/C3右上创建，按C→A→B添加；页面实序为C/A/B。三条逐一重新打开，编号、各自名称、正文A/B/C与位置一致，无数组顺序错配。"
 ERYE237-122:
   status: PLAN
@@ -5849,14 +5998,14 @@ ERYE237-122:
   previous_case_record: docs/cases/requirements/ERYE-237/archive-110-144-before-annotation-20261117.md
   execution_branches:
     UI:
-      execution_status: Passed
+      execution_status: "Passed"
       execution_revision: 2026-11-17-contiguous-renumber-v8
       specification: docs/cases/requirements/ERYE-237/cases.md
-      execution_scope: annotation UI actual browser actions; actual artifact for 110; no backend/fault/billing gates
+      execution_scope: "主输入G1及末尾追加保持，批注P2与唯一引用准确，两控件不串值。首次键盘End未将光标移到末尾属于操作准备偏差，原图留档；用全选后右键光标折叠至末尾完成追加。未发送。"
       revision_document: docs/cases/requirements/ERYE-237/revision-110-144-image-annotation-20261117.md
-      execution_date: 2026-11-17
-      execution_environment: production
-      execution_method: ego-browser headed; serial UI execution
-      execution_report: docs/cases/requirements/ERYE-237/results-110-122-ego-prod-20261117.md
-      execution_evidence: reports/erye237-110-122-ego-prod-20261117/
+      execution_date: "2026-11-25"
+      execution_environment: "production"
+      execution_method: "ego-browser headed;TaskSpace61"
+      execution_report: "docs/cases/requirements/ERYE-237/results-current-ego-prod-20261125.md"
+      execution_evidence: "reports/erye237-current-ego-prod-20261125/"
       execution_summary: "P1批注引用后输入G1；图上修改P2并明确添加更新，G1保持。主输入追加检查结束后，G1完整、P2完整且引用仍唯一，两处未串值、未发送。"

@@ -1,18 +1,32 @@
 # 当前已修复缺陷生产回归 · 2026-11-23
 
-用户明确本轮生产 https://app.cinlink.ai/，Google Chrome有头，账号yabinc18（本轮再次确认且页面已核验）。官方完整550项（200/200/150），项目精确已修复12项，陈亚宾4项624/606/569/568。新建项目表单有名称时创建按钮仍禁用，未提交创建；沿用已有专用项目缺陷生产回归-20261120，每项独立干净会话/源基线。
+本轮结束检查点：2026-11-23T22:00:06.349246+08:00。本轮按用户明确授权，在生产 `https://app.cinlink.ai/`、Google Chrome 有头、`yabinc18` 串行执行。11项记录了本轮原验收判断：6项失败、5项阻塞；624、568保留同修复版已知阻塞，未重复实测。尚不能宣称全部原场景已覆盖。
 
-|缺陷|原验收|扩散一|扩散二|本轮范围|
+| 缺陷 | 原验收 | 扩散一 | 扩散二 | 主要结果 |
 |---|---|---|---|---|
-|606|Failed|Failed|Failed|原授权1254²香水源已核同，待串行|
-|569|NotRun|NotRun|NotRun|待恢复20秒三段/49字幕/6配音/BGM严格原基线|
-|624|Blocked|Blocked|Blocked|无获准且可实际登录的第二账号，不用同账号或匿名态替代|
-|568|保留既有Blocked|保留历史|保留历史|同版生产严格基线前置缺口已确认，不因切环境重复消耗|
+| 606 | Failed | Failed | Failed | 实际导出仍1254×1254，未达到16:9 |
+| 569 | Blocked | Failed | Failed | 严格6配音/BGM前置未建立；两个留隙删除分支失败 |
+| 389 | Failed | Failed | Failed | F3精确原查询及独立分支均HTTP404 |
+| 398 | Failed | Failed | Failed | F2音轨原句检索均HTTP404 |
+| 402 | Failed | Failed | Passed | 检索链路失败；直接引用真实F2后提取60.01秒音频通过 |
+| 390 | Failed | Failed | Failed | 四个原目标检索均HTTP404；E2受理后丢失项目关联，原请求已找到并读到终态 |
+| 395 | Failed | Failed | Failed | 仙人掌/橙兔原片及对照查询均HTTP404 |
+| 370 | Blocked | Failed | Passed | 原四副本项目不可用；项目@列表占位图；本地附件草稿真实缩略图通过 |
+| 274 | Blocked | Failed | Failed | 旧查找卡片缺失；当前入口两个独立分支均HTTP404 |
+| 275 | Blocked | Failed | Failed | 旧卡片缺失；单F1、单F2均1/1分析就绪，独立查询HTTP404 |
+| 237 | Blocked | Passed（定位） | Blocked（准备失败） | 直接附件51秒完成有效定位；单7MB原分析批次明确失败，正式素材库查询未提交 |
+| 624 | 保留既有Blocked | 未重跑 | 未重跑 | 缺当前轮获准且实际可登录的第二账号，不用单账号冒充跨账号 |
+| 568 | 保留既有Blocked | 未重跑 | 未重跑 | 同版严格六配音原场景前置缺口；保留既有生产报告与实测 |
 
-613预发已受理扩散二已从原请求只回读到Failed；原/E1/E2均Failed，云效❌AI未通过不重复写入；本轮不在生产重放613或把预发结果冒充生产。原生工具已实际返回页面，旧访问停止保留历史。0新业务提交/云效状态写入/评论/新单/Git，固定脚本PLAN，统一入口README只读。
+606、389、398、402、390、395已通过官方OpenAPI设为“❌AI未通过”并回读；其余原验收Blocked保持当前状态。扩散通过仅适用于表中明确范围，不能代替原验收。21:56官方分页完整556项（200/200/156），陈亚宾创建且精确已修复7项：624、569、568、370、275、274、237；全部修复证据与附件指纹无变化，无新增待开轮候选。外部状态变化不计本轮实测。
 
-证据目录：reports/fixed-regression-production-20261123-161635。
+237原分析批次 `489ae4db-d2ec-4465-9b82-68cc4bf8b801` 于本次只读检查明确显示“视频分析失败”“分析已停止”。E2前置失败、正式素材库查询未提交，结论Blocked；没有重试、取消或新建。本轮无在途业务，活动锁已释放；本轮可执行分支已记录，所有原场景并未全部覆盖。274/275/237旧入口替代澄清仍待用户答复，既有扩散不自动重发。
 
+实际产物核验：606两份原生PNG实际落盘并解码；402直接源输入分支的60.01秒AAC实际下载、完整解码并与源音轨比较。237原7MB为60.50秒、1280×720、H264/AAC，完整解码正常，页面实际播放至47.6秒后暂停。没有产物的检索失败分支不虚构下载或语义通过。未改动截图、会话、项目/批次标识、源哈希和日志保存在 `reports/fixed-regression-production-20261123-161635/`；最终机器汇总为 `final-summary.json`，`checkpoint-summary.json`保留历史等待阶段；批次结束含阻塞，不是全部原验收通过证明。
+
+本轮0评论、0新缺陷、0云效附件写入、0Git提交/推送；`docs/cases/README.md`只读。固定回归脚本PLAN；已有LF01～03旧脚本保持已实现/未执行的事实，不能把本轮CUA实测当成脚本实现。
+
+以下保留历史执行记录；历史断点以以上最新检查点及主账本为准。
 
 2026-11-23T16:31:40.696093+08:00 606生产原前置已原生单次导入授权1254²香水原图48b7，CIDb8b89e86-05ed-4579-8ed4-0ab8796341c9，在原(.58,.22)保存原全文批注“定位，再在瓶盖旁添加新品”，未加对话引用。只读当前对象标识查询单次受理，原正式完整扩图+加字+导出未发送。当前账号yabinc18，原图保持，固定脚本PLAN，0云效写入/评论/新单/Git。证据reports/fixed-regression-production-20261123-161635/execution/606-O-*。
 
@@ -33,3 +47,84 @@
 
 
 2026-11-23T17:01:53.856039+08:00 606生产完整原/两扩散完成：Failed/Failed/Failed。扩散二无批注同目标CID43b3ef7d-1d1f-44d6-b507-e78a611f170c，84s结束后继续只回读到实际图像2e18保存；实际原生下载PNG1254²/RGBA、2498767字节、完整解码，仍非16:9；新品及完整瓶身/标签可见，不凭局部成功判组合通过，字号48未独立精确测量。0重发。云效原❌AI未通过先前已GET核验，本项总1状态写入、0评论/附件/新单/Git。证据reports/fixed-regression-production-20261123-161635/execution/606-E2-*及606-final-result.json。569 16:58官方GET仍陈亚宾/精确已修复，开始独立原基线准备；固定脚本PLAN。
+
+
+2026-11-23T17:09:01.355280+08:00 569生产原基线分步准备：独立CIDea836d69-d651-487d-89f7-30c6332d30d6，原生已打开授权1280×720/30fps原片20.00秒，视频与原声各0～20，未切割/删除。17:04官方GET再次陈亚宾/精确已修复。原49字幕SRT单项导入请求单次受理，禁止ASR/翻译/TTS/视频编辑；当前只回读，不重发。原正式删除及两扩散尚未执行，不能判Passed；六段真实配音/BGM/三段基线仍待核实。固定脚本PLAN，0本项云效写入/评论/新单/Git。证据reports/fixed-regression-production-20261123-161635/execution/569-O-*。
+
+
+2026-11-23T17:11:29.981209+08:00 569单项49原字幕导入31s完成。原生时间轴实际49个字幕条目，已将全49条文字、顺序和可见百分秒时间逐项对比原SRT，全部精确一致；视频/原声20秒保留，不用助手承诺替代。原正式删除尚未执行，继续独立BGM与真实6配音前置。证据reports/fixed-regression-production-20261123-161635/execution/569-O-import49-terminal-ui.txt、native49-subtitle-rows.json、import49-audit.json。固定脚本PLAN，0本项云效写入。
+
+
+2026-11-23T17:14:28.200176+08:00 当前生产569断点：原生Chrome控制在BGM请求填写前被用户操作打断，立即停止UI并请求暂停整个Chrome（包括云效标签）。这不是URL访问禁令：此前同一通道真实恢复，当前仅用户控制中断。原片20秒/49字幕31s导入已完成，49条文本与可见百分秒时间全核同。BGM已上传未提交、未验时间轴；六段真实配音及正式留隙删除/两扩散尚未执行。无已受理终态未知业务，当前活动UI锁释放，live765053799已handoff，待回复后先读当前UI再用已有附件继续，不重复上传或提交。606本轮F/F/F且云效❌AI未通过已确认；613预发F/F/F已结束，不在生产重放。证据reports/fixed-regression-production-20261123-161635/browser-control-checkpoint.json。固定脚本PLAN，README只读。
+
+
+2026-11-23T17:27:34.660108+08:00 用户再次确认暂停并切回569，当前原生UI核对CIDea836与既有BGM附件。两次先前点击/填写均在未受理前因窗口变化停止；只读缓存确认第二次当前为用户云效列表，未点击云效，未提交BGM。再次确认后当前准确生产原会话/原片49前置保留，本次BGM请求才首次单次受理。当前只回读原请求，不重复上传、导入或发送；六配音和正式删除仍未执行。证据reports/fixed-regression-production-20261123-161635/execution/569-O-bgm-*，固定脚本PLAN，0本项云效写入。
+
+
+2026-11-23T17:35:52.087235+08:00 569生产最新断点：BGM单次请求45s结束，添加到时间轴节点失败，实际原生时间轴无BGM；工程媒体搜索找到E196-BGM20.wav且预览20秒，原生拖入未生效，未重发请求或重传。20秒视频/原声与已逐项核同49字幕保留。六配音独立准备指令已本地保存，但发送前Chrome控制再次中断，发送按钮禁用，六配音0受理；正式5～10秒留隙删除及两扩散未执行。原验收Blocked/未覆盖，17:35官方GET仍陈亚宾/精确已修复，0本项云效写入，不以准备失败冒充正式验收失败。活动锁已释放，原生产CIDea836d69-d651-487d-89f7-30c6332d30d6已handoff，等用户暂停Chrome后从现有基线继续。这是控制中断，非新的URL禁令。证据reports/fixed-regression-production-20261123-161635/execution/569-O-bgm-result.json、569-O-bgm-agent-failed.png、569-O-six-dubbing-control-stop-ui.txt；最新检查点reports/fixed-regression-production-20261123-161635/browser-control-checkpoint.json。固定脚本PLAN；README只读。
+
+
+2026-11-23T18:02:37.758531+08:00 569生产原验收Blocked：六段真实配音单项请求首次单次受理，58s结束，实际时间轴无配音轨/配音片段；原20秒视频/原声与49字幕保留。BGM前置添加节点已失败，无BGM轨；不重复提交这两个准备请求。原正式5～10秒留隙删除尚未执行，不以准备结果冒充原验收Passed/Failed，云效维持17:35回读的已修复且0写入。继续两个独立实际可用基线的删除留隙扩散，结果不补算严格原场景覆盖。证据reports/fixed-regression-production-20261123-161635/execution/569-O-six-dubbing-terminal-ui.txt；固定脚本PLAN，README只读。
+
+
+2026-11-23T18:07:05.923217+08:00 569扩散一Failed（实际执行54s）：基于当前20秒视频/原声/49字幕的独立可用分支，明确5～10秒仅删除留隙、不波纹。应用提示计划1跳过失败节点；刷新重开仍视频与原声各0～20未分割，49字幕全条文字/时间与本轮导入基线完全一致，5～10空隙未形成。未重发、无输出视频；原严格六配音/BGM场景仍Blocked。证据reports/fixed-regression-production-20261123-161635/execution/569-E1-result.json、569-E1-terminal-ui.png、569-E1-reopen-ui.txt。当前未改动基线已核可供独立扩散二使用，固定脚本PLAN。
+
+
+2026-11-23T18:10:12.270250+08:00 569本轮结束：原Blocked/扩散一Failed/扩散二Failed。扩散二8.60～17.10秒完整词句非波纹分支46s结束，计划1跳过失败节点；刷新重开视频/原声仍各0～20秒未分割，49字幕与原基线全核同，空隙未形成。全部已受理准备及扩散任务已终态，0重发；原严格BGM/六配音前置未建成，正式原删除未执行，云效保持已修复、0本项状态写入。固定脚本PLAN，具体证据reports/fixed-regression-production-20261123-161635/execution/569-final-result.json。18:03官方完整550项分页（200/200/150）当前陈亚宾精确已修复12项；624/569/568同版不定时重跑，新增9项402/398/395/390/389/370/275/274/237，已保存描述/附件元数据/评论及指纹并入唯一执行队列，每项首业务前仍须GET当前已修复门禁。606本轮云效❌AI未通过已确认。
+
+
+2026-11-23T18:21:07.932438+08:00 FWXC-389 original Failed in production/yabinc18. Project19f73d74-9cf9-4407-b2a7-47389e7a49f9 contains only unchanged F3(60s1280x720,no audio). Analysis4e545343-89df-45f6-9352-ca942ffb7bd5 reused cache and UI confirmed1/1ready. Original exact Chinese query submitted once,CID8bcdae78-a5b6-487e-acaa-8bba374b0d70;search failed HTTP404,no playable candidate. Direct source30s frame confirms purple-shirt girl and green turtle. Original environment staging;this run production by explicit user instruction. No Retry clicked. Official status updated to AI failed and GET verified,1state write/0comments/attachments/newbugs/Git. Two independent expansions continue same legally started round. Evidence reports/fixed-regression-production-20261123-161635/execution/389/O-*,source reference F3-source-reference-30.png;cloud readback reports/fixed-regression-production-20261123-161635/cloud-updates/FWXC-389/result.json. Fixed script PLAN.
+
+
+2026-11-23T18:26:06.402330+08:00 FWXC-389 completed original/E1/E2 Failed/Failed/Failed in production/yabinc18. Original exact query CID8bcdae78-a5b6-487e-acaa-8bba374b0d70;E1 synonym segment query CID9e60e781-75df-4f5d-877d-9777cb88cdfd;E2 source-file-level query CID8a693ac0-67a7-4a79-a824-d7c3271e339f. Each used a clean conversation in isolated single-F3 project,analysis1/1;each singleaccepted search failed HTTP404 with0candidates. No Retry,extra analysis,downloaded results or playback coverage. Full prompts/screenshots saved per scenario;source30s frame actual reference. Original cloud AI failed already GETverified,1statewrite total,no repeated write. Fixed script PLAN. Evidence reports/fixed-regression-production-20261123-161635/execution/389/final-result.json.
+
+
+2026-11-23T18:31:34.305847+08:00 FWXC-398 production/yabinc18 preparation checkpoint. Fresh official GET18:26 confirmed Chen/exactFixed. Unmodified authorized F2 SHA78001c5c4eeb24fbe3eb15f4e0510a95eea924af8a5458c71dde14ca6f445234 copied into isolated folder398-F2. Source phrase existence retains explicit Nov10 human confirmation for identical bytes. Native folder permission triggered control interruption;read-only actual UI now confirms project8969bf62-64d3-4c8b-b778-e17ccbcb276e / FWXC398-PROD-F2-20261123 exists,only1file and analyzed0/1. Analysis/query not submitted. Do not recreate or reimport. Lock released,waiting for user control confirmation;original/E1/E2 still NotRun,not product failure. Browser old URLstop historical;this is control interruption only. Evidence reports/fixed-regression-production-20261123-161635/execution/398-folder-control-stop-ui.txt and398-control-stop.png. Current8new pending:402/398/395/390/370/275/274/237;389 completed F/F/F with cloud AI failed verified. Exact original screenshots402/370 now retrieved through official read-only GetWorkitemFile;no cloud comment/newbug/attachment/Git write. Fixed script PLAN;README read-only.
+
+
+2026-11-23T18:39:18.473237+08:00 FWXC-398 original Failed(new business error) in production/yabinc18. Original staging environment preserved in cloud description. Same-hash F2 only,analysis7e703b28-ee19-45cd-af15-1d70c9e7195b reused cache and UI1/1ready. Previously explicit human hearing confirmation for identical F2 retained;not new hearing. Exact original query singleaccepted CIDf2eb7c16-946f-4d77-bb9d-e50781cbc715 failed HTTP404,no playablecandidate. Previous done/no-match symptom not reached;requiredretrievalgoal notmet. No Retry. Official cloud changedFixedtoAI failed andGETverified;0comments/attachments/newbugs/Git. Expansions continuing same legally started round. Evidence reports/fixed-regression-production-20261123-161635/execution/398/O-*,status reports/fixed-regression-production-20261123-161635/cloud-updates/FWXC-398/result.json. Fixed script PLAN.
+
+
+2026-11-23T18:43:30.919416+08:00 FWXC-398 completed original/E1/E2 Failed/Failed/Failed in production/yabinc18. Original exact utterancequery CIDf2eb7c16-946f-4d77-bb9d-e50781cbc715;E1 explicit sound-not-visual query CID1266d143-c68a-4b4d-8bc4-16c1b7dc1cb8;E2 sourcefile-level original soundquery CIDee43a608-b4a3-4eae-a088-4ac27ba52df4. Each clean conversation,unique unchanged F2,analysis1/1;each single search failedHTTP404 with0candidate. Historical completed-no-match not reached;new business errors fail retrieval goal. No Retry or extra analysis;no result artifact/voice listening available. Cloud AI failed already GETverified,1statewrite total;no repeated write/comments/attachments/newbugs/Git. Fixed script PLAN;full prompts/rawscreenshots/checkpoints in reports/fixed-regression-production-20261123-161635/execution/398/final-result.json.
+
+
+2026-11-23T18:51:39.069561+08:00 FWXC-402 original Failed(new business error) in production/yabinc18. Official original screenshot recovered/read. Isolated clean CID3e4c0d30-939e-46bb-a2a9-d9997acbdbd4 in unique unchanged F2 project,analysis1/1. Reproduced original two query actions in sequence with exact original words;both singleacceptedsearches failedHTTP404,no candidate. Original first historicaldone/no-match outcome changed naturally;didnot retrytoforceit. Old second resource-port-video-has-no-file symptom not reached;inspect/extractaudio/transcription uncovered. Retrieval goal stillfailed,newerror recorded separately,not falselyPassed. Official Fixed->AI failed GETverified,1statewrite/0comments/attachments/newbugs/Git. Independent expansions continue same startedround. Evidence reports/fixed-regression-production-20261123-161635/execution/FWXC-402/O-*,source original-screenshot-1.png;cloud-updates/FWXC-402/result.json. Fixed script PLAN.
+
+
+2026-11-23T19:04:38.556425+08:00 FWXC-402 completed original/E1/E2 Failed/Failed/Passed. Original two screenshotqueries andE1 guardedsearchbothnewHTTP404,no candidate;oldresourceportfailure not reached. E2 independentnative@validF2 sourcebinding completed34s:actualinfo60.00s1AACmono,downloaded1393815Bextracted-audio.m4a(Chrome saved UUIDedbe945f-eea0-44b1-91d7-6e5010da28d2),fullAAC-LC48kmono60.01s decodeexit0;page playback25.1478s verified. Same decoded samplecount,source/outputwavecorrelation0.999997689,SNR53.35dB;PCMnotbitidentical,not claiminglossless. E2 valid-sourceinput/audio extraction executed passed only;originalretrievalFailed and cloudAI failed alreadyGETverified remainunchanged.0retries/extra statewrites/comments/attachments/newbugs/Git. Fixed scriptPLAN. Evidence reports/fixed-regression-production-20261123-161635/execution/FWXC-402/final-result.json,E2-audio-audit.json,E2-terminal-ui.png,actual.m4a.
+
+
+2026-11-23T19:17:48.155629+08:00 FWXC-390 original partialFailed inproduction/yabinc18:Exact robot query on newlycreateddedicatedP4projectf9c0eabc-26cd-44dc-84f4-97a6f39f013a,unchangedF1-F4only,analysis1afc1c9a-0e78-4810-b0ec-ef98168f64c8 completed4/4. Sourceframes1splane/31strain/91srobot/286ssatellite directlychecked. Robot CID568aedbf-0b72-4e62-bbc8-68c81bc37772 failedHTTP404,no actualcandidates;priorunrelatedmix symptom not reached. Originalretrievalgoal failed;plane/satellite/train stillpending,not claimingfullcoverage. Official Fixed->AI failed GETverified,1statewrite/0comments/attachments/newbugs/Git. Plane query now singleaccepted in separateoriginalconversationCID4480f21c-2212-43bd-8740-b419d43d9ed2;afterterminalsatellitesecondquery stayssameCIDperoriginal. No Retryoroverlap. FixedscriptPLAN. Evidence reports/fixed-regression-production-20261123-161635/execution/390/O-robot-*,ready4of4-ui.txt andsource-reference-manifest.json.
+
+
+2026-11-23T19:28:01.921577+08:00 FWXC-390 original4query scope complete Failed:robotCID568aedbf-0b72-4e62-bbc8-68c81bc37772;planeandsatellite sequentialCID4480f21c-2212-43bd-8740-b419d43d9ed2;trainCID9caf4bae-8bc3-4d3b-af26-c2cd5b24a309. All exactqueries onunchanged4F analyzed4/4,singleaccepted each,allHTTP404 and0candidate. Oldunrelatedcandidate mixnotreached;actualcandidatequality/download/decoding/playbackuncovered. OriginalretrievalFailed,cloudAI failedalreadyGETverified;0additionalcloudwrites. Two independent expansions remain. Evidence reports/fixed-regression-production-20261123-161635/execution/390/O-result.json andO-*-terminal-ui.txt/.png. FixedscriptPLAN.
+
+
+2026-11-23T19:40:03.427368+08:00 FWXC-390 completed original/E1/E2 Failed/Failed/Failed. Four originalqueries(robot,plane+satellitesequentialsameCID,train) andE1synonymrobot eachHTTP404,no candidates. E2file-leveltrainquery initially UI Failedtofetch;no businessretry. Read-onlyreload+uniqueconversationsearch recovered originalalreadyacceptedCIDfe185f6f-77dc-4554-8cfb-b7ac2a889803,actualterminalHTTP404 andungroupedassociation. BeforeSendP4ready4/4butserverconversationlostprojectassociation;notclaimingE2actualP4contextpreserved. Allacceptedrequestsnowterminal,nooverlap. Historicalunrelatedmix/actualcandidatequality/mediaoutputsnotreached. OriginalcloudAI failed alreadyGETverified,1statewritetotal,0repeatedwrites/comments/attachments/newbugs/Git. FixedscriptPLAN. Evidence reports/fixed-regression-production-20261123-161635/execution/390/final-result.json,E2-submission-error-ui.txt,E2-after-reload-ui.txt,E2-recovered-conversation-ui.txt,E2-terminal-ui.png.
+
+
+2026-11-23T19:50:34.314783+08:00 FWXC-395 originalFailed(newerror),production/yabinc18(originalstaging). UniqueP4projectf9c0eabc-26cd-44dc-84f4-97a6f39f013a,unchanged4sources/4of4analysis;F1-F3 source10sframesactuallyviewed,eachcactusandorangerabbitpresent. Exactoriginalallsourcequery CIDf6cbc3ac-5d82-4b54-9dd9-66039f77e9b2 singleaccepted searchHTTP404,no sources. HistoricalF2missing/F4falsepositive notreached;source-setvalidation/download/playbackuncovered. RequiredretrievalgoalFailed,officialFixed->AI failed GETverified1statewrite. E1 synonymqueryaccepted,sameroundcontinuation,noRetry. FixedscriptPLAN,0comments/attachments/newbugs/Git. Evidence reports/fixed-regression-production-20261123-161635/execution/395/O-*,F1/F2/F3-source-reference-10.png,statuscloud-updates/FWXC-395/result.json.
+
+
+2026-11-23T19:56:57.805864+08:00 FWXC-395 completed original/E1/E2 Failed/Failed/Failed. Original exactallsource cactus/rabbit CIDf6cbc3ac-5d82-4b54-9dd9-66039f77e9b2;E1samevisualdifferent-audio retention CIDbd2eb6a1-4a5c-4e87-88bc-4a57c0dc36b5;E2robot source-filecontrast CIDd18927b8-d193-4cd4-9b38-5ac8ada1e6d9. Independentcleanconversations,unchangedF1-F4 analyzed4/4,all singleacceptedHTTP404 and0source. F1-F3 source10sframesactuallyconfirmcactus/orangerabbit;F4robotreference91sconfirmscontrast. Old F2missing/F4falsepositive not reached;candidatequality/download/playbackuncovered. OriginalcloudAI failedalreadyGETverified,1statewrite total,0retry/repeatedwrites/comments/attachments/newbugs/Git. FixedscriptPLAN. Evidence reports/fixed-regression-production-20261123-161635/execution/395/final-result.json,O/E1/E2-terminal-ui.txt/.png.
+
+
+2026-11-23T20:00:56.156442+08:00 FWXC-370 originalBlocked,production/yabinc18. Official19:56 GETChen/exactFixed. Readoriginalscreenshot:originalproject27e7b74b-cc9d-4b6a-9e8a-673a5df6791f/@list9s-copy,7MB-copy,Japanese-copy,English30S-copy,4/4. Exactproject openedonce inauthorizedaccount;settled0/0 andnative@pickerNoProject/no relatedcontent. Cannotrestoreexactfourcopyvideos orclaimsourcebytesidentical;noaccountswitch,queryorAIgeneration,cloud0writes. ProceedindependentUIthumbnailvariations withknownauthorizedcurrentP4sources/projectreferenceandlocaluploadentries;not substitutesforstrictoriginalPassed. Evidence reports/fixed-regression-production-20261123-161635/execution/FWXC-370/O-blocked-ui.txt/.png,original-screenshot-1.png. FixedscriptPLAN.
+
+
+2026-11-23T20:03:38.578138+08:00 FWXC-370 E1 Failed(actualUItest):independentcurrentP4native@picker,4/4analyzed,exactF1-F4filelabelsvisiblebutallfourthumbnailsgrayVplaceholders,no sourceframes. SourceframespreviouslyverifiedandF4fullDecodeexit0. Actual screenshot execution/FWXC-370/E1-picker-ui.png. NoAgentquery/generation,0businessresubmit. Differentmaterialsfromunavailableoriginalfour-copyset,sooriginalstillBlockedandcloudFixedunchanged. E2local-uploadentrypending. FixedscriptPLAN.
+
+
+2026-11-23T20:12:29.802313+08:00 FWXC-370 completed production/yabinc18: original Blocked / expansion1 Failed / expansion2 Passed. E2 exact F4 local draft showed real orange airplane thumbnail and 05:00, full source decode exit0; not sent, then removed and Send disabled. Original four-copy project remains unavailable; project @picker F1-F4 gray V placeholders persist. Official GET20:11 exact Fixed readback,0cloud writes. Evidence reports/fixed-regression-production-20261123-161635/execution/FWXC-370/final-result.json; report docs/defects/FWXC-370-retest-20261123-production.md. Fixed regression script PLAN.
+
+
+2026-11-23T20:16:30.842932+08:00 FWXC-274 production/yabinc18: Original Blocked (original Find Local Footage card absent; current-entry exception unconfirmed), E1 Failed, E2 Failed. Exact F1-F4 analyzed4/4. Two independent clean current-entry robot segment/source queries each HTTP404, no candidate; no retry/output media to decode. Original false-match criterion uncovered. Cloud exactFixed GET verified unchanged,0writes. Evidence reports/fixed-regression-production-20261123-161635/execution/274/final-result.json. Existing LF01-03 legacy scripts remain implemented/unrun; this repair-round/two-expansion script PLAN.
+
+
+2026-11-23T20:23:57.828213+08:00 FWXC-275 production/yabinc18: Original Blocked (original Find Local Footage card absent; entry exception unconfirmed), E1 Failed, E2 Failed. Exact LF02 F1 and LF03 F2 queries executed in separate clean single-source projects, each analyzed1/1. F1 new project6eb7887d-6b7e-4b84-b3f6-0c5d27943dc2, cached analysis3929d218-20e7-4f62-8599-b38a4bbddf54;1200estimated credits/actualcharge not verified. Each search HTTP404/no candidate or downloadable media; original0-2s falsematch criterion uncovered. No retry. Cloud exactFixed GET unchanged0writes. Evidence reports/fixed-regression-production-20261123-161635/execution/275/final-result.json. Existing LF01-03 legacy scripts implemented/unrun, repair-round two-expansion script PLAN.
+
+
+2026-11-23T20:42:38.942200+08:00 FWXC-237 production/yabinc18: 原入口Blocked / 当前附件定位分支Passed（仅定位范围）/ 已分析素材库分支Blocked。旧Find Local Footage卡片已移除，入口替代澄清未答，不能据扩散改原验收。E1从无项目模式附精确7MB.mp4，51秒完成，返回0–60.496秒一段正面讲话位置，人物描述与实际短发女士一致，源视频实际播放至47.6秒后暂停；本地原文件60.50秒、1280x720/H264/AAC、完整解码0。无新剪辑产物或下载入口。当前无项目入口不显示旧0/0计数；旧LF01项目现为4/4，未用于未分析基线。E2独立单7MB项目b37863d4-64dd-4160-a87e-5100a6a9c892，分析批次489ae4db-d2ec-4465-9b82-68cc4bf8b801于20:33单次受理，预计1800积分/实际计费未核。约8分钟仍0/1抽帧、文件出现重试而批次仍处理中，终态未确认；未提交素材库查询，不重试/取消/新建批次。仅回读原批次。原验收仍Blocked，云效不写状态。证据 reports/fixed-regression-production-20261123-161635/execution/237/checkpoint-result.json。脚本PLAN。
+
+
+2026-11-23T22:00:06.349246+08:00 FWXC-237原生产分析批次 `489ae4db-d2ec-4465-9b82-68cc4bf8b801` 已只读核到明确终态：页面“视频分析失败”“分析已停止；可重试失败视频”，当前文件文字“等待处理位置分配”。没有点击任何重试、取消或新建分析。E2所需1/1前置失败，正式素材库查询未提交，因此E2结论Blocked（准备Failed）；原旧卡片验收仍Blocked、直接附件定位E1仍Passed范围不变，云效已修复只读回读不写。当前生产/yabinc18批次结束为6项原Failed、5项原Blocked，624/568保留同版既有阻塞未重跑；本轮已受理请求均已终态，无在途新业务。未覆盖原场景及入口澄清继续保留，不能宣称全部通过。七项当前Fixed修复指纹无变化，不自动重跑。证据 reports/fixed-monitor-20261123-215601/237-original-batch-readback-ui.txt、reports/fixed-monitor-20261123-215601/237-analysis-failed-ui.png；最终机器汇总 reports/fixed-regression-production-20261123-161635/final-summary.json。
