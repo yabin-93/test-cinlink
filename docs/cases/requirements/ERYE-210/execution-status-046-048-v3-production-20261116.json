@@ -1,0 +1,171 @@
+{
+  "date": "2026-11-16",
+  "origin": "https://app.cinlink.ai",
+  "browser": "headed Google Chrome / Windows",
+  "caseVersion": "v3-restore-existing-voice-20261116",
+  "batch": "prod-046-048-v3-20261116-04",
+  "counts": {
+    "Passed": 2,
+    "Failed": 0,
+    "Blocked": 0
+  },
+  "cases": [
+    {
+      "id": "ERYE210-046",
+      "status": "Passed",
+      "reason": "",
+      "automated": true,
+      "workspaceId": "bd1a14c4-0938-4267-8519-ba543b175e94",
+      "caseVersion": "v3-restore-existing-voice-20261116",
+      "annotations": [
+        {
+          "type": "case-version",
+          "description": "v3-restore-existing-voice-20261116"
+        }
+      ],
+      "projects": {
+        "046": {
+          "cid": "887bfaa3-0e60-40d0-b113-ba3fb1850724",
+          "pid": "ba8621f6-cd2e-44bb-9edc-78b7abef61a7",
+          "name": "ERYE210-046-ba8621f6"
+        }
+      },
+      "checks": [
+        {
+          "stage": "restore-baseline",
+          "deletedIds": [
+            "candidate_929fa00fbbd3d1c84c2d74c6",
+            "candidate_b8f6105c1582513e9d84da0d"
+          ],
+          "selectedId": "candidate_929fa00fbbd3d1c84c2d74c6",
+          "restoreSourceRange": [
+            7.8,
+            8.48
+          ],
+          "beforeSeconds": 18.695896,
+          "captions": [
+            {
+              "file": "file_cloud_c7kyuocu543kpnakk5k2qdeot5",
+              "block": "a96f9a3c-6f6d-4fa3-9b6a-a0b52f16888e",
+              "text": "Efforts to sabotage our healthcare by filing a formal"
+            },
+            {
+              "file": "file_cloud_c7kyuocu543kpnakk5k2qdeot5",
+              "block": "cded20bd-b3ed-46a2-9827-8b475a9f2fb0",
+              "text": "request to strike down the entirety of our nation's"
+            },
+            {
+              "file": "file_cloud_c7kyuocu543kpnakk5k2qdeot5",
+              "block": "beab89dd-f4bd-44d0-bc2b-4f667f9547bb",
+              "text": "healthcare law."
+            },
+            {
+              "file": "file_cloud_c7kyuocu543kpnakk5k2qdeot5",
+              "block": "d25680f8-0f49-4e2c-b181-610a058265ba",
+              "text": "Regardless of people's opinions of the Affordable Care Act,"
+            },
+            {
+              "file": "file_cloud_c7kyuocu543kpnakk5k2qdeot5",
+              "block": "53984651-0e0f-4276-afff-b1475ac82cb1",
+              "text": "we know there's no single issue that matters more to"
+            },
+            {
+              "file": "file_cloud_c7kyuocu543kpnakk5k2qdeot5",
+              "block": "56664367-8edb-46bd-b53d-10746248f43f",
+              "text": "hardworking families than healthcare."
+            },
+            {
+              "file": "file_cloud_c7kyuocu543kpnakk5k2qdeot5",
+              "block": "08d89cd8-48dc-45c6-a953-b9aca3f1706f",
+              "text": "It's a personal issue."
+            },
+            {
+              "file": "file_cloud_c7kyuocu543kpnakk5k2qdeot5",
+              "block": "fe5e8cd0-5511-4758-833c-ec58f438c2dc",
+              "text": "It affects"
+            }
+          ]
+        },
+        {
+          "stage": "single-restore-persisted",
+          "restoredSourceRange": [
+            7.8,
+            8.48
+          ],
+          "otherDeletedIds": [
+            "candidate_b8f6105c1582513e9d84da0d"
+          ],
+          "afterSeconds": 19.375896,
+          "sourceVideoAudioAligned": true,
+          "captionTextAndTimingPreserved": true,
+          "reopened": true,
+          "repeatAnalysisExecuted": false
+        }
+      ],
+      "screenshot": "046\\ERYE210-046-passed.png",
+      "finishedAt": "2026-11-16T06:01:15.602Z",
+      "actual": "v3生产Chrome通过：本轮独立新工程真实分析/清理后，同页仅恢复7.800～8.480秒停顿，18.695896→19.375896秒；另一处17.200～17.824104秒仍删除。视频/原声源区间及时间线一致，8条字幕文字顺序和原画面时码对应，刷新重开保持。只分析保留片段的二次分析仍延期。",
+      "report": "results-046-048-v3-production-20261116.md",
+      "sourceBatch": "prod-046-048-v3-20261116-04",
+      "evidence": "evidence-046-048-v3-production-20261116/manifest.json",
+      "deferredScope": "只对保留片段二次分析",
+      "priorBlockedHistory": "case-046-048-v2-blocked-history-20261116.json"
+    },
+    {
+      "id": "ERYE210-048",
+      "status": "Passed",
+      "reason": "",
+      "automated": true,
+      "workspaceId": "bd1a14c4-0938-4267-8519-ba543b175e94",
+      "caseVersion": "v3-restore-existing-voice-20261116",
+      "annotations": [
+        {
+          "type": "case-version",
+          "description": "v3-restore-existing-voice-20261116"
+        }
+      ],
+      "projects": {
+        "048": {
+          "cid": "a241c77a-c924-4ca4-899e-993368f62e97",
+          "pid": "f0f17aea-17ed-4924-874a-b33eeab38f2e",
+          "name": "ERYE210-048-f0f17aea"
+        }
+      },
+      "checks": [
+        {
+          "stage": "caption-edit-and-narration-mute",
+          "voiceTrack": "artifact:audio_files:file_cloud_xjchxq662b46lqojypvdb4fzw6",
+          "existingVoices": 8,
+          "captionText": "字幕与译制人声独立048。",
+          "otherCaptionsUnchanged": true,
+          "sourceAndBackgroundUnchanged": true
+        },
+        {
+          "stage": "existing-narration-unmuted-persisted",
+          "sameOriginalAudioFiles": true,
+          "firstChineseOnly": true,
+          "EnglishAndOtherChineseUnchanged": true,
+          "noVoiceRegeneration": true,
+          "voicePanelNotRequired": true,
+          "originalRegenerationScopeDeferred": true
+        }
+      ],
+      "screenshot": "048\\ERYE210-048-passed.png",
+      "finishedAt": "2026-11-16T06:01:42.713Z",
+      "actual": "v3生产Chrome通过：独立新工程引用真实已完成译制的原始工程，8句既有中文声音；仅中文C1改“字幕与译制人声独立048。”，时间线配音静音→切模块/刷新保持→配音启用→刷新保持。同一批声音文件不替换/重复，英文、其他中文、视频、原声和BGM保持。未进入配音页或生成声音，原改配音稿并单句生成仍延期。",
+      "report": "results-046-048-v3-production-20261116.md",
+      "sourceBatch": "prod-046-048-v3-20261116-04",
+      "evidence": "evidence-046-048-v3-production-20261116/manifest.json",
+      "deferredScope": "配音文稿改稿并单句重新生成",
+      "priorBlockedHistory": "case-046-048-v2-blocked-history-20261116.json"
+    }
+  ],
+  "currentCounts": {
+    "Passed": 40,
+    "Failed": 2,
+    "Blocked": 1,
+    "Not Applicable": 0,
+    "Not Run": 0
+  },
+  "cloudWrites": 0
+}

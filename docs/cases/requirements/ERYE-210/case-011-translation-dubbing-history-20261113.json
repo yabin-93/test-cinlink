@@ -1,0 +1,693 @@
+{
+  "date": "2026-11-13",
+  "oldDefinition": "| ERYE210-011 | P0 | P；PA的Voiceover任务处理中；当前查看PB的Media；F可放行 | 1. 放行PA任务。<br>2. 观察PB视图。<br>3. 明确点PA结果卡定位。 | 完成只更新PA状态，不抢PB/Media；用户明确点卡才切到PA相关入口。 | Source: Requirement；ERYE-210 N03/08；206 AC20；AC09 | [AUTO] | [tests/editor/erye210-navigation.spec.ts](../../../../tests/editor/erye210-navigation.spec.ts) | 业务验收；2026-11-13：Blocked；后台完成分支Passed：PB/Media建立后原样放行PA真实配音请求，PA两句音频ready、版本1→3，PB页面及完整内容保持、版本1→1。本次从编辑器内生成，未建立可点击的会话结果卡，最后定位分支前置不足；整例Blocked，不据此报缺陷。；[本轮报告](results-011-015-prod-20261113.md#erye210-011) |",
+  "oldExecution": {
+    "id": "ERYE210-011",
+    "status": "Blocked",
+    "reason": "后台完成分支Passed：PB/Media建立后原样放行PA真实配音请求，PA两句音频ready、版本1→3，PB页面及完整内容保持、版本1→1。本次从编辑器内生成，未建立可点击的会话结果卡，最后定位分支前置不足；整例Blocked，不据此报缺陷。",
+    "automated": true,
+    "workspaceId": "d3abe8cc-c4ee-4c9b-8d14-62ed7441aca9",
+    "annotations": [],
+    "projects": {
+      "011-PA": {
+        "cid": "70c9d004-71fd-450f-8262-7c18790ca509",
+        "pid": "73a65225-d9b8-4851-aadf-399db7b82fd1",
+        "name": "ERYE210-011-PA-73a65225"
+      },
+      "011-PB": {
+        "cid": "70c9d004-71fd-450f-8262-7c18790ca509",
+        "pid": "48c1246c-e68b-42f9-9529-ba8efffa1c1d",
+        "name": "ERYE210-011-PB-48c1246c"
+      }
+    },
+    "checks": [
+      {
+        "stage": "prepared",
+        "pa": {
+          "cid": "70c9d004-71fd-450f-8262-7c18790ca509",
+          "pid": "73a65225-d9b8-4851-aadf-399db7b82fd1",
+          "name": "ERYE210-011-PA-73a65225"
+        },
+        "pb": {
+          "cid": "70c9d004-71fd-450f-8262-7c18790ca509",
+          "pid": "48c1246c-e68b-42f9-9529-ba8efffa1c1d",
+          "name": "ERYE210-011-PB-48c1246c"
+        },
+        "paRevision": 1,
+        "pbRevision": 1
+      },
+      {
+        "stage": "PB-before-release",
+        "state": {
+          "name": "ERYE210-011-PB-48c1246c",
+          "module": [
+            "媒体"
+          ],
+          "playhead": "0",
+          "selected": [],
+          "media": [
+            {
+              "paused": true,
+              "duration": 20
+            }
+          ]
+        },
+        "at": 1794559779814,
+        "heldRequest": {
+          "method": "editor.task.submit",
+          "taskType": "dubbing.generate",
+          "targetPAInPayload": true,
+          "heldAt": 1794559779555
+        }
+      },
+      {
+        "stage": "PA-completed",
+        "completedAt": 1794559842401,
+        "state": {
+          "name": "ERYE210-011-PB-48c1246c",
+          "module": [
+            "媒体"
+          ],
+          "playhead": "0",
+          "selected": [],
+          "media": [
+            {
+              "paused": true,
+              "duration": 20
+            }
+          ]
+        },
+        "traffic": [
+          {
+            "stage": "held-real-request",
+            "method": "editor.task.submit",
+            "taskType": "dubbing.generate",
+            "targetPAInPayload": true,
+            "heldAt": 1794559779555
+          },
+          {
+            "stage": "real-request-released",
+            "at": 1794559780028
+          }
+        ],
+        "paBeforeRevision": 1,
+        "paAfterRevision": 3,
+        "dubbing": [
+          {
+            "text": "欢迎使用 CinLink。",
+            "fileId": "file_cloud_t2qkgxmo6uc23akciw66uemisv",
+            "state": "ready"
+          },
+          {
+            "text": "这是导航测试。",
+            "fileId": "file_cloud_xu2siwekdv2f23spamt6255svg",
+            "state": "ready"
+          }
+        ],
+        "pbBeforeRevision": 1,
+        "pbAfterRevision": 1,
+        "pbContentUnchanged": true
+      },
+      {
+        "stage": "result-entry",
+        "count": 0,
+        "affordances": [
+          {
+            "text": "",
+            "label": "收起项目侧边栏",
+            "title": null
+          },
+          {
+            "text": "活跃",
+            "label": null,
+            "title": null
+          },
+          {
+            "text": "归档",
+            "label": null,
+            "title": null
+          },
+          {
+            "text": "全部",
+            "label": null,
+            "title": null
+          },
+          {
+            "text": "",
+            "label": "新建会话",
+            "title": "新建会话"
+          },
+          {
+            "text": "",
+            "label": "更多操作",
+            "title": "更多操作"
+          },
+          {
+            "text": "",
+            "label": "更多操作",
+            "title": null
+          },
+          {
+            "text": "",
+            "label": "新建会话",
+            "title": "新建会话"
+          },
+          {
+            "text": "",
+            "label": "更多操作",
+            "title": "更多操作"
+          },
+          {
+            "text": "",
+            "label": "更多操作",
+            "title": null
+          },
+          {
+            "text": "",
+            "label": "新建会话",
+            "title": "新建会话"
+          },
+          {
+            "text": "",
+            "label": "更多操作",
+            "title": "更多操作"
+          },
+          {
+            "text": "",
+            "label": "更多操作",
+            "title": null
+          },
+          {
+            "text": "",
+            "label": "更多操作",
+            "title": null
+          },
+          {
+            "text": "",
+            "label": "新建会话",
+            "title": "新建会话"
+          },
+          {
+            "text": "",
+            "label": "更多操作",
+            "title": "更多操作"
+          },
+          {
+            "text": "",
+            "label": "更多操作",
+            "title": null
+          },
+          {
+            "text": "",
+            "label": "新建会话",
+            "title": "新建会话"
+          },
+          {
+            "text": "",
+            "label": "更多操作",
+            "title": "更多操作"
+          },
+          {
+            "text": "",
+            "label": "更多操作",
+            "title": null
+          },
+          {
+            "text": "",
+            "label": "更多操作",
+            "title": null
+          },
+          {
+            "text": "",
+            "label": "新建会话",
+            "title": "新建会话"
+          },
+          {
+            "text": "",
+            "label": "更多操作",
+            "title": "更多操作"
+          },
+          {
+            "text": "",
+            "label": "更多操作",
+            "title": null
+          },
+          {
+            "text": "",
+            "label": "更多操作",
+            "title": null
+          },
+          {
+            "text": "",
+            "label": "更多操作",
+            "title": null
+          },
+          {
+            "text": "",
+            "label": "新建会话",
+            "title": "新建会话"
+          },
+          {
+            "text": "",
+            "label": "更多操作",
+            "title": "更多操作"
+          },
+          {
+            "text": "",
+            "label": "更多操作",
+            "title": null
+          },
+          {
+            "text": "",
+            "label": "更多操作",
+            "title": null
+          },
+          {
+            "text": "",
+            "label": "新建会话",
+            "title": "新建会话"
+          },
+          {
+            "text": "",
+            "label": "更多操作",
+            "title": "更多操作"
+          },
+          {
+            "text": "",
+            "label": "更多操作",
+            "title": null
+          },
+          {
+            "text": "",
+            "label": "新建会话",
+            "title": "新建会话"
+          },
+          {
+            "text": "",
+            "label": "更多操作",
+            "title": "更多操作"
+          },
+          {
+            "text": "",
+            "label": "更多操作",
+            "title": null
+          },
+          {
+            "text": "",
+            "label": "新建会话",
+            "title": "新建会话"
+          },
+          {
+            "text": "",
+            "label": "更多操作",
+            "title": "更多操作"
+          },
+          {
+            "text": "",
+            "label": "更多操作",
+            "title": null
+          },
+          {
+            "text": "",
+            "label": "新建会话",
+            "title": "新建会话"
+          },
+          {
+            "text": "",
+            "label": "更多操作",
+            "title": "更多操作"
+          },
+          {
+            "text": "",
+            "label": "新建会话",
+            "title": "新建会话"
+          },
+          {
+            "text": "",
+            "label": "更多操作",
+            "title": "更多操作"
+          },
+          {
+            "text": "",
+            "label": "新建会话",
+            "title": "新建会话"
+          },
+          {
+            "text": "",
+            "label": "更多操作",
+            "title": "更多操作"
+          },
+          {
+            "text": "",
+            "label": "新建会话",
+            "title": "新建会话"
+          },
+          {
+            "text": "",
+            "label": "更多操作",
+            "title": "更多操作"
+          },
+          {
+            "text": "",
+            "label": "新建会话",
+            "title": "新建会话"
+          },
+          {
+            "text": "",
+            "label": "更多操作",
+            "title": "更多操作"
+          },
+          {
+            "text": "",
+            "label": "新建会话",
+            "title": "新建会话"
+          },
+          {
+            "text": "",
+            "label": "更多操作",
+            "title": "更多操作"
+          },
+          {
+            "text": "",
+            "label": "新建会话",
+            "title": "新建会话"
+          },
+          {
+            "text": "",
+            "label": "更多操作",
+            "title": "更多操作"
+          },
+          {
+            "text": "",
+            "label": "新建会话",
+            "title": "新建会话"
+          },
+          {
+            "text": "",
+            "label": "更多操作",
+            "title": "更多操作"
+          },
+          {
+            "text": "",
+            "label": "新建会话",
+            "title": "新建会话"
+          },
+          {
+            "text": "",
+            "label": "更多操作",
+            "title": "更多操作"
+          },
+          {
+            "text": "",
+            "label": "新建会话",
+            "title": "新建会话"
+          },
+          {
+            "text": "",
+            "label": "更多操作",
+            "title": "更多操作"
+          },
+          {
+            "text": "",
+            "label": "新建会话",
+            "title": "新建会话"
+          },
+          {
+            "text": "",
+            "label": "更多操作",
+            "title": "更多操作"
+          },
+          {
+            "text": "",
+            "label": "新建会话",
+            "title": "新建会话"
+          },
+          {
+            "text": "",
+            "label": "更多操作",
+            "title": "更多操作"
+          },
+          {
+            "text": "",
+            "label": "新建会话",
+            "title": "新建会话"
+          },
+          {
+            "text": "",
+            "label": "更多操作",
+            "title": "更多操作"
+          },
+          {
+            "text": "",
+            "label": "新建会话",
+            "title": "新建会话"
+          },
+          {
+            "text": "",
+            "label": "更多操作",
+            "title": "更多操作"
+          },
+          {
+            "text": "",
+            "label": "新建会话",
+            "title": "新建会话"
+          },
+          {
+            "text": "",
+            "label": "更多操作",
+            "title": "更多操作"
+          },
+          {
+            "text": "",
+            "label": "新建会话",
+            "title": "新建会话"
+          },
+          {
+            "text": "",
+            "label": "更多操作",
+            "title": "更多操作"
+          },
+          {
+            "text": "",
+            "label": "新建会话",
+            "title": "新建会话"
+          },
+          {
+            "text": "",
+            "label": "更多操作",
+            "title": "更多操作"
+          },
+          {
+            "text": "",
+            "label": "新建会话",
+            "title": "新建会话"
+          },
+          {
+            "text": "",
+            "label": "更多操作",
+            "title": "更多操作"
+          },
+          {
+            "text": "加载更多",
+            "label": null,
+            "title": null
+          },
+          {
+            "text": "11020817070Free",
+            "label": null,
+            "title": null
+          },
+          {
+            "text": "",
+            "label": "设置",
+            "title": null
+          },
+          {
+            "text": "",
+            "label": "添加素材",
+            "title": "添加素材"
+          },
+          {
+            "text": "",
+            "label": "语音输入",
+            "title": null
+          },
+          {
+            "text": "",
+            "label": "发送",
+            "title": null
+          },
+          {
+            "text": "",
+            "label": "收起编辑区",
+            "title": "收起编辑区"
+          },
+          {
+            "text": "ERYE210-011-PB-48c1246c",
+            "label": null,
+            "title": null
+          },
+          {
+            "text": "导出",
+            "label": null,
+            "title": null
+          },
+          {
+            "text": "",
+            "label": "预览播放",
+            "title": "预览播放"
+          },
+          {
+            "text": "",
+            "label": "放大预览",
+            "title": "放大预览"
+          },
+          {
+            "text": "聊天",
+            "label": null,
+            "title": null
+          },
+          {
+            "text": "工程",
+            "label": null,
+            "title": null
+          },
+          {
+            "text": "",
+            "label": "导入素材",
+            "title": "导入素材"
+          },
+          {
+            "text": "dubbing-8f101fcc08a1c4a4bbbf8c97.wav",
+            "label": null,
+            "title": "dubbing-8f101fcc08a1c4a4bbbf8c97.wav"
+          },
+          {
+            "text": "dubbing-e058b9c5837691ff1a1972eb.wav",
+            "label": null,
+            "title": "dubbing-e058b9c5837691ff1a1972eb.wav"
+          },
+          {
+            "text": "voiceover-original.vtt",
+            "label": null,
+            "title": "voiceover-original.vtt"
+          },
+          {
+            "text": "voiceover-script.vtt",
+            "label": null,
+            "title": "voiceover-script.vtt"
+          },
+          {
+            "text": "媒体",
+            "label": null,
+            "title": "媒体"
+          },
+          {
+            "text": "文稿",
+            "label": null,
+            "title": "文稿"
+          },
+          {
+            "text": "字幕",
+            "label": null,
+            "title": "字幕"
+          },
+          {
+            "text": "配音",
+            "label": null,
+            "title": "配音"
+          },
+          {
+            "text": "水印",
+            "label": null,
+            "title": "水印"
+          },
+          {
+            "text": "",
+            "label": "选择工具",
+            "title": "选择片段（按 Shift 多选，按 Esc 取消选择）"
+          },
+          {
+            "text": "",
+            "label": "撤销",
+            "title": "撤销"
+          },
+          {
+            "text": "",
+            "label": "重做",
+            "title": "重做"
+          },
+          {
+            "text": "",
+            "label": "分割所选片段",
+            "title": "分割所选片段"
+          },
+          {
+            "text": "",
+            "label": "视频批注",
+            "title": "视频批注"
+          },
+          {
+            "text": "",
+            "label": "播放",
+            "title": "播放"
+          },
+          {
+            "text": "",
+            "label": "跳转到开头",
+            "title": "跳转到开头"
+          },
+          {
+            "text": "‹",
+            "label": "上一帧",
+            "title": null
+          },
+          {
+            "text": "›",
+            "label": "下一帧",
+            "title": null
+          },
+          {
+            "text": "",
+            "label": "缩小时间轴",
+            "title": "缩小时间轴"
+          },
+          {
+            "text": "",
+            "label": "放大时间轴",
+            "title": "放大时间轴"
+          },
+          {
+            "text": "",
+            "label": "原文字幕隐藏",
+            "title": null
+          },
+          {
+            "text": "",
+            "label": "视频隐藏",
+            "title": null
+          },
+          {
+            "text": "",
+            "label": "原声静音",
+            "title": null
+          }
+        ]
+      }
+    ],
+    "screenshot": "011\\ERYE210-011-failed.png",
+    "finishedAt": "2026-11-13T08:50:43.020Z",
+    "actual": "后台完成分支Passed：PB/Media建立后原样放行PA真实配音请求，PA两句音频ready、版本1→3，PB页面及完整内容保持、版本1→1。本次从编辑器内生成，未建立可点击的会话结果卡，最后定位分支前置不足；整例Blocked，不据此报缺陷。",
+    "sourceBatch": "prod-011-015-20261113-04",
+    "report": "results-011-015-prod-20261113.md",
+    "rawRunnerStatus": "Failed",
+    "reviewNote": "纠正测试判定：编辑器内生成不保证建立Agent会话结果卡。原始Failed日志保留，后台完成隔离检查Passed；卡片定位分支Blocked。修正后的脚本未再次提交生成任务。",
+    "screenshots": [
+      "011-PA-before-generation.png",
+      "011-PB-after-PA-completed.png",
+      "011-PB-before-release.png",
+      "011-result-entry.png",
+      "ERYE210-011-failed.png"
+    ]
+  }
+}

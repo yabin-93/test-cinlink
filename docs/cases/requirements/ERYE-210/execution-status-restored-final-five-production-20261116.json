@@ -1,0 +1,475 @@
+{
+  "date": "2026-11-16",
+  "origin": "https://app.cinlink.ai",
+  "browser": "headed Google Chrome / Windows",
+  "caseVersion": "v4-restored-final-five-20261116",
+  "counts": {
+    "Passed": 3,
+    "Failed": 2,
+    "Blocked": 0,
+    "Not Applicable": 0,
+    "Not Run": 0
+  },
+  "cases": [
+    {
+      "id": "ERYE210-004",
+      "status": "Passed",
+      "reason": "",
+      "automated": true,
+      "workspaceId": "1e8a5d9e-66b0-455c-99e9-0acac17e601e",
+      "caseVersion": "v4-restored-final-five-20261116",
+      "annotations": [
+        {
+          "type": "case-version",
+          "description": "v4-restored-final-five-20261116"
+        }
+      ],
+      "projects": {
+        "004": {
+          "pid": "3d03b26d-d1b8-4910-bf94-7fb163a7e77e",
+          "cid": "e25e83fa-dcfb-48f0-a824-801d47ed460b",
+          "name": "E196-A.mp4"
+        }
+      },
+      "checks": [
+        {
+          "stage": "native-translation-prerequisite-ready",
+          "runId": "run_v2_4896454481ae4e90a450fdbec9d2cee5",
+          "voiceSentences": 8,
+          "realAudioFiles": 8,
+          "targetLanguage": "简体中文"
+        },
+        {
+          "stage": "voice-sentence-seek",
+          "sentence": 1,
+          "expectedStart": 0.16,
+          "text": "通过正式提出请求，试图破坏我们的医疗保障，"
+        },
+        {
+          "stage": "voice-sentence-seek",
+          "sentence": 2,
+          "expectedStart": 3.66,
+          "text": "要求废除我国整部"
+        }
+      ],
+      "screenshot": "004\\ERYE210-004-passed.png",
+      "finishedAt": "2026-11-16T07:04:01.467Z",
+      "historicalDefect": {
+        "serialNumber": "FWXC-483",
+        "workitemId": "bc663b74e4bf60d0019f5c04e3",
+        "url": "https://devops.aliyun.com/projex/project/1e401ac99539c3999e00e40006/bug#openWorkitemIdentifier=bc663b74e4bf60d0019f5c04e3",
+        "verifiedAt": "2026-11-13T15:09:40.2779699+08:00",
+        "screenshots": 3,
+        "status": "🤔AI提缺陷",
+        "localRecord": "docs/defects/ERYE210-004-voice-result-entry-production-20261113.md",
+        "attachmentCount": 8
+      },
+      "runnerWorkspaceId": "a19bc59d-16d1-4858-b05c-60184f8d8bb1",
+      "metadataCorrection": "原生翻译配音使用本例独立工作区；runner公共工作区仅为执行器环境，不是工程归属。",
+      "actual": "独立新建真实英语→简体中文翻译配音项目；从Media手动进入Voiceover，选择第1/2句分别定位实际起始时间，切字幕返回稿件与声音保持；未重新生成。结果卡快捷直达仍延期。",
+      "report": "results-restored-final-five-production-20261116.md",
+      "sourceBatch": "prod-restored-five-20261116-02",
+      "evidence": "evidence-restored-final-five-production-20261116/manifest.json"
+    },
+    {
+      "id": "ERYE210-005",
+      "status": "Passed",
+      "reason": "",
+      "automated": true,
+      "workspaceId": "fe7400f2-83a0-47c1-9393-fa176c311e55",
+      "caseVersion": "v4-restored-final-five-20261116",
+      "annotations": [
+        {
+          "type": "case-version",
+          "description": "v4-restored-final-five-20261116"
+        }
+      ],
+      "projects": {
+        "005": {
+          "cid": "c61b5739-ff85-48d0-bcf3-0badef1dde22",
+          "pid": "0f495816-0890-4925-a333-6ec977701167",
+          "name": "ERYE210-005-0f495816"
+        }
+      },
+      "checks": [
+        {
+          "stage": "unapplied-cleanup-review-before-tabs",
+          "candidates": [
+            {
+              "id": "candidate_929fa00fbbd3d1c84c2d74c6",
+              "text": "[0.9s]"
+            },
+            {
+              "id": "candidate_b8f6105c1582513e9d84da0d",
+              "text": "[0.9s]"
+            }
+          ],
+          "state": {
+            "name": "ERYE210-005-0f495816",
+            "module": [
+              "文稿"
+            ],
+            "playhead": "7.68",
+            "selected": [],
+            "media": [
+              {
+                "paused": true,
+                "duration": 20
+              }
+            ]
+          }
+        },
+        {
+          "stage": "unapplied-review-returned",
+          "candidates": [
+            {
+              "id": "candidate_929fa00fbbd3d1c84c2d74c6",
+              "text": "[0.9s]"
+            },
+            {
+              "id": "candidate_b8f6105c1582513e9d84da0d",
+              "text": "[0.9s]"
+            }
+          ],
+          "state": {
+            "name": "ERYE210-005-0f495816",
+            "module": [
+              "文稿"
+            ],
+            "playhead": "7.68",
+            "selected": [],
+            "media": [
+              {
+                "paused": true,
+                "duration": 20
+              }
+            ]
+          },
+          "sameThreshold": true,
+          "automaticCut": false
+        }
+      ],
+      "screenshot": "005\\ERYE210-005-passed.png",
+      "finishedAt": "2026-11-16T06:57:47.593Z",
+      "historicalDefect": {
+        "serialNumber": "FWXC-484",
+        "workitemId": "f97b390bf7704588fed0bfa706",
+        "url": "https://devops.aliyun.com/projex/project/1e401ac99539c3999e00e40006/bug#openWorkitemIdentifier=f97b390bf7704588fed0bfa706",
+        "verifiedAt": "2026-11-13T15:09:52.7784786+08:00",
+        "screenshots": 3,
+        "status": "🤔AI提缺陷",
+        "localRecord": "docs/defects/ERYE210-005-review-return-production-20261113.md",
+        "attachmentCount": 5
+      },
+      "actual": "本例独立新工程真实分析出2个停顿候选，仅停顿/0.8秒且未移除；选择候选后切Captions→Watermark→Scripts，候选、参数和同工程审核内容保持，视频/原声/字幕仍为原结果，无自动裁剪或生成。",
+      "report": "results-restored-final-five-production-20261116.md",
+      "sourceBatch": "prod-restored-five-20261116-01",
+      "evidence": "evidence-restored-final-five-production-20261116/manifest.json"
+    },
+    {
+      "id": "ERYE210-018",
+      "status": "Failed",
+      "reason": "Error: 只有新声音实际应用后才通过\n\nexpect(received).toHaveLength(expected)\n\nExpected length: 1\nReceived length: 0\nReceived array:  []",
+      "automated": true,
+      "workspaceId": "d4ea09fc-dd59-436a-af28-3f3b8381273e",
+      "caseVersion": "v4-restored-final-five-20261116",
+      "annotations": [
+        {
+          "type": "case-version",
+          "description": "v4-restored-final-five-20261116"
+        }
+      ],
+      "projects": {
+        "018": {
+          "pid": "73e4f9ab-2681-4c52-b087-932fd51a6e40",
+          "cid": "28583be2-8951-4517-b88f-c0f698bbff4b",
+          "name": "E196-A.mp4"
+        }
+      },
+      "checks": [
+        {
+          "stage": "native-translation-prerequisite-ready",
+          "runId": "run_v2_962ba354ba3d4625844a5a24c09e0ebc",
+          "voiceSentences": 8,
+          "realAudioFiles": 8,
+          "targetLanguage": "简体中文"
+        },
+        {
+          "stage": "genuine-running-before-independent-edit",
+          "taskId": "098712db-e7f8-475c-85fc-93ffafd16e76",
+          "status": "running"
+        }
+      ],
+      "screenshot": "018\\ERYE210-018-failed.png",
+      "finishedAt": "2026-11-16T07:10:19.543Z",
+      "historicalDefect": {
+        "case": "ERYE210-018",
+        "verified": true,
+        "workitemId": "df279e880064725c26669adc36",
+        "attachments": [
+          {
+            "sha256": "f2351e0a29e98dfaee4db76ed05fa07b58e21261b7b4e54bbda30aa7556817b0",
+            "name": "018-during-generation.png",
+            "id": "ba7391f99d8564634c37b61e33",
+            "size": 541399
+          },
+          {
+            "sha256": "55be1e5310ae04b368658e48863756697b1dc8e7ea37e1e667c8a238d1d9f32e",
+            "name": "018-independent-edit.png",
+            "id": "40b7d5d59ffdd2cf4a65079df3",
+            "size": 543456
+          },
+          {
+            "sha256": "407e126c51b5520981d55c186a4b1ec35b327244090e7d118bf07e5e97f2f500",
+            "name": "018-task-error-visible.png",
+            "id": "1967c17d7b8e2afc896b58e3f8",
+            "size": 526421
+          },
+          {
+            "sha256": "60c300d94114c6e0a76cbe8277bb716f1fe7f8fabd1b6a5bb0696ee583e255b2",
+            "name": "case-evidence.json",
+            "id": "c812b30c29169eaf16250445af",
+            "size": 3359
+          },
+          {
+            "sha256": "c453166c6396fe1c427c8a045ad2f84a8f5d4e4ff0f905b47d79114172829d15",
+            "name": "E196-A.mp4",
+            "id": "364fe3d349a9e1c2a822d274d7",
+            "size": 10274419
+          },
+          {
+            "sha256": "777e6c8bcac2cbbf82eeac0c4716dfb7b3186c2c82075fc12353aa6b4d24087b",
+            "name": "voiceover-zh-preparation.srt",
+            "id": "59e5b6a37e3cf2b4db035281c5",
+            "size": 118
+          }
+        ],
+        "verifiedAt": "2026-11-13T18:16:25.1935424+08:00",
+        "serialNumber": "FWXC-506",
+        "url": "https://devops.aliyun.com/projex/project/1e401ac99539c3999e00e40006/bug#openWorkitemIdentifier=df279e880064725c26669adc36",
+        "createdNow": true,
+        "screenshots": 3,
+        "key": "ERYE210-018-VOICE-INDEPENDENT-EDIT-PROD-20261113",
+        "status": "🤔AI提缺陷",
+        "assignedTo": "牛诗晴",
+        "sprint": "重构10-29",
+        "labels": [
+          "生产环境"
+        ],
+        "priority": "高",
+        "severity": "2-严重",
+        "attachmentCount": 6,
+        "localRecord": "docs/defects/ERYE210-018-voice-independent-edit-production-20261113.md",
+        "method": "official OpenAPI",
+        "historicalDeduplication": false,
+        "preconditionsPerDefect": 3
+      },
+      "runnerWorkspaceId": "e5d59a95-a75e-429f-be74-c430157b7c3d",
+      "metadataCorrection": "原生翻译配音使用本例独立工作区；runner公共工作区仅为执行器环境，不是工程归属。",
+      "actual": "真实新译制工程8句稿/声音就绪；首句生成处理中保存水印INDEPENDENT_018成功。原目标任务done并产出新WAV，但工程仍使用全部旧声音；沿同一任务重开配音页核验时出现“编辑器执行数据不符合正式v2协议”，新声未应用，水印保持。未重复生成。",
+      "report": "results-restored-final-five-production-20261116.md",
+      "sourceBatch": "prod-restored-five-20261116-03",
+      "evidence": "evidence-restored-final-five-production-20261116/manifest.json",
+      "cloudDefect": {
+        "identifier": "FWXC-588",
+        "workitemId": "6b9e807ea6785e241aae941423",
+        "url": "https://devops.aliyun.com/projex/project/1e401ac99539c3999e00e40006/bug#openWorkitemIdentifier=6b9e807ea6785e241aae941423",
+        "status": "🤔AI提缺陷",
+        "verified": true,
+        "verifiedAt": "2026-11-16T15:22:20.7454278+08:00",
+        "screenshots": 3,
+        "attachmentCount": 6,
+        "syncReport": "defects-018-020-restored-production-20261116.md"
+      }
+    },
+    {
+      "id": "ERYE210-020",
+      "status": "Failed",
+      "reason": "Error: expect(locator).toHaveValue(expected) failed\n\nLocator: locator('.ed-voice-panel textarea[aria-label$=\"配音文案\"],.ed-voice-panel textarea[aria-label$=\"配音文字\"]').first()\nExpected: \"通过正式提出申请，破坏我们的医疗保障，\"\nTimeout: 20000ms\nError: element(s) not found\n\nCall log:\n  - Expect \"toHaveValue\" locator('.ed-voice-panel textarea[aria-label$=\"配音文案\"],.ed-voice-panel textarea[aria-label$=\"配音文字\"]').first() with timeout 20000ms\n  - waiting for locator('.ed-voice-panel textarea[aria-label$=\"配音文案\"],.ed-voice-panel textarea[aria-label$=\"配音文字\"]').first()\n    11 × locator resolved to <textarea rows=\"1\" aria-label=\"第 1 句配音文案\">配音撤销验证020。</textarea>\n       - unexpected value \"配音撤销验证020。\"\n",
+      "automated": true,
+      "workspaceId": "5b487287-82d3-4862-bfc7-d41d30277eaa",
+      "caseVersion": "v4-restored-final-five-20261116",
+      "annotations": [
+        {
+          "type": "case-version",
+          "description": "v4-restored-final-five-20261116"
+        }
+      ],
+      "projects": {
+        "020": {
+          "pid": "8e309c54-a1f6-4ca7-9ab8-5f039c652e21",
+          "cid": "bfde0019-365a-4830-8116-e0a3b2261499",
+          "name": "E196-A.mp4"
+        }
+      },
+      "checks": [
+        {
+          "stage": "native-translation-prerequisite-ready",
+          "runId": "run_v2_332c44d9d1b6424187160f817b9127ef",
+          "voiceSentences": 8,
+          "realAudioFiles": 8,
+          "targetLanguage": "简体中文"
+        }
+      ],
+      "screenshot": "020\\ERYE210-020-failed.png",
+      "finishedAt": "2026-11-16T07:11:01.787Z",
+      "historicalDefect": {
+        "case": "ERYE210-020",
+        "serialNumber": "FWXC-507",
+        "verified": true,
+        "url": "https://devops.aliyun.com/projex/project/1e401ac99539c3999e00e40006/bug#openWorkitemIdentifier=4861ae7970e41e1293c07e3612",
+        "workitemId": "4861ae7970e41e1293c07e3612",
+        "createdNow": true,
+        "screenshots": 3,
+        "key": "ERYE210-020-VOICE-TEXT-UNDO-PROD-20261113",
+        "verifiedAt": "2026-11-13T18:16:47.9664907+08:00",
+        "attachments": [
+          {
+            "sha256": "770ac7b5cabbe702ed3fba163a6105070b140ddef5d0d1239c799c6d50ee8a1a",
+            "size": 531214,
+            "name": "020-after-switch.png",
+            "id": "12d75f17e9430a53e25aeebb48"
+          },
+          {
+            "sha256": "02974ab08b2e64d4177662c392f85137fccbd3c4f599e5a7a083ecff041e2f82",
+            "size": 531213,
+            "name": "ERYE210-020-failed.png",
+            "id": "dd8dee23362f93cdca95cba5a3"
+          },
+          {
+            "sha256": "dd9f8dd24bd5a625c6ae0c58c1ddcd5b2fcc604289a71676c6669dd72014424e",
+            "size": 530139,
+            "name": "020-after-undo-reload.png",
+            "id": "391fcb70d927fb49a27904a8c5"
+          },
+          {
+            "sha256": "2ca4f142adb828b6e4922f6af3f5680a78b175bb2ec4dfcc1f525bdb9697a365",
+            "size": 4398,
+            "name": "case-evidence.json",
+            "id": "a0f24a0beaf9fd28009fd9f579"
+          },
+          {
+            "sha256": "c453166c6396fe1c427c8a045ad2f84a8f5d4e4ff0f905b47d79114172829d15",
+            "size": 10274419,
+            "name": "E196-A.mp4",
+            "id": "b5e1d459b6d8429da661ce0617"
+          },
+          {
+            "sha256": "777e6c8bcac2cbbf82eeac0c4716dfb7b3186c2c82075fc12353aa6b4d24087b",
+            "size": 118,
+            "name": "voiceover-zh-preparation.srt",
+            "id": "d859b609e85a9946ef8b873325"
+          }
+        ],
+        "status": "🤔AI提缺陷",
+        "assignedTo": "牛诗晴",
+        "sprint": "重构10-29",
+        "labels": [
+          "生产环境"
+        ],
+        "priority": "中",
+        "severity": "3-一般",
+        "attachmentCount": 6,
+        "localRecord": "docs/defects/ERYE210-020-voice-text-undo-production-20261113.md",
+        "method": "official OpenAPI",
+        "historicalDeduplication": false,
+        "preconditionsPerDefect": 3
+      },
+      "runnerWorkspaceId": "a2df4bc7-c5da-4971-ba09-a5144f48b78a",
+      "metadataCorrection": "原生翻译配音使用本例独立工作区；runner公共工作区仅为执行器环境，不是工程归属。",
+      "actual": "真实新译制工程8句稿/声音就绪；首句改“配音撤销验证020。”保存并切字幕返回正常。点击一次撤销后未恢复原稿，配音列表随后变为“暂无配音”；旧声音和字幕保持。重做及刷新最终新稿分支未执行，未点击创建配音或再次撤销。",
+      "report": "results-restored-final-five-production-20261116.md",
+      "sourceBatch": "prod-restored-five-20261116-03",
+      "evidence": "evidence-restored-final-five-production-20261116/manifest.json",
+      "cloudDefect": {
+        "identifier": "FWXC-589",
+        "workitemId": "0dd1f5d0d3ba1d48a798f75a03",
+        "url": "https://devops.aliyun.com/projex/project/1e401ac99539c3999e00e40006/bug#openWorkitemIdentifier=0dd1f5d0d3ba1d48a798f75a03",
+        "status": "🤔AI提缺陷",
+        "verified": true,
+        "verifiedAt": "2026-11-16T15:22:42.9154418+08:00",
+        "screenshots": 3,
+        "attachmentCount": 6,
+        "syncReport": "defects-018-020-restored-production-20261116.md"
+      }
+    },
+    {
+      "id": "ERYE210-041",
+      "status": "Passed",
+      "reason": "",
+      "automated": true,
+      "workspaceId": "fe7400f2-83a0-47c1-9393-fa176c311e55",
+      "caseVersion": "v4-restored-final-five-20261116",
+      "annotations": [
+        {
+          "type": "case-version",
+          "description": "v4-restored-final-five-20261116"
+        }
+      ],
+      "projects": {
+        "041": {
+          "cid": "f5c41881-5e49-47e9-8ca4-e3d85daa8bc3",
+          "pid": "f333d767-5a6a-43d9-8b97-30babbff399c",
+          "name": "ERYE210-041-f333d767"
+        },
+        "041-C2": {
+          "cid": "b144aa36-8d27-4757-beef-4280e3bdf8d8",
+          "pid": "23bc4ffe-309f-4236-9eec-0086803a9fc7",
+          "name": "ERYE210-041-C2-23bc4ffe"
+        }
+      },
+      "checks": [
+        {
+          "stage": "real-library-scope-baselines",
+          "chatBaseline": "subtitle.srt\n+\nE196-A.mp4",
+          "projectBaseline": "A1-independent.wav\nE196-A.mp4\nspeech-audio.m4a",
+          "A": "E196-A.mp4",
+          "B": "A1-independent.wav"
+        },
+        {
+          "stage": "media-search-and-clear",
+          "scope": "聊天",
+          "positive": "E196-A.mp4",
+          "noMatchEmpty": true,
+          "baselineRestored": true
+        },
+        {
+          "stage": "media-search-and-clear",
+          "scope": "工程",
+          "positive": "A1-independent.wav",
+          "noMatchEmpty": true,
+          "baselineRestored": true
+        },
+        {
+          "stage": "library-search-no-timeline-change",
+          "sameProject": true,
+          "noAssetAddedBySearch": true
+        }
+      ],
+      "screenshot": "041\\ERYE210-041-passed.png",
+      "finishedAt": "2026-11-16T06:58:56.478Z",
+      "historicalDefect": {
+        "id": "FWXC-518",
+        "serialNumber": "FWXC-518",
+        "workitemId": "775dbf83cad7c40e3d8432d74e",
+        "url": "https://devops.aliyun.com/projex/project/1e401ac99539c3999e00e40006/bug#openWorkitemIdentifier=775dbf83cad7c40e3d8432d74e",
+        "verified": true,
+        "screenshots": 2,
+        "attachments": 3,
+        "state": "🤔AI提缺陷"
+      },
+      "actual": "同项目两会话实际准备A/B素材，Chat/Project基线可区分；分别按完整名称搜索命中、不存在名称无候选、清空恢复各范围列表；搜索未更换工程、添加时间线素材或生成。",
+      "report": "results-restored-final-five-production-20261116.md",
+      "sourceBatch": "prod-restored-five-20261116-01",
+      "evidence": "evidence-restored-final-five-production-20261116/manifest.json"
+    }
+  ],
+  "currentCounts": {
+    "Passed": 49,
+    "Failed": 6,
+    "Blocked": 1,
+    "Not Applicable": 0,
+    "Not Run": 0
+  },
+  "cloudWrites": 0
+}

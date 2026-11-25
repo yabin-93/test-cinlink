@@ -1,0 +1,145 @@
+{
+  "requirement": "ERYE-210",
+  "date": "2026-11-13",
+  "origin": "https://app.cinlink.ai",
+  "counts": {
+    "Passed": 0,
+    "Failed": 0,
+    "Blocked": 1,
+    "Not Applicable": 0,
+    "Not Run": 0
+  },
+  "cases": [
+    {
+      "id": "ERYE210-011",
+      "status": "Blocked",
+      "reason": "后台完成不抢占PB及真实中文配音内容已核验；本次结果卡仅提供播放/下载，直达配音编辑定位分支未覆盖；手动选择PA不计为结果卡通过",
+      "automated": true,
+      "workspaceId": "ad25bc25-b1c6-4105-84b8-1b845b4a4eb5",
+      "caseVersion": "v2-agent-translation-dubbing-20261113",
+      "annotations": [
+        {
+          "type": "case-version",
+          "description": "v2-agent-translation-dubbing-20261113"
+        },
+        {
+          "type": "blocked",
+          "description": "后台完成不抢占PB及真实中文配音内容已核验；本次结果卡仅提供播放/下载，直达配音编辑定位分支未覆盖；手动选择PA不计为结果卡通过"
+        }
+      ],
+      "projects": {
+        "011-PA": {
+          "cid": "af0d5043-d30d-4a91-ba15-dea074199400",
+          "pid": "bf48d731-93a2-4b50-8cb9-f5d46c4a2609",
+          "name": "7MB.mp4"
+        },
+        "011-PB": {
+          "cid": "af0d5043-d30d-4a91-ba15-dea074199400",
+          "pid": "27f00126-9508-47d5-975d-1a8f8c8b1f2b",
+          "name": "ERYE210-011-PB-USER-CONTROL-27f00126"
+        }
+      },
+      "checks": [
+        {
+          "stage": "agent-completed-background",
+          "runIds": [
+            "run_v2_4f9b4423fb4346f3bd9048d22794268e"
+          ],
+          "pa": {
+            "cid": "af0d5043-d30d-4a91-ba15-dea074199400",
+            "pid": "bf48d731-93a2-4b50-8cb9-f5d46c4a2609",
+            "name": "7MB.mp4"
+          },
+          "pb": {
+            "cid": "af0d5043-d30d-4a91-ba15-dea074199400",
+            "pid": "27f00126-9508-47d5-975d-1a8f8c8b1f2b",
+            "name": "ERYE210-011-PB-USER-CONTROL-27f00126"
+          },
+          "sourceLanguage": "auto",
+          "targetLanguage": "zh-Hans",
+          "pbEstablishedAt": 1794573239263,
+          "completed": {
+            "at": 1794573399812,
+            "status": "done"
+          },
+          "violations": [],
+          "pbState": {
+            "name": "ERYE210-011-PB-USER-CONTROL-27f00126",
+            "module": [
+              "媒体"
+            ],
+            "playhead": "0",
+            "selected": [],
+            "media": [
+              {
+                "paused": true,
+                "duration": 60.495778
+              }
+            ]
+          }
+        },
+        {
+          "stage": "target-language-content",
+          "pid": "bf48d731-93a2-4b50-8cb9-f5d46c4a2609",
+          "name": "7MB.mp4",
+          "voiceoverTextCount": 17,
+          "chineseSubtitleFiles": [
+            "file_cloud_sp56262cld3kspt2iyn2jgsrag"
+          ],
+          "generatedAudioCount": 8,
+          "reachedBy": "explicit-project-picker-and-reopen"
+        },
+        {
+          "stage": "result-entry",
+          "directEntry": false,
+          "artifacts": [
+            {
+              "text": "0:00 / 1:001280 × 720",
+              "buttons": [
+                {
+                  "label": "下载",
+                  "title": "下载",
+                  "text": ""
+                },
+                {
+                  "label": "播放",
+                  "title": null,
+                  "text": ""
+                },
+                {
+                  "label": "放大查看",
+                  "title": "放大查看",
+                  "text": ""
+                }
+              ]
+            }
+          ],
+          "verified": false
+        }
+      ],
+      "screenshot": "011\\ERYE210-011-blocked.png",
+      "finishedAt": "2026-11-13T12:36:48.497Z",
+      "conversationId": "af0d5043-d30d-4a91-ba15-dea074199400",
+      "projectId": "bf48d731-93a2-4b50-8cb9-f5d46c4a2609",
+      "projectIdB": "27f00126-9508-47d5-975d-1a8f8c8b1f2b",
+      "runId": "run_v2_4f9b4423fb4346f3bd9048d22794268e",
+      "actual": "已使用用户新建的7MB.mp4工程实测：中文配音原任务178秒完成，PA版本1→2；同会话PB/Media未被抢占，PB完整内容及版本1→1保持。重开PA实际显示17条中文配音文案、中文字幕和8段生成音频；真实MP4可播放，1280×720/60.44秒/H264+AAC。结果卡仅有播放、下载、放大，直达配音编辑入口分支未覆盖；手动选择PA不计该分支通过，整例仍Blocked。",
+      "report": "results-011-user-project-prod-20261113.md",
+      "branches": {
+        "backgroundIsolation": "Passed",
+        "targetLanguageResultContent": "Passed",
+        "directResultEntry": "Blocked"
+      },
+      "screenshots": [
+        "011-PB-established.png",
+        "011-PB-after-completed.png",
+        "011-real-result-cards.png",
+        "011-target-language-result-project.png",
+        "ERYE210-011-blocked.png",
+        "011-user-result-playback-and-Voiceover.png"
+      ],
+      "evidence": "evidence-011-user-project-prod-20261113/manifest.json",
+      "history": "case-011-translation-dubbing-history-20261113.json"
+    }
+  ]
+}

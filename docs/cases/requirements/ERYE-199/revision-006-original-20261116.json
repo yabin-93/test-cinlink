@@ -1,0 +1,52 @@
+{
+  "date": "2026-11-16",
+  "reason": "用户要求按当前功能优化，未实现部分跳过；旧完整范围不计新版通过",
+  "case_row": "| ERYE199-006 | P1 | 片段已旋转、缩放并加蒙版 | 检查位置/缩放/旋转/锚点/蒙版坐标单位 | 原点为序列左上；位置用序列像素、缩放用比例、旋转用角度；蒙版在输入局部坐标 | PE01 | [BLOCKED] | [Ego脚本](../../../../tools/editor/erye199/cases.mjs)（入口 `006`）；[运行说明](automation.md) | 本轮自动化：Blocked，[实测与截图](results-automation-001-010-production-20261113.md#erye199-006)；历史：待补 |",
+  "execution_record": {
+    "id": "ERYE199-006",
+    "status": "Blocked",
+    "actual": "当前明确不支持独立可编辑蒙版和局部锚点；旋转缩放已准备，完整坐标前置不足。",
+    "automation_status": "BLOCKED",
+    "script": "tools/editor/erye199/cases.mjs#006",
+    "automation_command": "npm run test:editor:199 -- --base-url https://app.cinlink.ai --cases 006",
+    "latest_execution_report": "results-automation-001-010-production-20261113.md",
+    "latest_execution_batch": "erye199-auto-2026-11-13T07-47-31-582Z",
+    "conversation_id": "82929bcd-90d2-44e1-8a2e-9f72c4c6257c",
+    "editor_id": "c0fa872a-d4fb-43c3-aa87-8280b1e21af7",
+    "screenshots": [
+      "evidence-automation-20261113/006-agent-terminal.png",
+      "evidence-automation-20261113/006-before-submit.png",
+      "evidence-automation-20261113/006-failure.png",
+      "evidence-automation-20261113/006-transformed.png"
+    ],
+    "automation_attempts": [
+      {
+        "id": "ERYE199-006",
+        "started": "2026-11-13T07:48:05.124Z",
+        "automation": "tools/editor/erye199/cases.mjs#006",
+        "status": "Blocked",
+        "actual": "旋转缩放已准备；当前入口未建立可编辑蒙版/锚点，完整坐标验收前置不足，见任务回复及截图",
+        "fixture": {
+          "conversationId": "82929bcd-90d2-44e1-8a2e-9f72c4c6257c",
+          "editorId": "c0fa872a-d4fb-43c3-aa87-8280b1e21af7",
+          "name": "ERYE199-006-2026-11-13T07-47-31-582Z"
+        },
+        "completed": "2026-11-13T07:49:11.267Z",
+        "batch": "erye199-auto-2026-11-13T07-47-31-582Z",
+        "local_directory": "reports/erye199-auto-2026-11-13T07-47-31-582Z",
+        "display_actual": "当前明确不支持独立可编辑蒙版和局部锚点；旋转缩放已准备，完整坐标前置不足。",
+        "workspace_id": "4325d25f-57d1-4ded-8b0f-536cb2a2e50f",
+        "screenshots": [
+          "evidence-automation-20261113/006-agent-terminal.png",
+          "evidence-automation-20261113/006-before-submit.png",
+          "evidence-automation-20261113/006-failure.png",
+          "evidence-automation-20261113/006-transformed.png"
+        ]
+      }
+    ],
+    "execution_history": [],
+    "workspace_id": "4325d25f-57d1-4ded-8b0f-536cb2a2e50f",
+    "details": "本轮完整步骤、输入、判定与证据见results-automation-001-010-production-20261113.md#erye199-006；过去批次详情保留在execution_history。"
+  },
+  "registry": "ERYE199-006:\n  status: BLOCKED\n  script: \"tools/editor/erye199/cases.mjs#006\"\n  automation_command: \"npm run test:editor:199 -- --base-url https://app.cinlink.ai --cases 006\"\n  execution_status: \"Blocked\"\n  execution_report: \"docs/cases/requirements/ERYE-199/results-automation-001-010-production-20261113.md\"\n  execution_note: \"当前明确不支持独立可编辑蒙版和局部锚点；旋转缩放已准备，完整坐标前置不足。\"\n  execution_batch: \"erye199-auto-2026-11-13T07-47-31-582Z\"\n"
+}

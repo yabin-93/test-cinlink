@@ -1,0 +1,149 @@
+{
+  "date": "2026-11-16",
+  "method": "official Yunxiao OpenAPI via tools/yunxiao",
+  "created": 2,
+  "deduplication": false,
+  "own_checkpoint_recovery": true,
+  "screenshots_uploaded": 3,
+  "attachments_verified": 8,
+  "verified": true,
+  "cases": {
+    "ERYE199-014": {
+      "id": "FWXC-595",
+      "workitem_id": "da802459f8a291e0c713adde60",
+      "url": "https://devops.aliyun.com/projex/project/1e401ac99539c3999e00e40006/bug#openWorkitemIdentifier=da802459f8a291e0c713adde60",
+      "title": "【生产环境】【功能未实现】【ERYE199-014】缺少轨道编辑锁，无法保护锁定对象及验证批量冲突",
+      "case_id": "ERYE199-014",
+      "key": "ERYE199-014-TRACK-EDIT-LOCK-UNIMPLEMENTED-PROD-20261116",
+      "status": "🤔AI提缺陷",
+      "assigned_to": "牛诗晴",
+      "sprint": "重构10-29",
+      "labels": [
+        "生产环境"
+      ],
+      "priority": "中",
+      "serious_level": "3-一般",
+      "verified": true,
+      "screenshots": 2,
+      "attachments": 5,
+      "images": [
+        {
+          "path": "014-before.png",
+          "caption": "历史实测2026-11-13：独立视频/关联原声和独立音轨基线；尚未设置轨道编辑锁。",
+          "sha256": "43dcd5cb5f8174ab577a24d99dbde65de817960066344831e7511664a62571ae",
+          "id": "36b10d35322d537625f7cd54c2",
+          "size": 317165,
+          "embedded": true
+        },
+        {
+          "path": "014-track-lock-unavailable.png",
+          "caption": "历史实测2026-11-13：实际任务明确回复没有轨道编辑锁操作，无法禁止目标片段移动/删除；工程保留。",
+          "sha256": "82fbb17b300ad50075144a6eeb458a31e6af568d89950ed9da453a73d7b13482",
+          "id": "561cad60727a200f4ea7257f08",
+          "size": 445375,
+          "embedded": true
+        }
+      ],
+      "attachment_receipts": [
+        {
+          "id": "36b10d35322d537625f7cd54c2",
+          "name": "014-before.png",
+          "sha256": "43dcd5cb5f8174ab577a24d99dbde65de817960066344831e7511664a62571ae",
+          "size": 317165
+        },
+        {
+          "id": "561cad60727a200f4ea7257f08",
+          "name": "014-track-lock-unavailable.png",
+          "sha256": "82fbb17b300ad50075144a6eeb458a31e6af568d89950ed9da453a73d7b13482",
+          "size": 445375
+        },
+        {
+          "id": "ffec9ef168c881d9d9f482cdca",
+          "name": "case-evidence.json",
+          "sha256": "8b4eeee1f614952f11509aa865d9e24d11b0a9784d8c5b727d120367e9f8409b",
+          "size": 6144
+        },
+        {
+          "id": "76ba26290485332ecc1a9eccda",
+          "name": "V.mp4",
+          "sha256": "e432370eb6cda0797076d6091622f2f7e0acd94cef690f1679c1a01f2349aba9",
+          "size": 2975172
+        },
+        {
+          "id": "f721792fe8c58e1427a2617196",
+          "name": "M.wav",
+          "sha256": "76d978ed0e72d7ab377011d68b3e8f30b1bac54cefd614dbd9f0a1811acf1c93",
+          "size": 960590
+        }
+      ],
+      "synced_at": "2026-11-16T16:09:31.8919918+08:00",
+      "local_report": "docs/defects/ERYE199-014-track-edit-lock-unimplemented-production-20261116.md",
+      "scope": "未实现功能；证据实测2026-11-13，本次仅补提",
+      "rerun_performed": false
+    },
+    "ERYE199-056": {
+      "id": "FWXC-596",
+      "workitem_id": "5345dc4d3fcf3d04cf27456949",
+      "url": "https://devops.aliyun.com/projex/project/1e401ac99539c3999e00e40006/bug#openWorkitemIdentifier=5345dc4d3fcf3d04cf27456949",
+      "title": "【生产环境】【功能未实现】【ERYE199-056】缺少可编辑效果能力查询入口，无法确认效果参数及可用状态",
+      "case_id": "ERYE199-056",
+      "key": "ERYE199-056-EFFECT-CAPABILITY-UNIMPLEMENTED-PROD-20261116",
+      "status": "🤔AI提缺陷",
+      "assigned_to": "牛诗晴",
+      "sprint": "重构10-29",
+      "labels": [
+        "生产环境"
+      ],
+      "priority": "中",
+      "serious_level": "3-一般",
+      "verified": true,
+      "screenshots": 1,
+      "attachments": 3,
+      "images": [
+        {
+          "path": "056-effect-capability-unavailable.png",
+          "caption": "历史实测2026-11-13：页面实际回复缺少可编辑效果注册表读取入口，无法核实逐效果元数据及后端状态，工程保留。",
+          "sha256": "2ed0ec9db7c6a57f3757ab6bafaa9bd339cd9cd7ec3943b4f3c46679285fdd9a",
+          "id": "fa0b11513ac7396b30e8bcf7ca",
+          "size": 451230,
+          "embedded": true
+        }
+      ],
+      "attachment_receipts": [
+        {
+          "size": 451230,
+          "id": "fa0b11513ac7396b30e8bcf7ca",
+          "sha256": "2ed0ec9db7c6a57f3757ab6bafaa9bd339cd9cd7ec3943b4f3c46679285fdd9a",
+          "name": "056-effect-capability-unavailable.png"
+        },
+        {
+          "size": 6139,
+          "id": "4c1344c587ffab8e72c3d84cf1",
+          "sha256": "3ceace235c9eaec34dc1ea9f3d7c48d552486d096200e4852ecc1b4b521039c5",
+          "name": "case-evidence.json"
+        },
+        {
+          "size": 2975172,
+          "id": "783a3d9e6b056cbb31a29641a2",
+          "sha256": "e432370eb6cda0797076d6091622f2f7e0acd94cef690f1679c1a01f2349aba9",
+          "name": "V.mp4"
+        }
+      ],
+      "synced_at": "2026-11-16T16:09:43.5759382+08:00",
+      "local_report": "docs/defects/ERYE199-056-effect-capability-unimplemented-production-20261116.md",
+      "scope": "未实现功能；证据实测2026-11-13，本次仅补提",
+      "rerun_performed": false
+    }
+  },
+  "observation_date": "2026-11-13",
+  "rerun_performed": false,
+  "execution_status": "Not Applicable",
+  "retired_case": "ERYE199-063",
+  "current_counts": {
+    "Passed": 31,
+    "Failed": 8,
+    "Blocked": 2,
+    "Not Applicable": 21,
+    "Not Run": 0
+  }
+}

@@ -1,0 +1,781 @@
+{
+  "date": "2026-11-16",
+  "origin": "https://app.cinlink.ai",
+  "browser": "headed Google Chrome / Windows",
+  "caseVersion": "v3-restored-six-and-navigation-20261116",
+  "counts": {
+    "Passed": 6,
+    "Failed": 2,
+    "Blocked": 0,
+    "Not Applicable": 0,
+    "Not Run": 0
+  },
+  "cases": [
+    {
+      "id": "ERYE210-002",
+      "status": "Passed",
+      "reason": "",
+      "automated": true,
+      "workspaceId": "69988091-5b89-4554-9c60-92470daab6b7",
+      "caseVersion": "v3-restored-six-and-navigation-20261116",
+      "annotations": [
+        {
+          "type": "case-version",
+          "description": "v3-restored-six-and-navigation-20261116"
+        }
+      ],
+      "projects": {
+        "002": {
+          "cid": "7e309b57-be36-4e3a-92dd-5ae28a49ae7c",
+          "pid": "96f883b5-3018-4d57-aecb-abc37b8e1027",
+          "name": "E196-A.mp4"
+        }
+      },
+      "checks": [
+        {
+          "stage": "first-import-before-navigation",
+          "state": {
+            "name": "E196-A.mp4",
+            "module": [
+              "媒体"
+            ],
+            "playhead": "0",
+            "selected": [],
+            "media": [
+              {
+                "paused": true,
+                "duration": 20
+              }
+            ]
+          },
+          "alerts": [],
+          "seconds": 20
+        },
+        {
+          "stage": "no-automatic-generation",
+          "messageCount": 0,
+          "hasGeneratedResults": false
+        }
+      ],
+      "screenshot": "002\\ERYE210-002-passed.png",
+      "finishedAt": "2026-11-16T06:31:43.547Z",
+      "actual": "首次导入20秒原片后、任何手动切页前，实际选中['媒体']，页面错误[]；无自动生成结果。",
+      "report": "results-restored-eight-production-20261116.md",
+      "sourceBatch": "prod-restored-eight-20261116-02",
+      "evidence": "evidence-restored-eight-production-20261116/manifest.json",
+      "historicalDefect": {
+        "serialNumber": "FWXC-482",
+        "workitemId": "b484370e7d2723d8befafd0441",
+        "url": "https://devops.aliyun.com/projex/project/1e401ac99539c3999e00e40006/bug#openWorkitemIdentifier=b484370e7d2723d8befafd0441",
+        "verifiedAt": "2026-11-13T15:09:26.8935645+08:00",
+        "screenshots": 1,
+        "status": "🤔AI提缺陷",
+        "localRecord": "docs/defects/ERYE210-002-default-tab-production-20261113.md",
+        "attachmentCount": 3
+      }
+    },
+    {
+      "id": "ERYE210-007",
+      "status": "Failed",
+      "reason": "Error: 重开应恢复Image子页\n\nexpect(received).toBe(expected) // Object.is equality\n\nExpected: \"true\"\nReceived: \"false\"",
+      "automated": true,
+      "workspaceId": "36acad2e-4510-4150-a1db-008f457ec300",
+      "caseVersion": "v3-restored-six-and-navigation-20261116",
+      "annotations": [
+        {
+          "type": "case-version",
+          "description": "v3-restored-six-and-navigation-20261116"
+        }
+      ],
+      "projects": {
+        "007": {
+          "cid": "85bdfaa7-3b9e-4273-9e20-1dd3209fe413",
+          "pid": "d0b28421-2c3e-4893-9be3-f45e47586f20",
+          "name": "ERYE210-007-d0b28421"
+        }
+      },
+      "checks": [
+        {
+          "stage": "after-close-reopen",
+          "state": {
+            "name": "ERYE210-007-d0b28421",
+            "module": [
+              "水印"
+            ],
+            "playhead": "0",
+            "selected": [],
+            "media": [
+              {
+                "paused": true,
+                "duration": 20
+              }
+            ]
+          },
+          "imagePressed": "false"
+        },
+        {
+          "stage": "after-refresh",
+          "state": {
+            "name": "ERYE210-007-d0b28421",
+            "module": [
+              "水印"
+            ],
+            "playhead": "0",
+            "selected": [],
+            "media": [
+              {
+                "paused": true,
+                "duration": 20
+              }
+            ]
+          },
+          "imagePressed": "false"
+        }
+      ],
+      "screenshot": "007\\ERYE210-007-failed.png",
+      "finishedAt": "2026-11-16T06:27:55.209Z",
+      "actual": "Watermark/Image重开记忆：after-close-reopen实际['水印']，Image选中=false；after-refresh实际['水印']，Image选中=false；工程保存内容保持。",
+      "report": "results-restored-eight-production-20261116.md",
+      "sourceBatch": "prod-restored-eight-20261116-01",
+      "evidence": "evidence-restored-eight-production-20261116/manifest.json",
+      "historicalDefect": {
+        "serialNumber": "FWXC-488",
+        "workitemId": "015794cee8eba6c88c1078ec6b",
+        "url": "https://devops.aliyun.com/projex/project/1e401ac99539c3999e00e40006/bug#openWorkitemIdentifier=015794cee8eba6c88c1078ec6b",
+        "verifiedAt": "2026-11-13T16:20:09.7889984+08:00",
+        "screenshots": 3,
+        "status": "🤔AI提缺陷",
+        "localRecord": "docs/defects/ERYE210-007-view-memory-production-20261113.md",
+        "attachmentCount": 6
+      },
+      "cloudDefect": {
+        "identifier": "FWXC-585",
+        "workitemId": "b16072b80de8184ee47ca7bb12",
+        "url": "https://devops.aliyun.com/projex/project/1e401ac99539c3999e00e40006/bug#openWorkitemIdentifier=b16072b80de8184ee47ca7bb12",
+        "status": "🤔AI提缺陷",
+        "verified": true,
+        "verifiedAt": "2026-11-16T14:40:18.8368279+08:00",
+        "screenshots": 3,
+        "attachmentCount": 6,
+        "syncReport": "defects-007-015-restored-production-20261116.md"
+      }
+    },
+    {
+      "id": "ERYE210-010",
+      "status": "Passed",
+      "reason": "",
+      "automated": true,
+      "workspaceId": "70b1ee1b-43f2-462f-b03c-de12283ac960",
+      "caseVersion": "v3-restored-six-and-navigation-20261116",
+      "annotations": [
+        {
+          "type": "case-version",
+          "description": "v3-restored-six-and-navigation-20261116"
+        }
+      ],
+      "projects": {
+        "010": {
+          "cid": "7b8eef34-3e5e-48e6-a7b6-92cd826c42ed",
+          "pid": "2a57b246-15f3-42b4-bbc3-a68b917ff5ea",
+          "name": "ERYE210-010-2a57b246"
+        },
+        "010-PB": {
+          "cid": "7b8eef34-3e5e-48e6-a7b6-92cd826c42ed",
+          "pid": "a93ddb91-59f1-470a-a96f-2fb9b4cee9b2",
+          "name": "ERYE210-010-PB-a93ddb91"
+        }
+      },
+      "checks": [
+        {
+          "stage": "in-page-project-memory",
+          "project": "ERYE210-010-2a57b246",
+          "expectedModule": "字幕",
+          "state": {
+            "name": "ERYE210-010-2a57b246",
+            "module": [
+              "字幕"
+            ],
+            "playhead": "0",
+            "selected": [],
+            "media": [
+              {
+                "paused": true,
+                "duration": 20
+              }
+            ]
+          }
+        },
+        {
+          "stage": "in-page-project-memory",
+          "project": "ERYE210-010-PB-a93ddb91",
+          "expectedModule": "媒体",
+          "state": {
+            "name": "ERYE210-010-PB-a93ddb91",
+            "module": [
+              "媒体"
+            ],
+            "playhead": "0",
+            "selected": [],
+            "media": [
+              {
+                "paused": true,
+                "duration": 20
+              }
+            ]
+          }
+        },
+        {
+          "stage": "refreshed-project-memory",
+          "project": "ERYE210-010-PB-a93ddb91",
+          "expectedModule": "媒体",
+          "state": {
+            "name": "ERYE210-010-PB-a93ddb91",
+            "module": [
+              "媒体"
+            ],
+            "playhead": "0",
+            "selected": [],
+            "media": [
+              {
+                "paused": true,
+                "duration": 20
+              }
+            ]
+          }
+        },
+        {
+          "stage": "refreshed-project-memory",
+          "project": "ERYE210-010-2a57b246",
+          "expectedModule": "字幕",
+          "state": {
+            "name": "ERYE210-010-2a57b246",
+            "module": [
+              "字幕"
+            ],
+            "playhead": "0",
+            "selected": [],
+            "media": [
+              {
+                "paused": true,
+                "duration": 20
+              }
+            ]
+          }
+        }
+      ],
+      "screenshot": "010\\ERYE210-010-passed.png",
+      "finishedAt": "2026-11-16T06:28:17.239Z",
+      "actual": "同账号同Chrome同会话PA=Captions、PB=Media；交替选择及分别刷新后均恢复各自入口，两工程内容保持。本轮未覆盖跨账号/设备。",
+      "report": "results-restored-eight-production-20261116.md",
+      "sourceBatch": "prod-restored-eight-20261116-01",
+      "evidence": "evidence-restored-eight-production-20261116/manifest.json",
+      "historicalDefect": {
+        "serialNumber": "FWXC-489",
+        "workitemId": "8f1fd31451866906c2a5208cd2",
+        "url": "https://devops.aliyun.com/projex/project/1e401ac99539c3999e00e40006/bug#openWorkitemIdentifier=8f1fd31451866906c2a5208cd2",
+        "verifiedAt": "2026-11-13T16:20:31.6389415+08:00",
+        "screenshots": 3,
+        "status": "🤔AI提缺陷",
+        "localRecord": "docs/defects/ERYE210-010-project-view-memory-production-20261113.md",
+        "attachmentCount": 6
+      }
+    },
+    {
+      "id": "ERYE210-013",
+      "status": "Passed",
+      "reason": "",
+      "automated": true,
+      "workspaceId": "69988091-5b89-4554-9c60-92470daab6b7",
+      "caseVersion": "v3-restored-six-and-navigation-20261116",
+      "annotations": [
+        {
+          "type": "case-version",
+          "description": "v3-restored-six-and-navigation-20261116"
+        }
+      ],
+      "projects": {
+        "013": {
+          "cid": "3a73ec26-831c-412d-a686-a3cff6c54dcf",
+          "pid": "940ba7e8-b151-48b8-b3a5-451b2e2b04bb",
+          "name": "A1-independent.wav"
+        }
+      },
+      "checks": [
+        {
+          "stage": "audio-only-text",
+          "enabled": false,
+          "panel": "水印\n\n请先添加视频或图片画面，再编辑水印。\n\nAa 文字\n图片\n水印文字\n排版\nGeist\n28px\n半粗\n文字颜色\nF6BBD3\n不透明度\n75%\n位置\n右上\n边缘边距\npx\n\n在预览中拖动以调整位置\n\n应用于整个视频"
+        },
+        {
+          "stage": "audio-only-image",
+          "enabled": false,
+          "panel": "水印\n\n请先添加视频或图片画面，再编辑水印。\n\nAa 文字\n图片\n水印图片\n上传图片\n\nPNG、JPG 或 SVG · 最大 10MB\n\n字号\n160px\n不透明度\n75%\n位置\n右上\n边缘边距\npx\n\n在预览中拖动以调整位置\n\n应用于整个视频"
+        }
+      ],
+      "screenshot": "013\\ERYE210-013-passed.png",
+      "finishedAt": "2026-11-16T06:31:52.323Z",
+      "actual": "仅导入真实WAV的无视频工程：audio-only-text控件启用=False；audio-only-image控件启用=False；无意外文字水印保存。",
+      "report": "results-restored-eight-production-20261116.md",
+      "sourceBatch": "prod-restored-eight-20261116-02",
+      "evidence": "evidence-restored-eight-production-20261116/manifest.json",
+      "historicalDefect": {
+        "case": "ERYE210-013",
+        "key": "ERYE210-013-AUDIO-WATERMARK-PROD-20261113",
+        "attachments": [
+          {
+            "id": "be32536d0a222968902a72ecb0",
+            "size": 128107,
+            "name": "013-text-write-result.png",
+            "sha256": "c7db754493434984d4e555f6253ea40c147327273008306186c656417770268c"
+          },
+          {
+            "id": "573fe1916803f44c4244474aac",
+            "size": 125921,
+            "name": "ERYE210-013-failed.png",
+            "sha256": "4ecbdd8d8212821d07feda8ba65aada9d3426a7fe49aceaace188dba024b99c1"
+          },
+          {
+            "id": "d9e2a2c4628c707ee06bdeb0c2",
+            "size": 4367,
+            "name": "case-evidence.json",
+            "sha256": "03328b2ebc42dfdce2262e3533930b7d34484f11b163775d16d8112509aee207"
+          }
+        ],
+        "screenshots": 2,
+        "verifiedAt": "2026-11-13T16:59:55.1914477+08:00",
+        "createdNow": true,
+        "serialNumber": "FWXC-492",
+        "verified": true,
+        "workitemId": "0c412f96615825b3473edd810a",
+        "url": "https://devops.aliyun.com/projex/project/1e401ac99539c3999e00e40006/bug#openWorkitemIdentifier=0c412f96615825b3473edd810a",
+        "status": "🤔AI提缺陷",
+        "assignedTo": "牛诗晴",
+        "sprint": "重构10-29",
+        "labels": [
+          "生产环境"
+        ],
+        "priority": "中",
+        "severity": "3-一般",
+        "attachmentCount": 3,
+        "localRecord": "docs/defects/ERYE210-013-audio-watermark-production-20261113.md",
+        "method": "official OpenAPI",
+        "historicalDeduplication": false,
+        "preconditionsPerDefect": 3
+      }
+    },
+    {
+      "id": "ERYE210-015",
+      "status": "Failed",
+      "reason": "Error: 缺选区应明确提示先选择片段\n\nexpect(received).toBe(expected) // Object.is equality\n\nExpected: true\nReceived: false",
+      "automated": true,
+      "workspaceId": "16243efd-5bc8-4236-a91a-3a7d82b4838e",
+      "caseVersion": "v3-restored-six-and-navigation-20261116",
+      "annotations": [
+        {
+          "type": "case-version",
+          "description": "v3-restored-six-and-navigation-20261116"
+        }
+      ],
+      "projects": {
+        "015": {
+          "cid": "3868a82e-c1a6-462c-a4d5-88dbf65bfa85",
+          "pid": "c362c9ba-16ee-4310-81b1-604761468989",
+          "name": "ERYE210-015-c362c9ba"
+        }
+      },
+      "checks": [
+        {
+          "stage": "no-selection",
+          "disabled": true,
+          "explanation": [
+            "分割所选片段"
+          ]
+        },
+        {
+          "stage": "valid-selection-split",
+          "at": 12.03,
+          "seconds": 20,
+          "parts": [
+            [
+              0,
+              12.033333333333333,
+              0
+            ],
+            [
+              12.033333333333333,
+              20,
+              12.033333333333333
+            ]
+          ]
+        },
+        {
+          "stage": "undo-restored",
+          "restored": true
+        }
+      ],
+      "screenshot": "015\\ERYE210-015-failed.png",
+      "finishedAt": "2026-11-16T06:30:10.449Z",
+      "actual": "未选片段时分割禁用，实际提示['分割所选片段']；选中视频后约12秒分割并撤销恢复已完成。",
+      "report": "results-restored-eight-production-20261116.md",
+      "sourceBatch": "prod-restored-eight-20261116-01",
+      "evidence": "evidence-restored-eight-production-20261116/manifest.json",
+      "historicalDefect": {
+        "case": "ERYE210-015",
+        "attachments": [
+          {
+            "name": "015-no-selection.png",
+            "id": "7594b68802bd5608067e6fef8b",
+            "sha256": "62d541dffc758f2f1b386b3d84ddb4879fdbc9adbcccc0ec3d9e9392ce15068b",
+            "size": 618866
+          },
+          {
+            "name": "015-split-completed.png",
+            "id": "72092b7e69ee33f65c4955ee2e",
+            "sha256": "6f049e437ca9ac3dc04e073c08020471dd1bb6a4e06a2b76259339b86750912f",
+            "size": 633865
+          },
+          {
+            "name": "case-evidence.json",
+            "id": "5a4637e49b4f9b96a396e8dad7",
+            "sha256": "8e9db6db18098f889cd675b5f23573dbba9688470e70ffebebd69581abc08614",
+            "size": 2670
+          },
+          {
+            "name": "E196-A.mp4",
+            "id": "78ea33796bb8a4146b82dd56de",
+            "sha256": "c453166c6396fe1c427c8a045ad2f84a8f5d4e4ff0f905b47d79114172829d15",
+            "size": 10274419
+          },
+          {
+            "name": "E196-source-en.srt",
+            "id": "d53379b1870007d4eb0b489242",
+            "sha256": "4d52152ac06ca6be6667e3be97f0f3e3e654d03d4b92f7c97cde5189dff371d4",
+            "size": 573
+          }
+        ],
+        "screenshots": 2,
+        "url": "https://devops.aliyun.com/projex/project/1e401ac99539c3999e00e40006/bug#openWorkitemIdentifier=e5fffc8428963d66f61e42d154",
+        "workitemId": "e5fffc8428963d66f61e42d154",
+        "verified": true,
+        "verifiedAt": "2026-11-13T17:00:09.6514317+08:00",
+        "createdNow": true,
+        "serialNumber": "FWXC-493",
+        "key": "ERYE210-015-SELECTION-GUIDANCE-PROD-20261113",
+        "status": "🤔AI提缺陷",
+        "assignedTo": "牛诗晴",
+        "sprint": "重构10-29",
+        "labels": [
+          "生产环境"
+        ],
+        "priority": "低",
+        "severity": "4-轻微",
+        "attachmentCount": 5,
+        "localRecord": "docs/defects/ERYE210-015-selection-guidance-production-20261113.md",
+        "method": "official OpenAPI",
+        "historicalDeduplication": false,
+        "preconditionsPerDefect": 3
+      },
+      "cloudDefect": {
+        "identifier": "FWXC-586",
+        "workitemId": "d5da04deb674cf55972715cfb1",
+        "url": "https://devops.aliyun.com/projex/project/1e401ac99539c3999e00e40006/bug#openWorkitemIdentifier=d5da04deb674cf55972715cfb1",
+        "status": "🤔AI提缺陷",
+        "verified": true,
+        "verifiedAt": "2026-11-16T14:40:53.1758298+08:00",
+        "screenshots": 3,
+        "attachmentCount": 6,
+        "syncReport": "defects-007-015-restored-production-20261116.md"
+      }
+    },
+    {
+      "id": "ERYE210-040",
+      "status": "Passed",
+      "reason": "",
+      "automated": true,
+      "workspaceId": "f97cf50c-74ac-4141-9854-5974efefc9b6",
+      "caseVersion": "v3-restored-six-and-navigation-20261116",
+      "annotations": [
+        {
+          "type": "case-version",
+          "description": "v3-restored-six-and-navigation-20261116"
+        }
+      ],
+      "projects": {
+        "040": {
+          "cid": "8cc5723e-a744-4a06-97db-0e3acd1422dc",
+          "pid": "25c119c6-ff0a-45fd-ba29-505197c46975",
+          "name": "ERYE210-040-25c119c6"
+        }
+      },
+      "checks": [
+        {
+          "stage": "overlapping-audio-only-deleted",
+          "target": {
+            "track": "04f59f0a-ac9f-4c2e-b896-df7c75b7f96d",
+            "file": "file_cloud_b42mih23tjwh7thdqiyjjhohca",
+            "clip": "a7296f43-7ad1-4a6b-bd3f-83a3f188435d",
+            "start": 14.066666666666666
+          },
+          "beforeSeconds": 20,
+          "afterSeconds": 20,
+          "otherMediaUnchanged": true
+        },
+        {
+          "stage": "undo-restored",
+          "sameMediaReferences": true,
+          "seconds": 20
+        }
+      ],
+      "screenshot": "040\\ERYE210-040-passed.png",
+      "finishedAt": "2026-11-16T06:32:00.186Z",
+      "actual": "独立WAV位于14.066666666666666秒，删除前20秒、删除后20秒；其他音视频保持=True；一次撤销恢复原媒体与音频引用。",
+      "report": "results-restored-eight-production-20261116.md",
+      "sourceBatch": "prod-restored-eight-20261116-02",
+      "evidence": "evidence-restored-eight-production-20261116/manifest.json",
+      "historicalDefect": {
+        "id": "FWXC-516",
+        "serialNumber": "FWXC-516",
+        "workitemId": "f319c777b70fbfb7010c5a15ad",
+        "url": "https://devops.aliyun.com/projex/project/1e401ac99539c3999e00e40006/bug#openWorkitemIdentifier=f319c777b70fbfb7010c5a15ad",
+        "verified": true,
+        "screenshots": 2,
+        "attachments": 5,
+        "state": "🤔AI提缺陷"
+      },
+      "runnerWorkspaceId": "69988091-5b89-4554-9c60-92470daab6b7",
+      "metadataCorrection": "040续验沿原新工程及原工作区；runner复用本批工作区字段仅作诊断，不当作工程归属。"
+    },
+    {
+      "id": "ERYE210-055",
+      "status": "Passed",
+      "reason": "",
+      "automated": true,
+      "workspaceId": "0e9875a7-9e25-4da9-a1b7-d67e6c519247",
+      "caseVersion": "v3-restored-six-and-navigation-20261116",
+      "annotations": [
+        {
+          "type": "case-version",
+          "description": "v3-restored-six-and-navigation-20261116"
+        }
+      ],
+      "projects": {
+        "055": {
+          "cid": "52f2e2f3-5d7f-4576-b652-3b67a2146eda",
+          "pid": "7df8852e-1024-4423-8b75-b07b80f55ad7",
+          "name": "ERYE210-055-7df8852e"
+        }
+      },
+      "checks": [
+        {
+          "stage": "rapid-tabs-settled",
+          "rounds": 3,
+          "finalModule": "水印/图片水印",
+          "observations": [
+            {
+              "name": "ERYE210-055-7df8852e",
+              "module": [
+                "水印"
+              ],
+              "playhead": "0",
+              "selected": [],
+              "media": [
+                {
+                  "paused": true,
+                  "duration": 20
+                }
+              ]
+            },
+            {
+              "name": "ERYE210-055-7df8852e",
+              "module": [
+                "水印"
+              ],
+              "playhead": "0",
+              "selected": [],
+              "media": [
+                {
+                  "paused": true,
+                  "duration": 20
+                }
+              ]
+            },
+            {
+              "name": "ERYE210-055-7df8852e",
+              "module": [
+                "水印"
+              ],
+              "playhead": "0",
+              "selected": [],
+              "media": [
+                {
+                  "paused": true,
+                  "duration": 20
+                }
+              ]
+            },
+            {
+              "name": "ERYE210-055-7df8852e",
+              "module": [
+                "水印"
+              ],
+              "playhead": "0",
+              "selected": [],
+              "media": [
+                {
+                  "paused": true,
+                  "duration": 20
+                }
+              ]
+            },
+            {
+              "name": "ERYE210-055-7df8852e",
+              "module": [
+                "水印"
+              ],
+              "playhead": "0",
+              "selected": [],
+              "media": [
+                {
+                  "paused": true,
+                  "duration": 20
+                }
+              ]
+            },
+            {
+              "name": "ERYE210-055-7df8852e",
+              "module": [
+                "水印"
+              ],
+              "playhead": "0",
+              "selected": [],
+              "media": [
+                {
+                  "paused": true,
+                  "duration": 20
+                }
+              ]
+            }
+          ],
+          "noContentWrites": true
+        }
+      ],
+      "screenshot": "055\\ERYE210-055-passed.png",
+      "finishedAt": "2026-11-16T06:30:39.054Z",
+      "actual": "连续3轮快速切换五TAB，最终Watermark/Image连续观察稳定，同一工程、图片预览和唯一选中入口一致，无内容写入或自动生成。",
+      "report": "results-restored-eight-production-20261116.md",
+      "sourceBatch": "prod-restored-eight-20261116-01",
+      "evidence": "evidence-restored-eight-production-20261116/manifest.json"
+    },
+    {
+      "id": "ERYE210-056",
+      "status": "Passed",
+      "reason": "",
+      "automated": true,
+      "workspaceId": "0e9875a7-9e25-4da9-a1b7-d67e6c519247",
+      "caseVersion": "v3-restored-six-and-navigation-20261116",
+      "annotations": [
+        {
+          "type": "case-version",
+          "description": "v3-restored-six-and-navigation-20261116"
+        }
+      ],
+      "projects": {
+        "056": {
+          "cid": "594635f2-b610-42eb-8d2f-bfdc9f466de8",
+          "pid": "4d97d373-7394-49eb-96ba-6dd6157c97c6",
+          "name": "ERYE210-056-4d97d373"
+        }
+      },
+      "checks": [
+        {
+          "stage": "genuine-module-error",
+          "alerts": [
+            "编辑器执行数据不符合正式 v2 协议，请保留当前工程并核对服务返回。重新加载媒体×"
+          ],
+          "originalTask": {
+            "taskId": "906aee78-de2c-4aa1-85c6-57bb5c9cb112",
+            "httpStatus": 200
+          },
+          "errorInjected": false
+        },
+        {
+          "stage": "navigation-after-genuine-error",
+          "module": "媒体",
+          "state": {
+            "name": "ERYE210-056-4d97d373",
+            "module": [
+              "媒体"
+            ],
+            "playhead": "0",
+            "selected": [],
+            "media": [
+              {
+                "paused": true,
+                "duration": 20
+              }
+            ]
+          },
+          "contentPreserved": true
+        },
+        {
+          "stage": "navigation-after-genuine-error",
+          "module": "字幕",
+          "state": {
+            "name": "ERYE210-056-4d97d373",
+            "module": [
+              "字幕"
+            ],
+            "playhead": "0",
+            "selected": [],
+            "media": [
+              {
+                "paused": true,
+                "duration": 20
+              }
+            ]
+          },
+          "contentPreserved": true
+        },
+        {
+          "stage": "navigation-after-genuine-error",
+          "module": "水印",
+          "state": {
+            "name": "ERYE210-056-4d97d373",
+            "module": [
+              "水印"
+            ],
+            "playhead": "0",
+            "selected": [],
+            "media": [
+              {
+                "paused": true,
+                "duration": 20
+              }
+            ]
+          },
+          "contentPreserved": true
+        },
+        {
+          "stage": "final",
+          "navigationPassed": true,
+          "exportResubmissions": 0,
+          "exportSuccessNotClaimed": true
+        }
+      ],
+      "screenshot": "056\\ERYE210-056-passed.png",
+      "finishedAt": "2026-11-16T06:31:12.077Z",
+      "actual": "一次原生导出形成真实页面错误['编辑器执行数据不符合正式 v2 协议，请保留当前工程并核对服务返回。重新加载媒体×']；错误后Media/Captions/Watermark导航及原内容保持，未重复导出；仅导航隔离通过，不代表导出修复。",
+      "report": "results-restored-eight-production-20261116.md",
+      "sourceBatch": "prod-restored-eight-20261116-01",
+      "evidence": "evidence-restored-eight-production-20261116/manifest.json"
+    }
+  ],
+  "currentCounts": {
+    "Passed": 46,
+    "Failed": 4,
+    "Blocked": 1,
+    "Not Applicable": 0,
+    "Not Run": 0
+  },
+  "cloudWrites": 0
+}

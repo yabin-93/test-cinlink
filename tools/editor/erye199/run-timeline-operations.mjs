@@ -1,0 +1,11 @@
+import fs from 'node:fs/promises';import path from 'node:path';import{pathToFileURL,fileURLToPath}from'node:url';import{spawnSync}from'node:child_process';
+import {timelinePlan}from'./timeline-operations.mjs';
+const args=process.argv.slice(2),opts={};for(let i=0;i<args.length;i+=2){if(!args[i]?.startsWith('--')||!args[i+1])throw Error('--key value required');opts[args[i].slice(2)]=args[i+1];}
+if(!timelinePlan.some(x=>x.key===opts.variant))throw Error('必须指定081～085的明确变体');
+const actions=['restartCredits','finalizeMusic','recheckUI','supplement','wait','drive','start','open','configure','upload','submit','observe','resume','inspect','baseline','readUI','followup','submitFollowup','importAudio','placeAudio','edit','history','review','seek','download'];if(!actions.includes(opts.action))throw Error('无效action');
+if(!/^\d+$/.test(opts.space||'')||!opts.report)throw Error('需要真实TaskSpace和新报告目录');
+const config={outDir:path.resolve(opts.report),baseURL:'https://app.cinlink.ai',spaceId:Number(opts.space),...(opts.reason?{recoveryReason:opts.reason}:{})};const dir=path.join(config.outDir,'browser');await fs.mkdir(dir,{recursive:true});const script=path.join(dir,'action-'+Date.now()+'.mjs');const modulePath=fileURLToPath(new URL('./timeline-operations.mjs',import.meta.url));
+const taskReceipt=JSON.parse(await fs.readFile(path.join(config.outDir,'task.json'),'utf8'));if(Number(taskReceipt.spaceId)!==config.spaceId||!/^p\d+$/.test(taskReceipt.page))throw Error('TaskSpace/page receipt does not match this batch');
+const extra=opts.action==='seek'?','+Number(opts.time||0):['importAudio','placeAudio'].includes(opts.action)?','+JSON.stringify(opts.media||'D'):'';
+await fs.writeFile(script,`const task=await taskSpace(${opts.space}),page=task.page(${JSON.stringify(taskReceipt.page)});const{timelineContext}=await import('${pathToFileURL(modulePath).href}');const ctx=await timelineContext(page,${JSON.stringify(config)});console.log(await ctx.${opts.action}(${JSON.stringify(opts.variant)}${extra}));`,'utf8');
+const result=spawnSync('ego-browser',['nodejs','-e',`await import('${pathToFileURL(script).href}')`],{stdio:'inherit',windowsHide:true});if(result.error)throw result.error;process.exitCode=result.status??1;

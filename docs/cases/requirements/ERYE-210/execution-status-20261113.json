@@ -1,0 +1,169 @@
+{
+  "requirement": "ERYE-210",
+  "batch": "20261113-production-001-005",
+  "environment": "production",
+  "origin": "https://app.cinlink.ai",
+  "browser": "Google Chrome 157.0.8103.52",
+  "account": "1020817070",
+  "workspaceId": "5ffda96c-6f08-45ab-8e35-24b5425943bd",
+  "status": "Completed",
+  "cases": [
+    {
+      "id": "ERYE210-001",
+      "status": "Passed",
+      "conversationId": "ee1a65cf-35eb-47eb-bb90-7b972762bfbc",
+      "projectId": "144e3d19-ee0f-4c95-9270-b7ba66a49bd8",
+      "actual": "生产中文界面五入口为媒体、文稿、字幕、配音、水印，与Media/Scripts/Captions/Voiceover/Watermark一一对应；全部可达，实际切换后返回Media。刷新解决初次创建提示后核验，工程内容及版本1均保持。仅验证本例导航，首次导入保存500另记002，不宣称保存功能通过。",
+      "steps": [
+        "本轮新建专用项目和空会话，打开视频编辑器，选择媒体导入20秒E196-A.mp4。",
+        "保存初次创建异常和默认字幕现场；回读确认工程已存在且版本1。刷新并打开同一工程，确认无创建错误提示。",
+        "从Media依次进入Scripts、Captions、Voiceover、Watermark，再回Media；逐页核对面板标题和选中入口。",
+        "回读前后保存内容，均为版本1且完整内容相同。"
+      ],
+      "screenshots": [
+        "ERYE210-001-stable-media.png",
+        "ERYE210-001-stable-scripts.png",
+        "ERYE210-001-stable-captions.png",
+        "ERYE210-001-stable-voiceover.png",
+        "ERYE210-001-stable-watermark.png",
+        "ERYE210-001-stable-media-return.png"
+      ]
+    },
+    {
+      "id": "ERYE210-002",
+      "status": "Failed",
+      "conversationId": "ee1a65cf-35eb-47eb-bb90-7b972762bfbc",
+      "projectId": "144e3d19-ee0f-4c95-9270-b7ba66a49bd8",
+      "actual": "全新会话无该工程偏好，首次从选择媒体导入后默认选中Captions/字幕，预期Media，未通过。首次保存200/版本1，随后保存500并提示Snapshot request could not be completed和工程创建未完成。刷新前已回读确认真实工程存在；刷新恢复，不覆盖首次结果。后续Media素材卡能预览正确20秒源素材，但不等同于从外部显式素材入口进入工程，该分支未完整覆盖。",
+      "steps": [
+        "本轮新建空会话并首次打开视频编辑器，确认空白工程。",
+        "点击选择媒体，上传SHA-256 c453166c6396fe1c427c8a045ad2f84a8f5d4e4ff0f905b47d79114172829d15的E196-A.mp4（20秒1920×1080有原声）。",
+        "未手动选任何模块，查看默认入口；实际字幕选中、出现生成字幕空态。保存失败截图。",
+        "先回读已保存工程，再刷新重开，确认20秒视频和原声存在。Media素材卡预览正确原片；没有将此预览当作完整显式素材入口验收。"
+      ],
+      "screenshots": [
+        "ERYE210-002-initial-wide.png",
+        "002-initial-failure.png"
+      ],
+      "brief": "首次导入进入字幕而非Media，另见创建保存500",
+      "defect": {
+        "serialNumber": "FWXC-482",
+        "workitemId": "b484370e7d2723d8befafd0441",
+        "url": "https://devops.aliyun.com/projex/project/1e401ac99539c3999e00e40006/bug#openWorkitemIdentifier=b484370e7d2723d8befafd0441",
+        "verifiedAt": "2026-11-13T15:09:26.8935645+08:00",
+        "screenshots": 1,
+        "status": "🤔AI提缺陷",
+        "localRecord": "docs/defects/ERYE210-002-default-tab-production-20261113.md",
+        "attachmentCount": 3
+      }
+    },
+    {
+      "id": "ERYE210-003",
+      "status": "Passed",
+      "conversationId": "e1ceaa10-3dbc-4636-94b2-243146f771a9",
+      "runId": "run_v2_63e7d65773db436d8f0d33dcfaac39c9",
+      "prompt": "请识别本次上传的 E196-A.mp4 中的英语语音，生成英语字幕并烧录到视频中；保留原片完整20秒画面、原声和1920×1080分辨率，不翻译、不裁剪、不增加水印。请交付带英语字幕的MP4及独立英语SRT字幕文件，方便随后进入字幕编辑。",
+      "actual": "真实字幕任务112秒完成，无补槽。结果SRT实际下载，8条英语字幕0.160～19.820秒；从该会话当前实际视频编辑器入口首次进入，选中Captions内容页。工程字幕绑定file_cloud_c7kyuocu543kpnakk5k2qdeot5，与本次结果一致；8条文字及时间一致，其他四入口均可访问。导航核验前后工程版本2和全部内容保持。",
+      "screenshots": [
+        "ERYE210-003-preparation-prompt.png",
+        "ERYE210-003-result-captions.png"
+      ],
+      "projectId": "a768b149-4169-4eea-bb79-05d19e14b328",
+      "steps": [
+        "在独立新会话上传同一20秒原片，完整准备指令一次发送；等待原任务完成，不重复提交。",
+        "点击subtitle.srt取得真实SRT；该文件卡实际是下载，不作为编辑入口。",
+        "点击同一字幕任务会话头部实际视频编辑器入口；首次加载即为字幕内容页，未手动切到Captions作为通过依据。",
+        "核对8条字幕内容、时间及本次SRT文件绑定，依次检查其他四入口可达，返回字幕。",
+        "回读工程，版本2及全部保存内容保持。"
+      ],
+      "supplement": "按当前页面已有会话结果编辑入口验收；没有声称subtitle.srt卡片有独立编辑按钮。仅验证结果工程/字幕绑定与导航，不代替完整英语识别质量、成片逐帧或翻译功能测试。"
+    },
+    {
+      "id": "ERYE210-004",
+      "status": "Failed",
+      "actual": "已通过编辑器真实创建两段合法中文短旁白，audio_state为ready，文稿分别为“欢迎使用 CinLink。”及“这是导航测试。”，首段实际播放1.346757秒无媒体错误。设Media并关闭/重开后仍为Media；选择已生成配音片段或点击配音WAV结果只保留Media/打开素材预览，未找到可从结果明确定位Voiceover的编辑入口。手动进入Voiceover能看到正确文稿，但不代替本例结果入口验收。导航前后工程版本4及全部保存内容保持，未重新生成。",
+      "screenshots": [
+        "ERYE210-004-legal-voice-result.png",
+        "ERYE210-004-controlled-media-memory.png",
+        "ERYE210-004-result-entry.png",
+        "ERYE210-004-result-file-preview.png",
+        "ERYE210-004-preparation-failed.png"
+      ],
+      "conversationId": "a5f4e73d-98dd-4b59-84cb-e82450fcdd1b",
+      "prompt": "请将本次上传的 E196-A.mp4 的英语讲话翻译为自然的普通话配音，保留完整20秒原画面和1920×1080分辨率。使用系统可用的默认中文女声音色，不克隆人物声音；用中文配音替换原英语讲话，不叠加两种人声，不增加水印或裁剪。请交付中文配音视频、独立中文配音音频及对应中文配音文稿，便于随后进入配音编辑。",
+      "projectId": "fb21072c-d2b5-49fb-9b9a-50d5425f65de",
+      "preparationRunId": "run_v2_294f993f7cce4e829ae5cae655d35e32",
+      "steps": [
+        "首次使用本轮独立会话和20秒原片提交完整翻译配音准备指令；该原任务因20.426秒声音不匹配20秒时间线失败，原失败完整保留，未点重试。",
+        "改用受控短旁白导航数据：本环境上传两条4～6/10～12秒英文及中文SRT，保存到本轮独立夹具工程；这是测试数据准备，不是原片翻译结果。",
+        "经工程选择器明确选择“ERYE210-004 短旁白导航夹具”；在配音页点击创建配音一次，等待两句真实生成/保存，确认文稿、音频ID及ready状态。",
+        "实际选择Media、收起编辑器，再从会话视频编辑器重开同一夹具；当前仍为Media。",
+        "点击4.00～5.35秒已生成配音片段，仍停留Media；点击首句WAV文件仅打开素材预览，实际播放完1.346757秒，无媒体错误。检查当前可见结果和控件，未有明确的配音结果编辑入口。",
+        "回读工程，版本4及全部保存内容与导航前一致。手动Voiceover页可查看两句文稿仅作对象核对，不计结果入口通过。"
+      ],
+      "supplement": "未通过点是本例要求的明确配音结果编辑定位入口缺失；普通音频片段选择/素材预览本身不被认定为错误操作。首次翻译配音时长错误是另一个准备阶段问题，不混作导航失败依据。初次受控中文文件编码有误导致的hash mismatch已修正；修正为UTF-8并独立核对SHA后才生成短旁白，该准备错误不计产品缺陷。源SRT SHA4495530e…，译文SRT SHA9027be94…；未验证声音音色质量或原片完整翻译质量。",
+      "brief": "配音结果缺少直接定位Voiceover的编辑入口",
+      "defect": {
+        "serialNumber": "FWXC-483",
+        "workitemId": "bc663b74e4bf60d0019f5c04e3",
+        "url": "https://devops.aliyun.com/projex/project/1e401ac99539c3999e00e40006/bug#openWorkitemIdentifier=bc663b74e4bf60d0019f5c04e3",
+        "verifiedAt": "2026-11-13T15:09:40.2779699+08:00",
+        "screenshots": 3,
+        "status": "🤔AI提缺陷",
+        "localRecord": "docs/defects/ERYE210-004-voice-result-entry-production-20261113.md",
+        "attachmentCount": 8
+      }
+    },
+    {
+      "id": "ERYE210-005",
+      "status": "Failed",
+      "actual": "首次从去口水词入口分析后，自动进入正确工程Scripts/文稿，显示原片英语文稿及2个停顿候选，首进子项通过。返回Media后点击当前真实“审阅剪辑”入口，等待30秒仍停Media，不能回到文稿审核页，本例按入口返回问题记Failed。手动切文稿可见正确内容。未点击移除/确认应用；视频及原声均为同一源文件0～20秒，实际预览播放1.099745秒且总长20秒，无媒体错误。导航前后工程版本2及全部保存内容保持，marked/deleted均0。",
+      "screenshots": [
+        "ERYE210-005-prompt.png",
+        "ERYE210-005-auto-scripts.png",
+        "ERYE210-005-review-reentry-failed.png",
+        "ERYE210-005-manual-scripts-loaded.png",
+        "ERYE210-005-return-timeline.png"
+      ],
+      "conversationId": "72549885-fe47-462e-ae8f-264803861a1d",
+      "runId": "run_v2_cb550b8136194a5d9aa24e736c71e6a1",
+      "prompt": "请对本次上传的20秒 E196-A.mp4 进行去口水词分析，检测英语讲话中的口头语和无效停顿，保留原片全部语义。请先展示可审核的文稿和编辑候选，打开去口水词审核界面；不要直接应用删除，不要裁剪音视频或生成剪辑成片，等我明确确认后再执行。",
+      "projectId": "b62a1410-29b9-44b8-a437-988710035299",
+      "brief": "首次进入Scripts正常；从Media点审阅剪辑仍停Media",
+      "steps": [
+        "新建本例独立会话；输入/clean并在/菜单选择去口水词，上传同一20秒原片，一次发送完整指令。",
+        "等待原任务editor_cleanup_analyze完成；系统进入waiting_for_confirmation，并自动打开Scripts/文稿。记录英语文稿、0口水词/2停顿候选及20秒时间线，未手动切Scripts作为首进通过依据。",
+        "点击Media返回素材和主时间线，再点击当前会话中的“审阅剪辑”按钮；该按钮只滚动到消息，等待30秒仍选中Media，Scripts审核页未显示。保存失败现场。",
+        "手动切Scripts，等待文稿/移除按钮加载完；文稿和两个停顿可见，仅用来确认正确工程及数据，不替代失败的审核入口。",
+        "收起文稿面板返回主时间线，真实播放约1.1秒后暂停；回读工程，视频/原声来源及0～20秒范围保持，版本2和全部内容相同，未出现删除。"
+      ],
+      "supplement": "首进路径及不自动应用子项通过；未通过为本轮同时核验的实际审核入口返回Scripts分支。waiting_for_confirmation是内容审核，并非缺参数补槽；本例要求未明确应用前保持原片，因此未点击移除或通过审核，不将停在审核阶段记为阻塞或完整剪辑流程通过。未验证候选算法准确性、实际删除及导出。",
+      "defect": {
+        "serialNumber": "FWXC-484",
+        "workitemId": "f97b390bf7704588fed0bfa706",
+        "url": "https://devops.aliyun.com/projex/project/1e401ac99539c3999e00e40006/bug#openWorkitemIdentifier=f97b390bf7704588fed0bfa706",
+        "verifiedAt": "2026-11-13T15:09:52.7784786+08:00",
+        "screenshots": 3,
+        "status": "🤔AI提缺陷",
+        "localRecord": "docs/defects/ERYE210-005-review-return-production-20261113.md",
+        "attachmentCount": 5
+      }
+    }
+  ],
+  "completedDate": "2026-11-13",
+  "closureNote": "本批五条均已完成页面用例核验，2 Passed / 3 Failed，无Not Run或Blocked。005的原任务保留waiting_for_confirmation，仅分析和审核、不执行移除/应用/导出，符合本例不自动应用的测试边界；它不是缺参数补槽。未通过截图与操作步骤已保留，云效已按用户要求直接新建FWXC-482/FWXC-483/FWXC-484，7张截图嵌入、16个附件及正文回读通过；未重跑业务、未提交或推送代码。",
+  "cloudSync": {
+    "date": "2026-11-13",
+    "created": 3,
+    "defects": [
+      "FWXC-482",
+      "FWXC-483",
+      "FWXC-484"
+    ],
+    "screenshots": 7,
+    "attachments": 16,
+    "verified": true,
+    "historicalDeduplication": false,
+    "preconditionsPerDefect": 3
+  }
+}

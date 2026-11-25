@@ -1,0 +1,198 @@
+{
+  "date": "2026-11-16",
+  "method": "official Yunxiao OpenAPI via tools/yunxiao",
+  "created": 2,
+  "deduplication": false,
+  "own_checkpoint_recovery": true,
+  "screenshots_uploaded": 6,
+  "attachments_verified": 13,
+  "verified": true,
+  "cases": {
+    "ERYE199-017": {
+      "id": "FWXC-590",
+      "workitem_id": "df4df4dc44a01c0fa27b75c627",
+      "url": "https://devops.aliyun.com/projex/project/1e401ac99539c3999e00e40006/bug#openWorkitemIdentifier=df4df4dc44a01c0fa27b75c627",
+      "title": "【生产环境】【ERYE199-017】仅裁短A时连带前移B及其原声，要求保留的空隙被闭合",
+      "case_id": "ERYE199-017",
+      "key": "ERYE199-017-V2-TRIM-MOVES-B-PROD-20261116",
+      "status": "🤔AI提缺陷",
+      "assigned_to": "牛诗晴",
+      "sprint": "重构10-29",
+      "labels": [
+        "生产环境"
+      ],
+      "priority": "高",
+      "serious_level": "2-严重",
+      "verified": true,
+      "screenshots": 3,
+      "attachments": 5,
+      "synced_at": "2026-11-16T15:33:42.1955037+08:00",
+      "local_report": "docs/defects/ERYE199-017-trim-moves-B-production-20261116.md",
+      "attachment_receipts": [
+        {
+          "name": "017-before.png",
+          "size": 216489,
+          "sha256": "62865125d89c96a6a03b6ac3433e2a572a9020f5b2f5db22715aee16ddc712f1",
+          "id": "e09d8a4f6e4cf9ee93e762989e"
+        },
+        {
+          "name": "017-gap-closed-at-4.png",
+          "size": 284987,
+          "sha256": "fbae396b6d8f8e26f82b49eb73effcbdfdded647c4306ac401b72a1926a85079",
+          "id": "1adc2b1803279b43040857245d"
+        },
+        {
+          "name": "017-error-after-refresh.png",
+          "size": 313937,
+          "sha256": "6aa9dd5052aadac922d0ebf751e4589b7f189925f8eae883a801d1d85fe2a2cd",
+          "id": "79fd8a9e68e26dffe094f89166"
+        },
+        {
+          "name": "V.mp4",
+          "size": 2975172,
+          "sha256": "e432370eb6cda0797076d6091622f2f7e0acd94cef690f1679c1a01f2349aba9",
+          "id": "47d55bdd83fc2d7e2918313665"
+        },
+        {
+          "name": "case-evidence.json",
+          "size": 10451,
+          "sha256": "9894c5cfb3b475c79fa064cea17a427e31db35e1d1d1874546ea73eb5ae5ff16",
+          "id": "e1e9e082d02e92ad27667b53d2"
+        }
+      ],
+      "images": [
+        {
+          "path": "017-before.png",
+          "caption": "操作前：同源独立A/B及其关联原声分别位于0～5、5～10秒，工程时长10秒。",
+          "sha256": "62865125d89c96a6a03b6ac3433e2a572a9020f5b2f5db22715aee16ddc712f1",
+          "id": "e09d8a4f6e4cf9ee93e762989e",
+          "size": 216489,
+          "embedded": true
+        },
+        {
+          "path": "017-gap-closed-at-4.png",
+          "caption": "失败现场：只裁A后，4秒已播放B源1秒，B和原声B实际位于3～8秒，工程被缩短为8秒。",
+          "sha256": "fbae396b6d8f8e26f82b49eb73effcbdfdded647c4306ac401b72a1926a85079",
+          "id": "1adc2b1803279b43040857245d",
+          "size": 284987,
+          "embedded": true
+        },
+        {
+          "path": "017-error-after-refresh.png",
+          "caption": "刷新后：B及其原声仍前移，4秒仍是B源1秒，3～5秒预期空隙未恢复。",
+          "sha256": "6aa9dd5052aadac922d0ebf751e4589b7f189925f8eae883a801d1d85fe2a2cd",
+          "id": "79fd8a9e68e26dffe094f89166",
+          "size": 313937,
+          "embedded": true
+        }
+      ],
+      "description_sha256": "c5ea1c379e8e30f84fb195beef20faea4181751f09d354943448af0e493b7287"
+    },
+    "ERYE199-053": {
+      "id": "FWXC-591",
+      "workitem_id": "cf695e0a8ad4e178279e339726",
+      "url": "https://devops.aliyun.com/projex/project/1e401ac99539c3999e00e40006/bug#openWorkitemIdentifier=cf695e0a8ad4e178279e339726",
+      "title": "【生产环境】【ERYE199-053】导入空SRT未提示无有效字幕，新增空字幕轨并持久化",
+      "case_id": "ERYE199-053",
+      "key": "ERYE199-053-V2-EMPTY-SRT-PERSISTED-PROD-20261116",
+      "status": "🤔AI提缺陷",
+      "assigned_to": "牛诗晴",
+      "sprint": "重构10-29",
+      "labels": [
+        "生产环境"
+      ],
+      "priority": "中",
+      "serious_level": "3-一般",
+      "verified": true,
+      "screenshots": 3,
+      "attachments": 8,
+      "synced_at": "2026-11-16T15:34:00.4771867+08:00",
+      "local_report": "docs/defects/ERYE199-053-empty-srt-track-production-20261116.md",
+      "attachment_receipts": [
+        {
+          "sha256": "bf6d4749fd789a81894b1fa9f37de456c1a9c21eb2d1bbb618c31a559b47b282",
+          "name": "053-before.png",
+          "id": "1a732babde2623c2f84919eaab",
+          "size": 238232
+        },
+        {
+          "sha256": "7be00c11689ef9126b5ec16df8c15a8054753bfffe494d6134c55f7b0b323af9",
+          "name": "053-empty-srt-added-empty-track.png",
+          "id": "ba5a6654132999467b13be217b",
+          "size": 234880
+        },
+        {
+          "sha256": "f88567ce0f8d7883396f943f483ca7c96f68ad1876bf50bf86a52e3d1160a208",
+          "name": "053-empty-track-after-refresh.png",
+          "id": "6a3eb805c1703fa8c3bf4e5d0d",
+          "size": 246793
+        },
+        {
+          "sha256": "e432370eb6cda0797076d6091622f2f7e0acd94cef690f1679c1a01f2349aba9",
+          "name": "V.mp4",
+          "id": "c8c848a661c03331b48a88a6c7",
+          "size": 2975172
+        },
+        {
+          "sha256": "bbd823436b7d0711c1d61417d0cff46eba82a93d124a847d4f4fa2f1e99a14b7",
+          "name": "case-evidence.json",
+          "id": "fe945698590e58ab0d8a1b3b6a",
+          "size": 15923
+        },
+        {
+          "sha256": "704e6445957f3288d86572e78ef2bc5a6d88027c305710f03d5b81e32e58db32",
+          "name": "fixed.srt",
+          "id": "944d8445925432cf9c7331ec52",
+          "size": 88
+        },
+        {
+          "sha256": "890db992086a16c4dfef1c54c30ef6c701e64ce016b05e8cc93c2811505f6764",
+          "name": "broken.srt",
+          "id": "469450bf2c828766d428e5a9f6",
+          "size": 28
+        },
+        {
+          "sha256": "7919ac8107d1e79754dd273eed740ec19f6a8b766222150bdee46c0dbf4a4ed7",
+          "name": "empty-srt-preparation.txt",
+          "id": "3a73cf26185f48b94f7f7c6954",
+          "size": 629
+        }
+      ],
+      "images": [
+        {
+          "path": "053-before.png",
+          "caption": "操作前：原Fixed A1～3秒、Fixed B6～8秒及视频/原声均已保存，只有一条合法字幕轨。",
+          "sha256": "bf6d4749fd789a81894b1fa9f37de456c1a9c21eb2d1bbb618c31a559b47b282",
+          "id": "1a732babde2623c2f84919eaab",
+          "size": 238232,
+          "embedded": true
+        },
+        {
+          "path": "053-empty-srt-added-empty-track.png",
+          "caption": "失败现场：空SRT登记并放入工程后，时间线上新增空字幕轨，页面未提示没有有效字幕。",
+          "sha256": "7be00c11689ef9126b5ec16df8c15a8054753bfffe494d6134c55f7b0b323af9",
+          "id": "ba5a6654132999467b13be217b",
+          "size": 234880,
+          "embedded": true
+        },
+        {
+          "path": "053-empty-track-after-refresh.png",
+          "caption": "刷新及编辑恢复对照：原A可改为RECOVER053并保存，Fixed B保持；新增的无字幕内容轨仍持久存在。",
+          "sha256": "f88567ce0f8d7883396f943f483ca7c96f68ad1876bf50bf86a52e3d1160a208",
+          "id": "6a3eb805c1703fa8c3bf4e5d0d",
+          "size": 246793,
+          "embedded": true
+        }
+      ],
+      "description_sha256": "60ca2c30e689bad09f4f56bdef43be3b3de94317657a161e28a047a368f8af5b"
+    }
+  },
+  "rerun_performed": false,
+  "execution_counts_unchanged": {
+    "Passed": 31,
+    "Failed": 8,
+    "Blocked": 2,
+    "Not Applicable": 22,
+    "Not Run": 0
+  }
+}

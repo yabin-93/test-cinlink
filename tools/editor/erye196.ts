@@ -180,7 +180,8 @@ export class Editor196 {
     return { id, name: content.name as string, before };
   }
   async execute(caseId: string, fixture: { id: string; name: string; before: Json }, instruction: string) {
-    const prompt = `只编辑当前已保存工程“${fixture.name}”（工程ID：${fixture.id}），不要新建工程或生成替代视频。${instruction}`;
+    await expect(this.page.locator('.ed-project-name').first()).toHaveText(fixture.name);
+    const prompt = `只编辑当前工程，不新建工程或生成替代视频。${instruction}`;
     const row: Json = { caseId, projectId: fixture.id, projectName: fixture.name, prompt, startedAt: new Date().toISOString(), clarifications: [] };
     this.results.push(row);
     try {

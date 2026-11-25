@@ -1,0 +1,220 @@
+{
+  "date": "2026-11-16",
+  "environment": "production",
+  "counts": {
+    "Failed": 5
+  },
+  "rounds": {
+    "submitted": 19,
+    "total": 25,
+    "notRunForPrerequisites": 6,
+    "pendingApplicable": 0,
+    "businessCounts": {
+      "Failed": 12,
+      "Blocked": 1,
+      "Passed": 2,
+      "Not Applicable": 4
+    }
+  },
+  "recordCheck": {
+    "at": "2026-11-17T02:15:09.365668+00:00",
+    "sourceDefinitionsExact": 25,
+    "acceptedPromptsExact": 19,
+    "uniqueAcceptedRuns": 19,
+    "caseCounts": {
+      "Failed": 5
+    },
+    "submittedRoundBusinessCounts": {
+      "Failed": 12,
+      "Blocked": 1,
+      "Passed": 2,
+      "Not Applicable": 4
+    },
+    "unsubmittedForMissingPrerequisites": 6,
+    "failureScreenshotsCopiedWithoutChanges": 18,
+    "downloadedArtifactsIntegrityVerified": 9,
+    "publicCredentialFindings": 0,
+    "pendingAcceptedRuns": 0
+  },
+  "defectSync": {
+    "date": "2026-11-17",
+    "testDate": "2026-11-16",
+    "method": "official Yunxiao OpenAPI via tools/yunxiao",
+    "created": 7,
+    "deduplication": false,
+    "mergeWithinCurrentBatch": true,
+    "ownCheckpointRecovery": true,
+    "screenshotsUploaded": 15,
+    "attachmentsVerified": 45,
+    "verified": true,
+    "rerunPerformed": false,
+    "report": "defect-sync-production-20261117.md",
+    "notSubmittedAsDefects": [
+      "Case01缺A及其依赖修改存在源素材/首稿缺口，不能全归因产品缺陷。",
+      "Case02/05第2～4轮6条缺前置未提交。",
+      "4轮假设错误未触发，未计缺陷。",
+      "Case05独立末轮已通过，首次补槽网络失败已恢复，不另报稳定缺陷。"
+    ],
+    "executionCountsUnchanged": {
+      "cases": {
+        "Failed": 5
+      },
+      "submitted": 19,
+      "notRunForPrerequisites": 6,
+      "businessCounts": {
+        "Failed": 12,
+        "Blocked": 1,
+        "Passed": 2,
+        "Not Applicable": 4
+      }
+    }
+  },
+  "cases": [
+    {
+      "id": "ICP-EC-01",
+      "status": "Failed",
+      "summary": "仅交付B/C两条广告，A缺失；A两轮修改仅分析，完整三条广告目标未达。",
+      "actual": "5轮原文均已提交并完成观察：首轮只交付B/C两条1080×1920广告（24.24/26.01秒），缺A；第2轮选A后只交付分析文档，未替换前3秒；第3轮正确保留B既有Shop Now和其他内容；第4轮核实C原声/字幕没有改意，未触发假设错误；第5轮按实际补槽补交同源真实折叠片段后，仍仅交付分析文档，未生成AI镜头或替换A。整例未达到三条完整广告交付。普通自行车收纳痛点画面支持不足单列为素材覆盖限制，不据此认定全部未交付均为产品缺陷。",
+      "conversationId": "deb4f615-8abe-421d-a880-51302ab5ef7d",
+      "defectTriage": "源素材缺普通自行车收纳对比与参考，后续依赖A首稿，暂不能明确归为产品缺陷，本次未提交；保留原Failed及未覆盖说明"
+    },
+    {
+      "id": "ICP-EC-02",
+      "status": "Failed",
+      "summary": "首轮规划1200秒超时；独立SKU10末轮参数校验失败；第2～4轮缺首稿。",
+      "actual": "首轮10款整体制作因规划模型等待1200秒超时，零首稿。第2～4轮因无生成SKU03/SKU05及10款风格基线未提交；第5轮素材充分性可独立，已按原文、只给SKU10正面源及原参考重新绑定补跑，但模型参考参数校验失败，仍无AI上身图/视频交付。两次实际失败原图均保存。",
+      "conversationId": "1c7540dd-4e59-4146-a527-be07c15ad252",
+      "cloudDefects": [
+        {
+          "id": "FWXC-625",
+          "url": "https://devops.aliyun.com/projex/project/1e401ac99539c3999e00e40006/bug#openWorkitemIdentifier=c87a29cd1d5996c0fa46eb4adf",
+          "title": "【生产环境】【电商Case02】10款女装批量制作在规划阶段1200秒超时，未交付图片或视频",
+          "key": "ICP-EC02-BATCH-PLANNING-TIMEOUT-PROD-20261117",
+          "coveredRounds": [
+            1
+          ],
+          "verified": true,
+          "status": "🤔AI提缺陷",
+          "screenshots": 1,
+          "attachments": 5,
+          "localReport": "docs/defects/icp-ec02-batch-planning-timeout-prod-20261117.md"
+        },
+        {
+          "id": "FWXC-626",
+          "url": "https://devops.aliyun.com/projex/project/1e401ac99539c3999e00e40006/bug#openWorkitemIdentifier=ddeb25492d57ba95d8e4dc2d2d",
+          "title": "【生产环境】【电商Case02】SKU10上身图生成报model_reference_file_id参数校验错误，图片及视频未交付",
+          "key": "ICP-EC02-SKU10-MODEL-REFERENCE-INVALID-PROD-20261117",
+          "coveredRounds": [
+            5
+          ],
+          "verified": true,
+          "status": "🤔AI提缺陷",
+          "screenshots": 1,
+          "attachments": 6,
+          "localReport": "docs/defects/icp-ec02-sku10-model-reference-invalid-prod-20261117.md"
+        }
+      ]
+    },
+    {
+      "id": "ICP-EC-03",
+      "status": "Failed",
+      "summary": "三版齐全；Reels初次修复不完整，TikTok15秒改版及安全区修改因引用冲突失败。",
+      "actual": "5轮原文均已执行：首轮三版齐全且同源，A/B有裁切和双层字幕、B缺Shop Now；第2轮Reels仅部分修复，骑行主体仍被裁；第3轮AI背景错误假设未触发，事实补槽后正确保持；第4轮TikTok15秒修订因saved highlight工程/修订不匹配失败；第5轮Reels安全区修正版可导出且顺序保持，TikTok因REFERENCE_CONFLICT失败。Shopify各轮均未串改。整体未通过，失败原图及实际MP4已保存。",
+      "conversationId": "c6361f94-ada7-433b-80fe-f90ecbee664e",
+      "cloudDefects": [
+        {
+          "id": "FWXC-627",
+          "url": "https://devops.aliyun.com/projex/project/1e401ac99539c3999e00e40006/bug#openWorkitemIdentifier=734bcbf473a246b0fe65b85187",
+          "title": "【生产环境】【电商Case03】横版转竖版裁掉产品及原字幕，Reels局部修复后仍有主体缺失",
+          "key": "ICP-EC03-VERTICAL-CROP-SUBTITLE-LAYOUT-PROD-20261117",
+          "coveredRounds": [
+            1,
+            2
+          ],
+          "verified": true,
+          "status": "🤔AI提缺陷",
+          "screenshots": 3,
+          "attachments": 7,
+          "localReport": "docs/defects/icp-ec03-vertical-crop-subtitle-layout-prod-20261117.md"
+        },
+        {
+          "id": "FWXC-628",
+          "url": "https://devops.aliyun.com/projex/project/1e401ac99539c3999e00e40006/bug#openWorkitemIdentifier=25f4dfa4e583d270cbf389c7c9",
+          "title": "【生产环境】【电商Case03】TikTok成片结尾只有品牌标识，未添加要求的Shop Now CTA",
+          "key": "ICP-EC03-TIKTOK-MISSING-CTA-PROD-20261117",
+          "coveredRounds": [
+            1
+          ],
+          "verified": true,
+          "status": "🤔AI提缺陷",
+          "screenshots": 1,
+          "attachments": 5,
+          "localReport": "docs/defects/icp-ec03-tiktok-missing-cta-prod-20261117.md"
+        },
+        {
+          "id": "FWXC-629",
+          "url": "https://devops.aliyun.com/projex/project/1e401ac99539c3999e00e40006/bug#openWorkitemIdentifier=8014ebc4b36863fc090d9a5ad8",
+          "title": "【生产环境】【电商Case03】连续修改TikTok时工程或素材引用冲突，15秒改版和安全区修正版未交付",
+          "key": "ICP-EC03-TIKTOK-REVISION-REFERENCE-CONFLICT-PROD-20261117",
+          "coveredRounds": [
+            4,
+            5
+          ],
+          "verified": true,
+          "status": "🤔AI提缺陷",
+          "screenshots": 3,
+          "attachments": 7,
+          "localReport": "docs/defects/icp-ec03-tiktok-revision-reference-conflict-prod-20261117.md"
+        }
+      ]
+    },
+    {
+      "id": "ICP-EC-04",
+      "status": "Failed",
+      "summary": "西语音轨已交付；画面英语未替换，CTA和文字修改均仅分析未改片。",
+      "actual": "5轮原文均已执行：首轮交付35秒、540×960西语音轨/字幕视频，但实际画面仍有英语卖点、字幕及Shop Now；第2轮可折叠误译、第4轮折叠演示音画错位均为未触发假设，事实补槽后保持；第3轮CTA及第5轮英语画面文字替换仅分析、未制作修改视频。整体未完成本地化，失败原图、MP4和语音核验证据已保存。",
+      "conversationId": "a7055536-136f-447d-aade-b9df3407daa1",
+      "cloudDefects": [
+        {
+          "id": "FWXC-630",
+          "url": "https://devops.aliyun.com/projex/project/1e401ac99539c3999e00e40006/bug#openWorkitemIdentifier=d4c5033724b50514e1eee69c3c",
+          "title": "【生产环境】【电商Case04】西语广告残留英文卖点和CTA，后续文字修改仅返回分析未生成修正版",
+          "key": "ICP-EC04-SPANISH-ONSCREEN-TEXT-NOT-REPLACED-PROD-20261117",
+          "coveredRounds": [
+            1,
+            3,
+            5
+          ],
+          "verified": true,
+          "status": "🤔AI提缺陷",
+          "screenshots": 5,
+          "attachments": 10,
+          "localReport": "docs/defects/icp-ec04-spanish-onscreen-text-not-replaced-prod-20261117.md"
+        }
+      ]
+    },
+    {
+      "id": "ICP-EC-05",
+      "status": "Failed",
+      "summary": "首轮20秒广告供应商处理失败；独立末轮素材判断和5秒动态替代展示通过；第2～4轮缺首稿。",
+      "actual": "首轮Tencent VOD视频处理失败，无20秒广告首稿。第2～4轮依赖广告的外观/动作/卖点修正，缺前置未提交。第5轮已按原文独立执行：明确拒绝推测未知背面/底部并列明所需照片，填必要5秒时长后交付实际动态镜头，抽帧未见未知结构编造，该独立末轮通过。首次补槽网络失败有截图并恢复；整例完整广告目标仍Failed。",
+      "conversationId": "4a50ae5d-6f02-46df-a810-3416332e5108",
+      "cloudDefects": [
+        {
+          "id": "FWXC-631",
+          "url": "https://devops.aliyun.com/projex/project/1e401ac99539c3999e00e40006/bug#openWorkitemIdentifier=fc2731f00849917dfea1868f89",
+          "title": "【生产环境】【电商Case05】根据吸尘器图片制作20秒广告时供应商视频处理失败，未交付成片",
+          "key": "ICP-EC05-AMAZON-AD-PROVIDER-FAILED-PROD-20261117",
+          "coveredRounds": [
+            1
+          ],
+          "verified": true,
+          "status": "🤔AI提缺陷",
+          "screenshots": 1,
+          "attachments": 5,
+          "localReport": "docs/defects/icp-ec05-amazon-ad-provider-failed-prod-20261117.md"
+        }
+      ]
+    }
+  ]
+}

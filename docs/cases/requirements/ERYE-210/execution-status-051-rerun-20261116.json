@@ -1,0 +1,138 @@
+{
+  "date": "2026-11-16",
+  "requirement": "ERYE-210",
+  "environment": "production",
+  "browser": "headed Google Chrome",
+  "counts": {
+    "Passed": 1,
+    "Failed": 0,
+    "Blocked": 0,
+    "Not Applicable": 0,
+    "Not Run": 0
+  },
+  "cases": [
+    {
+      "id": "ERYE210-051",
+      "status": "Passed",
+      "reason": "",
+      "automated": true,
+      "workspaceId": "4b1ba37f-1e9b-4530-9365-5644f81b8c66",
+      "caseVersion": "current-agent-background-20261113",
+      "annotations": [
+        {
+          "type": "case-version",
+          "description": "current-agent-background-20261113"
+        }
+      ],
+      "projects": {
+        "051": {
+          "cid": "609d5889-3fb0-4074-97a0-8ac7b709ce73",
+          "pid": "46170ca2-51b2-4f8a-b2a0-9011c2035d6d",
+          "name": "ERYE210-051-46170ca2"
+        }
+      },
+      "checks": [
+        {
+          "stage": "agent-background-volume",
+          "runId": "run_v2_3d7ebc6967124d3a805ce1f87892f0ed",
+          "before": {
+            "role": "background",
+            "type": "audio",
+            "clips": [
+              {
+                "volume": 1,
+                "clip_id": "c071fcd4-2637-4286-b6bd-2a074bca2532",
+                "file_id": "file_cloud_t425zrk7vp7r5zsxft2twjps6o",
+                "playback_rate": 1,
+                "source_in_sec": 0,
+                "source_out_sec": 1.3467573696145125,
+                "timeline_start_sec": 0
+              }
+            ],
+            "muted": false,
+            "track_id": "8aef35c6-6727-4a6a-a314-806288099157",
+            "offset_sec": 0,
+            "linked_video_track_id": null
+          },
+          "after": {
+            "role": "background",
+            "type": "audio",
+            "clips": [
+              {
+                "volume": 0.5011872336272722,
+                "clip_id": "c071fcd4-2637-4286-b6bd-2a074bca2532",
+                "file_id": "file_cloud_t425zrk7vp7r5zsxft2twjps6o",
+                "playback_rate": 1,
+                "source_in_sec": 0,
+                "source_out_sec": 1.3467573696145125,
+                "timeline_start_sec": 0
+              }
+            ],
+            "muted": false,
+            "track_id": "8aef35c6-6727-4a6a-a314-806288099157",
+            "offset_sec": 0,
+            "linked_video_track_id": null
+          },
+          "status": "done",
+          "view": {
+            "name": "ERYE210-051-46170ca2",
+            "module": [
+              "字幕"
+            ],
+            "playhead": "0",
+            "selected": [],
+            "media": [
+              {
+                "paused": true,
+                "duration": 20
+              }
+            ]
+          }
+        },
+        {
+          "stage": "explicit-volume-location",
+          "control": "音频轴上可上下拖拽的音量线",
+          "ariaValue": "50",
+          "readOnly": true,
+          "manualDragPerformed": false,
+          "project": {
+            "cid": "609d5889-3fb0-4074-97a0-8ac7b709ce73",
+            "pid": "46170ca2-51b2-4f8a-b2a0-9011c2035d6d",
+            "name": "ERYE210-051-46170ca2"
+          }
+        }
+      ],
+      "finishedAt": "2026-11-16T02:34:59.836Z",
+      "actual": "2026-11-16复测Passed：生产Chrome新工程，在Captions一次提交背景音轨降低6dB请求，Agent约54秒实际执行；音量由100%变为约50.12%（页面音量线显示50%），刷新后仍50%，保存版本1→2。音轨文件/位置及原视频、原声、字幕保持，运行期间未抢占Captions。未手动拖动音量线、未重复提交任务；原11-13失败保留历史。",
+      "report": "results-051-rerun-prod-20261116.md",
+      "evidence": "evidence-051-rerun-prod-20261116/manifest.json",
+      "runId": "run_v2_3d7ebc6967124d3a805ce1f87892f0ed",
+      "conversationId": "609d5889-3fb0-4074-97a0-8ac7b709ce73",
+      "projectId": "46170ca2-51b2-4f8a-b2a0-9011c2035d6d",
+      "refreshVerification": {
+        "project": {
+          "cid": "609d5889-3fb0-4074-97a0-8ac7b709ce73",
+          "pid": "46170ca2-51b2-4f8a-b2a0-9011c2035d6d",
+          "name": "ERYE210-051-46170ca2"
+        },
+        "sourceRevision": 1,
+        "resultRevision": 2,
+        "volumeBefore": 1,
+        "volumeAfter": 0.5011872336272722,
+        "volumePercentAfterRefresh": 50,
+        "sourceMediaUnchanged": true,
+        "originalVoiceAndSubtitlesUnchanged": true,
+        "manualDragPerformed": false,
+        "newTaskSubmitted": false
+      },
+      "sourceBatch": "prod-051-rerun-20261116-01",
+      "screenshots": [
+        "051-after-agent.png",
+        "051-prompt-captions.png",
+        "051-real-volume-control.png",
+        "051-volume-line-after-refresh.png",
+        "ERYE210-051-passed.png"
+      ]
+    }
+  ]
+}

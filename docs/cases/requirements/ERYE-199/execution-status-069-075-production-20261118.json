@@ -1,0 +1,871 @@
+{
+  "date": "2026-11-18",
+  "environment": "production",
+  "base_url": "https://app.cinlink.ai",
+  "task_space": 6,
+  "counts": {
+    "Passed": 6,
+    "Failed": 1
+  },
+  "scope": "ERYE199-069～075；7条原生卡片生产实跑",
+  "report": "results-069-075-production-20261118.md",
+  "cases": [
+    {
+      "id": "ERYE199-069",
+      "status": "Passed",
+      "automation": "AUTO",
+      "automation_status": "AUTO",
+      "script": "tools/editor/erye199/workflow-cards.mjs#069",
+      "automation_command": "node tools/editor/erye199/run-workflow-cards.mjs --case 069 --action observe --space 6 --report reports/erye199-069-075-production-20261118",
+      "actual": "原文字幕/视频/原声3轨、8句英文；原英语声音保持；20秒1280×720；两处原生预览播放、重入与刷新通过。",
+      "evidence": [
+        "evidence-069-075-production-20261118/069/before-submit.png",
+        "evidence-069-075-production-20261118/069/configuration.json",
+        "evidence-069-075-production-20261118/069/editor-observation.json",
+        "evidence-069-075-production-20261118/069/editor-tracks.png",
+        "evidence-069-075-production-20261118/069/playback-10.json",
+        "evidence-069-075-production-20261118/069/playback-2.json",
+        "evidence-069-075-production-20261118/069/playback-samples-10.json",
+        "evidence-069-075-production-20261118/069/playback-samples-2.json",
+        "evidence-069-075-production-20261118/069/preview-10.json",
+        "evidence-069-075-production-20261118/069/preview-10.png",
+        "evidence-069-075-production-20261118/069/preview-2.json",
+        "evidence-069-075-production-20261118/069/preview-2.png",
+        "evidence-069-075-production-20261118/069/product-verification.json",
+        "evidence-069-075-production-20261118/069/source-attached.png",
+        "evidence-069-075-production-20261118/069/task-terminal.png",
+        "evidence-069-075-production-20261118/069/ui-verified.png"
+      ],
+      "screenshots": [
+        "evidence-069-075-production-20261118/069/before-submit.png",
+        "evidence-069-075-production-20261118/069/editor-tracks.png",
+        "evidence-069-075-production-20261118/069/preview-10.png",
+        "evidence-069-075-production-20261118/069/preview-2.png",
+        "evidence-069-075-production-20261118/069/source-attached.png",
+        "evidence-069-075-production-20261118/069/task-terminal.png",
+        "evidence-069-075-production-20261118/069/ui-verified.png"
+      ],
+      "definition": "cases.md#erye199-card-multitrack",
+      "caseVersion": "v1-merged-erye199-20261118",
+      "legacyId": "ECMT-001",
+      "environment": "production",
+      "conversation_id": "b5e68552-af60-4e4b-a46e-d77fcceab2ac",
+      "run_id": "run_v2_ad5e87c0898f4d9aac97ea4efcf674a4",
+      "editor_id": "dc757ea0-8e90-427c-a123-3da5140fb33f",
+      "workspace": null,
+      "source_sha256": "b1fce3d9ba5094ca2d1acbe50b17aef903a6fcb353cbd19181ff3ae1a8f9a9a1",
+      "prompt": "为这条视频添加原文字幕。",
+      "checks": [
+        {
+          "name": "原生轨道数量",
+          "pass": true,
+          "detail": "expected=3,actual=3,names=原文字幕/视频/原声"
+        },
+        {
+          "name": "本轮源或产物工程对应",
+          "pass": true,
+          "detail": "source=F20-English-source-with-BGM.mp4,editor=F20-English-source-with-BGM.mp4"
+        },
+        {
+          "name": "原文字幕至少两句",
+          "pass": true,
+          "detail": "efforts to sabotage our healthcare by filing a formal request to strike down the entirety of our nation's healthcare law. Regardless of people's opinions of the Affordable Care Act, we know there's no"
+        },
+        {
+          "name": "原文为英语",
+          "pass": true,
+          "detail": "efforts to sabotage our healthcare by filing a formal request to strike down the entirety of our nation's healthcare law. Regardless of people's opinions of the Affordable Care Act, we know there's no"
+        },
+        {
+          "name": "无额外配音或BGM轨",
+          "pass": true,
+          "detail": "原文字幕/视频/原声"
+        },
+        {
+          "name": "返回结果重新进入保持",
+          "pass": true,
+          "detail": "轨道、片段时码、声音启用一致"
+        },
+        {
+          "name": "刷新后同工程轨道保持",
+          "pass": true,
+          "detail": "同会话重开轨道/字幕/声音保持"
+        }
+      ],
+      "failures": [],
+      "latest_execution_report": "results-069-075-production-20261118.md",
+      "latest_execution_batch": "erye199-069-075-production-20261118",
+      "product": {
+        "duration": 20.0,
+        "width": 1280,
+        "height": 720,
+        "language": "en"
+      },
+      "local_directory": "reports/erye199-069-075-production-20261118/069"
+    },
+    {
+      "id": "ERYE199-070",
+      "status": "Passed",
+      "automation": "AUTO",
+      "automation_status": "AUTO",
+      "script": "tools/editor/erye199/workflow-cards.mjs#070",
+      "automation_command": "node tools/editor/erye199/run-workflow-cards.mjs --case 070 --action observe --space 6 --report reports/erye199-069-075-production-20261118",
+      "actual": "译文字幕/视频/原声3轨、中文可编辑字幕；实际声音仍英语；20秒1280×720；预览、重入与刷新通过，无额外译声/BGM轨。",
+      "evidence": [
+        "evidence-069-075-production-20261118/070/before-submit.png",
+        "evidence-069-075-production-20261118/070/configuration.json",
+        "evidence-069-075-production-20261118/070/editor-observation.json",
+        "evidence-069-075-production-20261118/070/editor-tracks.png",
+        "evidence-069-075-production-20261118/070/playback-10.json",
+        "evidence-069-075-production-20261118/070/playback-2.json",
+        "evidence-069-075-production-20261118/070/playback-samples-10.json",
+        "evidence-069-075-production-20261118/070/playback-samples-2.json",
+        "evidence-069-075-production-20261118/070/preview-10.json",
+        "evidence-069-075-production-20261118/070/preview-10.png",
+        "evidence-069-075-production-20261118/070/preview-2.json",
+        "evidence-069-075-production-20261118/070/preview-2.png",
+        "evidence-069-075-production-20261118/070/product-verification.json",
+        "evidence-069-075-production-20261118/070/source-attached.png",
+        "evidence-069-075-production-20261118/070/task-terminal.png",
+        "evidence-069-075-production-20261118/070/ui-verified.png"
+      ],
+      "screenshots": [
+        "evidence-069-075-production-20261118/070/before-submit.png",
+        "evidence-069-075-production-20261118/070/editor-tracks.png",
+        "evidence-069-075-production-20261118/070/preview-10.png",
+        "evidence-069-075-production-20261118/070/preview-2.png",
+        "evidence-069-075-production-20261118/070/source-attached.png",
+        "evidence-069-075-production-20261118/070/task-terminal.png",
+        "evidence-069-075-production-20261118/070/ui-verified.png"
+      ],
+      "definition": "cases.md#erye199-card-multitrack",
+      "caseVersion": "v1-merged-erye199-20261118",
+      "legacyId": "ECMT-002",
+      "environment": "production",
+      "conversation_id": "4f263141-61c1-4eb6-be06-1ec866b2de28",
+      "run_id": "run_v2_cf45a6df9e4e4d5b998b7a1f8a61563d",
+      "editor_id": "ea7c24bf-7f65-4a7c-8ae1-e3c56d4323bd",
+      "workspace": null,
+      "source_sha256": "b1fce3d9ba5094ca2d1acbe50b17aef903a6fcb353cbd19181ff3ae1a8f9a9a1",
+      "prompt": "为这条视频添加简体中文字幕。",
+      "checks": [
+        {
+          "name": "原生轨道数量",
+          "pass": true,
+          "detail": "expected=3,actual=3,names=译文字幕/视频/原声"
+        },
+        {
+          "name": "本轮源或产物工程对应",
+          "pass": true,
+          "detail": "source=F20-English-source-with-BGM.mp4,editor=F20-English-source-with-BGM.mp4"
+        },
+        {
+          "name": "目标中文可编辑字幕",
+          "pass": true,
+          "detail": "试图通过正式提交申请来破坏我们的医疗保障， 要求彻底废除我们国家的 医疗保健法。 无论人们如何看待《平价医疗法案》， 我们知道，对辛勤工作的家庭来说， 没有什么比医疗保健更重要。 这是一个切身的问题。 它影响着"
+        },
+        {
+          "name": "无额外配音或BGM轨",
+          "pass": true,
+          "detail": "译文字幕/视频/原声"
+        },
+        {
+          "name": "返回结果重新进入保持",
+          "pass": true,
+          "detail": "轨道、片段时码、声音启用一致"
+        },
+        {
+          "name": "刷新后同工程轨道保持",
+          "pass": true,
+          "detail": "同会话重开轨道/字幕/声音保持"
+        }
+      ],
+      "failures": [],
+      "latest_execution_report": "results-069-075-production-20261118.md",
+      "latest_execution_batch": "erye199-069-075-production-20261118",
+      "product": {
+        "duration": 20.0,
+        "width": 1280,
+        "height": 720,
+        "language": "en"
+      },
+      "local_directory": "reports/erye199-069-075-production-20261118/070"
+    },
+    {
+      "id": "ERYE199-071",
+      "status": "Failed",
+      "automation": "AUTO",
+      "automation_status": "AUTO",
+      "script": "tools/editor/erye199/workflow-cards.mjs#071",
+      "automation_command": "node tools/editor/erye199/run-workflow-cards.mjs --case 071 --action observe --space 6 --report reports/erye199-069-075-production-20261118",
+      "actual": "译文模式仍在编辑器2秒和10秒处显示中文+英文，重入/刷新保持；下载成片对应帧只有中文。五类轨、中文译声及20秒成片正常；整例Failed。",
+      "evidence": [
+        "evidence-069-075-production-20261118/071/before-submit.png",
+        "evidence-069-075-production-20261118/071/configuration.json",
+        "evidence-069-075-production-20261118/071/editor-observation.json",
+        "evidence-069-075-production-20261118/071/editor-tracks.png",
+        "evidence-069-075-production-20261118/071/failure.png",
+        "evidence-069-075-production-20261118/071/manual-1794996691712.png",
+        "evidence-069-075-production-20261118/071/playback-10.json",
+        "evidence-069-075-production-20261118/071/playback-2.json",
+        "evidence-069-075-production-20261118/071/playback-observation.png",
+        "evidence-069-075-production-20261118/071/playback-samples-10.json",
+        "evidence-069-075-production-20261118/071/playback-samples-2.json",
+        "evidence-069-075-production-20261118/071/preview-0.json",
+        "evidence-069-075-production-20261118/071/preview-0.png",
+        "evidence-069-075-production-20261118/071/preview-10.json",
+        "evidence-069-075-production-20261118/071/preview-10.png",
+        "evidence-069-075-production-20261118/071/preview-2.json",
+        "evidence-069-075-production-20261118/071/preview-2.png",
+        "evidence-069-075-production-20261118/071/product-frame-2.png",
+        "evidence-069-075-production-20261118/071/product-verification.json",
+        "evidence-069-075-production-20261118/071/source-attached.png",
+        "evidence-069-075-production-20261118/071/task-terminal.png"
+      ],
+      "screenshots": [
+        "evidence-069-075-production-20261118/071/before-submit.png",
+        "evidence-069-075-production-20261118/071/editor-tracks.png",
+        "evidence-069-075-production-20261118/071/failure.png",
+        "evidence-069-075-production-20261118/071/manual-1794996691712.png",
+        "evidence-069-075-production-20261118/071/playback-observation.png",
+        "evidence-069-075-production-20261118/071/preview-0.png",
+        "evidence-069-075-production-20261118/071/preview-10.png",
+        "evidence-069-075-production-20261118/071/preview-2.png",
+        "evidence-069-075-production-20261118/071/product-frame-2.png",
+        "evidence-069-075-production-20261118/071/source-attached.png",
+        "evidence-069-075-production-20261118/071/task-terminal.png"
+      ],
+      "definition": "cases.md#erye199-card-multitrack",
+      "caseVersion": "v1-merged-erye199-20261118",
+      "legacyId": "ECMT-003",
+      "environment": "production",
+      "conversation_id": "c932beb9-ad5e-4548-a21c-270fff012bcd",
+      "run_id": "run_v2_3f61e36d877a4447b54acdf966f7542c",
+      "editor_id": "9f36fb24-73be-47ab-aec9-8b0927dc1cc0",
+      "workspace": {
+        "project_id": "74794cd0-ea12-4355-9eb6-e9a039a62fc7",
+        "project_name": "ERYE199-069-075-生产-20261118"
+      },
+      "source_sha256": "b1fce3d9ba5094ca2d1acbe50b17aef903a6fcb353cbd19181ff3ae1a8f9a9a1",
+      "prompt": "将这条视频翻译成简体中文配音，并显示简体中文字幕。",
+      "checks": [
+        {
+          "name": "原生轨道数量",
+          "pass": true,
+          "detail": "expected=5,actual=5,names=译文字幕/视频/原声/配音/背景音乐"
+        },
+        {
+          "name": "本轮源或产物工程对应",
+          "pass": true,
+          "detail": "source=F20-English-source-with-BGM.mp4,editor=F20-English-source-with-BGM.mp4"
+        },
+        {
+          "name": "目标中文可编辑字幕",
+          "pass": true,
+          "detail": "试图通过正式提交 一项要求废除我国整部 医疗保健法的申请，破坏我们的医疗保障。 不论人们对《平价医疗法案》持何种看法， 我们知道，对辛勤工作的家庭来说，没有任何问题 比医疗保健更重要。 这是关乎个人的问题。 它影响着"
+        },
+        {
+          "name": "BGM轨存在",
+          "pass": true,
+          "detail": "译文字幕/视频/原声/配音/背景音乐"
+        },
+        {
+          "name": "原声轨存在",
+          "pass": true,
+          "detail": "译文字幕/视频/原声/配音/背景音乐"
+        },
+        {
+          "name": "译声轨存在",
+          "pass": true,
+          "detail": "译文字幕/视频/原声/配音/背景音乐"
+        },
+        {
+          "name": "译文模式预览只显示中文-2",
+          "pass": false,
+          "detail": "试图通过正式提交\nefforts to sabotage our healthcare by filing a formal"
+        },
+        {
+          "name": "译文模式预览只显示中文-10",
+          "pass": false,
+          "detail": "不论人们对《平价医疗法案》持何种看法，\nRegardless of people's opinions of the Affordable Care Act,"
+        },
+        {
+          "name": "返回结果重新进入保持",
+          "pass": true,
+          "detail": "轨道、片段时码、声音启用一致"
+        },
+        {
+          "name": "刷新后同工程轨道保持",
+          "pass": true,
+          "detail": "同会话重开轨道/字幕/声音保持"
+        }
+      ],
+      "failures": [
+        "译文模式预览只显示中文-2：试图通过正式提交\nefforts to sabotage our healthcare by filing a formal",
+        "译文模式预览只显示中文-10：不论人们对《平价医疗法案》持何种看法，\nRegardless of people's opinions of the Affordable Care Act,"
+      ],
+      "latest_execution_report": "results-069-075-production-20261118.md",
+      "latest_execution_batch": "erye199-069-075-production-20261118",
+      "product": {
+        "duration": 20.0,
+        "width": 1280,
+        "height": 720,
+        "language": "zh"
+      },
+      "local_directory": "reports/erye199-069-075-production-20261118/071/attempt-2",
+      "credit_history": {
+        "prior_status": "Blocked",
+        "reason": "insufficient_credits: required200/available90",
+        "user_confirmed_topup": true,
+        "new_independent_attempt": 2,
+        "previous_conversation_id": "6845b1ee-822f-4bf8-ba00-d4d34d9214a2"
+      },
+      "local_defect": "../../../defects/ERYE199-071-translation-only-preview-bilingual-production-20261118.md",
+      "cloud_sync": "Submitted and verified",
+      "defect": {
+        "id": "FWXC-693",
+        "workitem_id": "ff5598f33938a383abd2f7590c",
+        "url": "https://devops.aliyun.com/projex/project/1e401ac99539c3999e00e40006/bug#openWorkitemIdentifier=ff5598f33938a383abd2f7590c",
+        "title": "【生产环境】翻译配音选择“译文”后编辑器仍显示双语，与生成成片不一致",
+        "case_id": "ERYE199-071",
+        "key": "ERYE199-071-TRANSLATION-ONLY-PREVIEW-BILINGUAL-PROD-20261118",
+        "status": "🤔AI提缺陷",
+        "assigned_to": "牛诗晴",
+        "sprint": "重构10-29",
+        "labels": [
+          "生产环境"
+        ],
+        "priority": "中",
+        "serious_level": "3-一般",
+        "verified": true,
+        "screenshots": 3,
+        "comparison_frames": 2,
+        "images_uploaded": 5,
+        "attachments": 8,
+        "synced_at": "2026-11-18T18:46:08.1036913+08:00",
+        "local_report": "docs/defects/ERYE199-071-translation-only-preview-bilingual-production-20261118.md",
+        "attachment_receipts": [
+          {
+            "id": "c4eeb94c9bca0f3b6905eda862",
+            "size": 373565,
+            "name": "071-before-submit-translation-only.png",
+            "sha256": "802a5957e6534b3fb47acc72e9e3a06a2eab4474b1da343026a8710e96416c7d"
+          },
+          {
+            "id": "ace1835be5766bdb8af9b95e63",
+            "size": 1009427,
+            "name": "071-preview-2-bilingual.png",
+            "sha256": "372b54a1b33659c673c42f7977b3cf079cb29a66976bb6232d34c34aa98490f2"
+          },
+          {
+            "id": "08c5a954c6b4c516ea8dd46aa4",
+            "size": 1023465,
+            "name": "071-preview-10-bilingual.png",
+            "sha256": "e62ba9e7ba4fa73b05e41d31b48ff3558cf249ce58261022c999a4387662d6f8"
+          },
+          {
+            "id": "3b45ab7c8aaaeb902149dcc6b7",
+            "size": 746684,
+            "name": "071-product-frame-2-chinese-only.png",
+            "sha256": "8e0747bd0e7deb246d3afb70c26bf0c57de97ece16d7aa09352f85dcd5f49950"
+          },
+          {
+            "id": "11c6922ddaea54d187fd725dc0",
+            "size": 726942,
+            "name": "071-source-frame-2-no-captions.png",
+            "sha256": "0caec33bf94ec654195cc9cc47876b9dbcb4f850d062bdf70991c37250d266db"
+          },
+          {
+            "id": "1b48c96d03a4a462e5e2a0fc9f",
+            "size": 2197394,
+            "name": "F20-English-source-with-BGM.mp4",
+            "sha256": "b1fce3d9ba5094ca2d1acbe50b17aef903a6fcb353cbd19181ff3ae1a8f9a9a1"
+          },
+          {
+            "id": "5fb3a1b1b267522d3cc1984cbe",
+            "size": 8043753,
+            "name": "071-actual-product.mp4",
+            "sha256": "461c5199315aff19afb99f901be8983a7b9f64d5056345a0f793edac6e1ef7fb"
+          },
+          {
+            "id": "b02c56f56af3b309c51590f440",
+            "size": 3383,
+            "name": "071-evidence-summary.json",
+            "sha256": "d13b9986215570a08519c237a32980c058bb3404153f695d6ad74bfa72fb7844"
+          }
+        ],
+        "images": [
+          {
+            "name": "071-before-submit-translation-only.png",
+            "id": "c4eeb94c9bca0f3b6905eda862",
+            "sha256": "802a5957e6534b3fb47acc72e9e3a06a2eab4474b1da343026a8710e96416c7d",
+            "size": 373565,
+            "caption": "页面实测截图：提交前字幕显示模式为“译文”，目标简体中文。",
+            "embedded": true
+          },
+          {
+            "name": "071-preview-2-bilingual.png",
+            "id": "ace1835be5766bdb8af9b95e63",
+            "sha256": "372b54a1b33659c673c42f7977b3cf079cb29a66976bb6232d34c34aa98490f2",
+            "size": 1009427,
+            "caption": "页面失败原图：约2.1秒编辑器同时显示中文及额外英文。",
+            "embedded": true
+          },
+          {
+            "name": "071-preview-10-bilingual.png",
+            "id": "08c5a954c6b4c516ea8dd46aa4",
+            "sha256": "e62ba9e7ba4fa73b05e41d31b48ff3558cf249ce58261022c999a4387662d6f8",
+            "size": 1023465,
+            "caption": "页面失败原图：10秒处仍显示中英双语。",
+            "embedded": true
+          },
+          {
+            "name": "071-product-frame-2-chinese-only.png",
+            "id": "3b45ab7c8aaaeb902149dcc6b7",
+            "sha256": "8e0747bd0e7deb246d3afb70c26bf0c57de97ece16d7aa09352f85dcd5f49950",
+            "size": 746684,
+            "caption": "辅助对照图（实际下载成片抽帧）：同一时间点只有中文，不是页面截图。",
+            "embedded": true
+          },
+          {
+            "name": "071-source-frame-2-no-captions.png",
+            "id": "11c6922ddaea54d187fd725dc0",
+            "sha256": "0caec33bf94ec654195cc9cc47876b9dbcb4f850d062bdf70991c37250d266db",
+            "size": 726942,
+            "caption": "辅助对照图（源视频抽帧）：原片无烧录英文，不是页面截图。",
+            "embedded": true
+          }
+        ],
+        "description_sha256": "52284635a93463fee1102c2a9e309d9ad796412f90f13933f6cf9940bc262580"
+      },
+      "current_failure_cloud_status": "Submitted and verified",
+      "latest_defect_sync_report": "defects-071-production-20261118.md"
+    },
+    {
+      "id": "ERYE199-072",
+      "status": "Passed",
+      "automation": "AUTO",
+      "automation_status": "AUTO",
+      "script": "tools/editor/erye199/workflow-cards.mjs#072",
+      "automation_command": "node tools/editor/erye199/run-workflow-cards.mjs --case 072 --action observe --space 6 --report reports/erye199-069-075-production-20261118",
+      "actual": "双语模式保留译文字幕/视频/原声/配音/背景音乐5轨；两处预览中英对应、实际声音中文；20秒1280×720，重入与刷新通过。",
+      "evidence": [
+        "evidence-069-075-production-20261118/072/before-submit.png",
+        "evidence-069-075-production-20261118/072/configuration.json",
+        "evidence-069-075-production-20261118/072/editor-observation.json",
+        "evidence-069-075-production-20261118/072/editor-tracks.png",
+        "evidence-069-075-production-20261118/072/playback-10.json",
+        "evidence-069-075-production-20261118/072/playback-2.json",
+        "evidence-069-075-production-20261118/072/playback-samples-10.json",
+        "evidence-069-075-production-20261118/072/playback-samples-2.json",
+        "evidence-069-075-production-20261118/072/preview-10.json",
+        "evidence-069-075-production-20261118/072/preview-10.png",
+        "evidence-069-075-production-20261118/072/preview-2.json",
+        "evidence-069-075-production-20261118/072/preview-2.png",
+        "evidence-069-075-production-20261118/072/product-verification.json",
+        "evidence-069-075-production-20261118/072/source-attached.png",
+        "evidence-069-075-production-20261118/072/task-terminal.png",
+        "evidence-069-075-production-20261118/072/ui-verified.png"
+      ],
+      "screenshots": [
+        "evidence-069-075-production-20261118/072/before-submit.png",
+        "evidence-069-075-production-20261118/072/editor-tracks.png",
+        "evidence-069-075-production-20261118/072/preview-10.png",
+        "evidence-069-075-production-20261118/072/preview-2.png",
+        "evidence-069-075-production-20261118/072/source-attached.png",
+        "evidence-069-075-production-20261118/072/task-terminal.png",
+        "evidence-069-075-production-20261118/072/ui-verified.png"
+      ],
+      "definition": "cases.md#erye199-card-multitrack",
+      "caseVersion": "v1-merged-erye199-20261118",
+      "legacyId": "ECMT-004",
+      "environment": "production",
+      "conversation_id": "f875ad42-3449-44de-907b-7a9e5416e44a",
+      "run_id": "run_v2_8c1fbe39b38f4936872e6f7a45266f5e",
+      "editor_id": "6e573997-eaf5-4f9f-9dfb-11867298c254",
+      "workspace": {
+        "project_id": "74794cd0-ea12-4355-9eb6-e9a039a62fc7",
+        "project_name": "ERYE199-069-075-生产-20261118"
+      },
+      "source_sha256": "b1fce3d9ba5094ca2d1acbe50b17aef903a6fcb353cbd19181ff3ae1a8f9a9a1",
+      "prompt": "将这条视频翻译成简体中文配音，并显示中英双语字幕。",
+      "checks": [
+        {
+          "name": "原生轨道数量",
+          "pass": true,
+          "detail": "expected=5,actual=5,names=译文字幕/视频/原声/配音/背景音乐"
+        },
+        {
+          "name": "本轮源或产物工程对应",
+          "pass": true,
+          "detail": "source=F20-English-source-with-BGM.mp4,editor=F20-English-source-with-BGM.mp4"
+        },
+        {
+          "name": "目标中文可编辑字幕",
+          "pass": true,
+          "detail": "通过正式提出申请，企图破坏我们的医疗保障， 要求全面废除我国的 医疗保健法。 无论人们对《平价医疗法案》持何种看法， 我们知道，没有任何问题对 辛勤工作的家庭来说比医疗保障更重要。 这关乎每个人的切身利益。 它影响着"
+        },
+        {
+          "name": "BGM轨存在",
+          "pass": true,
+          "detail": "译文字幕/视频/原声/配音/背景音乐"
+        },
+        {
+          "name": "原声轨存在",
+          "pass": true,
+          "detail": "译文字幕/视频/原声/配音/背景音乐"
+        },
+        {
+          "name": "译声轨存在",
+          "pass": true,
+          "detail": "译文字幕/视频/原声/配音/背景音乐"
+        },
+        {
+          "name": "双语模式预览中英对应-2",
+          "pass": true,
+          "detail": "通过正式提出申请，企图破坏我们的医疗保障，\nefforts to sabotage our healthcare by filing a formal"
+        },
+        {
+          "name": "双语模式预览中英对应-10",
+          "pass": true,
+          "detail": "无论人们对《平价医疗法案》持何种看法，\nRegardless of people's opinions of the Affordable Care Act,"
+        },
+        {
+          "name": "返回结果重新进入保持",
+          "pass": true,
+          "detail": "轨道、片段时码、声音启用一致"
+        },
+        {
+          "name": "刷新后同工程轨道保持",
+          "pass": true,
+          "detail": "同会话重开轨道/字幕/声音保持"
+        }
+      ],
+      "failures": [],
+      "latest_execution_report": "results-069-075-production-20261118.md",
+      "latest_execution_batch": "erye199-069-075-production-20261118",
+      "product": {
+        "duration": 20.0,
+        "width": 1280,
+        "height": 720,
+        "language": "zh"
+      },
+      "local_directory": "reports/erye199-069-075-production-20261118/072"
+    },
+    {
+      "id": "ERYE199-073",
+      "status": "Passed",
+      "automation": "AUTO",
+      "automation_status": "AUTO",
+      "script": "tools/editor/erye199/workflow-cards.mjs#073",
+      "automation_command": "node tools/editor/erye199/run-workflow-cards.mjs --case 073 --action observe --space 6 --report reports/erye199-069-075-production-20261118",
+      "actual": "画质增强交付20秒2560×1440；视频/原声2轨、源标记和原英语语音保持，重入刷新通过。当前卡片无独立2倍选项，按原完整提示词指定2倍并核验实际输出。",
+      "evidence": [
+        "evidence-069-075-production-20261118/073/before-submit.png",
+        "evidence-069-075-production-20261118/073/configuration.json",
+        "evidence-069-075-production-20261118/073/editor-observation.json",
+        "evidence-069-075-production-20261118/073/editor-tracks.png",
+        "evidence-069-075-production-20261118/073/playback-15.json",
+        "evidence-069-075-production-20261118/073/playback-5.json",
+        "evidence-069-075-production-20261118/073/preview-15.json",
+        "evidence-069-075-production-20261118/073/preview-15.png",
+        "evidence-069-075-production-20261118/073/preview-5.json",
+        "evidence-069-075-production-20261118/073/preview-5.png",
+        "evidence-069-075-production-20261118/073/product-verification.json",
+        "evidence-069-075-production-20261118/073/source-attached.png",
+        "evidence-069-075-production-20261118/073/task-terminal.png",
+        "evidence-069-075-production-20261118/073/ui-verified.png"
+      ],
+      "screenshots": [
+        "evidence-069-075-production-20261118/073/before-submit.png",
+        "evidence-069-075-production-20261118/073/editor-tracks.png",
+        "evidence-069-075-production-20261118/073/preview-15.png",
+        "evidence-069-075-production-20261118/073/preview-5.png",
+        "evidence-069-075-production-20261118/073/source-attached.png",
+        "evidence-069-075-production-20261118/073/task-terminal.png",
+        "evidence-069-075-production-20261118/073/ui-verified.png"
+      ],
+      "definition": "cases.md#erye199-card-multitrack",
+      "caseVersion": "v1-merged-erye199-20261118",
+      "legacyId": "ECMT-005",
+      "environment": "production",
+      "conversation_id": "6e992607-a173-4ccd-98d1-1e882fe7df8f",
+      "run_id": "run_v2_02207dc277324d3f9b25b5f1644da048",
+      "editor_id": "637b81e2-0901-4ccb-a436-3c87dace2ea4",
+      "workspace": {
+        "project_id": "74794cd0-ea12-4355-9eb6-e9a039a62fc7",
+        "project_name": "ERYE199-069-075-生产-20261118"
+      },
+      "source_sha256": "b1fce3d9ba5094ca2d1acbe50b17aef903a6fcb353cbd19181ff3ae1a8f9a9a1",
+      "prompt": "将这条视频的画质增强2倍，保留完整时长和原音。",
+      "checks": [
+        {
+          "name": "本轮源或产物工程对应",
+          "pass": true,
+          "detail": "source=F20-English-source-with-BGM.mp4,editor=F20-English-source-with-BGM.mp4"
+        },
+        {
+          "name": "没有旧译文或配音轨",
+          "pass": true,
+          "detail": "视频/原声"
+        },
+        {
+          "name": "返回结果重新进入保持",
+          "pass": true,
+          "detail": "轨道、片段时码、声音启用一致"
+        },
+        {
+          "name": "刷新后同工程轨道保持",
+          "pass": true,
+          "detail": "同会话重开轨道/字幕/声音保持"
+        }
+      ],
+      "failures": [],
+      "latest_execution_report": "results-069-075-production-20261118.md",
+      "latest_execution_batch": "erye199-069-075-production-20261118",
+      "product": {
+        "duration": 20.0,
+        "width": 2560,
+        "height": 1440,
+        "language": "en"
+      },
+      "local_directory": "reports/erye199-069-075-production-20261118/073"
+    },
+    {
+      "id": "ERYE199-074",
+      "status": "Passed",
+      "automation": "AUTO",
+      "automation_status": "AUTO",
+      "script": "tools/editor/erye199/workflow-cards.mjs#074",
+      "automation_command": "node tools/editor/erye199/run-workflow-cards.mjs --case 074 --action observe --space 6 --report reports/erye199-069-075-production-20261118",
+      "actual": "默认审核3口水词+6停顿后点击移除；实际44.744秒，视频/原声各10段（末段在时间轴视口外）；三段正文独立ASR完整保持，画面/原声与保留源区间对照通过，接缝播放、重入刷新通过。",
+      "evidence": [
+        "evidence-069-075-production-20261118/074/before-submit.png",
+        "evidence-069-075-production-20261118/074/editor-observation.json",
+        "evidence-069-075-production-20261118/074/editor-tracks.png",
+        "evidence-069-075-production-20261118/074/playback-13.json",
+        "evidence-069-075-production-20261118/074/playback-25.json",
+        "evidence-069-075-production-20261118/074/playback-28.json",
+        "evidence-069-075-production-20261118/074/playback-5.json",
+        "evidence-069-075-production-20261118/074/playback-samples-13.json",
+        "evidence-069-075-production-20261118/074/playback-samples-25.json",
+        "evidence-069-075-production-20261118/074/playback-samples-28.json",
+        "evidence-069-075-production-20261118/074/playback-samples-5.json",
+        "evidence-069-075-production-20261118/074/preview-13.json",
+        "evidence-069-075-production-20261118/074/preview-13.png",
+        "evidence-069-075-production-20261118/074/preview-25.json",
+        "evidence-069-075-production-20261118/074/preview-25.png",
+        "evidence-069-075-production-20261118/074/preview-28.json",
+        "evidence-069-075-production-20261118/074/preview-28.png",
+        "evidence-069-075-production-20261118/074/preview-5.json",
+        "evidence-069-075-production-20261118/074/preview-5.png",
+        "evidence-069-075-production-20261118/074/product-verification.json",
+        "evidence-069-075-production-20261118/074/review-before-confirm.png",
+        "evidence-069-075-production-20261118/074/review-selected.png",
+        "evidence-069-075-production-20261118/074/review-selection.json",
+        "evidence-069-075-production-20261118/074/source-attached.png",
+        "evidence-069-075-production-20261118/074/source-content-verification.json",
+        "evidence-069-075-production-20261118/074/source-mapping.json",
+        "evidence-069-075-production-20261118/074/task-terminal.png",
+        "evidence-069-075-production-20261118/074/ui-verified.png"
+      ],
+      "screenshots": [
+        "evidence-069-075-production-20261118/074/before-submit.png",
+        "evidence-069-075-production-20261118/074/editor-tracks.png",
+        "evidence-069-075-production-20261118/074/preview-13.png",
+        "evidence-069-075-production-20261118/074/preview-25.png",
+        "evidence-069-075-production-20261118/074/preview-28.png",
+        "evidence-069-075-production-20261118/074/preview-5.png",
+        "evidence-069-075-production-20261118/074/review-before-confirm.png",
+        "evidence-069-075-production-20261118/074/review-selected.png",
+        "evidence-069-075-production-20261118/074/source-attached.png",
+        "evidence-069-075-production-20261118/074/task-terminal.png",
+        "evidence-069-075-production-20261118/074/ui-verified.png"
+      ],
+      "definition": "cases.md#erye199-card-multitrack",
+      "caseVersion": "v1-merged-erye199-20261118",
+      "legacyId": "ECMT-006",
+      "environment": "production",
+      "conversation_id": "50d2252f-e031-4713-8ec2-fb2e3c980f6c",
+      "run_id": "run_v2_89b3f3c1251a48a3ae22c48ef55ed31d",
+      "editor_id": "8d717738-33b1-4b67-bd53-d172e7d075bb",
+      "workspace": {
+        "project_id": "74794cd0-ea12-4355-9eb6-e9a039a62fc7",
+        "project_name": "ERYE199-069-075-生产-20261118"
+      },
+      "source_sha256": "9317265cfd79d73b572ce05704fc9218362aca9e9041cbc4340426676f416cc9",
+      "prompt": "去掉这条视频中的口水词和多余停顿，保留其余内容与原音。",
+      "checks": [
+        {
+          "name": "本轮源或产物工程对应",
+          "pass": true,
+          "detail": "source=F60-English-fillers-three-topics.mp4,editor=F60-English-fillers-three-topics.mp4"
+        },
+        {
+          "name": "没有旧译文或配音轨",
+          "pass": true,
+          "detail": "视频/原声"
+        },
+        {
+          "name": "返回结果重新进入保持",
+          "pass": true,
+          "detail": "轨道、片段时码、声音启用一致"
+        },
+        {
+          "name": "刷新后同工程轨道保持",
+          "pass": true,
+          "detail": "同会话重开轨道/字幕/声音保持"
+        }
+      ],
+      "failures": [],
+      "latest_execution_report": "results-069-075-production-20261118.md",
+      "latest_execution_batch": "erye199-069-075-production-20261118",
+      "product": {
+        "duration": 44.744,
+        "width": 1280,
+        "height": 720,
+        "language": "en"
+      },
+      "local_directory": "reports/erye199-069-075-production-20261118/074"
+    },
+    {
+      "id": "ERYE199-075",
+      "status": "Passed",
+      "automation": "AUTO",
+      "automation_status": "AUTO",
+      "script": "tools/editor/erye199/workflow-cards.mjs#075",
+      "automation_command": "node tools/editor/erye199/run-workflow-cards.mjs --case 075 --action observe --space 6 --report reports/erye199-069-075-production-20261118",
+      "actual": "原生时长选30秒；审核确认源20.400～35.250、39.750～54.900两段，实际输出30秒1280×720；编辑器视频/原声各2段与方案/成片对应，首中尾源标记、接缝播放和重入刷新通过。",
+      "evidence": [
+        "evidence-069-075-production-20261118/075/before-submit.png",
+        "evidence-069-075-production-20261118/075/configuration.json",
+        "evidence-069-075-production-20261118/075/editor-observation.json",
+        "evidence-069-075-production-20261118/075/editor-tracks.png",
+        "evidence-069-075-production-20261118/075/playback-14.json",
+        "evidence-069-075-production-20261118/075/playback-25.json",
+        "evidence-069-075-production-20261118/075/playback-5.json",
+        "evidence-069-075-production-20261118/075/playback-samples-14.json",
+        "evidence-069-075-production-20261118/075/playback-samples-25.json",
+        "evidence-069-075-production-20261118/075/playback-samples-5.json",
+        "evidence-069-075-production-20261118/075/preview-0.2.json",
+        "evidence-069-075-production-20261118/075/preview-0.2.png",
+        "evidence-069-075-production-20261118/075/preview-14.json",
+        "evidence-069-075-production-20261118/075/preview-14.png",
+        "evidence-069-075-production-20261118/075/preview-25.json",
+        "evidence-069-075-production-20261118/075/preview-25.png",
+        "evidence-069-075-production-20261118/075/preview-29.json",
+        "evidence-069-075-production-20261118/075/preview-29.png",
+        "evidence-069-075-production-20261118/075/preview-5.json",
+        "evidence-069-075-production-20261118/075/preview-5.png",
+        "evidence-069-075-production-20261118/075/product-verification.json",
+        "evidence-069-075-production-20261118/075/review-before-confirm.png",
+        "evidence-069-075-production-20261118/075/review-selected.png",
+        "evidence-069-075-production-20261118/075/review-selection.json",
+        "evidence-069-075-production-20261118/075/source-attached.png",
+        "evidence-069-075-production-20261118/075/source-content-verification.json",
+        "evidence-069-075-production-20261118/075/source-mapping.json",
+        "evidence-069-075-production-20261118/075/task-terminal.png",
+        "evidence-069-075-production-20261118/075/ui-verified.png"
+      ],
+      "screenshots": [
+        "evidence-069-075-production-20261118/075/before-submit.png",
+        "evidence-069-075-production-20261118/075/editor-tracks.png",
+        "evidence-069-075-production-20261118/075/preview-0.2.png",
+        "evidence-069-075-production-20261118/075/preview-14.png",
+        "evidence-069-075-production-20261118/075/preview-25.png",
+        "evidence-069-075-production-20261118/075/preview-29.png",
+        "evidence-069-075-production-20261118/075/preview-5.png",
+        "evidence-069-075-production-20261118/075/review-before-confirm.png",
+        "evidence-069-075-production-20261118/075/review-selected.png",
+        "evidence-069-075-production-20261118/075/source-attached.png",
+        "evidence-069-075-production-20261118/075/task-terminal.png",
+        "evidence-069-075-production-20261118/075/ui-verified.png"
+      ],
+      "definition": "cases.md#erye199-card-multitrack",
+      "caseVersion": "v1-merged-erye199-20261118",
+      "legacyId": "ECMT-007",
+      "environment": "production",
+      "conversation_id": "c04dd357-35c2-4662-911d-f4a928c13609",
+      "run_id": "run_v2_799a1c7128bb425f8ebf367fbceb9e57",
+      "editor_id": "d73ecb72-b22d-4dd4-a4c4-c68bfe80190d",
+      "workspace": {
+        "project_id": "74794cd0-ea12-4355-9eb6-e9a039a62fc7",
+        "project_name": "ERYE199-069-075-生产-20261118"
+      },
+      "source_sha256": "9317265cfd79d73b572ce05704fc9218362aca9e9041cbc4340426676f416cc9",
+      "prompt": "将这条视频剪成30秒高光，保留原音。",
+      "checks": [
+        {
+          "name": "本轮源或产物工程对应",
+          "pass": true,
+          "detail": "source=F60-English-fillers-three-topics.mp4,editor=F60-English-fillers-three-topics.mp4"
+        },
+        {
+          "name": "没有旧译文或配音轨",
+          "pass": true,
+          "detail": "视频/原声"
+        },
+        {
+          "name": "返回结果重新进入保持",
+          "pass": true,
+          "detail": "轨道、片段时码、声音启用一致"
+        },
+        {
+          "name": "刷新后同工程轨道保持",
+          "pass": true,
+          "detail": "同会话重开轨道/字幕/声音保持"
+        }
+      ],
+      "failures": [],
+      "latest_execution_report": "results-069-075-production-20261118.md",
+      "latest_execution_batch": "erye199-069-075-production-20261118",
+      "product": {
+        "duration": 30.0,
+        "width": 1280,
+        "height": 720,
+        "language": "en"
+      },
+      "local_directory": "reports/erye199-069-075-production-20261118/075"
+    }
+  ],
+  "cloud_sync": true,
+  "notes": [
+    "071初次积分阻塞保留历史，用户补充后独立新尝试已完成，不计最终Blocked",
+    "原生页面操作执行；只读任务/工程身份和本地实际文件比对辅助验收；无工程API写入",
+    "独立ASR辅助内容核验，不冒充人工逐句听审；F60为标注的合成QA素材"
+  ],
+  "latest_defect_sync": {
+    "date": "2026-11-18",
+    "created": 1,
+    "case_ids": [
+      "ERYE199-071"
+    ],
+    "defects": [
+      "FWXC-693"
+    ],
+    "screenshots": 3,
+    "comparison_frames": 2,
+    "images": 5,
+    "attachments": 8,
+    "verified": true,
+    "report": "defects-071-production-20261118.md",
+    "rerun_performed": false
+  },
+  "subsequent_cloud_sync": {
+    "date": "2026-11-18",
+    "created": 1,
+    "case_ids": [
+      "ERYE199-071"
+    ],
+    "defects": [
+      "FWXC-693"
+    ],
+    "screenshots": 3,
+    "comparison_frames": 2,
+    "images": 5,
+    "attachments": 8,
+    "verified": true,
+    "report": "defects-071-production-20261118.md",
+    "rerun_performed": false
+  }
+}

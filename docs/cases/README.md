@@ -74,3 +74,9 @@
 - 用例标识、自动化实现状态及脚本路径在分类正文和对应登记表维护。
 - 执行结果及待办见[测试进度](../testing-progress.md)，验证批次与证据见[验证记录](../verification.md)，缺陷及回归报告保留在[缺陷目录](../defects)。
 - 本页不追加日期流水、逐项缺陷回归记录、结果统计、云效状态或执行断点；只在分类、路径、脚本入口和通用说明变化时维护导航。
+
+## 合并保留的专项导航
+
+- [ICP电商工作流](../design-cases/icp-workflows/cases.md)
+- [功能卡片与多轨组合、现有功能补充](requirements/ERYE-199/cases.md)
+- [编辑器默认TAB调整](requirements/ERYE-210/cases.md)

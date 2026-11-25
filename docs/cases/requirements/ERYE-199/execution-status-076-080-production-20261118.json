@@ -1,0 +1,1399 @@
+{
+  "date": "2026-11-18",
+  "environment": "production",
+  "base_url": "https://app.cinlink.ai",
+  "task_space": 7,
+  "counts": {
+    "Passed": 4,
+    "Failed": 1
+  },
+  "cases": [
+    {
+      "id": "ERYE199-076",
+      "status": "Passed",
+      "automation": "AUTO",
+      "automation_status": "AUTO",
+      "script": "tools/editor/erye199/workflow-combinations.mjs#076",
+      "automation_command": "node tools/editor/erye199/run-workflow-combinations.mjs --case 076 --action resume --space 7 --report reports/erye199-076-080-production-20261118",
+      "actual": "无参考生成红杯视频，5秒/1280×720；本轮独立工程的视频与原生音频对应生成结果，预览播放、重入及刷新通过，无旧F20/字幕/译配混入。",
+      "evidence": [
+        "evidence-076-080-production-20261118/076/before-submit.png",
+        "evidence-076-080-production-20261118/076/configuration.json",
+        "evidence-076-080-production-20261118/076/editor-observation.json",
+        "evidence-076-080-production-20261118/076/preview-0.5.json",
+        "evidence-076-080-production-20261118/076/preview-0.5.png",
+        "evidence-076-080-production-20261118/076/preview-3.json",
+        "evidence-076-080-production-20261118/076/preview-3.png",
+        "evidence-076-080-production-20261118/076/product-frame-0.5.png",
+        "evidence-076-080-production-20261118/076/product-frame-3.png",
+        "evidence-076-080-production-20261118/076/product-verification.json",
+        "evidence-076-080-production-20261118/076/source-mapping.json",
+        "evidence-076-080-production-20261118/076/ui-verified.png"
+      ],
+      "screenshots": [
+        "evidence-076-080-production-20261118/076/before-submit.png",
+        "evidence-076-080-production-20261118/076/preview-0.5.png",
+        "evidence-076-080-production-20261118/076/preview-3.png",
+        "evidence-076-080-production-20261118/076/product-frame-0.5.png",
+        "evidence-076-080-production-20261118/076/product-frame-3.png",
+        "evidence-076-080-production-20261118/076/ui-verified.png"
+      ],
+      "latest_execution_report": "results-076-080-production-20261118.md",
+      "latest_execution_batch": "erye199-076-080-production-20261118",
+      "environment": "production",
+      "rounds": [
+        {
+          "key": "076",
+          "prompt": "固定镜头拍摄一只红色杯子放在木桌上，背景为浅灰色墙面。",
+          "conversation_id": "ab9e1e62-f2dc-402f-80f0-d6b79851a769",
+          "run_id": "run_v2_12208ef4675c4907ae9b6bd677e9fb92",
+          "editor_id": "47de7815-c9d1-4a6f-8ef5-60d4209d0168",
+          "source_sha256": null,
+          "checks": [
+            {
+              "name": "工程对应本次生成视频",
+              "passed": true,
+              "actual": {
+                "name": "视频工程 47de7815-c9d1-4a6f-8ef5-60d4209d0168",
+                "projectId": "47de7815-c9d1-4a6f-8ef5-60d4209d0168",
+                "tracks": [
+                  {
+                    "type": "video",
+                    "clips": [
+                      {
+                        "fileId": "file_cloud_ieywxwxxfqgezq443hv7wbs2w4",
+                        "sourceIn": 0,
+                        "sourceOut": 5,
+                        "start": 0,
+                        "rate": 1
+                      }
+                    ]
+                  },
+                  {
+                    "type": "audio",
+                    "role": "source",
+                    "clips": [
+                      {
+                        "fileId": "file_cloud_ieywxwxxfqgezq443hv7wbs2w4",
+                        "sourceIn": 0,
+                        "sourceOut": 5,
+                        "start": 0,
+                        "rate": 1
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "name": "没有原片字幕或旧译配内容",
+              "passed": true,
+              "actual": [
+                "视频",
+                "原声"
+              ]
+            },
+            {
+              "name": "实际预览5秒16比9",
+              "passed": true,
+              "actual": [
+                {
+                  "width": 1280,
+                  "height": 720,
+                  "time": 0,
+                  "duration": 5,
+                  "ready": 4
+                }
+              ]
+            },
+            {
+              "name": "重入同一生成工程",
+              "passed": true,
+              "actual": "视频工程 47de7815-c9d1-4a6f-8ef5-60d4209d0168"
+            },
+            {
+              "name": "刷新恢复本例工程",
+              "passed": true,
+              "actual": "视频工程 47de7815-c9d1-4a6f-8ef5-60d4209d0168"
+            }
+          ],
+          "failures": [],
+          "history": null,
+          "D_verification": null
+        }
+      ]
+    },
+    {
+      "id": "ERYE199-077",
+      "status": "Passed",
+      "automation": "AUTO",
+      "automation_status": "AUTO",
+      "script": "tools/editor/erye199/workflow-combinations.mjs#077",
+      "automation_command": "node tools/editor/erye199/run-workflow-combinations.mjs --case 077 --action resume --space 7 --report reports/erye199-076-080-production-20261118",
+      "actual": "无参考生成白底蓝杯图片1024×1024；打开本次图片画布及版本，重入/刷新保持；未混入视频时间轴，原图下载有效。",
+      "evidence": [
+        "evidence-076-080-production-20261118/077/before-submit.png",
+        "evidence-076-080-production-20261118/077/image-editor-observation.json",
+        "evidence-076-080-production-20261118/077/image-editor-verified.png",
+        "evidence-076-080-production-20261118/077/product-verification.json",
+        "evidence-076-080-production-20261118/077/ui-verified.png"
+      ],
+      "screenshots": [
+        "evidence-076-080-production-20261118/077/before-submit.png",
+        "evidence-076-080-production-20261118/077/image-editor-verified.png",
+        "evidence-076-080-production-20261118/077/ui-verified.png"
+      ],
+      "latest_execution_report": "results-076-080-production-20261118.md",
+      "latest_execution_batch": "erye199-076-080-production-20261118",
+      "environment": "production",
+      "rounds": [
+        {
+          "key": "077",
+          "prompt": "白色背景上放置一只蓝色马克杯，正面视角。",
+          "conversation_id": "f0a06b5e-3e10-4c45-8faa-f8276fed47db",
+          "run_id": "run_v2_3df3b2b4d6ae43b097233d8c4ad5cfa5",
+          "editor_id": "83a52ee4-07c9-42a0-b2ba-1df57253d998",
+          "source_sha256": null,
+          "checks": [
+            {
+              "name": "本例图片工程及画布",
+              "passed": true,
+              "actual": {
+                "title": "图片工程 83a52ee4-07c9-42a0-b2ba-1df57253d998",
+                "canvas": [
+                  {
+                    "width": 1024,
+                    "height": 1024
+                  }
+                ],
+                "text": "图片工程 83a52ee4-07c9-42a0-b2ba-1df57253d998\n素材\n已保存\n导出\n画笔\n标注\n移除背景\n擦除\n宽高比\n适应窗口",
+                "videoTracks": 0,
+                "videos": 0
+              }
+            },
+            {
+              "name": "图片没有混入旧视频时间轴",
+              "passed": true,
+              "actual": {
+                "title": "图片工程 83a52ee4-07c9-42a0-b2ba-1df57253d998",
+                "canvas": [
+                  {
+                    "width": 1024,
+                    "height": 1024
+                  }
+                ],
+                "text": "图片工程 83a52ee4-07c9-42a0-b2ba-1df57253d998\n素材\n已保存\n导出\n画笔\n标注\n移除背景\n擦除\n宽高比\n适应窗口",
+                "videoTracks": 0,
+                "videos": 0
+              }
+            },
+            {
+              "name": "返回重入图片保持",
+              "passed": true,
+              "actual": {
+                "title": "图片工程 83a52ee4-07c9-42a0-b2ba-1df57253d998",
+                "canvas": [
+                  {
+                    "width": 1024,
+                    "height": 1024
+                  }
+                ],
+                "text": "图片工程 83a52ee4-07c9-42a0-b2ba-1df57253d998\n素材\n已保存\n导出\n画笔\n标注\n移除背景\n擦除\n宽高比\n适应窗口",
+                "videoTracks": 0,
+                "videos": 0
+              }
+            },
+            {
+              "name": "刷新图片工程保持",
+              "passed": true,
+              "actual": {
+                "title": "图片工程 83a52ee4-07c9-42a0-b2ba-1df57253d998",
+                "canvas": [
+                  {
+                    "width": 1024,
+                    "height": 1024
+                  }
+                ],
+                "text": "图片工程 83a52ee4-07c9-42a0-b2ba-1df57253d998\n素材\n已保存\n导出\n画笔\n标注\n移除背景\n擦除\n宽高比\n适应窗口",
+                "videoTracks": 0,
+                "videos": 0
+              }
+            }
+          ],
+          "failures": [],
+          "history": null,
+          "D_verification": null
+        }
+      ]
+    },
+    {
+      "id": "ERYE199-078",
+      "status": "Failed",
+      "automation": "AUTO",
+      "automation_status": "AUTO",
+      "script": "tools/editor/erye199/workflow-combinations.mjs#078",
+      "automation_command": "node tools/editor/erye199/run-workflow-combinations.mjs --case 078-T2 --action verifyHistory --space 7 --report reports/erye199-076-080-production-20261118",
+      "actual": "同一会话三轮均重新附加原F20，源视频身份及原音/译声对应；历史三个独立工程内容未被覆盖。但S1出现2条字幕/视频/原声共4轨，T2出现2条字幕/视频/原声/配音/BGM共6轨，均多出前轮英文字幕。整例Failed。",
+      "evidence": [
+        "evidence-076-080-production-20261118/078-S0/baseline-verified.png",
+        "evidence-076-080-production-20261118/078-S0/before-submit.png",
+        "evidence-076-080-production-20261118/078-S0/configuration.json",
+        "evidence-076-080-production-20261118/078-S0/editor-observation.json",
+        "evidence-076-080-production-20261118/078-S0/historical-verification.json",
+        "evidence-076-080-production-20261118/078-S0/historical-verified.png",
+        "evidence-076-080-production-20261118/078-S0/preview-10.json",
+        "evidence-076-080-production-20261118/078-S0/preview-10.png",
+        "evidence-076-080-production-20261118/078-S0/preview-2.json",
+        "evidence-076-080-production-20261118/078-S0/preview-2.png",
+        "evidence-076-080-production-20261118/078-S0/product-frame-10.png",
+        "evidence-076-080-production-20261118/078-S0/product-frame-2.png",
+        "evidence-076-080-production-20261118/078-S0/product-verification.json",
+        "evidence-076-080-production-20261118/078-S0/source-mapping.json",
+        "evidence-076-080-production-20261118/078-S1/baseline-failure.png",
+        "evidence-076-080-production-20261118/078-S1/before-submit.png",
+        "evidence-076-080-production-20261118/078-S1/configuration.json",
+        "evidence-076-080-production-20261118/078-S1/editor-observation.json",
+        "evidence-076-080-production-20261118/078-S1/failure-all-tracks.png",
+        "evidence-076-080-production-20261118/078-S1/historical-verification.json",
+        "evidence-076-080-production-20261118/078-S1/historical-verified.png",
+        "evidence-076-080-production-20261118/078-S1/preview-10.json",
+        "evidence-076-080-production-20261118/078-S1/preview-10.png",
+        "evidence-076-080-production-20261118/078-S1/preview-2.json",
+        "evidence-076-080-production-20261118/078-S1/preview-2.png",
+        "evidence-076-080-production-20261118/078-S1/product-frame-10.png",
+        "evidence-076-080-production-20261118/078-S1/product-frame-2.png",
+        "evidence-076-080-production-20261118/078-S1/product-verification.json",
+        "evidence-076-080-production-20261118/078-S1/source-mapping.json",
+        "evidence-076-080-production-20261118/078-T2/baseline-failure.png",
+        "evidence-076-080-production-20261118/078-T2/before-submit.png",
+        "evidence-076-080-production-20261118/078-T2/configuration.json",
+        "evidence-076-080-production-20261118/078-T2/editor-observation.json",
+        "evidence-076-080-production-20261118/078-T2/failure-all-tracks.png",
+        "evidence-076-080-production-20261118/078-T2/historical-verification.json",
+        "evidence-076-080-production-20261118/078-T2/historical-verified.png",
+        "evidence-076-080-production-20261118/078-T2/preview-10.json",
+        "evidence-076-080-production-20261118/078-T2/preview-10.png",
+        "evidence-076-080-production-20261118/078-T2/preview-2.json",
+        "evidence-076-080-production-20261118/078-T2/preview-2.png",
+        "evidence-076-080-production-20261118/078-T2/product-frame-10.png",
+        "evidence-076-080-production-20261118/078-T2/product-frame-2.png",
+        "evidence-076-080-production-20261118/078-T2/product-verification.json",
+        "evidence-076-080-production-20261118/078-T2/source-mapping.json"
+      ],
+      "screenshots": [
+        "evidence-076-080-production-20261118/078-S0/baseline-verified.png",
+        "evidence-076-080-production-20261118/078-S0/before-submit.png",
+        "evidence-076-080-production-20261118/078-S0/historical-verified.png",
+        "evidence-076-080-production-20261118/078-S0/preview-10.png",
+        "evidence-076-080-production-20261118/078-S0/preview-2.png",
+        "evidence-076-080-production-20261118/078-S0/product-frame-10.png",
+        "evidence-076-080-production-20261118/078-S0/product-frame-2.png",
+        "evidence-076-080-production-20261118/078-S1/baseline-failure.png",
+        "evidence-076-080-production-20261118/078-S1/before-submit.png",
+        "evidence-076-080-production-20261118/078-S1/failure-all-tracks.png",
+        "evidence-076-080-production-20261118/078-S1/historical-verified.png",
+        "evidence-076-080-production-20261118/078-S1/preview-10.png",
+        "evidence-076-080-production-20261118/078-S1/preview-2.png",
+        "evidence-076-080-production-20261118/078-S1/product-frame-10.png",
+        "evidence-076-080-production-20261118/078-S1/product-frame-2.png",
+        "evidence-076-080-production-20261118/078-T2/baseline-failure.png",
+        "evidence-076-080-production-20261118/078-T2/before-submit.png",
+        "evidence-076-080-production-20261118/078-T2/failure-all-tracks.png",
+        "evidence-076-080-production-20261118/078-T2/historical-verified.png",
+        "evidence-076-080-production-20261118/078-T2/preview-10.png",
+        "evidence-076-080-production-20261118/078-T2/preview-2.png",
+        "evidence-076-080-production-20261118/078-T2/product-frame-10.png",
+        "evidence-076-080-production-20261118/078-T2/product-frame-2.png"
+      ],
+      "latest_execution_report": "results-076-080-production-20261118.md",
+      "latest_execution_batch": "erye199-076-080-production-20261118",
+      "environment": "production",
+      "rounds": [
+        {
+          "key": "078-S0",
+          "prompt": "为这条视频添加原文字幕。",
+          "conversation_id": "64d9764b-cada-4af0-a633-20392af3ecbd",
+          "run_id": "run_v2_32ca7c4b88764848a655941281253b2a",
+          "editor_id": "108602f5-f42a-4854-a29b-e913028327d7",
+          "source_sha256": "b1fce3d9ba5094ca2d1acbe50b17aef903a6fcb353cbd19181ff3ae1a8f9a9a1",
+          "checks": [
+            {
+              "name": "本例源片工程对应",
+              "passed": true,
+              "actual": "F20-English-source-with-BGM.mp4"
+            },
+            {
+              "name": "原生轨数",
+              "passed": true,
+              "actual": [
+                "原文字幕",
+                "视频",
+                "原声"
+              ]
+            },
+            {
+              "name": "原文字幕及英语内容",
+              "passed": true,
+              "actual": "efforts to sabotage our healthcare by filing a formal request to strike down the entirety of our nation's healthcare law. Regardless of people's opinions of the Affordable Care Act, we know there's no single issue that matters more to hardworking families than healthcare. It's a personal issue. It affects"
+            },
+            {
+              "name": "三轮后重开历史工程未被覆盖",
+              "passed": true,
+              "actual": {
+                "projectId": "108602f5-f42a-4854-a29b-e913028327d7",
+                "contentUnchanged": true,
+                "visibleTracksUnchanged": true,
+                "names": [
+                  "原文字幕",
+                  "视频",
+                  "原声"
+                ],
+                "preview": {
+                  "playhead": "10",
+                  "text": "Regardless of people's opinions of the Affordable Care Act,",
+                  "media": [
+                    {
+                      "time": 10,
+                      "width": 1280,
+                      "height": 720
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "name": "三轮后重开历史工程未被覆盖",
+              "passed": true,
+              "actual": {
+                "projectId": "108602f5-f42a-4854-a29b-e913028327d7",
+                "contentUnchanged": true,
+                "visibleTracksUnchanged": true,
+                "names": [
+                  "原文字幕",
+                  "视频",
+                  "原声"
+                ],
+                "preview": {
+                  "playhead": "10",
+                  "text": "Regardless of people's opinions of the Affordable Care Act,",
+                  "media": [
+                    {
+                      "time": 10,
+                      "width": 1280,
+                      "height": 720
+                    }
+                  ]
+                }
+              }
+            }
+          ],
+          "failures": [],
+          "history": {
+            "projectId": "108602f5-f42a-4854-a29b-e913028327d7",
+            "contentUnchanged": true,
+            "visibleTracksUnchanged": true,
+            "names": [
+              "原文字幕",
+              "视频",
+              "原声"
+            ],
+            "preview": {
+              "playhead": "10",
+              "text": "Regardless of people's opinions of the Affordable Care Act,",
+              "media": [
+                {
+                  "time": 10,
+                  "width": 1280,
+                  "height": 720
+                }
+              ]
+            }
+          },
+          "D_verification": null
+        },
+        {
+          "key": "078-S1",
+          "prompt": "为这条视频添加简体中文字幕。",
+          "conversation_id": "64d9764b-cada-4af0-a633-20392af3ecbd",
+          "run_id": "run_v2_7d3aaa14f8004d1881942705517d459d",
+          "editor_id": "419b2632-c36c-4cea-a79d-93ea05c32e6c",
+          "source_sha256": "b1fce3d9ba5094ca2d1acbe50b17aef903a6fcb353cbd19181ff3ae1a8f9a9a1",
+          "checks": [
+            {
+              "name": "本例源片工程对应",
+              "passed": true,
+              "actual": "F20-English-source-with-BGM.mp4 (419b2632-c36c-4cea-a79d-93ea05c32e6c)"
+            },
+            {
+              "name": "原生轨数",
+              "passed": false,
+              "actual": [
+                "译文字幕",
+                "译文字幕",
+                "视频",
+                "原声"
+              ]
+            },
+            {
+              "name": "译文可编辑字幕",
+              "passed": false,
+              "actual": "试图通过正式提出 请求，废除我国整部 医疗保健法，破坏我们的医疗保健体系。 无论人们对《平价医疗法案》持何种看法， 我们知道，没有什么问题比医疗保健对 辛勤工作的家庭更重要。 这是一个切身问题。 它影响着 efforts to sabotage our healthcare by filing a formal request to strike down the entirety of our nation's healthcare law. Regardless of people's opinions of the Affordable Care Act, we know there's no single issue that matters more to hardworking families than healthcare. It's a personal issue. It affects"
+            },
+            {
+              "name": "三轮后重开历史工程未被覆盖",
+              "passed": true,
+              "actual": {
+                "projectId": "419b2632-c36c-4cea-a79d-93ea05c32e6c",
+                "contentUnchanged": true,
+                "visibleTracksUnchanged": true,
+                "names": [
+                  "译文字幕",
+                  "译文字幕",
+                  "视频",
+                  "原声"
+                ],
+                "preview": {
+                  "playhead": "10",
+                  "text": "无论人们对《平价医疗法案》持何种看法，\nRegardless of people's opinions of the Affordable Care Act,",
+                  "media": [
+                    {
+                      "time": 10,
+                      "width": 1280,
+                      "height": 720
+                    }
+                  ]
+                }
+              }
+            }
+          ],
+          "failures": [
+            "原生轨数",
+            "译文可编辑字幕"
+          ],
+          "history": {
+            "projectId": "419b2632-c36c-4cea-a79d-93ea05c32e6c",
+            "contentUnchanged": true,
+            "visibleTracksUnchanged": true,
+            "names": [
+              "译文字幕",
+              "译文字幕",
+              "视频",
+              "原声"
+            ],
+            "preview": {
+              "playhead": "10",
+              "text": "无论人们对《平价医疗法案》持何种看法，\nRegardless of people's opinions of the Affordable Care Act,",
+              "media": [
+                {
+                  "time": 10,
+                  "width": 1280,
+                  "height": 720
+                }
+              ]
+            }
+          },
+          "D_verification": null
+        },
+        {
+          "key": "078-T2",
+          "prompt": "将这条视频翻译成简体中文配音，并显示中英双语字幕。",
+          "conversation_id": "64d9764b-cada-4af0-a633-20392af3ecbd",
+          "run_id": "run_v2_ce76fe1af40f470c8271bd1ecf738ee4",
+          "editor_id": "f236fe44-0ead-4ec5-83ee-80c318a1ce30",
+          "source_sha256": "b1fce3d9ba5094ca2d1acbe50b17aef903a6fcb353cbd19181ff3ae1a8f9a9a1",
+          "checks": [
+            {
+              "name": "本例源片工程对应",
+              "passed": true,
+              "actual": "F20-English-source-with-BGM.mp4 (f236fe44-0ead-4ec5-83ee-80c318a1ce30)"
+            },
+            {
+              "name": "原生轨数",
+              "passed": false,
+              "actual": [
+                "译文字幕",
+                "译文字幕",
+                "视频",
+                "原声",
+                "配音",
+                "背景音乐"
+              ]
+            },
+            {
+              "name": "译文可编辑字幕",
+              "passed": false,
+              "actual": "试图通过提交正式 申请，要求废除我国整部 医疗保健法，破坏我们的医疗保健体系。 无论人们对《平价医疗法案》有何看法， 我们知道，没有任何问题比医疗保健更关乎 辛勤工作的家庭。 这是与每个人息息相关的问题。 它影响着 efforts to sabotage our healthcare by filing a formal request to strike down the entirety of our nation's healthcare law. Regardless of people's opinions of the Affordable Care Act, we know there's no single issue that matters more to hardworking families than healthcare. It's a personal issue. It affects"
+            },
+            {
+              "name": "BGM来源轨存在",
+              "passed": true,
+              "actual": [
+                "译文字幕",
+                "译文字幕",
+                "视频",
+                "原声",
+                "配音",
+                "背景音乐"
+              ]
+            },
+            {
+              "name": "原声来源轨存在",
+              "passed": true,
+              "actual": [
+                "译文字幕",
+                "译文字幕",
+                "视频",
+                "原声",
+                "配音",
+                "背景音乐"
+              ]
+            },
+            {
+              "name": "译声来源轨存在",
+              "passed": true,
+              "actual": [
+                "译文字幕",
+                "译文字幕",
+                "视频",
+                "原声",
+                "配音",
+                "背景音乐"
+              ]
+            },
+            {
+              "name": "双语对应显示-2",
+              "passed": true,
+              "actual": "试图通过提交正式\nefforts to sabotage our healthcare by filing a formal"
+            },
+            {
+              "name": "双语对应显示-10",
+              "passed": true,
+              "actual": "无论人们对《平价医疗法案》有何看法，\nRegardless of people's opinions of the Affordable Care Act,"
+            },
+            {
+              "name": "三轮后重开历史工程未被覆盖",
+              "passed": true,
+              "actual": {
+                "projectId": "f236fe44-0ead-4ec5-83ee-80c318a1ce30",
+                "contentUnchanged": true,
+                "visibleTracksUnchanged": true,
+                "names": [
+                  "译文字幕",
+                  "译文字幕",
+                  "视频",
+                  "原声",
+                  "配音",
+                  "背景音乐"
+                ],
+                "preview": {
+                  "playhead": "10",
+                  "text": "无论人们对《平价医疗法案》有何看法，\nRegardless of people's opinions of the Affordable Care Act,",
+                  "media": [
+                    {
+                      "time": 10,
+                      "width": 1280,
+                      "height": 720
+                    }
+                  ]
+                }
+              }
+            }
+          ],
+          "failures": [
+            "原生轨数",
+            "译文可编辑字幕"
+          ],
+          "history": {
+            "projectId": "f236fe44-0ead-4ec5-83ee-80c318a1ce30",
+            "contentUnchanged": true,
+            "visibleTracksUnchanged": true,
+            "names": [
+              "译文字幕",
+              "译文字幕",
+              "视频",
+              "原声",
+              "配音",
+              "背景音乐"
+            ],
+            "preview": {
+              "playhead": "10",
+              "text": "无论人们对《平价医疗法案》有何看法，\nRegardless of people's opinions of the Affordable Care Act,",
+              "media": [
+                {
+                  "time": 10,
+                  "width": 1280,
+                  "height": 720
+                }
+              ]
+            }
+          },
+          "D_verification": null
+        }
+      ],
+      "local_defect": "../../../defects/ERYE199-078-extra-source-subtitle-tracks-production-20261118.md",
+      "current_failure_cloud_status": "Submitted and verified",
+      "defect": {
+        "id": "FWXC-694",
+        "workitem_id": "c6fcf26c6c51304682eec70a9b",
+        "url": "https://devops.aliyun.com/projex/project/1e401ac99539c3999e00e40006/bug#openWorkitemIdentifier=c6fcf26c6c51304682eec70a9b",
+        "title": "【生产环境】同会话切换译文字幕和双语译配后多出前轮英文字幕轨",
+        "case_id": "ERYE199-078",
+        "key": "ERYE199-078-EXTRA-SOURCE-SUBTITLE-TRACKS-PROD-20261118",
+        "status": "🤔AI提缺陷",
+        "assigned_to": "牛诗晴",
+        "sprint": "重构10-29",
+        "labels": [
+          "生产环境"
+        ],
+        "priority": "中",
+        "serious_level": "3-一般",
+        "verified": true,
+        "screenshots": 4,
+        "attachments": 6,
+        "synced_at": "2026-11-18T19:55:43.0664748+08:00",
+        "local_report": "docs/defects/ERYE199-078-extra-source-subtitle-tracks-production-20261118.md",
+        "attachment_receipts": [
+          {
+            "id": "7f4cb60ae697d53dc4583dc3cc",
+            "size": 327328,
+            "sha256": "9c7a856e59933fb551fa31426d828cdc09f639aa94a15b48b38ce2161a9e100b",
+            "name": "078-S1-before-submit-translation-only.png"
+          },
+          {
+            "id": "be71b4de68ebffd5deee9f0385",
+            "size": 820050,
+            "sha256": "c2a79307d898a2cd369b1b0b61a773c74ba5514109f5c828896ab702e4ad34e3",
+            "name": "078-S1-extra-English-four-tracks.png"
+          },
+          {
+            "id": "57874453637b51d906d1517aeb",
+            "size": 370209,
+            "sha256": "8bad2c1c4d683aaaeb5f8f6765edcdf11d301b5c9cc5f46fc1acbe6cc1106979",
+            "name": "078-T2-before-submit-bilingual-dubbing.png"
+          },
+          {
+            "id": "6a385ec9f358d7e14030215e9c",
+            "size": 813185,
+            "sha256": "1491c20df9ca77c28850c05339978a811734d25d882c67032dc9a1ef95ce7051",
+            "name": "078-T2-extra-English-six-tracks.png"
+          },
+          {
+            "id": "1b5519076a915422a1596610f2",
+            "size": 2197394,
+            "sha256": "b1fce3d9ba5094ca2d1acbe50b17aef903a6fcb353cbd19181ff3ae1a8f9a9a1",
+            "name": "F20-English-source-with-BGM.mp4"
+          },
+          {
+            "id": "1b39ab5928d5f3b3bfed1c7410",
+            "size": 9868,
+            "sha256": "d4fbaa350605089575ef03ab85e3798d7a442b38af1edec601d02a68f99cb825",
+            "name": "078-evidence-summary.json"
+          }
+        ],
+        "images": [
+          {
+            "name": "078-S1-before-submit-translation-only.png",
+            "id": "7f4cb60ae697d53dc4583dc3cc",
+            "sha256": "9c7a856e59933fb551fa31426d828cdc09f639aa94a15b48b38ce2161a9e100b",
+            "size": 327328,
+            "caption": "第2轮提交参数原图：简体中文、字幕显示模式“译文”，重新附加原片。",
+            "embedded": true
+          },
+          {
+            "name": "078-S1-extra-English-four-tracks.png",
+            "id": "be71b4de68ebffd5deee9f0385",
+            "sha256": "c2a79307d898a2cd369b1b0b61a773c74ba5514109f5c828896ab702e4ad34e3",
+            "size": 820050,
+            "caption": "第2轮失败原图：中文与英文各占一条字幕轨，共4轨；10秒处译文模式仍显示中英。",
+            "embedded": true
+          },
+          {
+            "name": "078-T2-before-submit-bilingual-dubbing.png",
+            "id": "57874453637b51d906d1517aeb",
+            "sha256": "8bad2c1c4d683aaaeb5f8f6765edcdf11d301b5c9cc5f46fc1acbe6cc1106979",
+            "size": 370209,
+            "caption": "第3轮提交参数原图：配音和字幕、简体中文、双语；重新附加同一原片。",
+            "embedded": true
+          },
+          {
+            "name": "078-T2-extra-English-six-tracks.png",
+            "id": "6a385ec9f358d7e14030215e9c",
+            "sha256": "1491c20df9ca77c28850c05339978a811734d25d882c67032dc9a1ef95ce7051",
+            "size": 813185,
+            "caption": "第3轮失败原图：两条字幕轨加视频、原声、配音、背景音乐共6轨，预期为五类轨道。",
+            "embedded": true
+          }
+        ],
+        "description_sha256": "86bad6ffc2fa3ebf1af17ccdf2bdc6a86ff5423e75b22ebd38df9a337d79dc65"
+      },
+      "cloud_sync": "Submitted and verified",
+      "latest_defect_sync_report": "defects-078-production-20261118.md"
+    },
+    {
+      "id": "ERYE199-079",
+      "status": "Passed",
+      "automation": "AUTO",
+      "automation_status": "AUTO",
+      "script": "tools/editor/erye199/workflow-combinations.mjs#079",
+      "automation_command": "node tools/editor/erye199/run-workflow-combinations.mjs --case 079 --action resume --space 7 --report reports/erye199-076-080-production-20261118",
+      "actual": "T1五类原生内容加独立D，登记不自动放入；D唯一实例6～18秒、源0～12秒且无视频关联，四种声音分别播放并恢复，原生内容/绑定/位置/启用及刷新重入保持。D页面也标“背景音乐”，按源及无视频关联识别；译文双语预览已知FWXC-693单列，未宣称已修复。",
+      "evidence": [
+        "evidence-076-080-production-20261118/079/baseline-verified.png",
+        "evidence-076-080-production-20261118/079/before-submit.png",
+        "evidence-076-080-production-20261118/079/configuration.json",
+        "evidence-076-080-production-20261118/079/D-position-adjustment.json",
+        "evidence-076-080-production-20261118/079/D-registered-no-placement.png",
+        "evidence-076-080-production-20261118/079/D-registration.json",
+        "evidence-076-080-production-20261118/079/D-verification.json",
+        "evidence-076-080-production-20261118/079/editor-observation.json",
+        "evidence-076-080-production-20261118/079/isolated-B.png",
+        "evidence-076-080-production-20261118/079/isolated-D.png",
+        "evidence-076-080-production-20261118/079/isolated-O.png",
+        "evidence-076-080-production-20261118/079/isolated-T.png",
+        "evidence-076-080-production-20261118/079/preview-10.json",
+        "evidence-076-080-production-20261118/079/preview-10.png",
+        "evidence-076-080-production-20261118/079/preview-2.json",
+        "evidence-076-080-production-20261118/079/preview-2.png",
+        "evidence-076-080-production-20261118/079/preview-5.json",
+        "evidence-076-080-production-20261118/079/preview-5.png",
+        "evidence-076-080-production-20261118/079/preview-6.2.json",
+        "evidence-076-080-production-20261118/079/preview-6.2.png",
+        "evidence-076-080-production-20261118/079/preview-6.json",
+        "evidence-076-080-production-20261118/079/preview-6.png",
+        "evidence-076-080-production-20261118/079/product-frame-10.png",
+        "evidence-076-080-production-20261118/079/product-frame-2.png",
+        "evidence-076-080-production-20261118/079/product-verification.json",
+        "evidence-076-080-production-20261118/079/six-tracks-verified.png",
+        "evidence-076-080-production-20261118/079/source-mapping.json"
+      ],
+      "screenshots": [
+        "evidence-076-080-production-20261118/079/baseline-verified.png",
+        "evidence-076-080-production-20261118/079/before-submit.png",
+        "evidence-076-080-production-20261118/079/D-registered-no-placement.png",
+        "evidence-076-080-production-20261118/079/isolated-B.png",
+        "evidence-076-080-production-20261118/079/isolated-D.png",
+        "evidence-076-080-production-20261118/079/isolated-O.png",
+        "evidence-076-080-production-20261118/079/isolated-T.png",
+        "evidence-076-080-production-20261118/079/preview-10.png",
+        "evidence-076-080-production-20261118/079/preview-2.png",
+        "evidence-076-080-production-20261118/079/preview-5.png",
+        "evidence-076-080-production-20261118/079/preview-6.2.png",
+        "evidence-076-080-production-20261118/079/preview-6.png",
+        "evidence-076-080-production-20261118/079/product-frame-10.png",
+        "evidence-076-080-production-20261118/079/product-frame-2.png",
+        "evidence-076-080-production-20261118/079/six-tracks-verified.png"
+      ],
+      "latest_execution_report": "results-076-080-production-20261118.md",
+      "latest_execution_batch": "erye199-076-080-production-20261118",
+      "environment": "production",
+      "rounds": [
+        {
+          "key": "079",
+          "prompt": "将这条视频翻译成简体中文配音，并显示简体中文字幕。",
+          "conversation_id": "65adc154-299e-4b30-ba90-7a67eaa07840",
+          "run_id": "run_v2_592d516f3b1b4e218164e25dd7f10a7d",
+          "editor_id": "289e11e3-1faf-496e-afc2-cf4ca26c36d7",
+          "source_sha256": "b1fce3d9ba5094ca2d1acbe50b17aef903a6fcb353cbd19181ff3ae1a8f9a9a1",
+          "checks": [
+            {
+              "name": "本例源片工程对应",
+              "passed": true,
+              "actual": "F20-English-source-with-BGM.mp4"
+            },
+            {
+              "name": "原生轨数",
+              "passed": true,
+              "actual": [
+                "译文字幕",
+                "视频",
+                "原声",
+                "配音",
+                "背景音乐"
+              ]
+            },
+            {
+              "name": "译文可编辑字幕",
+              "passed": true,
+              "actual": "企图破坏我们的医疗保障，正式提出申请， 要求废除我国整部 医疗保健法。 无论人们对《平价医疗法案》有何看法， 我们知道，对辛勤工作的家庭而言，没有任何问题比 医疗保障更重要。 这是一个关乎个人的问题。 它影响着"
+            },
+            {
+              "name": "BGM来源轨存在",
+              "passed": true,
+              "actual": [
+                "译文字幕",
+                "视频",
+                "原声",
+                "配音",
+                "背景音乐"
+              ]
+            },
+            {
+              "name": "原声来源轨存在",
+              "passed": true,
+              "actual": [
+                "译文字幕",
+                "视频",
+                "原声",
+                "配音",
+                "背景音乐"
+              ]
+            },
+            {
+              "name": "译声来源轨存在",
+              "passed": true,
+              "actual": [
+                "译文字幕",
+                "视频",
+                "原声",
+                "配音",
+                "背景音乐"
+              ]
+            },
+            {
+              "name": "登记D不自动放入或改变原五轨",
+              "passed": true,
+              "actual": {
+                "before": 6,
+                "after": 6,
+                "previouslyRegistered": false
+              }
+            },
+            {
+              "name": "D唯一实例与6～18秒源0～12秒（1帧内）",
+              "passed": true,
+              "actual": {
+                "volume": 1,
+                "clip_id": "cd3379a5-a472-4f4c-97ba-d4a55f711913",
+                "file_id": "file_cloud_iwfzhejmpnhf3p42wocm5psnbf",
+                "playback_rate": 1,
+                "source_in_sec": 0,
+                "source_out_sec": 12,
+                "timeline_start_sec": 6
+              }
+            },
+            {
+              "name": "独立D不与视频关联",
+              "passed": true,
+              "actual": null
+            },
+            {
+              "name": "原生五类内容、绑定、位置和启用保持",
+              "passed": true,
+              "actual": "内部未显示的源字幕资料也保持；UI按原生五类验收"
+            },
+            {
+              "name": "页面六类组合",
+              "passed": true,
+              "actual": [
+                "译文字幕",
+                "视频",
+                "原声",
+                "配音",
+                "背景音乐",
+                "背景音乐"
+              ]
+            },
+            {
+              "name": "D唯一实例与6～18秒源0～12秒（1帧内）",
+              "passed": true,
+              "actual": {
+                "volume": 1,
+                "clip_id": "cd3379a5-a472-4f4c-97ba-d4a55f711913",
+                "file_id": "file_cloud_iwfzhejmpnhf3p42wocm5psnbf",
+                "playback_rate": 1,
+                "source_in_sec": 0,
+                "source_out_sec": 12,
+                "timeline_start_sec": 6
+              }
+            },
+            {
+              "name": "独立D不与视频关联",
+              "passed": true,
+              "actual": null
+            },
+            {
+              "name": "原生五类内容、绑定、位置和启用保持",
+              "passed": true,
+              "actual": "内部未显示的源字幕资料也保持；UI按原生五类验收"
+            },
+            {
+              "name": "页面六类组合",
+              "passed": true,
+              "actual": [
+                "译文字幕",
+                "视频",
+                "原声",
+                "配音",
+                "背景音乐",
+                "背景音乐"
+              ]
+            },
+            {
+              "name": "重入六类内容保持",
+              "passed": true,
+              "actual": [
+                "译文字幕",
+                "视频",
+                "原声",
+                "配音",
+                "背景音乐",
+                "背景音乐"
+              ]
+            },
+            {
+              "name": "刷新后六轨及独立D保持",
+              "passed": true,
+              "actual": {
+                "rows": [
+                  "译文字幕",
+                  "视频",
+                  "原声",
+                  "配音",
+                  "背景音乐",
+                  "背景音乐"
+                ],
+                "same": true
+              }
+            }
+          ],
+          "failures": [],
+          "history": null,
+          "D_verification": {
+            "trackId": "f1fc79ca-9811-4db6-b15e-31e0e36919e3",
+            "fileId": "file_cloud_iwfzhejmpnhf3p42wocm5psnbf",
+            "sourceName": "D-independent-audio-12s.wav",
+            "sourceSha256": "55c929b90cf6907492e7e842dd5ad14847b459f4771692823a8fb8e181b021e8",
+            "start": 6,
+            "end": 18,
+            "sourceIn": 0,
+            "sourceOut": 12,
+            "linkedVideo": null,
+            "originalPreserved": true,
+            "displayName": "背景音乐",
+            "isolatedPlayback": [
+              {
+                "role": "D",
+                "trackId": "f1fc79ca-9811-4db6-b15e-31e0e36919e3",
+                "sourceFiles": [
+                  "file_cloud_iwfzhejmpnhf3p42wocm5psnbf"
+                ],
+                "time": 7.43,
+                "paused": true,
+                "audioControls": [
+                  "原声启用",
+                  "配音启用",
+                  "背景音乐启用",
+                  "背景音乐静音"
+                ]
+              },
+              {
+                "role": "O",
+                "trackId": "edit_11a20d291f48ca2657d5f1568f9811be",
+                "sourceFiles": [
+                  "file_cloud_iqci2j7s5iixowocwze46dvdgc"
+                ],
+                "time": 3.18,
+                "paused": true,
+                "audioControls": [
+                  "原声静音",
+                  "配音启用",
+                  "背景音乐启用",
+                  "背景音乐启用"
+                ]
+              },
+              {
+                "role": "T",
+                "trackId": "artifact:audio_files:file_cloud_5ltuayjpdwts7zgtsrrqdlrhr4",
+                "sourceFiles": [
+                  "file_cloud_dnhr6vr6xrbwfc2ypeb2h7umvq",
+                  "file_cloud_xz4obkccq643scpjmdlkouv4eu",
+                  "file_cloud_u6o7t4g7vyuobzwzuvvxzzbspr",
+                  "file_cloud_pm3qgkuw6mwn6qfmephxbi6gqr",
+                  "file_cloud_lehgy2krcj5p6izkqrfne2dq3q",
+                  "file_cloud_5pqkhscmpvbf5ua4rnaonthyun",
+                  "file_cloud_2rgadfel4qigkib3ztjvm5efcf",
+                  "file_cloud_ye7u7crrwtoo3qs7stdqjezqsk"
+                ],
+                "time": 3.34,
+                "paused": true,
+                "audioControls": [
+                  "原声启用",
+                  "配音静音",
+                  "背景音乐启用",
+                  "背景音乐启用"
+                ]
+              },
+              {
+                "role": "B",
+                "trackId": "artifact:audio_files:file_cloud_r3ptdzk32nkmjh5rgxzoulg5jc",
+                "sourceFiles": [
+                  "file_cloud_r3ptdzk32nkmjh5rgxzoulg5jc"
+                ],
+                "time": 6.19,
+                "paused": true,
+                "audioControls": [
+                  "原声启用",
+                  "配音启用",
+                  "背景音乐静音",
+                  "背景音乐启用"
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "known_issue_observed": {
+        "id": "FWXC-693",
+        "scope": "已有译文显示问题仍存在；本例只将独立D的注册、放入、六类隔离和持久化判Passed，不表示该缺陷已修复。",
+        "observations": [
+          {
+            "time": 2,
+            "text": "企图破坏我们的医疗保障，正式提出申请，\nefforts to sabotage our healthcare by filing a formal",
+            "existingDefect": "FWXC-693"
+          },
+          {
+            "time": 10,
+            "text": "无论人们对《平价医疗法案》有何看法，\nRegardless of people's opinions of the Affordable Care Act,",
+            "existingDefect": "FWXC-693"
+          }
+        ]
+      }
+    },
+    {
+      "id": "ERYE199-080",
+      "status": "Passed",
+      "automation": "AUTO",
+      "automation_status": "AUTO",
+      "script": "tools/editor/erye199/workflow-combinations.mjs#080",
+      "automation_command": "node tools/editor/erye199/run-workflow-combinations.mjs --case 080 --action resume --space 7 --report reports/erye199-076-080-production-20261118",
+      "actual": "T2原生五类内容加独立D形成六类组合；D唯一实例位于6～18秒、源0～12秒且无视频关联；四种声音分别播放，双语和原生五类绑定/位置/启用保持，保存重入/刷新通过。D页面名称同为“背景音乐”，按源文件和范围区分。",
+      "evidence": [
+        "evidence-076-080-production-20261118/080/baseline-verified.png",
+        "evidence-076-080-production-20261118/080/before-submit.png",
+        "evidence-076-080-production-20261118/080/configuration.json",
+        "evidence-076-080-production-20261118/080/D-position-adjustment.json",
+        "evidence-076-080-production-20261118/080/D-registered-no-placement.png",
+        "evidence-076-080-production-20261118/080/D-registration.json",
+        "evidence-076-080-production-20261118/080/D-verification.json",
+        "evidence-076-080-production-20261118/080/editor-observation.json",
+        "evidence-076-080-production-20261118/080/isolated-B.png",
+        "evidence-076-080-production-20261118/080/isolated-D.png",
+        "evidence-076-080-production-20261118/080/isolated-O.png",
+        "evidence-076-080-production-20261118/080/isolated-T.png",
+        "evidence-076-080-production-20261118/080/preview-10.json",
+        "evidence-076-080-production-20261118/080/preview-10.png",
+        "evidence-076-080-production-20261118/080/preview-2.json",
+        "evidence-076-080-production-20261118/080/preview-2.png",
+        "evidence-076-080-production-20261118/080/preview-5.json",
+        "evidence-076-080-production-20261118/080/preview-5.png",
+        "evidence-076-080-production-20261118/080/preview-6.2.json",
+        "evidence-076-080-production-20261118/080/preview-6.2.png",
+        "evidence-076-080-production-20261118/080/preview-6.json",
+        "evidence-076-080-production-20261118/080/preview-6.png",
+        "evidence-076-080-production-20261118/080/product-frame-10.png",
+        "evidence-076-080-production-20261118/080/product-frame-2.png",
+        "evidence-076-080-production-20261118/080/product-verification.json",
+        "evidence-076-080-production-20261118/080/six-tracks-verified.png",
+        "evidence-076-080-production-20261118/080/source-mapping.json"
+      ],
+      "screenshots": [
+        "evidence-076-080-production-20261118/080/baseline-verified.png",
+        "evidence-076-080-production-20261118/080/before-submit.png",
+        "evidence-076-080-production-20261118/080/D-registered-no-placement.png",
+        "evidence-076-080-production-20261118/080/isolated-B.png",
+        "evidence-076-080-production-20261118/080/isolated-D.png",
+        "evidence-076-080-production-20261118/080/isolated-O.png",
+        "evidence-076-080-production-20261118/080/isolated-T.png",
+        "evidence-076-080-production-20261118/080/preview-10.png",
+        "evidence-076-080-production-20261118/080/preview-2.png",
+        "evidence-076-080-production-20261118/080/preview-5.png",
+        "evidence-076-080-production-20261118/080/preview-6.2.png",
+        "evidence-076-080-production-20261118/080/preview-6.png",
+        "evidence-076-080-production-20261118/080/product-frame-10.png",
+        "evidence-076-080-production-20261118/080/product-frame-2.png",
+        "evidence-076-080-production-20261118/080/six-tracks-verified.png"
+      ],
+      "latest_execution_report": "results-076-080-production-20261118.md",
+      "latest_execution_batch": "erye199-076-080-production-20261118",
+      "environment": "production",
+      "rounds": [
+        {
+          "key": "080",
+          "prompt": "将这条视频翻译成简体中文配音，并显示中英双语字幕。",
+          "conversation_id": "eb24d1d8-fd26-4297-b76b-246a415a89d3",
+          "run_id": "run_v2_b1e4bd009fe64480a5db5521e4f7054c",
+          "editor_id": "37d082b8-6225-422d-8e6c-a1fb19f8649b",
+          "source_sha256": "b1fce3d9ba5094ca2d1acbe50b17aef903a6fcb353cbd19181ff3ae1a8f9a9a1",
+          "checks": [
+            {
+              "name": "本例源片工程对应",
+              "passed": true,
+              "actual": "F20-English-source-with-BGM.mp4"
+            },
+            {
+              "name": "原生轨数",
+              "passed": true,
+              "actual": [
+                "译文字幕",
+                "视频",
+                "原声",
+                "配音",
+                "背景音乐"
+              ]
+            },
+            {
+              "name": "译文可编辑字幕",
+              "passed": true,
+              "actual": "试图破坏我们医疗保健体系的行动，具体是正式提交 申请，要求废除我国整部 医疗保健法。 无论人们如何看待《平价医疗法案》， 我们知道，对辛勤工作的家庭而言，没有什么比 医疗保健更重要。 这是一个关乎个人的问题。 它影响着"
+            },
+            {
+              "name": "BGM来源轨存在",
+              "passed": true,
+              "actual": [
+                "译文字幕",
+                "视频",
+                "原声",
+                "配音",
+                "背景音乐"
+              ]
+            },
+            {
+              "name": "原声来源轨存在",
+              "passed": true,
+              "actual": [
+                "译文字幕",
+                "视频",
+                "原声",
+                "配音",
+                "背景音乐"
+              ]
+            },
+            {
+              "name": "译声来源轨存在",
+              "passed": true,
+              "actual": [
+                "译文字幕",
+                "视频",
+                "原声",
+                "配音",
+                "背景音乐"
+              ]
+            },
+            {
+              "name": "双语对应显示-2",
+              "passed": true,
+              "actual": "试图破坏我们医疗保健体系的行动，具体是正式提交\nefforts to sabotage our healthcare by filing a formal"
+            },
+            {
+              "name": "双语对应显示-10",
+              "passed": true,
+              "actual": "无论人们如何看待《平价医疗法案》，\nRegardless of people's opinions of the Affordable Care Act,"
+            },
+            {
+              "name": "登记D不自动放入或改变原五轨",
+              "passed": true,
+              "actual": {
+                "before": 6,
+                "after": 6,
+                "previouslyRegistered": true
+              }
+            },
+            {
+              "name": "D唯一实例与6～18秒源0～12秒（1帧内）",
+              "passed": true,
+              "actual": {
+                "volume": 1,
+                "clip_id": "8468358e-a767-4c3d-bf07-60553e7c4964",
+                "file_id": "file_cloud_iwfzhejmpnhf3p42wocm5psnbf",
+                "playback_rate": 1,
+                "source_in_sec": 0,
+                "source_out_sec": 12,
+                "timeline_start_sec": 6
+              }
+            },
+            {
+              "name": "独立D不与视频关联",
+              "passed": true,
+              "actual": null
+            },
+            {
+              "name": "原生五类内容、绑定、位置和启用保持",
+              "passed": true,
+              "actual": "内部未显示的源字幕资料也保持；UI按原生五类验收"
+            },
+            {
+              "name": "页面六类组合",
+              "passed": true,
+              "actual": [
+                "译文字幕",
+                "视频",
+                "原声",
+                "配音",
+                "背景音乐",
+                "背景音乐"
+              ]
+            },
+            {
+              "name": "重入六类内容保持",
+              "passed": true,
+              "actual": [
+                "译文字幕",
+                "视频",
+                "原声",
+                "配音",
+                "背景音乐",
+                "背景音乐"
+              ]
+            },
+            {
+              "name": "刷新后六轨及独立D保持",
+              "passed": true,
+              "actual": {
+                "rows": [
+                  "译文字幕",
+                  "视频",
+                  "原声",
+                  "配音",
+                  "背景音乐",
+                  "背景音乐"
+                ],
+                "same": true
+              }
+            },
+            {
+              "name": "D加入后双语对应-2",
+              "passed": true,
+              "actual": "试图破坏我们医疗保健体系的行动，具体是正式提交\nefforts to sabotage our healthcare by filing a formal"
+            },
+            {
+              "name": "D加入后双语对应-10",
+              "passed": true,
+              "actual": "无论人们如何看待《平价医疗法案》，\nRegardless of people's opinions of the Affordable Care Act,"
+            }
+          ],
+          "failures": [],
+          "history": null,
+          "D_verification": {
+            "trackId": "548846c8-a77f-486c-bc0a-0a48425040b8",
+            "fileId": "file_cloud_iwfzhejmpnhf3p42wocm5psnbf",
+            "sourceName": "D-independent-audio-12s.wav",
+            "sourceSha256": "55c929b90cf6907492e7e842dd5ad14847b459f4771692823a8fb8e181b021e8",
+            "start": 6,
+            "end": 18,
+            "sourceIn": 0,
+            "sourceOut": 12,
+            "linkedVideo": null,
+            "originalPreserved": true,
+            "displayName": "背景音乐",
+            "isolatedPlayback": [
+              {
+                "role": "D",
+                "trackId": "548846c8-a77f-486c-bc0a-0a48425040b8",
+                "sourceFiles": [
+                  "file_cloud_iwfzhejmpnhf3p42wocm5psnbf"
+                ],
+                "time": 7.43,
+                "paused": true,
+                "audioControls": [
+                  "原声启用",
+                  "配音启用",
+                  "背景音乐启用",
+                  "背景音乐静音"
+                ]
+              },
+              {
+                "role": "O",
+                "trackId": "edit_0527f8e3d16fc15a010a0fdd4213d13a",
+                "sourceFiles": [
+                  "file_cloud_iqci2j7s5iixowocwze46dvdgc"
+                ],
+                "time": 3.21,
+                "paused": true,
+                "audioControls": [
+                  "原声静音",
+                  "配音启用",
+                  "背景音乐启用",
+                  "背景音乐启用"
+                ]
+              },
+              {
+                "role": "T",
+                "trackId": "artifact:audio_files:file_cloud_dixlgjjso4izohbzh3pwfpdn7y",
+                "sourceFiles": [
+                  "file_cloud_bpzybx3odzec2ysihczxyv5pfd",
+                  "file_cloud_olsqw3bvdlorsajvijk6qunrej",
+                  "file_cloud_znyszwtre3clgml4dh74gpinni",
+                  "file_cloud_nh4q7n7hmx42pm5ckcuw2jz5kr",
+                  "file_cloud_g6c3flrbtc6m24ijponnoikm2i",
+                  "file_cloud_nc2ktsw2vu3llgt3zqnactrcfq",
+                  "file_cloud_bhmw4sywry3pn6b7ctm33kdw6k",
+                  "file_cloud_x4jhuycigv47xyafwgulpgghpg"
+                ],
+                "time": 3.24,
+                "paused": true,
+                "audioControls": [
+                  "原声启用",
+                  "配音静音",
+                  "背景音乐启用",
+                  "背景音乐启用"
+                ]
+              },
+              {
+                "role": "B",
+                "trackId": "artifact:audio_files:file_cloud_aql4zr5kzheiqte4pexqklmniy",
+                "sourceFiles": [
+                  "file_cloud_aql4zr5kzheiqte4pexqklmniy"
+                ],
+                "time": 6.23,
+                "paused": true,
+                "audioControls": [
+                  "原声启用",
+                  "配音启用",
+                  "背景音乐静音",
+                  "背景音乐启用"
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "original_runs": 7,
+  "clarifications": "本批七个请求均未出现补槽；无重发",
+  "cloud_writes": 0,
+  "report": "results-076-080-production-20261118.md",
+  "latest_defect_sync": {
+    "date": "2026-11-18",
+    "created": 1,
+    "case_ids": [
+      "ERYE199-078"
+    ],
+    "defects": [
+      "FWXC-694"
+    ],
+    "screenshots": 4,
+    "images": 4,
+    "attachments": 6,
+    "verified": true,
+    "report": "defects-078-production-20261118.md",
+    "rerun_performed": false
+  },
+  "subsequent_cloud_sync": {
+    "date": "2026-11-18",
+    "created": 1,
+    "case_ids": [
+      "ERYE199-078"
+    ],
+    "defects": [
+      "FWXC-694"
+    ],
+    "screenshots": 4,
+    "images": 4,
+    "attachments": 6,
+    "verified": true,
+    "report": "defects-078-production-20261118.md",
+    "rerun_performed": false
+  },
+  "cloud_sync": true
+}

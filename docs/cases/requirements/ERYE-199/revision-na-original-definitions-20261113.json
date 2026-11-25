@@ -1,0 +1,672 @@
+{
+  "date": "2026-11-13",
+  "source": "用户要求解释24条不适用原因并按现有功能优化",
+  "note": "仅保存修订前定义与执行记录；不是新执行，不退役编号。",
+  "original_rows": {
+    "ERYE199-021": "| ERYE199-021 | P0 | 参数未启用动画，播放头在 5 秒 | 启用动画 → 改值 → 关闭动画 → 撤销 | 启用时在源时间建当前值；关闭保留当前值并删通道；一次撤销恢复 | PE05 | [PLAN] |  | 本轮页面执行：Not Applicable；暂不接入自动化；[实际记录与截图](results-021-049-manual-production-20261113.md#erye199-021) |",
+    "ERYE199-022": "| ERYE199-022 | P1 | 已有多个关键帧 | 拖动越过源边界 → 在同一时间点再建关键帧 | 不越界；重复时间点替换而非叠加 | PE05 | [PLAN] |  | 本轮页面执行：Not Applicable；暂不接入自动化；[实际记录与截图](results-021-049-manual-production-20261113.md#erye199-022) |",
+    "ERYE199-023": "| ERYE199-023 | P0 | 片段已加矩形/椭圆/自由路径蒙版 | 调位置/反选/羽化/扩展/不透明度 → 多蒙版做加/减/交 | 参数生效；布尔顺序固定且可见 | PE06 | [PLAN] |  | 本轮页面执行：Not Applicable；暂不接入自动化；[实际记录与截图](results-021-049-manual-production-20261113.md#erye199-023) |",
+    "ERYE199-024": "| ERYE199-024 | P1 | 蒙版路径有关键帧 | 改路径拓扑 | 拓扑变化不直接插值；提示改保持或新建蒙版；路径关键帧可播放 | PE06 | [PLAN] |  | 本轮页面执行：Not Applicable；暂不接入自动化；[实际记录与截图](results-021-049-manual-production-20261113.md#erye199-024) |",
+    "ERYE199-025": "| ERYE199-025 | P0 | 片段可加效果 | 加高斯模糊/投影/羽化边缘/线性擦除 → 加局部蒙版 → 启用/旁路/复制/排序/重置 | 参数正确；蒙版只作用于该效果；顺序与开关可保存 | PE06 | [PLAN] |  | 本轮页面执行：Not Applicable；暂不接入自动化；[实际记录与截图](results-021-049-manual-production-20261113.md#erye199-025) |",
+    "ERYE199-026": "| ERYE199-026 | P1 | 两个效果顺序可调 | 交换顺序 → 预览 → 导出 | 结果随顺序变化并即时预览；预览/导出一致；字幕图形按 z-order 合成 | PE06 | [PLAN] |  | 本轮页面执行：Not Applicable；暂不接入自动化；[实际记录与截图](results-021-049-manual-production-20261113.md#erye199-026) |",
+    "ERYE199-027": "| ERYE199-027 | P0 | 图形工具可用 | 创建含多文字/矩形/椭圆/图片的图形 → 改字体/字号/行距/对齐/填充/描边/阴影/顺序/组变换 | 元素独立可编辑；组级变换生效；三类模板可复用且为可编辑对象 | PE07 | [PLAN] |  | 本轮页面执行：Not Applicable；暂不接入自动化；[实际记录与截图](results-021-049-manual-production-20261113.md#erye199-027) |",
+    "ERYE199-028": "| ERYE199-028 | P0 | 已有转写字幕与双语字幕 | 改段级样式 → 应用到整轨/全项目 → 改主副行样式 | 作用范围正确；双语可分别配置；不修改配音文案、不重新生成音频 | PE07 | [PLAN] |  | 本轮页面执行：Not Applicable；暂不接入自动化；[实际记录与截图](results-021-049-manual-production-20261113.md#erye199-028) |",
+    "ERYE199-029": "| ERYE199-029 | P1 | 字幕使用缺失字体，含中文/英文/数字/Emoji/长姓名 | 打开字幕 → 选择替代字体 | 显示原字体名与替代预览；替代需用户选择并记录；换行/超安全区/缺字可见 | PE07 | [PLAN] |  | 本轮页面执行：Not Applicable；暂不接入自动化；[实际记录与截图](results-021-049-manual-production-20261113.md#erye199-029) |",
+    "ERYE199-031": "| ERYE199-031 | P0 | 两片段相邻 | 加交叉溶解/黑场/白场/左右擦除/线性擦除 → 调时长与对齐 | 类型与时长生效；对齐切点/首尾正确；两侧余量足够 | PE08 | [PLAN] |  | 本轮页面执行：Not Applicable；暂不接入自动化；[实际记录与截图](results-021-049-manual-production-20261113.md#erye199-031) |",
+    "ERYE199-032": "| ERYE199-032 | P1 | 转场两侧余量不足 | 在余量不足处添加转场 → 查看提示与可用时长 | 提示可用时长并提供缩短；不自动重复帧掩盖 | PE08 | [PLAN] |  | 本轮页面执行：Not Applicable；暂不接入自动化；[实际记录与截图](results-021-049-manual-production-20261113.md#erye199-032) |",
+    "ERYE199-033": "| ERYE199-033 | P1 | 音频转场可用 | 设恒定增益/恒定功率/指数淡化 | 恒定功率按 sin/cos 曲线，中点可验证；视频/音频转场可独立删除或改时长 | PE08 | [PLAN] |  | 本轮页面执行：Not Applicable；暂不接入自动化；[实际记录与截图](results-021-049-manual-production-20261113.md#erye199-033) |",
+    "ERYE199-034": "| ERYE199-034 | P0 | 片段已关联音频与 source-bound 字幕 | 设 0.1/0.3178/8 倍速并保持音高 → 保持起点/保持时长 → 与后续片段冲突 | 变速正确；音高保持生效；选择波纹推移或取消，不静默覆盖；导入曲线变速报告未还原 | PE09 | [PLAN] |  | 本轮页面执行：Not Applicable；暂不接入自动化；[实际记录与截图](results-021-049-manual-production-20261113.md#erye199-034) |",
+    "ERYE199-035": "| ERYE199-035 | P0 | 片段为 SDR Rec.709，准备 .cube LUT | 加载 LUT → 调白平衡/曝光/对比度/高光/阴影/白场/黑场/饱和度 → 重开 | 参数与 LUT 生效；保存文件引用与指纹；色彩空间解释正确 | PE11 | [PLAN] |  | 本轮页面执行：Not Applicable；暂不接入自动化；[实际记录与截图](results-021-049-manual-production-20261113.md#erye199-035) |",
+    "ERYE199-037": "| ERYE199-037 | P1 | 已建调整层并设时间范围/效果/蒙版 | 添加调整层 → 导出成片 → 检查画面 | 调整层作用于下方画面；不作为可见实色画面导出 | PE11 | [PLAN] |  | 本轮页面执行：Not Applicable；暂不接入自动化；[实际记录与截图](results-021-049-manual-production-20261113.md#erye199-037) |",
+    "ERYE199-038": "| ERYE199-038 | P1 | 调色面板可用 | 打开波形/矢量示波器 | 示波器显示正确；调整后实时更新 | PE11 | [PLAN] |  | 本轮页面执行：Not Applicable；暂不接入自动化；[实际记录与截图](results-021-049-manual-production-20261113.md#erye199-038) |",
+    "ERYE199-039": "| ERYE199-039 | P0 | 绿幕素材，含发丝/阴影/运动模糊 | 取色 → 调容差/黑白点/边缘收缩柔化/去溢色 → 加垃圾蒙版 | 输出真实 alpha；可看原图/合成/alpha；边缘缺陷可通过控制修正 | PE13 | [PLAN] |  | 本轮页面执行：Not Applicable；暂不接入自动化；[实际记录与截图](results-021-049-manual-production-20261113.md#erye199-039) |",
+    "ERYE199-041": "| ERYE199-041 | P0 | 抖动素材 | 启动稳定（平滑/无运动）→ 后台分析 → 取消/失败 → 改源范围 | 边缘/裁切/残余抖动可控；取消失败保留原片段；缓存随指纹失效；不覆盖新修改 | PE14 | [PLAN] |  | 本轮页面执行：Not Applicable；暂不接入自动化；[实际记录与截图](results-021-049-manual-production-20261113.md#erye199-041) |",
+    "ERYE199-042": "| ERYE199-042 | P0 | 音轨有对白与音乐 | 调片段增益/轨道推子/声像/静音/独听/音量关键帧 → 看电平表 | 参数生效；电平表正确；关键帧可播放 | PE12 | [PLAN] |  | 本轮页面执行：Not Applicable；暂不接入自动化；[实际记录与截图](results-021-049-manual-production-20261113.md#erye199-042) |",
+    "ERYE199-044": "| ERYE199-044 | P1 | 音轨已加降噪/去混响/EQ/变调/限幅 | 调整效果顺序 → 查看时长与延迟 | 顺序可调；降噪/去混响不改节目时长；变调以半音/音分暴露；声明并补偿延迟 | PE12 | [PLAN] |  | 本轮页面执行：Not Applicable；暂不接入自动化；[实际记录与截图](results-021-049-manual-production-20261113.md#erye199-044) |",
+    "ERYE199-045": "| ERYE199-045 | P1 | 已启用配乐压低 | 改阈值/衰减/起落时间 → 手动改包络 | 包络可见；手动修改不被自动重算覆盖；响度归一化与限幅在导出设置可见 | PE12 | [PLAN] |  | 本轮页面执行：Not Applicable；暂不接入自动化；[实际记录与截图](results-021-049-manual-production-20261113.md#erye199-045) |",
+    "ERYE199-046": "| ERYE199-046 | P1 | 音乐、目标时长与保护区间已给 | 分析 → 生成候选 → 试听接缝/首尾 → 应用 → 替换旧结果 | 目标 ±0.5 秒；保护区间保留；接缝交叉淡化；替换为一个可撤销动作；失败保留原曲并解释 | PE15 | [PLAN] |  | 本轮页面执行：Not Applicable；暂不接入自动化；[实际记录与截图](results-021-049-manual-production-20261113.md#erye199-046) |",
+    "ERYE199-047": "| ERYE199-047 | P0 | 项目已含效果、字幕、图形 | 比较界面预览、Agent 预览、正式导出的同一帧 | 三者读取同一 ProjectSnapshot；时间映射/效果顺序/字幕布局/色彩/音频规则一致 | PE10 | [PLAN] |  | 本轮页面执行：Not Applicable；暂不接入自动化；[实际记录与截图](results-021-049-manual-production-20261113.md#erye199-047) |",
+    "ERYE199-048": "| ERYE199-048 | P1 | 使用代理或低质量预览 | 查看界面标识 → 导出 | 明确显示代理/低质量/未渲染效果；正式导出默认原素材 | PE10 | [PLAN] |  | 本轮页面执行：Not Applicable；暂不接入自动化；[实际记录与截图](results-021-049-manual-production-20261113.md#erye199-048) |"
+  },
+  "previous_executions": [
+    {
+      "id": "ERYE199-021",
+      "status": "Not Applicable",
+      "actual": "生产新工程播放头5秒，位置动画开关、真实关键帧、关闭删通道及撤销恢复均不支持；原工程未改。",
+      "source_case": "021",
+      "run_id": "run_v2_47942d0077374095af1c8ad63b51e3b0",
+      "fixture": {
+        "conversationId": "3e83a493-7900-4338-a077-8a4b74eedb60",
+        "editorId": "1306d31c-8b17-4fd6-9870-b30cd5a21e49",
+        "name": "ERYE199-021-manual-2026-11-13T10-37-48-153Z"
+      },
+      "target_steps_executed": false,
+      "automation_integrated": false,
+      "automation_status": "PLAN",
+      "script": "",
+      "execution_method": "Ego Lite browser operation; no automation integration",
+      "latest_execution_report": "results-021-049-manual-production-20261113.md",
+      "latest_execution_batch": "erye199-manual-021-050-2026-11-13T10-37-48-153Z",
+      "workspace_id": "71793016-cbbf-4e48-be10-b4ce958f33b5",
+      "screenshots": [
+        "evidence-021-049-manual-production-20261113/021-agent-terminal.png",
+        "evidence-021-049-manual-production-20261113/021-baseline.png",
+        "evidence-021-049-manual-production-20261113/021-before-submit.png",
+        "evidence-021-049-manual-production-20261113/021-selection-observation.png"
+      ]
+    },
+    {
+      "id": "ERYE199-022",
+      "status": "Not Applicable",
+      "actual": "依赖本轮021确认的真实可编辑参数关键帧缺口；多个关键帧无法建立，源边界拖动和同点替换未执行；没有022独立run。",
+      "source_case": "021",
+      "dependency": "ERYE199-021",
+      "run_id": "run_v2_47942d0077374095af1c8ad63b51e3b0",
+      "target_steps_executed": false,
+      "automation_integrated": false,
+      "automation_status": "PLAN",
+      "script": "",
+      "execution_method": "Ego Lite browser operation; no automation integration",
+      "latest_execution_report": "results-021-049-manual-production-20261113.md",
+      "latest_execution_batch": "erye199-manual-021-050-2026-11-13T10-37-48-153Z",
+      "workspace_id": "71793016-cbbf-4e48-be10-b4ce958f33b5",
+      "screenshots": [
+        "evidence-021-049-manual-production-20261113/021-agent-terminal.png",
+        "evidence-021-049-manual-production-20261113/021-baseline.png",
+        "evidence-021-049-manual-production-20261113/021-before-submit.png",
+        "evidence-021-049-manual-production-20261113/021-selection-observation.png"
+      ],
+      "fixture": {
+        "conversationId": "3e83a493-7900-4338-a077-8a4b74eedb60",
+        "editorId": "1306d31c-8b17-4fd6-9870-b30cd5a21e49",
+        "name": "ERYE199-021-manual-2026-11-13T10-37-48-153Z"
+      }
+    },
+    {
+      "id": "ERYE199-023",
+      "status": "Not Applicable",
+      "actual": "矩形/椭圆/自由路径视频蒙版及独立反选/羽化/扩展/不透明度、布尔运算均不支持，原工程未改；不以视频批注替代。",
+      "source_case": "023",
+      "run_id": "run_v2_ff51539d2d9040ecb0b4501d49aafc89",
+      "fixture": {
+        "conversationId": "c7c646fb-150f-4237-8ed7-35435f5c3d40",
+        "editorId": "d337368f-3b92-4385-9135-ff5003791ddf",
+        "name": "ERYE199-023-manual-2026-11-13T10-37-48-153Z"
+      },
+      "target_steps_executed": false,
+      "automation_integrated": false,
+      "automation_status": "PLAN",
+      "script": "",
+      "execution_method": "Ego Lite browser operation; no automation integration",
+      "latest_execution_report": "results-021-049-manual-production-20261113.md",
+      "latest_execution_batch": "erye199-manual-021-050-2026-11-13T10-37-48-153Z",
+      "workspace_id": "71793016-cbbf-4e48-be10-b4ce958f33b5",
+      "screenshots": [
+        "evidence-021-049-manual-production-20261113/023-agent-terminal.png",
+        "evidence-021-049-manual-production-20261113/023-baseline.png",
+        "evidence-021-049-manual-production-20261113/023-before-submit.png"
+      ]
+    },
+    {
+      "id": "ERYE199-024",
+      "status": "Not Applicable",
+      "actual": "依赖本轮023的可编辑视频蒙版缺口；路径蒙版及关键帧无法建立，拓扑变化/保持插值目标未执行，没有024独立run。",
+      "source_case": "023",
+      "run_id": "run_v2_ff51539d2d9040ecb0b4501d49aafc89",
+      "fixture": {
+        "conversationId": "c7c646fb-150f-4237-8ed7-35435f5c3d40",
+        "editorId": "d337368f-3b92-4385-9135-ff5003791ddf",
+        "name": "ERYE199-023-manual-2026-11-13T10-37-48-153Z"
+      },
+      "target_steps_executed": false,
+      "automation_integrated": false,
+      "automation_status": "PLAN",
+      "script": "",
+      "execution_method": "Ego Lite browser operation; no automation integration",
+      "latest_execution_report": "results-021-049-manual-production-20261113.md",
+      "latest_execution_batch": "erye199-manual-021-050-2026-11-13T10-37-48-153Z",
+      "workspace_id": "71793016-cbbf-4e48-be10-b4ce958f33b5",
+      "screenshots": [
+        "evidence-021-049-manual-production-20261113/023-agent-terminal.png",
+        "evidence-021-049-manual-production-20261113/023-baseline.png",
+        "evidence-021-049-manual-production-20261113/023-before-submit.png"
+      ]
+    },
+    {
+      "id": "ERYE199-025",
+      "status": "Not Applicable",
+      "actual": "高斯模糊/投影/羽化/线性擦除真实片段效果栈、单效果蒙版、启停/复制/排序/重置均不支持；原工程未改。",
+      "source_case": "025",
+      "run_id": "run_v2_cbf7281971e64c68b83a08d3f685c74a",
+      "fixture": {
+        "conversationId": "24035a58-e86f-472f-b604-33cec7c7d259",
+        "editorId": "7c80a8e2-44a5-49cf-8a04-9a5b8d42d942",
+        "name": "ERYE199-025-manual-2026-11-13T10-37-48-153Z"
+      },
+      "target_steps_executed": false,
+      "automation_integrated": false,
+      "automation_status": "PLAN",
+      "script": "",
+      "execution_method": "Ego Lite browser operation; no automation integration",
+      "latest_execution_report": "results-021-049-manual-production-20261113.md",
+      "latest_execution_batch": "erye199-manual-021-050-2026-11-13T10-37-48-153Z",
+      "workspace_id": "71793016-cbbf-4e48-be10-b4ce958f33b5",
+      "screenshots": [
+        "evidence-021-049-manual-production-20261113/025-agent-terminal.png",
+        "evidence-021-049-manual-production-20261113/025-baseline.png",
+        "evidence-021-049-manual-production-20261113/025-before-submit.png"
+      ]
+    },
+    {
+      "id": "ERYE199-026",
+      "status": "Not Applicable",
+      "actual": "依赖本轮025确认的真实效果栈/排序能力缺口，两个效果无法建立；交换顺序及对应预览/导出对比未执行，没有026独立run。",
+      "source_case": "025",
+      "run_id": "run_v2_cbf7281971e64c68b83a08d3f685c74a",
+      "fixture": {
+        "conversationId": "24035a58-e86f-472f-b604-33cec7c7d259",
+        "editorId": "7c80a8e2-44a5-49cf-8a04-9a5b8d42d942",
+        "name": "ERYE199-025-manual-2026-11-13T10-37-48-153Z"
+      },
+      "target_steps_executed": false,
+      "automation_integrated": false,
+      "automation_status": "PLAN",
+      "script": "",
+      "execution_method": "Ego Lite browser operation; no automation integration",
+      "latest_execution_report": "results-021-049-manual-production-20261113.md",
+      "latest_execution_batch": "erye199-manual-021-050-2026-11-13T10-37-48-153Z",
+      "workspace_id": "71793016-cbbf-4e48-be10-b4ce958f33b5",
+      "screenshots": [
+        "evidence-021-049-manual-production-20261113/025-agent-terminal.png",
+        "evidence-021-049-manual-production-20261113/025-baseline.png",
+        "evidence-021-049-manual-production-20261113/025-before-submit.png"
+      ]
+    },
+    {
+      "id": "ERYE199-027",
+      "status": "Not Applicable",
+      "actual": "独立Graphic组、组内元素/顺序/组变换及可编辑模板保存不支持；未用字幕或水印替代，原工程保持。",
+      "source_case": "027",
+      "run_id": "run_v2_2d6fea6a620a4f3693599679f7ce6851",
+      "fixture": {
+        "conversationId": "d01a1586-b3a1-468e-b187-dcb023e4f029",
+        "editorId": "7b8394f0-bb0c-480c-8c02-aaf341fc0db8",
+        "name": "ERYE199-027-manual-2026-11-13T10-37-48-153Z"
+      },
+      "target_steps_executed": false,
+      "automation_integrated": false,
+      "automation_status": "PLAN",
+      "script": "",
+      "execution_method": "Ego Lite browser operation; no automation integration",
+      "latest_execution_report": "results-021-049-manual-production-20261113.md",
+      "latest_execution_batch": "erye199-manual-021-050-2026-11-13T10-37-48-153Z",
+      "workspace_id": "71793016-cbbf-4e48-be10-b4ce958f33b5",
+      "screenshots": [
+        "evidence-021-049-manual-production-20261113/027-agent-terminal.png",
+        "evidence-021-049-manual-production-20261113/027-baseline.png",
+        "evidence-021-049-manual-production-20261113/027-before-submit.png"
+      ]
+    },
+    {
+      "id": "ERYE199-028",
+      "status": "Not Applicable",
+      "actual": "全项目字号在真实样式面板改为24并保存，双语基线已可见；段级/仅源轨/双语主副行独立样式不支持，未用全局样式替代通过；任务后文字/时间/配音及基线未改。",
+      "source_case": "028",
+      "run_id": "run_v2_3133b58fc6fa4a74a2fcc946332b8603",
+      "fixture": {
+        "conversationId": "f115e94b-35f4-4c0e-828f-220e1addd0d8",
+        "editorId": "890b60bb-04f0-4877-a316-271da07a53d0",
+        "name": "ERYE199-028-manual-2026-11-13T10-37-48-153Z"
+      },
+      "partial_checks": [
+        "全项目字号24真实保存",
+        "双语字幕显示"
+      ],
+      "target_steps_executed": true,
+      "automation_integrated": false,
+      "automation_status": "PLAN",
+      "script": "",
+      "execution_method": "Ego Lite browser operation; no automation integration",
+      "latest_execution_report": "results-021-049-manual-production-20261113.md",
+      "latest_execution_batch": "erye199-manual-021-050-2026-11-13T10-37-48-153Z",
+      "workspace_id": "71793016-cbbf-4e48-be10-b4ce958f33b5",
+      "screenshots": [
+        "evidence-021-049-manual-production-20261113/028-agent-terminal.png",
+        "evidence-021-049-manual-production-20261113/028-baseline.png",
+        "evidence-021-049-manual-production-20261113/028-before-submit.png",
+        "evidence-021-049-manual-production-20261113/028-bilingual-baseline.png",
+        "evidence-021-049-manual-production-20261113/028-global-font24.png",
+        "evidence-021-049-manual-production-20261113/028-style-entry-observation.png",
+        "evidence-021-049-manual-production-20261113/028-style-panel-visible.png"
+      ]
+    },
+    {
+      "id": "ERYE199-029",
+      "status": "Not Applicable",
+      "actual": "缺失字体样本已在页面显示原字体名及中英数字Emoji/长姓名，搜索Arial无匹配；专门的缺失检测、替代对照预览/确认/映射记录及字形安全区检查未实现；未跳过预览强制设置，工程未改。",
+      "source_case": "029",
+      "run_id": "run_v2_004e1c2084334f29b36680e97a5ac277",
+      "fixture": {
+        "conversationId": "b88abc41-60fa-4617-ac17-88503894b6aa",
+        "editorId": "cb9d357c-53eb-40a5-907f-961c568ac197",
+        "name": "ERYE199-029-manual-2026-11-13T10-37-48-153Z"
+      },
+      "target_steps_executed": true,
+      "automation_integrated": false,
+      "automation_status": "PLAN",
+      "script": "",
+      "execution_method": "Ego Lite browser operation; no automation integration",
+      "latest_execution_report": "results-021-049-manual-production-20261113.md",
+      "latest_execution_batch": "erye199-manual-021-050-2026-11-13T10-37-48-153Z",
+      "workspace_id": "71793016-cbbf-4e48-be10-b4ce958f33b5",
+      "screenshots": [
+        "evidence-021-049-manual-production-20261113/029-agent-terminal.png",
+        "evidence-021-049-manual-production-20261113/029-baseline.png",
+        "evidence-021-049-manual-production-20261113/029-before-submit.png",
+        "evidence-021-049-manual-production-20261113/029-missing-font-baseline.png",
+        "evidence-021-049-manual-production-20261113/029-missing-font-search-arial.png"
+      ]
+    },
+    {
+      "id": "ERYE199-031",
+      "status": "Not Applicable",
+      "actual": "切点两侧余量足够的两段基线已建立；当前不支持工程内可编辑转场对象，6类类型/时长/对齐核验未执行；未生成拼接视频或用淡入淡出替代。",
+      "source_case": "031",
+      "run_id": "run_v2_5791a43f7bfd41f185fcc25b5848ffe8",
+      "fixture": {
+        "conversationId": "49d49b13-c09d-40b8-8517-7b8cced98650",
+        "editorId": "1ab50323-f5ec-4682-80b0-9c867c3e3abe",
+        "name": "ERYE199-031-manual-2026-11-13T10-37-48-153Z"
+      },
+      "target_steps_executed": false,
+      "automation_integrated": false,
+      "automation_status": "PLAN",
+      "script": "",
+      "execution_method": "Ego Lite browser operation; no automation integration",
+      "latest_execution_report": "results-021-049-manual-production-20261113.md",
+      "latest_execution_batch": "erye199-manual-021-050-2026-11-13T10-37-48-153Z",
+      "workspace_id": "71793016-cbbf-4e48-be10-b4ce958f33b5",
+      "screenshots": [
+        "evidence-021-049-manual-production-20261113/031-agent-terminal.png",
+        "evidence-021-049-manual-production-20261113/031-baseline.png",
+        "evidence-021-049-manual-production-20261113/031-before-submit.png"
+      ]
+    },
+    {
+      "id": "ERYE199-032",
+      "status": "Not Applicable",
+      "actual": "依赖本轮031的真实可编辑转场缺口；无法建立不足余量的转场提交，提示可用时长/缩短及重复帧检查未执行，没有032独立run。",
+      "source_case": "031",
+      "run_id": "run_v2_5791a43f7bfd41f185fcc25b5848ffe8",
+      "fixture": {
+        "conversationId": "49d49b13-c09d-40b8-8517-7b8cced98650",
+        "editorId": "1ab50323-f5ec-4682-80b0-9c867c3e3abe",
+        "name": "ERYE199-031-manual-2026-11-13T10-37-48-153Z"
+      },
+      "target_steps_executed": false,
+      "automation_integrated": false,
+      "automation_status": "PLAN",
+      "script": "",
+      "execution_method": "Ego Lite browser operation; no automation integration",
+      "latest_execution_report": "results-021-049-manual-production-20261113.md",
+      "latest_execution_batch": "erye199-manual-021-050-2026-11-13T10-37-48-153Z",
+      "workspace_id": "71793016-cbbf-4e48-be10-b4ce958f33b5",
+      "screenshots": [
+        "evidence-021-049-manual-production-20261113/031-agent-terminal.png",
+        "evidence-021-049-manual-production-20261113/031-baseline.png",
+        "evidence-021-049-manual-production-20261113/031-before-submit.png"
+      ]
+    },
+    {
+      "id": "ERYE199-033",
+      "status": "Not Applicable",
+      "actual": "独立音轨两段相邻、原视频原声静音的基线已准备；恒定增益/恒定功率/指数可编辑音频转场、曲线/独立时长和专属删除均不支持，未生成混音替代。",
+      "source_case": "033",
+      "run_id": "run_v2_cd3a968d12ee4b7b9b60fd18dd80a089",
+      "fixture": {
+        "conversationId": "3aae6e7e-45ab-437e-847f-8bbf106101ee",
+        "editorId": "2b487769-352e-4548-a766-6c47ca2274e4",
+        "name": "ERYE199-033-manual-2026-11-13T10-37-48-153Z"
+      },
+      "target_steps_executed": false,
+      "automation_integrated": false,
+      "automation_status": "PLAN",
+      "script": "",
+      "execution_method": "Ego Lite browser operation; no automation integration",
+      "latest_execution_report": "results-021-049-manual-production-20261113.md",
+      "latest_execution_batch": "erye199-manual-021-050-2026-11-13T10-37-48-153Z",
+      "workspace_id": "71793016-cbbf-4e48-be10-b4ce958f33b5",
+      "screenshots": [
+        "evidence-021-049-manual-production-20261113/033-agent-terminal.png",
+        "evidence-021-049-manual-production-20261113/033-baseline.png",
+        "evidence-021-049-manual-production-20261113/033-before-submit.png"
+      ]
+    },
+    {
+      "id": "ERYE199-034",
+      "status": "Not Applicable",
+      "actual": "本轮新工程已准备原片/原声/固定字幕；源时间绑定字幕不支持，0.1/8倍超当前工程0.25～4倍范围，保持音高/起点或时长策略及波纹冲突控制不完整。未绕过前置执行0.3178倍，原工程未改。",
+      "source_case": "034",
+      "run_id": "run_v2_673f0a1932bc4d2e98b05ac261d08c74",
+      "fixture": {
+        "conversationId": "af09b9f5-86d9-4282-9260-bb37bc74dd9b",
+        "editorId": "99b28767-ba22-414b-b219-ed2839554d2b",
+        "name": "ERYE199-034-manual-2026-11-13T10-37-48-153Z"
+      },
+      "target_steps_executed": false,
+      "automation_integrated": false,
+      "automation_status": "PLAN",
+      "script": "",
+      "execution_method": "Ego Lite browser operation; no automation integration",
+      "latest_execution_report": "results-021-049-manual-production-20261113.md",
+      "latest_execution_batch": "erye199-manual-021-050-2026-11-13T10-37-48-153Z",
+      "workspace_id": "71793016-cbbf-4e48-be10-b4ce958f33b5",
+      "screenshots": [
+        "evidence-021-049-manual-production-20261113/034-agent-terminal.png",
+        "evidence-021-049-manual-production-20261113/034-baseline.png",
+        "evidence-021-049-manual-production-20261113/034-before-submit.png"
+      ]
+    },
+    {
+      "id": "ERYE199-035",
+      "status": "Not Applicable",
+      "actual": "SDR源与.cube样本已准备；本轮页面功能入口及Agent不提供LUT导入/持久化和工程内可编辑调色，文件级调色未作替代；未加载LUT/重开验证，工程未改。",
+      "source_case": "035",
+      "run_id": "run_v2_d4a20d8d623e460bbcf1a45459a95975",
+      "fixture": {
+        "conversationId": "57c232f1-5ae5-4ce7-b592-21a2e8213953",
+        "editorId": "ec4bb012-0d7c-4559-ae5c-64aae4d19d35",
+        "name": "ERYE199-035-manual-2026-11-13T10-37-48-153Z"
+      },
+      "target_steps_executed": false,
+      "automation_integrated": false,
+      "automation_status": "PLAN",
+      "script": "",
+      "execution_method": "Ego Lite browser operation; no automation integration",
+      "latest_execution_report": "results-021-049-manual-production-20261113.md",
+      "latest_execution_batch": "erye199-manual-021-050-2026-11-13T10-37-48-153Z",
+      "workspace_id": "71793016-cbbf-4e48-be10-b4ce958f33b5",
+      "screenshots": [
+        "evidence-021-049-manual-production-20261113/035-agent-terminal.png",
+        "evidence-021-049-manual-production-20261113/035-baseline.png",
+        "evidence-021-049-manual-production-20261113/035-before-submit.png"
+      ]
+    },
+    {
+      "id": "ERYE199-037",
+      "status": "Not Applicable",
+      "actual": "当前不支持真实调整层、曝光EV/高斯模糊和视频效果蒙版，2～6秒调整层未建立，1/3/7秒对照及导出检查未执行；未用可见色块或水印替代。",
+      "source_case": "037",
+      "run_id": "run_v2_cbf03ee5f19c4e41991115226e62814f",
+      "fixture": {
+        "conversationId": "dd61e646-b07a-4a6e-8b31-607b8864a373",
+        "editorId": "89ecf904-5068-4f43-9152-781c991cf9af",
+        "name": "ERYE199-037-manual-2026-11-13T10-37-48-153Z"
+      },
+      "target_steps_executed": false,
+      "automation_integrated": false,
+      "automation_status": "PLAN",
+      "script": "",
+      "execution_method": "Ego Lite browser operation; no automation integration",
+      "latest_execution_report": "results-021-049-manual-production-20261113.md",
+      "latest_execution_batch": "erye199-manual-021-050-2026-11-13T10-37-48-153Z",
+      "workspace_id": "71793016-cbbf-4e48-be10-b4ce958f33b5",
+      "screenshots": [
+        "evidence-021-049-manual-production-20261113/037-agent-terminal.png",
+        "evidence-021-049-manual-production-20261113/037-baseline.png",
+        "evidence-021-049-manual-production-20261113/037-before-submit.png"
+      ]
+    },
+    {
+      "id": "ERYE199-038",
+      "status": "Not Applicable",
+      "actual": "本轮035同场核验：当前页面无可用调色/示波器入口，Agent明确无波形/矢量示波器打开或读取能力；未展示实时变化；复用035证据，无038独立run。",
+      "source_case": "035",
+      "run_id": "run_v2_d4a20d8d623e460bbcf1a45459a95975",
+      "fixture": {
+        "conversationId": "57c232f1-5ae5-4ce7-b592-21a2e8213953",
+        "editorId": "ec4bb012-0d7c-4559-ae5c-64aae4d19d35",
+        "name": "ERYE199-035-manual-2026-11-13T10-37-48-153Z"
+      },
+      "target_steps_executed": false,
+      "automation_integrated": false,
+      "automation_status": "PLAN",
+      "script": "",
+      "execution_method": "Ego Lite browser operation; no automation integration",
+      "latest_execution_report": "results-021-049-manual-production-20261113.md",
+      "latest_execution_batch": "erye199-manual-021-050-2026-11-13T10-37-48-153Z",
+      "workspace_id": "71793016-cbbf-4e48-be10-b4ce958f33b5",
+      "screenshots": [
+        "evidence-021-049-manual-production-20261113/035-agent-terminal.png",
+        "evidence-021-049-manual-production-20261113/035-baseline.png",
+        "evidence-021-049-manual-production-20261113/035-before-submit.png"
+      ]
+    },
+    {
+      "id": "ERYE199-039",
+      "status": "Not Applicable",
+      "actual": "真实绿幕人物及下层不同背景已准备；当前无可编辑色度抠像、alpha输出/三视图和边缘/垃圾蒙版控制，参数调整及边缘质量目标未执行，原工程未改。",
+      "source_case": "039",
+      "run_id": "run_v2_70e199330b0d457b8e249a5e63f4583b",
+      "fixture": {
+        "conversationId": "dbdc1025-97fc-4a0c-b5a6-98a777d84ca0",
+        "editorId": "4e2be456-12bb-4ba2-9272-b1538e89192d",
+        "name": "ERYE199-039-manual-2026-11-13T10-37-48-153Z"
+      },
+      "target_steps_executed": false,
+      "automation_integrated": false,
+      "automation_status": "PLAN",
+      "script": "",
+      "execution_method": "Ego Lite browser operation; no automation integration",
+      "latest_execution_report": "results-021-049-manual-production-20261113.md",
+      "latest_execution_batch": "erye199-manual-021-050-2026-11-13T10-37-48-153Z",
+      "workspace_id": "71793016-cbbf-4e48-be10-b4ce958f33b5",
+      "screenshots": [
+        "evidence-021-049-manual-production-20261113/039-agent-terminal.png",
+        "evidence-021-049-manual-production-20261113/039-baseline.png",
+        "evidence-021-049-manual-production-20261113/039-before-submit.png",
+        "evidence-021-049-manual-production-20261113/039-green-screen-source.png"
+      ]
+    },
+    {
+      "id": "ERYE199-041",
+      "status": "Not Applicable",
+      "actual": "已用独立已知抖动的真实人物源准备6秒新工程；当前无工程内稳定模式、后台分析/取消/失败保留/源范围缓存失效流程，未运行稳定或注入失败，原片段未改。",
+      "source_case": "041",
+      "run_id": "run_v2_a955e3361afe4f439f1cb0ede1863a30",
+      "fixture": {
+        "conversationId": "a160090a-975a-4697-9c79-4df272f45a8d",
+        "editorId": "96763e92-771e-4544-b2fc-f24602ff383f",
+        "name": "ERYE199-041-manual-2026-11-13T10-37-48-153Z"
+      },
+      "target_steps_executed": false,
+      "automation_integrated": false,
+      "automation_status": "PLAN",
+      "script": "",
+      "execution_method": "Ego Lite browser operation; no automation integration",
+      "latest_execution_report": "results-021-049-manual-production-20261113.md",
+      "latest_execution_batch": "erye199-manual-021-050-2026-11-13T10-37-48-153Z",
+      "workspace_id": "71793016-cbbf-4e48-be10-b4ce958f33b5",
+      "screenshots": [
+        "evidence-021-049-manual-production-20261113/041-agent-terminal.png",
+        "evidence-021-049-manual-production-20261113/041-baseline.png",
+        "evidence-021-049-manual-production-20261113/041-before-submit.png"
+      ]
+    },
+    {
+      "id": "ERYE199-042",
+      "status": "Not Applicable",
+      "actual": "对白+音乐新工程，真实拖动片段音量至58%，音乐保持30%；原声静音/恢复操作有效。独立轨级dB推子、声像、solo、真实音量关键帧及实时电平表不支持，不以片段音量/静音代替完整混音通过。",
+      "source_case": "042",
+      "run_id": "run_v2_df416cd61b8c48e2bbf62f6ab271f404",
+      "fixture": {
+        "conversationId": "a66ae911-9d81-4526-bbb1-9e541037c5d3",
+        "editorId": "167525dd-7645-4995-8993-ac9a91925f78",
+        "name": "ERYE199-042-manual-2026-11-13T10-37-48-153Z"
+      },
+      "target_steps_executed": true,
+      "automation_integrated": false,
+      "partial_checks": [
+        "原声静音及恢复",
+        "真实拖动对白音量58%，音乐30%不串改"
+      ],
+      "observation_note": "probe前后2→3的差异仅是刚点击的原声恢复异步落盘：muted true→false，非Agent改写；后续真实拖动音量单独留证。键盘试调未改增益、只移动播放头，不计产品缺陷。",
+      "actions": [
+        "准备10秒真实对白原片及独立音乐，音乐音量30%",
+        "点击原声静音再启用，核对恢复非静音",
+        "请求轨级推子/声像/solo/关键帧/电平表，明确不支持",
+        "实际拖动对白音量线降低至58%，核对音乐仍30%、两轨均非静音",
+        "刷新同一工程核对音量及静音状态保持"
+      ],
+      "automation_status": "PLAN",
+      "script": "",
+      "execution_method": "Ego Lite browser operation; no automation integration",
+      "latest_execution_report": "results-021-049-manual-production-20261113.md",
+      "latest_execution_batch": "erye199-manual-021-050-2026-11-13T10-37-48-153Z",
+      "workspace_id": "71793016-cbbf-4e48-be10-b4ce958f33b5",
+      "screenshots": [
+        "evidence-021-049-manual-production-20261113/042-agent-terminal.png",
+        "evidence-021-049-manual-production-20261113/042-audio-slider-observation.png",
+        "evidence-021-049-manual-production-20261113/042-baseline.png",
+        "evidence-021-049-manual-production-20261113/042-before-submit.png",
+        "evidence-021-049-manual-production-20261113/042-dialogue-muted.png",
+        "evidence-021-049-manual-production-20261113/042-dialogue-restored.png",
+        "evidence-021-049-manual-production-20261113/042-gain-drag-baseline.png",
+        "evidence-021-049-manual-production-20261113/042-gain-drag-result.png",
+        "evidence-021-049-manual-production-20261113/042-gain-ui-result.png",
+        "evidence-021-049-manual-production-20261113/042-mixing-controls.png",
+        "evidence-021-049-manual-production-20261113/042-mixing-refreshed.png"
+      ]
+    },
+    {
+      "id": "ERYE199-044",
+      "status": "Not Applicable",
+      "actual": "当前无工程内可编辑音频效果链、排序、参数EQ/独立半音音分/真峰值限幅及处理延迟控制；效果前置无法建立，时长/同步目标未执行。未以文件级降噪或变速替代，原工程未改。",
+      "source_case": "044",
+      "run_id": "run_v2_5aad996d6afd4cdc98d3d226098a88c4",
+      "fixture": {
+        "conversationId": "8b920bec-61aa-4227-b51d-15ec4b2f3860",
+        "editorId": "4ecf6805-3077-45dc-b5cc-2b743ceaea22",
+        "name": "ERYE199-044-manual-2026-11-13T10-37-48-153Z"
+      },
+      "target_steps_executed": false,
+      "automation_integrated": false,
+      "automation_status": "PLAN",
+      "script": "",
+      "execution_method": "Ego Lite browser operation; no automation integration",
+      "latest_execution_report": "results-021-049-manual-production-20261113.md",
+      "latest_execution_batch": "erye199-manual-021-050-2026-11-13T10-37-48-153Z",
+      "workspace_id": "71793016-cbbf-4e48-be10-b4ce958f33b5",
+      "screenshots": [
+        "evidence-021-049-manual-production-20261113/044-agent-terminal.png",
+        "evidence-021-049-manual-production-20261113/044-baseline.png",
+        "evidence-021-049-manual-production-20261113/044-before-submit.png"
+      ]
+    },
+    {
+      "id": "ERYE199-045",
+      "status": "Not Applicable",
+      "actual": "对白和独立音乐已准备；当前无侧链自动压低、可见可编辑包络/手动点保护，导出也无LUFS归一化及dBTP限幅配置。未执行固定音量或混音文件替代，原工程未改。",
+      "source_case": "045",
+      "run_id": "run_v2_14227a1cc5d0408da6e43bbb25f27b58",
+      "fixture": {
+        "conversationId": "a513d3c8-6430-409f-ab75-558fdc98ecad",
+        "editorId": "50896804-d823-41a7-beb1-5d094bb95723",
+        "name": "ERYE199-045-manual-2026-11-13T10-37-48-153Z"
+      },
+      "target_steps_executed": false,
+      "automation_integrated": false,
+      "automation_status": "PLAN",
+      "script": "",
+      "execution_method": "Ego Lite browser operation; no automation integration",
+      "latest_execution_report": "results-021-049-manual-production-20261113.md",
+      "latest_execution_batch": "erye199-manual-021-050-2026-11-13T10-37-48-153Z",
+      "workspace_id": "71793016-cbbf-4e48-be10-b4ce958f33b5",
+      "screenshots": [
+        "evidence-021-049-manual-production-20261113/045-agent-terminal.png",
+        "evidence-021-049-manual-production-20261113/045-baseline.png",
+        "evidence-021-049-manual-production-20261113/045-before-submit.png"
+      ]
+    },
+    {
+      "id": "ERYE199-046",
+      "status": "Not Applicable",
+      "actual": "13秒音乐源/10秒目标/保护区间4～6秒已给齐；当前不支持结构分析后生成两个可审阅候选、保护映射校验及工程内单步可撤销替换，未以普通拼接/变速替代，原曲和工程未改。",
+      "source_case": "046",
+      "run_id": "run_v2_2529349a1c5a482dbc55a1ac4954efa0",
+      "fixture": {
+        "conversationId": "1982e064-f51c-4c88-95d8-41c1cee2bf83",
+        "editorId": "36cdd912-677d-4c72-80e1-8e43ad7a8499",
+        "name": "ERYE199-046-manual-2026-11-13T10-37-48-153Z"
+      },
+      "target_steps_executed": false,
+      "automation_integrated": false,
+      "automation_status": "PLAN",
+      "script": "",
+      "execution_method": "Ego Lite browser operation; no automation integration",
+      "latest_execution_report": "results-021-049-manual-production-20261113.md",
+      "latest_execution_batch": "erye199-manual-021-050-2026-11-13T10-37-48-153Z",
+      "workspace_id": "71793016-cbbf-4e48-be10-b4ce958f33b5",
+      "screenshots": [
+        "evidence-021-049-manual-production-20261113/046-agent-terminal.png",
+        "evidence-021-049-manual-production-20261113/046-baseline.png",
+        "evidence-021-049-manual-production-20261113/046-before-submit.png"
+      ]
+    },
+    {
+      "id": "ERYE199-047",
+      "status": "Not Applicable",
+      "actual": "依赖本轮025可编辑效果栈和027独立图形组缺口，无法准备“效果+字幕+图形”的完整工程；三种预览/导出同帧一致性目标未执行。030普通字幕预览/导出局部观察不替代本例通过。",
+      "source_case": "025",
+      "run_id": "run_v2_cbf7281971e64c68b83a08d3f685c74a",
+      "dependencies": [
+        "ERYE199-025",
+        "ERYE199-027"
+      ],
+      "fixture": {
+        "conversationId": "24035a58-e86f-472f-b604-33cec7c7d259",
+        "editorId": "7c80a8e2-44a5-49cf-8a04-9a5b8d42d942",
+        "name": "ERYE199-025-manual-2026-11-13T10-37-48-153Z"
+      },
+      "target_steps_executed": false,
+      "automation_integrated": false,
+      "automation_status": "PLAN",
+      "script": "",
+      "execution_method": "Ego Lite browser operation; no automation integration",
+      "latest_execution_report": "results-021-049-manual-production-20261113.md",
+      "latest_execution_batch": "erye199-manual-021-050-2026-11-13T10-37-48-153Z",
+      "workspace_id": "71793016-cbbf-4e48-be10-b4ce958f33b5",
+      "screenshots": [
+        "evidence-021-049-manual-production-20261113/025-agent-terminal.png",
+        "evidence-021-049-manual-production-20261113/025-baseline.png",
+        "evidence-021-049-manual-production-20261113/025-before-submit.png"
+      ]
+    },
+    {
+      "id": "ERYE199-048",
+      "status": "Not Applicable",
+      "actual": "已检查当前预览控件；真实代理/320×180预览质量切换及状态/未渲染效果标识未提供，代理前置无法建立，未用浏览器缩放或普通导出替代验证，工程未改。",
+      "source_case": "048",
+      "run_id": "run_v2_27fc84e481f84c0c8981140009ea465a",
+      "fixture": {
+        "conversationId": "45e07233-a033-4f31-ba7e-99c4756a816a",
+        "editorId": "e42e974a-7d31-42ce-9734-de31b2f435d3",
+        "name": "ERYE199-048-manual-2026-11-13T10-37-48-153Z"
+      },
+      "target_steps_executed": false,
+      "automation_integrated": false,
+      "automation_status": "PLAN",
+      "script": "",
+      "execution_method": "Ego Lite browser operation; no automation integration",
+      "latest_execution_report": "results-021-049-manual-production-20261113.md",
+      "latest_execution_batch": "erye199-manual-021-050-2026-11-13T10-37-48-153Z",
+      "workspace_id": "71793016-cbbf-4e48-be10-b4ce958f33b5",
+      "screenshots": [
+        "evidence-021-049-manual-production-20261113/048-agent-terminal.png",
+        "evidence-021-049-manual-production-20261113/048-baseline.png",
+        "evidence-021-049-manual-production-20261113/048-before-submit.png",
+        "evidence-021-049-manual-production-20261113/048-preview-quality-controls.png"
+      ]
+    }
+  ]
+}

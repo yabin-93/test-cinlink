@@ -1,0 +1,108 @@
+{
+  "date": "2026-11-18",
+  "method": "official Yunxiao OpenAPI via tools/yunxiao",
+  "deduplication": false,
+  "own_checkpoint_recovery": true,
+  "created": 1,
+  "native_screenshots_uploaded": 4,
+  "images_uploaded": 4,
+  "attachments_verified": 6,
+  "verified": true,
+  "rerun_performed": false,
+  "cases": {
+    "ERYE199-078": {
+      "id": "FWXC-694",
+      "workitem_id": "c6fcf26c6c51304682eec70a9b",
+      "url": "https://devops.aliyun.com/projex/project/1e401ac99539c3999e00e40006/bug#openWorkitemIdentifier=c6fcf26c6c51304682eec70a9b",
+      "title": "【生产环境】同会话切换译文字幕和双语译配后多出前轮英文字幕轨",
+      "case_id": "ERYE199-078",
+      "key": "ERYE199-078-EXTRA-SOURCE-SUBTITLE-TRACKS-PROD-20261118",
+      "status": "🤔AI提缺陷",
+      "assigned_to": "牛诗晴",
+      "sprint": "重构10-29",
+      "labels": [
+        "生产环境"
+      ],
+      "priority": "中",
+      "serious_level": "3-一般",
+      "verified": true,
+      "screenshots": 4,
+      "attachments": 6,
+      "synced_at": "2026-11-18T19:55:43.0664748+08:00",
+      "local_report": "docs/defects/ERYE199-078-extra-source-subtitle-tracks-production-20261118.md",
+      "attachment_receipts": [
+        {
+          "id": "7f4cb60ae697d53dc4583dc3cc",
+          "size": 327328,
+          "sha256": "9c7a856e59933fb551fa31426d828cdc09f639aa94a15b48b38ce2161a9e100b",
+          "name": "078-S1-before-submit-translation-only.png"
+        },
+        {
+          "id": "be71b4de68ebffd5deee9f0385",
+          "size": 820050,
+          "sha256": "c2a79307d898a2cd369b1b0b61a773c74ba5514109f5c828896ab702e4ad34e3",
+          "name": "078-S1-extra-English-four-tracks.png"
+        },
+        {
+          "id": "57874453637b51d906d1517aeb",
+          "size": 370209,
+          "sha256": "8bad2c1c4d683aaaeb5f8f6765edcdf11d301b5c9cc5f46fc1acbe6cc1106979",
+          "name": "078-T2-before-submit-bilingual-dubbing.png"
+        },
+        {
+          "id": "6a385ec9f358d7e14030215e9c",
+          "size": 813185,
+          "sha256": "1491c20df9ca77c28850c05339978a811734d25d882c67032dc9a1ef95ce7051",
+          "name": "078-T2-extra-English-six-tracks.png"
+        },
+        {
+          "id": "1b5519076a915422a1596610f2",
+          "size": 2197394,
+          "sha256": "b1fce3d9ba5094ca2d1acbe50b17aef903a6fcb353cbd19181ff3ae1a8f9a9a1",
+          "name": "F20-English-source-with-BGM.mp4"
+        },
+        {
+          "id": "1b39ab5928d5f3b3bfed1c7410",
+          "size": 9868,
+          "sha256": "d4fbaa350605089575ef03ab85e3798d7a442b38af1edec601d02a68f99cb825",
+          "name": "078-evidence-summary.json"
+        }
+      ],
+      "images": [
+        {
+          "name": "078-S1-before-submit-translation-only.png",
+          "id": "7f4cb60ae697d53dc4583dc3cc",
+          "sha256": "9c7a856e59933fb551fa31426d828cdc09f639aa94a15b48b38ce2161a9e100b",
+          "size": 327328,
+          "caption": "第2轮提交参数原图：简体中文、字幕显示模式“译文”，重新附加原片。",
+          "embedded": true
+        },
+        {
+          "name": "078-S1-extra-English-four-tracks.png",
+          "id": "be71b4de68ebffd5deee9f0385",
+          "sha256": "c2a79307d898a2cd369b1b0b61a773c74ba5514109f5c828896ab702e4ad34e3",
+          "size": 820050,
+          "caption": "第2轮失败原图：中文与英文各占一条字幕轨，共4轨；10秒处译文模式仍显示中英。",
+          "embedded": true
+        },
+        {
+          "name": "078-T2-before-submit-bilingual-dubbing.png",
+          "id": "57874453637b51d906d1517aeb",
+          "sha256": "8bad2c1c4d683aaaeb5f8f6765edcdf11d301b5c9cc5f46fc1acbe6cc1106979",
+          "size": 370209,
+          "caption": "第3轮提交参数原图：配音和字幕、简体中文、双语；重新附加同一原片。",
+          "embedded": true
+        },
+        {
+          "name": "078-T2-extra-English-six-tracks.png",
+          "id": "6a385ec9f358d7e14030215e9c",
+          "sha256": "1491c20df9ca77c28850c05339978a811734d25d882c67032dc9a1ef95ce7051",
+          "size": 813185,
+          "caption": "第3轮失败原图：两条字幕轨加视频、原声、配音、背景音乐共6轨，预期为五类轨道。",
+          "embedded": true
+        }
+      ],
+      "description_sha256": "86bad6ffc2fa3ebf1af17ccdf2bdc6a86ff5423e75b22ebd38df9a337d79dc65"
+    }
+  }
+}

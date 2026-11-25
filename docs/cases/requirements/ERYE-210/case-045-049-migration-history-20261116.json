@@ -1,0 +1,252 @@
+{
+  "date": "2026-11-16",
+  "reason": "用户明确同意替换045～049为现有功能并执行，014保留阻塞",
+  "rows": {
+    "045": "| ERYE210-045 | P0 | P；分别提供真实旧media、资产、工程文件入口或浏览器旧缓存备份，以及它们对应的原工程/媒体清单。 | 1. 核对真实旧样本、账号、原工程和基线文件。<br>2. 在专用测试浏览器备份现状后，按原入口打开并核对新版实际定位。<br>3. 重开检查媒体、字幕、任务及历史；049另外执行真实视图回退和恢复。<br>4. 样本或回退环境缺失时记录具体缺口，不执行目标迁移，不伪造缓存或链接。 | 旧入口可进入正确Media且业务内容不变；打开/刷新不会重新生成或多出工程。 | Source: Requirement；ERYE-210 N10；AC11；Figma主页面 | [BLOCKED] | `tests/editor/erye210-capabilities.spec.ts` | 旧版迁移专项；Blocked；仅前置门禁；旧media/资产/工程文件样本缺失；[补齐清单](case-021-035-v2-current-features-20261113.md) |",
+    "046": "| ERYE210-046 | P0 | P；提供同一账号可打开的旧清理/精简入口，及原工程、候选或精简结果基线。 | 1. 核对真实旧样本、账号、原工程和基线文件。<br>2. 在专用测试浏览器备份现状后，按原入口打开并核对新版实际定位。<br>3. 重开检查媒体、字幕、任务及历史；049另外执行真实视图回退和恢复。<br>4. 样本或回退环境缺失时记录具体缺口，不执行目标迁移，不伪造缓存或链接。 | 在已确认Scripts一级入口下定位对应清理/精简功能；不存在的子入口明确降级不借待定剪辑偏好稿代替。 | Source: Requirement；ERYE-210 N03/10；AC11 | [BLOCKED] | `tests/editor/erye210-capabilities.spec.ts` | 旧版迁移专项；Blocked；仅前置门禁；旧cleanup/shorten入口缺失；[补齐清单](case-021-035-v2-current-features-20261113.md) |",
+    "047": "| ERYE210-047 | P0 | P；提供旧voice下清理、音量、配音、无子页四类真实记录，并确认当前混音控件位置。 | 1. 核对真实旧样本、账号、原工程和基线文件。<br>2. 在专用测试浏览器备份现状后，按原入口打开并核对新版实际定位。<br>3. 重开检查媒体、字幕、任务及历史；049另外执行真实视图回退和恢复。<br>4. 样本或回退环境缺失时记录具体缺口，不执行目标迁移，不伪造缓存或链接。 | 按语义映射：清理Scripts、配音Voiceover、音量去已冻结混音入口；无子页voice默认Voiceover；不能重新生成或增工程。 | Source: Requirement；ERYE-210 N10；AC11 | [BLOCKED] | `tests/editor/erye210-capabilities.spec.ts` | 旧版迁移专项；Blocked；仅前置门禁；旧voice四类记录及混音目标不完整；[补齐清单](case-021-035-v2-current-features-20261113.md) |",
+    "048": "| ERYE210-048 | P0 | P；提供字幕翻译及语音配音翻译两类真实旧入口，并附对应工程与字幕/音频基线。 | 1. 核对真实旧样本、账号、原工程和基线文件。<br>2. 在专用测试浏览器备份现状后，按原入口打开并核对新版实际定位。<br>3. 重开检查媒体、字幕、任务及历史；049另外执行真实视图回退和恢复。<br>4. 样本或回退环境缺失时记录具体缺口，不执行目标迁移，不伪造缓存或链接。 | 字幕翻译进Captions，明确配音翻译进Voiceover；不因同叫translate改错通道或触发新任务。 | Source: Requirement；ERYE-210 N10；AC11 | [BLOCKED] | `tests/editor/erye210-capabilities.spec.ts` | 旧版迁移专项；Blocked；仅前置门禁；旧translate两类语义样本缺失；[补齐清单](case-021-035-v2-current-features-20261113.md) |",
+    "049": "| ERYE210-049 | P0 | P；提供旧Text/Image缓存、原任务/历史基线和当前测试机可操作的视图版本回退开关。 | 1. 核对真实旧样本、账号、原工程和基线文件。<br>2. 在专用测试浏览器备份现状后，按原入口打开并核对新版实际定位。<br>3. 重开检查媒体、字幕、任务及历史；049另外执行真实视图回退和恢复。<br>4. 样本或回退环境缺失时记录具体缺口，不执行目标迁移，不伪造缓存或链接。 | 旧水印入口能定位Text/Image正确内容，重复打开及真实版本切换后不丢媒体/历史/任务或多出工程。 | Source: Requirement；ERYE-210 N10；AC11 | [BLOCKED] | `tests/editor/erye210-capabilities.spec.ts` | 旧版迁移专项；Blocked；仅前置门禁；旧水印缓存及真实回退环境缺失；[补齐清单](case-021-035-v2-current-features-20261113.md) |"
+  },
+  "registry": {
+    "045": "ERYE210-045:\n  status: BLOCKED\n  script: tests/editor/erye210-capabilities.spec.ts\n  command: \"npm run test:editor:210 -- --grep ERYE210-045\"\n  execution_status: Blocked\n  execution_report: docs/cases/requirements/ERYE-210/results-021-049-prod-20261113.md\n  automation_scope: prerequisite_gate_only\n",
+    "046": "ERYE210-046:\n  status: BLOCKED\n  script: tests/editor/erye210-capabilities.spec.ts\n  command: \"npm run test:editor:210 -- --grep ERYE210-046\"\n  execution_status: Blocked\n  execution_report: docs/cases/requirements/ERYE-210/results-021-049-prod-20261113.md\n  automation_scope: prerequisite_gate_only\n",
+    "047": "ERYE210-047:\n  status: BLOCKED\n  script: tests/editor/erye210-capabilities.spec.ts\n  command: \"npm run test:editor:210 -- --grep ERYE210-047\"\n  execution_status: Blocked\n  execution_report: docs/cases/requirements/ERYE-210/results-021-049-prod-20261113.md\n  automation_scope: prerequisite_gate_only\n",
+    "048": "ERYE210-048:\n  status: BLOCKED\n  script: tests/editor/erye210-capabilities.spec.ts\n  command: \"npm run test:editor:210 -- --grep ERYE210-048\"\n  execution_status: Blocked\n  execution_report: docs/cases/requirements/ERYE-210/results-021-049-prod-20261113.md\n  automation_scope: prerequisite_gate_only\n",
+    "049": "ERYE210-049:\n  status: BLOCKED\n  script: tests/editor/erye210-capabilities.spec.ts\n  command: \"npm run test:editor:210 -- --grep ERYE210-049\"\n  execution_status: Blocked\n  execution_report: docs/cases/requirements/ERYE-210/results-021-049-prod-20261113.md\n  automation_scope: prerequisite_gate_only\n"
+  },
+  "results": [
+    {
+      "id": "ERYE210-045",
+      "status": "Blocked",
+      "actual": "没有真实旧media/资产/工程文件独立缓存或可打开旧入口样本，当前新页面不能证明迁移；未伪造缓存键",
+      "reason": "没有真实旧media/资产/工程文件独立缓存或可打开旧入口样本，当前新页面不能证明迁移；未伪造缓存键",
+      "automated": true,
+      "workspaceId": "52a242f6-e836-46c8-87cc-713463fd565a",
+      "annotations": [
+        {
+          "type": "blocked",
+          "description": "没有真实旧media/资产/工程文件独立缓存或可打开旧入口样本，当前新页面不能证明迁移；未伪造缓存键"
+        },
+        {
+          "type": "skip",
+          "description": "没有真实旧media/资产/工程文件独立缓存或可打开旧入口样本，当前新页面不能证明迁移；未伪造缓存键",
+          "location": {
+            "file": "tools\\editor\\erye210-runner.ts",
+            "line": 60,
+            "column": 91
+          }
+        }
+      ],
+      "projects": {},
+      "checks": [
+        {
+          "stage": "legacy-prerequisite-audit",
+          "executedTarget": false,
+          "reason": "没有真实旧media/资产/工程文件独立缓存或可打开旧入口样本，当前新页面不能证明迁移；未伪造缓存键"
+        }
+      ],
+      "finishedAt": "2026-11-13T11:10:13.640Z",
+      "executionBatch": "prod-022-028-049-20261113-03",
+      "report": "results-021-049-prod-20261113.md",
+      "targetExecuted": false,
+      "automationGateOnly": true,
+      "screenshots": [],
+      "steps": [
+        "核对本轮已登记的真实前置数据；缺口已明确，未执行目标业务步骤。"
+      ]
+    },
+    {
+      "id": "ERYE210-046",
+      "status": "Blocked",
+      "actual": "没有真实旧cleanup/shorten链接或旧记录，未用猜测URL或待定剪辑偏好稿替代历史入口",
+      "reason": "没有真实旧cleanup/shorten链接或旧记录，未用猜测URL或待定剪辑偏好稿替代历史入口",
+      "automated": true,
+      "workspaceId": "52a242f6-e836-46c8-87cc-713463fd565a",
+      "annotations": [
+        {
+          "type": "blocked",
+          "description": "没有真实旧cleanup/shorten链接或旧记录，未用猜测URL或待定剪辑偏好稿替代历史入口"
+        },
+        {
+          "type": "skip",
+          "description": "没有真实旧cleanup/shorten链接或旧记录，未用猜测URL或待定剪辑偏好稿替代历史入口",
+          "location": {
+            "file": "tools\\editor\\erye210-runner.ts",
+            "line": 60,
+            "column": 91
+          }
+        }
+      ],
+      "projects": {},
+      "checks": [
+        {
+          "stage": "legacy-prerequisite-audit",
+          "executedTarget": false,
+          "reason": "没有真实旧cleanup/shorten链接或旧记录，未用猜测URL或待定剪辑偏好稿替代历史入口"
+        }
+      ],
+      "finishedAt": "2026-11-13T11:10:13.666Z",
+      "executionBatch": "prod-022-028-049-20261113-03",
+      "report": "results-021-049-prod-20261113.md",
+      "targetExecuted": false,
+      "automationGateOnly": true,
+      "screenshots": [],
+      "steps": [
+        "核对本轮已登记的真实前置数据；缺口已明确，未执行目标业务步骤。"
+      ]
+    },
+    {
+      "id": "ERYE210-047",
+      "status": "Blocked",
+      "actual": "没有旧voice清理/音量/配音/无子页四类真实记录及已确认混音迁移目标，未把新导航等同旧数据迁移",
+      "reason": "没有旧voice清理/音量/配音/无子页四类真实记录及已确认混音迁移目标，未把新导航等同旧数据迁移",
+      "automated": true,
+      "workspaceId": "52a242f6-e836-46c8-87cc-713463fd565a",
+      "annotations": [
+        {
+          "type": "blocked",
+          "description": "没有旧voice清理/音量/配音/无子页四类真实记录及已确认混音迁移目标，未把新导航等同旧数据迁移"
+        },
+        {
+          "type": "skip",
+          "description": "没有旧voice清理/音量/配音/无子页四类真实记录及已确认混音迁移目标，未把新导航等同旧数据迁移",
+          "location": {
+            "file": "tools\\editor\\erye210-runner.ts",
+            "line": 60,
+            "column": 91
+          }
+        }
+      ],
+      "projects": {},
+      "checks": [
+        {
+          "stage": "legacy-prerequisite-audit",
+          "executedTarget": false,
+          "reason": "没有旧voice清理/音量/配音/无子页四类真实记录及已确认混音迁移目标，未把新导航等同旧数据迁移"
+        }
+      ],
+      "finishedAt": "2026-11-13T11:10:13.684Z",
+      "executionBatch": "prod-022-028-049-20261113-03",
+      "report": "results-021-049-prod-20261113.md",
+      "targetExecuted": false,
+      "automationGateOnly": true,
+      "screenshots": [],
+      "steps": [
+        "核对本轮已登记的真实前置数据；缺口已明确，未执行目标业务步骤。"
+      ]
+    },
+    {
+      "id": "ERYE210-048",
+      "status": "Blocked",
+      "actual": "没有旧translate字幕翻译及语音翻译两类真实入口样本，无法核验语义映射和历史内容保持",
+      "reason": "没有旧translate字幕翻译及语音翻译两类真实入口样本，无法核验语义映射和历史内容保持",
+      "automated": true,
+      "workspaceId": "52a242f6-e836-46c8-87cc-713463fd565a",
+      "annotations": [
+        {
+          "type": "blocked",
+          "description": "没有旧translate字幕翻译及语音翻译两类真实入口样本，无法核验语义映射和历史内容保持"
+        },
+        {
+          "type": "skip",
+          "description": "没有旧translate字幕翻译及语音翻译两类真实入口样本，无法核验语义映射和历史内容保持",
+          "location": {
+            "file": "tools\\editor\\erye210-runner.ts",
+            "line": 60,
+            "column": 91
+          }
+        }
+      ],
+      "projects": {},
+      "checks": [
+        {
+          "stage": "legacy-prerequisite-audit",
+          "executedTarget": false,
+          "reason": "没有旧translate字幕翻译及语音翻译两类真实入口样本，无法核验语义映射和历史内容保持"
+        }
+      ],
+      "finishedAt": "2026-11-13T11:10:13.702Z",
+      "executionBatch": "prod-022-028-049-20261113-03",
+      "report": "results-021-049-prod-20261113.md",
+      "targetExecuted": false,
+      "automationGateOnly": true,
+      "screenshots": [],
+      "steps": [
+        "核对本轮已登记的真实前置数据；缺口已明确，未执行目标业务步骤。"
+      ]
+    },
+    {
+      "id": "ERYE210-049",
+      "status": "Blocked",
+      "actual": "没有真实旧watermark text/image缓存及可操作的版本回退开关，无法执行重复迁移和回退；未伪造localStorage或版本参数",
+      "reason": "没有真实旧watermark text/image缓存及可操作的版本回退开关，无法执行重复迁移和回退；未伪造localStorage或版本参数",
+      "automated": true,
+      "workspaceId": "52a242f6-e836-46c8-87cc-713463fd565a",
+      "annotations": [
+        {
+          "type": "blocked",
+          "description": "没有真实旧watermark text/image缓存及可操作的版本回退开关，无法执行重复迁移和回退；未伪造localStorage或版本参数"
+        },
+        {
+          "type": "skip",
+          "description": "没有真实旧watermark text/image缓存及可操作的版本回退开关，无法执行重复迁移和回退；未伪造localStorage或版本参数",
+          "location": {
+            "file": "tools\\editor\\erye210-runner.ts",
+            "line": 60,
+            "column": 91
+          }
+        }
+      ],
+      "projects": {},
+      "checks": [
+        {
+          "stage": "legacy-prerequisite-audit",
+          "executedTarget": false,
+          "reason": "没有真实旧watermark text/image缓存及可操作的版本回退开关，无法执行重复迁移和回退；未伪造localStorage或版本参数"
+        }
+      ],
+      "finishedAt": "2026-11-13T11:10:13.720Z",
+      "executionBatch": "prod-022-028-049-20261113-03",
+      "report": "results-021-049-prod-20261113.md",
+      "targetExecuted": false,
+      "automationGateOnly": true,
+      "screenshots": [],
+      "steps": [
+        "核对本轮已登记的真实前置数据；缺口已明确，未执行目标业务步骤。"
+      ]
+    }
+  ],
+  "protected014": {
+    "id": "ERYE210-014",
+    "status": "Blocked",
+    "reason": "缺少真实只读授权工程及独立只读身份；此前用户确认没有第二账号环境。未伪造只读标记，未执行写入拒绝验证。",
+    "automated": true,
+    "workspaceId": "b8288299-d095-4990-8e24-90bc7afb692f",
+    "annotations": [
+      {
+        "type": "blocked",
+        "description": "缺少真实只读授权工程及独立只读身份；此前用户确认没有第二账号环境。未伪造只读标记，未执行写入拒绝验证。"
+      },
+      {
+        "type": "skip",
+        "description": "缺少真实只读授权工程及独立只读身份；此前用户确认没有第二账号环境。未伪造只读标记，未执行写入拒绝验证。",
+        "location": {
+          "file": "C:\\Users\\chen\\Documents\\ChatGPT\\test-cinlink\\tests\\editor\\erye210-navigation.spec.ts",
+          "line": 90,
+          "column": 10
+        }
+      }
+    ],
+    "projects": {},
+    "checks": [],
+    "screenshot": "",
+    "finishedAt": "2026-11-13T08:36:27.951Z",
+    "actual": "缺少真实只读授权工程及独立只读账号，未伪造只读标记，未执行浏览权限或服务端拒绝写入分支。脚本仅接入前置检查入口。",
+    "sourceBatch": "prod-011-015-20261113-01",
+    "report": "results-011-015-prod-20261113.md",
+    "automatedBusinessCoverage": false,
+    "screenshots": []
+  },
+  "protected014Row": "| ERYE210-014 | P0 | P；PA只读授权；存在字幕、配音和水印 | 1. 切五入口查看内容。<br>2. 尝试修改，并以请求作服务端对照。 | 可读内容及导航可用，写按钮明确受限；服务端也独立拒绝，不只靠UI禁用。 | Source: Requirement；ERYE-210 N02；AC04；196 WAC31 | [BLOCKED] | [tests/editor/erye210-navigation.spec.ts](../../../../tests/editor/erye210-navigation.spec.ts) | 业务验收；2026-11-13：Blocked；缺少真实只读授权工程及独立只读账号，未伪造只读标记，未执行浏览权限或服务端拒绝写入分支。脚本仅接入前置检查入口。；[本轮报告](results-011-015-prod-20261113.md#erye210-014) |"
+}

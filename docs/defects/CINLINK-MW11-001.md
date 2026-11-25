@@ -1,5 +1,11 @@
 # 云效同步记录：MW-11
 
+## 最新复测（2026-11-11）
+
+18:07原缺交付问题未复现后，云效FWXC-244由已修复改为✅AI通过，仅status写入一次，回读ID/名称及其他核对字段保持验证通过；未新增评论/附件/缺陷。
+
+新项目FWXC-244复测-20261111（92bdbdd9-8a6b-4471-afd3-3215fe5c9910）、新会话ee7d0d4b-5953-43ec-b9aa-b866e5e315c9，无附件/引用，一次原提示词，补槽确认0，401.224秒done/需求满足true。两SRT实际下载，中文“这是自动化测试。”、英文“This is an automated test.”，均0.820～2.140秒。生成视频实际5.056009秒、1280×720、有音轨、解码通过；来源字段对应本轮生成视频，英译输入为本轮中文SRT。该视频离线Whisper独立识别中文“这是自动化测试”，原缺交付问题未复现，Passed。未人工完整听审/逐帧同步/测扣费，默认FIXME不变。[复测报告及证据](../design-cases/multi-workflow/fwxc244-retest-20261111.md)。以下保留原记录。
+
 - 2026-11-03 已按用户“本次无需去重”要求直接新建，未检索或更新已有缺陷。
 - 项目：cinlink-WEB；工作项：[FWXC-244](https://devops.aliyun.com/projex/project/1e401ac99539c3999e00e40006/bug#viewIdentifier=1dedc5afd44979211cad516f&openWorkitemIdentifier=274ec0171a739fdb11dc7390bc)；ID：`274ec0171a739fdb11dc7390bc`。
 - 已回读验证：标题、完整描述、项目/类型、负责人、迭代、标签、优先级/严重程度、原两份文档/JSON附件与 1 张截图。

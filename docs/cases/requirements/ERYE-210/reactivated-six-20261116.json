@@ -1,0 +1,27 @@
+{
+  "date": "2026-11-16",
+  "restoredIds": [
+    "002",
+    "007",
+    "010",
+    "013",
+    "015",
+    "040"
+  ],
+  "newIds": [
+    "055",
+    "056"
+  ],
+  "stillRetired": [
+    "004",
+    "005",
+    "018",
+    "020",
+    "041"
+  ],
+  "priorActiveCount": 43,
+  "activeCount": 51,
+  "caseVersion": "v3-restored-six-and-navigation-20261116",
+  "oldRetirementHistoryUnchanged": true,
+  "cloudWrites": 0
+}

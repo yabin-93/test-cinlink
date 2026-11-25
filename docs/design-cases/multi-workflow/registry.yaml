@@ -62,3 +62,22 @@ MWMULTI-020:
 MWMULTI-021:
   status: AUTO
   script: "tests/staging/g3-g7-multi-compound.spec.ts"
+SYNC-001:
+  status: AUTO
+  script: "tools/sync/run.mjs"
+SYNC-002:
+  status: AUTO
+  script: "tools/sync/run.mjs"
+SYNC-003:
+  status: AUTO
+  script: "tools/sync/run.mjs"
+SYNC-004:
+  status: AUTO
+  script: "tools/sync/run.mjs"
+SYNC-005:
+  status: AUTO
+  script: "tools/sync/run.mjs"
+SYNC-006:
+  status: AUTO
+  script: "tools/sync/run.mjs"
+# 原ECMT-001～048已并入ERYE199-069～116；现行登记见docs/cases/registry.yaml，不重复登记

@@ -941,8 +941,57 @@
       ],
       "automation": "[PLAN]",
       "script": "—",
-      "new_execution": false,
-      "design_revision": "V1.1"
+      "new_execution": true,
+      "design_revision": "V1.1",
+      "before_run_011_165_20261125": {
+        "id": "ERYE196-012",
+        "status": "Passed",
+        "registry_entry": "ERYE196-012:\n  status: PLAN\n  script: \"\"\n  execution_status: Passed\n  execution_report: docs/cases/requirements/ERYE-196/results-011-015-chrome-prod-20261113.md\n  execution_scope: chrome_cua_business\n",
+        "original_case_execution_and_design_notes": "业务验收；验证片段端点分割拒绝；M1；Boundary；Major；Passed（2026-11-13 Chrome生产UI）；A选中后0/20秒分割禁用，点击无编辑，内部10.16秒按钮可用；刷新稳定49条及单段20秒保持，撤销/重做禁用。脚本PLAN暂停；[本轮证据](results-011-015-chrome-prod-20261113.md)",
+        "original_report_links": [
+          "results-011-015-chrome-prod-20261113.md"
+        ],
+        "automation": "[PLAN]",
+        "script": "—",
+        "new_execution": false,
+        "design_revision": "V1.1"
+      },
+      "latest_execution_report": "docs/cases/requirements/ERYE-196/results-011-165-chrome-prod-20261125.md",
+      "latest_execution_method": "Chrome CUA production; fixed script remains PLAN",
+      "latest_run_011_165_20261125": {
+        "case": "ERYE196-012",
+        "status": "Passed",
+        "summary": "0秒和20秒从同一20秒视频/原声保存基线分别测试。两组均先要求合法内点，仍按原边界0/20填写后明确拒绝，未产生零长片段或额外切段；每组刷新重开仍视频/原声0～20，撤销/重做可用状态保持。",
+        "groups": [
+          {
+            "group": "0s",
+            "prompt": "在当前20秒视频片段内部0秒处分割，其他内容不变",
+            "clarification_value": "0",
+            "result": "0 秒是片段起点，无法分出两个非空片段。请输入大于 0 秒且小于 20 秒的片段内分割时间。",
+            "status": "Passed"
+          },
+          {
+            "group": "20s",
+            "prompt": "在当前20秒视频片段内部20秒处分割，其他内容不变",
+            "clarification_value": "20",
+            "result": "20 秒是片段终点，无法在此分出两个非空片段。请输入大于 0 秒且小于 20 秒的片段内分割时间。",
+            "status": "Passed"
+          }
+        ],
+        "conversation": "https://app.cinlink.ai/c/c79434a2-7796-4ad6-9373-2b6b2fc75177",
+        "baseline": "唯一A视频和原声0–20，无字幕/BGM；撤销及重做可用",
+        "final": "与基线一致；无零长/额外片段，原始素材保持",
+        "evidence": [
+          "012-A-baseline.txt",
+          "012-zero-final.txt",
+          "012-zero-final.jpg",
+          "012-B-baseline-reloaded.txt",
+          "012-end-final.txt",
+          "012-end-final.jpg",
+          "012-final-reloaded.txt"
+        ],
+        "automation": "PLAN / —"
+      }
     },
     {
       "id": "ERYE196-013",
@@ -3257,12 +3306,13 @@
   "latest_batch_011_165_20261125": {
     "report": "docs/cases/requirements/ERYE-196/results-011-165-chrome-prod-20261125.md",
     "recorded": [
-      "ERYE196-011"
+      "ERYE196-011",
+      "ERYE196-012"
     ],
     "counts": {
-      "Passed": 1
+      "Passed": 2
     },
-    "remaining": 154,
-    "phase": "git_sync_after_011_recorded"
+    "remaining": 153,
+    "phase": "013_subtitle_preparation"
   }
 }

@@ -2,7 +2,7 @@
 
 范围为当前122编号、109条独立用例及13合并索引。ego-browser有头TaskSpace61，生产https://app.cinlink.ai/，前27条结果账号Torvalds；重新登录后账号yabinc18，原工程不可访问，后续使用当前账号独立准备的基线，逐条标明账号。按每例当前主分支及参数执行；配对/技术补充未覆盖不继承通过。固定脚本接入暂停，原PLAN/脚本映射保留；结果不写用例正文或统一导航。
 
-当前统计：{"Passed":42,"Not Run":61,"Failed":4,"Merged Reference":13,"Blocked":2}。本轮未结束，Not Run表示尚未执行。
+当前统计：{"Passed":44,"Not Run":59,"Failed":4,"Merged Reference":13,"Blocked":2}。本轮未结束，Not Run表示尚未执行。
 
 ## 前置处理
 
@@ -21,6 +21,7 @@ yabinc18续测项目9134f655-ed37-4956-941e-d4e8f993eebd、会话efe78fda-94dc-4
 | ERYE237-008 / UI / Torvalds | Passed | 红线/文字/矩形两次收起展开均可分别选择，六次选择边界准确且各不同；原T1追加已恢复后再次重开仍可编辑，3对象ID及原位置保持，待发画笔引用仅1份。 | 008-before-project.json、008-after-project.json、008-selection-matrix.json、008-three-objects.png、008-cycle2-T1.png |
 | ERYE237-009 / UI / Torvalds | Passed | 25/50/100/150/200%和适应窗口六档均实际核验；显示尺寸准确，源RGBA及两项历史保持；未新增生成。 | 009-rows.json、portrait-baseline-state.json |
 | ERYE237-010 / UI / yabinc18 | Passed | 登记Q=(.50,.55)，25%/200%/适应窗口及返回100%均定位同一正文/锚点/引用；确认tool-view可平移后在无遮挡画布实际左100上50拖动，Q随图移动源坐标不变；图外灰区未新增批注，源像素/历史保持。先前拖到浮层无画布作用的操作不计平移证据。 | 010-25%-state.json、010-200%-state.json、010-fit-state.json、010-real-pan.json、010-after-pan-locate.png、010-grey-no-new.png、010-return100.png、010-final-check.json |
+| ERYE237-011 / Agent / yabinc18 | Passed | 两次无引用纯设置请求各一次且done，实际默认12→8红→16红同步。8px旧笔撤销至空、退出后保持无引用；16设置后重做旧笔RGBA与原8笔一致，新增笔实际16px。稳定文档两笔size_px为8/16均红，像素宽度亦区分；源及3完成历史保持，未生成图片。 | 011-default8-observed-messages.json、011-default16-observed-messages.json、011-empty-no-reference.png、011-restored-old8-state.json、011-new16-next-to-old8.png、011-width-pixel-audit.json、011-stable-final-project.json、011-clean-source-state.json |
 | ERYE237-012 / UI / Torvalds | Passed | 编辑中返回先继续，原对象/来源/唯一引用保留；再明确放弃后实际切I2并回I1，已放弃草稿不恢复，原源和完成历史保持。与083/084共享实际确认分支取证。 | 012-083-continued.png、084-discard-dialog.png、012-switched-I2.png、012-084-final.json |
 | ERYE237-013 / UI / yabinc18 | Passed | 列表实际从I2商品图绘制态切I1人像，未弹退出确认，但I2草稿持久化保留；切回I2自动恢复同一笔像素且可再次选中，未静默丢失或串到I1。最后仅明确放弃自有测试笔迹，完成历史保持。 | 013-I2-unsent-draft-state.json、013-switch-attempt.png、013-after-switch-I2-project.json、013-I2-reopened-project.json、013-isolation.json、013-I2-restored-selectable.png |
 | ERYE237-014 / UI / Torvalds | Passed | 进入画笔显示完整子工具栏及唯一画笔引用，未落笔时源图和两项完成历史保持，无新图片任务。 | 014-entered.png、014-history.json |
@@ -48,6 +49,7 @@ yabinc18续测项目9134f655-ed37-4956-941e-d4e8f993eebd、会话efe78fda-94dc-4
 | ERYE237-084 / UI / Torvalds | Passed | 明确放弃仅清本轮3个未发草稿及引用，切其他工程再重开原图未恢复旧草稿，原图RGBA、完成历史及已发消息保持。 | 084-discard-dialog.png、012-084-final.json、012-084-returned-I1.png |
 | ERYE237-085 / UI / yabinc18 | Passed | 自定义左耳/添加银色耳钉及引用已保存，收起再展开全文/名称/锚点保持；实际切另一图片未询问但未丢草稿，返回原图同一批注及唯一引用仍在，未授权放弃亦未静默丢失。 | 085-saved-before-project.json、085-reopened.png、085-switch-attempt.png、085-returned-preserved.png、085-after-project.json、085-final-fields.json |
 | ERYE237-091 / UI / Torvalds | Passed | 无识别候选时先自定义对象名；同一有效标签下空正文添加禁用，填合法正文后仅新增一条引用；未发送。 | 091-empty-valid-label.png、091-valid.png、091-final-fields.json |
+| ERYE237-094 / Technical / yabinc18 | Passed | 两个真实客户端p1/p2同读R196；按本轮发布JS及实际UI网络契约，A保存获R197，B持R196写入被409 STALE_REVISION拒绝并返回current_revision197，A完整content未改。B重读R197后重新规划保留A并新增独立B文字，新operation获R198；界面重开核实，两客户端源/历史保持，仅清自有文字，p2已关闭。 | current-save-contract-excerpts.txt、094-preparation-network.json、094-R0-clients.json、094-A-R1-response.json、094-B-stale-response.json、094-after-stale-project.json、094-B-replanned-response.json、094-final-project.json、094-replanned-ui.png、094-clean-source-state.json |
 | ERYE237-096 / UI / Torvalds | Passed | 有效对象名准备后，完整中文含换行输入后立即添加；引用重开逐字一致，首尾/换行不丢失，仅一条引用；未发送。 | 096-fields.json、096-final.png |
 | ERYE237-103 / UI / yabinc18 | Passed | 两处未发送批注依次输入狗/球要求，左侧替换完整正文后切右再切左，右侧原文与左侧最新全文/名称均保持，编号总数仍2；未新增或发送。 | 103-isolation.json、103-right-preserved.png、103-left-preserved.png |
 | ERYE237-111 / UI / yabinc18 | Passed | A旧标记删除后旧引用同步消失，在原位新建C并引用；仅新C与原B两份，分别重开正文/名称正确，旧内容未复活；实际编号按页面记录，不要求重用策略。 | 111-after-A-delete.png、111-新标记.png、111-保留标记.png、111-identity-lifecycle.json |

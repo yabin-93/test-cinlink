@@ -1,0 +1,165 @@
+{
+  "date": "2026-11-16",
+  "method": "official Yunxiao OpenAPI",
+  "project": "cinlink-WEB",
+  "created": 2,
+  "historicalDeduplication": false,
+  "ownCheckpointRecoveryEnabled": true,
+  "screenshots": 5,
+  "attachments": 11,
+  "verified": true,
+  "cases": [
+    {
+      "caseId": "ERYE210-047",
+      "key": "ERYE210-047-VOICE-REGENERATE-PROD-20261116",
+      "identifier": "FWXC-579",
+      "workitemId": "d4687bf3633ef6956037e3a63c",
+      "url": "https://devops.aliyun.com/projex/project/1e401ac99539c3999e00e40006/bug#openWorkitemIdentifier=d4687bf3633ef6956037e3a63c",
+      "verified": true,
+      "verifiedAt": "2026-11-16T12:52:16.4063712+08:00",
+      "subject": "【生产环境】【ERYE210-047】混音后单句配音重新生成报错，目标旧声未替换",
+      "status": "🤔AI提缺陷",
+      "assignedTo": "牛诗晴",
+      "sprint": "重构10-29",
+      "labels": [
+        "生产环境"
+      ],
+      "priority": "高",
+      "seriousLevel": "2-严重",
+      "screenshots": 3,
+      "attachmentCount": 6,
+      "images": [
+        {
+          "name": "047-01-background-volume-saved.png",
+          "id": "b545fc4be87a52b43bff7465e5",
+          "sha256": "69f46d30bb5ab38d3aa5abb576d8c9badf9425a04bc4d736867522a78291e6c7",
+          "size": 733212,
+          "embedded": true
+        },
+        {
+          "name": "047-02-first-voice-draft.png",
+          "id": "1a603cabbde41231f2451196e5",
+          "sha256": "1e1dd10bbbe00541f1062c751d6821a0e49767eb8b6a2772aa826eefb047612d",
+          "size": 732198,
+          "embedded": true
+        },
+        {
+          "name": "047-03-single-voice-regenerate-failed.png",
+          "id": "3b056cbb2ac692025322a50b8c",
+          "sha256": "4d6e7b84f6b7176bc9b13302463b2343e3134b423bd5619f66d1c31ad1f74963",
+          "size": 741566,
+          "embedded": true
+        }
+      ],
+      "attachments": [
+        {
+          "name": "047-01-background-volume-saved.png",
+          "id": "b545fc4be87a52b43bff7465e5",
+          "sha256": "69f46d30bb5ab38d3aa5abb576d8c9badf9425a04bc4d736867522a78291e6c7",
+          "size": 733212
+        },
+        {
+          "name": "047-02-first-voice-draft.png",
+          "id": "1a603cabbde41231f2451196e5",
+          "sha256": "1e1dd10bbbe00541f1062c751d6821a0e49767eb8b6a2772aa826eefb047612d",
+          "size": 732198
+        },
+        {
+          "name": "047-03-single-voice-regenerate-failed.png",
+          "id": "3b056cbb2ac692025322a50b8c",
+          "sha256": "4d6e7b84f6b7176bc9b13302463b2343e3134b423bd5619f66d1c31ad1f74963",
+          "size": 741566
+        },
+        {
+          "name": "E196-A.mp4",
+          "id": "e05eee7485e4ac86d00ce35e75",
+          "sha256": "c453166c6396fe1c427c8a045ad2f84a8f5d4e4ff0f905b47d79114172829d15",
+          "size": 10274419
+        },
+        {
+          "name": "A1-independent.wav",
+          "id": "344ee9e9f06516a5c5cbcd7f73",
+          "sha256": "717f9c28eb41b30cd0cdd11d9e830e065771eeac995b3a435d848fe067037b34",
+          "size": 122924
+        },
+        {
+          "name": "case-evidence.json",
+          "id": "09da5edde4db560e4ccfe64e01",
+          "sha256": "7403054ea8d443ca944c400e3be9b57b4e981553fe52766d1c022d05f6c7ea12",
+          "size": 2074
+        }
+      ],
+      "localDefect": "../../../defects/ERYE210-047-voice-regenerate-production-20261116.md"
+    },
+    {
+      "caseId": "ERYE210-049",
+      "key": "ERYE210-049-WATERMARK-EXPORT-PROD-20261116",
+      "identifier": "FWXC-580",
+      "workitemId": "d07993186a112f50ec9926b266",
+      "url": "https://devops.aliyun.com/projex/project/1e401ac99539c3999e00e40006/bug#openWorkitemIdentifier=d07993186a112f50ec9926b266",
+      "verified": true,
+      "verifiedAt": "2026-11-16T12:52:39.4211186+08:00",
+      "subject": "【生产环境】【ERYE210-049】关闭双水印后原生导出报错，页面未交付可下载视频",
+      "status": "🤔AI提缺陷",
+      "assignedTo": "牛诗晴",
+      "sprint": "重构10-29",
+      "labels": [
+        "生产环境"
+      ],
+      "priority": "高",
+      "seriousLevel": "2-严重",
+      "screenshots": 2,
+      "attachmentCount": 5,
+      "images": [
+        {
+          "sha256": "9b1cb879bef7c377d6acb066300e4c4da09345945cfd752057dd1fcdb0190d9a",
+          "id": "71d35b33e095f1de5d049abed0",
+          "size": 524453,
+          "name": "049-01-watermarks-off-saved.png",
+          "embedded": true
+        },
+        {
+          "sha256": "a21ee7ecf6638bbc4cad7ae5115470eee44e9b673d1a61a876ce86df58819d30",
+          "id": "cef482a66a484c2d120802a511",
+          "size": 531957,
+          "name": "049-02-native-export-failed.png",
+          "embedded": true
+        }
+      ],
+      "attachments": [
+        {
+          "sha256": "9b1cb879bef7c377d6acb066300e4c4da09345945cfd752057dd1fcdb0190d9a",
+          "id": "71d35b33e095f1de5d049abed0",
+          "size": 524453,
+          "name": "049-01-watermarks-off-saved.png"
+        },
+        {
+          "sha256": "a21ee7ecf6638bbc4cad7ae5115470eee44e9b673d1a61a876ce86df58819d30",
+          "id": "cef482a66a484c2d120802a511",
+          "size": 531957,
+          "name": "049-02-native-export-failed.png"
+        },
+        {
+          "sha256": "c453166c6396fe1c427c8a045ad2f84a8f5d4e4ff0f905b47d79114172829d15",
+          "id": "1bc011d47ae291fc45c290fe5d",
+          "size": 10274419,
+          "name": "E196-A.mp4"
+        },
+        {
+          "sha256": "4d52152ac06ca6be6667e3be97f0f3e3e654d03d4b92f7c97cde5189dff371d4",
+          "id": "24a78e304020f7a6e620b9bf82",
+          "size": 573,
+          "name": "E196-source-en.srt"
+        },
+        {
+          "sha256": "89452141765ebebdef1b61f358b8091bf07795ea3113f21115839789c8eaa7f9",
+          "id": "2bdd8a95a60d6cd0ee540c0330",
+          "size": 1680,
+          "name": "case-evidence.json"
+        }
+      ],
+      "localDefect": "../../../defects/ERYE210-049-watermark-export-production-20261116.md"
+    }
+  ],
+  "testExecutionStatusUnchanged": true
+}

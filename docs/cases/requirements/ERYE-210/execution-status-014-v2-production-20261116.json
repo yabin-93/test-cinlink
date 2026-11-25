@@ -1,0 +1,91 @@
+{
+  "date": "2026-11-16",
+  "origin": "https://app.cinlink.ai",
+  "browser": "headed Google Chrome / Windows",
+  "caseVersion": "v2-watermark-toggle-navigation-20261116",
+  "counts": {
+    "Passed": 1,
+    "Failed": 0,
+    "Blocked": 0,
+    "Not Applicable": 0,
+    "Not Run": 0
+  },
+  "currentCounts": {
+    "Passed": 50,
+    "Failed": 6,
+    "Blocked": 0,
+    "Not Applicable": 0,
+    "Not Run": 0
+  },
+  "cases": [
+    {
+      "id": "ERYE210-014",
+      "status": "Passed",
+      "reason": "",
+      "automated": true,
+      "workspaceId": "925a6ba2-64db-45f5-8afe-08d36cdaeb39",
+      "caseVersion": "v2-watermark-toggle-navigation-20261116",
+      "annotations": [
+        {
+          "type": "case-version",
+          "description": "v2-watermark-toggle-navigation-20261116"
+        },
+        {
+          "type": "coverage",
+          "description": "原只读身份与权限拒绝仍待覆盖；本例只验证水印开关、跨TAB控件状态和保存恢复。"
+        }
+      ],
+      "projects": {
+        "014": {
+          "cid": "1ce95740-8ea8-40f6-a682-726153a167ab",
+          "pid": "07600669-2f53-417f-a964-aa2e12de206a",
+          "name": "ERYE210-014-07600669"
+        }
+      },
+      "checks": [
+        {
+          "stage": "disabled-controls-and-hidden-overlays",
+          "textDisabled": true,
+          "imageControlsDisabled": true,
+          "previewOverlaysHidden": true
+        },
+        {
+          "stage": "off-after-five-tabs",
+          "sameProject": true,
+          "controlsRemainDisabled": true,
+          "watermarkSettingsPreserved": true
+        },
+        {
+          "stage": "enabled-again",
+          "originalOverlaysRestored": true,
+          "parametersRestored": true,
+          "controlsEnabled": true
+        },
+        {
+          "stage": "edited-refresh-persisted",
+          "finalText": "WM014_EDITED",
+          "watermarkEnabled": true,
+          "imageUnchanged": true,
+          "mediaAndCaptionsUnchanged": true,
+          "messageCountBefore": 0,
+          "messageCountAfter": 0,
+          "noAgentOrExport": true
+        }
+      ],
+      "screenshot": "014\\ERYE210-014-passed.png",
+      "finishedAt": "2026-11-16T08:00:01.641Z",
+      "actual": "本例独立新工程水印OFF时文字/图片替换/宽度/透明度控件受限、两种预览隐藏；跨五TAB保持OFF及原设置；ON恢复控件、原文字和图片；文字改WM014_EDITED切页及刷新保持，图片参数及原视频/字幕/音频不串改，无Agent/导出。原只读权限继续待覆盖。",
+      "report": "results-014-v2-production-20261116.md",
+      "evidence": "evidence-014-v2-production-20261116/manifest.json",
+      "sourceBatch": "prod-014-v2-watermark-toggle-20261116-03",
+      "deferredCoverage": {
+        "status": "待覆盖",
+        "scope": "真实只读身份浏览及写入拒绝",
+        "reason": "缺少真实只读身份及对应授权工程",
+        "history": "case-014-readonly-history-20261116.json"
+      }
+    }
+  ],
+  "cloudWrites": 0,
+  "readonlyCoverage": "待覆盖"
+}

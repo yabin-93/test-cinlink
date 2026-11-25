@@ -1,0 +1,10 @@
+import {test} from 'node:test';import assert from 'node:assert/strict';import fs from 'node:fs/promises';import os from 'node:os';import path from 'node:path';
+import {combinationContext,combinationDefinitions} from './workflow-combinations.mjs';
+async function fixture(cases){
+ const outDir=await fs.mkdtemp(path.join(os.tmpdir(),'cinlink-combination-safety-'));await fs.writeFile(path.join(outDir,'media.json'),'{}');await fs.writeFile(path.join(outDir,'execution.json'),JSON.stringify({workspaceId:'qa',cases}));const calls=[];const page=new Proxy({},{get:(_,method)=>async()=>{calls.push(method);throw Error('Unexpected browser action');}});return{ctx:await combinationContext(page,{outDir}),calls};
+}
+test('accepted generated task is never resubmitted',async()=>{const {ctx,calls}=await fixture({'076':{definition:combinationDefinitions['076'],submittedAt:'already'}});await assert.rejects(()=>ctx.submit('076'),/不能重发/);assert.equal(calls.length,0);});
+test('a current workflow prevents opening another conversation',async()=>{const {ctx,calls}=await fixture({'078-S0':{submittedAt:'already',runStatus:'running'}});await assert.rejects(()=>ctx.open('079'),/另一原任务尚未终态/);assert.equal(calls.length,0);});
+test('a baseline workflow cannot submit before its source upload',async()=>{const {ctx,calls}=await fixture({'080':{definition:combinationDefinitions['080'],stage:'Configure'}});await assert.rejects(()=>ctx.submit('080'),/提交前置缺失/);assert.equal(calls.length,0);});
+test('followup rounds cannot be opened in a new conversation',async()=>{const {ctx,calls}=await fixture({});await assert.rejects(()=>ctx.open('078-S1'),/沿用原会话/);await assert.rejects(()=>ctx.open('078-T2'),/沿用原会话/);assert.equal(calls.length,0);});
+test('history verification waits for all three original tasks',async()=>{const {ctx,calls}=await fixture({'078-S0':{runStatus:'done'},'078-S1':{runStatus:'done'},'078-T2':{runStatus:'running'}});await assert.rejects(()=>ctx.verifyHistory(),/三轮原任务未全部结束/);assert.equal(calls.length,0);});

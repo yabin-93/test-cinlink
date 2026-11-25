@@ -1,0 +1,2872 @@
+{
+  "date": "2026-11-16",
+  "reason": "当前控件优化；旧目标继续延期，不视为通过",
+  "cases": [
+    {
+      "id": "ERYE210-046",
+      "status": "Blocked",
+      "reason": "已通过会话提交明确只分析指令，但新结果尚未进入同一已清理工程；保留原任务，不能用旧候选判二次分析通过",
+      "automated": true,
+      "workspaceId": "bf7f3724-4395-45a3-98d7-1eb029d86dbf",
+      "caseVersion": "v2-current-functions-20261116",
+      "annotations": [
+        {
+          "type": "case-version",
+          "description": "v2-current-functions-20261116"
+        },
+        {
+          "type": "blocked",
+          "description": "已通过会话提交明确只分析指令，但新结果尚未进入同一已清理工程；保留原任务，不能用旧候选判二次分析通过"
+        },
+        {
+          "type": "skip",
+          "description": "已通过会话提交明确只分析指令，但新结果尚未进入同一已清理工程；保留原任务，不能用旧候选判二次分析通过",
+          "location": {
+            "file": "C:\\Users\\chen\\Documents\\ChatGPT\\test-cinlink\\tools\\editor\\erye210-runner.ts",
+            "line": 73,
+            "column": 91
+          }
+        }
+      ],
+      "projects": {
+        "046": {
+          "cid": "d1ca7c7e-47a6-450d-8870-f87b86820a59",
+          "pid": "e2191b09-69ea-4a5a-aea7-32617a38f0b5",
+          "name": "ERYE210-046-e2191b09"
+        }
+      },
+      "checks": [],
+      "screenshot": "046\\ERYE210-046-blocked.png",
+      "finishedAt": "2026-11-16T04:27:00.365Z",
+      "sourceBatch": "prod-current-five-review-20261116-03",
+      "report": "results-045-049-current-functions-prod-20261116.md",
+      "evidence": "evidence-045-049-current-functions-prod-20261116/manifest.json",
+      "actual": "首次清理20→18.695896秒成功；会话明确只重分析保留三段后，Agent说明当前工具仍以20秒原片为源，无法限定保留片段，因此没有提交二次分析。旧候选不算新结果；音视频、字幕及旧分析均保持，二次分析范围记阻塞。",
+      "screenshots": [
+        "046/prod-current-five-20261116-01--046-first-analysis-before-cleanup.png",
+        "046/prod-current-five-20261116-01--046-first-cleanup-saved.png",
+        "046/prod-current-five-20261116-01--046-reopened-current-entry-review.png",
+        "046/prod-current-five-20261116-01--ERYE210-046-failed.png",
+        "046/prod-current-five-review-20261116-03--046-before-explicit-conversation-reanalysis.png",
+        "046/prod-current-five-review-20261116-03--ERYE210-046-blocked.png"
+      ]
+    },
+    {
+      "id": "ERYE210-048",
+      "status": "Blocked",
+      "reason": "真实翻译配音工程当前无法显示既有配音稿，未点击创建配音或重复生成；目标更新步骤尚未执行：编辑器执行数据不符合正式 v2 协议，请保留当前工程并核对服务返回。×",
+      "automated": true,
+      "workspaceId": "081fcb89-2e9b-4e3f-b1a5-8688011ec579",
+      "caseVersion": "v2-translated-prerequisite-20261116",
+      "annotations": [
+        {
+          "type": "case-version",
+          "description": "v2-translated-prerequisite-20261116"
+        },
+        {
+          "type": "blocked",
+          "description": "真实翻译配音工程当前无法显示既有配音稿，未点击创建配音或重复生成；目标更新步骤尚未执行：编辑器执行数据不符合正式 v2 协议，请保留当前工程并核对服务返回。×"
+        },
+        {
+          "type": "skip",
+          "description": "真实翻译配音工程当前无法显示既有配音稿，未点击创建配音或重复生成；目标更新步骤尚未执行：编辑器执行数据不符合正式 v2 协议，请保留当前工程并核对服务返回。×",
+          "location": {
+            "file": "C:\\Users\\chen\\Documents\\ChatGPT\\test-cinlink\\tools\\editor\\erye210-runner.ts",
+            "line": 73,
+            "column": 91
+          }
+        }
+      ],
+      "projects": {
+        "048": {
+          "pid": "e069dd1b-931b-4f64-8992-3708e8556bc2",
+          "cid": "8c27f01b-fc84-488c-8989-9105b5cf3b38",
+          "name": "E196-A.mp4"
+        }
+      },
+      "checks": [
+        {
+          "stage": "fresh-native-translation-project",
+          "runId": "run_v2_aaabc97d2c234eee8454a1e70e003bd1",
+          "project": {
+            "pid": "e069dd1b-931b-4f64-8992-3708e8556bc2",
+            "cid": "8c27f01b-fc84-488c-8989-9105b5cf3b38",
+            "name": "E196-A.mp4"
+          },
+          "dedicatedCase": "048",
+          "copiedToUnrelatedConversation": false
+        }
+      ],
+      "screenshot": "048\\ERYE210-048-blocked.png",
+      "finishedAt": "2026-11-16T04:23:42.292Z",
+      "sourceBatch": "prod-current-five-final-20261116-12",
+      "report": "results-045-049-current-functions-prod-20261116.md",
+      "evidence": "evidence-045-049-current-functions-prod-20261116/manifest.json",
+      "actual": "已完成真实独立英语→中文翻译配音并交付视频/工程文件，配音曾显示8句；当前工程的配音页持续报协议错误，既有文案无法稳定恢复。最终核验只回读、不再点击创建或生成；字幕改稿和后续单句更新目标步骤尚未执行，记阻塞。",
+      "screenshots": [
+        "048/prod-current-five-final-20261116-12--ERYE210-048-blocked.png",
+        "048/prod-current-five-final-20261116-12--translated-project-prerequisite-page-error.png"
+      ]
+    }
+  ],
+  "rows": [
+    "| ERYE210-046 | P0 | 新工程20秒原片及8条英语SRT，无旧分析；阈值0.8秒，只选择真实停顿候选 | 1. 明确分析，记录真实停顿候选及原视频源区间。<br>2. 一次应用当前停顿组，等待保存并记录实际删除源区间和清理后字幕/原声。<br>3. 对同一已清理工程明确重新分析；当前没有按钮时，从现有会话发送完整只分析指令，限定实际保留片段及0.8秒阈值，禁止自动应用。<br>4. 核对重新分析没有自动再次剪辑，候选不重复指向已删除源区间；若有合法剩余候选，保持未应用并记录。<br>5. 切页并重开，核对清理后时长及字幕/原声保持。 | 二次分析基于当前结果；不能把已删除范围再次作为可移除对象，不因分析重复剪辑。不开固定候选数或算法字段硬条件。 | Source: Requirement + Inferred QA Risk；ERYE-210 N05/07/08；用户2026-11-16确认当前功能替换，原N10迁移目标延期 | [AUTO] | [tests/editor/erye210-current-five.spec.ts](../../../../tests/editor/erye210-current-five.spec.ts) | v2-current-functions-20261116；Blocked；[完整步骤及边界](case-045-049-v2-current-functions-20261116.md#erye210-046)；[本轮执行](results-045-049-current-functions-prod-20261116.md) |",
+    "| ERYE210-048 | P0 | P；先完成真实英语→简体中文翻译配音，确认目标语言、可编辑中英字幕和至少两句就绪声音；独立新工程保留完整配音绑定，记录实际稿件和旧声音。 | 1. 明确选择中文字幕通道，仅改中文C1并等待已同步。<br>2. 检查英文原文、中文C2及旧音频保持，配音文稿和声音不自动覆盖。<br>3. 明确将配音C1稿改为同样新文，并点击一次重新生成。<br>4. 核对仅第一句声音更新，中文新文/英文原文/中文C2及其他声音保持。<br>5. 切页、刷新重开并重新选择正确语言通道，核对保存结果。 | 译文编辑不擅自生成或同步；明确配音改稿并生成后才更新目标声音，不串语言、句子或字幕。核验编辑与生成隔离，不额外评价机器翻译语义准确率。 | Source: Requirement + Inferred QA Risk；ERYE-210 N05/07/08；用户2026-11-16确认当前功能替换，原N10迁移目标延期 | [AUTO] | [tests/editor/erye210-current-five.spec.ts](../../../../tests/editor/erye210-current-five.spec.ts) | v2-translated-prerequisite-20261116；Blocked；[完整步骤及边界](case-045-049-v2-current-functions-20261116.md#erye210-048)；[本轮执行](results-045-049-current-functions-prod-20261116.md) |"
+  ],
+  "protectedOtherCases": [
+    {
+      "id": "ERYE210-001",
+      "status": "Passed",
+      "conversationId": "ee1a65cf-35eb-47eb-bb90-7b972762bfbc",
+      "projectId": "144e3d19-ee0f-4c95-9270-b7ba66a49bd8",
+      "actual": "生产中文界面五入口为媒体、文稿、字幕、配音、水印，与Media/Scripts/Captions/Voiceover/Watermark一一对应；全部可达，实际切换后返回Media。刷新解决初次创建提示后核验，工程内容及版本1均保持。仅验证本例导航，首次导入保存500另记002，不宣称保存功能通过。",
+      "steps": [
+        "本轮新建专用项目和空会话，打开视频编辑器，选择媒体导入20秒E196-A.mp4。",
+        "保存初次创建异常和默认字幕现场；回读确认工程已存在且版本1。刷新并打开同一工程，确认无创建错误提示。",
+        "从Media依次进入Scripts、Captions、Voiceover、Watermark，再回Media；逐页核对面板标题和选中入口。",
+        "回读前后保存内容，均为版本1且完整内容相同。"
+      ],
+      "screenshots": [
+        "ERYE210-001-stable-media.png",
+        "ERYE210-001-stable-scripts.png",
+        "ERYE210-001-stable-captions.png",
+        "ERYE210-001-stable-voiceover.png",
+        "ERYE210-001-stable-watermark.png",
+        "ERYE210-001-stable-media-return.png"
+      ],
+      "report": "results-001-005-prod-20261113.md",
+      "automationValidation": {
+        "status": "Passed",
+        "batch": "prod-script-validation-login-restored-20261113",
+        "report": "results-automation-20261113.md",
+        "projects": {
+          "001": {
+            "cid": "045735da-83f5-4cad-8fcd-64138bb7fe13",
+            "pid": "10fcb24c-f216-454e-8beb-995e410b4334",
+            "name": "ERYE210-001-10fcb24c"
+          }
+        }
+      }
+    },
+    {
+      "id": "ERYE210-003",
+      "status": "Passed",
+      "conversationId": "e1ceaa10-3dbc-4636-94b2-243146f771a9",
+      "runId": "run_v2_63e7d65773db436d8f0d33dcfaac39c9",
+      "prompt": "请识别本次上传的 E196-A.mp4 中的英语语音，生成英语字幕并烧录到视频中；保留原片完整20秒画面、原声和1920×1080分辨率，不翻译、不裁剪、不增加水印。请交付带英语字幕的MP4及独立英语SRT字幕文件，方便随后进入字幕编辑。",
+      "actual": "真实字幕任务112秒完成，无补槽。结果SRT实际下载，8条英语字幕0.160～19.820秒；从该会话当前实际视频编辑器入口首次进入，选中Captions内容页。工程字幕绑定file_cloud_c7kyuocu543kpnakk5k2qdeot5，与本次结果一致；8条文字及时间一致，其他四入口均可访问。导航核验前后工程版本2和全部内容保持。",
+      "screenshots": [
+        "ERYE210-003-preparation-prompt.png",
+        "ERYE210-003-result-captions.png"
+      ],
+      "projectId": "a768b149-4169-4eea-bb79-05d19e14b328",
+      "steps": [
+        "在独立新会话上传同一20秒原片，完整准备指令一次发送；等待原任务完成，不重复提交。",
+        "点击subtitle.srt取得真实SRT；该文件卡实际是下载，不作为编辑入口。",
+        "点击同一字幕任务会话头部实际视频编辑器入口；首次加载即为字幕内容页，未手动切到Captions作为通过依据。",
+        "核对8条字幕内容、时间及本次SRT文件绑定，依次检查其他四入口可达，返回字幕。",
+        "回读工程，版本2及全部保存内容保持。"
+      ],
+      "supplement": "按当前页面已有会话结果编辑入口验收；没有声称subtitle.srt卡片有独立编辑按钮。仅验证结果工程/字幕绑定与导航，不代替完整英语识别质量、成片逐帧或翻译功能测试。",
+      "report": "results-001-005-prod-20261113.md"
+    },
+    {
+      "id": "ERYE210-006",
+      "status": "Passed",
+      "definition": "current",
+      "conversationId": "c9bc8525-1b47-48a9-8b87-837e513a0b56",
+      "projectId": "4e0a5049-20b4-4c3d-aeea-6007f77b5b00",
+      "projectIdB": null,
+      "actual": "Passed；从Captions通过当前真实Watermark一级→文字/图片二级控件定位，两子页切换正确；NAV006和logo-A.png保持；导航前后版本2及全部内容相同。仅覆盖实际两级入口，不宣称存在独立结果卡快捷入口。",
+      "steps": [
+        "在Captions核对本例工程及保存内容。",
+        "点击水印一级入口，再点击文字水印，核对NAV006；返回Captions后从水印→图片水印进入，核对logo-A.png。",
+        "在Text/Image间来回切换，核对选中子页及内容；回读全部工程和版本。"
+      ],
+      "screenshots": [
+        "ERYE210-006-before-captions.png",
+        "ERYE210-006-two-level-text.png",
+        "ERYE210-006-two-level-image.png"
+      ],
+      "report": "results-006-010-prod-20261113.md",
+      "automationValidation": {
+        "status": "Passed",
+        "batch": "prod-script-validation-watermark-fixed-20261113",
+        "report": "results-automation-20261113.md",
+        "projects": {
+          "006": {
+            "cid": "3776b3a8-df40-410b-afe5-b0f48256d876",
+            "pid": "be41b33c-22d3-48a9-84ad-720869256595",
+            "name": "ERYE210-006-be41b33c"
+          }
+        }
+      }
+    },
+    {
+      "id": "ERYE210-008",
+      "status": "Passed",
+      "definition": "v2",
+      "conversationId": "3501178a-02fb-4b4a-9f94-311139deebe3",
+      "projectId": "318146e4-3ab6-45a4-ba4b-d334dfdb539b",
+      "batch": "prod-008-v2-rerun-20261113-04",
+      "environment": "production",
+      "actual": "生产有头Chrome执行008 v2通过：五模块均可点当前入口收起/展开，收起后切换另一入口显示对应面板；五入口、工程标题和视频预览保留；返回Captions的8条原字幕一致；完整保存内容及版本1→1保持。没有发送Agent指令或生成任务。",
+      "report": "results-008-v2-prod-20261113-04.md",
+      "screenshots": [
+        "008-before-captions.png",
+        "008-captions-reopened.png",
+        "008-媒体-collapsed.png",
+        "008-媒体-to-文稿.png",
+        "008-字幕-collapsed.png",
+        "008-字幕-to-配音.png",
+        "008-文稿-collapsed.png",
+        "008-文稿-to-字幕.png",
+        "008-水印-collapsed.png",
+        "008-水印-to-媒体.png",
+        "008-配音-collapsed.png",
+        "008-配音-to-水印.png",
+        "ERYE210-008-passed.png"
+      ],
+      "automated": true,
+      "finishedAt": "2026-11-13T08:01:33.739Z",
+      "history": {
+        "definition": "v1",
+        "status": "Blocked",
+        "report": "results-006-010-prod-20261113.md",
+        "reason": "无真实失效链接，用户要求替换；与本次v2结果分开"
+      }
+    },
+    {
+      "id": "ERYE210-009",
+      "status": "Passed",
+      "definition": "current",
+      "conversationId": "3bbc9e8b-6052-41e4-b341-144ad79ceccb",
+      "projectId": "3fc1a2b6-60d1-48b8-93f6-4ffae9bde0ad",
+      "projectIdB": null,
+      "actual": "Passed；五入口及可见子页14个检查点均保持同一工程、12秒、暂停和原C1；版本1及内容不变，会话消息0→0，导航写请求0，页面积分前后及刷新回读均3045。未提交Agent写操作，不宣称Agent执行或服务端账本专项通过。",
+      "steps": [
+        "在暂停12秒状态选中C1，记录初始积分3,045。",
+        "依次切Media及Chat/Project、Scripts、Captions及Style/Subtitles、Voiceover、Watermark及Text/Image，再回Captions及Style/Subtitles，共14个检查点。",
+        "每点核对工程名称、播放头12秒、选中同一C1、保持暂停；不点击生成/应用。",
+        "回读工程及会话，版本1和内容相同、消息0条、导航写请求0；页面积分仍3,045。",
+        "完成页内状态核验后才刷新，再打开积分菜单，仍3,045；此刷新不作为播放头/选区保持的检查步骤。"
+      ],
+      "screenshots": [
+        "ERYE210-009-before-credits.png",
+        "ERYE210-009-字幕-14.png",
+        "ERYE210-009-after-credits.png",
+        "ERYE210-009-fresh-credits.png"
+      ],
+      "report": "results-006-010-prod-20261113.md"
+    },
+    {
+      "id": "ERYE210-011",
+      "status": "Passed",
+      "reason": "",
+      "automated": true,
+      "workspaceId": "7f9969af-2e47-43d0-8328-4b9c8e7b03cc",
+      "caseVersion": "v3-current-entry-20261113",
+      "annotations": [
+        {
+          "type": "case-version",
+          "description": "v3-current-entry-20261113"
+        }
+      ],
+      "projects": {
+        "011-PA-EN-ZH": {
+          "cid": "35f6308b-cc03-4eab-aedf-8d13243ef472",
+          "pid": "56bc2bb0-8a94-4020-8564-270014a3126d",
+          "name": "ERYE210-011-PA-EN-ZH-56bc2bb0"
+        },
+        "011-PB-CONTROL": {
+          "cid": "35f6308b-cc03-4eab-aedf-8d13243ef472",
+          "pid": "15139a7d-bb8c-4b82-8c28-dcb6170c8d7e",
+          "name": "ERYE210-011-PB-CONTROL-15139a7d"
+        }
+      },
+      "checks": [
+        {
+          "stage": "agent-completed-background",
+          "runIds": [
+            "run_v2_c825a057d2d448e99a04f8e4f966bdf5"
+          ],
+          "pa": {
+            "cid": "35f6308b-cc03-4eab-aedf-8d13243ef472",
+            "pid": "56bc2bb0-8a94-4020-8564-270014a3126d",
+            "name": "ERYE210-011-PA-EN-ZH-56bc2bb0"
+          },
+          "pb": {
+            "cid": "35f6308b-cc03-4eab-aedf-8d13243ef472",
+            "pid": "15139a7d-bb8c-4b82-8c28-dcb6170c8d7e",
+            "name": "ERYE210-011-PB-CONTROL-15139a7d"
+          },
+          "sourceLanguage": "en",
+          "targetLanguage": "zh",
+          "pbEstablishedAt": 1794574656607,
+          "completed": {
+            "at": 1794574888313,
+            "status": "done"
+          },
+          "violations": [],
+          "pbState": {
+            "name": "ERYE210-011-PB-CONTROL-15139a7d",
+            "module": [
+              "媒体"
+            ],
+            "playhead": "0",
+            "selected": [],
+            "media": [
+              {
+                "paused": true,
+                "duration": 60.495778
+              }
+            ]
+          }
+        },
+        {
+          "stage": "target-language-content",
+          "pid": "56bc2bb0-8a94-4020-8564-270014a3126d",
+          "name": "ERYE210-011-PA-EN-ZH-56bc2bb0",
+          "voiceoverTextCount": 17,
+          "chineseSubtitleFiles": [
+            "file_cloud_udwxvjpof7r7xynotx32dfyt6h"
+          ],
+          "generatedAudioCount": 8,
+          "reachedBy": "explicit-project-picker-and-reopen"
+        },
+        {
+          "stage": "result-entry",
+          "directEntry": false,
+          "artifacts": [
+            {
+              "text": "0:00 / 1:001280 × 720",
+              "buttons": [
+                {
+                  "label": "下载",
+                  "title": "下载",
+                  "text": ""
+                },
+                {
+                  "label": "播放",
+                  "title": null,
+                  "text": ""
+                },
+                {
+                  "label": "放大查看",
+                  "title": "放大查看",
+                  "text": ""
+                }
+              ]
+            }
+          ],
+          "verified": false
+        },
+        {
+          "stage": "v3-explicit-editor-navigation",
+          "passed": true,
+          "entry": "project-picker-then-Voiceover",
+          "directResultShortcutCovered": false,
+          "oldShortcutRequirement": "deferred-not-counted-as-covered"
+        }
+      ],
+      "finishedAt": "2026-11-13T13:01:52.526Z",
+      "actual": "Passed：用户60秒英语原片的独立新工程真实中文配音及双语字幕完成，46次PB/Media观察无抢占/串改；显式工程选择器选择PA后进入Voiceover可见17条中文文稿、8段音频。结果卡快捷直达仍延期，不计覆盖。",
+      "report": "results-completion-nine-prod-20261113.md",
+      "evidence": "evidence-completion-nine-prod-20261113/manifest.json",
+      "sourceBatch": "prod-completion-nine-20261113-02",
+      "screenshots": [
+        "011-011-PA-before-result-reopen.png",
+        "011-011-PA-target-language-before-submit.png",
+        "011-011-PB-after-completed.png",
+        "011-011-PB-established.png",
+        "011-011-real-result-cards.png",
+        "011-011-target-language-result-project.png",
+        "011-ERYE210-011-passed.png"
+      ]
+    },
+    {
+      "id": "ERYE210-012",
+      "status": "Passed",
+      "reason": "",
+      "automated": true,
+      "workspaceId": "7bbe54ba-d90a-46e8-9644-97f3345b3f4a",
+      "annotations": [],
+      "projects": {
+        "012": {
+          "cid": "4dc7a755-25e5-4bf1-af8e-25e36b559102",
+          "pid": "45681d45-4f56-4fdc-af6d-8da50d82eb7d",
+          "name": "ERYE210-012-45681d45"
+        }
+      },
+      "checks": [
+        {
+          "module": "Captions",
+          "text": "字幕\n样式\n\n暂无字幕。\n\n根据您的视频生成字幕，\n或导入 SRT 文件开始。\n\n生成字幕",
+          "state": {
+            "name": "ERYE210-012-45681d45",
+            "module": [
+              "字幕"
+            ],
+            "playhead": "0",
+            "selected": [],
+            "media": [
+              {
+                "paused": true,
+                "duration": 20
+              }
+            ]
+          }
+        },
+        {
+          "module": "Voiceover",
+          "text": "配音\n\n暂无配音。\n\n创建配音",
+          "state": {
+            "name": "ERYE210-012-45681d45",
+            "module": [
+              "配音"
+            ],
+            "playhead": "0",
+            "selected": [],
+            "media": [
+              {
+                "paused": true,
+                "duration": 20
+              }
+            ]
+          }
+        },
+        {
+          "stage": "final",
+          "beforeRevision": 1,
+          "afterRevision": 1,
+          "savedContentUnchanged": true,
+          "messagesBefore": 0,
+          "messagesAfter": 0,
+          "writesDuringNavigation": []
+        }
+      ],
+      "screenshot": "012\\ERYE210-012-passed.png",
+      "finishedAt": "2026-11-13T08:35:50.664Z",
+      "actual": "字幕和配音空态均可打开，有生成字幕/创建配音引导；未点击执行，完整内容及版本1→1保持，会话消息0→0，导航写请求0。",
+      "sourceBatch": "prod-011-015-20261113-01",
+      "report": "results-011-015-prod-20261113.md",
+      "screenshots": [
+        "012-captions-empty.png",
+        "012-voiceover-empty.png",
+        "ERYE210-012-passed.png"
+      ]
+    },
+    {
+      "id": "ERYE210-014",
+      "status": "Blocked",
+      "reason": "缺少真实只读授权工程及独立只读身份；此前用户确认没有第二账号环境。未伪造只读标记，未执行写入拒绝验证。",
+      "automated": true,
+      "workspaceId": "b8288299-d095-4990-8e24-90bc7afb692f",
+      "annotations": [
+        {
+          "type": "blocked",
+          "description": "缺少真实只读授权工程及独立只读身份；此前用户确认没有第二账号环境。未伪造只读标记，未执行写入拒绝验证。"
+        },
+        {
+          "type": "skip",
+          "description": "缺少真实只读授权工程及独立只读身份；此前用户确认没有第二账号环境。未伪造只读标记，未执行写入拒绝验证。",
+          "location": {
+            "file": "C:\\Users\\chen\\Documents\\ChatGPT\\test-cinlink\\tests\\editor\\erye210-navigation.spec.ts",
+            "line": 90,
+            "column": 10
+          }
+        }
+      ],
+      "projects": {},
+      "checks": [],
+      "screenshot": "",
+      "finishedAt": "2026-11-13T08:36:27.951Z",
+      "actual": "缺少真实只读授权工程及独立只读账号，未伪造只读标记，未执行浏览权限或服务端拒绝写入分支。脚本仅接入前置检查入口。",
+      "sourceBatch": "prod-011-015-20261113-01",
+      "report": "results-011-015-prod-20261113.md",
+      "automatedBusinessCoverage": false,
+      "screenshots": []
+    },
+    {
+      "id": "ERYE210-016",
+      "status": "Passed",
+      "reason": "",
+      "automated": true,
+      "workspaceId": "f05b1395-1766-4190-8e59-b6fdc4b88dd9",
+      "annotations": [
+        {
+          "type": "coverage",
+          "description": "v2只验证Windows Chrome中图片素材前置缺失→补齐后控件恢复，不依赖mac或未发布样本；不将该场景当作未发布/端侧不支持对照已通过。"
+        }
+      ],
+      "projects": {
+        "016": {
+          "cid": "82c569ed-5625-48f8-8cc5-aa5ef979429f",
+          "pid": "1c6a8340-dc07-49a3-a7b8-f0a531dd9783",
+          "name": "ERYE210-016-1c6a8340"
+        }
+      },
+      "checks": [
+        {
+          "stage": "no-image",
+          "uploadEnabled": true,
+          "widthDisabled": true,
+          "opacityDisabled": true,
+          "instruction": "水印\nAa 文字\n图片\n水印图片\n上传图片\n\nPNG、JPG 或 SVG · 最大 10MB\n\n字号\n160px\n不透明度\n75%\n位置\n右上\n边缘边距\npx\n\n在预览中拖动以调整位置\n\n应用于整个视频",
+          "revision": 1
+        },
+        {
+          "stage": "image-editable",
+          "image": {
+            "width": 120,
+            "file_id": "file_cloud_3f35z6rzcmkprtduwrvioqeopg",
+            "opacity": 0.6,
+            "placement": {
+              "mode": "preset",
+              "preset": "top-right",
+              "position": null,
+              "margin_px": 24
+            },
+            "watermark_id": "a7110d51-e9c7-4eef-ae3b-3493949ecbe8"
+          },
+          "revision": 11
+        },
+        {
+          "stage": "reopened",
+          "projectId": "1c6a8340-dc07-49a3-a7b8-f0a531dd9783",
+          "image": {
+            "width": 120,
+            "file_id": "file_cloud_3f35z6rzcmkprtduwrvioqeopg",
+            "opacity": 0.6,
+            "placement": {
+              "mode": "preset",
+              "preset": "top-right",
+              "position": null,
+              "margin_px": 24
+            },
+            "watermark_id": "a7110d51-e9c7-4eef-ae3b-3493949ecbe8"
+          },
+          "mediaUnchanged": true,
+          "navigationContentUnchanged": true
+        }
+      ],
+      "finishedAt": "2026-11-13T13:07:14.483Z",
+      "actual": "Passed：Windows图片水印空态上传可用、宽度/透明度禁用且有引导；真实PNG上传后设宽120、透明度0.6，切页/收起重开保持，原音视频及字幕未改。",
+      "report": "results-completion-nine-prod-20261113.md",
+      "evidence": "evidence-completion-nine-prod-20261113/manifest.json",
+      "sourceBatch": "prod-completion-nine-20261113-03",
+      "screenshots": [
+        "016-016-v2-after-upload.png",
+        "016-016-v2-before-upload.png",
+        "016-016-v2-reopened.png",
+        "016-ERYE210-016-passed.png"
+      ]
+    },
+    {
+      "id": "ERYE210-017",
+      "status": "Passed",
+      "reason": "",
+      "automated": true,
+      "workspaceId": "f9d120ec-58af-42cf-a415-e4d56078c183",
+      "caseVersion": "v2-client-submit-recovery-20261113",
+      "annotations": [
+        {
+          "type": "case-version",
+          "description": "v2-client-submit-recovery-20261113"
+        }
+      ],
+      "projects": {
+        "017-v2": {
+          "cid": "93d0397b-d373-4dfe-b8d8-57d119c27d3b",
+          "pid": "8515a43c-c55f-4d43-9512-db0fc493a7b8",
+          "name": "ERYE210-017-v2-8515a43c"
+        }
+      },
+      "checks": [
+        {
+          "stage": "client-submit-error",
+          "aborted": 1,
+          "error": "执行请求结果未知，请使用原请求确认，勿重复发起。×",
+          "oldAudioPreserved": true
+        },
+        {
+          "stage": "same-original-generation-live-verification",
+          "project": {
+            "cid": "93d0397b-d373-4dfe-b8d8-57d119c27d3b",
+            "pid": "8515a43c-c55f-4d43-9512-db0fc493a7b8",
+            "name": "ERYE210-017-v2-8515a43c"
+          },
+          "firstText": "欢迎回到CinLink，这是第十七条测试。",
+          "secondText": "这是导航测试。",
+          "oldFirstAudioRemoved": true,
+          "secondAudioPreserved": true,
+          "submittedNewTask": false
+        }
+      ],
+      "finishedAt": "2026-11-13T13:17:31.889Z",
+      "actual": "Passed：本轮新工程原生生成两句旧配音，改首句后旧声保留；单次真实提交断网错误可见，恢复明确生成成功。沿同一已完成结果实时核对首句新文/新声、第二句原文/旧声及无目标旧声叠音，字幕保持。未覆盖服务端已受理后执行失败重试。",
+      "report": "results-completion-nine-prod-20261113.md",
+      "evidence": "evidence-completion-nine-prod-20261113/manifest.json",
+      "sourceBatch": "prod-completion-nine-20261113-05",
+      "screenshots": [
+        "017-017-original-result-live-verified.png",
+        "017-ERYE210-017-passed.png",
+        "017-original-017-pending-old-voice.png",
+        "017-original-017-real-submission-error.png",
+        "017-original-ERYE210-017-failed.png"
+      ],
+      "continuedFromBatch": "prod-completion-nine-20261113-04"
+    },
+    {
+      "id": "ERYE210-019",
+      "status": "Passed",
+      "reason": "",
+      "automated": true,
+      "workspaceId": "78f6e4ce-669b-4fc9-818f-9dbd6ccd8984",
+      "caseVersion": "v3-legal-mixed-delete-20261113",
+      "annotations": [
+        {
+          "type": "case-version",
+          "description": "v3-legal-mixed-delete-20261113"
+        }
+      ],
+      "projects": {
+        "019-v3": {
+          "cid": "9985e36b-2125-4b31-a0fe-c2161f91ec5a",
+          "pid": "44122203-9a70-4962-9ea6-cf4a345ca1ba",
+          "name": "ERYE210-019-v3-44122203"
+        }
+      },
+      "checks": [
+        {
+          "stage": "legal-mixed-delete-undo",
+          "beforeMedia": [
+            {
+              "type": "video",
+              "role": "",
+              "muted": false,
+              "offset": 0,
+              "clips": [
+                {
+                  "file": "file_cloud_wykauk4fh57l2i7cgbkbbspha3",
+                  "start": 0,
+                  "in": 0,
+                  "out": 20,
+                  "rate": 1,
+                  "volume": 1
+                }
+              ]
+            },
+            {
+              "type": "audio",
+              "role": "source",
+              "muted": false,
+              "offset": 0,
+              "clips": [
+                {
+                  "file": "file_cloud_wykauk4fh57l2i7cgbkbbspha3",
+                  "start": 0,
+                  "in": 0,
+                  "out": 20,
+                  "rate": 1,
+                  "volume": 1
+                }
+              ]
+            },
+            {
+              "type": "audio",
+              "role": "background",
+              "muted": false,
+              "offset": 0,
+              "clips": [
+                {
+                  "file": "file_cloud_t425zrk7vp7r5zsxft2twjps6o",
+                  "start": 22,
+                  "in": 0,
+                  "out": 1.3467573696145125,
+                  "rate": 1,
+                  "volume": 1
+                }
+              ]
+            }
+          ],
+          "deletedMedia": [
+            {
+              "type": "video",
+              "role": "",
+              "muted": false,
+              "offset": 0,
+              "clips": [
+                {
+                  "file": "file_cloud_wykauk4fh57l2i7cgbkbbspha3",
+                  "start": 0,
+                  "in": 0,
+                  "out": 20,
+                  "rate": 1,
+                  "volume": 1
+                }
+              ]
+            },
+            {
+              "type": "audio",
+              "role": "source",
+              "muted": false,
+              "offset": 0,
+              "clips": [
+                {
+                  "file": "file_cloud_wykauk4fh57l2i7cgbkbbspha3",
+                  "start": 0,
+                  "in": 0,
+                  "out": 20,
+                  "rate": 1,
+                  "volume": 1
+                }
+              ]
+            }
+          ],
+          "restoredMedia": [
+            {
+              "type": "video",
+              "role": "",
+              "muted": false,
+              "offset": 0,
+              "clips": [
+                {
+                  "file": "file_cloud_wykauk4fh57l2i7cgbkbbspha3",
+                  "start": 0,
+                  "in": 0,
+                  "out": 20,
+                  "rate": 1,
+                  "volume": 1
+                }
+              ]
+            },
+            {
+              "type": "audio",
+              "role": "source",
+              "muted": false,
+              "offset": 0,
+              "clips": [
+                {
+                  "file": "file_cloud_wykauk4fh57l2i7cgbkbbspha3",
+                  "start": 0,
+                  "in": 0,
+                  "out": 20,
+                  "rate": 1,
+                  "volume": 1
+                }
+              ]
+            },
+            {
+              "type": "audio",
+              "role": "background",
+              "muted": false,
+              "offset": 0,
+              "clips": [
+                {
+                  "file": "file_cloud_t425zrk7vp7r5zsxft2twjps6o",
+                  "start": 22,
+                  "in": 0,
+                  "out": 1.3467573696145125,
+                  "rate": 1,
+                  "volume": 1
+                }
+              ]
+            }
+          ],
+          "selectedCount": 2,
+          "restrictedDeleteCovered": false
+        }
+      ],
+      "finishedAt": "2026-11-13T13:04:01.632Z",
+      "actual": "Passed：首条字幕S1和22秒起独立音频A1恰选两个，一次Delete全部移除，其他字幕、原视频和原声未改；一次撤销共同恢复，切五入口及刷新保持。原受限对象拒绝/原子性仍延期。",
+      "report": "results-completion-nine-prod-20261113.md",
+      "evidence": "evidence-completion-nine-prod-20261113/manifest.json",
+      "sourceBatch": "prod-completion-nine-20261113-03",
+      "screenshots": [
+        "019-019-after-delete.png",
+        "019-019-one-undo-restored.png",
+        "019-019-two-legal-targets.png",
+        "019-ERYE210-019-passed.png"
+      ]
+    },
+    {
+      "id": "ERYE210-021",
+      "status": "Passed",
+      "caseVersion": "v2-current-features-20261113",
+      "actual": "C1改CAPTION_021、水印改WATERMARK_021，切页分别保留；手工还原C1后水印不变，刷新重开仍正确，原视频/原声保持。按已保存字段操作，不以Esc或取消草稿作为条件。",
+      "report": "results-021-035-v2-prod-20261113.md",
+      "automation": "AUTO",
+      "previousStatus": "Blocked",
+      "previousExecutionReport": "results-021-049-prod-20261113.md",
+      "historyFile": "case-021-035-v2-history-20261113.json",
+      "removedScope": "未保存文字的取消/放弃契约。",
+      "reason": "",
+      "automated": true,
+      "workspaceId": "f7edcce3-9cc2-40e5-a54a-2583c15c672e",
+      "annotations": [],
+      "projects": {
+        "021": {
+          "cid": "0140be40-53c2-472e-acb5-d3686f9e0940",
+          "pid": "978a414e-1b17-44aa-b4d1-c0ee1c4cadd8",
+          "name": "ERYE210-021-978a414e"
+        }
+      },
+      "checks": [
+        {
+          "stage": "v2-manual-restore",
+          "caption": "Efforts to sabotage our healthcare by filing a formal",
+          "watermark": "WATERMARK_021",
+          "scope": "已保存字段手工还原；无Esc/草稿放弃契约"
+        }
+      ],
+      "finishedAt": "2026-11-13T12:05:26.892Z",
+      "executionBatch": "prod-021-035-v2-20261113-01",
+      "executed": true,
+      "screenshots": [
+        "021-ERYE210-021-passed.png"
+      ],
+      "supplementaryEvidence": [
+        "021-021-final-subtitle-readback.json"
+      ]
+    },
+    {
+      "id": "ERYE210-022",
+      "status": "Passed",
+      "actual": "真实字号范围8～500；键入abc被浏览器拒绝为空、空值及501切页后保存值仍28；修正36后保存和刷新重开为36px。只覆盖当前水印字号数值入口。",
+      "reason": "",
+      "automated": true,
+      "workspaceId": "52a242f6-e836-46c8-87cc-713463fd565a",
+      "annotations": [
+        {
+          "type": "coverage",
+          "description": "本例覆盖当前可文本输入的水印字号，范围取自真实控件；不以浏览器拒绝abc键入判缺陷，不声称音量输入专项通过。"
+        }
+      ],
+      "projects": {
+        "022": {
+          "cid": "261be81f-82f0-4cf2-982e-c5faaa72a595",
+          "pid": "5c1cd05a-dfd2-464c-84da-3393b2a89d14",
+          "name": "ERYE210-022-5c1cd05a"
+        }
+      },
+      "checks": [
+        {
+          "label": "abc",
+          "typed": "",
+          "savedFontSize": 28,
+          "alerts": [],
+          "min": "8",
+          "max": 500
+        },
+        {
+          "label": "empty",
+          "typed": "",
+          "savedFontSize": 28,
+          "alerts": [],
+          "min": "8",
+          "max": 500
+        },
+        {
+          "label": "over-max",
+          "typed": "501",
+          "savedFontSize": 28,
+          "alerts": [],
+          "min": "8",
+          "max": 500
+        }
+      ],
+      "finishedAt": "2026-11-13T11:10:32.338Z",
+      "executionBatch": "prod-022-028-049-20261113-03",
+      "report": "results-021-049-prod-20261113.md",
+      "targetExecuted": true,
+      "automationGateOnly": false,
+      "screenshots": [
+        "022-022-abc.png",
+        "022-022-empty.png",
+        "022-022-over-max.png",
+        "022-ERYE210-022-passed.png"
+      ],
+      "steps": [
+        "新工程进入水印/文字，展开更多文字设置，读取真实字号范围。",
+        "依次键入abc、清空、501，每次切页返回检查保存值仍28。",
+        "修正36并提交，刷新重开查看36px。"
+      ]
+    },
+    {
+      "id": "ERYE210-023",
+      "status": "Passed",
+      "actual": "真实鼠标将不透明度从0.75拖至约0.35，保存值匹配；一次撤销回0.75，切页仍一致。Esc未有确认契约，不列硬条件。",
+      "reason": "",
+      "automated": true,
+      "workspaceId": "d63490ae-ba09-4a8e-b887-cc9c4811200c",
+      "annotations": [
+        {
+          "type": "coverage",
+          "description": "使用真实鼠标连续拖动；页面未提供Esc取消说明，未将该快捷键作为硬条件，不声称支持Esc拖动取消。"
+        }
+      ],
+      "projects": {
+        "023": {
+          "cid": "d8768bf3-978d-4d7d-ba73-9d38c18c5b32",
+          "pid": "d49dc09d-4f8f-4f80-88d6-a37ee1231a47",
+          "name": "ERYE210-023-d49dc09d"
+        }
+      },
+      "checks": [
+        {
+          "stage": "dragged",
+          "original": 0.75,
+          "final": 0.34,
+          "saved": {
+            "text": "NAV006",
+            "color": "#FF00FF",
+            "opacity": 0.34,
+            "font_name": "Arial",
+            "font_size": 28,
+            "placement": {
+              "mode": "preset",
+              "preset": "top-right",
+              "position": null,
+              "margin_px": 24
+            },
+            "font_weight": 600,
+            "watermark_id": "ac95b3a6-8634-426e-ba39-7d0d40f5f884"
+          }
+        }
+      ],
+      "finishedAt": "2026-11-13T10:57:40.246Z",
+      "executionBatch": "prod-021-027-20261113-01",
+      "report": "results-021-049-prod-20261113.md",
+      "targetExecuted": true,
+      "automationGateOnly": false,
+      "screenshots": [
+        "023-023-dragged.png",
+        "023-ERYE210-023-passed.png"
+      ],
+      "steps": [
+        "在文字水印不透明度滑杆连续鼠标拖动后松开。",
+        "核保存值和控件一致，点击一次撤销。",
+        "切字幕再返回，核验恢复0.75。"
+      ]
+    },
+    {
+      "id": "ERYE210-024",
+      "status": "Passed",
+      "actual": "关闭启用水印，切字幕再返回仍关闭；一次撤销恢复开关及原水印完整内容，没有因导航重复应用。",
+      "reason": "",
+      "automated": true,
+      "workspaceId": "d63490ae-ba09-4a8e-b887-cc9c4811200c",
+      "annotations": [],
+      "projects": {
+        "024": {
+          "cid": "773f4554-d4d7-4af2-a915-3a77e66286b2",
+          "pid": "b1d3571b-98fc-4191-ad84-b8a664279368",
+          "name": "ERYE210-024-b1d3571b"
+        }
+      },
+      "checks": [
+        {
+          "stage": "off",
+          "watermarks": {
+            "text": {
+              "text": "NAV006",
+              "color": "#FF00FF",
+              "opacity": 0.75,
+              "font_name": "Arial",
+              "font_size": 28,
+              "placement": {
+                "mode": "preset",
+                "preset": "top-right",
+                "position": null,
+                "margin_px": 24
+              },
+              "font_weight": 600,
+              "watermark_id": "ac95b3a6-8634-426e-ba39-7d0d40f5f884"
+            },
+            "image": {
+              "width": 160,
+              "file_id": "file_cloud_5cs2d67rozq2ae3rylpix2fdak",
+              "opacity": 0.75,
+              "placement": {
+                "mode": "preset",
+                "preset": "top-right",
+                "position": null,
+                "margin_px": 24
+              },
+              "watermark_id": "58450ec1-43f7-4768-a43e-04c3f79f835a"
+            },
+            "timing": {
+              "mode": "whole_project",
+              "end_sec": null,
+              "start_sec": 0
+            },
+            "enabled": false
+          },
+          "revision": 2
+        },
+        {
+          "stage": "undo",
+          "watermarks": {
+            "text": {
+              "text": "NAV006",
+              "color": "#FF00FF",
+              "opacity": 0.75,
+              "font_name": "Arial",
+              "font_size": 28,
+              "placement": {
+                "mode": "preset",
+                "preset": "top-right",
+                "position": null,
+                "margin_px": 24
+              },
+              "font_weight": 600,
+              "watermark_id": "ac95b3a6-8634-426e-ba39-7d0d40f5f884"
+            },
+            "image": {
+              "width": 160,
+              "file_id": "file_cloud_5cs2d67rozq2ae3rylpix2fdak",
+              "opacity": 0.75,
+              "placement": {
+                "mode": "preset",
+                "preset": "top-right",
+                "position": null,
+                "margin_px": 24
+              },
+              "watermark_id": "58450ec1-43f7-4768-a43e-04c3f79f835a"
+            },
+            "timing": {
+              "mode": "whole_project",
+              "end_sec": null,
+              "start_sec": 0
+            }
+          }
+        }
+      ],
+      "finishedAt": "2026-11-13T10:57:52.476Z",
+      "executionBatch": "prod-021-027-20261113-01",
+      "report": "results-021-049-prod-20261113.md",
+      "targetExecuted": true,
+      "automationGateOnly": false,
+      "screenshots": [
+        "024-024-off-after-navigation.png",
+        "024-ERYE210-024-passed.png"
+      ],
+      "steps": [
+        "关闭启用水印，切页后返回确认关闭。",
+        "一次撤销，核开关及原水印内容全部恢复。"
+      ]
+    },
+    {
+      "id": "ERYE210-025",
+      "status": "Passed",
+      "caseVersion": "v2-current-features-20261113",
+      "actual": "未发送输入“仅保留未发送输入025，不执行任何处理。”在五入口和同会话PB切换后保留；清空后为空，消息不增加，PA/PB内容和版本均未变。",
+      "report": "results-021-035-v2-prod-20261113.md",
+      "automation": "AUTO",
+      "previousStatus": "Blocked",
+      "previousExecutionReport": "results-021-049-prod-20261113.md",
+      "historyFile": "case-021-035-v2-history-20261113.json",
+      "removedScope": "清理候选独立审核草稿/取消范围由029覆盖已实现选择；未发布的专用取消流程保留。",
+      "reason": "",
+      "automated": true,
+      "workspaceId": "f7edcce3-9cc2-40e5-a54a-2583c15c672e",
+      "annotations": [],
+      "projects": {
+        "025": {
+          "cid": "d56d3cf3-9e71-45de-aac3-263ebe6a4806",
+          "pid": "76d652e1-4724-48e0-96ed-5530b19ffe68",
+          "name": "ERYE210-025-76d652e1"
+        },
+        "025-PB": {
+          "cid": "d56d3cf3-9e71-45de-aac3-263ebe6a4806",
+          "pid": "d3b8f880-17db-4ae6-ba4d-737112a8d1d0",
+          "name": "ERYE210-025-PB-d3b8f880"
+        }
+      },
+      "checks": [
+        {
+          "stage": "v2-unsent-cleared",
+          "text": "仅保留未发送输入025，不执行任何处理。",
+          "agentSubmitted": false,
+          "scope": "输入属于同一会话；切工程保留不是将文本写入工程"
+        }
+      ],
+      "finishedAt": "2026-11-13T12:05:46.607Z",
+      "executionBatch": "prod-021-035-v2-20261113-01",
+      "executed": true,
+      "screenshots": [
+        "025-ERYE210-025-passed.png"
+      ],
+      "supplementaryEvidence": []
+    },
+    {
+      "id": "ERYE210-026",
+      "status": "Passed",
+      "caseVersion": "v2-current-features-20261113",
+      "actual": "C1“已保存字幕026”明确保存，切页及刷新重开仍正确；同一工程、C2和其余字幕、音视频、消息保持，重开未新增内容版本。",
+      "report": "results-021-035-v2-prod-20261113.md",
+      "automation": "AUTO",
+      "previousStatus": "Blocked",
+      "previousExecutionReport": "results-021-049-prod-20261113.md",
+      "historyFile": "case-021-035-v2-history-20261113.json",
+      "removedScope": "异常关闭前未提交草稿、双标签云端冲突和重新应用/放弃选择。",
+      "reason": "",
+      "automated": true,
+      "workspaceId": "f7edcce3-9cc2-40e5-a54a-2583c15c672e",
+      "annotations": [],
+      "projects": {
+        "026": {
+          "cid": "232faec3-bc88-423a-9117-ec167fed66b2",
+          "pid": "997df06a-e17c-4d32-b21f-527d82fd0181",
+          "name": "ERYE210-026-997df06a"
+        }
+      },
+      "checks": [
+        {
+          "stage": "v2-saved-refresh",
+          "sameProject": "997df06a-e17c-4d32-b21f-527d82fd0181",
+          "savedRevision": 2,
+          "scope": "不含未提交草稿恢复或双标签冲突"
+        }
+      ],
+      "finishedAt": "2026-11-13T12:06:03.052Z",
+      "executionBatch": "prod-021-035-v2-20261113-01",
+      "executed": true,
+      "screenshots": [
+        "026-ERYE210-026-passed.png"
+      ],
+      "supplementaryEvidence": []
+    },
+    {
+      "id": "ERYE210-027",
+      "status": "Passed",
+      "caseVersion": "v2-current-features-20261113",
+      "actual": "PA_TEXT_027与PB_TEXT_027分别保存，修改PA为PA_UPDATED_027后PB仍原文；PB刷新重开保持，未串改另一工程。仅验证同账号同设备。",
+      "report": "results-021-035-v2-prod-20261113.md",
+      "automation": "AUTO",
+      "previousStatus": "Blocked",
+      "previousExecutionReport": "results-021-049-prod-20261113.md",
+      "historyFile": "case-021-035-v2-history-20261113.json",
+      "removedScope": "跨账号、跨设备及真正未提交草稿的隔离。",
+      "reason": "",
+      "automated": true,
+      "workspaceId": "f7edcce3-9cc2-40e5-a54a-2583c15c672e",
+      "annotations": [],
+      "projects": {
+        "027-PA": {
+          "cid": "fdd34e10-de7f-4151-88ff-0003742b834f",
+          "pid": "500b983a-17c9-491f-b55c-d0c4313bd37f",
+          "name": "ERYE210-027-PA-500b983a"
+        },
+        "027-PB": {
+          "cid": "fdd34e10-de7f-4151-88ff-0003742b834f",
+          "pid": "8a3a5bb8-f3bc-404d-82ad-c2a174852387",
+          "name": "ERYE210-027-PB-8a3a5bb8"
+        }
+      },
+      "checks": [
+        {
+          "stage": "v2-project-isolation",
+          "pa": {
+            "text": "PA_UPDATED_027",
+            "color": "#FF00FF",
+            "opacity": 0.75,
+            "font_name": "Arial",
+            "font_size": 28,
+            "placement": {
+              "mode": "preset",
+              "preset": "top-right",
+              "position": null,
+              "margin_px": 24
+            },
+            "font_weight": 600,
+            "watermark_id": "ac95b3a6-8634-426e-ba39-7d0d40f5f884"
+          },
+          "pb": {
+            "text": "PB_TEXT_027",
+            "color": "#FF00FF",
+            "opacity": 0.75,
+            "font_name": "Arial",
+            "font_size": 28,
+            "placement": {
+              "mode": "preset",
+              "preset": "top-right",
+              "position": null,
+              "margin_px": 24
+            },
+            "font_weight": 600,
+            "watermark_id": "ac95b3a6-8634-426e-ba39-7d0d40f5f884"
+          },
+          "scope": "仅同账号同设备；跨账号单独保留待环境"
+        }
+      ],
+      "finishedAt": "2026-11-13T12:06:28.946Z",
+      "executionBatch": "prod-021-035-v2-20261113-01",
+      "executed": true,
+      "screenshots": [
+        "027-ERYE210-027-passed.png"
+      ],
+      "supplementaryEvidence": []
+    },
+    {
+      "id": "ERYE210-028",
+      "status": "Passed",
+      "actual": "无分析结果的新工程仅打开文稿不产生候选/不改时间线；明确点击一次分析后出现2个停顿候选，未应用前轨道内容保持原样。",
+      "reason": "",
+      "automated": true,
+      "workspaceId": "55c4a7da-cab1-4b0f-b4f4-94e8436fbb2f",
+      "annotations": [],
+      "projects": {
+        "028": {
+          "cid": "9a081c7b-c7ac-424b-a5ed-5c44daa1ebe4",
+          "pid": "9bd932f9-fa60-486b-9243-5e7b22943522",
+          "name": "ERYE210-028-9bd932f9"
+        }
+      },
+      "checks": [
+        {
+          "stage": "analysis-ready",
+          "submissions": [],
+          "text": "去除口水词 · 文稿\n2 检测到口水词\n0\n个口水词\n2\n个停顿\n最短停顿时长\ns\n移除\n说话人 1\n\nefforts to sabotage our healthcare by filing a formal request to strike down the entirety of our nation's healthcare law.[0.9s]Regardless of people's opinions of the Affordable Care Act, we know there's no single issue that matters more to hardworking families than healthcare.[0.9s]It's a personal issue. It affects ev-"
+        },
+        {
+          "stage": "analysis-only",
+          "beforeRevision": 1,
+          "afterRevision": 2,
+          "mediaUnchanged": true
+        }
+      ],
+      "finishedAt": "2026-11-13T11:05:43.381Z",
+      "executionBatch": "prod-022-028-049-20261113-03",
+      "report": "results-021-049-prod-20261113.md",
+      "targetExecuted": true,
+      "automationGateOnly": false,
+      "screenshots": [
+        "028-028-before-analysis.png",
+        "028-analysis-ready.png",
+        "028-ERYE210-028-passed.png"
+      ],
+      "steps": [
+        "无分析结果的新工程进入文稿，先不点击分析。",
+        "确认分析入口和原时间线，明确点击一次分析。",
+        "候选出现后回读轨道，未点击移除。"
+      ]
+    },
+    {
+      "id": "ERYE210-029",
+      "status": "Passed",
+      "caseVersion": "v2-current-features-20261113",
+      "actual": "真实分析后2个高亮停顿：取消停顿类别变0，切页返回重新勾选恢复2，点击可定位；未点移除前视频/原声/字幕保持。",
+      "report": "results-021-035-v2-prod-20261113.md",
+      "automation": "AUTO",
+      "previousStatus": "Blocked",
+      "previousExecutionReport": "results-021-049-prod-20261113.md",
+      "historyFile": "case-021-035-v2-history-20261113.json",
+      "removedScope": "独立听审候选金标及识别准确率；单条候选专用取消控件若未提供不假设存在。",
+      "reason": "",
+      "automated": true,
+      "workspaceId": "f7edcce3-9cc2-40e5-a54a-2583c15c672e",
+      "annotations": [],
+      "projects": {
+        "029": {
+          "cid": "a74ad2fa-5976-4570-a0e8-a5204599a0e4",
+          "pid": "668dd00a-4aa6-4c07-b603-6654fd404671",
+          "name": "ERYE210-029-668dd00a"
+        }
+      },
+      "checks": [
+        {
+          "stage": "analysis-ready",
+          "submissions": [],
+          "text": "去除口水词 · 文稿\n2 检测到口水词\n0\n个口水词\n2\n个停顿\n最短停顿时长\ns\n移除\n说话人 1\n\nEfforts to sabotage our healthcare by filing a formal request to strike down the entirety of our nation's healthcare law.[0.9s]Regardless of people's opinions of the Affordable Care Act, we know there's no single issue that matters more to hardworking families than healthcare.[0.9s]It's a personal issue. It affects"
+        },
+        {
+          "stage": "v2-selection-only",
+          "initial": 2,
+          "restored": 2,
+          "mediaUnchanged": true
+        }
+      ],
+      "finishedAt": "2026-11-13T11:59:37.445Z",
+      "executionBatch": "prod-021-035-v2-20261113-01",
+      "executed": true,
+      "screenshots": [
+        "029-029-pause-located.png",
+        "029-029-pauses-off.png",
+        "029-analysis-ready.png",
+        "029-ERYE210-029-passed.png"
+      ],
+      "supplementaryEvidence": []
+    },
+    {
+      "id": "ERYE210-030",
+      "status": "Passed",
+      "caseVersion": "v2-current-features-20261113",
+      "actual": "一次移除本轮两个停顿，视频与原声由20秒同步缩短为18.695896秒；一次撤销恢复应用前完整轨道和20秒，无新素材替换。",
+      "report": "results-021-035-v2-prod-20261113.md",
+      "automation": "AUTO",
+      "previousStatus": "Blocked",
+      "previousExecutionReport": "results-021-049-prod-20261113.md",
+      "historyFile": "case-021-035-v2-history-20261113.json",
+      "removedScope": "双语字幕/译制配音全组同步、不可对齐关联拒绝；032另核保留字幕与画面时段。",
+      "reason": "",
+      "automated": true,
+      "workspaceId": "f7edcce3-9cc2-40e5-a54a-2583c15c672e",
+      "annotations": [],
+      "projects": {
+        "030": {
+          "cid": "f5aa0253-d49a-49ef-a855-335c6d613343",
+          "pid": "039b27d7-68ce-4deb-8f18-04c6148dd539",
+          "name": "ERYE210-030-039b27d7"
+        }
+      },
+      "checks": [
+        {
+          "stage": "analysis-ready",
+          "submissions": [],
+          "text": "去除口水词 · 文稿\n2 检测到口水词\n0\n个口水词\n2\n个停顿\n最短停顿时长\ns\n移除\n说话人 1\n\nefforts to sabotage our healthcare by filing a formal request to strike down the entirety of our nation's healthcare law.[0.9s]Regardless of people's opinions of the Affordable Care Act, we know there's no single issue that matters more to hardworking families than healthcare.[0.9s]It's a personal issue. It affects"
+        },
+        {
+          "stage": "v2-before-apply",
+          "selected": [
+            {
+              "text": "[0.9s]",
+              "title": null
+            },
+            {
+              "text": "[0.9s]",
+              "title": null
+            }
+          ],
+          "scope": "按页面当前停顿组验证应用；不判定ASR候选是否为真实口水词"
+        },
+        {
+          "stage": "v2-group-undo",
+          "beforeSeconds": 20,
+          "afterSeconds": 18.695896,
+          "restoredSeconds": 20
+        }
+      ],
+      "finishedAt": "2026-11-13T12:00:31.127Z",
+      "executionBatch": "prod-021-035-v2-20261113-01",
+      "executed": true,
+      "screenshots": [
+        "030-analysis-ready.png",
+        "030-ERYE210-030-passed.png",
+        "030-v2-after-apply.png",
+        "030-v2-before-apply.png"
+      ],
+      "supplementaryEvidence": []
+    },
+    {
+      "id": "ERYE210-031",
+      "status": "Passed",
+      "caseVersion": "v2-current-features-20261113",
+      "actual": "清理结果保存后，两次刷新重开保持同一片段、时长、字幕和保存版本，未再次裁剪或重复应用。",
+      "report": "results-021-035-v2-prod-20261113.md",
+      "automation": "AUTO",
+      "previousStatus": "Blocked",
+      "previousExecutionReport": "results-021-049-prod-20261113.md",
+      "historyFile": "case-021-035-v2-history-20261113.json",
+      "removedScope": "固定任意范围的逐词音画金标与完整听审。",
+      "reason": "",
+      "automated": true,
+      "workspaceId": "f7edcce3-9cc2-40e5-a54a-2583c15c672e",
+      "annotations": [],
+      "projects": {
+        "031": {
+          "cid": "67df2e43-db43-4572-be25-ae4f22b7c2ed",
+          "pid": "259b51c1-f745-46fc-9db3-ce9893a6146e",
+          "name": "ERYE210-031-259b51c1"
+        }
+      },
+      "checks": [
+        {
+          "stage": "analysis-ready",
+          "submissions": [],
+          "text": "去除口水词 · 文稿\n2 检测到口水词\n0\n个口水词\n2\n个停顿\n最短停顿时长\ns\n移除\n说话人 1\n\nefforts to sabotage our healthcare by filing a formal request to strike down the entirety of our nation's healthcare law.[0.9s]Regardless of people's opinions of the Affordable Care Act, we know there's no single issue that matters more to hardworking families than healthcare.[0.9s]It's a personal issue. It affects e-"
+        },
+        {
+          "stage": "v2-before-apply",
+          "selected": [
+            {
+              "text": "[0.9s]",
+              "title": null
+            },
+            {
+              "text": "[0.9s]",
+              "title": null
+            }
+          ],
+          "scope": "按页面当前停顿组验证应用；不判定ASR候选是否为真实口水词"
+        },
+        {
+          "stage": "v2-reopened-twice",
+          "seconds": 18.695896,
+          "repeatedApply": false
+        }
+      ],
+      "finishedAt": "2026-11-13T12:01:38.739Z",
+      "executionBatch": "prod-021-035-v2-20261113-01",
+      "executed": true,
+      "screenshots": [
+        "031-analysis-ready.png",
+        "031-ERYE210-031-passed.png",
+        "031-v2-after-apply.png",
+        "031-v2-before-apply.png"
+      ],
+      "supplementaryEvidence": []
+    },
+    {
+      "id": "ERYE210-032",
+      "status": "Passed",
+      "caseVersion": "v2-current-features-20261113",
+      "actual": "原8条SRT文字和顺序全部保持；逐条起止与保留视频新位置一致，例如第4条8.60～11.50→7.92～10.82，第7条17.96～18.96→16.66～17.66，未侵入字幕对应源区间。",
+      "report": "results-021-035-v2-prod-20261113.md",
+      "automation": "AUTO",
+      "previousStatus": "Blocked",
+      "previousExecutionReport": "results-021-049-prod-20261113.md",
+      "historyFile": "case-021-035-v2-history-20261113.json",
+      "removedScope": "跨词/句中切割后的语义边界判定和独立声音金标。",
+      "reason": "",
+      "automated": true,
+      "workspaceId": "f7edcce3-9cc2-40e5-a54a-2583c15c672e",
+      "annotations": [],
+      "projects": {
+        "032": {
+          "cid": "b25f8b96-bdba-4e7b-93f5-c8edb3c6407c",
+          "pid": "07eb7f3d-aaa2-4391-904a-9fb46c08fcb2",
+          "name": "ERYE210-032-07eb7f3d"
+        }
+      },
+      "checks": [
+        {
+          "stage": "analysis-ready",
+          "submissions": [],
+          "text": "去除口水词 · 文稿\n2 检测到口水词\n0\n个口水词\n2\n个停顿\n最短停顿时长\ns\n移除\n说话人 1\n\nefforts to sabotage our healthcare by filing a formal request to strike down the entirety of our nation's healthcare law.[0.9s]Regardless of people's opinions of the Affordable Care Act, we know there's no single issue that matters more to hardworking families than healthcare.[0.9s]It's a personal issue. It affects"
+        },
+        {
+          "stage": "v2-before-apply",
+          "selected": [
+            {
+              "text": "[0.9s]",
+              "title": null
+            },
+            {
+              "text": "[0.9s]",
+              "title": null
+            }
+          ],
+          "scope": "按页面当前停顿组验证应用；不判定ASR候选是否为真实口水词"
+        },
+        {
+          "stage": "v2-retained-cues",
+          "checks": [
+            {
+              "text": "Efforts to sabotage our healthcare by filing a formal",
+              "expected": [
+                0.16,
+                3.6
+              ],
+              "actual": [
+                0.16,
+                3.6
+              ]
+            },
+            {
+              "text": "request to strike down the entirety of our nation's",
+              "expected": [
+                3.66,
+                6.9
+              ],
+              "actual": [
+                3.66,
+                6.9
+              ]
+            },
+            {
+              "text": "healthcare law.",
+              "expected": [
+                6.92,
+                7.68
+              ],
+              "actual": [
+                6.92,
+                7.68
+              ]
+            },
+            {
+              "text": "Regardless of people's opinions of the Affordable Care Act,",
+              "expected": [
+                7.92,
+                10.82
+              ],
+              "actual": [
+                7.92,
+                10.82
+              ]
+            },
+            {
+              "text": "we know there's no single issue that matters more to",
+              "expected": [
+                11.3,
+                14.5
+              ],
+              "actual": [
+                11.3,
+                14.5
+              ]
+            },
+            {
+              "text": "hardworking families than healthcare.",
+              "expected": [
+                14.56,
+                16.4
+              ],
+              "actual": [
+                14.56,
+                16.4
+              ]
+            },
+            {
+              "text": "It's a personal issue.",
+              "expected": [
+                16.66,
+                17.66
+              ],
+              "actual": [
+                16.66,
+                17.66
+              ]
+            },
+            {
+              "text": "It affects",
+              "expected": [
+                18.08,
+                18.52
+              ],
+              "actual": [
+                18.08,
+                18.52
+              ]
+            }
+          ],
+          "scope": "核已有SRT文字与保留画面时段；不覆盖跨词语义边界听审"
+        }
+      ],
+      "finishedAt": "2026-11-13T12:02:22.377Z",
+      "executionBatch": "prod-021-035-v2-20261113-01",
+      "executed": true,
+      "screenshots": [
+        "032-analysis-ready.png",
+        "032-ERYE210-032-passed.png",
+        "032-v2-after-apply.png",
+        "032-v2-before-apply.png"
+      ],
+      "supplementaryEvidence": []
+    },
+    {
+      "id": "ERYE210-033",
+      "status": "Passed",
+      "caseVersion": "v2-current-features-20261113",
+      "actual": "清空、abc、低于实际最小值和高于最大值的阈值均恢复0.8，候选和内容不变；合法1.2可用，再恢复0.8后候选恢复，未点击移除。",
+      "report": "results-021-035-v2-prod-20261113.md",
+      "automation": "AUTO",
+      "previousStatus": "Blocked",
+      "previousExecutionReport": "results-021-049-prod-20261113.md",
+      "historyFile": "case-021-035-v2-history-20261113.json",
+      "removedScope": "无逐词时间跨句删除时的拆分/拒绝业务场景。",
+      "reason": "",
+      "automated": true,
+      "workspaceId": "f7edcce3-9cc2-40e5-a54a-2583c15c672e",
+      "annotations": [],
+      "projects": {
+        "033": {
+          "cid": "38a2ab70-16e8-454c-95c1-9b67a7008762",
+          "pid": "a6e0ff83-3c9b-448b-98f3-7249f858e607",
+          "name": "ERYE210-033-a6e0ff83"
+        }
+      },
+      "checks": [
+        {
+          "stage": "analysis-ready",
+          "submissions": [],
+          "text": "去除口水词 · 文稿\n2 检测到口水词\n0\n个口水词\n2\n个停顿\n最短停顿时长\ns\n移除\n说话人 1\n\nEfforts to sabotage our healthcare by filing a formal request to strike down the entirety of our nation's healthcare law.[0.9s]Regardless of people's opinions of the Affordable Care Act, we know there's no single issue that matters more to hardworking families than healthcare.[0.9s]It's a personal issue. It affects e-"
+        },
+        {
+          "stage": "v2-invalid-threshold",
+          "invalid": "",
+          "min": 0.2,
+          "max": 10,
+          "retained": "0.8"
+        },
+        {
+          "stage": "v2-invalid-threshold",
+          "invalid": "abc",
+          "min": 0.2,
+          "max": 10,
+          "retained": "0.8"
+        },
+        {
+          "stage": "v2-invalid-threshold",
+          "invalid": "0.1",
+          "min": 0.2,
+          "max": 10,
+          "retained": "0.8"
+        },
+        {
+          "stage": "v2-invalid-threshold",
+          "invalid": "11",
+          "min": 0.2,
+          "max": 10,
+          "retained": "0.8"
+        }
+      ],
+      "finishedAt": "2026-11-13T12:03:14.981Z",
+      "executionBatch": "prod-021-035-v2-20261113-01",
+      "executed": true,
+      "screenshots": [
+        "033-analysis-ready.png",
+        "033-ERYE210-033-passed.png"
+      ],
+      "supplementaryEvidence": []
+    },
+    {
+      "id": "ERYE210-034",
+      "status": "Passed",
+      "caseVersion": "v2-current-features-20261113",
+      "actual": "清理后首条字幕改“清理后字幕034”，保存及刷新重开保持；该字幕时码、其余字幕及清理后的音视频范围/时长均未变。",
+      "report": "results-021-035-v2-prod-20261113.md",
+      "automation": "AUTO",
+      "previousStatus": "Blocked",
+      "previousExecutionReport": "results-021-049-prod-20261113.md",
+      "historyFile": "case-021-035-v2-history-20261113.json",
+      "removedScope": "数字静音9～10秒的专门CNOWORD夹具和固定1秒删除预期。",
+      "reason": "",
+      "automated": true,
+      "workspaceId": "f7edcce3-9cc2-40e5-a54a-2583c15c672e",
+      "annotations": [],
+      "projects": {
+        "034": {
+          "cid": "eb81e62e-66db-4173-9419-dcd635881971",
+          "pid": "9e62c89a-d140-4d96-8942-51e677993f1f",
+          "name": "ERYE210-034-9e62c89a"
+        }
+      },
+      "checks": [
+        {
+          "stage": "analysis-ready",
+          "submissions": [],
+          "text": "去除口水词 · 文稿\n2 检测到口水词\n0\n个口水词\n2\n个停顿\n最短停顿时长\ns\n移除\n说话人 1\n\nEfforts to sabotage our healthcare by filing a formal request to strike down the entirety of our nation's healthcare law.[0.9s]Regardless of people's opinions of the Affordable Care Act, we know there's no single issue that matters more to hardworking families than healthcare.[0.9s]It's a personal issue. It affects"
+        },
+        {
+          "stage": "v2-before-apply",
+          "selected": [
+            {
+              "text": "[0.9s]",
+              "title": null
+            },
+            {
+              "text": "[0.9s]",
+              "title": null
+            }
+          ],
+          "scope": "按页面当前停顿组验证应用；不判定ASR候选是否为真实口水词"
+        },
+        {
+          "stage": "v2-edit-after-cleanup",
+          "seconds": 18.695896,
+          "originalTitle": "0.16–3.60 秒"
+        }
+      ],
+      "finishedAt": "2026-11-13T12:04:08.076Z",
+      "executionBatch": "prod-021-035-v2-20261113-01",
+      "executed": true,
+      "screenshots": [
+        "034-analysis-ready.png",
+        "034-ERYE210-034-passed.png",
+        "034-v2-after-apply.png",
+        "034-v2-before-apply.png"
+      ],
+      "supplementaryEvidence": []
+    },
+    {
+      "id": "ERYE210-035",
+      "status": "Passed",
+      "caseVersion": "v2-current-features-20261113",
+      "actual": "PA应用停顿清理后变短，同素材PB仍为原20秒和原8条字幕；PB切换、刷新及完整保存内容核验保持，未串用PA结果。",
+      "report": "results-021-035-v2-prod-20261113.md",
+      "automation": "AUTO",
+      "previousStatus": "Blocked",
+      "previousExecutionReport": "results-021-049-prod-20261113.md",
+      "historyFile": "case-021-035-v2-history-20261113.json",
+      "removedScope": "不可可靠对齐的双语/译制配音联动失败保护。",
+      "reason": "",
+      "automated": true,
+      "workspaceId": "f7edcce3-9cc2-40e5-a54a-2583c15c672e",
+      "annotations": [],
+      "projects": {
+        "035-PA": {
+          "cid": "71a93c36-3ebc-42f0-bebc-227cc2f7f892",
+          "pid": "cf87d9b0-fdbd-404b-b7f7-24bea2b6c775",
+          "name": "ERYE210-035-PA-cf87d9b0"
+        },
+        "035-PB": {
+          "cid": "71a93c36-3ebc-42f0-bebc-227cc2f7f892",
+          "pid": "1b0e2fa7-73fc-4651-a175-d35b81318210",
+          "name": "ERYE210-035-PB-1b0e2fa7"
+        }
+      },
+      "checks": [
+        {
+          "stage": "analysis-ready",
+          "submissions": [],
+          "text": "去除口水词 · 文稿\n2 检测到口水词\n0\n个口水词\n2\n个停顿\n最短停顿时长\ns\n移除\n说话人 1\n\nefforts to sabotage our healthcare by filing a formal request to strike down the entirety of our nation's healthcare law.[0.9s]Regardless of people's opinions of the Affordable Care Act, we know there's no single issue that matters more to hardworking families than healthcare.[0.9s]It's a personal issue. It affects e-"
+        },
+        {
+          "stage": "v2-before-apply",
+          "selected": [
+            {
+              "text": "[0.9s]",
+              "title": null
+            },
+            {
+              "text": "[0.9s]",
+              "title": null
+            }
+          ],
+          "scope": "按页面当前停顿组验证应用；不判定ASR候选是否为真实口水词"
+        },
+        {
+          "stage": "v2-same-source-isolation",
+          "paSeconds": 18.695896,
+          "pbSeconds": 20,
+          "sharedSource": true
+        }
+      ],
+      "finishedAt": "2026-11-13T12:05:09.085Z",
+      "executionBatch": "prod-021-035-v2-20261113-01",
+      "executed": true,
+      "screenshots": [
+        "035-analysis-ready.png",
+        "035-ERYE210-035-passed.png",
+        "035-v2-after-apply.png",
+        "035-v2-before-apply.png"
+      ],
+      "supplementaryEvidence": []
+    },
+    {
+      "id": "ERYE210-036",
+      "status": "Passed",
+      "actual": "C1原文改为字幕测试，Style字号80px；译文及原配音保持，没有生成任务。重开字幕仍为新文字，保存样式读回80，截图可见原文与译文独立。",
+      "reason": "",
+      "automated": true,
+      "workspaceId": "55c4a7da-cab1-4b0f-b4f4-94e8436fbb2f",
+      "annotations": [],
+      "projects": {
+        "036": {
+          "cid": "0914125c-9dfb-4857-97c0-e388a4485493",
+          "pid": "a1bf0786-19ef-4e65-922f-ddadf953d53c",
+          "name": "ERYE210-036-a1bf0786"
+        }
+      },
+      "checks": [
+        {
+          "stage": "saved-reopened",
+          "oldVoice": "欢迎使用 CinLink。",
+          "dubbingUnchanged": true,
+          "translationUnchanged": true,
+          "tasks": []
+        }
+      ],
+      "finishedAt": "2026-11-13T11:06:33.167Z",
+      "executionBatch": "prod-022-028-049-20261113-03",
+      "report": "results-021-049-prod-20261113.md",
+      "targetExecuted": true,
+      "automationGateOnly": false,
+      "screenshots": [
+        "036-036-style.png",
+        "036-ERYE210-036-passed.png"
+      ],
+      "steps": [
+        "新工程配音面板加载稳定，记录旧文稿/音频。",
+        "C1原文改字幕测试，Style字号改80。",
+        "切配音核稿/声音保持；重开字幕核文字和保存样式。"
+      ]
+    },
+    {
+      "id": "ERYE210-037",
+      "status": "Passed",
+      "actual": "本轮新工程真实创建两句旧配音，改第1句后不自动生成且旧音频保留；明确重新生成成功，目标旧音频替换、没有叠音，第二句声音/稿件及字幕不变；沿原结果重开核验通过，片段编号沿用不作失败条件。",
+      "reason": "",
+      "automated": true,
+      "workspaceId": "f451af9d-1c55-45fd-ad75-452bd56a074d",
+      "annotations": [],
+      "projects": {
+        "037": {
+          "cid": "9832ed03-d364-4f25-8d2b-e3d0d7195faf",
+          "pid": "f6e84337-6905-415d-81a3-6141c6daca68",
+          "name": "ERYE210-037-f6e84337"
+        }
+      },
+      "checks": [
+        {
+          "stage": "original-native-task-verified",
+          "sourceBatch": "prod-037-043-qualification-20261113-05",
+          "beforeDubbing": [
+            {
+              "volume": 1,
+              "end_sec": 5.625396825396825,
+              "block_id": "voice_33bd946a-20ff-4fa6-8876-4cb4a5757087",
+              "language": "zh",
+              "voice_id": "0327fdb5da9e4fd782899a8058c8ae2b",
+              "start_sec": 4,
+              "dubbing_id": "dubbing_0f2a0d341f3b2ccd60372c75",
+              "speaker_id": null,
+              "audio_state": "ready",
+              "source_text": "欢迎使用 CinLink。",
+              "audio_file_id": "file_cloud_fa66fk4rqjfqyhv2irhxmi34ez",
+              "playback_rate": 1,
+              "audio_clip_ids": [
+                "257b894e-f5e6-437e-ae95-d366cf66742c"
+              ],
+              "subtitle_file_id": "file_cloud_j2gnqzhnvtndsjqf3qv2elmfqn",
+              "translation_text": "欢迎使用 CinLink。",
+              "subtitle_block_ids": [
+                "voice_33bd946a-20ff-4fa6-8876-4cb4a5757087"
+              ]
+            },
+            {
+              "volume": 1,
+              "end_sec": 11.439637188208616,
+              "block_id": "voice_5f8c5ccc-8495-4619-bb26-4fe11cec5c72",
+              "language": "zh",
+              "voice_id": "0327fdb5da9e4fd782899a8058c8ae2b",
+              "start_sec": 10,
+              "dubbing_id": "dubbing_42cc21281b16d12f267a1889",
+              "speaker_id": null,
+              "audio_state": "ready",
+              "source_text": "这是导航测试。",
+              "audio_file_id": "file_cloud_jibyidjonvif32apcbqgr7dd5p",
+              "playback_rate": 1,
+              "audio_clip_ids": [
+                "605290e9-7723-4ee0-96f6-26c21f192a56"
+              ],
+              "subtitle_file_id": "file_cloud_j2gnqzhnvtndsjqf3qv2elmfqn",
+              "translation_text": "这是导航测试。",
+              "subtitle_block_ids": [
+                "voice_5f8c5ccc-8495-4619-bb26-4fe11cec5c72"
+              ]
+            }
+          ],
+          "afterDubbing": [
+            {
+              "volume": 1,
+              "end_sec": 11.439637188208616,
+              "block_id": "voice_5f8c5ccc-8495-4619-bb26-4fe11cec5c72",
+              "language": "zh",
+              "voice_id": "0327fdb5da9e4fd782899a8058c8ae2b",
+              "start_sec": 10,
+              "dubbing_id": "dubbing_42cc21281b16d12f267a1889",
+              "speaker_id": null,
+              "audio_state": "ready",
+              "source_text": "",
+              "audio_file_id": "file_cloud_jibyidjonvif32apcbqgr7dd5p",
+              "playback_rate": 1,
+              "audio_clip_ids": [
+                "605290e9-7723-4ee0-96f6-26c21f192a56"
+              ],
+              "subtitle_file_id": "file_cloud_p4dudc7oi6fye2ynmlslglpyfp",
+              "translation_text": "",
+              "subtitle_block_ids": [
+                "voice_5f8c5ccc-8495-4619-bb26-4fe11cec5c72"
+              ]
+            },
+            {
+              "volume": 1,
+              "end_sec": 6,
+              "block_id": "voice_33bd946a-20ff-4fa6-8876-4cb4a5757087",
+              "language": "zh",
+              "voice_id": "0327fdb5da9e4fd782899a8058c8ae2b",
+              "start_sec": 4,
+              "dubbing_id": "dubbing_0f2a0d341f3b2ccd60372c75",
+              "speaker_id": null,
+              "audio_state": "ready",
+              "source_text": "欢迎使用 CinLink。",
+              "audio_file_id": "file_cloud_444qq5shs7tnmle5hdnqg72dpj",
+              "playback_rate": 1.6021768707482993,
+              "audio_clip_ids": [
+                "257b894e-f5e6-437e-ae95-d366cf66742c"
+              ],
+              "subtitle_file_id": "file_cloud_p4dudc7oi6fye2ynmlslglpyfp",
+              "translation_text": "欢迎回到 CinLink，这是第三十七条测试。",
+              "subtitle_block_ids": [
+                "voice_33bd946a-20ff-4fa6-8876-4cb4a5757087"
+              ]
+            }
+          ],
+          "oldSoundRemoved": true,
+          "otherSentencePreserved": true,
+          "newGenerationSubmitted": false
+        }
+      ],
+      "finishedAt": "2026-11-13T11:19:17.146Z",
+      "executionBatch": "prod-037-041-original-verification-20261113-06",
+      "report": "results-021-049-prod-20261113.md",
+      "targetExecuted": true,
+      "automationGateOnly": false,
+      "screenshots": [
+        "037-037-pending-old-audio.png",
+        "037-037-verified-after-reopen.png",
+        "037-ERYE210-037-passed.png"
+      ],
+      "steps": [
+        "新工程删除复制的旧声音配置，仅用当前真实创建配音入口生成本工程两句旧声。",
+        "旧声ready且重开稳定后，第一句改为欢迎回到 CinLink，这是第三十七条测试。，保存并核旧声音保留。",
+        "明确点击重新生成这句配音一次，核新声音成功、目标旧声替换、第二句及字幕未改。"
+      ]
+    },
+    {
+      "id": "ERYE210-038",
+      "status": "Passed",
+      "actual": "新工程真实创建配音基线后，C1字幕独立稿038及第1句配音独立稿038分别保存，反查和刷新均保持，C2仍这是导航测试。，没有自动生成；页面无显式单向同步入口，条件分支按实际不操作。",
+      "reason": "",
+      "automated": true,
+      "workspaceId": "0921b9d4-a951-4442-b618-4b2fd20f3eab",
+      "annotations": [
+        {
+          "type": "coverage",
+          "description": "当前页面无显式字幕到配音同步入口，按用例条件仅验证独立保存、不自动生成、C2不变，不虚构同步操作。"
+        }
+      ],
+      "projects": {
+        "038": {
+          "cid": "64353a63-201c-40e4-959e-67831d565a74",
+          "pid": "dafff8f1-730c-470c-9aab-e1780616428f",
+          "name": "ERYE210-038-dafff8f1"
+        }
+      },
+      "checks": [
+        {
+          "stage": "typed-caption",
+          "value": "字幕独立稿038",
+          "target": {
+            "file": "file_cloud_opaiaztouxc7magfxn2kbtqxbf",
+            "block": "fe9179d3-1805-4b13-ab3e-6662cc906ea2"
+          }
+        },
+        {
+          "stage": "independent-scripts",
+          "syncEntries": [],
+          "oldC2": "这是导航测试。",
+          "tasks": []
+        }
+      ],
+      "finishedAt": "2026-11-13T11:23:18.367Z",
+      "executionBatch": "prod-038-native-fixture-20261113-07",
+      "report": "results-021-049-prod-20261113.md",
+      "targetExecuted": true,
+      "automationGateOnly": false,
+      "screenshots": [
+        "038-038-caption-typed.png",
+        "038-ERYE210-038-passed.png"
+      ],
+      "steps": [
+        "新工程通过真实创建配音生成两句旧声，完成后刷新建立有效稳定基线。",
+        "C1字幕改字幕独立稿038并等待保存。",
+        "第1句配音改配音独立稿038，明确结束编辑并等待保存；反查字幕、C2及刷新结果。"
+      ]
+    },
+    {
+      "id": "ERYE210-039",
+      "status": "Passed",
+      "actual": "真实BGM音量改50%（约-6.02dB）、静音并保存，鼠标拖至15秒；沿原结果重开确认实际偏移、静音/音量保持，视频、原声、字幕、其他配音均未改。拖动引起轨道编号变化不作为失败条件。",
+      "reason": "",
+      "automated": true,
+      "workspaceId": "c638905d-413e-45d3-a402-c78e5e316baf",
+      "annotations": [],
+      "projects": {
+        "039": {
+          "cid": "5c3711ca-0aa4-4f52-b1f4-9c6378f87c5d",
+          "pid": "f43fb56e-b5c5-4741-a3ee-7273c5f43814",
+          "name": "ERYE210-039-f43fb56e"
+        }
+      },
+      "checks": [
+        {
+          "stage": "original-drag-verified",
+          "sourceBatch": "prod-037-043-qualification-20261113-05",
+          "track": {
+            "role": "background",
+            "type": "audio",
+            "clips": [
+              {
+                "volume": 0.5,
+                "clip_id": "b37ca8d4-027b-4454-b90e-dc1a281d4be1",
+                "file_id": "file_cloud_b42mih23tjwh7thdqiyjjhohca",
+                "playback_rate": 1,
+                "source_in_sec": 0,
+                "source_out_sec": 1.3931972789115648,
+                "timeline_start_sec": 15
+              }
+            ],
+            "muted": true,
+            "track_id": "2d6961f5-cd25-4343-923b-da512d824a93",
+            "offset_sec": 0,
+            "linked_video_track_id": null
+          },
+          "otherMediaUnchanged": true,
+          "volumePercent": 50,
+          "dbApprox": -6.0206,
+          "newDragExecuted": false
+        }
+      ],
+      "finishedAt": "2026-11-13T11:20:16.104Z",
+      "executionBatch": "prod-037-041-original-verification-20261113-06",
+      "report": "results-021-049-prod-20261113.md",
+      "targetExecuted": true,
+      "automationGateOnly": false,
+      "screenshots": [
+        "039-039-verified-offset.png",
+        "039-039-volume-mute.png",
+        "039-ERYE210-039-passed.png"
+      ],
+      "steps": [
+        "新工程准备14秒起真实WAV独立BGM，原视频20秒。",
+        "选择BGM，将片段音量改50%（约-6.02dB）并静音，等保存。",
+        "在片段下部避开音量柄，真实拖动约1秒；核实际保存偏移及其他轨道不变。"
+      ]
+    },
+    {
+      "id": "ERYE210-042",
+      "status": "Passed",
+      "actual": "独立新工程重新分析后搜索healthcare命中；清空搜索、最短停顿由0.8改合法1.2（真实控件0.2～10），显示停顿候选2→0；未点击移除，轨道内容未变。",
+      "reason": "",
+      "automated": true,
+      "workspaceId": "0401dba6-8e17-4fbe-93a5-c42d68296b54",
+      "annotations": [],
+      "projects": {
+        "042": {
+          "cid": "315610a1-b9ed-4f8f-a859-663a42c42205",
+          "pid": "8cda4dc9-4cec-4bf5-82cc-955cfccda438",
+          "name": "ERYE210-042-8cda4dc9"
+        }
+      },
+      "checks": [
+        {
+          "stage": "analysis-ready",
+          "submissions": [],
+          "text": "去除口水词 · 文稿\n2 检测到口水词\n0\n个口水词\n2\n个停顿\n最短停顿时长\ns\n移除\n说话人 1\n\nEfforts to sabotage our healthcare by filing a formal request to strike down the entirety of our nation's healthcare law.[0.9s]Regardless of people's opinions of the Affordable Care Act, we know there's no single issue that matters more to hardworking families than healthcare.[0.9s]It's a personal issue. It affects e-"
+        },
+        {
+          "stage": "filter-only",
+          "oldText": "去除口水词 · 文稿\n2 检测到口水词\n0\n个口水词\n2\n个停顿\n最短停顿时长\ns\n移除\n说话人 1\n\nEfforts to sabotage our healthcare by filing a formal request to strike down the entirety of our nation's healthcare law.[0.9s]Regardless of people's opinions of the Affordable Care Act, we know there's no single issue that matters more to hardworking families than healthcare.[0.9s]It's a personal issue. It affects e-",
+          "newText": "去除口水词 · 文稿\n0 检测到口水词\n0\n个口水词\n0\n个停顿\n最短停顿时长\ns\n移除\n说话人 1\n\nEfforts to sabotage our healthcare by filing a formal request to strike down the entirety of our nation's healthcare law. Regardless of people's opinions of the Affordable Care Act, we know there's no single issue that matters more to hardworking families than healthcare. It's a personal issue. It affects e-",
+          "min": 0.2,
+          "max": 10,
+          "mediaUnchanged": true
+        }
+      ],
+      "finishedAt": "2026-11-13T11:09:46.532Z",
+      "executionBatch": "prod-022-028-049-20261113-03",
+      "report": "results-021-049-prod-20261113.md",
+      "targetExecuted": true,
+      "automationGateOnly": false,
+      "screenshots": [
+        "042-042-search.png",
+        "042-042-threshold.png",
+        "042-analysis-ready.png",
+        "042-ERYE210-042-passed.png"
+      ],
+      "steps": [
+        "在新清理副本点击一次重新分析，等候选可操作。",
+        "搜索healthcare并检查命中，然后清空。",
+        "最短停顿改1.2并失焦保存筛选，核候选变化及不应用内容保持。"
+      ]
+    },
+    {
+      "id": "ERYE210-043",
+      "status": "Passed",
+      "actual": "每条字幕字符数实际范围6～100，鼠标点击由60改合法31，切页及收起重开保持；源文字/时码/音频未改，一次撤销恢复60，刷新重开仍60。仅排版数据变化不判为字幕内容变化。",
+      "reason": "",
+      "automated": true,
+      "workspaceId": "eaee3abe-4eb8-4709-848e-747beaf368e1",
+      "annotations": [
+        {
+          "type": "coverage",
+          "description": "真实鼠标落点得到当前合法值，记录实际值而不强制样例30；保存重开指收起/展开编辑器，一次撤销后另刷新验证恢复值。"
+        }
+      ],
+      "projects": {
+        "043": {
+          "cid": "43df6cfa-fe4d-41df-8298-e3d54af598c2",
+          "pid": "fed66470-de5d-4af7-9734-5d3218e57584",
+          "name": "ERYE210-043-fed66470"
+        }
+      },
+      "checks": [
+        {
+          "stage": "restored",
+          "old": "60",
+          "changed": 31,
+          "wordsAndTimingUnchanged": true
+        }
+      ],
+      "finishedAt": "2026-11-13T11:17:42.669Z",
+      "executionBatch": "prod-037-043-qualification-20261113-05",
+      "report": "results-021-049-prod-20261113.md",
+      "targetExecuted": true,
+      "automationGateOnly": false,
+      "screenshots": [
+        "043-043-changed-chars.png",
+        "043-ERYE210-043-passed.png"
+      ],
+      "steps": [
+        "新字幕工程读取实际字符数滑杆6～100及当前60。",
+        "鼠标点击合法新值（记录真实落点），切页、保存并收起重开编辑器。",
+        "一次撤销恢复60，再刷新核恢复值，核源文字、原时码、音频未改。"
+      ]
+    },
+    {
+      "id": "ERYE210-044",
+      "status": "Passed",
+      "actual": "真实文件选择器替换现有logo为仓库512×512 PNG，再移除图片水印；文字NAV006及原视频/音轨保持，图片引用确实变更后清空。只覆盖实测PNG，不宣称全部格式规格支持。",
+      "reason": "",
+      "automated": true,
+      "workspaceId": "52a242f6-e836-46c8-87cc-713463fd565a",
+      "annotations": [],
+      "projects": {
+        "044": {
+          "cid": "e705067f-8ae9-4965-b46f-6b9444b35b82",
+          "pid": "1cf9ef94-8ae3-4ed5-956d-5e94be86ed10",
+          "name": "ERYE210-044-1cf9ef94"
+        }
+      },
+      "checks": [
+        {
+          "stage": "replace-remove",
+          "oldImage": {
+            "width": 160,
+            "file_id": "file_cloud_5cs2d67rozq2ae3rylpix2fdak",
+            "opacity": 0.75,
+            "placement": {
+              "mode": "preset",
+              "preset": "top-right",
+              "position": null,
+              "margin_px": 24
+            },
+            "watermark_id": "58450ec1-43f7-4768-a43e-04c3f79f835a"
+          },
+          "newImage": {
+            "width": 160,
+            "file_id": "file_cloud_3f35z6rzcmkprtduwrvioqeopg",
+            "opacity": 0.75,
+            "placement": {
+              "mode": "preset",
+              "preset": "top-right",
+              "position": null,
+              "margin_px": 24
+            },
+            "watermark_id": "58450ec1-43f7-4768-a43e-04c3f79f835a"
+          },
+          "textPreserved": true,
+          "mediaUnchanged": true
+        }
+      ],
+      "finishedAt": "2026-11-13T11:10:13.617Z",
+      "executionBatch": "prod-022-028-049-20261113-03",
+      "report": "results-021-049-prod-20261113.md",
+      "targetExecuted": true,
+      "automationGateOnly": false,
+      "screenshots": [
+        "044-044-image-before.png",
+        "044-044-removed-text-preserved.png",
+        "044-044-replaced.png",
+        "044-ERYE210-044-passed.png"
+      ],
+      "steps": [
+        "新工程确认文字NAV006及现有图片水印。",
+        "图片页点击替换，在真实文件选择器选cinlink-smoke-watermark.png。",
+        "保存新图片后移除图片，返回文字页，核文字和原轨道保持。"
+      ]
+    },
+    {
+      "id": "ERYE210-045",
+      "status": "Passed",
+      "reason": "",
+      "automated": true,
+      "workspaceId": "bf7f3724-4395-45a3-98d7-1eb029d86dbf",
+      "caseVersion": "v2-current-functions-20261116",
+      "annotations": [
+        {
+          "type": "case-version",
+          "description": "v2-current-functions-20261116"
+        }
+      ],
+      "projects": {
+        "045": {
+          "cid": "360d2f04-7a8c-4cd6-b528-5ea0218d7598",
+          "pid": "694a5ee7-35e2-4f80-859f-32f800105650",
+          "name": "ERYE210-045-694a5ee7"
+        },
+        "045-PB": {
+          "cid": "360d2f04-7a8c-4cd6-b528-5ea0218d7598",
+          "pid": "38483a78-6a05-4031-b700-b767a06f766f",
+          "name": "ERYE210-045-PB-38483a78"
+        }
+      },
+      "checks": [
+        {
+          "stage": "shared-reference-delete-reuse",
+          "pa": {
+            "cid": "360d2f04-7a8c-4cd6-b528-5ea0218d7598",
+            "pid": "694a5ee7-35e2-4f80-859f-32f800105650",
+            "name": "ERYE210-045-694a5ee7"
+          },
+          "pb": {
+            "cid": "360d2f04-7a8c-4cd6-b528-5ea0218d7598",
+            "pid": "38483a78-6a05-4031-b700-b767a06f766f",
+            "name": "ERYE210-045-PB-38483a78"
+          },
+          "sharedFile": "file_cloud_b42mih23tjwh7thdqiyjjhohca",
+          "deleteOnlyPA": true,
+          "PBPlayable": true,
+          "sameOriginalFileReused": true
+        }
+      ],
+      "screenshot": "045\\ERYE210-045-passed.png",
+      "finishedAt": "2026-11-16T03:33:04.085Z",
+      "sourceBatch": "prod-current-five-20261116-01",
+      "report": "results-045-049-current-functions-prod-20261116.md",
+      "evidence": "evidence-045-049-current-functions-prod-20261116/manifest.json",
+      "actual": "PA/PB共享真实WAV；PA单删不改PB与原片/字幕，PB音频区间可播放；原素材卡仍在，PA复用同一file_id并刷新保持。",
+      "screenshots": [
+        "045/prod-current-five-20261116-01--045-original-material-reused.png",
+        "045/prod-current-five-20261116-01--045-PB-shared-audio-preserved.png",
+        "045/prod-current-five-20261116-01--045-two-projects-shared-before-delete.png",
+        "045/prod-current-five-20261116-01--ERYE210-045-passed.png"
+      ]
+    },
+    {
+      "id": "ERYE210-047",
+      "status": "Failed",
+      "reason": "Error: 目标工程的明确重新生成应完成，不应停留错误\n\nexpect(received).toEqual(expected) // deep equality\n\n- Expected  - 1\n+ Received  + 3\n\n- Array []\n+ Array [\n+   \"编辑器执行数据不符合正式 v2 协议，请保留当前工程并核对服务返回。×\",\n+ ]",
+      "automated": true,
+      "workspaceId": "d6788b2d-63bc-4ed4-b812-38a1dc8ccc4a",
+      "caseVersion": "v2-translated-prerequisite-20261116",
+      "annotations": [
+        {
+          "type": "case-version",
+          "description": "v2-translated-prerequisite-20261116"
+        }
+      ],
+      "projects": {
+        "047": {
+          "pid": "a29b5e86-f95d-4e17-8b1b-21d7c0cf7084",
+          "cid": "bcacd926-6abd-490b-a290-723c8d28e584",
+          "name": "E196-A.mp4"
+        }
+      },
+      "checks": [
+        {
+          "stage": "fresh-native-translation-project",
+          "runId": "run_v2_4179947145d54f92954ca1d57babd63e",
+          "project": {
+            "pid": "a29b5e86-f95d-4e17-8b1b-21d7c0cf7084",
+            "cid": "bcacd926-6abd-490b-a290-723c8d28e584",
+            "name": "E196-A.mp4"
+          },
+          "dedicatedCase": "047",
+          "copiedToUnrelatedConversation": false
+        }
+      ],
+      "screenshot": "047\\ERYE210-047-failed.png",
+      "finishedAt": "2026-11-16T04:08:59.237Z",
+      "cloudDefect": {
+        "identifier": "FWXC-579",
+        "workitemId": "d4687bf3633ef6956037e3a63c",
+        "url": "https://devops.aliyun.com/projex/project/1e401ac99539c3999e00e40006/bug#openWorkitemIdentifier=d4687bf3633ef6956037e3a63c",
+        "status": "🤔AI提缺陷",
+        "verified": true,
+        "verifiedAt": "2026-11-16T12:52:16.4063712+08:00",
+        "screenshots": 3,
+        "attachmentCount": 6,
+        "syncReport": "defects-047-049-production-20261116.md"
+      },
+      "sourceBatch": "prod-current-five-final-20261116-08",
+      "report": "results-045-049-current-functions-prod-20261116.md",
+      "evidence": "evidence-045-049-current-functions-prod-20261116/manifest.json",
+      "actual": "真实翻译配音工程8句中文声音可用；独立WAV背景音量100%→50%，保存及刷新保持；首句改“混音后重新生成047。”并明确重新生成后，页面报“编辑器执行数据不符合正式v2协议”，新声音未成功交付。未将此前无效准备判产品失败。",
+      "screenshots": [
+        "047/prod-current-five-final-20261116-08--047-background-volume-line-half-saved.png",
+        "047/prod-current-five-final-20261116-08--047-draft-old-audio-before-explicit-regenerate.png",
+        "047/prod-current-five-final-20261116-08--ERYE210-047-failed.png"
+      ]
+    },
+    {
+      "id": "ERYE210-049",
+      "status": "Failed",
+      "reason": "Error: 原生导出应交付可用结果，不能报错后停留在无结果状态\n\nexpect(received).toBeFalsy()\n\nReceived: 1",
+      "automated": true,
+      "workspaceId": "d652b826-7907-4a4c-8d17-d302c9c5ad05",
+      "caseVersion": "v2-current-functions-20261116",
+      "annotations": [
+        {
+          "type": "case-version",
+          "description": "v2-current-functions-20261116"
+        }
+      ],
+      "projects": {
+        "049": {
+          "cid": "2440e3cf-2861-4983-9630-68439377a998",
+          "pid": "9d8d2dc8-06c4-4564-9dbf-32d330e04192",
+          "name": "ERYE210-049-9d8d2dc8"
+        }
+      },
+      "checks": [
+        {
+          "stage": "native-export-OFF-page-error",
+          "taskId": "3a9387f0-9334-4685-8e1c-7eba3d6b7ad7",
+          "taskStatus": "done",
+          "resultFiles": [
+            {
+              "fileId": "file_cloud_casnfjacafjuyesoyc7hj626so",
+              "name": "editor-export.mp4"
+            }
+          ],
+          "alerts": [
+            "编辑器执行数据不符合正式 v2 协议，请保留当前工程并核对服务返回。重新加载媒体×"
+          ],
+          "originalErrorEvidenceRetained": true,
+          "noExportResubmitted": true
+        }
+      ],
+      "screenshot": "049\\ERYE210-049-failed.png",
+      "finishedAt": "2026-11-16T04:28:51.152Z",
+      "cloudDefect": {
+        "identifier": "FWXC-580",
+        "workitemId": "d07993186a112f50ec9926b266",
+        "url": "https://devops.aliyun.com/projex/project/1e401ac99539c3999e00e40006/bug#openWorkitemIdentifier=d07993186a112f50ec9926b266",
+        "status": "🤔AI提缺陷",
+        "verified": true,
+        "verifiedAt": "2026-11-16T12:52:39.4211186+08:00",
+        "screenshots": 2,
+        "attachmentCount": 5,
+        "syncReport": "defects-047-049-production-20261116.md"
+      },
+      "sourceBatch": "prod-current-five-review-20261116-03",
+      "report": "results-045-049-current-functions-prod-20261116.md",
+      "evidence": "evidence-045-049-current-functions-prod-20261116/manifest.json",
+      "actual": "双水印关闭状态保存及刷新重开保持；第一次原生导出报页面协议错误且未交付可用结果，原任务后台done仅作辅助证据。沿同一受理任务复核，未再次导出；开启后的第二次导出和视频画面核验未执行。",
+      "screenshots": [
+        "049/prod-current-five-20261116-01--049-OFF-original-export-error.png",
+        "049/prod-current-five-20261116-01--049-OFF-saved-reopened.png",
+        "049/prod-current-five-20261116-01--ERYE210-049-blocked.png",
+        "049/prod-current-five-review-20261116-03--049-OFF-export-page-failure.png",
+        "049/prod-current-five-review-20261116-03--049-OFF-saved-reopened.png",
+        "049/prod-current-five-review-20261116-03--ERYE210-049-failed.png"
+      ]
+    },
+    {
+      "id": "ERYE210-050",
+      "status": "Passed",
+      "reason": "",
+      "automated": true,
+      "workspaceId": "78f6e4ce-669b-4fc9-818f-9dbd6ccd8984",
+      "caseVersion": "current-global-history-20261113",
+      "annotations": [
+        {
+          "type": "case-version",
+          "description": "current-global-history-20261113"
+        }
+      ],
+      "projects": {
+        "050": {
+          "cid": "b5b091df-ccf6-46df-9bee-545692bb39be",
+          "pid": "caa50e89-0279-4c42-8e6c-335c532e974e",
+          "name": "ERYE210-050-caa50e89"
+        }
+      },
+      "checks": [
+        {
+          "stage": "global-history",
+          "operations": [
+            "caption",
+            "watermark",
+            "undo-watermark",
+            "undo-caption",
+            "redo-caption",
+            "redo-watermark"
+          ],
+          "oldMark": "NAV006",
+          "finalMark": "全局水印050",
+          "mediaUnchanged": true
+        }
+      ],
+      "finishedAt": "2026-11-13T13:05:00.406Z",
+      "actual": "Passed：五入口下工程切换、撤销/重做与Export可达；字幕/文字水印两项已保存修改可跨模块按顺序撤销两次、重做两次，刷新保持且音视频未改。",
+      "report": "results-completion-nine-prod-20261113.md",
+      "evidence": "evidence-completion-nine-prod-20261113/manifest.json",
+      "sourceBatch": "prod-completion-nine-20261113-03",
+      "screenshots": [
+        "050-050-redone-and-reopened.png",
+        "050-050-two-module-edits.png",
+        "050-ERYE210-050-passed.png"
+      ]
+    },
+    {
+      "id": "ERYE210-051",
+      "status": "Passed",
+      "reason": "",
+      "automated": true,
+      "workspaceId": "4b1ba37f-1e9b-4530-9365-5644f81b8c66",
+      "caseVersion": "current-agent-background-20261113",
+      "annotations": [
+        {
+          "type": "case-version",
+          "description": "current-agent-background-20261113"
+        }
+      ],
+      "projects": {
+        "051": {
+          "cid": "609d5889-3fb0-4074-97a0-8ac7b709ce73",
+          "pid": "46170ca2-51b2-4f8a-b2a0-9011c2035d6d",
+          "name": "ERYE210-051-46170ca2"
+        }
+      },
+      "checks": [
+        {
+          "stage": "agent-background-volume",
+          "runId": "run_v2_3d7ebc6967124d3a805ce1f87892f0ed",
+          "before": {
+            "role": "background",
+            "type": "audio",
+            "clips": [
+              {
+                "volume": 1,
+                "clip_id": "c071fcd4-2637-4286-b6bd-2a074bca2532",
+                "file_id": "file_cloud_t425zrk7vp7r5zsxft2twjps6o",
+                "playback_rate": 1,
+                "source_in_sec": 0,
+                "source_out_sec": 1.3467573696145125,
+                "timeline_start_sec": 0
+              }
+            ],
+            "muted": false,
+            "track_id": "8aef35c6-6727-4a6a-a314-806288099157",
+            "offset_sec": 0,
+            "linked_video_track_id": null
+          },
+          "after": {
+            "role": "background",
+            "type": "audio",
+            "clips": [
+              {
+                "volume": 0.5011872336272722,
+                "clip_id": "c071fcd4-2637-4286-b6bd-2a074bca2532",
+                "file_id": "file_cloud_t425zrk7vp7r5zsxft2twjps6o",
+                "playback_rate": 1,
+                "source_in_sec": 0,
+                "source_out_sec": 1.3467573696145125,
+                "timeline_start_sec": 0
+              }
+            ],
+            "muted": false,
+            "track_id": "8aef35c6-6727-4a6a-a314-806288099157",
+            "offset_sec": 0,
+            "linked_video_track_id": null
+          },
+          "status": "done",
+          "view": {
+            "name": "ERYE210-051-46170ca2",
+            "module": [
+              "字幕"
+            ],
+            "playhead": "0",
+            "selected": [],
+            "media": [
+              {
+                "paused": true,
+                "duration": 20
+              }
+            ]
+          }
+        },
+        {
+          "stage": "explicit-volume-location",
+          "control": "音频轴上可上下拖拽的音量线",
+          "ariaValue": "50",
+          "readOnly": true,
+          "manualDragPerformed": false,
+          "project": {
+            "cid": "609d5889-3fb0-4074-97a0-8ac7b709ce73",
+            "pid": "46170ca2-51b2-4f8a-b2a0-9011c2035d6d",
+            "name": "ERYE210-051-46170ca2"
+          }
+        }
+      ],
+      "finishedAt": "2026-11-16T02:34:59.836Z",
+      "actual": "2026-11-16复测Passed：生产Chrome新工程，在Captions一次提交背景音轨降低6dB请求，Agent约54秒实际执行；音量由100%变为约50.12%（页面音量线显示50%），刷新后仍50%，保存版本1→2。音轨文件/位置及原视频、原声、字幕保持，运行期间未抢占Captions。未手动拖动音量线、未重复提交任务；原11-13失败保留历史。",
+      "report": "results-051-rerun-prod-20261116.md",
+      "evidence": "evidence-051-rerun-prod-20261116/manifest.json",
+      "runId": "run_v2_3d7ebc6967124d3a805ce1f87892f0ed",
+      "conversationId": "609d5889-3fb0-4074-97a0-8ac7b709ce73",
+      "projectId": "46170ca2-51b2-4f8a-b2a0-9011c2035d6d",
+      "refreshVerification": {
+        "project": {
+          "cid": "609d5889-3fb0-4074-97a0-8ac7b709ce73",
+          "pid": "46170ca2-51b2-4f8a-b2a0-9011c2035d6d",
+          "name": "ERYE210-051-46170ca2"
+        },
+        "sourceRevision": 1,
+        "resultRevision": 2,
+        "volumeBefore": 1,
+        "volumeAfter": 0.5011872336272722,
+        "volumePercentAfterRefresh": 50,
+        "sourceMediaUnchanged": true,
+        "originalVoiceAndSubtitlesUnchanged": true,
+        "manualDragPerformed": false,
+        "newTaskSubmitted": false
+      },
+      "sourceBatch": "prod-051-rerun-20261116-01",
+      "screenshots": [
+        "051-after-agent.png",
+        "051-prompt-captions.png",
+        "051-real-volume-control.png",
+        "051-volume-line-after-refresh.png",
+        "ERYE210-051-passed.png"
+      ]
+    },
+    {
+      "id": "ERYE210-052",
+      "status": "Passed",
+      "reason": "",
+      "automated": true,
+      "workspaceId": "b6e06db1-f34f-444e-9902-2fce11d8c9ed",
+      "caseVersion": "v2-current-export-20261113",
+      "annotations": [
+        {
+          "type": "case-version",
+          "description": "v2-current-export-20261113"
+        }
+      ],
+      "projects": {
+        "052": {
+          "cid": "705886fd-43c2-4b69-859f-23da35689896",
+          "pid": "0d72fd73-0a31-49b6-a550-8c8d77b05a87",
+          "name": "ERYE210-052-0d72fd73"
+        }
+      },
+      "checks": [
+        {
+          "stage": "cross-module-export",
+          "cleanup": {
+            "count": 2,
+            "before": [
+              {
+                "type": "video",
+                "role": "",
+                "muted": false,
+                "offset": 0,
+                "clips": [
+                  {
+                    "file": "file_cloud_wykauk4fh57l2i7cgbkbbspha3",
+                    "start": 0,
+                    "in": 0,
+                    "out": 20,
+                    "rate": 1,
+                    "volume": 1
+                  }
+                ]
+              },
+              {
+                "type": "audio",
+                "role": "source",
+                "muted": false,
+                "offset": 0,
+                "clips": [
+                  {
+                    "file": "file_cloud_wykauk4fh57l2i7cgbkbbspha3",
+                    "start": 0,
+                    "in": 0,
+                    "out": 20,
+                    "rate": 1,
+                    "volume": 1
+                  }
+                ]
+              },
+              {
+                "type": "audio",
+                "role": "background",
+                "muted": false,
+                "offset": 0,
+                "clips": [
+                  {
+                    "file": "file_cloud_t425zrk7vp7r5zsxft2twjps6o",
+                    "start": 0,
+                    "in": 0,
+                    "out": 1.3467573696145125,
+                    "rate": 1,
+                    "volume": 1
+                  }
+                ]
+              }
+            ],
+            "after": [
+              {
+                "type": "video",
+                "role": "",
+                "muted": false,
+                "offset": 0,
+                "clips": [
+                  {
+                    "file": "file_cloud_wykauk4fh57l2i7cgbkbbspha3",
+                    "start": 0,
+                    "in": 0,
+                    "out": 7.8,
+                    "rate": 1,
+                    "volume": 1
+                  },
+                  {
+                    "file": "file_cloud_wykauk4fh57l2i7cgbkbbspha3",
+                    "start": 7.8,
+                    "in": 8.48,
+                    "out": 17.2,
+                    "rate": 1,
+                    "volume": 1
+                  },
+                  {
+                    "file": "file_cloud_wykauk4fh57l2i7cgbkbbspha3",
+                    "start": 16.52,
+                    "in": 17.824104,
+                    "out": 20,
+                    "rate": 1,
+                    "volume": 1
+                  }
+                ]
+              },
+              {
+                "type": "audio",
+                "role": "source",
+                "muted": false,
+                "offset": 0,
+                "clips": [
+                  {
+                    "file": "file_cloud_wykauk4fh57l2i7cgbkbbspha3",
+                    "start": 0,
+                    "in": 0,
+                    "out": 7.8,
+                    "rate": 1,
+                    "volume": 1
+                  },
+                  {
+                    "file": "file_cloud_wykauk4fh57l2i7cgbkbbspha3",
+                    "start": 7.8,
+                    "in": 8.48,
+                    "out": 17.2,
+                    "rate": 1,
+                    "volume": 1
+                  },
+                  {
+                    "file": "file_cloud_wykauk4fh57l2i7cgbkbbspha3",
+                    "start": 16.52,
+                    "in": 17.824104,
+                    "out": 20,
+                    "rate": 1,
+                    "volume": 1
+                  }
+                ]
+              },
+              {
+                "type": "audio",
+                "role": "background",
+                "muted": false,
+                "offset": 0,
+                "clips": [
+                  {
+                    "file": "file_cloud_t425zrk7vp7r5zsxft2twjps6o",
+                    "start": 0,
+                    "in": 0,
+                    "out": 1.3467573696145125,
+                    "rate": 1,
+                    "volume": 1
+                  }
+                ]
+              }
+            ]
+          },
+          "fileId": "file_cloud_uinxlne6no4cijemcb4ktq25m3",
+          "metadata": {
+            "programs": [],
+            "stream_groups": [],
+            "streams": [
+              {
+                "codec_name": "h264",
+                "codec_type": "video",
+                "width": 1920,
+                "height": 1080
+              },
+              {
+                "codec_name": "aac",
+                "codec_type": "audio"
+              }
+            ],
+            "format": {
+              "duration": "18.700000"
+            }
+          },
+          "markerReviewRequired": true,
+          "currentMarker": "AFTER052",
+          "expectedExportMarker": "BEFORE052"
+        },
+        {
+          "stage": "export-snapshot-visual-review",
+          "reviewer": "Codex visual inspection",
+          "reviewedAt": "2026-11-13T13:16:42.696277+00:00",
+          "frameSha256": "7e733b245cdb1691328c7a6bed92b14b8db863de3bbe10cc8f24c9335cc7133b",
+          "mp4Sha256": "7be43072c4e1208e7ae9aa84179e84b2391cace8e1baf5f1b6557ae4c5e2fda1",
+          "marker": "BEFORE052",
+          "afterMarkerAbsent": true,
+          "visibleCaption": "Efforts to sabotage our healthcare by filing a formal",
+          "postExportCaptionAbsent": true,
+          "note": "实际查看1秒原始导出帧：右上BEFORE052、底部原英语C1；没有AFTER052或导出后新文052。仅此帧/当前用例范围，不替代整片逐帧、听辨或字幕排版专项。"
+        }
+      ],
+      "finishedAt": "2026-11-13T13:17:43.568Z",
+      "actual": "Passed：真实分析2个停顿并应用，20秒变约18.695896秒；原生创建配音、首句改Welcome to CinLink并生成，背景音量50%。一次原导出完成，受理后字幕/水印新编辑保存且重开保持；下载H264/AAC、1920×1080、18.70秒MP4。原始1秒帧为BEFORE052及原英语C1，未混入AFTER052/导出后新文，已按文件/帧哈希完成实际画面审核；未再次导出。",
+      "report": "results-completion-nine-prod-20261113.md",
+      "evidence": "evidence-completion-nine-prod-20261113/manifest.json",
+      "sourceBatch": "prod-completion-nine-20261113-05",
+      "screenshots": [
+        "052-052-export-result-current-edit.png",
+        "052-ERYE210-052-passed.png",
+        "052-original-052-background-half.png",
+        "052-original-052-cleaned.png",
+        "052-original-052-edited-after-export-accepted.png",
+        "052-original-052-export-frozen-frame.png",
+        "052-original-052-export-result-current-edit.png",
+        "052-original-052-voice-ready.png",
+        "052-original-ERYE210-052-blocked.png"
+      ],
+      "continuedFromBatch": "prod-completion-nine-20261113-04"
+    },
+    {
+      "id": "ERYE210-053",
+      "status": "Passed",
+      "reason": "",
+      "automated": true,
+      "workspaceId": "78f6e4ce-669b-4fc9-818f-9dbd6ccd8984",
+      "caseVersion": "v2-windows-keyboard-20261113",
+      "annotations": [
+        {
+          "type": "case-version",
+          "description": "v2-windows-keyboard-20261113"
+        }
+      ],
+      "projects": {
+        "053": {
+          "cid": "d191ece5-b86d-4285-919b-c6c5555c403c",
+          "pid": "8d2be883-2fbe-41af-9581-a99d311140a2",
+          "name": "ERYE210-053-8d2be883"
+        }
+      },
+      "checks": [
+        {
+          "stage": "windows-narrow-keyboard",
+          "size": {
+            "width": 1024,
+            "height": 768
+          },
+          "modules": [
+            "媒体",
+            "文稿",
+            "字幕",
+            "配音",
+            "水印"
+          ],
+          "exportFocused": true,
+          "macCovered": false
+        },
+        {
+          "stage": "windows-narrow-keyboard",
+          "size": {
+            "width": 1280,
+            "height": 900
+          },
+          "modules": [
+            "媒体",
+            "文稿",
+            "字幕",
+            "配音",
+            "水印"
+          ],
+          "exportFocused": true,
+          "macCovered": false
+        }
+      ],
+      "finishedAt": "2026-11-13T13:05:25.333Z",
+      "actual": "Passed：1024×768及1280×900下五入口Tab/Enter实际可达、面板正确，Export可见可聚焦；恢复原视口后工程及完整内容保持。仅Windows及实测尺寸，不外推mac或未冻结断点。",
+      "report": "results-completion-nine-prod-20261113.md",
+      "evidence": "evidence-completion-nine-prod-20261113/manifest.json",
+      "sourceBatch": "prod-completion-nine-20261113-03",
+      "screenshots": [
+        "053-053-1024-keyboard.png",
+        "053-053-1280-keyboard.png",
+        "053-053-original-size-restored.png",
+        "053-ERYE210-053-passed.png"
+      ]
+    },
+    {
+      "id": "ERYE210-054",
+      "status": "Passed",
+      "reason": "",
+      "automated": true,
+      "workspaceId": "b6e06db1-f34f-444e-9902-2fce11d8c9ed",
+      "caseVersion": "current-explicit-bilingual-20261113",
+      "annotations": [
+        {
+          "type": "case-version",
+          "description": "current-explicit-bilingual-20261113"
+        }
+      ],
+      "projects": {
+        "054": {
+          "cid": "e8272850-188e-4a68-b685-b4c1a41ee496",
+          "pid": "b0a5ae85-6448-4c76-a5b7-5cf05eec3499",
+          "name": "ERYE210-054-b0a5ae85"
+        }
+      },
+      "checks": [
+        {
+          "stage": "explicit-bilingual-kept",
+          "sourceFile": "file_cloud_d665zc6otky5w3upjfrs5hueau",
+          "targetFile": "file_cloud_udwxvjpof7r7xynotx32dfyt6h",
+          "editedText": "双语独立编辑054",
+          "englishUnchanged": true,
+          "audioUnchanged": true,
+          "firstTranslationDefaultsCovered": false
+        }
+      ],
+      "finishedAt": "2026-11-13T13:20:54.331Z",
+      "actual": "Passed：原场景明确中英双显并保存，五入口切换保持；仅C1中文改双语独立编辑054，等待页面已同步后刷新并选回中文通道，文字保持，英语轨及音视频未改。不覆盖首次译制默认。",
+      "report": "results-completion-nine-prod-20261113.md",
+      "evidence": "evidence-completion-nine-prod-20261113/manifest.json",
+      "sourceBatch": "prod-completion-nine-20261113-06",
+      "screenshots": [
+        "054-054-Chinese-edit-saved.png",
+        "054-054-explicit-bilingual.png",
+        "054-054-independent-edit-reopened.png",
+        "054-ERYE210-054-passed.png"
+      ],
+      "continuedFromBatch": "prod-completion-nine-20261113-04"
+    }
+  ],
+  "registry": {
+    "014": "ERYE210-014:\n  status: BLOCKED\n  script: \"tests/editor/erye210-navigation.spec.ts\"\n  execution_status: \"Blocked\"\n  execution_batch: \"prod-011-015-reviewed-20261113\"\n  execution_report: \"docs/cases/requirements/ERYE-210/results-011-015-prod-20261113.md\"\n  execution_note: \"缺少真实只读授权工程及独立只读账号，未伪造只读标记，未执行浏览权限或服务端拒绝写入分支。脚本仅接入前置检查入口。\"\n",
+    "046": "ERYE210-046:\n  status: AUTO\n  script: \"tests/editor/erye210-current-five.spec.ts\"\n  definition_version: \"v2-current-functions-20261116\"\n  execution_status: \"Blocked\"\n  execution_note: \"首次清理20→18.695896秒成功；会话明确只重分析保留三段后，Agent说明当前工具仍以20秒原片为源，无法限定保留片段，因此没有提交二次分析。旧候选不算新结果；音视频、字幕及旧分析均保持，二次分析范围记阻塞。；results-045-049-current-functions-prod-20261116.md\"\n",
+    "047": "ERYE210-047:\n  status: AUTO\n  script: \"tests/editor/erye210-current-five.spec.ts\"\n  definition_version: \"v2-translated-prerequisite-20261116\"\n  execution_status: \"Failed\"\n  execution_note: \"真实翻译配音工程8句中文声音可用；独立WAV背景音量100%→50%，保存及刷新保持；首句改“混音后重新生成047。”并明确重新生成后，页面报“编辑器执行数据不符合正式v2协议”，新声音未成功交付。未将此前无效准备判产品失败。；results-045-049-current-functions-prod-20261116.md\"\n  defect_id: \"FWXC-579\"\n  defect_url: \"https://devops.aliyun.com/projex/project/1e401ac99539c3999e00e40006/bug#openWorkitemIdentifier=d4687bf3633ef6956037e3a63c\"\n  defect_status: \"🤔AI提缺陷\"\n  defect_sync_verified: true\n  defect_screenshots: 3\n  defect_attachments: 6\n",
+    "048": "ERYE210-048:\n  status: AUTO\n  script: \"tests/editor/erye210-current-five.spec.ts\"\n  definition_version: \"v2-translated-prerequisite-20261116\"\n  execution_status: \"Blocked\"\n  execution_note: \"已完成真实独立英语→中文翻译配音并交付视频/工程文件，配音曾显示8句；当前工程的配音页持续报协议错误，既有文案无法稳定恢复。最终核验只回读、不再点击创建或生成；字幕改稿和后续单句更新目标步骤尚未执行，记阻塞。；results-045-049-current-functions-prod-20261116.md\"\n",
+    "049": "ERYE210-049:\n  status: AUTO\n  script: \"tests/editor/erye210-current-five.spec.ts\"\n  definition_version: \"v2-current-functions-20261116\"\n  execution_status: \"Failed\"\n  execution_note: \"双水印关闭状态保存及刷新重开保持；第一次原生导出报页面协议错误且未交付可用结果，原任务后台done仅作辅助证据。沿同一受理任务复核，未再次导出；开启后的第二次导出和视频画面核验未执行。；results-045-049-current-functions-prod-20261116.md\"\n  defect_id: \"FWXC-580\"\n  defect_url: \"https://devops.aliyun.com/projex/project/1e401ac99539c3999e00e40006/bug#openWorkitemIdentifier=d07993186a112f50ec9926b266\"\n  defect_status: \"🤔AI提缺陷\"\n  defect_sync_verified: true\n  defect_screenshots: 2\n  defect_attachments: 5\n"
+  }
+}

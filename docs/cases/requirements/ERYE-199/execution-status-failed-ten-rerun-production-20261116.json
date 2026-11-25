@@ -1,0 +1,485 @@
+{
+  "date": "2026-11-16",
+  "environment": "production",
+  "base_url": "https://app.cinlink.ai",
+  "workspace_id": "e4f36323-55aa-4670-90f3-bc96f7bc52dc",
+  "task_space": 4,
+  "task_space_finished": true,
+  "cases": [
+    {
+      "id": "ERYE199-002",
+      "status": "Passed",
+      "actual": "29.97fps新工程在页面1秒处分割，实际边界1.0010000000000001秒，等于30个30000/1001帧；关联范围及刷新保持，原帧对齐错误未复现。",
+      "fixture": {
+        "conversationId": "b420703b-c825-43e9-857d-12b3ef867b20",
+        "editorId": "db20af2a-ebba-47aa-9da0-0f96a83172d7",
+        "name": "ERYE199-002-failed-ten-rerun-20261116"
+      },
+      "completed": "2026-11-16T05:55:09.933Z",
+      "automation_status": "AUTO",
+      "automation_integrated": true,
+      "script": "tools/editor/erye199/cases.mjs#002",
+      "raw_actual": "分割点按分数帧率对齐且刷新保存",
+      "latest_execution_report": "results-failed-ten-rerun-production-20261116.md",
+      "latest_execution_batch": "erye199-failed-ten-rerun-20261116",
+      "workspace_id": "e4f36323-55aa-4670-90f3-bc96f7bc52dc",
+      "execution_method": "Ego Lite生产有头；新工程实测；API仅准备/回读；无computer-use",
+      "screenshots": [
+        "evidence-failed-ten-rerun-production-20261116/002-after-split.png",
+        "evidence-failed-ten-rerun-production-20261116/002-reopened.png"
+      ],
+      "legacy_defect_reproduced": false,
+      "defect": {
+        "id": "FWXC-479",
+        "workitem_id": "9ba270e32cb1770640a69d088f",
+        "url": "https://devops.aliyun.com/projex/project/1e401ac99539c3999e00e40006/bug#openWorkitemIdentifier=9ba270e32cb1770640a69d088f",
+        "status": "待确认",
+        "synced_at": "2026-11-13T14:45:36.1986715+08:00",
+        "verified": true,
+        "screenshots": 2,
+        "attachments": 4,
+        "last_readback": {
+          "status": "待确认",
+          "assigned_to": "余航",
+          "action": "只读核验既有缺陷；未新建、未修改、未重复上传",
+          "checked_at": "2026-11-13T16:18:54.877925+08:00"
+        },
+        "assigned_to": "余航"
+      },
+      "cloud_writes": 0
+    },
+    {
+      "id": "ERYE199-007",
+      "status": "Passed",
+      "actual": "同一新工程选中第二视频片段并打开媒体，重开后第二片段选择和媒体面板均恢复；原状态丢失未复现。",
+      "fixture": {
+        "conversationId": "bd28a944-7712-47d1-983f-9ee35e3e19bc",
+        "editorId": "cb5e6cfa-d7e4-45d0-a789-dbb4adcb1da7",
+        "name": "ERYE199-007-failed-ten-rerun-20261116"
+      },
+      "completed": "2026-11-16T05:56:11.673Z",
+      "automation_status": "AUTO",
+      "script": "tools/editor/erye199/cases.mjs#007",
+      "harness_note": "修正媒体面板打开操作为幂等，从同一新工程继续；未重复创建工程。",
+      "raw_actual": "选择第二片段与Media面板分别恢复",
+      "latest_execution_report": "results-failed-ten-rerun-production-20261116.md",
+      "latest_execution_batch": "erye199-failed-ten-rerun-20261116",
+      "workspace_id": "e4f36323-55aa-4670-90f3-bc96f7bc52dc",
+      "execution_method": "Ego Lite生产有头；新工程实测；API仅准备/回读；无computer-use",
+      "screenshots": [
+        "evidence-failed-ten-rerun-production-20261116/007-selected-before.png",
+        "evidence-failed-ten-rerun-production-20261116/007-reopened.png"
+      ],
+      "legacy_defect_reproduced": false,
+      "defect": {
+        "id": "FWXC-485",
+        "workitem_id": "3fbd5d5e667e7484e372ef0f6e",
+        "url": "https://devops.aliyun.com/projex/project/1e401ac99539c3999e00e40006/bug#openWorkitemIdentifier=3fbd5d5e667e7484e372ef0f6e",
+        "status": "🤔AI提缺陷",
+        "assigned_to": "牛诗晴",
+        "verified": true,
+        "screenshots": 2,
+        "attachments": 4,
+        "synced_at": "2026-11-13T16:17:23.9966298+08:00",
+        "local_report": "docs/defects/ERYE199-007-view-state-production-20261113.md"
+      },
+      "cloud_writes": 0,
+      "automation_integrated": true
+    },
+    {
+      "id": "ERYE199-008",
+      "status": "Failed",
+      "actual": "视频/音频/图片的素材登记仍没有独立撤销入口；登记与放入分离、三种素材放入及放入撤销均通过。",
+      "fixture": {
+        "conversationId": "d972a183-1854-47e6-b825-f11dee4a38c2",
+        "editorId": "31a9fe51-9e96-44a8-bead-23cd50cc6200",
+        "name": "ERYE199-008-image-failed-ten-rerun-20261116"
+      },
+      "completed": "2026-11-16T05:57:11.664Z",
+      "errorType": "AssertionError",
+      "automation_status": "AUTO",
+      "automation_integrated": true,
+      "script": "tools/editor/erye199/cases.mjs#008",
+      "raw_actual": "Expected values to be strictly deep-equal:\n+ actual - expected\n\n+ [\n+   'video登记没有独立撤销入口',\n+   'audio登记没有独立撤销入口',\n+   'image登记没有独立撤销入口'\n+ ]\n- []\n",
+      "latest_execution_report": "results-failed-ten-rerun-production-20261116.md",
+      "latest_execution_batch": "erye199-failed-ten-rerun-20261116",
+      "workspace_id": "e4f36323-55aa-4670-90f3-bc96f7bc52dc",
+      "execution_method": "Ego Lite生产有头；新工程实测；API仅准备/回读；无computer-use",
+      "screenshots": [
+        "evidence-failed-ten-rerun-production-20261116/008-video-registered.png",
+        "evidence-failed-ten-rerun-production-20261116/008-video-placed.png",
+        "evidence-failed-ten-rerun-production-20261116/008-audio-registered.png",
+        "evidence-failed-ten-rerun-production-20261116/008-audio-placed.png",
+        "evidence-failed-ten-rerun-production-20261116/008-image-registered.png",
+        "evidence-failed-ten-rerun-production-20261116/008-image-placed.png"
+      ],
+      "legacy_defect_reproduced": true,
+      "defect": {
+        "id": "FWXC-486",
+        "workitem_id": "1f7044b8c2c88b7d275ef4f643",
+        "url": "https://devops.aliyun.com/projex/project/1e401ac99539c3999e00e40006/bug#openWorkitemIdentifier=1f7044b8c2c88b7d275ef4f643",
+        "status": "🤔AI提缺陷",
+        "assigned_to": "牛诗晴",
+        "verified": true,
+        "screenshots": 4,
+        "attachments": 7,
+        "synced_at": "2026-11-13T16:17:30.8090483+08:00",
+        "local_report": "docs/defects/ERYE199-008-asset-registration-undo-production-20261113.md"
+      },
+      "cloud_writes": 0,
+      "fixtures": [
+        {
+          "conversationId": "5bdeb622-9b81-4a10-a031-4ccd34c1d779",
+          "editorId": "d4f5fd72-0965-4e8c-bff3-e31bdb24fc0b",
+          "name": "ERYE199-008-audio-failed-ten-rerun-20261116"
+        },
+        {
+          "conversationId": "d972a183-1854-47e6-b825-f11dee4a38c2",
+          "editorId": "31a9fe51-9e96-44a8-bead-23cd50cc6200",
+          "name": "ERYE199-008-image-failed-ten-rerun-20261116"
+        },
+        {
+          "conversationId": "46bc5a4b-ff4e-4f7d-b3a9-f840306acd4b",
+          "editorId": "c5621297-5040-496b-b728-663e37aae914",
+          "name": "ERYE199-008-video-failed-ten-rerun-20261116"
+        }
+      ]
+    },
+    {
+      "id": "ERYE199-010",
+      "status": "Failed",
+      "actual": "B拖到原视频轨5秒仍新增第二视频轨，A保留0～10秒、B位于新轨5～15秒，未同轨覆盖。",
+      "fixture": {
+        "conversationId": "65040b4a-3531-447e-974f-21be7ca85d67",
+        "editorId": "4c20607b-4fea-4dce-b324-894dcb883fcd",
+        "name": "ERYE199-010-failed-ten-rerun-20261116"
+      },
+      "completed": "2026-11-16T05:57:46.631Z",
+      "errorType": "AssertionError",
+      "automation_status": "AUTO",
+      "automation_integrated": true,
+      "script": "tools/editor/erye199/cases.mjs#010",
+      "raw_actual": "没有覆盖到同一轨道\n\n2 !== 1\n",
+      "latest_execution_report": "results-failed-ten-rerun-production-20261116.md",
+      "latest_execution_batch": "erye199-failed-ten-rerun-20261116",
+      "workspace_id": "e4f36323-55aa-4670-90f3-bc96f7bc52dc",
+      "execution_method": "Ego Lite生产有头；新工程实测；API仅准备/回读；无computer-use",
+      "screenshots": [
+        "evidence-failed-ten-rerun-production-20261116/010-overwrite.png",
+        "evidence-failed-ten-rerun-production-20261116/010-failure.png"
+      ],
+      "legacy_defect_reproduced": true,
+      "defect": {
+        "id": "FWXC-487",
+        "workitem_id": "610e1b8f4457eb703db0293ab1",
+        "url": "https://devops.aliyun.com/projex/project/1e401ac99539c3999e00e40006/bug#openWorkitemIdentifier=610e1b8f4457eb703db0293ab1",
+        "status": "🤔AI提缺陷",
+        "assigned_to": "牛诗晴",
+        "verified": true,
+        "screenshots": 1,
+        "attachments": 4,
+        "synced_at": "2026-11-13T16:17:36.3052025+08:00",
+        "local_report": "docs/defects/ERYE199-010-overwrite-track-production-20261113.md"
+      },
+      "cloud_writes": 0
+    },
+    {
+      "id": "ERYE199-012",
+      "status": "Blocked",
+      "actual": "普通移动B到7秒正确，Delete删除A后B仍7～12秒，原自动前移缺陷未复现；应用明确不支持独立波纹删除空隙，后半步骤未完成，整例Blocked。",
+      "fixture": {
+        "conversationId": "facd97da-45a2-4f9c-83dd-1047ea8d46cc",
+        "editorId": "66074c4c-4647-4816-87ff-54c49a497ad4",
+        "name": "ERYE199-012-failed-ten-rerun-20261116"
+      },
+      "completed": "2026-11-16T05:58:58.365Z",
+      "errorType": "Blocked",
+      "automation_status": "AUTO",
+      "automation_integrated": true,
+      "script": "tools/editor/erye199/cases-011-015.mjs#012",
+      "raw_actual": "普通移动/删除观察已保存；未执行成功独立波纹删除，完整用例未通过",
+      "latest_execution_report": "results-failed-ten-rerun-production-20261116.md",
+      "latest_execution_batch": "erye199-failed-ten-rerun-20261116",
+      "workspace_id": "e4f36323-55aa-4670-90f3-bc96f7bc52dc",
+      "execution_method": "Ego Lite生产有头；新工程实测；API仅准备/回读；无computer-use",
+      "screenshots": [
+        "evidence-failed-ten-rerun-production-20261116/012-after-move.png",
+        "evidence-failed-ten-rerun-production-20261116/012-after-delete.png",
+        "evidence-failed-ten-rerun-production-20261116/012-after-ripple.png",
+        "evidence-failed-ten-rerun-production-20261116/012-ripple-agent-terminal.png"
+      ],
+      "legacy_defect_reproduced": false,
+      "defect": {
+        "id": "FWXC-491",
+        "workitem_id": "759a901c1536c53599d1fd4e74",
+        "url": "https://devops.aliyun.com/projex/project/1e401ac99539c3999e00e40006/bug#openWorkitemIdentifier=759a901c1536c53599d1fd4e74",
+        "status": "🤔AI提缺陷",
+        "assigned_to": "牛诗晴",
+        "verified": true,
+        "screenshots": 2,
+        "attachments": 4,
+        "synced_at": "2026-11-13T16:51:31.4003832+08:00",
+        "local_report": "docs/defects/ERYE199-012-normal-delete-gap-production-20261113.md"
+      },
+      "cloud_writes": 0,
+      "run_id": "run_v2_ecb9df321b934556b74fde0d83aabb31",
+      "partial_checks": {
+        "ordinary_move": "Passed",
+        "ordinary_delete_keep_gap": "Passed",
+        "explicit_ripple_gap_delete": "Unsupported; not completed"
+      }
+    },
+    {
+      "id": "ERYE199-029",
+      "status": "Failed",
+      "actual": "混合文字/Emoji/换行及刷新可见；原生导出报错：编辑器执行数据不符合正式 v2 协议，请保留当前工程并核对服务返回。；未从结果区取得可下载MP4，文件结果未完成核验。",
+      "fixture": {
+        "conversationId": "98f76f5a-0f31-42e3-9c3d-0020ac5cc210",
+        "editorId": "072c440d-1fdb-452f-b607-60919a81f045",
+        "name": "ERYE199-029-failed-ten-rerun-20261116"
+      },
+      "completed": "2026-11-16T06:01:44.646Z",
+      "automation_status": "PLAN",
+      "failed_step": "原生MP4导出",
+      "raw_actual": "混合文字/Emoji/换行及刷新可见；原生导出报错：编辑器执行数据不符合正式 v2 协议，请保留当前工程并核对服务返回。\n重新加载媒体\n×；未从结果区取得可下载MP4，文件结果未完成核验。",
+      "latest_execution_report": "results-failed-ten-rerun-production-20261116.md",
+      "latest_execution_batch": "erye199-failed-ten-rerun-20261116",
+      "workspace_id": "e4f36323-55aa-4670-90f3-bc96f7bc52dc",
+      "execution_method": "Ego Lite生产有头；新工程实测；API仅准备/回读；无computer-use",
+      "screenshots": [
+        "evidence-failed-ten-rerun-production-20261116/029-refreshed.png",
+        "evidence-failed-ten-rerun-production-20261116/029-preview-7.png",
+        "evidence-failed-ten-rerun-production-20261116/029-failure-export.png"
+      ],
+      "legacy_defect_reproduced": true,
+      "defect": {
+        "id": "FWXC-578",
+        "workitem_id": "8997db131fa05bc3a8e6e62ffe",
+        "url": "https://devops.aliyun.com/projex/project/1e401ac99539c3999e00e40006/bug#openWorkitemIdentifier=8997db131fa05bc3a8e6e62ffe",
+        "title": "【生产环境】【ERYE199-029/047/048】编辑器原生导出报协议错误，未交付可下载结果",
+        "status": "🤔AI提缺陷",
+        "assigned_to": "牛诗晴",
+        "verified": true,
+        "screenshots": 3,
+        "attachments": 7,
+        "synced_at": "2026-11-16T12:48:27.6006010+08:00",
+        "local_report": "docs/defects/ERYE199-029-047-048-native-export-protocol-production-20261116.md",
+        "shared": true,
+        "shared_case_ids": [
+          "ERYE199-029",
+          "ERYE199-047",
+          "ERYE199-048"
+        ],
+        "count_scope": "本缺陷共3张截图和7个附件，由3条用例共享；创建计1条。",
+        "case_screenshot": "evidence-current-six-v2-production-20261116/029-failure-export-protocol.png"
+      },
+      "cloud_writes": 0,
+      "script": "",
+      "automation_integrated": false
+    },
+    {
+      "id": "ERYE199-030",
+      "status": "Failed",
+      "actual": "原生MP4导出仍报“编辑器执行数据不符合正式 v2 协议”；组合SRT+ASS/SSA请求本轮done，真实SRT已下载，两条原文/时间与源SRT一致且无样式；未交付ASS/SSA，应用未明确说明支持情况。旧Unknown or missing editor fields本轮未复现，整例因MP4及样式字幕分支未通过。",
+      "fixture": {
+        "conversationId": "f17816fe-07b8-4dd6-89a5-ce3388617011",
+        "editorId": "def848bd-55d3-41b2-accd-9d529a6b589a",
+        "name": "ERYE199-030-failed-ten-rerun-20261116"
+      },
+      "completed": "2026-11-16T06:06:59.402Z",
+      "automation_status": "PLAN",
+      "run_id": "run_v2_9222fb7e0bfc498092e48e72628f9a5e",
+      "partial_checks": {
+        "srt_downloaded": true,
+        "source_srt_match": true,
+        "legacy_combined_request_error_reproduced": false,
+        "mp4_native_export": "Failed: protocol error",
+        "ass_ssa_delivered": false
+      },
+      "uncovered": [
+        "正式MP4文件",
+        "ASS/SSA交付"
+      ],
+      "raw_actual": "原生MP4导出仍报“编辑器执行数据不符合正式 v2 协议”；组合SRT+ASS/SSA请求本轮done，真实SRT已下载，两条原文/时间与源SRT一致且无样式；未交付ASS/SSA，应用未明确说明支持情况。旧Unknown or missing editor fields本轮未复现，整例因MP4及样式字幕分支未通过。",
+      "latest_execution_report": "results-failed-ten-rerun-production-20261116.md",
+      "latest_execution_batch": "erye199-failed-ten-rerun-20261116",
+      "workspace_id": "e4f36323-55aa-4670-90f3-bc96f7bc52dc",
+      "execution_method": "Ego Lite生产有头；新工程实测；API仅准备/回读；无computer-use",
+      "screenshots": [
+        "evidence-failed-ten-rerun-production-20261116/030-preview-2.png",
+        "evidence-failed-ten-rerun-production-20261116/030-failure-export.png",
+        "evidence-failed-ten-rerun-production-20261116/030-agent-terminal.png",
+        "evidence-failed-ten-rerun-production-20261116/030-srt-downloaded.png"
+      ],
+      "legacy_defect_reproduced": false,
+      "defect": {
+        "id": "FWXC-517",
+        "workitem_id": "a8dc2ee87914e60ad64d64254c",
+        "url": "https://devops.aliyun.com/projex/project/1e401ac99539c3999e00e40006/bug#openWorkitemIdentifier=a8dc2ee87914e60ad64d64254c",
+        "title": "【生产环境】【ERYE199-030】组合请求导出SRT及样式字幕时整体失败，报Unknown or missing editor fields",
+        "status": "🤔AI提缺陷",
+        "assigned_to": "牛诗晴",
+        "verified": true,
+        "screenshots": 3,
+        "attachments": 7,
+        "synced_at": "2026-11-13T19:45:26.8343916+08:00",
+        "local_report": "docs/defects/ERYE199-030-combined-subtitle-export-production-20261113.md"
+      },
+      "cloud_writes": 0,
+      "script": "",
+      "automation_integrated": false
+    },
+    {
+      "id": "ERYE199-047",
+      "status": "Failed",
+      "actual": "2秒图片+A、4秒图片、7秒B、9秒仅原片及刷新预览已核对；原生导出报错：编辑器执行数据不符合正式 v2 协议，请保留当前工程并核对服务返回。；未从结果区取得可下载MP4，文件结果未完成核验。",
+      "fixture": {
+        "conversationId": "acd6116e-8c92-43b5-901b-1f3a0d651d38",
+        "editorId": "dc6e2a04-08bc-487e-9025-b6f14d05d4ec",
+        "name": "ERYE199-047-failed-ten-rerun-20261116"
+      },
+      "completed": "2026-11-16T06:03:22.111Z",
+      "automation_status": "PLAN",
+      "failed_step": "原生MP4导出",
+      "raw_actual": "2秒图片+A、4秒图片、7秒B、9秒仅原片及刷新预览已核对；原生导出报错：编辑器执行数据不符合正式 v2 协议，请保留当前工程并核对服务返回。\n重新加载媒体\n×；未从结果区取得可下载MP4，文件结果未完成核验。",
+      "latest_execution_report": "results-failed-ten-rerun-production-20261116.md",
+      "latest_execution_batch": "erye199-failed-ten-rerun-20261116",
+      "workspace_id": "e4f36323-55aa-4670-90f3-bc96f7bc52dc",
+      "execution_method": "Ego Lite生产有头；新工程实测；API仅准备/回读；无computer-use",
+      "screenshots": [
+        "evidence-failed-ten-rerun-production-20261116/047-preview-2.png",
+        "evidence-failed-ten-rerun-production-20261116/047-preview-4.png",
+        "evidence-failed-ten-rerun-production-20261116/047-preview-7.png",
+        "evidence-failed-ten-rerun-production-20261116/047-preview-9.png",
+        "evidence-failed-ten-rerun-production-20261116/047-failure-export.png"
+      ],
+      "legacy_defect_reproduced": true,
+      "defect": {
+        "id": "FWXC-578",
+        "workitem_id": "8997db131fa05bc3a8e6e62ffe",
+        "url": "https://devops.aliyun.com/projex/project/1e401ac99539c3999e00e40006/bug#openWorkitemIdentifier=8997db131fa05bc3a8e6e62ffe",
+        "title": "【生产环境】【ERYE199-029/047/048】编辑器原生导出报协议错误，未交付可下载结果",
+        "status": "🤔AI提缺陷",
+        "assigned_to": "牛诗晴",
+        "verified": true,
+        "screenshots": 3,
+        "attachments": 7,
+        "synced_at": "2026-11-16T12:48:27.6006010+08:00",
+        "local_report": "docs/defects/ERYE199-029-047-048-native-export-protocol-production-20261116.md",
+        "shared": true,
+        "shared_case_ids": [
+          "ERYE199-029",
+          "ERYE199-047",
+          "ERYE199-048"
+        ],
+        "count_scope": "本缺陷共3张截图和7个附件，由3条用例共享；创建计1条。",
+        "case_screenshot": "evidence-current-six-v2-production-20261116/047-failure-export-protocol.png"
+      },
+      "cloud_writes": 0,
+      "script": "",
+      "automation_integrated": false
+    },
+    {
+      "id": "ERYE199-048",
+      "status": "Failed",
+      "actual": "全屏进出及9.17秒→9.17秒位置保持，刷新后原片/10秒时间线正常；原生导出报错：编辑器执行数据不符合正式 v2 协议，请保留当前工程并核对服务返回。；未从结果区取得可下载MP4，文件结果未完成核验。",
+      "fixture": {
+        "conversationId": "037c6d34-b66b-44a2-9d0f-fe11b8e72e6e",
+        "editorId": "f9d30e10-996f-4e04-a4ab-935dbf0ff2ed",
+        "name": "ERYE199-048-failed-ten-rerun-20261116"
+      },
+      "completed": "2026-11-16T06:04:04.008Z",
+      "automation_status": "PLAN",
+      "failed_step": "原生MP4导出",
+      "raw_actual": "全屏进出及9.17秒→9.17秒位置保持，刷新后原片/10秒时间线正常；原生导出报错：编辑器执行数据不符合正式 v2 协议，请保留当前工程并核对服务返回。\n重新加载媒体\n×；未从结果区取得可下载MP4，文件结果未完成核验。",
+      "latest_execution_report": "results-failed-ten-rerun-production-20261116.md",
+      "latest_execution_batch": "erye199-failed-ten-rerun-20261116",
+      "workspace_id": "e4f36323-55aa-4670-90f3-bc96f7bc52dc",
+      "execution_method": "Ego Lite生产有头；新工程实测；API仅准备/回读；无computer-use",
+      "screenshots": [
+        "evidence-failed-ten-rerun-production-20261116/048-fullscreen-two.png",
+        "evidence-failed-ten-rerun-production-20261116/048-fullscreen-eight.png",
+        "evidence-failed-ten-rerun-production-20261116/048-normal-after-fullscreen.png",
+        "evidence-failed-ten-rerun-production-20261116/048-refreshed-eight.png",
+        "evidence-failed-ten-rerun-production-20261116/048-failure-export.png"
+      ],
+      "legacy_defect_reproduced": true,
+      "defect": {
+        "id": "FWXC-578",
+        "workitem_id": "8997db131fa05bc3a8e6e62ffe",
+        "url": "https://devops.aliyun.com/projex/project/1e401ac99539c3999e00e40006/bug#openWorkitemIdentifier=8997db131fa05bc3a8e6e62ffe",
+        "title": "【生产环境】【ERYE199-029/047/048】编辑器原生导出报协议错误，未交付可下载结果",
+        "status": "🤔AI提缺陷",
+        "assigned_to": "牛诗晴",
+        "verified": true,
+        "screenshots": 3,
+        "attachments": 7,
+        "synced_at": "2026-11-16T12:48:27.6006010+08:00",
+        "local_report": "docs/defects/ERYE199-029-047-048-native-export-protocol-production-20261116.md",
+        "shared": true,
+        "shared_case_ids": [
+          "ERYE199-029",
+          "ERYE199-047",
+          "ERYE199-048"
+        ],
+        "count_scope": "本缺陷共3张截图和7个附件，由3条用例共享；创建计1条。",
+        "case_screenshot": "evidence-current-six-v2-production-20261116/048-failure-export-protocol.png"
+      },
+      "cloud_writes": 0,
+      "script": "",
+      "automation_integrated": false
+    },
+    {
+      "id": "ERYE199-064",
+      "status": "Passed",
+      "actual": "字幕A/B加载后正常显示；媒体→工程素材列表成功加载且无504；返回字幕仍为2秒，工程内容保持，原504未复现。",
+      "fixture": {
+        "conversationId": "508c1ce1-a6e8-4e8b-aca0-03455e3a6c3c",
+        "editorId": "5413ad2e-dfee-4399-885f-e9cf2cb600d4",
+        "name": "ERYE199-064-failed-ten-rerun-20261116"
+      },
+      "completed": "2026-11-16T06:00:30.474Z",
+      "automation_status": "AUTO",
+      "automation_integrated": true,
+      "script": "tools/editor/erye199/cases-051-068.mjs#064",
+      "raw_actual": "按最新入口字幕→媒体(工程素材)→字幕切换，字幕A/B及工程素材可见，2秒播放头与源画面未重置，工程未改。",
+      "latest_execution_report": "results-failed-ten-rerun-production-20261116.md",
+      "latest_execution_batch": "erye199-failed-ten-rerun-20261116",
+      "workspace_id": "e4f36323-55aa-4670-90f3-bc96f7bc52dc",
+      "execution_method": "Ego Lite生产有头；新工程实测；API仅准备/回读；无computer-use",
+      "screenshots": [
+        "evidence-failed-ten-rerun-production-20261116/064-captions-at-two.png",
+        "evidence-failed-ten-rerun-production-20261116/064-media-at-two.png",
+        "evidence-failed-ten-rerun-production-20261116/064-returned-captions.png"
+      ],
+      "legacy_defect_reproduced": false,
+      "defect": {
+        "id": "FWXC-577",
+        "workitem_id": "c8a5ca57b2162f6850176c6ff1",
+        "url": "https://devops.aliyun.com/projex/project/1e401ac99539c3999e00e40006/bug#openWorkitemIdentifier=c8a5ca57b2162f6850176c6ff1",
+        "title": "【生产环境】【ERYE199-064】切换“媒体→工程”报504，工程素材列表为空",
+        "status": "🤔AI提缺陷",
+        "assigned_to": "牛诗晴",
+        "verified": true,
+        "screenshots": 3,
+        "attachments": 6,
+        "synced_at": "2026-11-16T11:35:31.7660637+08:00",
+        "local_report": "docs/defects/ERYE199-064-project-media-504-production-20261116.md"
+      },
+      "cloud_writes": 0
+    }
+  ],
+  "counts": {
+    "Passed": 3,
+    "Failed": 6,
+    "Blocked": 1
+  },
+  "overall_counts": {
+    "Passed": 25,
+    "Failed": 6,
+    "Blocked": 1,
+    "Not Applicable": 31,
+    "Not Run": 0
+  },
+  "cloud_writes": 0
+}

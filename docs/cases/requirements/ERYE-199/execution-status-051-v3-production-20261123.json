@@ -1,0 +1,236 @@
+{
+  "date": "2026-11-23",
+  "environment": "production",
+  "stage": "Completed",
+  "counts": {
+    "Failed": 1
+  },
+  "cases": [
+    {
+      "id": "ERYE199-051",
+      "execution_history": [
+        {
+          "archived_on": "2026-11-16",
+          "reason": "31条定义复核前",
+          "id": "ERYE199-051",
+          "completed": "2026-11-13T12:37:21.536Z",
+          "fixture": {
+            "conversationId": "f4d7be06-973c-4b8c-820d-0f9180b63911",
+            "editorId": "0236c288-1aaf-4df0-8d4f-316b8b117f17",
+            "name": "ERYE199-051-2026-11-13T12-29-40-982Z"
+          },
+          "automation": "tools/editor/erye199/cases-051-068.mjs#051",
+          "status": "Not Applicable",
+          "actual": "本轮已检查页面导入accept并提交能力核对；Premiere解析与四级还原报告未声明，未导入PR样本。页面支持CinLink自身工程文档不能代替Premiere导入。",
+          "capability": "Premiere import unavailable",
+          "run_id": "run_v2_b9aebc6cc935454c86431e889673b4a1",
+          "target_steps_executed": false,
+          "screenshots": [
+            "evidence-051-068-production-20261113/051-media-import-controls.png",
+            "evidence-051-068-production-20261113/051-capability-confirmed.png"
+          ],
+          "latest_execution_report": "results-051-068-production-20261113.md",
+          "latest_execution_batch": "2026-11-13T12-29-40-982Z",
+          "workspace_id": "ad06a173-72fb-43cd-b477-3462d41cd2dd",
+          "automation_status": "AUTO",
+          "script": "tools/editor/erye199/cases-051-068.mjs#051",
+          "automation_command": "npm run test:editor:199 -- --base-url https://app.cinlink.ai --cases 051",
+          "execution_method": "Ego Lite有头页面/原生操作；工程接口仅准备回读；无computer-use"
+        },
+        {
+          "reason": "本轮v2执行前定义",
+          "record": {
+            "id": "ERYE199-051",
+            "status": "Not Run",
+            "actual": "当前功能v2定义已更新；本轮未执行、未发送Agent、未生成新截图；原高级目标继续延期。",
+            "definition_revision": 2,
+            "title": "导入受支持媒体新建工程并隔离旧工程",
+            "definition": {
+              "id": "051",
+              "title": "导入受支持媒体新建工程并隔离旧工程",
+              "priority": "P1",
+              "source": "PE16；Requirement + Inferred QA Risk",
+              "basis": "媒体新建工程入口见当前EditorProjectPicker/EditorPanel；媒体导入已由008实测。具体入口是否已发布仍需执行前核对，源代码存在不等于生产通过。",
+              "deferred": "Premiere .prproj解析、四级还原报告及效果/关键帧映射；媒体新建工程不等于工程文档解析。",
+              "pre": [
+                "生产新建测试项目，先准备已有工程PA，仅有10秒视频A/原声；保存名称、2秒画面及时间线基线。",
+                "另备受支持MP4视频B，640×360/30fps/10秒/48kHz，颜色和帧内标记明显不同于A；不得把已渲染PA输出当B。",
+                "执行前确认编辑器工程下拉的工程管理中存在“导入媒体新建工程”；看不到则记前置Blocked，不用聊天加文件的accept冒充该入口。"
+              ],
+              "prompt": "不涉及，页面导入媒体新建工程。",
+              "steps": [
+                "从工程名下拉→工程管理→导入媒体新建工程选择本地B.mp4，等待新工程加载。",
+                "记录新工程PB名称/身份，确认它与PA不同，2秒预览为B独立参考帧，时间线时长10秒且有B原声。",
+                "刷新重开PB，确认仍为B；从工程列表切回PA，核对A的原画面/时间线/原声和保存内容未被覆盖。",
+                "再次选PB，确认两个工程均可分别打开，导入只产生本次明确的新工程，不修改A原文件。"
+              ],
+              "expected": [
+                "受支持视频创建独立PB并可保存重开，画面/音频均来自B；PA和A原片保持原状。",
+                "导入失败应有可理解提示且PA仍可用；不得仅因Composer允许选择json/cinlink而声称工程导入成功。"
+              ],
+              "distinct": "区别001已有工程四对象加载、008素材登记/放入：本例验证从导入入口产生独立新工程及旧工程隔离。"
+            },
+            "definition_updated": "2026-11-16",
+            "automation_status": "PLAN",
+            "automation_integrated": false,
+            "script": "",
+            "automation_command": "",
+            "execution_method": "待执行；045保持人工页面用例；其他新版接入后再执行",
+            "executed_in_latest_scope_batch": false,
+            "target_steps_executed": false,
+            "scope_report": "revision-na31-current-capabilities-20261116.md",
+            "latest_definition_report": "revision-na31-current-capabilities-20261116.md",
+            "historical_execution_report": "results-051-068-production-20261113.md",
+            "historical_execution_record_archive": "revision-na31-original-definitions-20261116.json",
+            "historical_script": "tools/editor/erye199/cases-051-068.mjs#051",
+            "deferred_original_scope": "Premiere .prproj解析、四级还原报告及效果/关键帧映射；媒体新建工程不等于工程文档解析。",
+            "release_scope": "current-function-v2-pending",
+            "defect_link_scope": "原高级需求缺口/旧定义关联，不代表新定义已失败；本次未修改云效"
+          }
+        },
+        {
+          "archived_on": "2026-11-23",
+          "reason": "替换为用户确认的入口显隐范围",
+          "id": "ERYE199-051",
+          "status": "Blocked",
+          "actual": "工程下拉加载完成后没有“工程管理／导入媒体新建工程”入口；PA已准备，B导入及PA/PB隔离未执行，按新版明确前置记Blocked。",
+          "definition_revision": 2,
+          "title": "导入受支持媒体新建工程并隔离旧工程",
+          "definition": {
+            "id": "051",
+            "title": "导入受支持媒体新建工程并隔离旧工程",
+            "priority": "P1",
+            "source": "PE16；Requirement + Inferred QA Risk",
+            "basis": "媒体新建工程入口见当前EditorProjectPicker/EditorPanel；媒体导入已由008实测。具体入口是否已发布仍需执行前核对，源代码存在不等于生产通过。",
+            "deferred": "Premiere .prproj解析、四级还原报告及效果/关键帧映射；媒体新建工程不等于工程文档解析。",
+            "pre": [
+              "生产新建测试项目，先准备已有工程PA，仅有10秒视频A/原声；保存名称、2秒画面及时间线基线。",
+              "另备受支持MP4视频B，640×360/30fps/10秒/48kHz，颜色和帧内标记明显不同于A；不得把已渲染PA输出当B。",
+              "执行前确认编辑器工程下拉的工程管理中存在“导入媒体新建工程”；看不到则记前置Blocked，不用聊天加文件的accept冒充该入口。"
+            ],
+            "prompt": "不涉及，页面导入媒体新建工程。",
+            "steps": [
+              "从工程名下拉→工程管理→导入媒体新建工程选择本地B.mp4，等待新工程加载。",
+              "记录新工程PB名称/身份，确认它与PA不同，2秒预览为B独立参考帧，时间线时长10秒且有B原声。",
+              "刷新重开PB，确认仍为B；从工程列表切回PA，核对A的原画面/时间线/原声和保存内容未被覆盖。",
+              "再次选PB，确认两个工程均可分别打开，导入只产生本次明确的新工程，不修改A原文件。"
+            ],
+            "expected": [
+              "受支持视频创建独立PB并可保存重开，画面/音频均来自B；PA和A原片保持原状。",
+              "导入失败应有可理解提示且PA仍可用；不得仅因Composer允许选择json/cinlink而声称工程导入成功。"
+            ],
+            "distinct": "区别001已有工程四对象加载、008素材登记/放入：本例验证从导入入口产生独立新工程及旧工程隔离。"
+          },
+          "definition_updated": "2026-11-16",
+          "automation_status": "AUTO",
+          "automation_integrated": true,
+          "script": "tools/editor/erye199/cases-current-v2.mjs#051",
+          "automation_command": "npm run test:editor:199 -- --base-url https://app.cinlink.ai --cases 051",
+          "execution_method": "Ego Lite生产有头页面；新建独立项目/工程；无computer-use；045保持人工页面用例",
+          "executed_in_latest_scope_batch": true,
+          "target_steps_executed": false,
+          "scope_report": "revision-na31-current-capabilities-20261116.md",
+          "latest_definition_report": "revision-na31-current-capabilities-20261116.md",
+          "historical_execution_report": "results-051-068-production-20261113.md",
+          "historical_execution_record_archive": "revision-na31-original-definitions-20261116.json",
+          "historical_script": "tools/editor/erye199/cases-051-068.mjs#051",
+          "deferred_original_scope": "Premiere .prproj解析、四级还原报告及效果/关键帧映射；媒体新建工程不等于工程文档解析。",
+          "release_scope": "current-function-v2-executed",
+          "defect_link_scope": "本例仅保留原高级目标/旧定义关联；017/053的当前v2失败已另行同步，见最新同步报告，不改变本例结果",
+          "fixture": {
+            "conversationId": "dd64a502-6776-4b56-a0ad-517a539257d6",
+            "editorId": "d03b1bb3-cc8e-40aa-93b3-2576e2e52a5e",
+            "name": "ERYE199-051-nine-v2-20261116"
+          },
+          "workspace_id": "97ad2219-3ccc-4ee7-a35b-fc4ada15133a",
+          "completed": "2026-11-16T07:06:43.003Z",
+          "latest_execution_report": "results-nine-v2-production-20261116.md",
+          "latest_execution_batch": "nine-v2-20261116",
+          "screenshots": [
+            "evidence-nine-v2-production-20261116/051/v2-baseline.png",
+            "evidence-nine-v2-production-20261116/051/project-dropdown-loaded.png"
+          ]
+        }
+      ],
+      "status": "Failed",
+      "actual": "无视频工程时，工程下拉仅显示「暂无工程」，空态只有「选择媒体」，缺少预期的「新建视频工程」。通过「选择媒体」在同一会话建立视频工程后，入口未显示；刷新重开仍是同一工程，入口继续不显示。",
+      "definition_revision": 3,
+      "title": "新建视频工程入口随当前会话中的视频工程状态显示或隐藏",
+      "definition": {
+        "id": "051",
+        "title": "新建视频工程入口随当前会话中的视频工程状态显示或隐藏",
+        "priority": "P1",
+        "source": "用户2026-11-23明确产品规则",
+        "pre": [
+          "登录待测环境，使用具备视频编辑权限的账号，新建独立测试项目和会话。",
+          "确认同一会话尚无任何视频工程；不发送生成任务，不预先建立空时间轴工程。",
+          "等待页面加载完成，随后在同一会话完成创建前后对照。"
+        ],
+        "prompt": "无 Agent 提示词，使用页面新建视频工程入口。",
+        "steps": [
+          "打开编辑区，等初始加载完成，查看并截图「新建视频工程」入口，确认可点击。",
+          "点击该入口，按页面引导创建一个测试视频工程。如果页面要求选择素材，使用一段短 MP4 作为该工程的素材。",
+          "等待工程加载完成，记录工程名称或标题。回到同一入口原先出现的位置，截图并核对「新建视频工程」已隐藏。",
+          "刷新同一会话并重新打开编辑区，确认仍是已建成的工程，且该入口保持隐藏。"
+        ],
+        "expected": [
+          "没有视频工程时，入口可见可用。",
+          "创建完成后，当前工程可打开，原位置不再显示「新建视频工程」。已有工程中即使未添加素材，也属于已有工程。",
+          "刷新后仍能打开同一工程，入口不重新出现。"
+        ]
+      },
+      "definition_updated": "2026-11-23",
+      "automation_status": "PLAN",
+      "automation_integrated": false,
+      "script": "",
+      "execution_method": "生产环境 Ego Lite 有头，三阶段编辑器页面核验",
+      "executed_in_latest_scope_batch": true,
+      "target_steps_executed": true,
+      "scope_report": "revision-051-video-project-entry-20261123.md",
+      "latest_definition_report": "revision-051-video-project-entry-20261123.md",
+      "historical_execution_report": "results-nine-v2-production-20261116.md",
+      "historical_execution_record_archive": "revision-na31-original-definitions-20261116.json",
+      "deferred_original_scope": "PE16 / AT15（G3）：Premiere .prproj 分析、受控导入与四级还原报告",
+      "release_scope": "current-function-v3-manual",
+      "defect_link_scope": "历史 PE16 跟踪与 v3 入口用例分开",
+      "environment": "production",
+      "completed": "2026-11-23T08:40:00.552Z",
+      "latest_execution_report": "results-051-v3-production-20261123.md",
+      "latest_execution_batch": "erye199-051-v3-production-20261123",
+      "current_failure_cloud_status": "Not submitted",
+      "workspace_id": "c65ba614-d548-44f5-9e75-708c8696662b",
+      "fixture": {
+        "conversationId": "b415728a-1420-411f-b3c2-ff9d86abd371",
+        "editorId": "4c640098-4b2d-4afb-8473-989bc67c8e70",
+        "name": "F20-English-source-with-BGM.mp4"
+      },
+      "checks": [
+        {
+          "stage": "无工程时入口显示",
+          "status": "Failed",
+          "evidence": "01-empty-entry-missing.png",
+          "actual": "工程菜单显示暂无工程，编辑区只有选择媒体，没有新建视频工程入口。"
+        },
+        {
+          "stage": "已有工程后入口隐藏",
+          "status": "Passed",
+          "evidence": "02-created.png",
+          "actual": "通过选择媒体建立工程后检查同一菜单。"
+        },
+        {
+          "stage": "刷新后打开同一工程且入口仍隐藏",
+          "status": "Passed",
+          "evidence": "03-refreshed.png",
+          "actual": "刷新并重新打开同一会话编辑区，核对工程唯一标识和菜单。"
+        }
+      ],
+      "screenshots": [
+        "evidence-051-v3-production-20261123/01-empty-entry-missing.png",
+        "evidence-051-v3-production-20261123/02-created.png",
+        "evidence-051-v3-production-20261123/03-refreshed.png"
+      ],
+      "failure_screenshot": "evidence-051-v3-production-20261123/01-empty-entry-missing.png"
+    }
+  ],
+  "report": "results-051-v3-production-20261123.md"
+}

@@ -1,0 +1,1142 @@
+{
+  "date": "2026-11-13",
+  "requirement": "ERYE-210",
+  "origin": "https://app.cinlink.ai",
+  "counts": {
+    "Passed": 8,
+    "Failed": 1,
+    "Blocked": 0,
+    "Not Applicable": 0,
+    "Not Run": 0
+  },
+  "cases": [
+    {
+      "id": "ERYE210-011",
+      "status": "Passed",
+      "reason": "",
+      "automated": true,
+      "workspaceId": "7f9969af-2e47-43d0-8328-4b9c8e7b03cc",
+      "caseVersion": "v3-current-entry-20261113",
+      "annotations": [
+        {
+          "type": "case-version",
+          "description": "v3-current-entry-20261113"
+        }
+      ],
+      "projects": {
+        "011-PA-EN-ZH": {
+          "cid": "35f6308b-cc03-4eab-aedf-8d13243ef472",
+          "pid": "56bc2bb0-8a94-4020-8564-270014a3126d",
+          "name": "ERYE210-011-PA-EN-ZH-56bc2bb0"
+        },
+        "011-PB-CONTROL": {
+          "cid": "35f6308b-cc03-4eab-aedf-8d13243ef472",
+          "pid": "15139a7d-bb8c-4b82-8c28-dcb6170c8d7e",
+          "name": "ERYE210-011-PB-CONTROL-15139a7d"
+        }
+      },
+      "checks": [
+        {
+          "stage": "agent-completed-background",
+          "runIds": [
+            "run_v2_c825a057d2d448e99a04f8e4f966bdf5"
+          ],
+          "pa": {
+            "cid": "35f6308b-cc03-4eab-aedf-8d13243ef472",
+            "pid": "56bc2bb0-8a94-4020-8564-270014a3126d",
+            "name": "ERYE210-011-PA-EN-ZH-56bc2bb0"
+          },
+          "pb": {
+            "cid": "35f6308b-cc03-4eab-aedf-8d13243ef472",
+            "pid": "15139a7d-bb8c-4b82-8c28-dcb6170c8d7e",
+            "name": "ERYE210-011-PB-CONTROL-15139a7d"
+          },
+          "sourceLanguage": "en",
+          "targetLanguage": "zh",
+          "pbEstablishedAt": 1794574656607,
+          "completed": {
+            "at": 1794574888313,
+            "status": "done"
+          },
+          "violations": [],
+          "pbState": {
+            "name": "ERYE210-011-PB-CONTROL-15139a7d",
+            "module": [
+              "媒体"
+            ],
+            "playhead": "0",
+            "selected": [],
+            "media": [
+              {
+                "paused": true,
+                "duration": 60.495778
+              }
+            ]
+          }
+        },
+        {
+          "stage": "target-language-content",
+          "pid": "56bc2bb0-8a94-4020-8564-270014a3126d",
+          "name": "ERYE210-011-PA-EN-ZH-56bc2bb0",
+          "voiceoverTextCount": 17,
+          "chineseSubtitleFiles": [
+            "file_cloud_udwxvjpof7r7xynotx32dfyt6h"
+          ],
+          "generatedAudioCount": 8,
+          "reachedBy": "explicit-project-picker-and-reopen"
+        },
+        {
+          "stage": "result-entry",
+          "directEntry": false,
+          "artifacts": [
+            {
+              "text": "0:00 / 1:001280 × 720",
+              "buttons": [
+                {
+                  "label": "下载",
+                  "title": "下载",
+                  "text": ""
+                },
+                {
+                  "label": "播放",
+                  "title": null,
+                  "text": ""
+                },
+                {
+                  "label": "放大查看",
+                  "title": "放大查看",
+                  "text": ""
+                }
+              ]
+            }
+          ],
+          "verified": false
+        },
+        {
+          "stage": "v3-explicit-editor-navigation",
+          "passed": true,
+          "entry": "project-picker-then-Voiceover",
+          "directResultShortcutCovered": false,
+          "oldShortcutRequirement": "deferred-not-counted-as-covered"
+        }
+      ],
+      "finishedAt": "2026-11-13T13:01:52.526Z",
+      "actual": "Passed：用户60秒英语原片的独立新工程真实中文配音及双语字幕完成，46次PB/Media观察无抢占/串改；显式工程选择器选择PA后进入Voiceover可见17条中文文稿、8段音频。结果卡快捷直达仍延期，不计覆盖。",
+      "report": "results-completion-nine-prod-20261113.md",
+      "evidence": "evidence-completion-nine-prod-20261113/manifest.json",
+      "sourceBatch": "prod-completion-nine-20261113-02",
+      "screenshots": [
+        "011-011-PA-before-result-reopen.png",
+        "011-011-PA-target-language-before-submit.png",
+        "011-011-PB-after-completed.png",
+        "011-011-PB-established.png",
+        "011-011-real-result-cards.png",
+        "011-011-target-language-result-project.png",
+        "011-ERYE210-011-passed.png"
+      ]
+    },
+    {
+      "id": "ERYE210-016",
+      "status": "Passed",
+      "reason": "",
+      "automated": true,
+      "workspaceId": "f05b1395-1766-4190-8e59-b6fdc4b88dd9",
+      "annotations": [
+        {
+          "type": "coverage",
+          "description": "v2只验证Windows Chrome中图片素材前置缺失→补齐后控件恢复，不依赖mac或未发布样本；不将该场景当作未发布/端侧不支持对照已通过。"
+        }
+      ],
+      "projects": {
+        "016": {
+          "cid": "82c569ed-5625-48f8-8cc5-aa5ef979429f",
+          "pid": "1c6a8340-dc07-49a3-a7b8-f0a531dd9783",
+          "name": "ERYE210-016-1c6a8340"
+        }
+      },
+      "checks": [
+        {
+          "stage": "no-image",
+          "uploadEnabled": true,
+          "widthDisabled": true,
+          "opacityDisabled": true,
+          "instruction": "水印\nAa 文字\n图片\n水印图片\n上传图片\n\nPNG、JPG 或 SVG · 最大 10MB\n\n字号\n160px\n不透明度\n75%\n位置\n右上\n边缘边距\npx\n\n在预览中拖动以调整位置\n\n应用于整个视频",
+          "revision": 1
+        },
+        {
+          "stage": "image-editable",
+          "image": {
+            "width": 120,
+            "file_id": "file_cloud_3f35z6rzcmkprtduwrvioqeopg",
+            "opacity": 0.6,
+            "placement": {
+              "mode": "preset",
+              "preset": "top-right",
+              "position": null,
+              "margin_px": 24
+            },
+            "watermark_id": "a7110d51-e9c7-4eef-ae3b-3493949ecbe8"
+          },
+          "revision": 11
+        },
+        {
+          "stage": "reopened",
+          "projectId": "1c6a8340-dc07-49a3-a7b8-f0a531dd9783",
+          "image": {
+            "width": 120,
+            "file_id": "file_cloud_3f35z6rzcmkprtduwrvioqeopg",
+            "opacity": 0.6,
+            "placement": {
+              "mode": "preset",
+              "preset": "top-right",
+              "position": null,
+              "margin_px": 24
+            },
+            "watermark_id": "a7110d51-e9c7-4eef-ae3b-3493949ecbe8"
+          },
+          "mediaUnchanged": true,
+          "navigationContentUnchanged": true
+        }
+      ],
+      "finishedAt": "2026-11-13T13:07:14.483Z",
+      "actual": "Passed：Windows图片水印空态上传可用、宽度/透明度禁用且有引导；真实PNG上传后设宽120、透明度0.6，切页/收起重开保持，原音视频及字幕未改。",
+      "report": "results-completion-nine-prod-20261113.md",
+      "evidence": "evidence-completion-nine-prod-20261113/manifest.json",
+      "sourceBatch": "prod-completion-nine-20261113-03",
+      "screenshots": [
+        "016-016-v2-after-upload.png",
+        "016-016-v2-before-upload.png",
+        "016-016-v2-reopened.png",
+        "016-ERYE210-016-passed.png"
+      ]
+    },
+    {
+      "id": "ERYE210-017",
+      "status": "Passed",
+      "reason": "",
+      "automated": true,
+      "workspaceId": "f9d120ec-58af-42cf-a415-e4d56078c183",
+      "caseVersion": "v2-client-submit-recovery-20261113",
+      "annotations": [
+        {
+          "type": "case-version",
+          "description": "v2-client-submit-recovery-20261113"
+        }
+      ],
+      "projects": {
+        "017-v2": {
+          "cid": "93d0397b-d373-4dfe-b8d8-57d119c27d3b",
+          "pid": "8515a43c-c55f-4d43-9512-db0fc493a7b8",
+          "name": "ERYE210-017-v2-8515a43c"
+        }
+      },
+      "checks": [
+        {
+          "stage": "client-submit-error",
+          "aborted": 1,
+          "error": "执行请求结果未知，请使用原请求确认，勿重复发起。×",
+          "oldAudioPreserved": true
+        },
+        {
+          "stage": "same-original-generation-live-verification",
+          "project": {
+            "cid": "93d0397b-d373-4dfe-b8d8-57d119c27d3b",
+            "pid": "8515a43c-c55f-4d43-9512-db0fc493a7b8",
+            "name": "ERYE210-017-v2-8515a43c"
+          },
+          "firstText": "欢迎回到CinLink，这是第十七条测试。",
+          "secondText": "这是导航测试。",
+          "oldFirstAudioRemoved": true,
+          "secondAudioPreserved": true,
+          "submittedNewTask": false
+        }
+      ],
+      "finishedAt": "2026-11-13T13:17:31.889Z",
+      "actual": "Passed：本轮新工程原生生成两句旧配音，改首句后旧声保留；单次真实提交断网错误可见，恢复明确生成成功。沿同一已完成结果实时核对首句新文/新声、第二句原文/旧声及无目标旧声叠音，字幕保持。未覆盖服务端已受理后执行失败重试。",
+      "report": "results-completion-nine-prod-20261113.md",
+      "evidence": "evidence-completion-nine-prod-20261113/manifest.json",
+      "sourceBatch": "prod-completion-nine-20261113-05",
+      "screenshots": [
+        "017-017-original-result-live-verified.png",
+        "017-ERYE210-017-passed.png",
+        "017-original-017-pending-old-voice.png",
+        "017-original-017-real-submission-error.png",
+        "017-original-ERYE210-017-failed.png"
+      ],
+      "continuedFromBatch": "prod-completion-nine-20261113-04"
+    },
+    {
+      "id": "ERYE210-019",
+      "status": "Passed",
+      "reason": "",
+      "automated": true,
+      "workspaceId": "78f6e4ce-669b-4fc9-818f-9dbd6ccd8984",
+      "caseVersion": "v3-legal-mixed-delete-20261113",
+      "annotations": [
+        {
+          "type": "case-version",
+          "description": "v3-legal-mixed-delete-20261113"
+        }
+      ],
+      "projects": {
+        "019-v3": {
+          "cid": "9985e36b-2125-4b31-a0fe-c2161f91ec5a",
+          "pid": "44122203-9a70-4962-9ea6-cf4a345ca1ba",
+          "name": "ERYE210-019-v3-44122203"
+        }
+      },
+      "checks": [
+        {
+          "stage": "legal-mixed-delete-undo",
+          "beforeMedia": [
+            {
+              "type": "video",
+              "role": "",
+              "muted": false,
+              "offset": 0,
+              "clips": [
+                {
+                  "file": "file_cloud_wykauk4fh57l2i7cgbkbbspha3",
+                  "start": 0,
+                  "in": 0,
+                  "out": 20,
+                  "rate": 1,
+                  "volume": 1
+                }
+              ]
+            },
+            {
+              "type": "audio",
+              "role": "source",
+              "muted": false,
+              "offset": 0,
+              "clips": [
+                {
+                  "file": "file_cloud_wykauk4fh57l2i7cgbkbbspha3",
+                  "start": 0,
+                  "in": 0,
+                  "out": 20,
+                  "rate": 1,
+                  "volume": 1
+                }
+              ]
+            },
+            {
+              "type": "audio",
+              "role": "background",
+              "muted": false,
+              "offset": 0,
+              "clips": [
+                {
+                  "file": "file_cloud_t425zrk7vp7r5zsxft2twjps6o",
+                  "start": 22,
+                  "in": 0,
+                  "out": 1.3467573696145125,
+                  "rate": 1,
+                  "volume": 1
+                }
+              ]
+            }
+          ],
+          "deletedMedia": [
+            {
+              "type": "video",
+              "role": "",
+              "muted": false,
+              "offset": 0,
+              "clips": [
+                {
+                  "file": "file_cloud_wykauk4fh57l2i7cgbkbbspha3",
+                  "start": 0,
+                  "in": 0,
+                  "out": 20,
+                  "rate": 1,
+                  "volume": 1
+                }
+              ]
+            },
+            {
+              "type": "audio",
+              "role": "source",
+              "muted": false,
+              "offset": 0,
+              "clips": [
+                {
+                  "file": "file_cloud_wykauk4fh57l2i7cgbkbbspha3",
+                  "start": 0,
+                  "in": 0,
+                  "out": 20,
+                  "rate": 1,
+                  "volume": 1
+                }
+              ]
+            }
+          ],
+          "restoredMedia": [
+            {
+              "type": "video",
+              "role": "",
+              "muted": false,
+              "offset": 0,
+              "clips": [
+                {
+                  "file": "file_cloud_wykauk4fh57l2i7cgbkbbspha3",
+                  "start": 0,
+                  "in": 0,
+                  "out": 20,
+                  "rate": 1,
+                  "volume": 1
+                }
+              ]
+            },
+            {
+              "type": "audio",
+              "role": "source",
+              "muted": false,
+              "offset": 0,
+              "clips": [
+                {
+                  "file": "file_cloud_wykauk4fh57l2i7cgbkbbspha3",
+                  "start": 0,
+                  "in": 0,
+                  "out": 20,
+                  "rate": 1,
+                  "volume": 1
+                }
+              ]
+            },
+            {
+              "type": "audio",
+              "role": "background",
+              "muted": false,
+              "offset": 0,
+              "clips": [
+                {
+                  "file": "file_cloud_t425zrk7vp7r5zsxft2twjps6o",
+                  "start": 22,
+                  "in": 0,
+                  "out": 1.3467573696145125,
+                  "rate": 1,
+                  "volume": 1
+                }
+              ]
+            }
+          ],
+          "selectedCount": 2,
+          "restrictedDeleteCovered": false
+        }
+      ],
+      "finishedAt": "2026-11-13T13:04:01.632Z",
+      "actual": "Passed：首条字幕S1和22秒起独立音频A1恰选两个，一次Delete全部移除，其他字幕、原视频和原声未改；一次撤销共同恢复，切五入口及刷新保持。原受限对象拒绝/原子性仍延期。",
+      "report": "results-completion-nine-prod-20261113.md",
+      "evidence": "evidence-completion-nine-prod-20261113/manifest.json",
+      "sourceBatch": "prod-completion-nine-20261113-03",
+      "screenshots": [
+        "019-019-after-delete.png",
+        "019-019-one-undo-restored.png",
+        "019-019-two-legal-targets.png",
+        "019-ERYE210-019-passed.png"
+      ]
+    },
+    {
+      "id": "ERYE210-050",
+      "status": "Passed",
+      "reason": "",
+      "automated": true,
+      "workspaceId": "78f6e4ce-669b-4fc9-818f-9dbd6ccd8984",
+      "caseVersion": "current-global-history-20261113",
+      "annotations": [
+        {
+          "type": "case-version",
+          "description": "current-global-history-20261113"
+        }
+      ],
+      "projects": {
+        "050": {
+          "cid": "b5b091df-ccf6-46df-9bee-545692bb39be",
+          "pid": "caa50e89-0279-4c42-8e6c-335c532e974e",
+          "name": "ERYE210-050-caa50e89"
+        }
+      },
+      "checks": [
+        {
+          "stage": "global-history",
+          "operations": [
+            "caption",
+            "watermark",
+            "undo-watermark",
+            "undo-caption",
+            "redo-caption",
+            "redo-watermark"
+          ],
+          "oldMark": "NAV006",
+          "finalMark": "全局水印050",
+          "mediaUnchanged": true
+        }
+      ],
+      "finishedAt": "2026-11-13T13:05:00.406Z",
+      "actual": "Passed：五入口下工程切换、撤销/重做与Export可达；字幕/文字水印两项已保存修改可跨模块按顺序撤销两次、重做两次，刷新保持且音视频未改。",
+      "report": "results-completion-nine-prod-20261113.md",
+      "evidence": "evidence-completion-nine-prod-20261113/manifest.json",
+      "sourceBatch": "prod-completion-nine-20261113-03",
+      "screenshots": [
+        "050-050-redone-and-reopened.png",
+        "050-050-two-module-edits.png",
+        "050-ERYE210-050-passed.png"
+      ]
+    },
+    {
+      "id": "ERYE210-051",
+      "status": "Failed",
+      "reason": "Failed：在Captions明确请求将本工程唯一独立背景音轨降低6dB，Agent以缺少真实音轨/片段标识为由未安排执行，仅给出手工建议；目标音量仍100%，未达到约50.12%，原素材保持。已保存完整提示词、原回复和实际音量控件截图，未同步云效。",
+      "automated": true,
+      "workspaceId": "05178840-e82b-4c57-87fc-faad022722d5",
+      "caseVersion": "current-agent-background-20261113",
+      "annotations": [
+        {
+          "type": "case-version",
+          "description": "current-agent-background-20261113"
+        }
+      ],
+      "projects": {
+        "051": {
+          "cid": "044e1172-f9d6-4f43-b3c9-d435040c003a",
+          "pid": "76e423f8-d619-4df8-a8a6-d8681e7e37d0",
+          "name": "ERYE210-051-76e423f8"
+        }
+      },
+      "checks": [
+        {
+          "stage": "agent-background-volume",
+          "runId": "run_v2_bca2d05da32c46bf8d1da1a78be3758e",
+          "before": {
+            "role": "background",
+            "type": "audio",
+            "clips": [
+              {
+                "volume": 1,
+                "clip_id": "ebc64223-8932-4540-b935-beba1f52df2e",
+                "file_id": "file_cloud_t425zrk7vp7r5zsxft2twjps6o",
+                "playback_rate": 1,
+                "source_in_sec": 0,
+                "source_out_sec": 1.3467573696145125,
+                "timeline_start_sec": 0
+              }
+            ],
+            "muted": false,
+            "track_id": "5f80a127-2e73-457c-b6eb-2e4a1d4f8217",
+            "offset_sec": 0,
+            "linked_video_track_id": null
+          },
+          "after": {
+            "role": "background",
+            "type": "audio",
+            "clips": [
+              {
+                "volume": 1,
+                "clip_id": "ebc64223-8932-4540-b935-beba1f52df2e",
+                "file_id": "file_cloud_t425zrk7vp7r5zsxft2twjps6o",
+                "playback_rate": 1,
+                "source_in_sec": 0,
+                "source_out_sec": 1.3467573696145125,
+                "timeline_start_sec": 0
+              }
+            ],
+            "muted": false,
+            "track_id": "5f80a127-2e73-457c-b6eb-2e4a1d4f8217",
+            "offset_sec": 0,
+            "linked_video_track_id": null
+          },
+          "status": "done",
+          "view": {
+            "name": "ERYE210-051-76e423f8",
+            "module": [
+              "字幕"
+            ],
+            "playhead": "0",
+            "selected": [],
+            "media": [
+              {
+                "paused": true,
+                "duration": 20
+              }
+            ]
+          }
+        },
+        {
+          "stage": "explicit-volume-location",
+          "ariaValue": "100",
+          "project": {
+            "cid": "044e1172-f9d6-4f43-b3c9-d435040c003a",
+            "pid": "76e423f8-d619-4df8-a8a6-d8681e7e37d0",
+            "name": "ERYE210-051-76e423f8"
+          }
+        }
+      ],
+      "finishedAt": "2026-11-13T13:10:33.556Z",
+      "actual": "Failed：在Captions明确请求将本工程唯一独立背景音轨降低6dB，Agent以缺少真实音轨/片段标识为由未安排执行，仅给出手工建议；目标音量仍100%，未达到约50.12%，原素材保持。已保存完整提示词、原回复和实际音量控件截图，未同步云效。",
+      "report": "results-completion-nine-prod-20261113.md",
+      "evidence": "evidence-completion-nine-prod-20261113/manifest.json",
+      "sourceBatch": "prod-completion-nine-20261113-04",
+      "screenshots": [
+        "051-051-after-agent.png",
+        "051-051-prompt-captions.png",
+        "051-051-real-volume-control.png",
+        "051-ERYE210-051-failed.png",
+        "051-failure-volume100.png"
+      ],
+      "liveVolumeVerification": "evidence-completion-nine-prod-20261113/051-live-volume-verification.json"
+    },
+    {
+      "id": "ERYE210-052",
+      "status": "Passed",
+      "reason": "",
+      "automated": true,
+      "workspaceId": "b6e06db1-f34f-444e-9902-2fce11d8c9ed",
+      "caseVersion": "v2-current-export-20261113",
+      "annotations": [
+        {
+          "type": "case-version",
+          "description": "v2-current-export-20261113"
+        }
+      ],
+      "projects": {
+        "052": {
+          "cid": "705886fd-43c2-4b69-859f-23da35689896",
+          "pid": "0d72fd73-0a31-49b6-a550-8c8d77b05a87",
+          "name": "ERYE210-052-0d72fd73"
+        }
+      },
+      "checks": [
+        {
+          "stage": "cross-module-export",
+          "cleanup": {
+            "count": 2,
+            "before": [
+              {
+                "type": "video",
+                "role": "",
+                "muted": false,
+                "offset": 0,
+                "clips": [
+                  {
+                    "file": "file_cloud_wykauk4fh57l2i7cgbkbbspha3",
+                    "start": 0,
+                    "in": 0,
+                    "out": 20,
+                    "rate": 1,
+                    "volume": 1
+                  }
+                ]
+              },
+              {
+                "type": "audio",
+                "role": "source",
+                "muted": false,
+                "offset": 0,
+                "clips": [
+                  {
+                    "file": "file_cloud_wykauk4fh57l2i7cgbkbbspha3",
+                    "start": 0,
+                    "in": 0,
+                    "out": 20,
+                    "rate": 1,
+                    "volume": 1
+                  }
+                ]
+              },
+              {
+                "type": "audio",
+                "role": "background",
+                "muted": false,
+                "offset": 0,
+                "clips": [
+                  {
+                    "file": "file_cloud_t425zrk7vp7r5zsxft2twjps6o",
+                    "start": 0,
+                    "in": 0,
+                    "out": 1.3467573696145125,
+                    "rate": 1,
+                    "volume": 1
+                  }
+                ]
+              }
+            ],
+            "after": [
+              {
+                "type": "video",
+                "role": "",
+                "muted": false,
+                "offset": 0,
+                "clips": [
+                  {
+                    "file": "file_cloud_wykauk4fh57l2i7cgbkbbspha3",
+                    "start": 0,
+                    "in": 0,
+                    "out": 7.8,
+                    "rate": 1,
+                    "volume": 1
+                  },
+                  {
+                    "file": "file_cloud_wykauk4fh57l2i7cgbkbbspha3",
+                    "start": 7.8,
+                    "in": 8.48,
+                    "out": 17.2,
+                    "rate": 1,
+                    "volume": 1
+                  },
+                  {
+                    "file": "file_cloud_wykauk4fh57l2i7cgbkbbspha3",
+                    "start": 16.52,
+                    "in": 17.824104,
+                    "out": 20,
+                    "rate": 1,
+                    "volume": 1
+                  }
+                ]
+              },
+              {
+                "type": "audio",
+                "role": "source",
+                "muted": false,
+                "offset": 0,
+                "clips": [
+                  {
+                    "file": "file_cloud_wykauk4fh57l2i7cgbkbbspha3",
+                    "start": 0,
+                    "in": 0,
+                    "out": 7.8,
+                    "rate": 1,
+                    "volume": 1
+                  },
+                  {
+                    "file": "file_cloud_wykauk4fh57l2i7cgbkbbspha3",
+                    "start": 7.8,
+                    "in": 8.48,
+                    "out": 17.2,
+                    "rate": 1,
+                    "volume": 1
+                  },
+                  {
+                    "file": "file_cloud_wykauk4fh57l2i7cgbkbbspha3",
+                    "start": 16.52,
+                    "in": 17.824104,
+                    "out": 20,
+                    "rate": 1,
+                    "volume": 1
+                  }
+                ]
+              },
+              {
+                "type": "audio",
+                "role": "background",
+                "muted": false,
+                "offset": 0,
+                "clips": [
+                  {
+                    "file": "file_cloud_t425zrk7vp7r5zsxft2twjps6o",
+                    "start": 0,
+                    "in": 0,
+                    "out": 1.3467573696145125,
+                    "rate": 1,
+                    "volume": 1
+                  }
+                ]
+              }
+            ]
+          },
+          "fileId": "file_cloud_uinxlne6no4cijemcb4ktq25m3",
+          "metadata": {
+            "programs": [],
+            "stream_groups": [],
+            "streams": [
+              {
+                "codec_name": "h264",
+                "codec_type": "video",
+                "width": 1920,
+                "height": 1080
+              },
+              {
+                "codec_name": "aac",
+                "codec_type": "audio"
+              }
+            ],
+            "format": {
+              "duration": "18.700000"
+            }
+          },
+          "markerReviewRequired": true,
+          "currentMarker": "AFTER052",
+          "expectedExportMarker": "BEFORE052"
+        },
+        {
+          "stage": "export-snapshot-visual-review",
+          "reviewer": "Codex visual inspection",
+          "reviewedAt": "2026-11-13T13:16:42.696277+00:00",
+          "frameSha256": "7e733b245cdb1691328c7a6bed92b14b8db863de3bbe10cc8f24c9335cc7133b",
+          "mp4Sha256": "7be43072c4e1208e7ae9aa84179e84b2391cace8e1baf5f1b6557ae4c5e2fda1",
+          "marker": "BEFORE052",
+          "afterMarkerAbsent": true,
+          "visibleCaption": "Efforts to sabotage our healthcare by filing a formal",
+          "postExportCaptionAbsent": true,
+          "note": "实际查看1秒原始导出帧：右上BEFORE052、底部原英语C1；没有AFTER052或导出后新文052。仅此帧/当前用例范围，不替代整片逐帧、听辨或字幕排版专项。"
+        }
+      ],
+      "finishedAt": "2026-11-13T13:17:43.568Z",
+      "actual": "Passed：真实分析2个停顿并应用，20秒变约18.695896秒；原生创建配音、首句改Welcome to CinLink并生成，背景音量50%。一次原导出完成，受理后字幕/水印新编辑保存且重开保持；下载H264/AAC、1920×1080、18.70秒MP4。原始1秒帧为BEFORE052及原英语C1，未混入AFTER052/导出后新文，已按文件/帧哈希完成实际画面审核；未再次导出。",
+      "report": "results-completion-nine-prod-20261113.md",
+      "evidence": "evidence-completion-nine-prod-20261113/manifest.json",
+      "sourceBatch": "prod-completion-nine-20261113-05",
+      "screenshots": [
+        "052-052-export-result-current-edit.png",
+        "052-ERYE210-052-passed.png",
+        "052-original-052-background-half.png",
+        "052-original-052-cleaned.png",
+        "052-original-052-edited-after-export-accepted.png",
+        "052-original-052-export-frozen-frame.png",
+        "052-original-052-export-result-current-edit.png",
+        "052-original-052-voice-ready.png",
+        "052-original-ERYE210-052-blocked.png"
+      ],
+      "continuedFromBatch": "prod-completion-nine-20261113-04"
+    },
+    {
+      "id": "ERYE210-053",
+      "status": "Passed",
+      "reason": "",
+      "automated": true,
+      "workspaceId": "78f6e4ce-669b-4fc9-818f-9dbd6ccd8984",
+      "caseVersion": "v2-windows-keyboard-20261113",
+      "annotations": [
+        {
+          "type": "case-version",
+          "description": "v2-windows-keyboard-20261113"
+        }
+      ],
+      "projects": {
+        "053": {
+          "cid": "d191ece5-b86d-4285-919b-c6c5555c403c",
+          "pid": "8d2be883-2fbe-41af-9581-a99d311140a2",
+          "name": "ERYE210-053-8d2be883"
+        }
+      },
+      "checks": [
+        {
+          "stage": "windows-narrow-keyboard",
+          "size": {
+            "width": 1024,
+            "height": 768
+          },
+          "modules": [
+            "媒体",
+            "文稿",
+            "字幕",
+            "配音",
+            "水印"
+          ],
+          "exportFocused": true,
+          "macCovered": false
+        },
+        {
+          "stage": "windows-narrow-keyboard",
+          "size": {
+            "width": 1280,
+            "height": 900
+          },
+          "modules": [
+            "媒体",
+            "文稿",
+            "字幕",
+            "配音",
+            "水印"
+          ],
+          "exportFocused": true,
+          "macCovered": false
+        }
+      ],
+      "finishedAt": "2026-11-13T13:05:25.333Z",
+      "actual": "Passed：1024×768及1280×900下五入口Tab/Enter实际可达、面板正确，Export可见可聚焦；恢复原视口后工程及完整内容保持。仅Windows及实测尺寸，不外推mac或未冻结断点。",
+      "report": "results-completion-nine-prod-20261113.md",
+      "evidence": "evidence-completion-nine-prod-20261113/manifest.json",
+      "sourceBatch": "prod-completion-nine-20261113-03",
+      "screenshots": [
+        "053-053-1024-keyboard.png",
+        "053-053-1280-keyboard.png",
+        "053-053-original-size-restored.png",
+        "053-ERYE210-053-passed.png"
+      ]
+    },
+    {
+      "id": "ERYE210-054",
+      "status": "Passed",
+      "reason": "",
+      "automated": true,
+      "workspaceId": "b6e06db1-f34f-444e-9902-2fce11d8c9ed",
+      "caseVersion": "current-explicit-bilingual-20261113",
+      "annotations": [
+        {
+          "type": "case-version",
+          "description": "current-explicit-bilingual-20261113"
+        }
+      ],
+      "projects": {
+        "054": {
+          "cid": "e8272850-188e-4a68-b685-b4c1a41ee496",
+          "pid": "b0a5ae85-6448-4c76-a5b7-5cf05eec3499",
+          "name": "ERYE210-054-b0a5ae85"
+        }
+      },
+      "checks": [
+        {
+          "stage": "explicit-bilingual-kept",
+          "sourceFile": "file_cloud_d665zc6otky5w3upjfrs5hueau",
+          "targetFile": "file_cloud_udwxvjpof7r7xynotx32dfyt6h",
+          "editedText": "双语独立编辑054",
+          "englishUnchanged": true,
+          "audioUnchanged": true,
+          "firstTranslationDefaultsCovered": false
+        }
+      ],
+      "finishedAt": "2026-11-13T13:20:54.331Z",
+      "actual": "Passed：原场景明确中英双显并保存，五入口切换保持；仅C1中文改双语独立编辑054，等待页面已同步后刷新并选回中文通道，文字保持，英语轨及音视频未改。不覆盖首次译制默认。",
+      "report": "results-completion-nine-prod-20261113.md",
+      "evidence": "evidence-completion-nine-prod-20261113/manifest.json",
+      "sourceBatch": "prod-completion-nine-20261113-06",
+      "screenshots": [
+        "054-054-Chinese-edit-saved.png",
+        "054-054-explicit-bilingual.png",
+        "054-054-independent-edit-reopened.png",
+        "054-ERYE210-054-passed.png"
+      ],
+      "continuedFromBatch": "prod-completion-nine-20261113-04"
+    }
+  ],
+  "screenshotSources": [
+    {
+      "file": "011-011-PA-before-result-reopen.png",
+      "source": "reports/editor-210/prod-completion-nine-20261113-02/011/011-PA-before-result-reopen.png",
+      "sha256": "349d1333883501077349e2b10e18e58b1f551e1f515aef006432f16efe4c3aee"
+    },
+    {
+      "file": "011-011-PA-target-language-before-submit.png",
+      "source": "reports/editor-210/prod-completion-nine-20261113-02/011/011-PA-target-language-before-submit.png",
+      "sha256": "377e1a44689f6406bd5308ab45f9d74f957a440c8031ef9a371d87649f7f1304"
+    },
+    {
+      "file": "011-011-PB-after-completed.png",
+      "source": "reports/editor-210/prod-completion-nine-20261113-02/011/011-PB-after-completed.png",
+      "sha256": "07efdd69a7dead3a7a21b70b1e03ad8f69c886deca327594e93cd9b459dcf628"
+    },
+    {
+      "file": "011-011-PB-established.png",
+      "source": "reports/editor-210/prod-completion-nine-20261113-02/011/011-PB-established.png",
+      "sha256": "feffed10906f927cbb36f344b156a26f7165d57af1aaaa5f9c31d8496478bd0a"
+    },
+    {
+      "file": "011-011-real-result-cards.png",
+      "source": "reports/editor-210/prod-completion-nine-20261113-02/011/011-real-result-cards.png",
+      "sha256": "ad602b8c0cb56115dee305934874673542cc142539d5e31bfd99be1a34d4c747"
+    },
+    {
+      "file": "011-011-target-language-result-project.png",
+      "source": "reports/editor-210/prod-completion-nine-20261113-02/011/011-target-language-result-project.png",
+      "sha256": "c33985b02dc50f7d99747453d3b83642756146bc3822021c2f4507f460ce4ce7"
+    },
+    {
+      "file": "011-ERYE210-011-passed.png",
+      "source": "reports/editor-210/prod-completion-nine-20261113-02/011/ERYE210-011-passed.png",
+      "sha256": "c33985b02dc50f7d99747453d3b83642756146bc3822021c2f4507f460ce4ce7"
+    },
+    {
+      "file": "016-016-v2-after-upload.png",
+      "source": "reports/editor-210/prod-completion-nine-20261113-03/016/016-v2-after-upload.png",
+      "sha256": "3fc349c02b5443c90246f235073729f89e34c85d0f56f6fa7f27e5667571565b"
+    },
+    {
+      "file": "016-016-v2-before-upload.png",
+      "source": "reports/editor-210/prod-completion-nine-20261113-03/016/016-v2-before-upload.png",
+      "sha256": "74dfc20c02e64c59cb8789ae3186257e6248d4995d0b582a10fcf0859a333f95"
+    },
+    {
+      "file": "016-016-v2-reopened.png",
+      "source": "reports/editor-210/prod-completion-nine-20261113-03/016/016-v2-reopened.png",
+      "sha256": "22a9f1f514aa12e8568bba6304bf473d4527835a9ccf63fb86919397b29ada7d"
+    },
+    {
+      "file": "016-ERYE210-016-passed.png",
+      "source": "reports/editor-210/prod-completion-nine-20261113-03/016/ERYE210-016-passed.png",
+      "sha256": "bf330750d42f98746cb473d04a2b16a118cb0752ec005fe1f8c0a26eec0a4b49"
+    },
+    {
+      "file": "017-017-original-result-live-verified.png",
+      "source": "reports/editor-210/prod-completion-nine-20261113-05/017/017-original-result-live-verified.png",
+      "sha256": "4e9dcb359ac452bf1f4187103d5e0c54717ff65748c0183042e84cae727304c2"
+    },
+    {
+      "file": "017-ERYE210-017-passed.png",
+      "source": "reports/editor-210/prod-completion-nine-20261113-05/017/ERYE210-017-passed.png",
+      "sha256": "4127c73afe5931a31b420302fe672493f606ef78da3aa68ef1a8bd98384e90a1"
+    },
+    {
+      "file": "017-original-017-pending-old-voice.png",
+      "source": "reports/editor-210/prod-completion-nine-20261113-04/017/017-pending-old-voice.png",
+      "sha256": "ceb6179ba5110222f0654164bb5fd2e74aa938b683d9082d98beec0440d61b41"
+    },
+    {
+      "file": "017-original-017-real-submission-error.png",
+      "source": "reports/editor-210/prod-completion-nine-20261113-04/017/017-real-submission-error.png",
+      "sha256": "650dfcfc6ecf27b947a7e814f22d0ade74ca6e8d0f09ee6a240d3e308ab51fb5"
+    },
+    {
+      "file": "017-original-ERYE210-017-failed.png",
+      "source": "reports/editor-210/prod-completion-nine-20261113-04/017/ERYE210-017-failed.png",
+      "sha256": "30e376e64a23ec277d41fcdb005b49eef25c5c07f6bd499d23e529a75d0828df"
+    },
+    {
+      "file": "019-019-after-delete.png",
+      "source": "reports/editor-210/prod-completion-nine-20261113-03/019/019-after-delete.png",
+      "sha256": "06ec8fddff21af15b9c034c6c8b6f47f99b0e8833b023e4fb228f9c69efba190"
+    },
+    {
+      "file": "019-019-one-undo-restored.png",
+      "source": "reports/editor-210/prod-completion-nine-20261113-03/019/019-one-undo-restored.png",
+      "sha256": "418554bca0a5fce9152965c5342c6140fd2227e580c422a3107b41e4e5bd6f9d"
+    },
+    {
+      "file": "019-019-two-legal-targets.png",
+      "source": "reports/editor-210/prod-completion-nine-20261113-03/019/019-two-legal-targets.png",
+      "sha256": "8648926bf4ea1e0a31a30f16127bb1f11a859434a4e5e6d0ba85e222be3e9cac"
+    },
+    {
+      "file": "019-ERYE210-019-passed.png",
+      "source": "reports/editor-210/prod-completion-nine-20261113-03/019/ERYE210-019-passed.png",
+      "sha256": "34583d10c4e412a3f33f3f75708f8bed266d5f22ef41482a1b44521d865225eb"
+    },
+    {
+      "file": "050-050-redone-and-reopened.png",
+      "source": "reports/editor-210/prod-completion-nine-20261113-03/050/050-redone-and-reopened.png",
+      "sha256": "9e4c678873b1871ec3111c94985ee9859ed2dfd7d1c716a86cc72eed758ece8b"
+    },
+    {
+      "file": "050-050-two-module-edits.png",
+      "source": "reports/editor-210/prod-completion-nine-20261113-03/050/050-two-module-edits.png",
+      "sha256": "c379c63e17738a36a32dc0c46866a20698209be9ec4fc2afe9cc9f95e5754988"
+    },
+    {
+      "file": "050-ERYE210-050-passed.png",
+      "source": "reports/editor-210/prod-completion-nine-20261113-03/050/ERYE210-050-passed.png",
+      "sha256": "2c7a49c7df6a3af29e44b6cbaf08561a656896473b685e8790f68f27645d11a2"
+    },
+    {
+      "file": "051-051-after-agent.png",
+      "source": "reports/editor-210/prod-completion-nine-20261113-04/051/051-after-agent.png",
+      "sha256": "020bf7d3ce0f9fd5b6db85829695000e876d0d8b798e9a207e21c164a82aadb0"
+    },
+    {
+      "file": "051-051-prompt-captions.png",
+      "source": "reports/editor-210/prod-completion-nine-20261113-04/051/051-prompt-captions.png",
+      "sha256": "d168f91b89106026a403f8ceab4ba63ef2c16cb68e3148f08add1b6f4ab4dd84"
+    },
+    {
+      "file": "051-051-real-volume-control.png",
+      "source": "reports/editor-210/prod-completion-nine-20261113-04/051/051-real-volume-control.png",
+      "sha256": "48f58c8916ceda229396659d2a443994dfbda230f59a88d01eed251cc1f516d0"
+    },
+    {
+      "file": "051-ERYE210-051-failed.png",
+      "source": "reports/editor-210/prod-completion-nine-20261113-04/051/ERYE210-051-failed.png",
+      "sha256": "0451a5e4c6a9c698f882d8efef2c067c422cf726ab7826a77245e5493c8983cd"
+    },
+    {
+      "file": "052-052-export-result-current-edit.png",
+      "source": "reports/editor-210/prod-completion-nine-20261113-05/052/052-export-result-current-edit.png",
+      "sha256": "34e0060a89f269b87b8961589e8e7670a16646dfa8b3fd8bf3404e30749ce765"
+    },
+    {
+      "file": "052-ERYE210-052-passed.png",
+      "source": "reports/editor-210/prod-completion-nine-20261113-05/052/ERYE210-052-passed.png",
+      "sha256": "67877d68b86c02beba1e354782d4b3acda8cce318ab287742b3971d2e5abd89f"
+    },
+    {
+      "file": "052-original-052-background-half.png",
+      "source": "reports/editor-210/prod-completion-nine-20261113-04/052/052-background-half.png",
+      "sha256": "02c49fd57008c23f5d7b2a893b21ba2ce0047c7470d13fea59a1aab3220d18b4"
+    },
+    {
+      "file": "052-original-052-cleaned.png",
+      "source": "reports/editor-210/prod-completion-nine-20261113-04/052/052-cleaned.png",
+      "sha256": "4c8e7b3ead9fb8a5b4c8a571e58a46e169cb7292d6369267d1e3c4ceda2eb2a0"
+    },
+    {
+      "file": "052-original-052-edited-after-export-accepted.png",
+      "source": "reports/editor-210/prod-completion-nine-20261113-04/052/052-edited-after-export-accepted.png",
+      "sha256": "1e9175294d67e6aefc63b3bca96095a5bbac33b43f2c915b35c8cc6c146ef396"
+    },
+    {
+      "file": "052-original-052-export-frozen-frame.png",
+      "source": "reports/editor-210/prod-completion-nine-20261113-04/052/052-export-frozen-frame.png",
+      "sha256": "7e733b245cdb1691328c7a6bed92b14b8db863de3bbe10cc8f24c9335cc7133b"
+    },
+    {
+      "file": "052-original-052-export-result-current-edit.png",
+      "source": "reports/editor-210/prod-completion-nine-20261113-04/052/052-export-result-current-edit.png",
+      "sha256": "ae749d655cca00de8b57252751e049f866da204d0cc6887ca6a4035db5683adb"
+    },
+    {
+      "file": "052-original-052-voice-ready.png",
+      "source": "reports/editor-210/prod-completion-nine-20261113-04/052/052-voice-ready.png",
+      "sha256": "4bb4da6f7cd99ba4317270fe75da76c287ce80e84bfb04020f41a2a20d956a8b"
+    },
+    {
+      "file": "052-original-ERYE210-052-blocked.png",
+      "source": "reports/editor-210/prod-completion-nine-20261113-04/052/ERYE210-052-blocked.png",
+      "sha256": "b88b686822705d2fa0e493ab4aaf191a064bff513cb70fac2e0dffbcd2badc74"
+    },
+    {
+      "file": "053-053-1024-keyboard.png",
+      "source": "reports/editor-210/prod-completion-nine-20261113-03/053/053-1024-keyboard.png",
+      "sha256": "bd6fe428d0efadcea369d3b41ce876e022819be7e3dc9b525837ee2fec609ece"
+    },
+    {
+      "file": "053-053-1280-keyboard.png",
+      "source": "reports/editor-210/prod-completion-nine-20261113-03/053/053-1280-keyboard.png",
+      "sha256": "04e22eef0d07aface5a1ce6a2add07cb2951aa1899b2bc60091d7f731691e287"
+    },
+    {
+      "file": "053-053-original-size-restored.png",
+      "source": "reports/editor-210/prod-completion-nine-20261113-03/053/053-original-size-restored.png",
+      "sha256": "05c661a53fd1e0842baaac0f3576f4eee06effad16b26f6a56c7885260f64145"
+    },
+    {
+      "file": "053-ERYE210-053-passed.png",
+      "source": "reports/editor-210/prod-completion-nine-20261113-03/053/ERYE210-053-passed.png",
+      "sha256": "8f2ac0175e60e1d2beea06da96b37071828fe4a6cfba20652c7fe847bea8ae1c"
+    },
+    {
+      "file": "054-054-Chinese-edit-saved.png",
+      "source": "reports/editor-210/prod-completion-nine-20261113-06/054/054-Chinese-edit-saved.png",
+      "sha256": "928b25ab6789651fcd125ba33282815e0a71340b3bc1ec9c3dbe910b7443fd0f"
+    },
+    {
+      "file": "054-054-explicit-bilingual.png",
+      "source": "reports/editor-210/prod-completion-nine-20261113-06/054/054-explicit-bilingual.png",
+      "sha256": "f773497849297d13fcc943b73d15e6f92d4ad95e0402f58e69a3541266186c6c"
+    },
+    {
+      "file": "054-054-independent-edit-reopened.png",
+      "source": "reports/editor-210/prod-completion-nine-20261113-06/054/054-independent-edit-reopened.png",
+      "sha256": "9febdc6843b4bae962b19cf5605e3f3099df0fcb6a2c433b16b42e397121a9bd"
+    },
+    {
+      "file": "054-ERYE210-054-passed.png",
+      "source": "reports/editor-210/prod-completion-nine-20261113-06/054/ERYE210-054-passed.png",
+      "sha256": "67f21ca64d52d22a83cfe440da1c019aeb51bd6b9719a487e4ed1b6f97ff1036"
+    },
+    {
+      "file": "051-failure-volume100.png",
+      "source": "reports/editor-210/prod-completion-nine-20261113-04/051/051-failure-volume100.png",
+      "sha256": "fe72c3bb51fa99a965c5124136da56c0bdbfb3394da4e945600a1cf16d6305ac"
+    }
+  ],
+  "notes": "原受理任务不重发；017/052及054沿原场景完成后续核验，准备和断言修正日志保留；未写云效。"
+}

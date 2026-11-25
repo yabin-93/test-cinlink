@@ -1,0 +1,82 @@
+{
+  "case": "ERYE199-030",
+  "method": "official OpenAPI via tools/yunxiao",
+  "created": 1,
+  "deduplication": false,
+  "defect": {
+    "id": "FWXC-517",
+    "workitem_id": "a8dc2ee87914e60ad64d64254c",
+    "url": "https://devops.aliyun.com/projex/project/1e401ac99539c3999e00e40006/bug#openWorkitemIdentifier=a8dc2ee87914e60ad64d64254c",
+    "title": "【生产环境】【ERYE199-030】组合请求导出SRT及样式字幕时整体失败，报Unknown or missing editor fields",
+    "status": "🤔AI提缺陷",
+    "assigned_to": "牛诗晴",
+    "verified": true,
+    "screenshots": 3,
+    "attachments": 7,
+    "synced_at": "2026-11-13T19:45:26.8343916+08:00",
+    "local_report": "docs/defects/ERYE199-030-combined-subtitle-export-production-20261113.md"
+  },
+  "images": [
+    {
+      "path": "styled-preview.png",
+      "caption": "前置：同一新工程已保存黄色24号字幕，A1～3秒、B6～8秒。",
+      "sha256": "7d0716716354b0668c6a4e12410857972cb4123b25e7f231ed096bcc7fbd9cca"
+    },
+    {
+      "path": "srt-result-observation.png",
+      "caption": "组合请求失败：任务卡显示“渲染视频”和Unknown or missing editor fields；尚未交付字幕。",
+      "sha256": "390df7457aa38308a879225295b85b33f3966bef0b6531686444dc090d89e84d"
+    },
+    {
+      "path": "srt-download-outcome.png",
+      "caption": "补充对照：后续仅SRT请求完成并出现真实SRT文件卡；不覆盖前轮失败。",
+      "sha256": "8539152a4208b338de11981cf89ab717e976be0facb71e6a3b957c7952a45329"
+    }
+  ],
+  "attachment_receipts": [
+    {
+      "name": "styled-preview.png",
+      "sha256": "7d0716716354b0668c6a4e12410857972cb4123b25e7f231ed096bcc7fbd9cca",
+      "id": "ef8e592fb3ce36f1c1f55ec822",
+      "size": 255634
+    },
+    {
+      "name": "srt-result-observation.png",
+      "sha256": "390df7457aa38308a879225295b85b33f3966bef0b6531686444dc090d89e84d",
+      "id": "2b8ed1b214381c456da7e269d8",
+      "size": 381995
+    },
+    {
+      "name": "srt-download-outcome.png",
+      "sha256": "8539152a4208b338de11981cf89ab717e976be0facb71e6a3b957c7952a45329",
+      "id": "a80cbf6e4000e6cc65d02a9dd9",
+      "size": 360361
+    },
+    {
+      "name": "ERYE199-video.mp4",
+      "sha256": "e432370eb6cda0797076d6091622f2f7e0acd94cef690f1679c1a01f2349aba9",
+      "id": "711c2b0ca19550415a40f9a4c0",
+      "size": 2975172
+    },
+    {
+      "name": "source-en.srt",
+      "sha256": "400520109dcfe73580281d5b9cfea4d4c666e1c5c4c73a37371e3fcdfc5a2009",
+      "id": "15e04db7d8b2db876113004c6f",
+      "size": 109
+    },
+    {
+      "name": "exported-source.srt",
+      "sha256": "53a4068ad57334d4420507a0113e239f375fcc42413abf594ab207df221a3188",
+      "id": "8d72f2ed53d2e8070c341f934b",
+      "size": 112
+    },
+    {
+      "name": "evidence.json",
+      "sha256": "70587e4dfc4ba63c495b1d8731285dc1166851abb793719452805b337461f7ef",
+      "id": "bd6343b5041278f75edbd18929",
+      "size": 22365
+    }
+  ],
+  "execution_status": "Failed",
+  "automation_status": "PLAN"
+}

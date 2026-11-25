@@ -1,5 +1,9 @@
+<!-- GIT-MERGE-SYNC-20261125 -->
+2026-11-25按用户要求同步最新代码：本地更新已先提交，合并远程main新增两提交；保留远程编辑器自动化、199有效142条/210有效56条及其预期/来源/脚本映射，保留本地196的165条设计和最新执行/缺陷记录。8处文档冲突已解决；远程完整设计历史及旧入口另行归档，统一入口仅保留导航。628条用例结构0问题、TypeScript检查通过、git diff检查通过。离线130项中125通过；5项真实媒体测试因本机缺少ffmpeg（ENOENT）未通过，未改阈值或跳过后冒称全绿。凭据与签名链接扫描未发现匹配；local.env、认证状态、原始reports及渲染缓存不提交。
+<!-- /GIT-MERGE-SYNC-20261125 -->
+
 <!-- ERYE196-011165-RUN-20261125 -->
-2026-11-25 Chrome生产ERYE196-011～165已记录1/155，{"Passed": 1}；阶段git_sync_after_011_recorded，其余按检查点继续。固定脚本PLAN；U2分支按既有指示暂缓。本轮结果见[执行报告](cases/requirements/ERYE-196/results-011-165-chrome-prod-20261125.md)，无云效/Git写入。
+2026-11-25 Chrome生产ERYE196-011～165已记录2/155，{"Passed": 2}；阶段013_subtitle_preparation，其余按检查点继续。固定脚本PLAN；U2分支按既有指示暂缓。本轮结果见[执行报告](cases/requirements/ERYE-196/results-011-165-chrome-prod-20261125.md)，无云效/Git写入。
 <!-- /ERYE196-011165-RUN-20261125 -->
 
 <!-- ERYE196-010-CLOUD-SYNC-20261125 -->
@@ -11,7 +15,7 @@
 <!-- /ERYE196-008-CLOUD-SYNC-20261125 -->
 
 <!-- ERYE237-CURRENT-PROD-20261125 -->
-2026-11-25当前生产ego有头TaskSpace61执行中：{"Passed":42,"Not Run":61,"Failed":4,"Merged Reference":13,"Blocked":2}；109独立、13合并索引不重复计数。按每例主分支分别记录，未跑不继承历史结论，PLAN保持。[本轮执行](cases/requirements/ERYE-237/results-current-ego-prod-20261125.md)。
+2026-11-25当前生产ego有头TaskSpace61执行中：{"Passed":44,"Not Run":59,"Failed":4,"Merged Reference":13,"Blocked":2}；109独立、13合并索引不重复计数。按每例主分支分别记录，未跑不继承历史结论，PLAN保持。[本轮执行](cases/requirements/ERYE-237/results-current-ego-prod-20261125.md)。
 <!-- /ERYE237-CURRENT-PROD-20261125 -->
 
 <!-- ERYE196-001010-RUN-20261125 -->
@@ -213,6 +217,624 @@ LF-37～73共37条已精简为V3，三项正文长度减少约28.5%；完整提�
 <!-- SSO-NIGHTLY-20261124 -->
 2026-11-24生产SSO执行前Blocked：27例129轮计划，0提交。只读确认38仍user-owned；旧017 R2终态未回读，尚待已告知的明确恢复指示。原片SHA/参数及完整解码重新核验，未验证登录、未接管或新开绕过；不重复通知。[本日报告](design-cases/multi-workflow/sso-nightly-prod-results-20261124.md)。无云效/README/Git写入。
 <!-- /SSO-NIGHTLY-20261124 -->
+
+<!-- ERYE199-051-V4-CORRECTION-20261123 -->
+2026-11-23：ERYE199-051 v4 创建前的入口预期修正为「选择媒体」。原生产证据覆盖空态显示、选取媒体建成工程及刷新后入口不再显示，按新版预期复核为 Passed。当前 142 条有效用例为 47 Passed、20 Failed、1 Blocked、21 Not Applicable、53 Not Run。 [复核记录](cases/requirements/ERYE-199/revision-051-select-media-20261123.md)
+<!-- /ERYE199-051-V4-CORRECTION-20261123 -->
+
+<!-- ERYE199-051-V3-EXEC-20261123 -->
+2026-11-23：ERYE199-051 v3 生产实测 Failed。空白会话缺少「新建视频工程」入口，通过「选择媒体」建成工程后和刷新后两项均符合预期。当前 142 条有效用例为 46 Passed、21 Failed、1 Blocked、21 Not Applicable、53 Not Run。 [报告和截图](cases/requirements/ERYE-199/results-051-v3-production-20261123.md)
+<!-- /ERYE199-051-V3-EXEC-20261123 -->
+
+<!-- ERYE199-051-V3-20261123 -->
+2026-11-23：ERYE199-051 v3 验证创建前显示「新建视频工程」、创建后隐藏。现为手工待执行，v2 阻塞留历史。当前 142 条为 46 Passed、20 Failed、1 Blocked、21 Not Applicable、54 Not Run。 [修订说明](cases/requirements/ERYE-199/revision-051-video-project-entry-20261123.md)
+<!-- /ERYE199-051-V3-20261123 -->
+
+2026-11-19：[FWXC-719](https://devops.aliyun.com/projex/project/1e401ac99539c3999e00e40006/bug#openWorkitemIdentifier=88b4c5c5123a367fccd6eab8e5) 与 [FWXC-700](https://devops.aliyun.com/projex/project/1e401ac99539c3999e00e40006/bug#openWorkitemIdentifier=2bcaf2fdf68499e36c6bb14d74) 的触发条件及结果一致，用户确认按重复关闭，云效回读为“已关闭”。094-T2 仍为 Failed，后续跟踪 FWXC-700。
+
+<!-- ERYE199-091095-YUNXIAO-20261119 -->
+2026-11-19：ERYE199-091～095 的 29 个失败变体已按四种现象同步 [FWXC-717](https://devops.aliyun.com/projex/project/1e401ac99539c3999e00e40006/bug#openWorkitemIdentifier=dfda496f8e8460955bf5f689d1)、[FWXC-718](https://devops.aliyun.com/projex/project/1e401ac99539c3999e00e40006/bug#openWorkitemIdentifier=556390519ca90daa318f72da8e)、[FWXC-719](https://devops.aliyun.com/projex/project/1e401ac99539c3999e00e40006/bug#openWorkitemIdentifier=88b4c5c5123a367fccd6eab8e5)、[FWXC-720](https://devops.aliyun.com/projex/project/1e401ac99539c3999e00e40006/bug#openWorkitemIdentifier=fb6bb1e99bf92b757634788d1c)。36 张原始截图已上传并嵌入，48 个附件及正文回读通过。五例保持 Failed，当前 142 条为 46 Passed / 20 Failed / 2 Blocked / 21 Not Applicable / 53 Not Run。 [同步明细](cases/requirements/ERYE-199/defects-091-095-production-20261119.md)。
+<!-- /ERYE199-091095-YUNXIAO-20261119 -->
+
+<!-- ERYE199-NATIVE-AUDIO-090095-20261119 -->
+2026-11-19：ERYE199-090～095生产实跑1 Passed / 5 Failed；31变体2 Passed / 29 Failed，6条AUTO。当前142条46 Passed / 20 Failed / 2 Blocked / 21 Not Applicable / 53 Not Run；其他136条和既有云效关联保持，090原通过记录保留历史。失败截图已保存，测试结束后已同步云效。 [本轮报告](cases/requirements/ERYE-199/results-090-095-production-20261119.md)。
+<!-- /ERYE199-NATIVE-AUDIO-090095-20261119 -->
+
+<!-- ERYE199-086087-YUNXIAO-20261119 -->
+2026-11-19：ERYE199-086六个跨视频轨失败变体合并为[FWXC-702](https://devops.aliyun.com/projex/project/1e401ac99539c3999e00e40006/bug#openWorkitemIdentifier=8a33feece92eb1599144ce85b9)，087两个独立音频分割失败变体合并为[FWXC-703](https://devops.aliyun.com/projex/project/1e401ac99539c3999e00e40006/bug#openWorkitemIdentifier=4141c1deac59c5f123ee27bfb4)。13张原始截图已上传并嵌入，19附件及正文回读通过；两例保持Failed，088～090仍Passed。当前142条46P/15F/2B/21NA/58NR不变，其他140条及既有缺陷关联保持；本次未重跑或修改历史云效缺陷。 [同步明细](cases/requirements/ERYE-199/defects-086-087-production-20261119.md)。已有完成检查点，后续核对不重复创建。
+<!-- /ERYE199-086087-YUNXIAO-20261119 -->
+
+<!-- ERYE199-AUDIO-CROSS-086090-20261119 -->
+2026-11-19：ERYE199-086～090生产实跑2 Failed / 3 Passed；18个变体10 Passed / 8 Failed，5条接入AUTO。当前142条46 Passed / 15 Failed / 2 Blocked / 21 Not Applicable / 58 Not Run；其他137条及既有云效关联保持。失败及关键步骤截图已保存，后续086/087已同步FWXC-702/FWXC-703。 [本轮报告](cases/requirements/ERYE-199/results-086-090-production-20261119.md)。
+<!-- /ERYE199-AUDIO-CROSS-086090-20261119 -->
+
+<!-- ERYE199-081083084085-YUNXIAO-20261119 -->
+2026-11-19：ERYE199-081、083、084、085按相同业务问题合并2条，已同步[FWXC-699](https://devops.aliyun.com/projex/project/1e401ac99539c3999e00e40006/bug#openWorkitemIdentifier=5358262d15393bcd3c20790044)、[FWXC-700](https://devops.aliyun.com/projex/project/1e401ac99539c3999e00e40006/bug#openWorkitemIdentifier=2bcaf2fdf68499e36c6bb14d74)。原声误联动24个变体共用FWXC-699，083-T2额外英文字幕轨关联FWXC-700；31张原始截图已上传并嵌入，38附件及正文回读通过。四例保持Failed，082保持Passed；当前142条43P/13F/2B/21NA/63NR不变，其他138条及既有缺陷关联保持。本次未重跑、未修改旧云效缺陷。 [同步明细](cases/requirements/ERYE-199/defects-081-083-085-production-20261119.md)。本批已有完成检查点，后续只核对，不重复创建。
+<!-- /ERYE199-081083084085-YUNXIAO-20261119 -->
+
+<!-- ERYE199-TIMELINE-081085-EXEC-20261118 -->
+2026-11-18～19：ERYE199-081～085生产实跑4 Failed / 1 Passed，5条接入AUTO；按35个原生轮次/卡片操作变体逐项记录，结果25 Failed / 10 Passed。当前142条43 Passed / 13 Failed / 2 Blocked / 21 Not Applicable / 63 Not Run；其他137条和071/FWXC-693、078/FWXC-694保持。失败截图已保存，后续已同步FWXC-699/FWXC-700。以下旧统计按日期保留历史。 [本轮报告](cases/requirements/ERYE-199/results-081-085-production-20261118.md)。
+<!-- /ERYE199-TIMELINE-081085-EXEC-20261118 -->
+
+<!-- ERYE199-078-YUNXIAO-20261118 -->
+ERYE199-078已同步[FWXC-694](https://devops.aliyun.com/projex/project/1e401ac99539c3999e00e40006/bug#openWorkitemIdentifier=c6fcf26c6c51304682eec70a9b)：同会话切换后多出前轮英文字幕轨，第2/3轮实际4/6轨、预期3/5轨。4张提交参数及失败原图已上传并嵌入，另附原片、精简证据，共6附件及正文回读通过。状态🤔AI提缺陷，牛诗晴，生产环境，中/3-一般。用例保持Failed；当前142条42P/9F/2B/21NA/68NR不变。本次仅同步既有失败，未重跑。 [同步明细](cases/requirements/ERYE-199/defects-078-production-20261118.md)。本批检查点已完成，后续仅回查，不重复创建。
+<!-- /ERYE199-078-YUNXIAO-20261118 -->
+
+<!-- ERYE199-COMBINATIONS-076080-EXEC-20261118 -->
+2026-11-18：ERYE199-076～080生产实跑4 Passed / 1 Failed，5条接入AUTO；当前142条42 Passed / 9 Failed / 2 Blocked / 21 Not Applicable / 68 Not Run。078同会话切换后字幕轨多出：S1实际4轨、T2实际6轨；原片及历史工程身份保持，失败截图与本地缺陷已保存，后续已同步FWXC-694。079的D流程通过，已知FWXC-693译文显示问题另列未修复。其他137条及原云效关联保持。以下旧统计按日期保留历史。 [本轮报告](cases/requirements/ERYE-199/results-076-080-production-20261118.md)。
+<!-- /ERYE199-COMBINATIONS-076080-EXEC-20261118 -->
+
+<!-- ERYE199-071-YUNXIAO-20261118 -->
+ERYE199-071已同步[FWXC-693](https://devops.aliyun.com/projex/project/1e401ac99539c3999e00e40006/bug#openWorkitemIdentifier=ff5598f33938a383abd2f7590c)：译文模式编辑器仍显示双语，与中文成片不一致。3张页面原图及2张实际文件抽帧已上传并嵌入，另附原片、成片及精简证据，共8附件回读通过。状态🤔AI提缺陷，牛诗晴，生产环境，中/3-一般。用例保持Failed；当前142条38P/8F/2B/21NA/73NR不变。本次仅同步既有失败，未重跑。 [同步明细](cases/requirements/ERYE-199/defects-071-production-20261118.md)。本批已有完成检查点，后续只读回查，不能再次新建。
+<!-- /ERYE199-071-YUNXIAO-20261118 -->
+
+<!-- ERYE199-CARDS-069075-EXEC-20261118 -->
+2026-11-18最新：ERYE199-069～075生产原生卡片已实跑6 Passed / 1 Failed，7条接入AUTO。071译文模式在编辑器仍显示双语，实际成片仅中文；已存原图和本地缺陷，后续已同步FWXC-693。074清理44.744秒、075高光30秒与本轮原片区间对应。当前142条：38 Passed / 8 Failed / 2 Blocked / 21 Not Applicable / 73 Not Run；其他135条及云效关联保持。以下旧统计按日期保留历史。
+
+[本轮逐例结果、截图与复现](cases/requirements/ERYE-199/results-069-075-production-20261118.md)。仅页面业务和实际文件验收；无computer-use、云效写入或Git推送。
+<!-- /ERYE199-CARDS-069075-EXEC-20261118 -->
+
+<!-- ERYE199-EXTRA-COVERAGE-20261118 -->
+2026-11-18最新：按用户要求追加ERYE199-117～148共32条，完整定义在[主文档第十六章](cases/requirements/ERYE-199/cases.md#erye199-editor-existing-feature-gaps)。现行142条：32 Passed / 7 Failed / 2 Blocked / 21 Not Applicable / 80 Not Run。原110条定义及结果保持，新增32条PLAN、未执行；无新增脚本/浏览器执行/生成/导出/云效写入。用户确认：V/B删除、复制、剪切粘贴也双向联动；同类型占用位置新建同类型轨、不覆盖，首尾相接另验；其他轨不自动加入关联。旧010覆盖预期及失败保留历史，不能代跑当前138～141，执行旧010前需单独修订脚本。统一入口只写定义/导航，不写执行结果；以下110条/48NR统计为追加前历史。
+<!-- /ERYE199-EXTRA-COVERAGE-20261118 -->
+
+<!-- ERYE199-MULTITRACK-MERGE-20261118 -->
+2026-11-18最新：用户明确要求将多轨用例补充到ERYE-199，已将原ECMT-001～048正式续编为ERYE199-069～116，完整定义并入[主文档第十五章](cases/requirements/ERYE-199/cases.md#erye199-card-multitrack)。当前110条：32 Passed / 7 Failed / 2 Blocked / 21 Not Applicable / 48 Not Run。新增48条PLAN、未执行，原62条结果/证据/缺陷关联保持。旧ECMT目录只作跳转、不重复登记和计数；本次无浏览器用例执行、生成/导出或云效写入。视频/BGM双向联动，其他轨保持的最新确认规则不变。以下“48条独立专项、正式仍62条”为归并前历史。
+<!-- /ERYE199-MULTITRACK-MERGE-20261118 -->
+
+<!-- ECMT-DESIGN-20261118 -->
+2026-11-18：新增[ECMT-001～048卡片入口与多轨组合用例](design-cases/multi-workflow/editor-card-multitrack-cases.md)，48条定义均Not Run、自动化PLAN。覆盖三轨/五轨模式、译配五轨加独立音频的六类组合，各视频/音频角色分割、平移、左右裁剪及跨同类型轨。用户确认仅视频/BGM双向联动，字幕/原声/译声/独立音频保持原位置。本次仅有只读页面入口和控件观察，未运行新用例或生成/导出任务；历史双语工程的额外字幕行差异单列，不判新例通过。正式ERYE-199的62条及既有统计不变。详见[设计说明](design-cases/multi-workflow/editor-card-multitrack-design-notes-20261118.md)。
+<!-- /ECMT-DESIGN-20261118 -->
+
+<!-- ERYE199-008-SCOPE-CORRECTION-20261118 -->
+2026-11-18：ERYE199-008已按用户要求移除素材登记后必须可撤销的预期及自动化分支；保留三类素材登记/放入分离、对应轨道放入与撤销放入。基于2026-11-16原始观察校正Passed，本次未重跑；旧Failed、日志和截图保留。FWXC-486已改为“不是问题”，原正文、7附件及截图引用保留并回读。当前62条：32 Passed / 7 Failed / 2 Blocked / 21 Not Applicable / 0 Not Run，其他61条不变。 [校正说明](cases/requirements/ERYE-199/revision-008-registration-scope-20261118.md)。后续008只按v2执行，不恢复登记撤销断言；统一入口不写执行结果。
+<!-- /ERYE199-008-SCOPE-CORRECTION-20261118 -->
+
+<!-- ICP-EC-YUNXIAO-SYNC-20261117 -->
+2026-11-17：ICP电商原文既有实测已同步7条云效缺陷FWXC-625～631；15张失败原图已上传、嵌入，45附件及正文/字段回读通过，均🤔AI提缺陷、牛诗晴、生产环境。测试结果未变：5整例Failed、19轮已执行、6轮缺前置；Case01素材/首稿缺口及未触发假设不当产品缺陷。本次未重跑。 [同步清单](design-cases/icp-workflows/defect-sync-production-20261117.md)。检查点均已完成，后续只读回查，不重建。
+<!-- /ICP-EC-YUNXIAO-SYNC-20261117 -->
+
+<!-- ERYE199-014056-YUNXIAO-063-RETIRED-20261116 -->
+ERYE199-014 → [FWXC-595](https://devops.aliyun.com/projex/project/1e401ac99539c3999e00e40006/bug#openWorkitemIdentifier=da802459f8a291e0c713adde60)；ERYE199-056 → [FWXC-596](https://devops.aliyun.com/projex/project/1e401ac99539c3999e00e40006/bug#openWorkitemIdentifier=5345dc4d3fcf3d04cf27456949)。3张2026-11-13历史实测原图已上传并嵌入，8附件及正文/字段/图片引用回读通过；状态🤔AI提缺陷，牛诗晴，生产环境，中/3-一般。两例仍Not Applicable；063已按用户要求删除，编号不复用，历史证据保留。当前有效62条：31P/8F/2B/21NA/0NR。本次未重跑、不改旧缺陷，其他60条结果及原8失败云效关联保持；后续只核对本批检查点，不重建。 [同步明细](cases/requirements/ERYE-199/defects-unimplemented-014-056-production-20261116.md)。
+<!-- /ERYE199-014056-YUNXIAO-063-RETIRED-20261116 -->
+
+<!-- ERYE199-063-RETIRED-20261116 -->
+063已按用户要求删除，编号不复用，历史证据保留；默认及直接执行器均排除。当前有效62条：**31 Passed / 8 Failed / 2 Blocked / 21 Not Applicable / 0 Not Run**；051～068当前14条。其余业务结果保持，014/056仍不适用，未重跑；后续云效补提独立记录。[退役说明](cases/requirements/ERYE-199/retired-case-063-20261116.md)。以下63条/22NA仅历史。
+<!-- /ERYE199-063-RETIRED-20261116 -->
+
+<!-- ERYE210-014-V2-20261116 -->
+ERYE210-014 v2（水印开关/跨TAB控件限制及内容恢复）已在本例独立新项目、会话、工程的生产有头Chrome实跑Passed；OFF限制、五TAB保持、ON恢复、文字修改切页与刷新保持、图片及原音视频/字幕不串改全部通过。原真实只读身份浏览/权限拒绝保持待覆盖，旧Blocked定义和记录保留。当前56有效/0退役：50 Passed / 6 Failed / 0 Blocked / 0 Not Applicable / 0 Not Run；其他55条及云效关联保持。56个唯一AUTO入口，旧014门禁不再注册。本轮无产品失败，调试断言修正前截图单列历史；未生成/导出、未写云效或推送Git。 [014本轮报告](cases/requirements/ERYE-210/results-014-v2-production-20261116.md)。原“014保留阻塞”由本次明确替换授权更新，原权限覆盖仍待环境。
+<!-- /ERYE210-014-V2-20261116 -->
+
+<!-- ERYE199-017053-V2-YUNXIAO-20261116 -->
+ERYE199-017 → [FWXC-590](https://devops.aliyun.com/projex/project/1e401ac99539c3999e00e40006/bug#openWorkitemIdentifier=df4df4dc44a01c0fa27b75c627)；ERYE199-053 → [FWXC-591](https://devops.aliyun.com/projex/project/1e401ac99539c3999e00e40006/bug#openWorkitemIdentifier=cf695e0a8ad4e178279e339726)。6张本轮原图已上传并嵌入，13附件及正文/字段/图片引用回读通过；状态🤔AI提缺陷，牛诗晴，生产环境。017高/2-严重，053中/3-一般。两例仍Failed，当前63条31P/8F/2B/22NA/0NR，当前8条失败均已有云效关联。本次仅同步既有失败，未重跑；旧FWXC-510子序列缺口保留历史，未改旧缺陷状态。 [同步明细](cases/requirements/ERYE-199/defects-017-053-v2-production-20261116.md)。本批已完成，后续只核对检查点，不重新新建。
+<!-- /ERYE199-017053-V2-YUNXIAO-20261116 -->
+
+<!-- ERYE210-018020-YUNXIAO-20261116 -->
+ERYE210-018 → [FWXC-588](https://devops.aliyun.com/projex/project/1e401ac99539c3999e00e40006/bug#openWorkitemIdentifier=6b9e807ea6785e241aae941423)；ERYE210-020 → [FWXC-589](https://devops.aliyun.com/projex/project/1e401ac99539c3999e00e40006/bug#openWorkitemIdentifier=0dd1f5d0d3ba1d48a798f75a03)。6张本轮原图已上传并嵌入，12附件及正文/字段/图片引用回读通过；状态🤔AI提缺陷，牛诗晴，生产环境。018高/2-严重，020中/3-一般。两例仍Failed，当前56条49P/6F/1B；旧FWXC-506/507及其他54条结果保持。本次仅同步既有失败，未重跑产品。 [同步明细](cases/requirements/ERYE-210/defects-018-020-restored-production-20261116.md)。
+<!-- /ERYE210-018020-YUNXIAO-20261116 -->
+
+<!-- ERYE199-NINE-V2-EXEC-20261116 -->
+ERYE-199九条v2生产实跑：6 Passed / 2 Failed / 1 Blocked / 0 Not Applicable / 0 Not Run。当前有效63条：**31 Passed / 8 Failed / 2 Blocked / 22 Not Applicable / 0 Not Run**。017裁A连带B及其原声从5秒前移3秒，空隙闭合，刷新保持错误；053空SRT静默写入持久空轨，非法时码拒绝和原字幕合法编辑恢复通过，整例Failed；051生产下拉无工程管理/导入媒体新建工程，目标导入未执行而Blocked。每例新项目/会话/工程，共9组，5个Agent请求各一次、无补槽表单/受理重发。8条新版接入cases-current-v2.mjs且默认覆盖旧探测，045仍按021～050人工例外PLAN。所有截图和混音证据留本地；原高级目标/22NA/旧6失败/012阻塞保持，云效未写入。原017/020功能未实现缺陷只属旧高级目标，不代表本轮017失败已提云效；新017/053待同步。
+
+[九条逐例结果及原图](cases/requirements/ERYE-199/results-nine-v2-production-20261116.md) · [当前进度](cases/requirements/ERYE-199/execution-status-current.md)。下方旧批次统计仅历史。
+<!-- /ERYE199-NINE-V2-EXEC-20261116 -->
+
+<!-- ERYE210-RESTORED5-20261116 -->
+当前56条有效、0退役：49 Passed / 6 Failed / 1 Blocked / 0 Not Applicable / 0 Not Run。本轮最后5条：3 Passed / 2 Failed / 0 Blocked / 0 Not Applicable / 0 Not Run。004/018/020分别新建原生翻译配音项目，初次积分不足仅保留历史；用户调积分后在新批次补跑，实际结果逐例记录。原51条及007/FWXC-585、015/FWXC-586、047/FWXC-579、049/FWXC-580关联保持。 [完整定义](cases/requirements/ERYE-210/case-restored-final-five-production-20261116.md) · [执行/截图](cases/requirements/ERYE-210/results-restored-final-five-production-20261116.md)。本轮未云效写入、未推送Git。
+<!-- /ERYE210-RESTORED5-20261116 -->
+
+<!-- ERYE210-007015-YUNXIAO-20261116 -->
+ERYE210-007 → [FWXC-585](https://devops.aliyun.com/projex/project/1e401ac99539c3999e00e40006/bug#openWorkitemIdentifier=b16072b80de8184ee47ca7bb12)；ERYE210-015 → [FWXC-586](https://devops.aliyun.com/projex/project/1e401ac99539c3999e00e40006/bug#openWorkitemIdentifier=d5da04deb674cf55972715cfb1)。6张本轮原图已上传/嵌入，12附件及正文/字段/图片引用回读通过；状态🤔AI提缺陷，牛诗晴，生产环境。007中/3-一般，015低/4-轻微。两例仍Failed，当前51条46P/4F/1B；原FWXC-488/493及其余关联保持。本次仅同步既有失败，未重跑产品。 [同步明细](cases/requirements/ERYE-210/defects-007-015-restored-production-20261116.md)。
+<!-- /ERYE210-007015-YUNXIAO-20261116 -->
+
+<!-- ERYE199-NA31-REVISION-20261116 -->
+ERYE-199当前有效63条：**25 Passed / 6 Failed / 1 Blocked / 22 Not Applicable / 9 Not Run**。原31不适用已逐条复核：011/013/017/020/045/051/052/053/055改当前功能v2、Not Run；另22条保留明确原因和恢复前置/步骤/预期，063属于旧设计目标。仅改定义，未执行浏览器/Agent、未新截图或云效写入；旧25P/6F/1B保持，原高级目标、历史结果、缺陷关联保留。9条新版PLAN且旧脚本门禁，045继续暂不接自动化；不能用旧能力探测或历史日志替代新定义执行。Composer附件接受JSON不构成工程解析支持证据，051只验实际媒体新建工程入口、执行时先核实生产可用。以下历史31NA/0NR由本块取代。
+
+[逐条定义与范围](cases/requirements/ERYE-199/revision-na31-current-capabilities-20261116.md) · [当前进度](cases/requirements/ERYE-199/execution-status-current.md)。
+<!-- /ERYE199-NA31-REVISION-20261116 -->
+
+<!-- ERYE210-RESTORED8-20261116 -->
+当前有效51条：46 Passed / 4 Failed / 1 Blocked / 0 Not Applicable / 0 Not Run；仍退役5条（004/005/018/020/041）。本轮8条：6 Passed / 2 Failed / 0 Blocked / 0 Not Applicable / 0 Not Run。014原Blocked及047/FWXC-579、049/FWXC-580原Failed保持，其他43条未重跑。 [完整用例](cases/requirements/ERYE-210/case-restored-eight-production-20261116.md) · [执行及原图](cases/requirements/ERYE-210/results-restored-eight-production-20261116.md)。本轮未云效写入、未推送Git。
+<!-- /ERYE210-RESTORED8-20261116 -->
+
+<!-- ERYE199-FAILED10-RERUN-20261116 -->
+## ERYE-199原10失败复测完成（2026-11-16）
+
+10条新工程复测3P/6F/1B：002分割点1.001秒刷新保持、007第二片段选择/媒体面板恢复、064工程素材无504均Passed；008登记独立撤销缺失、010覆盖仍新增轨、029/047/048原生导出协议错误继续Failed；030组合字幕旧字段错误未复现，真实SRT下载比对通过，但MP4协议错误和ASS/SSA未交付令整例Failed。012普通移动/删除留空通过，原删除自动前移未复现，独立波纹删除明确不支持，整例Blocked。
+
+当前63条25P/6F/1B/31NA/0NR；31不适用仍跳过，0未执行不等于所有高级需求通过。002/007/008/010/012/064继续AUTO，029/030/047/048仍PLAN；遇异步字幕及面板操作问题从同一新工程继续，未将脚本问题判产品失败、未重发已受理任务。已有8个云效缺陷关联保留，本轮未新建/上传/改状态；030与012原缺陷未复现的局部结果另写明，不以整例状态冒充旧缺陷仍复现。失败截图与新回归原图已本地归档，TaskSpace正常结束。
+
+[逐例步骤/实际提示词/新截图](cases/requirements/ERYE-199/results-failed-ten-rerun-production-20261116.md) · [当前进度](cases/requirements/ERYE-199/execution-status-current.md)。以下章节为历史时点。
+<!-- /ERYE199-FAILED10-RERUN-20261116 -->
+
+<!-- ERYE210-046048-V3-20261116 -->
+当前43条：**40 Passed / 2 Failed / 1 Blocked / 0 Not Applicable / 0 Not Run**。046/048 v3生产Chrome实跑2 Passed；014保持原Blocked，047/FWXC-579与049/FWXC-580保持Failed和云效关联。旧二次分析、配音稿修改/单句再生成仍延期，其他41条未重跑。 [完整定义](cases/requirements/ERYE-210/case-046-048-v3-current-controls-20261116.md) · [执行及截图](cases/requirements/ERYE-210/results-046-048-v3-production-20261116.md)。
+<!-- /ERYE210-046048-V3-20261116 -->
+
+<!-- ERYE199-006-V2-20261116 -->
+## ERYE199-006当前功能v2生产通过（2026-11-16）
+
+用户要求未实现部分先跳过，006已原位优化并通过原仓库自动化函数在生产Ego有头新工程实跑Passed。真实Agent一次完成中心序列像素(400,200)、50%缩放、顺时针30度，无补槽/重发。普通画布896×504与全屏1509.33×849中，画面中心均(400,200)、未旋转尺寸320×180、角度约30°、旋转边界367.128×315.885；源2秒帧、刷新及播放通过，原片/源范围/10秒时间线/关联原声未改。7张原始核验截图已归档，无本轮失败截图。
+
+独立蒙版、局部锚点及输入局部坐标跳过，原完整定义/旧Blocked另存归档，不计新版覆盖。当前63条22P/10F/0B/31NA/0NR；006 AUTO，原10条失败与云效关联保持，未云效写入、未重跑其他用例。脚本/用例/registry/当前状态/meta已同步；12项离线检查通过，526条用例格式0问题，无新依赖。
+
+[完整用例](cases/requirements/ERYE-199/cases.md#erye199-006-current) · [本轮完整指令/步骤/原图](cases/requirements/ERYE-199/results-006-v2-current-transform-production-20261116.md) · [当前状态](cases/requirements/ERYE-199/execution-status-current.md)。以下计数及006 Blocked为各历史时点。
+<!-- /ERYE199-006-V2-20261116 -->
+
+<!-- ERYE210-047049-YUNXIAO-20261116 -->
+## ERYE210-047/049缺陷已同步云效（2026-11-16）
+
+ERYE210-047 → [FWXC-579](https://devops.aliyun.com/projex/project/1e401ac99539c3999e00e40006/bug#openWorkitemIdentifier=d4687bf3633ef6956037e3a63c)；ERYE210-049 → [FWXC-580](https://devops.aliyun.com/projex/project/1e401ac99539c3999e00e40006/bug#openWorkitemIdentifier=d07993186a112f50ec9926b266)。官方OpenAPI分别新建，5张本轮原图已上传并嵌入，共11附件，正文/字段/附件/图片引用回读核验通过。状态🤔AI提缺陷，负责人牛诗晴，生产环境，高/2-严重。
+
+本次仅同步既有失败，不重跑、不重发配音或导出。047/049仍Failed；014/046/048及其他结果保持，当前43条38P/2F/3B/0NA/0NR。准备错误和未执行分支不报缺陷。
+
+[同步说明与本地缺陷](cases/requirements/ERYE-210/defects-047-049-production-20261116.md) · [当前进度](cases/requirements/ERYE-210/execution-status-current.md)。
+<!-- /ERYE210-047049-YUNXIAO-20261116 -->
+
+<!-- ERYE199-EXPORT-COMBINED-YUNXIAO-20261116 -->
+## ERYE199-029/047/048相同导出失败已合并云效（2026-11-16）
+
+按用户最新要求仅新建1条[FWXC-578｜编辑器原生导出报协议错误，未交付可下载结果](https://devops.aliyun.com/projex/project/1e401ac99539c3999e00e40006/bug#openWorkitemIdentifier=8997db131fa05bc3a8e6e62ffe)，三条用例共享关联。状态🤔AI提缺陷、负责人牛诗晴、生产环境。三个场景各自失败原图均上传嵌入，另附原片、两份SRT及脱敏摘要，共7附件；正文、字段、附件及图片引用回读核验通过。创建和附件按共享缺陷计一次，未查询历史去重，未重复创建。
+
+本次仅同步既有实测证据，未重测。三例仍Failed/PLAN；当前63条21P/10F/1B/31NA/0NR不变，10条失败均已有关联。原高级能力缺口FWXC-525及其他既有缺陷保持。以下较早执行记录中的“仅本地/未同步”是同步前时点。
+
+[同步记录](cases/requirements/ERYE-199/defects-029-047-048-native-export-production-20261116.md) · [完整缺陷](defects/ERYE199-029-047-048-native-export-protocol-production-20261116.md) · [当前状态](cases/requirements/ERYE-199/execution-status-current.md)。
+<!-- /ERYE199-EXPORT-COMBINED-YUNXIAO-20261116 -->
+
+<!-- ERYE199-CURRENT-SIX-V2-20261116 -->
+## ERYE199六条当前功能v2执行完成（2026-11-16）
+
+生产Ego有头新建专用项目，6条3P/3F：028双语字号、034三个倍率、042片段音量及实际混合声音通过；029混合文字导出、047四类对象导出、048全屏后导出均出现“编辑器执行数据不符合正式 v2 协议，请保留当前工程并核对服务返回。”，未取得可下载MP4，正式文件分支未完成。对应失败原图和局部通过证据已归档；048全屏进出及8.16秒进度保持通过，不等同整例通过。034三次均无补槽，未重发已受理任务；其余无需提示词。
+
+当前有效63条21P/10F/1B/31NA/0NR；仅006 Blocked。新失败029/047/048仅本地，未云效写入；原7失败及原高级能力缺口FWXC-525保持，525不代替本轮新失败提交。用户原021～049暂不自动化授权继续有效，6条仍PLAN，未新增仓库脚本或依赖。其他用例未重跑，原Not Run及更早结果保留历史。
+
+[逐例前置/完整提示词/步骤/原图](cases/requirements/ERYE-199/results-current-six-v2-production-20261116.md) · [当前进度](cases/requirements/ERYE-199/execution-status-current.md) · [本地导出问题](defects/ERYE199-029-047-048-native-export-protocol-production-20261116.md)。
+<!-- /ERYE199-CURRENT-SIX-V2-20261116 -->
+
+<!-- ERYE199-064-YUNXIAO-20261116 -->
+## ERYE199-064缺陷已同步云效（2026-11-16）
+
+已通过官方OpenAPI新建[FWXC-577｜媒体→工程报504](https://devops.aliyun.com/projex/project/1e401ac99539c3999e00e40006/bug#openWorkitemIdentifier=c8a5ca57b2162f6850176c6ff1)，状态🤔AI提缺陷、负责人牛诗晴、生产环境。上传并嵌入3张本例原图，另附原片/SRT/脱敏摘要，共6附件；正文、字段、图片引用及附件回读核验通过，未去重。
+
+本次仅同步2026-11-13既有失败证据，未重跑。064保持Failed/AUTO；当前63条18P/7F/1B/31NA/6NR不变，7条Failed均已有云效关联。其他需求及既有缺陷未改。
+
+[同步记录](cases/requirements/ERYE-199/defects-064-project-media-504-production-20261116.md) · [当前状态](cases/requirements/ERYE-199/execution-status-current.md)。
+<!-- /ERYE199-064-YUNXIAO-20261116 -->
+
+<!-- ERYE210-CURRENT-FIVE-20261116 -->
+## ERYE210-045～049当前功能v2生产Chrome执行（2026-11-16）
+
+本批5条：1 Passed, 2 Failed, 2 Blocked, 0 Not Run；当前43条：**38 Passed / 2 Failed / 3 Blocked / 0 Not Applicable / 0 Not Run**。014原Blocked和完整结果保持，其他用例沿用历史实测；原11条退役不恢复，旧迁移/缓存/回退目标独立延期。
+
+045共享素材引用隔离及复用通过；047在真实翻译配音工程混音50%保存重开后，明确单句再生成报页面协议错误；049关闭水印后原生导出报错、未交付页面结果，后台原任务done仅作辅助证据。048有独立真实翻译配音完成结果，但配音页无法稳定恢复原文案，目标编辑分支未执行。046通过同一已清理工程的会话入口明确二次只分析，实际结果以本轮报告为准。普通字幕准备、复制/属性缺失和额外创建的脚本错误保留为前置历史，不计产品缺陷。原生失败/阻塞截图及SHA256已归档。
+
+默认仍43个有效脚本入口（42 AUTO、014唯一BLOCKED登记项），自动化接入与实际Blocked分开记录。 [完整用例](cases/requirements/ERYE-210/cases.md) · [本轮执行与截图](cases/requirements/ERYE-210/results-045-049-current-functions-prod-20261116.md) · [当前进度](cases/requirements/ERYE-210/execution-status-current.md)。以下章节保留历史时点。
+
+<!-- ERYE210-051-RERUN-20261116 -->
+## ERYE210-051生产Chrome复测通过（2026-11-16）
+
+用户要求重新执行051，恢复登录后使用独立新工程，按原无选区/明确唯一背景音轨前置一次提交。Agent约54秒实际降低6dB，音量1→0.5011872336272722，音频轴可拖拽音量线反馈50%；刷新后仍50%，保存版本1→2。未手动拖动或代执行，运行期间保持Captions，原视频/原声/字幕和目标文件/位置保持。
+
+051最新Passed；当前43条37P/0F/6B/0NA/0NR，014和045～049仍Blocked，其他用例未重跑。11-13旧失败和原截图保留历史，本地缺陷增加本次通过记录；未提交云效或更改云效状态。仓库脚本1 passed，补充刷新核验沿同一结果，无第二次Agent请求。
+
+[完整步骤及本轮原始截图](cases/requirements/ERYE-210/results-051-rerun-prod-20261116.md) · [当前进度](cases/requirements/ERYE-210/execution-status-current.md)。
+<!-- /ERYE210-051-RERUN-20261116 -->
+
+<!-- ERYE210-COMPLETION-NINE-20261113 -->
+## ERYE-210三条优化及六条补齐执行完成（2026-11-13）
+
+用户确认优化011/017/019并补齐016/050～054，生产Windows有头Chrome串行零自动重试实跑。**9条8 Passed、1 Failed（051）**；当前43条**36P/1F/6B/0NA/0NR**。默认43个有效脚本入口（37 AUTO、6 BLOCKED门禁），无PLAN；退役11编号仍排除。其他用例和既有云效状态保持。
+
+051在Captions明确请求本工程唯一背景音轨降6dB，Agent称缺少真实音轨/片段标识而未安排执行，页面音量仍100%；已整理本地缺陷、完整提示词/步骤与真实截图，未提交云效。011新原片副本完成中文配音后PB未变，真实工程入口定位通过；017原生新配音基线提交失败保留及恢复生成、019合法混合删除一次撤销、016图片前置恢复、050统一历史、053Windows窄屏键盘、054双语独立编辑均通过。052清理/配音/混音及原导出18.70秒完成，实际帧为BEFORE052和原英语C1，后续AFTER052/新字幕独立保存；同一任务/文件按哈希审核续验，未重新导出。
+
+旧结果卡快捷入口、服务端已受理任务执行失败重试、受限对象批量拒绝、mac/未冻结断点和首次译制默认仍未覆盖；优化通过不算旧分支通过。准备及断言修正日志原样保留，017/052/054沿原场景完成实时核验，没有用历史回放代替当前结果。下文早期38入口、Blocked和旧统计均按对应时点保留。
+
+[九条结果及原始截图](cases/requirements/ERYE-210/results-completion-nine-prod-20261113.md) · [完整前置/输入/步骤](cases/requirements/ERYE-210/case-nine-optimized-supplement-20261113.md) · [当前43条进度](cases/requirements/ERYE-210/execution-status-current.md)。
+<!-- /ERYE210-COMPLETION-NINE-20261113 -->
+
+<!-- ERYE210-011-USER-PROJECT-20261113 -->
+## ERYE210-011用户目标语言配音工程补验（2026-11-13）
+
+已改用用户指定项目ad25bc25-b1c6-4105-84b8-1b845b4a4eb5中的新配音会话af0d5043-d30d-4a91-ba15-dea074199400，沿用户原任务执行，未重复提交。英语→简体中文、配音＋双语字幕，约178秒完成；PA版本1→2，PB/Media及完整内容保持1→1。重开PA可见17条中文配音文案、中文字幕及8段生成音频，真实MP4播放/结构抽样通过。
+
+后台隔离与目标语言内容分支Passed；真实结果卡仅提供播放、下载、放大，没有明确直达配音编辑入口，该定位分支未覆盖，011整例仍Blocked。手动选择PA不算结果卡定位通过；当前43条仍28P/0F/9B/0NA/6NR，其他用例和云效不改。011唯一脚本移至erye210-fields.spec.ts，支持原检查点续验，默认仍38入口。
+
+[逐项结果和原始截图](cases/requirements/ERYE-210/results-011-user-project-prod-20261113.md) · [当前进度](cases/requirements/ERYE-210/execution-status-current.md)。
+<!-- /ERYE210-011-USER-PROJECT-20261113 -->
+
+<!-- ERYE210-RETIRE-FAILED-11-20261113 -->
+## ERYE-210退役原11条失败用例（2026-11-13）
+
+用户确认退役002/004/005/007/010/013/015/018/020/040/041，保留已通过的021、025～027、029～035 v2原编号，不重复新增。有效用例54→43：28P/0F/9B/0NA/6NR；有效脚本38个（32 AUTO、6 BLOCKED），另5 PLAN。退役编号不复用，并在测试注册前排除。
+
+原失败结果、截图、云效缺陷和回执均保留。当前0 Failed来自范围调整，不表示旧问题已修复；本次没有产品执行或云效写入。以下原54条/49入口及11 Failed统计均属历史时点。
+
+[退役清单与历史](cases/requirements/ERYE-210/retired-failed-cases-20261113.md) · [当前43条进度](cases/requirements/ERYE-210/execution-status-current.md)。
+<!-- /ERYE210-RETIRE-FAILED-11-20261113 -->
+
+<!-- ERYE210-V2-EXECUTION-20261113 -->
+## ERYE-210当前功能11条v2生产Chrome执行（2026-11-13）
+
+本批11 Passed / 0 Failed / 0 Blocked / 0 Not Applicable / 0 Not Run；54条当前28 Passed / 11 Failed / 9 Blocked / 0 Not Applicable / 6 Not Run。021、025～027、029～035新版已实跑，截图及脱敏核验数据归档；原v1历史、其他用例及FWXC-516/518等既有云效关联保持。新项目/独立工程、串行零自动重试，实际失败与脚本/前置错误分开记录；未重复提交受理未知任务。本次没有云效写入或代码推送。
+
+[逐例结果与截图](cases/requirements/ERYE-210/results-021-035-v2-prod-20261113.md) · [当前进度](cases/requirements/ERYE-210/execution-status-current.md)。
+<!-- /ERYE210-V2-EXECUTION-20261113 -->
+
+<!-- ERYE210-CURRENT-FEATURES-V2-20261113 -->
+## ERYE-210阻塞用例按现有功能优化（2026-11-13，未执行）
+
+021、025～027、029～035共11条改为v2，明确前置、完整输入、步骤及预期，并同步脚本；新定义Not Run，旧Blocked/截图归档。045～049缺真实旧入口/缓存/回退环境，继续Blocked；当前页面导航不能替代迁移验收。原跨账号、草稿冲突、跨词/无词级/双语配音风险单列保留，未声称新版覆盖。
+
+54条当前17P/11F/9B/0NA/17NR；49个入口43 AUTO、6 BLOCKED门禁，另5 PLAN。040/041仍Failed、FWXC-516/518等回执保持。此次只改定义/脚本/进度，未跑生产任务、未改云效。
+
+[逐条原因和v2用例](cases/requirements/ERYE-210/case-021-035-v2-current-features-20261113.md) · [当前进度](cases/requirements/ERYE-210/execution-status-current.md)。
+<!-- /ERYE210-CURRENT-FEATURES-V2-20261113 -->
+
+<!-- ERYE210-040-041-CLOUD-20261113 -->
+## ERYE210-040/041缺陷已同步云效（2026-11-13）
+
+040 → [FWXC-516](https://devops.aliyun.com/projex/project/1e401ac99539c3999e00e40006/bug#openWorkitemIdentifier=f319c777b70fbfb7010c5a15ad)，独立音频删除连带裁视频/原声；041 → [FWXC-518](https://devops.aliyun.com/projex/project/1e401ac99539c3999e00e40006/bug#openWorkitemIdentifier=775dbf83cad7c40e3d8432d74e)，Media聊天/工程空素材区缺搜索入口。通过官方OpenAPI按“不去重”分别新建，状态🤔AI提缺陷，负责人牛诗晴，生产环境；4张截图已上传并嵌入，8附件与正文/字段回读通过。
+
+041正文限定空列表场景，有素材搜索与授权边界仍待回归。040/041保持Failed，54条当前17P/11F/20B/0NA/6NR；其他结果及历史缺陷回执保持。
+
+[同步详情](cases/requirements/ERYE-210/defects-040-041-production-20261113.md) · [当前进度](cases/requirements/ERYE-210/execution-status-current.md)。
+<!-- /ERYE210-040-041-CLOUD-20261113 -->
+
+<!-- ERYE210-021-049-20261113 -->
+## ERYE210-021～049生产Chrome执行完成（2026-11-13）
+
+本批29条：**11 Passed / 2 Failed / 16 Blocked / 0 Not Applicable / 0 Not Run**。54条当前：**17 Passed / 11 Failed / 20 Blocked / 0 Not Applicable / 6 Not Run**；016 v2及050～054仍Not Run，001～020既有结果和云效回执保留。实际页面分支与11条前置门禁分列，局部通过不算整例通过。
+
+新增021～049脚本，当前49个入口（37 AUTO、12 BLOCKED门禁），其余5条PLAN。脚本/准备错误保留历史；037/039沿原已完成场景复核，无重复生成。失败截图与SHA256清单、步骤及结果已归档；没有云效写入或代码推送。
+
+[本轮报告](cases/requirements/ERYE-210/results-021-049-prod-20261113.md) · [当前逐例进度](cases/requirements/ERYE-210/execution-status-current.md)。
+<!-- /ERYE210-021-049-20261113 -->
+
+<!-- ERYE210-019-AUDIO-DELETE-CLOUD-20261113 -->
+## 019附带独立音频删除异常已同步云效（2026-11-13）
+
+[FWXC-513](https://devops.aliyun.com/projex/project/1e401ac99539c3999e00e40006/bug#openWorkitemIdentifier=13b2ef77469fde31d9ca46f97a)：仅删除14秒起独立背景音频，原视频/原声同范围也被裁切，20秒缩短为18.61秒。官方OpenAPI直接新建，不做历史去重；前置三条、详细步骤/实际/预期齐全，1张真实截图上传并嵌入，原片、同一段WAV、准备字幕及JSON共5附件，正文/字段/附件及图片引用回读通过。
+
+019主用例仍Blocked，混合删除未执行；本条仅记录独立删除附带异常，不改变54条6P/9F/4B/0NA/35NR。其他缺陷回执保持。[同步详情](cases/requirements/ERYE-210/defect-independent-audio-delete-production-20261113.md) · [当前进度](cases/requirements/ERYE-210/execution-status-current.md)。
+<!-- /ERYE210-019-AUDIO-DELETE-CLOUD-20261113 -->
+
+<!-- ERYE210-019-V2-EXEC-20261113 -->
+## ERYE210-019 v2已执行，冲突前置未成立（2026-11-13）
+
+生产有头Chrome，新工程实跑。22秒起A1独立删除对照通过；删除前核验S1/D1引用一致，但单删S1未出现关联拒绝，S1消失、配音仍ready且文稿引用随后独立。没有真实受限对象，019 v2记Blocked，未新建M或执行混合删除，不判Passed/产品关联保护缺陷。另在14秒A1对照观察到原视频/原声被裁同范围，截图及范围核验单列保留，已同步FWXC-513，1截图/5附件回读通过。
+
+准备脚本的类型值/重复文件绑定问题已修正，原始尝试日志保留；没有伪造关联/锁定、没有主动重发生成。当前54条6P/9F/4B/0NA/35NR，016 v2仍Not Run，其余结果及FWXC-506/507等回执保持。[本轮报告](cases/requirements/ERYE-210/results-019-v2-prod-20261113.md) · [当前进度](cases/requirements/ERYE-210/execution-status-current.md)。以下定义更新时Not Run及旧计数保留历史。
+<!-- /ERYE210-019-V2-EXEC-20261113 -->
+
+<!-- ERYE210-019-V2-LINKED-DELETE-20261113 -->
+## ERYE210-019替换关联字幕混合删除场景（2026-11-13）
+
+用户确认采用019 v2：先用独立副本确认A1单删合法、S1因配音D1关联单删被拒绝，再用第三个新工程同时选S1/A1按一次Delete，核对整体拒绝、S1/D1/A1及刷新结果均保留。单删S1没有真实限制时记冲突前置未成立，不强制套用拒绝预期，不仅因缺锁轨入口判不适用。完整前置、步骤、逐步预期及脚本已更新，未执行，Not Run。
+
+旧v1 Not Applicable及原证据保留历史，其入口探测范围不足，不能排除关联冲突。016/019 v2均待执行；54条当前6P/9F/3B/0NA/36NR，其余结果及FWXC-506/507等回执保持。[019 v2完整说明](cases/requirements/ERYE-210/case-019-v2-linked-delete-20261113.md) · [当前进度](cases/requirements/ERYE-210/execution-status-current.md)。以下旧批次计数保留历史。
+<!-- /ERYE210-019-V2-LINKED-DELETE-20261113 -->
+
+<!-- ERYE210-016-V2-WINDOWS-20261113 -->
+## ERYE210-016按Windows Chrome优化（2026-11-13）
+
+016 v2验证图片水印“未上传时限制→上传PNG后恢复→120px/60%切页重开保留”，已写明前置、测试图、完整步骤与逐步预期，并替换旧门禁脚本。仅修改、不执行，新定义AUTO/Not Run；不依赖macOS或真实未发布样本。旧v1 Blocked及原始报告/证据保留历史；原发布状态和端侧支持风险仍待真实样本，不宣称已覆盖。
+
+当前54条6P/9F/3B/1NA/35NR；20个脚本入口（19 AUTO、014仅前置门禁）。其他执行结果及FWXC-506/507等缺陷回执保持。[016 v2完整说明](cases/requirements/ERYE-210/case-016-v2-windows-20261113.md) · [当前进度](cases/requirements/ERYE-210/execution-status-current.md)。以下旧批次计数保留历史。
+<!-- /ERYE210-016-V2-WINDOWS-20261113 -->
+
+<!-- ERYE210-018-020-CLOUD-20261113 -->
+## ERYE210-018/020缺陷已同步云效（2026-11-13）
+
+- ERYE210-018 → [FWXC-506](https://devops.aliyun.com/projex/project/1e401ac99539c3999e00e40006/bug#openWorkitemIdentifier=df279e880064725c26669adc36)：配音期间独立编辑水印后，原配音任务没有可应用结果；优先级高、严重程度2-严重。
+- ERYE210-020 → [FWXC-507](https://devops.aliyun.com/projex/project/1e401ac99539c3999e00e40006/bug#openWorkitemIdentifier=4861ae7970e41e1293c07e3612)：配音文案撤销未恢复原稿，刷新重开仍显示新稿；优先级中、严重程度3-一般。
+
+通过官方OpenAPI直接新建，不做历史去重。前置各三条，详细复现、输入值和实际/预期已填写；6张真实截图上传并嵌入，原片、回归准备文稿及核验JSON合计12附件，正文、字段、附件ID/名称/字节数和图片引用回读通过。018原因待确认，不推断内部锁或水印修改因果；020只报告撤销未恢复，不将切页保留记为失败。两例保持Failed，当前累计6P/9F/4B/1NA/34NR。[同步详情](cases/requirements/ERYE-210/defects-018-020-production-20261113.md) · [当前进度](cases/requirements/ERYE-210/execution-status-current.md)。
+<!-- /ERYE210-018-020-CLOUD-20261113 -->
+
+<!-- ERYE210-016-020-PROD-20261113 -->
+## ERYE210-016～020生产Chrome执行（2026-11-13）
+
+本轮2 Failed / 2 Blocked / 1 Not Applicable。018真实配音期间独立水印保存且保留，但原任务报“当前任务没有可应用结果”、没有两句音频，Failed；020全新稳定基线复核仍撤销不恢复原稿，Failed，切页和重开保留新稿通过。016缺mac/发布状态对照、017未建立真实失败前置，Blocked；019当前Chrome无受限轨道/关联同步冲突入口，按用例约定N/A，不宣称批次原子性通过。
+
+54条当前6P/9F/4B/1NA/34NR。20个脚本入口（18 AUTO、014/016仅BLOCKED门禁），失败截图及前置/适用性记录已归档。没有重提018；020仅在修正准备后新建目标复核；018/020已同步FWXC-506/FWXC-507，6截图12附件回读通过；FWXC-492/493等旧回执保留。[详细报告](cases/requirements/ERYE-210/results-016-020-prod-20261113.md) · [当前进度](cases/requirements/ERYE-210/execution-status-current.md)。以下旧批次统计为历史记录。
+<!-- /ERYE210-016-020-PROD-20261113 -->
+
+<!-- ERYE210-013-015-CLOUD-20261113 -->
+## ERYE210-013/015缺陷已同步云效（2026-11-13）
+
+- ERYE210-013 → [FWXC-492](https://devops.aliyun.com/projex/project/1e401ac99539c3999e00e40006/bug#openWorkitemIdentifier=0c412f96615825b3473edd810a)：纯音频无画面工程仍可保存文字水印；优先级中、严重程度3-一般。
+- ERYE210-015 → [FWXC-493](https://devops.aliyun.com/projex/project/1e401ac99539c3999e00e40006/bug#openWorkitemIdentifier=e5fffc8428963d66f61e42d154)：未选片段时分割按钮禁用但缺少原因提示；优先级低、严重程度4-轻微。
+
+通过官方OpenAPI直接新建，不做历史去重。前置各三条，详细复现步骤和边界已填写；4张真实截图已上传并嵌入，连同JSON/原片/字幕共8附件，正文、字段、附件ID/名称/字节数及图片引用回读通过。状态均为🤔AI提缺陷，负责人牛诗晴，重构10-29、生产环境。两例测试结果保持Failed，当前累计6P/7F/2B/39NR。[同步详情](cases/requirements/ERYE-210/defects-013-015-production-20261113.md) · [当前进度](cases/requirements/ERYE-210/execution-status-current.md)。
+<!-- /ERYE210-013-015-CLOUD-20261113 -->
+
+<!-- ERYE210-011-015-PROD-20261113 -->
+## ERYE210-011～015生产Chrome执行（2026-11-13）
+
+本轮1 Passed / 2 Failed / 2 Blocked。011后台配音完成不抢PB且不串写通过，但未建立会话结果卡，定位分支Blocked；012空态导航不生成通过；013纯音频可实际保存文字水印Failed；014缺真实只读身份/授权样本Blocked；015无选区缺原因提示Failed，实际分割及撤销通过。
+
+当前54条6P/7F/2B/39NR。15个脚本入口已接入（14 AUTO、014仅BLOCKED前置门禁），失败截图与分支证据已归档；001～010及既有云效缺陷保留；013/015已同步FWXC-492/493，4截图8附件回读通过。[详细报告](cases/requirements/ERYE-210/results-011-015-prod-20261113.md) · [当前进度](cases/requirements/ERYE-210/execution-status-current.md)。以下旧批次统计为历史记录。
+<!-- /ERYE210-011-015-PROD-20261113 -->
+
+<!-- ERYE210-007-010-CLOUD-20261113 -->
+## ERYE210-007/010缺陷已同步云效（2026-11-13）
+
+007→[FWXC-488](https://devops.aliyun.com/projex/project/1e401ac99539c3999e00e40006/bug#openWorkitemIdentifier=015794cee8eba6c88c1078ec6b)，图片水印重开变文字、刷新变字幕；010→[FWXC-489](https://devops.aliyun.com/projex/project/1e401ac99539c3999e00e40006/bug#openWorkitemIdentifier=8f1fd31451866906c2a5208cd2)，PB刷新由Media变Captions。通过官方OpenAPI直接新建2条，不查历史重复；前置各三条，6张原图上传并嵌入，原片/SRT/脱敏数据等共12附件，正文、字段、附件ID/名称/字节数和图片引用回读通过。
+
+两例保持Failed，008 v2 Passed及其余结果保留。同步工具已适配上传name回执，并从附件列表核验fileName/ID/字节数；原007检查点续接完成，没有重复新建或重传首图，21项离线检查通过。[缺陷与回执明细](cases/requirements/ERYE-210/defects-007-010-production-20261113.md) · [当前进度](cases/requirements/ERYE-210/execution-status-current.md)。
+<!-- /ERYE210-007-010-CLOUD-20261113 -->
+
+<!-- ERYE210-007-010-RERUN-PROD-20261113 -->
+## ERYE210-007/010生产复测（2026-11-13）
+
+007：Failed，Watermark/Image收起重开变Text、刷新重开变Captions；010：Failed，PA/PB页内分别恢复Captions/Media，但同一PB刷新后变Captions。等待页面就绪与20秒恢复轮询后仍复现；新会话及独立工程，保存内容和版本1→1保持；真实失败截图已归档。
+
+仅007/010本轮重跑，008 v2 Passed及其他结果保留。旧voice迁移、U2账号/D2设备缺前置，未执行。当前54条：5 Passed / 5 Failed / 0 Blocked / 44 Not Run。本轮没有Agent生成任务、云效写入或推送。[本轮结果与截图](cases/requirements/ERYE-210/results-007-010-rerun-prod-20261113.md) · [当前逐例进度](cases/requirements/ERYE-210/execution-status-current.md)。
+<!-- /ERYE210-007-010-RERUN-PROD-20261113 -->
+
+<!-- ERYE210-008-V2-PROD-20261113 -->
+## ERYE210-008 v2生产复测（2026-11-13）
+
+仅008重跑，Passed。仓库脚本在有头Chrome、新建项目及独立会话/工程核验五模块收起/展开、收起后切换正确面板；五入口/工程标题/预览保留；原8条字幕及完整保存内容一致，版本1→1。首次字幕异步/隐藏文本比较和旧CSS定位问题修正后，在新工程完成；原始脚本失败日志及截图保留，不算产品缺陷或自动重试。
+
+当前54条为5 Passed / 5 Failed / 0 Blocked / 44 Not Run。008旧v1失效链接Blocked保留历史，006/007/009/010本轮未重跑。没有Agent生成任务、云效写入或推送。[本轮结果与截图](cases/requirements/ERYE-210/results-008-v2-prod-20261113-04.md) · [当前逐例进度](cases/requirements/ERYE-210/execution-status-current.md)。
+<!-- /ERYE210-008-V2-PROD-20261113 -->
+
+<!-- ERYE210-006-010-PROD-20261113 -->
+## ERYE-210 006～010生产结果及008新版（2026-11-13）
+
+Chrome生产环境原批次2 Passed（006/009）、2 Failed（007/010）、1 Blocked（008旧定义无失效样本，用户确认缺口）。007：Image收起重开变Text、刷新变Captions；010：页内双工程记忆正常，PB刷新由Media变Captions；旧voice和跨账号/设备分支未覆盖。失败截图已保存，本批未新同步云效。
+
+008已替换为“功能面板收起/展开及收起后切换模块”v2，本轮生产Chrome Passed；历史Blocked不继承到新版。当前54条为5 Passed / 5 Failed / 0 Blocked / 44 Not Run。001～010已接入有头Chrome自动化，串行零重试；脚本接入不抬高实际通过数；001/006额外仓库脚本验证已通过，其他条目未因此重跑。[当前逐例进度](cases/requirements/ERYE-210/execution-status-current.md) · [结果与截图](cases/requirements/ERYE-210/results-006-010-prod-20261113.md) · [运行方法和覆盖边界](cases/requirements/ERYE-210/automation.md)。
+<!-- /ERYE210-006-010-PROD-20261113 -->
+
+<!-- ERYE199-002-YUNXIAO-20261113 -->
+## 2026-11-13 ERYE199-002缺陷已提交云效
+
+[FWXC-479](https://devops.aliyun.com/projex/project/1e401ac99539c3999e00e40006/bug#openWorkitemIdentifier=9ba270e32cb1770640a69d088f)，状态🤔AI提缺陷，生产环境、中优先级、3-一般。通过官方OpenAPI直接新建1条，不去重，不修改其他工作项；2张原始失败截图上传并嵌入，另附原片及脱敏切点JSON，共4附件，正文/字段/附件ID、名称、字节数和图片引用回读通过。前置操作、完整准备提示词和页面分割/刷新复现步骤已写全；1.000秒未对齐30000/1001帧网格为实际缺陷，不报存储编码差异、未证实的导出丢帧或累计漂移。用例002保持Failed，001新版保持Not Run，本次未重跑或推送。 [本地缺陷](defects/ERYE199-002-frame-align-production-20261113.md)。
+<!-- /ERYE199-002-YUNXIAO-20261113 -->
+
+<!-- ERYE210-001-005-PROD-20261113 -->
+## 2026-11-13 ERYE-210 001～005生产测试
+
+Completed；2 Passed、3 Failed；该批结束时49条未执行；当前累计见最新进度。Chrome生产环境，新建专用项目，按页面业务验收。未通过：002：首次导入进入字幕而非Media，另见创建保存500；004：配音结果缺少直接定位Voiceover的编辑入口；005：首次进入Scripts正常；从Media点审阅剪辑仍停Media。005仅分析审核，未应用删除，原run按本例范围保留waiting_for_confirmation。云效已新建[FWXC-482](https://devops.aliyun.com/projex/project/1e401ac99539c3999e00e40006/bug#openWorkitemIdentifier=b484370e7d2723d8befafd0441)、[FWXC-483](https://devops.aliyun.com/projex/project/1e401ac99539c3999e00e40006/bug#openWorkitemIdentifier=bc663b74e4bf60d0019f5c04e3)、[FWXC-484](https://devops.aliyun.com/projex/project/1e401ac99539c3999e00e40006/bug#openWorkitemIdentifier=f97b390bf7704588fed0bfa706)；不做历史去重，7张原图嵌入、16附件及正文回读通过，前置各三条。未重跑业务或推送。 [逐例进度](cases/requirements/ERYE-210/execution-status-20261113.md) · [结果与截图](cases/requirements/ERYE-210/results-001-005-prod-20261113.md)。
+<!-- /ERYE210-001-005-PROD-20261113 -->
+
+<!-- ERYE199-001-005-20261113 -->
+## 2026-11-13 ERYE-199 优化版生产复测完成
+
+001/003/005版本2在新项目e649fba1-f3c4-4f82-9a6c-1ca6cbbb32e4及独立新工程完成生产复测，3 Passed；当前001～005为4 Passed、1 Failed，002/FWXC-479未重跑且不变，004沿用旧Passed，其余63条不计本轮。001四类对象与原声采样正确、刷新完整状态不变；003五处呈现帧及刷新与独立VFR源PTS对应，连续93帧时间递增，原片SHA一致；005页面手柄裁头2秒，片段8秒、时间线起点2秒，撤销/重做/刷新保持源映射，原声采样660Hz对应源2～4秒。首次快速按键寻帧存在一帧采样差，微调后的复核帧正确，原记录保留；不声称亚帧精度。图片25%缩放的旧像素换算已更正为当前适配尺寸约90px，并明确图片在视频层上方。
+
+原版Blocked/截图及Graphic、PR tick、关键帧缺口仍保留，不判旧范围已实现。按用户最新明确要求，后续不使用computer-use；目标页面操作用ego-browser。此次无云效写入、产品代码/默认自动化变更或推送。云效前置2～3条精简规则继续沿用。[本轮结果及截图](cases/requirements/ERYE-199/results-v2-production-001-003-005-20261113.md) · [当前状态](cases/requirements/ERYE-199/execution-status-current.md)。
+<!-- /ERYE199-001-005-20261113 -->
+
+<!-- ERYE196-RERUN-20261111 -->
+## 2026-11-11 ERYE-196全部适用用例回归（执行中）
+
+用户确认全部适用正式用例，预发Ego有头新项目，当前本轮状态：{'Passed': 3, 'Not Applicable': 2, 'Failed': 12, 'Not Run': 98, 'Blocked': 19}。结果持续回填[逐条进度](cases/requirements/ERYE-196/execution-status-20261111.md)与[报告及截图](cases/requirements/ERYE-196/results-all-applicable-rerun-20261111.md)；旧执行历史保留，未执行项不计通过。
+<!-- /ERYE196-RERUN-20261111 -->
+
+18:44云效FWXC-240由已修复改为✅AI通过，一次仅status、回读ID/名称成功，其他核对字段保持，无新增评论/附件/缺陷。
+
+Passed（当前登录态/预发）：原项仅历史图，恢复提示词“给这个视频加中文字幕并烧录，输出带中文字幕的视频”。新项目4548a377-b735-48c3-a332-44e50d4d769e、新会话26642372-ab8b-4ecb-95b3-471cc45350be，单附件不@，原完整指令先后提交两次，各一次；92.891/60.775秒done、需求满足true，无补槽确认，未出现Missing CinLink access token or API key.。执行中刷新任务恢复；完成后刷新，两轮历史保留，成片分别实际播放1.021412/1.033672秒、1280×720、中文字幕可见，无媒体错误。第二轮明确复用同原片字幕，返回同成片ID，不计第二次独立转写。8本轮PNG/1历史图/脱敏汇总见[报告](design-cases/multi-workflow/fwxc240-retest-20261111.md)。原素材/环境未注明，未覆盖令牌过期/撤销、重新登录恢复、跨环境或长期压力；无默认配置变更/推送。
+
+18:22云效FWXC-241由已修复改为✅AI通过，一次仅status、ID/名称回读成功，其他核对字段保持，原富文本/图片未改；无新增评论/附件/缺陷。
+
+Passed（本轮预发/自选两标准原片路径）：原项只有历史截图、步骤未填，已通过官方文件接口取回原图并恢复原提示词。新项目6b23506c-1157-4199-9ea8-af08ff6c2285、新会话71de841d-d6ca-4ac6-b8ac-f4f6a84aa39d，选择A=7MB/B=1270510918两本地视频、无@，一次发送“给这两个视频加中文字幕并烧录，输出带中文字幕的视频”，补槽确认0。发送后原片预览保留，A/B均实际播放；执行中刷新后两预览恢复且再次可播放；181.089秒done/需求满足true，原片预览仍在，两结果预览也可播放。10张本轮PNG/1张历史原图及脱敏状态见[报告](design-cases/multi-workflow/fwxc241-retest-20261111.md)。原素材/环境未注明，不宣称原素材逐一复原、跨环境、首次云端入库或字幕内容全量通过；无新用例编号/默认配置变动/代码推送。
+
+18:07云效FWXC-244由已修复改为✅AI通过，一次仅status、ID/名称回读成功，其他核对字段保持，无新评论/附件/缺陷或业务重跑。
+
+Passed：新项目92bdbdd9-8a6b-4471-afd3-3215fe5c9910、新会话ee7d0d4b-5953-43ec-b9aa-b866e5e315c9，无附件/引用、一次原完整指令，401.224秒done/需求满足true，无补槽确认。中英文SRT各1条、均0.820～2.140秒，实际下载内容“这是自动化测试。”/“This is an automated test.”。生成视频实际5.056009秒、1280×720、有音轨/解码通过，字幕来源对应本轮生成视频，英译输入为本轮中文；离线Whisper独立识别同一句普通话。原仅media-info.json问题未复现。5PNG/两SRT/音频/独立ASR/汇总见[报告](design-cases/multi-workflow/fwxc244-retest-20261111.md)，MP4留本机reports/fwxc244-rerun-20261111。初始连接超时恢复后才提交，业务仅一次；未人工完整听审/逐帧同步/核验扣费，FIXME及旧失败保留，无推送。
+
+17:51云效FWXC-245由已修复改为✅AI通过，一次仅status、ID/名称回读成功，其他核对字段保持，无新评论/附件/缺陷。仅对应原缺交付问题；字幕措辞差异及未覆盖项目不随状态改为通过。
+
+原缺独立英文SRT问题未复现，正常交付Passed：新项目910fec7f-311c-4dec-99e4-f637a971adb6、新会话8281fe09-d3ca-48ed-8306-56f9280b1193，同SHA原片/单@/一次原提示词，300.040秒done/需求满足true，无补槽确认。中文SRT/英文SRT/MP4均已下载，两字幕各18条至60.460秒（第6条结束差20ms，其余一致）；1280×720、H.264/AAC、60.488秒，浏览器播放和完整解码通过，6/33/47秒烧录英文可见。另记录成片与独立英文SRT措辞差异，不宣称逐字同版；真实中文源、故障注入、整片逐字听审及扣费未覆盖，FIXME未改。7PNG/两SRT/版本对照/汇总见[报告](design-cases/multi-workflow/fwxc245-retest-20261111.md)，MP4留本机reports/fwxc245-rerun-20261111/downloads/final.mp4；旧失败保留，无远端推送。
+
+17:37已将云效FWXC-250由已修复改为✅AI通过；一次仅status、回读ID/名称通过，其他核对字段保持，无新缺陷/评论/附件或业务重跑。
+
+Passed（来源/原缺陷回归）：新项目FWXC-250复测-20261111（6dfbc1d0-4fff-4ffb-803b-78bcc9ddc541）、新会话17d1b1d6-c1dc-4722-9c45-84afbec8862a，A/B原片同SHA、双@顺序一致，一条原完整指令，补槽/确认0，230.324秒done/需求满足true。A英文18条至60.460秒、B日文64条至167.900秒，两份实际下载；六段同哈希原片的历史独立ASR交叉核对，A医疗法/B新闻分别正确，B90～110及149～169秒有对应日文，没有串用或互换。3PNG/两SRT/内容对照与参照/汇总见[报告](design-cases/multi-workflow/fwxc250-retest-20261111.md)。未重跑ASR、未逐字听审整片译文/核验扣费，默认FIXME及旧失败保留，无代码推送。
+
+17:26按“未复现改AI通过”的处理方式，将FWXC-253从已修复改为✅AI通过；仅status一次写入、ID/名称回读通过，其他核对字段保持，无新增评论/附件/缺陷。
+
+原缺陷回归Passed：新项目FWXC-253复测-20261111（643dc5a7-5451-4737-8003-5cb3f4b07fa6）、新会话9b69046e-557a-4f59-bd4d-607f16a2f75a，同哈希原片和原提示词、单@单次提交，无补槽/确认，349.024秒done。中文SRT/英文SRT/中文总结均已实际下载，两字幕各18条、逐条时间轴与源转写一致，总结对应医疗保障主题。旧“缺英文仍完成”未复现；页面明确说明实际英文源，intent_fully_satisfied=false如实保留，真正中文源正向未覆盖，不宣称全部译文质量或中间字幕版本已验证。3PNG、三文件、脱敏汇总见[报告](design-cases/multi-workflow/fwxc253-retest-20261111.md)，历史失败及自动化配置保持。
+
+依用户明确要求，17:14将本轮未复现的[FWXC-255](https://devops.aliyun.com/projex/bug/FWXC-255)由已修复改为✅AI通过；一次PUT仅写status，回读ID/名称一致，其他核对字段保持。未新增评论/附件/缺陷或重跑业务。MW-01本轮Passed、旧失败现场及译文质量/扣费未覆盖边界保持；[复测及状态记录](design-cases/multi-workflow/fwxc255-retest-20261111.md)。下文未写云效指原复测阶段。
+
+Passed：新项目`FWXC-255复测-20261111`（59384718-7355-4731-b985-ce0047292add）、新会话`fb233be4-0999-4fb9-9785-d1b77000cd2f`，同哈希英文原片一个@引用，一次提交原完整中文→英译指令，补槽/确认0次。211.445秒后done且intent_fully_satisfied=true，两份SRT均实际下载、各18条，逐条时间轴与源转写一致（0.160～60.460秒）；实际英译输出的源字幕ID等于交付中文文件ID。原“只交中文仍Completed”未复现。3PNG、字幕及脱敏汇总见[复测报告](design-cases/multi-workflow/fwxc255-retest-20261111.md)；未逐字听审全部译文/核验扣费。只读云效状态已修复，无云效写入、默认执行配置变动或远端推送；历史失败保留。
+
+按用户明确要求，16:57将[FWXC-280](https://devops.aliyun.com/projex/bug/FWXC-280)从“已修复”改为“✅AI通过”，OpenAPI回读状态ID/名称通过，其他核对字段保持。仅状态更新1次，无新缺陷/评论/附件或业务重跑。正常登录关闭重开路径通过、凭证失效分支未覆盖及SSO-017原五轮历史结论不变；[复测和状态记录](design-cases/multi-workflow/fwxc280-retest-20261111.md)。
+
+新项目`FWXC-280复测-20261111`（`6c8f7092-e692-42b0-bc72-fc5200d883d8`）、新会话`6d8c7238-f762-40a9-9add-ab31732369fd`，原片7MB.mp4哈希与旧缺陷一致。R1/R2完成后实际关闭页签，从首页历史重开；R2视频可播放、两次下载哈希一致，R3新run成功受理且done/成片可播放。本轮未复现认证问题，正常登录关闭重开路径通过，凭证失效分支未覆盖；不覆盖原SSO-017五轮/其他故障历史。只读云效原状态“已修复”，无云效写入或远端推送。5PNG/脱敏汇总见[复测报告](design-cases/multi-workflow/fwxc280-retest-20261111.md)。
+
+按用户要求不使用历史项目，在正式环境新建项目`FWXC-356复测-20261111`（项目ID `d570e918-3fc9-4a44-9be7-b44c4e10d257`），加入`英文30S.mp4`并生成可编辑英文字幕。首条字幕结束时间由3.20秒拖至2.70秒，未出现`Manual layout does not cover parent`；刷新并重新打开编辑器后仍为0.08～2.70秒，判定本轮Passed。复测会话`c013949c-3f78-4d1d-85dd-11bad05a0f80`；3张真实截图已归档。[复测报告](cases/requirements/ERYE-196/results-FWXC-356-rerun-20261111.md)。原FWXC-356缺陷及历史Failed记录保留，未修改云效状态。
+
+<!-- ERYE199-AUTOMATION-001-010-20261113 -->
+## 2026-11-13 ERYE-199 仓库脚本接入与生产执行
+
+001～010均有仓库内逐例步骤、断言和截图输出；006完整蒙版/锚点坐标受前置能力阻塞。统一命令`npm run test:editor:199 -- --base-url https://app.cinlink.ai --cases 001-010`。本轮最终5 Passed、4 Failed、1 Blocked，其余58条未计本轮。001～005已接入并执行验证；原版/v2历史和FWXC-479保留。
+
+使用Ego Lite有头、串行零重试；新建测试项目和独立工程；未使用computer-use。准备/采样脚本问题修正后定向验证，不计作产品缺陷。未写云效、未推送。[完整报告和截图](cases/requirements/ERYE-199/results-automation-001-010-production-20261113.md) · [脚本说明](cases/requirements/ERYE-199/automation.md)。
+<!-- /ERYE199-AUTOMATION-001-010-20261113 -->
+
+<!-- ERYE199-CONFIRMED-YUNXIAO-20261113 -->
+## 2026-11-13 ERYE-199 确定失败缺陷同步完成
+
+本轮确定失败的007/008/010已提交云效：007→[FWXC-485](https://devops.aliyun.com/projex/project/1e401ac99539c3999e00e40006/bug#openWorkitemIdentifier=3fbd5d5e667e7484e372ef0f6e)；008→[FWXC-486](https://devops.aliyun.com/projex/project/1e401ac99539c3999e00e40006/bug#openWorkitemIdentifier=1f7044b8c2c88b7d275ef4f643)；010→[FWXC-487](https://devops.aliyun.com/projex/project/1e401ac99539c3999e00e40006/bug#openWorkitemIdentifier=610e1b8f4457eb703db0293ab1)。三条均为“🤔AI提缺陷”，7张截图上传并嵌入、15个附件回读核验通过。002沿用FWXC-479，当前“待确认”、负责人余航，只读核验未改动。006仍为前置Blocked，不提交；业务执行状态5 Passed/4 Failed/1 Blocked保持。
+
+正文包含精简前置、完整页面复现步骤、无对话提示词说明、实际/预期及验证边界。通过官方OpenAPI提交，未使用浏览器或computer-use；负责人牛诗晴、生产环境标签。详见[本轮同步映射](cases/requirements/ERYE-199/defect-sync-20261113.json)。
+<!-- /ERYE199-CONFIRMED-YUNXIAO-20261113 -->
+
+<!-- ERYE199-011-015-20261113 -->
+## 2026-11-13 ERYE-199 011～015生产执行
+
+本轮0 Passed、1 Failed、4 Blocked。012普通移动留空隙，但普通Delete删除A后B由7秒自动移至2秒；独立波纹删除不支持。011同步锁、013源绑定字幕、014轨道编辑锁、015solo前置/能力缺口阻塞；015隐藏/静音开关保存恢复及不删内容部分已核对，未完成solo导出隔离。
+
+011～015已接入仓库`tools/editor/erye199/cases-011-015.mjs`；命令`npm run test:editor:199 -- --base-url https://app.cinlink.ai --cases 011-015`。Ego Lite有头、同一TaskSpace4、专用新项目和独立工程、串行零重试；无补槽表单，无computer-use、云效写入或推送。修正基线空引用字段后定向执行，未把准备错误当产品缺陷。7项离线校验通过。
+
+001～015当前5 Passed、5 Failed、5 Blocked，其余53条未计本轮；前10条及FWXC-479/485/486/487关联保留。[本轮报告与截图](cases/requirements/ERYE-199/results-011-015-production-20261113.md) · [当前状态](cases/requirements/ERYE-199/execution-status-current.md)。
+<!-- /ERYE199-011-015-20261113 -->
+
+<!-- ERYE199-CURRENT-VERSION-SCOPE-20261113 -->
+## 2026-11-13 ERYE-199 本版本范围调整
+
+用户确认011/013/014/015相关功能本版本不做，当前Not Applicable（本版本不适用、后续再测），不计本轮Blocked或缺陷；原需求、原探测脚本和历史Blocked/截图保留，015历史隐藏/静音局部观察不计整例通过。012继续适用，本轮在生产新建项目和独立工程复测，普通Delete删除A后B仍从7秒自动移到2秒，保留Failed；未提交云效。006及其他未点名用例不扩大排除。
+
+范围控制已写入`tools/editor/erye199/release-scope.mjs`并接统一运行器；`--cases 011-015`实际只跑012，4条延期输出Not Applicable且executed=false。9项离线校验通过，包含只选延期用例不打开浏览器/不创建工程验证。本轮Ego Lite有头TaskSpace5、串行零重试，无补槽或computer-use，不重复已受理任务。
+
+001～015当前5 Passed、5 Failed、1 Blocked、4 Not Applicable，其余53条未计本轮。[本版本范围及012复测截图](cases/requirements/ERYE-199/results-version-scope-012-rerun-production-20261113.md) · [当前状态](cases/requirements/ERYE-199/execution-status-current.md)。
+<!-- /ERYE199-CURRENT-VERSION-SCOPE-20261113 -->
+
+<!-- ERYE199-012-YUNXIAO-20261113 -->
+## 2026-11-13 ERYE-199 012缺陷同步完成
+
+012已提交云效[FWXC-491](https://devops.aliyun.com/projex/project/1e401ac99539c3999e00e40006/bug#openWorkitemIdentifier=759a901c1536c53599d1fd4e74)：普通删除前段后，后段自动前移5秒，未保留时间线空隙。状态“🤔AI提缺陷”、负责人牛诗晴、生产环境；2张截图上传并嵌入，原片和脱敏JSON共4附件回读核验通过。012保留Failed；011/013/014/015继续为本版本Not Applicable，未提交。
+
+仅使用官方OpenAPI，无浏览器或computer-use；未查重、不更改旧缺陷，无代码推送。正文保留2～3条精简前置、详细页面步骤、补充验证完整提示词和验证边界。详见[本地缺陷记录](defects/ERYE199-012-normal-delete-gap-production-20261113.md)。
+<!-- /ERYE199-012-YUNXIAO-20261113 -->
+
+<!-- ERYE199-015-020-20261113 -->
+## 2026-11-13 ERYE-199 015～020生产执行
+
+015按用户既定本版本范围保持Not Applicable、未执行。016真实子序列创建不支持，017/018引用同批前置缺口记录依赖Blocked，未构造共享实例、越界、循环或深度>8对象。019基础位置(400,200)、等比缩放60%、旋转15度、不透明度50%、背景片段未串改及刷新子步骤通过；锚点/非等比/视频翻转/四边裁剪/混合模式不支持，整例Blocked。020真实关键帧不支持，插值/路径/缓动未执行。新范围合计5 Blocked、1 Not Applicable，没有整例Passed。
+
+016～020接入`tools/editor/erye199/cases-016-020.mjs`；命令`npm run test:editor:199 -- --base-url https://app.cinlink.ai --cases 015-020`。生产新专用项目与独立工程、Ego Lite有头TaskSpace6；无补槽表单、computer-use、云效写入或推送。019连续提交终态误归属已修正为按当前完整提示词及新run匹配，并回读原run补核，未重复提交；误观察保留历史，不计产品缺陷。11项离线校验通过。
+
+001～020当前5 Passed、5 Failed、6 Blocked、4 Not Applicable，其余48条未计本轮；原4条版本排除及FWXC-479/485/486/487/491保持。[本轮报告和截图](cases/requirements/ERYE-199/results-015-020-production-20261113.md) · [当前状态](cases/requirements/ERYE-199/execution-status-current.md)。
+<!-- /ERYE199-015-020-20261113 -->
+
+<!-- ERYE199-015-V2-20261113 -->
+## 2026-11-13 ERYE-199 015优化版v2通过
+
+用户指出时间轨前方小图标可隐藏画面，并要求015只验已实现部分。015当前仅核验视频隐藏/显示、原声静音/启用、内容不删除及两种状态刷新保持；移除solo和导出隔离步骤，恢复适用。已用生产新工程、Ego Lite有头TaskSpace7真实点击图标完成v2实跑Passed，保存版本1→2→3→4→5；恢复后完整内容与基线一致。无Agent/run、补槽、computer-use或云效写入。
+
+015旧版完整范围Blocked/Not Applicable及历史证据保留，不计为旧版solo能力通过。当前版本仅排除011/013/014，不扩大其他用例排除。11项离线校验通过；统一命令`npm run test:editor:199 -- --base-url https://app.cinlink.ai --cases 015`。001～020当前6 Passed、5 Failed、6 Blocked、3 Not Applicable，其余48条未计本轮；5个云效关联不改。[015新版步骤与截图](cases/requirements/ERYE-199/results-015-v2-visibility-production-20261113.md) · [当前状态](cases/requirements/ERYE-199/execution-status-current.md)。
+<!-- /ERYE199-015-V2-20261113 -->
+
+<!-- ERYE199-SKIP-016-018-20261113 -->
+## 2026-11-13 ERYE-199 016～018暂跳过
+
+用户2026-11-13要求：016～018暂不支持，当前先跳过，功能实现后再测；不计通过或当前阻塞，原需求和历史Blocked/截图保留。
+
+范围控制已同步跳过016/017/018，保留原探测脚本，输出Not Applicable且executed=false；当前共排除011/013/014/016/017/018，不扩到006/019/020。015 v2 Passed及5个云效关联不变。001～020当前6 Passed、5 Failed、3 Blocked、6 Not Applicable，其余48条未计本轮。本次无页面执行、Agent提交、云效写入或推送。[范围说明](cases/requirements/ERYE-199/scope-skip-016-018-20261113.md) · [当前状态](cases/requirements/ERYE-199/execution-status-current.md)。
+<!-- /ERYE199-SKIP-016-018-20261113 -->
+
+<!-- ERYE199-019-V2-20261113 -->
+## 2026-11-13 ERYE-199 019优化版v2通过
+
+019已按用户要求优化阻塞部分并重新执行，仅保留已实现的位置(400,200)、等比缩放60%、旋转15度、不透明度50%及刷新保持、前景原片/背景/两条原声不串改。移除锚点、非等比、视频翻转、四边裁剪和混合模式探测；关键帧属020。生产新项目/会话/工程、Ego Lite有头TaskSpace8一次完整请求实跑Passed，run `run_v2_ace64eb4364f429081e6162beab1ee33` done，版本1→2；页面组合画面已查看，5张原图与核验JSON及SHA256已归档。旧版Blocked/局部通过保留历史，不视为移除能力已实现。
+
+已更新用例、脚本、registry、当前状态和配置说明；11项离线检查通过。001～020当前7 Passed、5 Failed、2 Blocked、6 Not Applicable；其余48条未计本轮，006/020仍Blocked，6条延期Not Applicable及5条既有云效关联保持。本次无computer-use、云效写入或推送。[019前置、完整提示词、实跑结果和截图](cases/requirements/ERYE-199/results-019-v2-static-transform-production-20261113.md) · [当前状态](cases/requirements/ERYE-199/execution-status-current.md)。
+<!-- /ERYE199-019-V2-20261113 -->
+
+<!-- ERYE199-UNIMPLEMENTED-YUNXIAO-20261113 -->
+## 2026-11-13 ERYE-199 016/017/018/020功能未实现已同步
+
+按用户明确要求，通过官方OpenAPI分别新建：016→FWXC-509（真实子序列创建）、017→FWXC-510（共享引用/独立副本前置）、018→FWXC-511（父子范围/嵌套校验前置）、020→FWXC-512（可编辑属性关键帧）。标题均含“功能未实现”，不查历史重复。每条九段正文含精简前置、完整提示词及复现步骤；6张原始截图已上传嵌入，17附件和正文/字段回读验证通过。状态🤔AI提缺陷，负责人牛诗晴，优先级高、2-严重、重构10-29、生产环境。
+
+017/018仅复用016前置失败截图，明确来源；共享/副本、范围/循环/深度目标步骤未执行，未来回归提示词标注未发送。本次不重跑产品、不重发原任务。020同步为本轮Not Applicable并在运行器跳过，原Blocked保留历史；当前7条排除，015/019 v2 Passed、006仍Blocked，原5个云效关联保留，累计9个云效关联。001～020当前7 Passed、5 Failed、1 Blocked、7 Not Applicable，其余48条未计本轮。11项离线检查通过；无computer-use或推送。[本次云效、截图和范围](cases/requirements/ERYE-199/defects-unimplemented-016-018-020-production-20261113.md) · [当前状态](cases/requirements/ERYE-199/execution-status-current.md)。
+<!-- /ERYE199-UNIMPLEMENTED-YUNXIAO-20261113 -->
+
+<!-- ERYE199-MANUAL-021-049-20261113 -->
+## 2026-11-13 ERYE-199 021～049页面执行（不含删除040）
+
+用户要求021～050执行且暂不接入自动化，随后明确删除040/050；两条已移除有效用例和registry，原条目归档不复用。当前有效66条，本轮剩余28条；阶段Completed，2 Passed、1 Failed、1 Blocked、24 Not Applicable。使用生产新项目、Ego Lite有头TaskSpace9，不使用computer-use、不提交云效或推送。依赖项只记录本轮源前置证据、未执行目标明确说明，局部通过不替代整例通过。自动化标记全部保留PLAN，脚本为空。
+
+[本轮详细步骤、提示词和截图](cases/requirements/ERYE-199/results-021-049-manual-production-20261113.md) · [当前状态](cases/requirements/ERYE-199/execution-status-current.md)。001～020原实测和9个云效关联保持。
+<!-- /ERYE199-MANUAL-021-049-20261113 -->
+
+<!-- ERYE199-030-YUNXIAO-20261113 -->
+## 2026-11-13 ERYE199-030失败已同步云效
+
+通过官方OpenAPI直接新建[FWXC-517](https://devops.aliyun.com/projex/project/1e401ac99539c3999e00e40006/bug#openWorkitemIdentifier=a8dc2ee87914e60ad64d64254c)：组合请求导出SRT及样式字幕时整体失败，报Unknown or missing editor fields。正文含3条精简前置、完整失败提示词/单独SRT补充指令、详细复现步骤及边界；3张原始截图上传嵌入，7附件与正文/字段回读验证通过。状态🤔AI提缺陷，负责人牛诗晴，优先级高、2-严重、重构10-29、生产环境。
+
+单独SRT导出成功、ASS/SSA不支持均明确保留，未将未实现格式本身当作故障；030保持Failed、自动化PLAN，未重跑、重发或推送。本轮28条仍2 Passed、1 Failed、1 Blocked、24 Not Applicable，040/050保持删除。当前关联云效共10条（原9条+本次030），其余结果不变。[同步记录与完整缺陷](cases/requirements/ERYE-199/defects-030-combined-subtitle-export-production-20261113.md) · [当前状态](cases/requirements/ERYE-199/execution-status-current.md)。
+<!-- /ERYE199-030-YUNXIAO-20261113 -->
+
+<!-- ERYE199-049-V2-20261113 -->
+## 2026-11-13 ERYE199-049按当前发送/停止交互修订
+
+用户明确当前没有独立重试功能，运行中再次点击发送就是停止。049 v2改为从会话发送导出请求→运行中点击同一入口停止→确认停止后新提交→完成后再独立提交并检查产物不覆盖；不把运行中停止点击当作第二次提交，不把停止后新任务称作失败重试。保留对真实任务状态/后续产物的核验，不能将会话停止直接当作已证实渲染子任务停止。
+
+新版Not Run、待复测，原Blocked和截图/产物保留历史；本次只改定义与进度，没有浏览器执行、云效写入或脚本接入。当前本批2 Passed、1 Failed、24 Not Applicable、1 Not Run，其他实测不变；030及FWXC-517、10个云效关联保持。[049 v2完整前置、提示词、步骤和预期](cases/requirements/ERYE-199/revision-049-send-stop-20261113.md) · [当前状态](cases/requirements/ERYE-199/execution-status-current.md)。
+<!-- /ERYE199-049-V2-20261113 -->
+
+<!-- ERYE199-049-V2-PASSED-20261113 -->
+## 2026-11-13 ERYE199-049 v2按发送/停止交互复测通过
+
+用户说明发送入口运行时为停止、没有独立失败重试后，049 v2在生产新项目/会话/工程以Ego Lite TaskSpace10实跑Passed。定稿指令按已保存设置导出完整工程，不要求区间/参数覆盖；被停止原请求queued→cancelled且直到两次新任务完成仍无结果，页面恢复发送。随后独立新任务A、B均done且实际下载，B后从A卡再下载，三份哈希相同，均20秒/640×360/30fps/48kHz；两个历史结果入口可访问，工程全内容未改。相同内容返回相同文件引用不单独判失败。
+
+覆盖为已受理排队阶段停止、停止后新提交和完成后独立提交；渲染已经开始后的停止未执行，不声称后台渲染终止已验证。草稿参数/区间请求的明确拒绝也保留记录，不冒充产物成功。原Blocked及修订时Not Run保留历史，本批仍PLAN不接自动化。当前本批3 Passed、1 Failed、24 Not Applicable；030及FWXC-517、10个云效关联不变，无本轮云效写入或推送。[实跑、完整提示词、截图及下载核验](cases/requirements/ERYE-199/results-049-v2-send-stop-production-20261113.md) · [当前状态](cases/requirements/ERYE-199/execution-status-current.md)。
+<!-- /ERYE199-049-V2-PASSED-20261113 -->
+
+<!-- ERYE199-NA-CURRENT-CAPABILITIES-20261113 -->
+## 2026-11-13 ERYE199原24条不适用原因及现有能力优化
+
+原24条为18条直接能力／组合范围缺口、6条前置依赖缺失，不等于24条失败。028／029／034／042／047／048按当前支持的全局字幕、混合文字、0.25～4倍速、片段音量、现有对象预览导出及全屏预览优化为v2，完整前置、步骤、提示词／无需提示词、预期已写入正式条目，当前均Not Run。另18条核心能力尚不存在，保留原目标并明确延期和恢复条件，不以其他工作流替代验收。旧24条定义、Not Applicable及截图保留历史。
+
+本批28条当前3 Passed、1 Failed、18 Not Applicable、6 Not Run；合并001～020的48条当前10 Passed、6 Failed、1 Blocked、25 Not Applicable、6 Not Run，另051～068有18条未执行，共66条有效、24条待执行。030/FWXC-517及049 v2 Passed保持，既有10个云效关联不变。本次只修订文档和状态，未页面执行、云效写入或推送；本批仍PLAN、脚本为空，不接自动化。
+
+[逐条原因及优化范围](cases/requirements/ERYE-199/revision-na-current-capabilities-20261113.md) · [当前状态](cases/requirements/ERYE-199/execution-status-current.md)。
+<!-- /ERYE199-NA-CURRENT-CAPABILITIES-20261113 -->
+
+<!-- ERYE199-UNFINISHED24-YUNXIAO-20261113 -->
+## 2026-11-13 原24条未完成需求已汇总提交云效
+
+按用户“提出未完成需求就好”的最新要求，通过tools/yunxiao官方OpenAPI直接创建[FWXC-525](https://devops.aliyun.com/projex/project/1e401ac99539c3999e00e40006/bug#openWorkitemIdentifier=1bea8a02a752c39eb065fe77f6)，标题含功能未实现；正文按15组列清原24条能力缺口，不展开提示词／复杂步骤。6张代表原图已上传嵌入，7附件及正文／字段回读通过；🤔AI提缺陷、牛诗晴、高、2-严重、重构10-29、生产环境。18条直接缺口与6条依赖未执行明确区分；6条v2仍Not Run、另18条仍Not Applicable，不记新失败。累计11个不同云效缺陷，原10个关联保持，24条共享一单不计作24个新建；本次未重跑、未接自动化或推送。
+
+[同步及本地正文](cases/requirements/ERYE-199/defects-unfinished-24-production-20261113.md) · [当前状态](cases/requirements/ERYE-199/execution-status-current.md)。
+<!-- /ERYE199-UNFINISHED24-YUNXIAO-20261113 -->
+
+2026-11-13用户执行期间明确删除ERYE199-060/061，两条未开始执行，原定义归档于 `docs/cases/requirements/ERYE-199/retired-cases-060-061-20261113.json`，编号不复用。有效64条，本轮改为051～059、062～068共16条。
+
+<!-- ERYE199-051-068-PRODUCTION-20261113 -->
+## 2026-11-13 ERYE199-051～059、062～068执行完成
+
+生产新项目、Ego Lite有头TaskSpace11；用户删除060/061，原条目退役不复用，未跑性能负载。本批16条7 Passed、1 Failed、2 Blocked、6 Not Applicable；已接入cases-051-068.mjs及057 crash-recovery.mjs，无新增依赖。054补齐页面选择/目标后完成；059原请求断网恢复通过；057捕获明确Inspector.targetCrashed，用户接管时暂停、明确继续后原场景恢复，仅覆盖未发送保存分支。064媒体→工程提示执行服务未返回有效JSON（504）且列表为空；058缺旧端，068空工程无独立两页入口。051/052/053/055/056/063不适用，依赖或纯内部协议不计产品失败。定位、同义提示、隐藏DOM问题修正并保留历史，不当作产品缺陷。
+
+有效64条当前17P/7F/3B/31NA/6NR；原6条优化v2仍Not Run，原11个不同云效缺陷保持。本次无computer-use、云效写入或推送；021～049继续不接自动化。截图/摘要/哈希和逐例范围已归档。
+
+[本次实测与截图](cases/requirements/ERYE-199/results-051-068-production-20261113.md) · [当前状态](cases/requirements/ERYE-199/execution-status-current.md)。
+验证：11项定向离线校验、528条用例格式检查、34份证据哈希及文档链接均通过。TaskSpace11已正常结束一次；Ego Lite更新提示未执行升级。
+<!-- /ERYE199-051-068-PRODUCTION-20261113 -->
+
+<!-- ERYE237-029-RETIRED-20261113 -->
+2026-11-13：用户确认FWXC-532所述默认尺寸变化不作为缺陷，并要求删除ERYE237-029。已移除主用例、Agent配对、Technical分支及registry条目，后续不执行、不回归、不再进入缺陷待办；编号不复用。当前143条有效、46 UI/25 Agent/72 Technical，P0 94/P1 48/P2 1。云效只读核对为已关闭，本次未改云效、未重测。原条目及旧记录仅留历史归档，不计当前待办。
+<!-- /ERYE237-029-RETIRED-20261113 -->
+
+<!-- ERYE199-068-V2-PASSED-20261116 -->
+## 2026-11-16 ERYE199-068按当前空工程功能优化并复测通过
+
+用户要求将068旧独立字幕/素材两页空态调整为当前总空态。已在原编号写明前置、步骤和预期，原位同步自动化；生产新测试项目/会话/空工程、Ego Lite有头实跑Passed：空白工程标题及媒体引导可见，选择媒体按钮启用、导出禁用；刷新和收起再展开后仍同一空工程，无新增对象或run。只验证按钮状态，不点媒体选择或做导入，不宣称旧两页目标已覆盖。旧Blocked、修订时Not Run与截图均保留历史；初始化及窗口最小化的执行问题已恢复后继续，不当产品失败。
+
+有效64条当前18P/7F/2B/31NA/6NR；原16条范围按现定义8P/1F/1B/6NA，058/006仍Blocked，原6条优化版仍Not Run。其他用例、原云效关联不变。本次无素材上传、Agent生成、computer-use、云效写入或推送；021～049仍不接自动化。
+
+[068 v2实测与4张原图](cases/requirements/ERYE-199/results-068-v2-empty-project-production-20261116.md) · [当前状态](cases/requirements/ERYE-199/execution-status-current.md)。
+验证：11项定向离线校验、527条用例格式检查及6份证据文件哈希/链接通过；本次TaskSpace1已正常结束一次，未执行工具升级。
+<!-- /ERYE199-068-V2-PASSED-20261116 -->
+
+<!-- ERYE199-058-RETIRED-20261116 -->
+## 2026-11-16 ERYE199-058按用户要求删除
+
+058已从正式用例、registry、自动化函数和后续运行范围移除，原Blocked及截图归档，编号不复用。当前有效63条18P/7F/1B/31NA/6NR，仅006仍Blocked；068 v2 Passed、原六条优化版Not Run和其他用例保持。051～068现行有效15条8P/1F/0B/6NA，范围命令自动排除058/060/061，直接调用执行器也在浏览器/项目准备前排除。历史执行和截图不删除，不把退役计作通过；本次无生产重跑、云效写入或推送。
+
+[058退役范围和原条目](cases/requirements/ERYE-199/retired-case-058-20261116.md) · [当前进度](cases/requirements/ERYE-199/execution-status-current.md)。
+验证：12项定向离线校验、526条用例格式检查通过；--list仅列出现行15条，原截图/归档和链接核对通过。
+<!-- /ERYE199-058-RETIRED-20261116 -->
+
+<!-- CREATOR-FIXED-PROD-REGRESSION-20261117 -->
+2026-11-17历史实测：创建者陈亚宾、初始已修复，共34条；项目按最新授权首条新建、后续优先复用，必要时隔离会话/工程。Passed 23 / Failed 7 / Blocked 4；云效状态已回读 29 条。逐例步骤、结果及截图见[回归记录](defect-regressions/creator-chenyabin-fixed-production-20261117.md)。不向用例统一入口写执行结果。
+2026-11-18用户确认关闭FWXC-403、FWXC-399：当前方案待审核时无正常重复发送入口，原重复提交缺陷关闭，云效均已回读为“已关闭”。历史实测统计保留，不改记通过；当前仍待处理的阻塞为FWXC-484、FWXC-462，共2条。
+<!-- /CREATOR-FIXED-PROD-REGRESSION-20261117 -->
+
+<!-- CREATOR-FIXED-PROD-REGRESSION-20261120 -->
+2026-11-20生产回归：陈亚宾创建、初始已修复29条，Passed 22 / Failed 4 / Blocked 3 / Not Run 0，云效状态已写入并回读25条。Ego Lite使用与主程序匹配的0.6.3.14已恢复生产连接；按用户提供会话复用所在项目，新建独立回归工程，保留用户现有配音内容。403/399已关闭，不再回归。 [本轮记录](defect-regressions/creator-chenyabin-fixed-production-20261120.md)。
+<!-- /CREATOR-FIXED-PROD-REGRESSION-20261120 -->
+
+<!-- CREATOR-FIXED-PROD-REGRESSION-20261123 -->
+2026-11-23 生产回归，陈亚宾创建且初始状态为「已修复」。共 21 条，8 通过、7 失败、6 阻塞、0 待执行。云效状态写入并回读 15 条。 [逐条结果与截图](defect-regressions/creator-chenyabin-fixed-production-20261123.md)。
+FWXC-580、FWXC-247 的生产成片补验通过。两份原成片均从交付卡下载、本地播放正常，音视频完整解码无错误，截图已归档。
+<!-- /CREATOR-FIXED-PROD-REGRESSION-20261123 -->
 
 <!-- SSO-NIGHTLY-20261123 -->
 2026-11-23生产SSO执行前Blocked：27例129轮计划，0提交。只读确认38仍user-owned；旧017 R2终态未回读，尚待已告知的明确恢复指示。原片SHA/参数及完整解码重新核验，未验证登录、未接管或新开绕过；不重复通知。[本日报告](design-cases/multi-workflow/sso-nightly-prod-results-20261123.md)。无云效/README/Git写入。

@@ -1,5 +1,72 @@
 # ERYE-210 编辑器导航与模块业务业务分析与测试点
 
+<!-- ERYE210-014-V2-20261116 -->
+ERYE210-014 v2（水印开关/跨TAB控件限制及内容恢复）已在本例独立新项目、会话、工程的生产有头Chrome实跑Passed；OFF限制、五TAB保持、ON恢复、文字修改切页与刷新保持、图片及原音视频/字幕不串改全部通过。原真实只读身份浏览/权限拒绝保持待覆盖，旧Blocked定义和记录保留。当前56有效/0退役：50 Passed / 6 Failed / 0 Blocked / 0 Not Applicable / 0 Not Run；其他55条及云效关联保持。56个唯一AUTO入口，旧014门禁不再注册。本轮无产品失败，调试断言修正前截图单列历史；未生成/导出、未写云效或推送Git。 [014本轮报告](results-014-v2-production-20261116.md) · [完整用例](case-014-v2-watermark-toggle-production-20261116.md)。下方旧“014唯一门禁”说明为历史。
+<!-- /ERYE210-014-V2-20261116 -->
+
+
+<!-- ERYE210-RESTORED5-20261116 -->
+当前56条有效、0退役：49 Passed / 6 Failed / 1 Blocked / 0 Not Applicable / 0 Not Run。本轮最后5条：3 Passed / 2 Failed / 0 Blocked / 0 Not Applicable / 0 Not Run。004/018/020分别新建原生翻译配音项目，初次积分不足仅保留历史；用户调积分后在新批次补跑，实际结果逐例记录。原51条及007/FWXC-585、015/FWXC-586、047/FWXC-579、049/FWXC-580关联保持。 [完整定义](case-restored-final-five-production-20261116.md) · [执行/截图](results-restored-final-five-production-20261116.md)。所有原11退役条目已分批按用户要求恢复，旧退役清单仅历史；原结果卡快捷定位、旧审核入口和其他延期分支不计覆盖。
+<!-- /ERYE210-RESTORED5-20261116 -->
+
+
+<!-- ERYE210-RESTORED8-20261116 -->
+当前有效51条：46 Passed / 4 Failed / 1 Blocked / 0 Not Applicable / 0 Not Run；仍退役5条（004/005/018/020/041）。本轮8条：6 Passed / 2 Failed / 0 Blocked / 0 Not Applicable / 0 Not Run。014原Blocked及047/FWXC-579、049/FWXC-580原Failed保持，其他43条未重跑。 [本轮定义](case-restored-eight-production-20261116.md) · [执行/截图](results-restored-eight-production-20261116.md)。原11条退役清单及统计为历史；恢复6条保留编号和原失败/缺陷，010跨账号/设备、007旧映射和002外部素材入口仍延期。
+<!-- /ERYE210-RESTORED8-20261116 -->
+
+
+<!-- ERYE210-046048-V3-20261116 -->
+当前43条：**40 Passed / 2 Failed / 1 Blocked / 0 Not Applicable / 0 Not Run**。046/048 v3生产Chrome实跑2 Passed；014保持原Blocked，047/FWXC-579与049/FWXC-580保持Failed和云效关联。旧二次分析、配音稿修改/单句再生成仍延期，其他41条未重跑。 [完整定义](case-046-048-v3-current-controls-20261116.md) · [本轮结果](results-046-048-v3-production-20261116.md)。048使用真实译制原始工程独立副本，保留真实8句声音和中英字幕；不要求故障配音面板，不触发生成。046在同次真实分析/清理页面恢复。
+<!-- /ERYE210-046048-V3-20261116 -->
+
+
+<!-- current-five-20261116 -->
+## 2026-11-16 当前功能5条替换与执行边界
+
+用户确认以当前功能风险替换045～049，014保留阻塞。旧入口/缓存迁移及版本回退目标独立延期，旧定义/结果完整保存，不以当前功能通过覆盖迁移。047/048按用户纠正，必须是真实翻译配音工程，并只读取既有声音作为前置，不能用普通视频+手工字幕或复制后丢失上下文的工程代替。
+
+045通过；047单句再生成和049原生导出因页面错误失败；046会话明确分析后回复不能限定保留区间、未启动二次分析，048既有配音页无法稳定恢复，因此两条阻塞。没有据此断言已删除区间算法错误或字幕串用。当前43条38P/2F/3B；详见[执行报告](results-045-049-current-functions-prod-20261116.md)及[当前进度](execution-status-current.md)。
+
+
+## 2026-11-16 051复测Passed
+
+独立新工程真实Agent调音完成，音量线50%、刷新保持；当前43条37P/0F/6B。原11-13失败及九条批次保留历史，其他用例未重跑，未云效写入。[本轮步骤及截图](results-051-rerun-prod-20261116.md) · [当前状态](execution-status-current.md)。
+
+## 最新九条优化与补齐实跑（2026-11-13）
+
+用户确认优化011/017/019并补齐016/050～054。当前43条36 Passed / 1 Failed / 6 Blocked / 0 Not Applicable / 0 Not Run；本轮8P/1F（051）。43个脚本入口全部登记，37 AUTO和6前置门禁。旧结果卡快捷定位、远端执行失败恢复及受限批量拒绝风险仍延期，旧结果/云效不改。051明确目标仍无法自动定位背景音轨，保留Failed，未提交云效。
+
+[完整前置和可验证预期](case-nine-optimized-supplement-20261113.md) · [逐项结果和截图](results-completion-nine-prod-20261113.md) · [当前状态](execution-status-current.md)。下文均保留早期定义/执行时点。
+
+## 2026-11-13 退役11条失败用例后的当前范围
+
+用户确认退役002/004/005/007/010/013/015/018/020/040/041，保留现有已通过11条v2、不复用编号。当前有效43条：28P/0F/9B/0NA/6NR；默认38个脚本入口（32 AUTO、6 BLOCKED），另5 PLAN。当前0 Failed不表示原缺陷已修复。
+
+[完整退役清单、原失败及云效链接](retired-failed-cases-20261113.md) · [当前进度](execution-status-current.md)。后文54条/49入口及旧失败为历史统计，按日期和本节区分。原证据及云效状态保持。
+
+
+## 2026-11-13 当前功能11条v2实跑完成
+
+本批11 Passed / 0 Failed / 0 Blocked / 0 Not Applicable / 0 Not Run；54条当前28 Passed / 11 Failed / 9 Blocked / 0 Not Applicable / 6 Not Run。使用生产有头Chrome，新工程串行零自动重试。正文中“未执行”指上一轮定义更新时点，当前状态以[本轮报告](results-021-035-v2-prod-20261113.md)和[当前进度](execution-status-current.md)为准；旧v1历史不覆盖新版实测。
+
+
+## 2026-11-13 当前功能v2定义更新（未执行）
+
+11条（021、025～027、029～035）改为当前功能v2，Not Run；旧Blocked快照保留。045～049仍为真实旧版迁移专项Blocked，不用普通导航替换。当前17P/11F/9B/0NA/17NR；49个脚本入口为43 AUTO、6 BLOCKED门禁，另外5 PLAN。040/041及既有云效关联保持。
+
+[完整前置、步骤、预期及旧范围](case-021-035-v2-current-features-20261113.md) · [当前进度](execution-status-current.md)。
+
+
+2026-11-13最新019 v2执行：Blocked。A1在22秒单删通过；删除前S1/D1引用一致，但单删S1未拒绝，未建立混合工程/执行混合删除。另见14秒A1删除影响原视频/原声的独立观察，未同步云效。当前54条6P/9F/4B/0NA/35NR，016 v2仍Not Run。[本轮完整证据](results-019-v2-prod-20261113.md)。以下定义更新/旧批次为历史。
+
+2026-11-13最新定义：019 v2采用关联字幕S1/配音D1＋独立音频A1混合删除，必须先做A1合法单删和S1受限单删两个独立对照，未执行、Not Run。旧入口探测不足以排除关联冲突，旧Not Applicable仅保留历史；当前54条6P/9F/3B/0NA/36NR。[完整前置、步骤与判定](case-019-v2-linked-delete-20261113.md)。以下旧批次统计保留历史。
+
+2026-11-13最新定义更新：016 v2限定Windows Chrome，验证图片水印无素材限制与上传后恢复，当前Not Run。旧v1 Blocked保留历史；当前54条6P/9F/3B/1NA/35NR。[完整前置、步骤与预期](case-016-v2-windows-20261113.md)。以下执行批次统计为历史记录。
+
+2026-11-13最新批次016～020：2 Failed / 2 Blocked / 1 Not Applicable；当前54条6P/9F/4B/1NA/34NR。018原配音任务没有可应用结果；020新稿切页保留但撤销未恢复；016/017缺前置，019按当前Chrome入口适用性登记。[本轮报告](results-016-020-prod-20261113.md)。以下旧批次及分析保留历史。
+
+2026-11-13最新执行：011～015为1 Passed / 2 Failed / 2 Blocked；011后台完成不抢PB通过，结果卡分支缺前置；014缺真实只读身份。当前54条6P/7F/2B/39NR。[本轮详细结果](results-011-015-prod-20261113.md)，以下历史分析/数据定义不代替执行结果。
+
 更新：2026-11-05。本次按用户要求优化现有54条用例，不新增执行；[详细用例](cases.md)、[数据前置](test-data.md)、[统一业务验收口径](../../editor-business-acceptance.md)、[联合规则](../../editor-linked-196-206-210.md)。
 
 ## 需求业务摘要
@@ -36,7 +103,11 @@
 
 ## 当前进度
 
-本需求54条全部PLAN/Not Run，本次没有提交业务任务或修改真实工程。
+<!-- ERYE210-CLOUD-20261113 -->
+3条未通过已同步为FWXC-482/483/484；前置各三条，7截图/16附件及正文回读通过。[云效同步明细](defects-production-20261113.md)。
+<!-- /ERYE210-CLOUD-20261113 -->
+
+本需求54条，001～020共20个脚本入口（19 AUTO、014仅门禁），其他34条PLAN；当前6 Passed / 9 Failed / 3 Blocked / 0 Not Applicable / 36 Not Run。016/019 v2已优化但未执行，旧v1 Blocked保留历史。[当前逐例进度](execution-status-current.md) · [自动化说明](automation.md)。
 
 ## 最新Figma页面与差异
 
@@ -47,3 +118,24 @@
 只保留影响用户结果的待确认项：实际参数范围/字符计数、端支持、保存/草稿处理、历史/任务保留、字幕和声音同步规则、可用导出规格、授权范围及业务性能目标。尚未确认时记录具体边界；不再等待拟定接口/字段表/错误码/内部故障点才能开始页面验收。已确认业务缺失不自动记不适用。
 
 设计规模54条：P0 51 / P1 3 / P2 0。静态检查只证明文档一致，不增加执行通过数。
+
+
+## 008替换决策（2026-11-13）
+
+用户确认没有失效链接并要求优化替换。新版008覆盖当前真实UI的面板收起/展开及收起后切换模块，来源标为Inferred QA Risk，保持编号和P0/Major；007验证关闭重开编辑器、009验证播放位置与选区、010验证工程记忆，故不重复。原无效链接异常回退风险移入待准备项，不宣称该风险已覆盖；补齐真实样本后再决定恢复专项。新版已在生产Chrome执行Passed，历史Blocked保留。
+
+
+008 v2本轮已通过仓库脚本完成，五模块收起/展开及收起后切页、原8字幕、完整保存内容和版本1→1保持；补查视频帧就绪后原片画面正确恢复；[实际结果与截图](results-008-v2-prod-20261113-04.md)。仅008重跑，其他用例状态保留。
+
+
+## 007/010生产复测（2026-11-13）
+
+007：Failed，Image重开变Text、刷新变Captions；010：Failed，页内双工程视图分别恢复正确，但PB刷新变Captions。等待页面就绪和恢复轮询后仍复现，工程保存内容/版本不变。旧voice、U2/D2分支仍缺前置，未执行。[本轮结果与截图](results-007-010-rerun-prod-20261113.md)。
+
+
+007/010复测失败已通过官方OpenAPI同步为[FWXC-488](https://devops.aliyun.com/projex/project/1e401ac99539c3999e00e40006/bug#openWorkitemIdentifier=015794cee8eba6c88c1078ec6b)、[FWXC-489](https://devops.aliyun.com/projex/project/1e401ac99539c3999e00e40006/bug#openWorkitemIdentifier=8f1fd31451866906c2a5208cd2)，前置各三条，6截图/12附件及正文回读通过；[同步明细](defects-007-010-production-20261113.md)。两例保持Failed。
+
+
+## 2026-11-13 021～049执行补充
+
+本轮021～049：11 Passed / 2 Failed / 16 Blocked / 0 Not Applicable / 0 Not Run；当前54条17 Passed / 11 Failed / 20 Blocked / 0 Not Applicable / 6 Not Run。人工金标、真实旧版本样本、字段取消契约及跨账号/恢复环境缺口已逐例记录。详见[执行报告](results-021-049-prod-20261113.md)。
