@@ -1,3 +1,7 @@
+<!-- ERYE199-012-116-PROD-20261126 -->
+2026-11-26，按当前页面能力修订并生产复测 ERYE199-012、116。012 通过，116 通过（36/36 个有效组合通过），126 保留阻塞。合并本次结果后，120 条生产批次为 89 通过、30 失败、1 阻塞，另有 22 条版本暂缓。 [复测报告与核验数据](results-012-116-current-production-20261126.md)
+<!-- /ERYE199-012-116-PROD-20261126 -->
+
 <!-- ERYE199-051-V4-CORRECTION-20261123 -->
 2026-11-23：ERYE199-051 v4 创建前的入口预期修正为「选择媒体」。原生产证据覆盖空态显示、选取媒体建成工程及刷新后入口不再显示，按新版预期复核为 Passed。当前 142 条有效用例为 47 Passed、20 Failed、1 Blocked、21 Not Applicable、53 Not Run。 [复核记录](revision-051-select-media-20261123.md)
 <!-- /ERYE199-051-V4-CORRECTION-20261123 -->
@@ -124,7 +128,7 @@ ERYE199-017 → [FWXC-590](https://devops.aliyun.com/projex/project/1e401ac99539
 | ERYE199-009 | AUTO | Passed | 同源两实例效果隔离且刷新保持 |
 | ERYE199-010 | AUTO | Failed | B拖到原视频轨5秒仍新增第二视频轨，A保留0～10秒、B位于新轨5～15秒，未同轨覆盖。；[最新截图](results-failed-ten-rerun-production-20261116.md#erye199-010)；云效FWXC-487关联保持 |
 | ERYE199-011 | AUTO | Passed | A及已有关联原声从0～10移至2～12秒；M源0～2秒/时间线8～10秒/30%不变，空档与原片映射、实际播放和刷新正确。；[步骤/原图](results-nine-v2-production-20261116.md#erye199-011) |
-| ERYE199-012 | AUTO | Blocked | 普通移动B到7秒正确，Delete删除A后B仍7～12秒，原自动前移缺陷未复现；应用明确不支持独立波纹删除空隙，后半步骤未完成，整例Blocked。；[最新截图](results-failed-ten-rerun-production-20261116.md#erye199-012)；云效FWXC-491关联保持 |
+| ERYE199-012 | AUTO | Passed | B移到7～12秒，6秒预览为空。删除A并刷新后，B仍为7～12秒，来源和源范围保持。 [复测报告](results-012-116-current-production-20261126.md#erye199-012)；云效FWXC-491关联保持 |
 | ERYE199-013 | AUTO | Passed | 视频/关联原声0.5倍速20秒，Fixed A1～3秒和Fixed B6～8秒未拉伸；2/7秒字幕及源画面正确、4/14秒空字幕，刷新保持。；[步骤/原图](results-nine-v2-production-20261116.md#erye199-013) |
 | ERYE199-014 | PLAN | Not Applicable | 没有真实轨道编辑锁，隐藏/静音不构成编辑锁。[最新定义](revision-na31-current-capabilities-20261116.md)；[云效FWXC-595](https://devops.aliyun.com/projex/project/1e401ac99539c3999e00e40006/bug#openWorkitemIdentifier=da802459f8a291e0c713adde60) |
 | ERYE199-015 | AUTO | Passed | 015 v2 Passed：点击时间轨前方图标，隐藏/显示画面、原声静音/启用均正确；隐藏静音及恢复后刷新保持；片段、原片引用和源范围未删除或串改。不包含solo、导出隔离。 |

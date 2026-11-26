@@ -1,0 +1,519 @@
+{
+  "date": "2026-11-26",
+  "environment": "production",
+  "ERYE199-012": {
+    "status": "Passed",
+    "previewAtGap": {
+      "time": 6,
+      "visibleVideo": false
+    },
+    "originalSourcePreserved": true,
+    "videoTrackPreserved": true,
+    "timeline": {
+      "after-move": [
+        {
+          "timelineStartSeconds": 0,
+          "sourceInSeconds": 0,
+          "sourceOutSeconds": 5,
+          "playbackRate": 1
+        },
+        {
+          "timelineStartSeconds": 7,
+          "sourceInSeconds": 0,
+          "sourceOutSeconds": 5,
+          "playbackRate": 1
+        }
+      ],
+      "after-delete": [
+        {
+          "timelineStartSeconds": 7,
+          "sourceInSeconds": 0,
+          "sourceOutSeconds": 5,
+          "playbackRate": 1
+        }
+      ],
+      "after-refresh": [
+        {
+          "timelineStartSeconds": 7,
+          "sourceInSeconds": 0,
+          "sourceOutSeconds": 5,
+          "playbackRate": 1
+        }
+      ]
+    },
+    "baselineRestored": true
+  },
+  "ERYE199-116": {
+    "status": "Passed",
+    "variants": [
+      {
+        "profile": "X1",
+        "role": "video",
+        "part": "move-before-zero",
+        "status": "Passed",
+        "checks": {
+          "result": true,
+          "others": true,
+          "persisted": true
+        },
+        "changed": false,
+        "restored": true
+      },
+      {
+        "profile": "X1",
+        "role": "video",
+        "part": "head",
+        "status": "Passed",
+        "checks": {
+          "result": true,
+          "others": true,
+          "persisted": true
+        },
+        "changed": true,
+        "restored": true
+      },
+      {
+        "profile": "X1",
+        "role": "video",
+        "part": "tail",
+        "status": "Passed",
+        "checks": {
+          "result": true,
+          "others": true,
+          "persisted": true
+        },
+        "changed": true,
+        "restored": true
+      },
+      {
+        "profile": "X1",
+        "role": "video",
+        "part": "esc",
+        "status": "Passed",
+        "checks": {
+          "result": true,
+          "others": true,
+          "persisted": true
+        },
+        "changed": false,
+        "restored": true
+      },
+      {
+        "profile": "X1",
+        "role": "BGM",
+        "part": "move-before-zero",
+        "status": "Passed",
+        "checks": {
+          "result": true,
+          "others": true,
+          "persisted": true
+        },
+        "changed": false,
+        "restored": true
+      },
+      {
+        "profile": "X1",
+        "role": "BGM",
+        "part": "head",
+        "status": "Passed",
+        "checks": {
+          "result": true,
+          "others": true,
+          "persisted": true
+        },
+        "changed": true,
+        "restored": true
+      },
+      {
+        "profile": "X1",
+        "role": "BGM",
+        "part": "tail",
+        "status": "Passed",
+        "checks": {
+          "result": true,
+          "others": true,
+          "persisted": true
+        },
+        "changed": true,
+        "restored": true
+      },
+      {
+        "profile": "X1",
+        "role": "BGM",
+        "part": "esc",
+        "status": "Passed",
+        "checks": {
+          "result": true,
+          "others": true,
+          "persisted": true
+        },
+        "changed": false,
+        "restored": true
+      },
+      {
+        "profile": "X1",
+        "role": "D",
+        "part": "move-before-zero",
+        "status": "Passed",
+        "checks": {
+          "result": true,
+          "others": true,
+          "persisted": true
+        },
+        "changed": true,
+        "restored": true
+      },
+      {
+        "profile": "X1",
+        "role": "D",
+        "part": "head",
+        "status": "Passed",
+        "checks": {
+          "result": true,
+          "others": true,
+          "persisted": true
+        },
+        "changed": true,
+        "restored": true
+      },
+      {
+        "profile": "X1",
+        "role": "D",
+        "part": "tail",
+        "status": "Passed",
+        "checks": {
+          "result": true,
+          "others": true,
+          "persisted": true
+        },
+        "changed": true,
+        "restored": true
+      },
+      {
+        "profile": "X1",
+        "role": "D",
+        "part": "esc",
+        "status": "Passed",
+        "checks": {
+          "result": true,
+          "others": true,
+          "persisted": true
+        },
+        "changed": false,
+        "restored": true
+      },
+      {
+        "profile": "X1",
+        "role": "source",
+        "part": "move-before-zero",
+        "status": "Passed",
+        "checks": {
+          "result": true,
+          "others": true,
+          "persisted": true
+        },
+        "changed": false,
+        "restored": true
+      },
+      {
+        "profile": "X1",
+        "role": "source",
+        "part": "esc",
+        "status": "Passed",
+        "checks": {
+          "result": true,
+          "others": true,
+          "persisted": true
+        },
+        "changed": false,
+        "restored": true
+      },
+      {
+        "profile": "X1",
+        "role": "narration",
+        "part": "move-before-zero",
+        "status": "Passed",
+        "checks": {
+          "result": true,
+          "others": true,
+          "persisted": true
+        },
+        "changed": true,
+        "restored": true
+      },
+      {
+        "profile": "X1",
+        "role": "narration",
+        "part": "head",
+        "status": "Passed",
+        "checks": {
+          "result": true,
+          "others": true,
+          "persisted": true
+        },
+        "changed": true,
+        "restored": true
+      },
+      {
+        "profile": "X1",
+        "role": "narration",
+        "part": "tail",
+        "status": "Passed",
+        "checks": {
+          "result": true,
+          "others": true,
+          "persisted": true
+        },
+        "changed": true,
+        "restored": true
+      },
+      {
+        "profile": "X1",
+        "role": "narration",
+        "part": "esc",
+        "status": "Passed",
+        "checks": {
+          "result": true,
+          "others": true,
+          "persisted": true
+        },
+        "changed": false,
+        "restored": true
+      },
+      {
+        "profile": "X2",
+        "role": "video",
+        "part": "move-before-zero",
+        "status": "Passed",
+        "checks": {
+          "result": true,
+          "others": true,
+          "persisted": true
+        },
+        "changed": false,
+        "restored": true
+      },
+      {
+        "profile": "X2",
+        "role": "video",
+        "part": "head",
+        "status": "Passed",
+        "checks": {
+          "result": true,
+          "others": true,
+          "persisted": true
+        },
+        "changed": true,
+        "restored": true
+      },
+      {
+        "profile": "X2",
+        "role": "video",
+        "part": "tail",
+        "status": "Passed",
+        "checks": {
+          "result": true,
+          "others": true,
+          "persisted": true
+        },
+        "changed": true,
+        "restored": true
+      },
+      {
+        "profile": "X2",
+        "role": "video",
+        "part": "esc",
+        "status": "Passed",
+        "checks": {
+          "result": true,
+          "others": true,
+          "persisted": true
+        },
+        "changed": false,
+        "restored": true
+      },
+      {
+        "profile": "X2",
+        "role": "BGM",
+        "part": "move-before-zero",
+        "status": "Passed",
+        "checks": {
+          "result": true,
+          "others": true,
+          "persisted": true
+        },
+        "changed": false,
+        "restored": true
+      },
+      {
+        "profile": "X2",
+        "role": "BGM",
+        "part": "head",
+        "status": "Passed",
+        "checks": {
+          "result": true,
+          "others": true,
+          "persisted": true
+        },
+        "changed": true,
+        "restored": true
+      },
+      {
+        "profile": "X2",
+        "role": "BGM",
+        "part": "tail",
+        "status": "Passed",
+        "checks": {
+          "result": true,
+          "others": true,
+          "persisted": true
+        },
+        "changed": true,
+        "restored": true
+      },
+      {
+        "profile": "X2",
+        "role": "BGM",
+        "part": "esc",
+        "status": "Passed",
+        "checks": {
+          "result": true,
+          "others": true,
+          "persisted": true
+        },
+        "changed": false,
+        "restored": true
+      },
+      {
+        "profile": "X2",
+        "role": "D",
+        "part": "move-before-zero",
+        "status": "Passed",
+        "checks": {
+          "result": true,
+          "others": true,
+          "persisted": true
+        },
+        "changed": true,
+        "restored": true
+      },
+      {
+        "profile": "X2",
+        "role": "D",
+        "part": "head",
+        "status": "Passed",
+        "checks": {
+          "result": true,
+          "others": true,
+          "persisted": true
+        },
+        "changed": true,
+        "restored": true
+      },
+      {
+        "profile": "X2",
+        "role": "D",
+        "part": "tail",
+        "status": "Passed",
+        "checks": {
+          "result": true,
+          "others": true,
+          "persisted": true
+        },
+        "changed": true,
+        "restored": true
+      },
+      {
+        "profile": "X2",
+        "role": "D",
+        "part": "esc",
+        "status": "Passed",
+        "checks": {
+          "result": true,
+          "others": true,
+          "persisted": true
+        },
+        "changed": false,
+        "restored": true
+      },
+      {
+        "profile": "X2",
+        "role": "source",
+        "part": "move-before-zero",
+        "status": "Passed",
+        "checks": {
+          "result": true,
+          "others": true,
+          "persisted": true
+        },
+        "changed": false,
+        "restored": true
+      },
+      {
+        "profile": "X2",
+        "role": "source",
+        "part": "esc",
+        "status": "Passed",
+        "checks": {
+          "result": true,
+          "others": true,
+          "persisted": true
+        },
+        "changed": false,
+        "restored": true
+      },
+      {
+        "profile": "X2",
+        "role": "narration",
+        "part": "move-before-zero",
+        "status": "Passed",
+        "checks": {
+          "result": true,
+          "others": true,
+          "persisted": true
+        },
+        "changed": true,
+        "restored": true
+      },
+      {
+        "profile": "X2",
+        "role": "narration",
+        "part": "head",
+        "status": "Passed",
+        "checks": {
+          "result": true,
+          "others": true,
+          "persisted": true
+        },
+        "changed": true,
+        "restored": true
+      },
+      {
+        "profile": "X2",
+        "role": "narration",
+        "part": "tail",
+        "status": "Passed",
+        "checks": {
+          "result": true,
+          "others": true,
+          "persisted": true
+        },
+        "changed": true,
+        "restored": true
+      },
+      {
+        "profile": "X2",
+        "role": "narration",
+        "part": "esc",
+        "status": "Passed",
+        "checks": {
+          "result": true,
+          "others": true,
+          "persisted": true
+        },
+        "changed": false,
+        "restored": true
+      }
+    ]
+  }
+}

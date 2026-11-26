@@ -25,6 +25,78 @@ async function feature(ctx, phase, instruction) {
 }
 function background(a, at, sourceIn = 0) { return { type: 'audio', role: 'background', track_id: id(), offset_sec: 0, muted: false, linked_video_track_id: null, clips: [{ clip_id: id(), file_id: a.audio.fileId, timeline_start_sec: at, source_in_sec: sourceIn, source_out_sec: sourceIn + 2, playback_rate: 1, volume: 1 }] }; }
 export function syncFixture(a) { const c = baseline(a); c.tracks.push(background(a, 6), background(a, 8, 2)); return c; }
+export async function verifyPlainTimelineGap(ctx) {
+  const original = await ctx.read(), [first, second] = clips(original), page = ctx.page;
+  const videoTracks = document => document.content.tracks.filter(track => track.type === 'video');
+  const trackIds = videoTracks(original).map(track => track.track_id);
+  assert.equal(trackIds.length, 1, '留隙和普通删除在同一条视频轨验证');
+  assert.equal(clips(original).length, 2, '普通留隙用例需要两个同轨视频实例');
+  assert.deepEqual([first.file_id, first.playback_rate, second.playback_rate], [second.file_id, 1, 1]);
+  range(first, 0, 5, 0);
+  range(second, 0, 5, 5);
+  await ctx.seek(1);
+  const sel = '.ed-track-video .ed-timeline-clip';
+  const b = await page.evaluate(s => {
+    const clip = document.querySelectorAll(s)[1], rect = clip.getBoundingClientRect();
+    const x = rect.x + Math.min(38, rect.width * .35), y = rect.bottom - 7;
+    return { x, y, delta: rect.width * .4, hit: clip.contains(document.elementFromPoint(x, y)) };
+  }, sel);
+  assert.ok(b.hit, 'B片段主体必须可命中');
+  await page.keyboard.press('Escape');
+  await page.keyboard.down('Alt');
+  try {
+    await page.mouse.move(b.x, b.y);
+    await page.mouse.down();
+    await page.mouse.move(b.x + b.delta * .45, b.y);
+    await page.mouse.move(b.x + b.delta, b.y, { label: '把B右移两秒留下空隙' });
+  } finally {
+    await page.mouse.up();
+    await page.keyboard.up('Alt');
+  }
+  const moved = await ctx.waitSaved(original.revision);
+  await ctx.write('after-move', moved);
+  await ctx.shot('after-move');
+  const [aMove, bMove] = clips(moved);
+  assert.equal(clips(moved).length, 2);
+  assert.equal(aMove.clip_id, first.clip_id);
+  assert.equal(bMove.clip_id, second.clip_id);
+  range(aMove, 0, 5, 0);
+  range(bMove, 0, 5, 7);
+  assert.deepEqual([aMove.file_id, aMove.playback_rate], [first.file_id, 1]);
+  assert.deepEqual([bMove.file_id, bMove.playback_rate], [second.file_id, 1]);
+  assert.deepEqual(videoTracks(moved).map(track => track.track_id), trackIds);
+  await ctx.seek(6);
+  const gap = await page.evaluate(() => {
+    const progress = document.querySelector('input[aria-label="预览播放进度"]');
+    const visibleVideo = [...document.querySelectorAll('[aria-label="工程实时预览"] video')].some(v => v.getClientRects().length && getComputedStyle(v).visibility !== 'hidden');
+    return { time: Number(progress?.value), visibleVideo };
+  });
+  await ctx.write('gap-preview', gap);
+  await ctx.shot('gap-after-move');
+  assert.ok(Math.abs(gap.time - 6) < .04 && !gap.visibleVideo, '6秒必须是无视频画面的空隙');
+  const a = await page.evaluate(s => document.querySelector(s).getBoundingClientRect().toJSON(), sel);
+  await page.mouse.click(a.x + Math.min(24, a.width / 4), a.y + a.height / 2, { label: '选中A后使用普通删除' });
+  await page.waitForFunction(s => document.querySelector(s)?.getAttribute('aria-pressed') === 'true', sel, { timeout: 8000 });
+  await page.keyboard.press('Delete');
+  const removed = await ctx.waitSaved(moved.revision);
+  await ctx.write('after-delete', removed);
+  await ctx.shot('plain-delete');
+  const candidates = clips(removed);
+  assert.equal(candidates.length, 1);
+  const [remaining] = candidates;
+  assert.equal(remaining.clip_id, second.clip_id);
+  assert.deepEqual([remaining.file_id, remaining.playback_rate], [second.file_id, 1]);
+  assert.deepEqual(videoTracks(removed).map(track => track.track_id), trackIds);
+  range(remaining, 0, 5, 7);
+  await ctx.open(ctx.fixture, false);
+  const reopened = await ctx.read();
+  await ctx.write('after-refresh', reopened);
+  await ctx.shot('reopened');
+  assert.deepEqual(clips(reopened), candidates);
+  assert.deepEqual(videoTracks(reopened).map(track => track.track_id), trackIds);
+  return 'B移到7～12秒，6秒预览为空。删除A并刷新后，B仍为7～12秒，来源和源范围保持。';
+}
+
 export const cases = {
   async '011'(ctx, a) {
     await ctx.prepare(syncFixture(a)); const initial = await ctx.read(), target = initial.content.tracks[2], control = initial.content.tracks[3];
@@ -36,24 +108,8 @@ export const cases = {
     await ctx.open(ctx.fixture); assert.deepEqual((await ctx.read()).content, after.content); return '同步锁轨按2秒插入推移，未锁独立轨保持原位置，刷新后保持';
   },
   async '012'(ctx, a) {
-    await ctx.prepare(twoInstances(a)); const original = await ctx.read(), [first, second] = clips(original), failures = [], observations = [];
-    await ctx.seek(.5); const width = await ctx.page.evaluate(sel => document.querySelector(sel).getBoundingClientRect().width, video);
-    await ctx.page.dragAndDrop(video + ' >> nth=1', '.ed-track-video .ed-track-lane', { sourcePosition: { x: width / 2, y: 24 }, targetPosition: { x: width * 1.9, y: 24 }, label: '将第二片段右移两秒' });
-    const moved = await ctx.waitSaved(original.revision); await ctx.write('after-move', moved); await ctx.shot('after-move');
-    const aMove = clips(moved).find(c => c.clip_id === first.clip_id), bMove = clips(moved).find(c => c.clip_id === second.clip_id);
-    if (aMove?.timeline_start_sec !== 0 || bMove?.timeline_start_sec !== 7) failures.push('普通移动没有保持A0～5秒、B7～12秒及5～7秒空隙');
-    observations.push({ step: 'move', first: aMove, second: bMove });
-    await ctx.page.click(video + ' >> nth=0'); await ctx.page.press('[aria-label="编辑时间轴"]', 'Delete');
-    const removed = await ctx.waitSaved(moved.revision); await ctx.write('after-delete', removed); await ctx.shot('after-delete');
-    const remaining = clips(removed).find(c => c.clip_id === second.clip_id);
-    assert.ok(remaining && !clips(removed).some(c => c.clip_id === first.clip_id), '普通删除未完成，不能进入波纹步骤');
-    if (remaining.timeline_start_sec !== bMove.timeline_start_sec) failures.push(`普通删除自动移动了B：${bMove.timeline_start_sec}→${remaining.timeline_start_sec}秒，未保留空隙`);
-    observations.push({ step: 'delete', remaining });
-    const assistant = await agentStep(ctx, 'ripple', `执行一次独立的“波纹删除空隙”：仅闭合当前唯一视频片段B（轨道${removed.content.tracks.find(t => t.type === 'video').track_id}，片段${remaining.clip_id}）前方0～${remaining.timeline_start_sec}秒的空隙，使B从0秒开始；保留源范围0～5秒、原片ID和片段ID。不用普通移动、普通删除、拼接或生成成片替代波纹删除；如不支持明确说明并保留工程。`);
-    const after = await ctx.read(); await ctx.write('after-ripple', after); await ctx.write('observations', { observations, failures, assistant }); await ctx.shot('after-ripple');
-    if (failures.length) assert.fail(failures.join('；'));
-    if (clips(after)[0]?.timeline_start_sec !== 0) throw new Blocked('普通移动/删除观察已保存；未执行成功独立波纹删除，完整用例未通过');
-    range(clips(after)[0], 0, 5, 0); return '普通移动和删除留空隙，显式波纹删除才闭合';
+    await ctx.prepare(twoInstances(a));
+    return verifyPlainTimelineGap(ctx);
   },
   async '013'(ctx, a) {
     const content = fourObjects(a); content.tracks = content.tracks.filter(t => t.type !== 'image'); await ctx.prepare(content);

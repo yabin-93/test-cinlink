@@ -5,11 +5,11 @@ owner: 陈圣融
 status: testing
 automation_tag: "@ERYE-199"
 case_prefix: ERYE199
-updated: "2026-11-23"
-latest_execution_report: "results-051-v3-production-20261123.md"
-execution_status: "active142;{'Passed': 47, 'Failed': 20, 'Blocked': 1, 'Not Applicable': 21, 'Not Run': 53}"
+updated: "2026-11-26"
+latest_execution_report: "results-012-116-current-production-20261126.md"
+execution_status: "active142;{'Passed': 49, 'Failed': 20, 'Not Applicable': 21, 'Not Run': 51, 'Blocked': 1}"
 current_execution_status: "execution-status-current.md"
-case_revision_note: "051 v4 passed by reassessment of the existing production evidence under corrected Select Media expectation"
+case_revision_note: "051 v4 passed by reassessment of the existing production evidence under corrected Select Media expectation. 012 and 116 retested for available controls in production."
 latest_defect_sync: "2026-11-19 091–095 -> FWXC-717, FWXC-718, FWXC-719, FWXC-720;36 images/48 attachments verified"
 automation_document: "automation.md"
 automation_command: "npm run test:editor:199 -- --base-url https://app.cinlink.ai --cases 011,013,017,020,052-053,055"

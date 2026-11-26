@@ -457,10 +457,10 @@ ERYE199-012:
   status: AUTO
   script: "tools/editor/erye199/cases-011-015.mjs#012"
   automation_command: "npm run test:editor:199 -- --base-url https://app.cinlink.ai --cases 012"
-  execution_status: "Blocked"
-  execution_report: "docs/cases/requirements/ERYE-199/results-failed-ten-rerun-production-20261116.md"
-  execution_note: "普通移动B到7秒正确，Delete删除A后B仍7～12秒，原自动前移缺陷未复现；应用明确不支持独立波纹删除空隙，后半步骤未完成，整例Blocked。"
-  execution_batch: "erye199-auto-2026-11-13T08-43-24-066Z"
+  execution_status: "Passed"
+  execution_report: "docs/cases/requirements/ERYE-199/results-012-116-current-production-20261126.md"
+  execution_note: "B移到7～12秒，6秒预览为空。删除A并刷新后，B仍为7～12秒，来源和源范围保持。"
+  execution_batch: "erye199-012-116-production-20261126"
   release_scope: "applicable-current-version"
   defect_id: "FWXC-491"
   defect_url: "https://devops.aliyun.com/projex/project/1e401ac99539c3999e00e40006/bug#openWorkitemIdentifier=759a901c1536c53599d1fd4e74"
@@ -470,6 +470,7 @@ ERYE199-012:
   defect_attachments: 4
   latest_regression_report: "docs/cases/requirements/ERYE-199/results-failed-ten-rerun-production-20261116.md"
   reported_defect_reproduced: false
+  definition_version: "v2-plain-gap-20261126"
 
 ERYE199-013:
   status: AUTO
@@ -1702,10 +1703,13 @@ ERYE199-115:
 ERYE199-116:
   status: PLAN
   script: ""
-  execution_status: "Not Run"
+  execution_status: "Passed"
   specification: "docs/cases/requirements/ERYE-199/cases.md#erye199-card-multitrack"
   legacy_id: "ECMT-048"
-  definition_version: "v1-merged-erye199-20261118"
+  definition_version: "v2-supported-boundary-20261126"
+  execution_report: "docs/cases/requirements/ERYE-199/results-012-116-current-production-20261126.md"
+  execution_note: "译文和双语两套工程均按现有入口执行。 X1 通过 18/18 组，X2 通过 18/18 组。越界结果合法，视频与BGM保持联动，其他轨未变化。Esc取消及刷新核对均符合预期。"
+  execution_batch: "erye199-012-116-production-20261126"
 
 ERYE199-117:
   status: PLAN
@@ -1773,7 +1777,9 @@ ERYE199-125:
 ERYE199-126:
   status: PLAN
   script: ""
-  execution_status: "Not Run"
+  execution_status: "Blocked"
+  execution_report: "docs/cases/requirements/ERYE-199/results-012-116-current-production-20261126.md"
+  execution_note: "沿用上一轮生产阻塞，待核验 Windows 中文输入法真实候选框的 Enter 选词。"
   specification: "docs/cases/requirements/ERYE-199/cases.md#erye199-editor-existing-feature-gaps"
   definition_version: "v1-existing-feature-gaps-r5-r6-20261118"
 

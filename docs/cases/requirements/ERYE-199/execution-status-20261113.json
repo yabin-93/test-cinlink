@@ -1641,9 +1641,8 @@
       "id": "ERYE199-012",
       "started": "2026-11-13T08:26:01.648Z",
       "automation": "tools/editor/erye199/cases-011-015.mjs#012",
-      "status": "Blocked",
-      "actual": "普通移动B到7秒正确，Delete删除A后B仍7～12秒，原自动前移缺陷未复现；应用明确不支持独立波纹删除空隙，后半步骤未完成，整例Blocked。",
-      "errorType": "Blocked",
+      "status": "Passed",
+      "actual": "B移到7～12秒，6秒预览为空。删除A并刷新后，B仍为7～12秒，来源和源范围保持。",
       "fixture": {
         "conversationId": "facd97da-45a2-4f9c-83dd-1047ea8d46cc",
         "editorId": "66074c4c-4647-4816-87ff-54c49a497ad4",
@@ -1654,17 +1653,12 @@
       "automation_status": "AUTO",
       "script": "tools/editor/erye199/cases-011-015.mjs#012",
       "automation_command": "npm run test:editor:199 -- --base-url https://app.cinlink.ai --cases 012",
-      "latest_execution_report": "results-failed-ten-rerun-production-20261116.md",
-      "latest_execution_batch": "erye199-failed-ten-rerun-20261116",
+      "latest_execution_report": "results-012-116-current-production-20261126.md",
+      "latest_execution_batch": "erye199-012-116-production-20261126",
       "workspace_id": "e4f36323-55aa-4670-90f3-bc96f7bc52dc",
       "conversation_id": "facd97da-45a2-4f9c-83dd-1047ea8d46cc",
       "editor_id": "66074c4c-4647-4816-87ff-54c49a497ad4",
-      "screenshots": [
-        "evidence-failed-ten-rerun-production-20261116/012-after-move.png",
-        "evidence-failed-ten-rerun-production-20261116/012-after-delete.png",
-        "evidence-failed-ten-rerun-production-20261116/012-after-ripple.png",
-        "evidence-failed-ten-rerun-production-20261116/012-ripple-agent-terminal.png"
-      ],
+      "screenshots": [],
       "phases": [
         {
           "phase": "ripple",
@@ -1854,6 +1848,23 @@
             "synced_at": "2026-11-13T16:51:31.4003832+08:00",
             "local_report": "docs/defects/ERYE199-012-normal-delete-gap-production-20261113.md"
           }
+        },
+        {
+          "status": "Blocked",
+          "actual": "普通移动B到7秒正确，Delete删除A后B仍7～12秒，原自动前移缺陷未复现；应用明确不支持独立波纹删除空隙，后半步骤未完成，整例Blocked。",
+          "latest_execution_report": "results-failed-ten-rerun-production-20261116.md",
+          "latest_execution_batch": "erye199-failed-ten-rerun-20261116",
+          "screenshots": [
+            "evidence-failed-ten-rerun-production-20261116/012-after-move.png",
+            "evidence-failed-ten-rerun-production-20261116/012-after-delete.png",
+            "evidence-failed-ten-rerun-production-20261116/012-after-ripple.png",
+            "evidence-failed-ten-rerun-production-20261116/012-ripple-agent-terminal.png"
+          ],
+          "partial_checks": {
+            "ordinary_move": "Passed",
+            "ordinary_delete_keep_gap": "Passed",
+            "explicit_ripple_gap_delete": "Unsupported; not completed"
+          }
         }
       ],
       "executed_in_latest_scope_batch": true,
@@ -1882,13 +1893,16 @@
       "legacy_defect_reproduced": false,
       "cloud_writes": 0,
       "run_id": "run_v2_ecb9df321b934556b74fde0d83aabb31",
-      "partial_checks": {
-        "ordinary_move": "Passed",
-        "ordinary_delete_keep_gap": "Passed",
-        "explicit_ripple_gap_delete": "Unsupported; not completed"
-      },
       "latest_regression_report": "results-failed-ten-rerun-production-20261116.md",
-      "details": "本轮实际步骤/请求/新工程/截图见results-failed-ten-rerun-production-20261116.md；旧失败和云效同步回执保留历史。"
+      "details": "本轮实际步骤/请求/新工程/截图见results-failed-ten-rerun-production-20261116.md；旧失败和云效同步回执保留历史。",
+      "caseVersion": "v2-plain-gap-20261126",
+      "checks": [
+        "B 从5秒拖到7秒后的留隙预览",
+        "普通删除 A 后 B 保留原位置、原片、源范围和速率",
+        "刷新后留隙结果保存"
+      ],
+      "failures": [],
+      "verification_data": "evidence-012-116-current-production-20261126.json"
     },
     {
       "id": "ERYE199-013",
@@ -174775,14 +174789,38 @@
     },
     {
       "id": "ERYE199-116",
-      "status": "Not Run",
+      "status": "Passed",
       "automation": "PLAN",
       "script": null,
-      "actual": null,
+      "actual": "译文和双语两套工程均按现有入口执行。 X1 通过 18/18 组，X2 通过 18/18 组。越界结果合法，视频与BGM保持联动，其他轨未变化。Esc取消及刷新核对均符合预期。",
       "evidence": [],
       "legacyId": "ECMT-048",
       "definition": "cases.md#erye199-card-multitrack",
-      "caseVersion": "v1-merged-erye199-20261118"
+      "caseVersion": "v2-supported-boundary-20261126",
+      "execution_history": [
+        {
+          "status": "Not Run",
+          "actual": null,
+          "caseVersion": "v1-merged-erye199-20261118"
+        }
+      ],
+      "latest_execution_report": "results-012-116-current-production-20261126.md",
+      "latest_execution_batch": "erye199-012-116-production-20261126",
+      "checks": [
+        "X1和X2主体拖过0秒边界",
+        "X1和X2支持的左右边缘越界",
+        "五种片段Esc取消及保存刷新"
+      ],
+      "failures": [],
+      "variant_summary": {
+        "X1": {
+          "Passed": 18
+        },
+        "X2": {
+          "Passed": 18
+        }
+      },
+      "verification_data": "evidence-012-116-current-production-20261126.json"
     },
     {
       "id": "ERYE199-117",
@@ -174886,13 +174924,21 @@
     {
       "id": "ERYE199-126",
       "priority": "P0",
-      "status": "Not Run",
+      "status": "Blocked",
       "automation": "PLAN",
       "script": null,
       "definition": "cases.md#erye199-editor-existing-feature-gaps",
       "caseVersion": "v1-existing-feature-gaps-r5-r6-20261118",
-      "actual": null,
-      "evidence": []
+      "actual": "沿用生产批次阻塞。待在 Windows 中文输入法真实候选框中按 Enter 选词。",
+      "evidence": [],
+      "execution_history": [
+        {
+          "status": "Not Run",
+          "actual": null,
+          "caseVersion": "v1-existing-feature-gaps-r5-r6-20261118"
+        }
+      ],
+      "latest_execution_report": "results-012-116-current-production-20261126.md"
     },
     {
       "id": "ERYE199-127",
@@ -175181,7 +175227,7 @@
     "rerun_performed": false,
     "merged_within_batch": true
   },
-  "latest_execution_report": "results-051-v3-production-20261123.md",
+  "latest_execution_report": "results-012-116-current-production-20261126.md",
   "latest_011_015_execution_report": "results-011-015-production-20261113.md",
   "current_release_scope": {
     "source": "用户2026-11-16按现有功能优化31条不适用；本轮仅修订",
@@ -175516,11 +175562,11 @@
   "latest_case_revision_report": "revision-051-select-media-20261123.md",
   "latest_049_v2_execution_report": "results-049-v2-send-stop-production-20261113.md",
   "counts": {
-    "Passed": 47,
+    "Passed": 49,
     "Failed": 20,
-    "Blocked": 1,
     "Not Applicable": 21,
-    "Not Run": 53
+    "Not Run": 51,
+    "Blocked": 1
   },
   "current_capability_revision": {
     "report": "revision-na31-current-capabilities-20261116.md",
@@ -175643,7 +175689,7 @@
     "latest_execution_report": "results-051-v3-production-20261123.md"
   },
   "latest_068_v2_execution_report": "results-068-v2-empty-project-production-20261116.md",
-  "updated": "2026-11-23",
+  "updated": "2026-11-26",
   "latest_task_space": 10,
   "count_history": [
     {
@@ -175798,6 +175844,18 @@
         "Not Run": 53
       },
       "active": 142
+    },
+    {
+      "date": "2026-11-26",
+      "reason": "更新012、116复测记录及补记126原阻塞前",
+      "counts": {
+        "Passed": 47,
+        "Failed": 20,
+        "Blocked": 1,
+        "Not Applicable": 21,
+        "Not Run": 53
+      },
+      "active": 142
     }
   ],
   "latest_current_six_execution_report": "results-current-six-v2-production-20261116.md",
@@ -175882,5 +175940,20 @@
     "merged_within_batch": true
   },
   "latest_051_v3_execution_report": "results-051-v3-production-20261123.md",
-  "latest_051_scope_correction_report": "revision-051-select-media-20261123.md"
+  "latest_051_scope_correction_report": "revision-051-select-media-20261123.md",
+  "latest_retest": {
+    "report": "results-012-116-current-production-20261126.md",
+    "date": "2026-11-26",
+    "case_ids": [
+      "ERYE199-012",
+      "ERYE199-116"
+    ],
+    "applicable_counts": {
+      "Passed": 89,
+      "Failed": 30,
+      "Blocked": 1
+    },
+    "version_deferred": 22,
+    "carried_blocker": "ERYE199-126"
+  }
 }
