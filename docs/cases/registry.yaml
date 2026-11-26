@@ -1774,15 +1774,6 @@ ERYE199-125:
   specification: "docs/cases/requirements/ERYE-199/cases.md#erye199-editor-existing-feature-gaps"
   definition_version: "v1-existing-feature-gaps-r5-r6-20261118"
 
-ERYE199-126:
-  status: PLAN
-  script: ""
-  execution_status: "Blocked"
-  execution_report: "docs/cases/requirements/ERYE-199/results-012-116-current-production-20261126.md"
-  execution_note: "沿用上一轮生产阻塞，待核验 Windows 中文输入法真实候选框的 Enter 选词。"
-  specification: "docs/cases/requirements/ERYE-199/cases.md#erye199-editor-existing-feature-gaps"
-  definition_version: "v1-existing-feature-gaps-r5-r6-20261118"
-
 ERYE199-127:
   status: PLAN
   script: ""

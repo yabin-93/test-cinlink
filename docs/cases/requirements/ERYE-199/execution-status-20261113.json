@@ -174922,25 +174922,6 @@
       "evidence": []
     },
     {
-      "id": "ERYE199-126",
-      "priority": "P0",
-      "status": "Blocked",
-      "automation": "PLAN",
-      "script": null,
-      "definition": "cases.md#erye199-editor-existing-feature-gaps",
-      "caseVersion": "v1-existing-feature-gaps-r5-r6-20261118",
-      "actual": "沿用生产批次阻塞。待在 Windows 中文输入法真实候选框中按 Enter 选词。",
-      "evidence": [],
-      "execution_history": [
-        {
-          "status": "Not Run",
-          "actual": null,
-          "caseVersion": "v1-existing-feature-gaps-r5-r6-20261118"
-        }
-      ],
-      "latest_execution_report": "results-012-116-current-production-20261126.md"
-    },
-    {
       "id": "ERYE199-127",
       "priority": "P1",
       "status": "Not Run",
@@ -175513,7 +175494,8 @@
     "ERYE199-058",
     "ERYE199-060",
     "ERYE199-061",
-    "ERYE199-063"
+    "ERYE199-063",
+    "ERYE199-126"
   ],
   "current_manual_scope": {
     "case_ids": [
@@ -175565,8 +175547,7 @@
     "Passed": 49,
     "Failed": 20,
     "Not Applicable": 21,
-    "Not Run": 51,
-    "Blocked": 1
+    "Not Run": 51
   },
   "current_capability_revision": {
     "report": "revision-na31-current-capabilities-20261116.md",
@@ -175854,6 +175835,18 @@
         "Blocked": 1,
         "Not Applicable": 21,
         "Not Run": 53
+      },
+      "active": 142
+    },
+    {
+      "date": "2026-11-26",
+      "reason": "移除 ERYE199-126 前",
+      "counts": {
+        "Passed": 49,
+        "Failed": 20,
+        "Not Applicable": 21,
+        "Not Run": 51,
+        "Blocked": 1
       },
       "active": 142
     }
